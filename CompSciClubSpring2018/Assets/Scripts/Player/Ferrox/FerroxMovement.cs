@@ -2,7 +2,7 @@
  * 
  * Authors: Spencer Wilson, Keiran Glynn
  * Date Created: 3/5/2018 @ 3:15 pm
- * Date Modified: 3/5/2018 @ 5:13 pm
+ * Date Modified: 3/5/2018 @ 5:38 pm
  * Project: CompSciClubSpring2018
  * File: FerroxMovement.cs
  * Description: This class houses the code for the movement of the ferrox.
@@ -12,17 +12,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public float speed;
-private Rigidbody2D playerRB;
  
 
 public class FerroxMovement : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    public float speed;
+    private Rigidbody2D playerRB;
+    // Use this for initialization
+    void Start () {
 
-        playerRb = GetComponent<Rigidbody2D>();
+        playerRB = GetComponent<Rigidbody2D>();
 
 	}
 	
