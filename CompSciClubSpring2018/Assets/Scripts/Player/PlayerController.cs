@@ -2,7 +2,7 @@
  * 
  * Authors: Spencer Wilson
  * Date Created: 3/5/2018 @ 3:11 pm
- * Date Modified: 3/5/2018 @ 5:11 pm
+ * Date Modified: 3/6/2018 @ 5:22 pm
  * Project: CompSciClubSpring2018
  * File: PlayerController.cs
  * Description: This class controls the interaction between the player's physical and yokai form as well as any extraneous things.
@@ -42,14 +42,16 @@ public class PlayerController : MonoBehaviour {
     {
         if(isProjecting) // If the player is projecting, switch to the yokai form.
         {
+            humanGameObject.GetComponent<HumanMovement>().SetIfActive(false); // Turns off the human's movement.
             ferroxGameObject.SetActive(true); // Sets the ferroxGameObject to be active.
-            // set input for if player is projecting
+            GameObject.Find("Main Camera").GetComponent<FollowActingCharacter>().setActingCharacter(ferroxGameObject); // Sets the acting character to the ferrox.
             Debug.Log("Player is projecting");
         }
         else // If player isn't projecting, switch to the human form.
         {
             ferroxGameObject.SetActive(false); // Sets the ferroxGameObject to be at an inactive state.
-            ferroxGameObject.transform.position = humanGameObject.transform.position; // Resetting the ferrox's position to the human form's position for next projection.
+            humanGameObject.GetComponent<HumanMovement>().SetIfActive(true); // Turns back on the human's movement.
+            ferroxGameObject.transform.position = new Vector2(humanGameObject.transform.position.x + 1f, humanGameObject.transform.position.y); // Resetting the ferrox's position to the human form's position for next projection.
             Debug.Log("Player is not projecting");
         }
     }
