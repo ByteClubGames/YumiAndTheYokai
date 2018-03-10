@@ -1,6 +1,6 @@
 ﻿/* AbilityBehaviors.cs
  * Date Created: 3/7/18
- * Last Edited: 3/7/18
+ * Last Edited: 3/10/18
  * Programmer: Jack Bruce
  * Description: Parent class for all behaviors abilities have.
  */
@@ -32,7 +32,8 @@ public class AbilityBehaviors : MonoBehaviour {
         End
     }
 
-    public virtual void PerformBehavior(Vector3 startPosition) 
+    // we want a gameobject, our target,
+    public virtual void PerformBehavior(GameObject objectHit) 
     {
         Debug.LogWarning("NEED TO ADD BEHAVIOR");
     }
@@ -47,5 +48,4 @@ public class AbilityBehaviors : MonoBehaviour {
         get { return startTime; }
     }
 
-	
 }

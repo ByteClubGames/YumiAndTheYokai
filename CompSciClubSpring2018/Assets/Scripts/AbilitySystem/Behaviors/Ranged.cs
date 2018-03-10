@@ -1,18 +1,19 @@
 ﻿/* Ranged.cs
  * Date Created: 3/7/18
- * Last Edited: 3/7/18
+ * Last Edited: 3/10/18
  * Programmer: Jack Bruce
  * Description: Behavior certain abilities will have. Makes ability only effective
  * a certain distance away. That is the lifedistance.
  */
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Ranged : AbilityBehaviors {
 
-    private const string name = "Ranged";
-    private const string description = "A ranged atttack!";
+    private const string abName = "Ranged";
+    private const string abDescription = "A ranged atttack!";
     private const BehaviorStartTimes startTime = BehaviorStartTimes.Beginning;
     //private const Sprite icon = Resources.Load();
 
@@ -24,19 +25,19 @@ public class Ranged : AbilityBehaviors {
     private float lifeDistance; 
 
     public Ranged(float minDist, float maxDist, bool isRandom) 
-        : base(new BasicObjectInformation(name, description), startTime) 
+        : base(new BasicObjectInformation(abName, abDescription), startTime) 
     {
         minDistance = minDist;
         maxDistance = maxDist;
         isRandomOn = isRandom;
     }
 
-    public override void PerformBehavior(Vector3 startPosition)
+    public override void PerformBehavior(GameObject objectHit)
     {
         lifeDistance = isRandomOn ? Random.Range(minDistance, maxDistance) : maxDistance;
 
 
-        StartCoroutine(CheckDistance(startPosition));
+        StartCoroutine(CheckDistance(objectHit.transform.position));
     }
 
     private IEnumerator CheckDistance(Vector3 startPosition)
