@@ -29,7 +29,7 @@ public class DamageOverTime : AbilityBehaviors {
         baseEffectDamage = bd;
     }
 
-    public override void PerformBehavior(GameObject objectHit)
+    public override void PerformBehavior(GameObject playerObject, GameObject objectHit)
     {
         StartCoroutine(DOT());
     }

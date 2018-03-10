@@ -35,7 +35,7 @@ public class AreaOfEffect : AbilityBehaviors {
         isOccupied = false;
     }
 
-    public override void PerformBehavior(GameObject objectHit)
+    public override void PerformBehavior(GameObject playerObject, GameObject objectHit)
     {
         SphereCollider sc = this.gameObject.GetComponent<SphereCollider>();
 

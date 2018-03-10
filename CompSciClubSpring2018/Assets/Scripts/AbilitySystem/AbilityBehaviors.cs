@@ -33,7 +33,7 @@ public class AbilityBehaviors : MonoBehaviour {
     }
 
     // we want a gameobject, our target,
-    public virtual void PerformBehavior(GameObject objectHit) 
+    public virtual void PerformBehavior(GameObject playerObject, GameObject objectHit) 
     {
         Debug.LogWarning("NEED TO ADD BEHAVIOR");
     }

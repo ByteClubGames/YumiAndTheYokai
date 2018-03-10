@@ -32,12 +32,11 @@ public class Ranged : AbilityBehaviors {
         isRandomOn = isRandom;
     }
 
-    public override void PerformBehavior(GameObject objectHit)
+    public override void PerformBehavior(GameObject playerObject, GameObject objectHit)
     {
         lifeDistance = isRandomOn ? Random.Range(minDistance, maxDistance) : maxDistance;
 
-
-        StartCoroutine(CheckDistance(objectHit.transform.position));
+        StartCoroutine(CheckDistance(playerObject.transform.position));
     }
 
     private IEnumerator CheckDistance(Vector3 startPosition)
