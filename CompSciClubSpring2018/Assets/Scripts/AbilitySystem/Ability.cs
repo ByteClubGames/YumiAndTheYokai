@@ -25,21 +25,29 @@ public class Ability {
 
     public enum AbilityType
     {
-        Spell
+        Spell,
+        Melee
     }
 
+    public Ability(BasicObjectInformation aBasicInfo)
+    {
+        objectInfo = aBasicInfo;
+        behaviors = new List<global::AbilityBehaviors>();
+        cooldown = 0f;
+        requiresTarget = false;
+        canCastOnself = false;
+    }
 
     public Ability(BasicObjectInformation aBasicInfo, List<AbilityBehaviors> abehaviors) {
         objectInfo = aBasicInfo; 
         behaviors = new List<AbilityBehaviors>();
         behaviors = abehaviors;
-        cooldown = 0;
+        cooldown = 0f;
         requiresTarget = false;
         canCastOnself = false;
-
     }
 
-    public Ability(BasicObjectInformation aBasicInfo, List<AbilityBehaviors> abehaviors, bool arequiresTarget, int acooldown, GameObject aparticleE)
+    public Ability(BasicObjectInformation aBasicInfo, List<AbilityBehaviors> abehaviors, bool arequiresTarget, float acooldown, GameObject aparticleE)
     {
         objectInfo = aBasicInfo;
         behaviors = new List<AbilityBehaviors>();

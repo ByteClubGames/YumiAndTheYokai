@@ -22,11 +22,12 @@ public class DamageOverTime : AbilityBehaviors {
     private float baseEffectDamage;
     private float damageTickDuration;
 
-    public DamageOverTime(float ed, float bd)
+    public DamageOverTime(float ed, float bd, float dtd)
         : base(new BasicObjectInformation(abName, abDescription), startTime)
     {
         effectDuration = ed;
         baseEffectDamage = bd;
+        damageTickDuration = dtd;
     }
 
     public override void PerformBehavior(GameObject playerObject, GameObject objectHit)
