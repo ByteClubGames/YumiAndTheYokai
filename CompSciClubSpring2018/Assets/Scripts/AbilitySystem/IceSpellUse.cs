@@ -4,6 +4,7 @@
  * Programmer: Jack Bruce
  * Description: Script for instantiating ice spell objects upon mouse clicks
  */
+
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -18,14 +19,12 @@ public class IceSpellUse : MonoBehaviour {
 	private void Update()
 	{
 		//Instantiates iceSpellPrefab upon clicking in the position of the click
-        if (Input.GetMouseButtonDown(0) )
+        if (Input.GetMouseButtonDown(0))
         {
             Vector3 p = Camera.main.ScreenToWorldPoint(new 
                         Vector3(Input.mousePosition.x, Input.mousePosition.y, 10.0f));
             Instantiate(iceSpellPrefab, new Vector3(p.x, p.y, 0.0f), 
                         Quaternion.identity);
-            
-
         }
 
 
