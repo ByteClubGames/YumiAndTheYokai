@@ -9,7 +9,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ability {
+//I don't know if its a good idea to inherit MonoBehavior
+public class Ability : MonoBehaviour{
 
     private BasicObjectInformation objectInfo;
     private List<AbilityBehaviors> behaviors;

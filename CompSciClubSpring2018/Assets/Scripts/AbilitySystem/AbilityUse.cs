@@ -1,4 +1,12 @@
-﻿using System.Collections;
+﻿/* AbilityUse.cs
+ * Date Created: 3/10/18
+ * Last Edited: 3/10/18
+ * Programmer: Jack Bruce
+ * Description: Probably will delete this script. Using as a model
+ * for "IceSpellUse.cs"
+ */
+
+using System.Collections;
 using System.Diagnostics;
 using UnityEngine.UI;
 using UnityEngine;
