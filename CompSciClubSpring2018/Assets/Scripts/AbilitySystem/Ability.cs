@@ -23,10 +23,12 @@ public class Ability {
     private float cost;
     private AbilityType type;
 
-    public enum AbilityType
+    public enum AbilityType //ID's for different spell types
     {
-        Spell,
-        Melee
+        Ice,
+        Earth,
+        Wind,
+        Astral
     }
 
     public Ability(BasicObjectInformation aBasicInfo)
