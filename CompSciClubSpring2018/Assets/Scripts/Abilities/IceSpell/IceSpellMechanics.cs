@@ -1,6 +1,6 @@
 ﻿/* IceSpellMechanics.cs
  * Date Created: 3/10/18
- * Last Edited: 3/10/18
+ * Last Edited: 3/11/18
  * Programmer: Jack Bruce
  * Description: Functionality of Ice Spell:
  *      1. Freeze enemies within collider (for a limited time)
@@ -27,7 +27,6 @@ public class IceSpellMechanics : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
     {
-        
         Destroy(gameObject, lifeTime); //Destroys IceSpell object after lifeTime
 	}
 	
@@ -36,16 +35,47 @@ public class IceSpellMechanics : MonoBehaviour {
 		
 	}
 
+    //called when there is a collision
 	private void OnCollisionEnter(Collision col)
 	{
 
+        FreezeEnemy(col.gameObject);
+
+
+
+	}
+
+    //freezes collided object if it is moving
+    private void FreezeEnemy(GameObject enemy) 
+    {
+
         // will have to find a way to make this dynamic for other objects
-        if (col.gameObject.name == "TestEnemy" && 
-            col.gameObject.GetComponent<Rigidbody>().velocity != Vector3.zero)
+        if (enemy.name == "TestEnemy" &&
+            enemy.GetComponent<Rigidbody>().velocity != Vector3.zero)
         {
             //stops enemy very unnaturally
-            col.gameObject.GetComponent<BackAndForth>().speed = 0;
+            //try stopping moving objects without directly accessing speed/vel
+            enemy.GetComponent<BackAndForth>().speed = 0;
 
+            //change enemy model to frozen enemy model
+
+            //after 'freezeTime' has elapsed 'unfreeze'
+                //change frozen enemy model to enemy model
+                //restore objects origninal speed
         }
-	}
+
+    }
+
+    private void FreezeTile (GameObject tile) 
+    {
+        tile.GetType();
+        //if there is a tile colliding with IceSpell
+
+            //Check if it is a 'water' tile
+            //and turn it into an 'ice' tile
+
+            //after 'freezeTime' has elapsed 'unfreeze'
+                //change 'ice' tile back to 'water' tile
+    }
+
 }
