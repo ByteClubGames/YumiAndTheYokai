@@ -61,12 +61,4 @@ public class HumanMovement : MonoBehaviour
     {
         touched = false;
     }
-
-    void OnCollisionEnter2D(Collision2D other)
-    {
-        if(other.transform.tag == "MovingPlatform")
-        {
-            transform.parent == other.transform;
-        }
-    }
 }
