@@ -13,17 +13,29 @@ using UnityEngine;
 public class PlayerJumper : MonoBehaviour
 {
     public Rigidbody playerRB;
-    public float jumpSpeed; 
+    public float jumpForce = 7; 
 
-    public Vector2 firstPressPos = new Vector2(0, 0);
-    public Vector2 secondPressPos;
-    public Vector2 currentSwipe; 
+    private Vector2 firstPressPos = new Vector2(0, 0);
+    private Vector2 secondPressPos;
+    private Vector2 currentSwipe;
+
+    private bool touched;
+    public bool isJump;
+
+    public LayerMask groundLayers;
+    public CapsuleCollider col;
 
     private void Update()
     {
-        Swiper();
+        Swiper();  
     }
 
+    private bool IsGrounded()
+    {
+        return Physics.CheckCapsule(col.bounds.center, new Vector3(col.bounds.center.x, col.bounds.min.y, col.bounds.center.z), col.radius * .9f, groundLayers);
+    }
+
+    // Swipe Controls 
     private void Swiper()
     {
         //get user input
@@ -40,13 +52,48 @@ public class PlayerJumper : MonoBehaviour
             currentSwipe = new Vector2(secondPressPos.x - firstPressPos.x, secondPressPos.y - firstPressPos.y);
         }
 
-        if (currentSwipe.y > 50 && currentSwipe.y != 0)
+        if (IsGrounded() && currentSwipe.y > 50 && currentSwipe.y != 0)
         {
-            playerRB.transform.Translate(transform.up * Time.deltaTime * jumpSpeed);
+            playerRB.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
 
             firstPressPos = new Vector2(0, 0);
             secondPressPos = new Vector2(0, 0);
             currentSwipe = new Vector2(0, 0);
         }
+    }
+
+    private bool IsSwipe()
+    {
+        if(currentSwipe.y > 50 && currentSwipe.y != 0)
+        {
+            return true; 
+        }
+        else
+        {
+            return false; 
+        }
+    }
+
+    // Button Controls
+    private void ButtonJump()
+    {
+        if (IsGrounded() && Input.GetKeyDown(KeyCode.Space))
+        {
+            playerRB.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        }
+        if (touched && isJump)
+        {
+            playerRB.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        }
+    }
+
+    void OnMouseDown()
+    {
+        touched = true;
+    }
+
+    private void OnMouseUp()
+    {
+        touched = false;
     }
 }
