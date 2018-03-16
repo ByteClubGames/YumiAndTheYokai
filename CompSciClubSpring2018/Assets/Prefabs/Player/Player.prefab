@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 50133733317281100}
   - component: {fileID: 60336512692323160}
   - component: {fileID: 114132057661514978}
+  - component: {fileID: 114735917215788982}
   m_Layer: 0
   m_Name: Ferrox
   m_TagString: Player
@@ -131,8 +132,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1601003770559216}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.93, y: -0.88, z: 0.04561881}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4838637959332306}
@@ -310,6 +311,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
+--- !u!114 &114735917215788982
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1128226839337886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bb2e5726b9602d4e8ae8ed62a66ce2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ferroxRB: {fileID: 50133733317281100}
+  jumpSpeed: 100
 --- !u!114 &114777011229513540
 MonoBehaviour:
   m_ObjectHideFlags: 1

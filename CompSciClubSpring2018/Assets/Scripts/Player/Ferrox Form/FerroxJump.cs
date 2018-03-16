@@ -30,9 +30,9 @@ public class FerroxJump : MonoBehaviour {
 
     private void Jump()
     {
-        if (Input.GetKey("space"))
+        if (Input.GetKey("space") && (ferroxRB.velocity.y == 0f))
         {
-            ferroxRB.transform.Translate(transform.up * Time.deltaTime * jumpSpeed);
+            ferroxRB.AddForce(Vector2.up * Time.deltaTime * jumpSpeed);
         }
     }
 }

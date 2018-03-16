@@ -12,41 +12,50 @@ using UnityEngine;
 
 public class HumanJump : MonoBehaviour
 {
-    public Rigidbody2D playerRB;
+    public Rigidbody2D humanRB;
     public float jumpSpeed;
 
     public Vector2 firstPressPos = new Vector2(0, 0);
     public Vector2 secondPressPos;
     public Vector2 currentSwipe;
 
-    private void Update()
+    private void FixedUpdate()
     {
-        Swiper();
+        Jump();
+        //Swiper();
     }
 
-    private void Swiper()
+    private void Jump() // Script that allows the player to jump.
     {
-        //get user input
-        if (Input.GetMouseButtonDown(0))
-        {
-            //get first mouse position
-            firstPressPos.x = Input.mousePosition.x;
-            firstPressPos.y = Input.mousePosition.y;
-        }
-        if (Input.GetMouseButtonUp(0))
-        {
-            secondPressPos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
-
-            currentSwipe = new Vector2(secondPressPos.x - firstPressPos.x, secondPressPos.y - firstPressPos.y);
-        }
-
-        if (currentSwipe.y > 50 && currentSwipe.y != 0)
-        {
-            playerRB.transform.Translate(transform.up * Time.deltaTime * jumpSpeed);
-
-            firstPressPos = new Vector2(0, 0);
-            secondPressPos = new Vector2(0, 0);
-            currentSwipe = new Vector2(0, 0);
-        }
+            if (Input.GetKey("space") && (humanRB.velocity.y == 0f))
+            {
+                humanRB.AddForce(Vector2.up * Time.deltaTime * jumpSpeed);
+            }
     }
+
+    //private void Swiper()
+    //{
+    //    //get user input
+    //    if (Input.GetMouseButtonDown(0))
+    //    {
+    //        //get first mouse position
+    //        firstPressPos.x = Input.mousePosition.x;
+    //        firstPressPos.y = Input.mousePosition.y;
+    //    }
+    //    if (Input.GetMouseButtonUp(0))
+    //    {
+    //        secondPressPos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+
+    //        currentSwipe = new Vector2(secondPressPos.x - firstPressPos.x, secondPressPos.y - firstPressPos.y);
+    //    }
+
+    //    if (currentSwipe.y > 50 && currentSwipe.y != 0)
+    //    {
+    //        humanRB.transform.Translate(transform.up * Time.deltaTime * jumpSpeed);
+
+    //        firstPressPos = new Vector2(0, 0);
+    //        secondPressPos = new Vector2(0, 0);
+    //        currentSwipe = new Vector2(0, 0);
+    //    }
+    //}
 }
