@@ -1,7 +1,7 @@
 ﻿/*
- * Programmer:   Hunter Goodin, Spencer Wilson
+ * Programmer:   Hunter Goodin 
  * Date Created: 02/16/2018 @  9:40 PM 
- * Last Updated: 03/10/2018 @ 10:20 PM 
+ * Last Updated: 02/16/2018 @ 11:35 PM 
  * File Name:    PlayerJumper.cs 
  * Description:  This script will be responsible for the player's movements. 
  */
@@ -13,8 +13,7 @@ using UnityEngine;
 public class HumanJump : MonoBehaviour
 {
     public Rigidbody2D playerRB;
-    public float verticalVelocityHuman;
-    public float jumpPower;
+    public float jumpSpeed;
 
     public Vector2 firstPressPos = new Vector2(0, 0);
     public Vector2 secondPressPos;
@@ -22,17 +21,7 @@ public class HumanJump : MonoBehaviour
 
     private void Update()
     {
-        verticalVelocityHuman = playerRB.velocity.y; // Assigns the current y velocity to verticalVelocityHuman.
-        Jump(); // Calls on Jump().
-        //Swiper();
-    }
-
-    private void Jump()
-    {
-        if (/*touched && isJump*/ Input.GetKey("space") && (verticalVelocityHuman == 0f))
-        {
-            playerRB.AddForce(Vector2.up * jumpPower);
-        }
+        Swiper();
     }
 
     private void Swiper()
@@ -53,7 +42,7 @@ public class HumanJump : MonoBehaviour
 
         if (currentSwipe.y > 50 && currentSwipe.y != 0)
         {
-            playerRB.transform.Translate(transform.up * Time.deltaTime * jumpPower);
+            playerRB.transform.Translate(transform.up * Time.deltaTime * jumpSpeed);
 
             firstPressPos = new Vector2(0, 0);
             secondPressPos = new Vector2(0, 0);

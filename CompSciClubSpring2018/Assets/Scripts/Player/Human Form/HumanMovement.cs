@@ -45,6 +45,10 @@ public class HumanMovement : MonoBehaviour
         {
             playerRB.transform.Translate(transform.right * Time.deltaTime * speed);
         }
+        if (/*touched && isJump*/ Input.GetKey("space"))
+        {
+            playerRB.transform.Translate(transform.up * Time.deltaTime * jumpSpeed);
+        }
     }
 
     public void SetIfActive(bool incomingVal) // Function that sets isActive to incomingVal.
