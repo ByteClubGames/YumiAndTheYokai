@@ -50,7 +50,7 @@ public class IceSpellMechanics : MonoBehaviour {
     {
 
         // will have to find a way to make this dynamic for other objects
-        if (enemy.name == "TestEnemy" &&
+        if (enemy.name == "Test Enemy" &&
             enemy.GetComponent<Rigidbody>().velocity != Vector3.zero)
         {
             //stops enemy very unnaturally
