@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 184776122}
   - component: {fileID: 184776121}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -356,47 +356,44 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &1577779439
+--- !u!1 &1637353659
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 1577779441}
-  - component: {fileID: 1577779440}
+  - component: {fileID: 1637353660}
+  - component: {fileID: 1637353661}
   m_Layer: 0
-  m_Name: EarthSpellSpawner
+  m_Name: Earth Spell Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1577779440
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1577779439}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fabe95f851172174eba41c95709af086, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  earthSpellTestObj: {fileID: 1217409918145448, guid: 269f21e0ca7b20e44afec717557a3499,
-    type: 2}
-  earthSpell: {fileID: 1907276841444114, guid: 4753e1a5cf66be34186583ddc65045ba, type: 2}
-  earthSpellTest: {fileID: 0}
---- !u!4 &1577779441
+--- !u!4 &1637353660
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1577779439}
+  m_GameObject: {fileID: 1637353659}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 7, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1637353661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1637353659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0df83f5937cefc54dadb3d64cdd41a78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eSpell: {fileID: 1907276841444114, guid: 4753e1a5cf66be34186583ddc65045ba, type: 2}
