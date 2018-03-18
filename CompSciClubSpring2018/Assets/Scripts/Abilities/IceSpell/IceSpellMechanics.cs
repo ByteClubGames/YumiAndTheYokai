@@ -15,13 +15,9 @@ using System.Diagnostics;
 using UnityEngine;
 
 public class IceSpellMechanics : MonoBehaviour {
-
-    // public vars for testing
+    
     public float lifeTime;
-    public float freezeTime;
-
-    //
-
+    //public float freezeTime;
     private Stopwatch freezeTimer = new Stopwatch();
     private GameObject frozenEnemy;
 
@@ -30,31 +26,43 @@ public class IceSpellMechanics : MonoBehaviour {
 	void Start () 
     {
         Destroy(gameObject, lifeTime); //Destroys IceSpell object after lifeTime
-
 	}
 	
 	// Update is called once per frame
-	void Update () {
-        if (freezeTimer.ElapsedMilliseconds >= freezeTime * 999)
-        {
-            UnFreezeEnemy(frozenEnemy);
-            print("yo");
-            freezeTimer.Reset();
-        }
+	void Update () 
+    {
+      
+        //if (freezeTimer.ElapsedMilliseconds >= freezeTime * 999)
+        //{
+        //    UnFreezeEnemy(frozenEnemy);
+        //    print("yo");
+        //    freezeTimer.Reset();
+        //}
 
 	}
 
     // called when there is a collision (make sure IceSpell isTrigger)
 	private void OnTriggerEnter(Collider col)
 	{
+        if (col.gameObject.name == "Test Enemy")
+        {
+            col.gameObject.GetComponent<IceSpellAffectedEnemy>().Freeze();
+        }
 
-        FreezeEnemy(col.gameObject);
-        FreezeWater(col.gameObject);
+        if (col.gameObject.tag == "Water")
+        {
+            col.gameObject.GetComponent<IceSpellAffectedSurface>().Freeze();
+        }
 
-
+        //FreezeEnemy(col.gameObject);
+        //FreezeWater(col.gameObject);
 
 	}
 
+
+    /* I PUT THESE METHODS IN "IceSpellAffectedEnemy.cs" THEY MAKE MORE SENSE
+     * TO BE ATTACHED TO THE OBJECT THAT IS BEING FROZEN
+     * 
 	//freezes collided object if it is moving
 	private void FreezeEnemy(GameObject enemy) 
     {
@@ -73,7 +81,6 @@ public class IceSpellMechanics : MonoBehaviour {
             frozenEnemy = enemy; // used to access collided object in update
         }
 
-
     }
 
     private void UnFreezeEnemy(GameObject enemy)
@@ -88,6 +95,7 @@ public class IceSpellMechanics : MonoBehaviour {
         }
     }
 
+
     private void FreezeWater(GameObject water)
     {
         //technically melts... lol 
@@ -95,9 +103,12 @@ public class IceSpellMechanics : MonoBehaviour {
         //isTrigger will need to be set to false for freeze
         if (water.gameObject.tag == "Water")
         {
-            (water.GetComponent(typeof(Collider)) as Collider).isTrigger = true/*false*/;
+            (water.GetComponent(typeof(Collider)) as Collider).isTrigger = true;
         }
 
     }
+    *
+    *
+    */
 
 }

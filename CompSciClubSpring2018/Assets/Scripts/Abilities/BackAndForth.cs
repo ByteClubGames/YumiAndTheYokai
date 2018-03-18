@@ -9,24 +9,18 @@ using UnityEngine;
 using System.Collections;
 using System.Diagnostics;
 
-public class BackAndForth : MonoBehaviour
-{
+public class BackAndForth : MonoBehaviour {
 
     public float delta = 55.0f;  // Amount to move left and right from the start point
     public float speed = 2.0f;
     private Vector3 startPos;
-    public float ogSpeed;
-    public Vector3 lastPos;
     public bool isFrozen = false;
     private bool lastFrameFroze = false;
     private Stopwatch movementTimer = new Stopwatch();
 
     void Start()
     {
-        ogSpeed = speed;
         startPos = transform.position;
-        lastPos = startPos;
-
         movementTimer.Start();
     }
 
@@ -49,7 +43,6 @@ public class BackAndForth : MonoBehaviour
             movementTimer.Start();
             lastFrameFroze = false;
         }
-
-
     }
+
 }

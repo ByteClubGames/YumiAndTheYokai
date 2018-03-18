@@ -23,7 +23,6 @@ GameObject:
   - component: {fileID: 199617773020607708}
   - component: {fileID: 135892756416618618}
   - component: {fileID: 54903387923278332}
-  - component: {fileID: 114295358304178048}
   - component: {fileID: 114550520283353308}
   m_Layer: 0
   m_Name: IceSpell
@@ -60,17 +59,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 8
   m_CollisionDetection: 1
---- !u!114 &114295358304178048
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1873389610634258}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebb1e52caa4b4403aad9bb67463f2b78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114550520283353308
 MonoBehaviour:
   m_ObjectHideFlags: 1
