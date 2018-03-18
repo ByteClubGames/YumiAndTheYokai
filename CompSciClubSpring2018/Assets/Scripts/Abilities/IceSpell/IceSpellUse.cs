@@ -13,8 +13,6 @@ using UnityEngine;
 public class IceSpellUse : MonoBehaviour {
 
     public GameObject iceSpellPrefab;
-    private IceSpell iceS;
-    private Stopwatch abilityCooldownTimer;
 
 	private void Update()
 	{
