@@ -6196,11 +6196,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4136022511400970, guid: 93181538680688a4d9d257db33a02da6, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -16.25
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4136022511400970, guid: 93181538680688a4d9d257db33a02da6, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 32.68
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4136022511400970, guid: 93181538680688a4d9d257db33a02da6, type: 2}
       propertyPath: m_LocalPosition.z
