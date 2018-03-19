@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - MovingPlatform
+  - Puzzle
+  - Ferrox
+  - Human
   layers:
   - Default
   - TransparentFX
@@ -14,8 +17,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Level
+  - Background
   - 
   - 
   - 

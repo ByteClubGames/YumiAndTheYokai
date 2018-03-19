@@ -23,9 +23,10 @@ GameObject:
   - component: {fileID: 60336512692323160}
   - component: {fileID: 114132057661514978}
   - component: {fileID: 114735917215788982}
-  m_Layer: 0
+  - component: {fileID: 60240740350369350}
+  m_Layer: 8
   m_Name: Ferrox
-  m_TagString: Player
+  m_TagString: Ferrox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42,9 +43,9 @@ GameObject:
   - component: {fileID: 60117252996294370}
   - component: {fileID: 114819543188278698}
   - component: {fileID: 114038691684575656}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Human
-  m_TagString: Player
+  m_TagString: Human
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -58,7 +59,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4136022511400970}
   - component: {fileID: 114777011229513540}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -74,7 +75,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4784868239119754}
   - component: {fileID: 212452860948769408}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FerroxTempArt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +91,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4956157077794508}
   - component: {fileID: 212732414304443978}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: NexusTempArt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +105,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1583462892046584}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -16.25, y: 41.11, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4838637959332306}
@@ -180,11 +181,11 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!50 &50708177120583982
 Rigidbody2D:
@@ -200,7 +201,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -250,6 +251,34 @@ PolygonCollider2D:
       - {x: 0.52192557, y: -0.4704709}
       - {x: 0.55363274, y: -0.05061102}
       - {x: 0.20330554, y: 0.39803493}
+--- !u!60 &60240740350369350
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1128226839337886}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.69231063, y: -0.4835881}
+      - {x: 0.66258365, y: 0.40629303}
+      - {x: -0.8047864, y: 0.50682557}
+      - {x: -0.7853944, y: -0.48606002}
 --- !u!60 &60336512692323160
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -294,8 +323,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b473ea1a9cb8d48488e7178f88d43ea7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerRB: {fileID: 50708177120583982}
-  jumpSpeed: 0
+  humanRB: {fileID: 50708177120583982}
+  jumpSpeed: 20000
   firstPressPos: {x: 0, y: 0}
   secondPressPos: {x: 0, y: 0}
   currentSwipe: {x: 0, y: 0}
@@ -323,7 +352,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ferroxRB: {fileID: 50133733317281100}
-  jumpSpeed: 100
+  jumpSpeed: 40000
 --- !u!114 &114777011229513540
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -349,7 +378,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  jumpSpeed: 5
+  jumpSpeed: 0
   playerRB: {fileID: 50708177120583982}
   isJump: 0
   isLeft: 0
