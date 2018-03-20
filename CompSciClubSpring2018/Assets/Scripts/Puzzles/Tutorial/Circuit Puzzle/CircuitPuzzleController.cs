@@ -2,7 +2,7 @@
  *  
  * Author: Spencer Wilson
  * Date Created: 3/16/2018 @ 8:38 pm
- * Date Modified: 3/18/2018 @ 4:57 pm
+ * Date Modified: 3/19/2018 @ 6:54 pm
  * Project: CompSciClubSpring2018
  * File: CircuitPuzzle.cs
  * Description: Script that controls the circuit puzzle.
