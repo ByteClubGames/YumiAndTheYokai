@@ -2,7 +2,7 @@
  *  
  * Author: Spencer Wilson
  * Date Created: 3/16/2018 @ 8:38 pm
- * Date Modified: 3/20/2018 @ 9:21 am
+ * Date Modified: 3/20/2018 @ 3:27 pm
  * Project: CompSciClubSpring2018
  * File: CircuitPuzzle.cs
  * Description: Script that controls the circuit puzzle.
@@ -46,22 +46,26 @@ public class CircuitPuzzleController : MonoBehaviour {
         if(switch1)
         {
             StartCoroutine(Rotate(ring1, 60f, 3f)); // Rotates Ring1, the center ring.
-            StartCoroutine(WaitAmountOfSeconds(switch1, 3f));
+            switch1 = false;
+            //StartCoroutine(WaitAmountOfSeconds(switch1, 3f));
         }
         if(switch2)
         {
             StartCoroutine(Rotate(ring2, -120f, 3f)); // Rotates Ring2, the ring second from the center.
-            StartCoroutine(WaitAmountOfSeconds(switch2, 3f));
+            switch2 = false;
+            //StartCoroutine(WaitAmountOfSeconds(switch2, 3f));
         }
         if(switch3)
         {
             StartCoroutine(Rotate(ring3, 270f, 3f)); // Rotates Ring3, the ring third from the center.
-            StartCoroutine(WaitAmountOfSeconds(switch3, 3f));
+            switch3 = false;
+            //StartCoroutine(WaitAmountOfSeconds(switch3, 3f));
         }
         if(switch4)
         {
             StartCoroutine(Rotate(ring4, -330f, 3f)); // Rotates Ring4, the outermost ring.
-            StartCoroutine(WaitAmountOfSeconds(switch4, 3f));
+            switch4 = false;
+            //StartCoroutine(WaitAmountOfSeconds(switch4, 3f));
         }
     }
 
