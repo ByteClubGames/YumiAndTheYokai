@@ -17,7 +17,7 @@ public class ActivateTrigger : MonoBehaviour {
 
     public int switchNum; // Public integer that holds the switch number.
     
-    public void OnTriggerEnter2D(Collider2D col)
+    public void OnTriggerEnter2D(Collider2D col) // Detects 2D colliders. If the collider tag is named "Ferrox", it triggers the according ring to rotate.
     {
         if (col.gameObject.tag == "Ferrox")
         {

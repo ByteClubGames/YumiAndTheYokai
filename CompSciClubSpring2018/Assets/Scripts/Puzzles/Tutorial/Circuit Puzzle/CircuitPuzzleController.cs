@@ -42,22 +42,22 @@ public class CircuitPuzzleController : MonoBehaviour {
     {
         if(switch1)
         {
-            StartCoroutine(Rotate(ring1, ring1.transform.rotation, 1)); // Rotates Ring1, the center ring.
+            StartCoroutine(Rotate(ring1, 60f, 0.3f)); // Rotates Ring1, the center ring.
             switch1 = false;
         }
         if(switch2)
         {
-            StartCoroutine(Rotate(ring2, ring2.transform.rotation, -1)); // Rotates Ring2, the ring second from the center.
+            StartCoroutine(Rotate(ring2, 60f, 0.3f)); // Rotates Ring2, the ring second from the center.
             switch2 = false;
         }
         if(switch3)
         {
-            StartCoroutine(Rotate(ring3, ring3.transform.rotation, 1)); // Rotates Ring3, the ring third from the center.
+            StartCoroutine(Rotate(ring3, 60f, 0.3f)); // Rotates Ring3, the ring third from the center.
             switch3 = false;
         }
         if(switch4)
         {
-            StartCoroutine(Rotate(ring4, ring4.transform.rotation, -1)); // Rotates Ring4, the outermost ring.
+            StartCoroutine(Rotate(ring4, 60f, 0.3f)); // Rotates Ring4, the outermost ring.
             switch4 = false;
         }
     }
@@ -82,30 +82,26 @@ public class CircuitPuzzleController : MonoBehaviour {
         }
     }
 
-    //public void RotateRing1()
-    //{
-    //    //ring1.GetComponent<Transform>().Rotate(new Vector3(0, 0, 1) * 315 * Time.deltaTime);
-    //}
-
-    //public void RotateRing2()
-    //{
-    //    //ring2.GetComponent<Transform>().Rotate(new Vector3(0, 0, -1) * 90 * Time.deltaTime);
-    //}
-
-    //public void RotateRing3()
-    //{
-    //    //ring3.GetComponent<Transform>().Rotate(new Vector3(0, 0, 1) * 90 * Time.deltaTime);
-    //}
-
-    //public void RotateRing4()
-    //{
-    //    //ring4.GetComponent<Transform>().Rotate(new Vector3(0, 0, -1) * 90 * Time.deltaTime);
-    //}
-
-    IEnumerator Rotate(GameObject ring, Quaternion targetRotation, float direction)
+    IEnumerator Rotate(GameObject ring, float byDegrees, float duration)
     {
-        targetRotation *= Quaternion.AngleAxis(60f, direction * Vector3.forward);
-        ring.transform.rotation = Quaternion.Lerp(ring.transform.rotation, targetRotation, 10 * 20f * Time.deltaTime);
+        Vector3 currentE = ring.transform.eulerAngles; // Gets the Euler rotation values from the ring game object and stores them in a Vector3 variable.
+        Vector3 newRotationE = new Vector3(currentE.x, currentE.y, currentE.z + byDegrees); // Stores the new Euler rotation values that the ring game object will slerp to in a Vector3 variable.
+        Quaternion currentQ = ring.transform.rotation; // Assigns Quaternion variable currentQ the Quaterion rotation values of the ring game object.
+        Quaternion newRotationQ = Quaternion.Euler(newRotationE); // Converts newRotationE to Quaternion format and stores it in newRotationQ.
+        
+        if(duration > 0f) // If duration is greater than 0.
+        {
+            float startT = Time.time; // startT is assigned the value of Time.time, represents the start.
+            float endT = startT + duration; // endT is assigned the combined values of startT and duration.
+            yield return null;
+
+            while(Time.time <= endT)
+            {
+                float progress = (Time.time - startT) / duration; // Gives the perentage value between 0 and 1 that the slerp is currently at.
+                ring.transform.rotation = Quaternion.Slerp(currentQ, newRotationQ, progress);
+                yield return null;
+            }
+        }
         yield return null;
     }
 }
