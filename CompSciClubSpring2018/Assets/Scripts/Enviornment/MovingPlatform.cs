@@ -6,9 +6,6 @@
  * Description:  This script will allow for a "platform" to move between two points
  */
 
-// PUT HEADER UP HERE AND COMMENT YOUR CODE (THE MORE THOUROUGHLY, THE BETTER)I'm Tony and I need to comment my code. Oh yeaaaa
-//^^ why yall hating?? ^^ XD
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

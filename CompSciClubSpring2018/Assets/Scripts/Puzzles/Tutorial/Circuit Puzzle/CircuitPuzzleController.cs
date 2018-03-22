@@ -2,7 +2,7 @@
  *  
  * Author: Spencer Wilson
  * Date Created: 3/16/2018 @ 8:38 pm
- * Date Modified: 3/20/2018 @ 3:27 pm
+ * Date Modified: 3/22/2018 @ 9:14 am
  * Project: CompSciClubSpring2018
  * File: CircuitPuzzle.cs
  * Description: Script that controls the circuit puzzle.
@@ -20,13 +20,15 @@ public class CircuitPuzzleController : MonoBehaviour {
     public GameObject ring3; // Holds the reference to the Ring3 game object.
     public GameObject ring4; // Holds the reference to the Ring4 game object.
 
+    public GameObject levelExit; // Holds the reference to the level exit / door.
+
     private bool switch1; // Declared a private boolean variable named switch1 that represents whether or not switch1 has been activated.
     private bool switch2; // Declared a private boolean variable named switch2 that represents whether or not switch2 has been activated
     private bool switch3; // Declared a private boolean variable named switch3 that represents whether or not switch3 has been activated.
     private bool switch4; // Declared a private boolean variable named switch4 that represents whether or not switch4 has been activated.
 
-    private bool puzzleOnline; // Private boolean value that represents whether or not the puzzle is online or not.
-    private bool doorLock; // Private boolean value that represents whether or not the door is locked.
+    private bool puzzleActive; // Private boolean value that represents whether or not the puzzle is active or not.
+    private bool levelExitAccess; // Private boolean value that represents whether or not the player can access the level exit.
 
     private void Start()
     {
@@ -34,11 +36,20 @@ public class CircuitPuzzleController : MonoBehaviour {
         switch2 = false; // Initializes switch2 to false at the start of the game.
         switch3 = false; // Initializes switch3 to false at the start of the game
         switch4 = false; // Initializes switch4 to false at the start of the game.
+        levelExitAccess = false; // Game starts with the level exit initially locked.
     }
 
     public void Update()
     {
-        SwitchControl(); // Checks if any of the switches have been activated and responses accordingly based upon their status.
+        IsPuzzleActive();
+    }
+
+    public void IsPuzzleActive() // Function that checks if the puzzle has been powered on or not.
+    {
+        if(puzzleActive) // If the puzzle is active, it's features and functionalities are accessible.
+        {
+            SwitchControl();
+        }
     }
 
     private void SwitchControl() // Private function named SwitchControl that checks whether or not the switches have been activated or not.
@@ -89,7 +100,7 @@ public class CircuitPuzzleController : MonoBehaviour {
         }
     }
 
-    IEnumerator WaitAmountOfSeconds(bool switchNum, float duration)
+    IEnumerator WaitAmountOfSeconds(bool switchNum, float duration) // work on
     {
         float start = Time.time;
         float end = start + duration;
