@@ -4,8 +4,8 @@
  * Date Modified: 3/17/2018 @ 11:30 am
  * Project: CompSciClubFall2017
  * File: TurretEnemy.cs
- * Description:
- * 
+ * Description: This script houses the main control script for the turret enemy. It's main purpose is to Istantiate projectile objects when the astral is 
+ * within range of the turret enemy. * 
  */
 
 using System.Collections;
@@ -36,15 +36,15 @@ public class TurretEnemy : MonoBehaviour {
 
     private void ShootProjectile()
     {
-        if (inRange && Time.time > nextShot)
+        if (inRange && Time.time > nextShot) // Provided the target is close enough and a set time has past since the last shot, shoot at target
         {
-            nextShot = Time.time + fireRate;
+            nextShot = Time.time + fireRate; // Causes a time delay between each projectile being fired
             Instantiate(projectile, projectileSpawn);
             Debug.Log("Shots Fired!");
         }
     }
 
-    public void SetInRange(bool incomingValue)
+    public void SetInRange(bool incomingValue) // When the yokai is within the detection range of the enemy, TargetYokai.cs will call this function
     {
         inRange = incomingValue;
     }
