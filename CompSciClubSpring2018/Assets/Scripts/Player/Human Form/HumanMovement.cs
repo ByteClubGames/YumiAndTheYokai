@@ -65,4 +65,20 @@ public class HumanMovement : MonoBehaviour
     {
         touched = false;
     }
+
+    void OnCollisionEnter2D(Collision2D other) // this is allows for the player to become a child of the moving platform prefab
+    {
+        if(other.transform.tag == "MovingPlatform") //this finds the object with the tag "MovingPlatform"
+        {
+            transform.parent = other.transform; //this makes what is colliding with that tag into the child of that tag
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D other) // this is allows for the player not be a child of the moving platform prefab
+    {
+        if (other.transform.tag == "MovingPlatform") //this finds the object with the tag "MovingPlatform"
+        {
+            transform.parent = null; //this makes what is colliding with that tag stop being a child of that tag
+        }
+    }
 }
