@@ -4,4 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/HunterGoodin-FirstScene.unity
+    guid: f59ebded29cc89b459fb2b0f46d37bb6
+  - enabled: 1
+    path: Assets/Scenes/Main Menu.unity
+    guid: 28d425e2e7c59674a974093e7b11fa82
