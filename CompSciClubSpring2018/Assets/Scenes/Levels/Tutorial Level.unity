@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 191868370}
   m_Layer: 0
   m_Name: TurretCollider
-  m_TagString: Untagged
+  m_TagString: EnemyDetector
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -233,7 +233,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 1221624010879872, guid: cc282336f3093c04c86734a7572dd1b7, type: 2}
-  fireRate: 0.5
+  fireRate: 1
 --- !u!1001 &739711692
 Prefab:
   m_ObjectHideFlags: 0

@@ -14,17 +14,17 @@ using UnityEngine;
 
 public class TurretEnemy : MonoBehaviour {
 
-    private Rigidbody2D turretEnemyRB;
+    //private Rigidbody2D turretEnemyRB;
     public GameObject projectile;
     private bool inRange = false;
     private Transform projectileSpawn;
-    public float fireRate = 0.5F;
+    public float fireRate = 1F;
     private float nextShot = 0.0F;
 
 	// Use this for initialization
 	void Start ()
     {
-        turretEnemyRB = GetComponent<Rigidbody2D>();
+        //turretEnemyRB = GetComponent<Rigidbody2D>();
         projectileSpawn = GameObject.Find("ProjectileSpawn").GetComponent<Transform>();
     }
 	

@@ -8,6 +8,7 @@ TagManager:
   - Puzzle
   - Ferrox
   - Human
+  - EnemyDetector
   layers:
   - Default
   - TransparentFX
