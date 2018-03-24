@@ -14,21 +14,30 @@ using UnityEngine;
 
 public class EarthSpellMechanics : MonoBehaviour {
 
+    /***Resolved in Earth Spell Use***
     Collision col = new Collision(); //collision object needed to call OnCollisionEnter method
-
 
     //if called, will destroy object if collision is detected and if not an Earth Spell Object
     void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject && col.gameObject.tag != "Earth Spell Object")
+        if ((col.gameObject.layer != LayerMask.NameToLayer("Earth")))
         {
             Destroy(gameObject);
-        }   
+        }
+    }*/
+
+
+    private void Start () 
+    {
+        /***Resolved in Earth Spell Use***
+        //check for collision
+        OnCollisionEnter(col);*/
+}
+
+private void Update()
+    {
+        
     }
 
-
-     void Start () 
-     {
-            OnCollisionEnter(col);
-     }
 }
+
