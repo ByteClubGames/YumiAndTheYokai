@@ -8,6 +8,7 @@ TagManager:
   - Puzzle
   - Ferrox
   - Human
+  - Platforms
   layers:
   - Default
   - TransparentFX
@@ -18,8 +19,8 @@ TagManager:
   - 
   - 
   - Level
-  - Platforms
   - Background
+  - 
   - 
   - 
   - 
