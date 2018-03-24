@@ -37,18 +37,14 @@ public class HumanMovement : MonoBehaviour
 
     private void Movement() // Function that houses the code that accounts for the human's movement.k
     {
-        if (/*touched && isLeft*/ Input.GetKey("a"))
+        if (Input.GetKey("a"))
         {
             playerRB.transform.Translate(-transform.right * Time.deltaTime * speed);
         }
-        if (/*touched && isRight*/ Input.GetKey("d"))
+        if (Input.GetKey("d"))
         {
             playerRB.transform.Translate(transform.right * Time.deltaTime * speed);
         }
-        //if (/*touched && isJump*/ Input.GetKey("space"))
-        //{
-        //    playerRB.transform.Translate(transform.up * Time.deltaTime * jumpSpeed);
-        //}
     }
 
     public void SetIfActive(bool incomingVal) // Function that sets isActive to incomingVal.

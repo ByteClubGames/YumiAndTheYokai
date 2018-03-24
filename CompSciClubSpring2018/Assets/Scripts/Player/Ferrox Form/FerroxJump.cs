@@ -17,6 +17,7 @@ public class FerroxJump : MonoBehaviour {
 
     public Rigidbody2D ferroxRB;
     public float jumpSpeed;
+    public bool isGrounded;
 
     void Start()
     {
@@ -34,5 +35,10 @@ public class FerroxJump : MonoBehaviour {
         {
             ferroxRB.AddForce(Vector2.up * Time.deltaTime * jumpSpeed);
         }
+    }
+
+    public void SetIsGrounded(bool value) // Allows the player to set isGrounded.
+    {
+        isGrounded = value;
     }
 }

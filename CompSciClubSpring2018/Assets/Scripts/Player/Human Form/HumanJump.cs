@@ -19,6 +19,8 @@ public class HumanJump : MonoBehaviour
     public Vector2 secondPressPos;
     public Vector2 currentSwipe;
 
+    private bool isGrounded; // Boolean variable than represents whether or not an object is grounded or not.
+
     private void FixedUpdate()
     {
         Jump();
@@ -27,10 +29,15 @@ public class HumanJump : MonoBehaviour
 
     private void Jump() // Script that allows the player to jump.
     {
-            if (Input.GetKey("space") && (humanRB.velocity.y == 0f))
+            if (Input.GetKey("space") && (humanRB.velocity.y == 0f) && isGrounded)
             {
                 humanRB.AddForce(Vector2.up * Time.deltaTime * jumpSpeed);
             }
+    }
+
+    public void SetIsGrounded(bool value) // Allows the player to set isGrounded.
+    {
+        isGrounded = value;
     }
 
     //private void Swiper()
