@@ -3,7 +3,7 @@
  * Date Created: 3/17/2018 @ 11:30 am
  * Date Modified: 3/17/2018 @ 11:30 am
  * Project: CompSciClubFall2017
- * File: TurretProjectile.cs
+ * File: TargetYokai.cs
  * Description: This script provides a way for the turret enemy in the tutorial level to detect the player. If the astral component is close enough to
  * the enemy, this script will enable the enemy's other scripts, allowing it to shoot. When the Yokai enters the box collider of the turret enemy, 
  * this script will set TurretEnemy.inRange to a value of true.
