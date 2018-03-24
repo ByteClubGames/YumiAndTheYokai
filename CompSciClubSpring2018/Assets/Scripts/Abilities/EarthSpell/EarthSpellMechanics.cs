@@ -14,6 +14,15 @@ using UnityEngine;
 
 public class EarthSpellMechanics : MonoBehaviour {
 
+
+    public Vector2 firstPressPos = new Vector2(0, 0);
+    public Vector2 secondPressPos;
+    public Vector2 currentSwipe;
+    public float extendFactor = 3;
+    private float deltaX, deltaY;
+
+
+
     /***Resolved in Earth Spell Use***
     Collision col = new Collision(); //collision object needed to call OnCollisionEnter method
 
@@ -32,12 +41,43 @@ public class EarthSpellMechanics : MonoBehaviour {
         /***Resolved in Earth Spell Use***
         //check for collision
         OnCollisionEnter(col);*/
-}
+    }
 
-private void Update()
+    private void Update()
     {
         
     }
+
+    private void Swiper()
+    {
+        //get user input
+        if (Input.GetMouseButtonDown(0))
+        {
+            //get first mouse position
+            firstPressPos.x = Input.mousePosition.x;
+            firstPressPos.y = Input.mousePosition.y;
+        }
+        if (Input.GetMouseButtonUp(0))
+        {
+            secondPressPos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+            deltaX = secondPressPos.x - firstPressPos.x;
+            deltaY = secondPressPos.y - firstPressPos.y;
+
+            currentSwipe = new Vector2(deltaX, deltaY);
+        }
+
+        if (currentSwipe.y > 50 && currentSwipe.y != 0)
+        {
+            eSpell.transform.Translate(transform.up * Time.deltaTime * extendFactor);
+            eSpell.transform.localScale += new Vector3(secondPressPos.x - firstPressPos.x, 0, 0);
+
+
+            firstPressPos = new Vector2(0, 0);
+            secondPressPos = new Vector2(0, 0);
+            currentSwipe = new Vector2(0, 0);
+        }
+    }
+
 
 }
 
