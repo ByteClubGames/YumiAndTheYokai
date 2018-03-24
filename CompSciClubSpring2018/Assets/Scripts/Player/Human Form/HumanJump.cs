@@ -29,7 +29,7 @@ public class HumanJump : MonoBehaviour
 
     private void Jump() // Script that allows the player to jump.
     {
-            if (Input.GetKey("space") && (humanRB.velocity.y == 0f) && isGrounded)
+            if (Input.GetKeyDown("space") && (humanRB.velocity.y == 0f) && isGrounded)
             {
                 humanRB.AddForce(Vector2.up * Time.deltaTime * jumpSpeed);
             }
