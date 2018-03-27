@@ -10,8 +10,8 @@ using UnityEngine;
  * TouchInput 
  */
 
-public class Button : MonoBehaviour {
-
+public class Button : MonoBehaviour
+{
     public Color defaultColor;
     public Color selectedColor;
     private Material mat;

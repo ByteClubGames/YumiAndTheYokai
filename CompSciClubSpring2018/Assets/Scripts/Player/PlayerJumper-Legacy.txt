@@ -1,6 +1,5 @@
-﻿/*
+/*
  * Programmer:   Hunter Goodin 
- * Project:      Astral 
  * Date Created: 02/16/2018 @  9:40 PM 
  * Last Updated: 02/16/2018 @ 11:35 PM 
  * File Name:    PlayerJumper.cs 
@@ -22,16 +21,13 @@ public class PlayerJumper : MonoBehaviour
 
     private bool touched;
     public bool isJump;
-    public bool jumpBool; 
 
     public LayerMask groundLayers;
     public CapsuleCollider col;
 
-    private void FixedUpdate()
+    private void Update()
     {
-        // Swiper();
-        ButtonJump();
-        jumpBool = false; 
+        Swiper();  
     }
 
     private bool IsGrounded()
@@ -68,7 +64,7 @@ public class PlayerJumper : MonoBehaviour
 
     private bool IsSwipe()
     {
-        if(currentSwipe.y > 50 && currentSwipe.y != 0) 
+        if(currentSwipe.y > 50 && currentSwipe.y != 0)
         {
             return true; 
         }
@@ -81,32 +77,23 @@ public class PlayerJumper : MonoBehaviour
     // Button Controls
     private void ButtonJump()
     {
-        //if (IsGrounded() && Input.GetKeyDown(KeyCode.Space))
-        //{
-        //    playerRB.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-        //}
-        if (isJump && IsGrounded() && jumpBool)
+        if (IsGrounded() && Input.GetKeyDown(KeyCode.Space))
+        {
+            playerRB.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        }
+        if (touched && isJump)
         {
             playerRB.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
     }
 
-    private void MakeJumpTrue()
+    void OnMouseDown()
     {
-        jumpBool = true; 
-    }
-    private void MakeJumpFalse()
-    {
-        jumpBool = false;
+        touched = true;
     }
 
-    //void OnMouseDown()
-    //{
-    //    touched = true;
-    //}
-
-    //private void OnMouseUp()
-    //{
-    //    touched = false;
-    //}
+    private void OnMouseUp()
+    {
+        touched = false;
+    }
 }

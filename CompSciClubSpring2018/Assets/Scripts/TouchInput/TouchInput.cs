@@ -1,22 +1,26 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-/*
- * Byte Club 
- * 2/26/18
- * Author: Rory Glenn
- * TouchInput 
+﻿/*
+ * Programmer:   Hunter Goodin 
+ * Date Created: 03/21/2018 @ 10:00 PM 
+ * Last Updated: 03/22/2018 @  7:00 PM 
+ * File Name:    TouchInput.cs 
+ * Description:  This script will be responsible for translating a finger's touch into a touch input. 
  */
 
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class TouchInput : MonoBehaviour
 {
 
     public LayerMask touchInputMask;
-    private List<GameObject> touchList = new List<GameObject>();
-    private GameObject[] touchesOld;
+    public List<GameObject> touchList = new List<GameObject>();
+    public GameObject[] touchesOld;
     private RaycastHit hit;
+    public GameObject leftMover;
+    public GameObject rightMover; 
+
+    public GameObject recipient; 
 
     // I havent attached this script to the main camera yet 
     // so we might need to go back and delete the cam variable later on
@@ -24,14 +28,12 @@ public class TouchInput : MonoBehaviour
 
     void Update()
     {
-
         if (Input.touchCount > 0)
         {
             touchesOld = new GameObject[touchList.Count];
             touchList.CopyTo(touchesOld);
             touchList.Clear();
         }
-
 
         // The foreach statement is used to iterate through the collection
         // to get the information that you want, but can not be used to
@@ -49,29 +51,49 @@ public class TouchInput : MonoBehaviour
             if (Physics.Raycast(ray, out hit, touchInputMask))
             {
                 // if the ray hits a game object
-                GameObject recipient = hit.transform.gameObject;
+                recipient = hit.transform.gameObject;
                 touchList.Add(recipient);
 
                 // The conditions below check the current status of the players touch input
 
                 if (touch.phase == TouchPhase.Began)
                 {
-                    recipient.SendMessage("OnTouchDown", hit.point, SendMessageOptions.DontRequireReceiver);
+                    if (recipient.name == "MovePlayerLeft")
+                    {
+                        recipient.SendMessage("Move", hit.point, SendMessageOptions.DontRequireReceiver);
+                        rightMover.SetActive(false); 
+                    }
+                    if (recipient.name == "MovePlayerRight")
+                    {
+                        recipient.SendMessage("Move", hit.point, SendMessageOptions.DontRequireReceiver);
+                        leftMover.SetActive(false);
+                    }
+                    if (recipient.name == "MovePlayerJump")
+                    {
+                        recipient.SendMessage("MakeJumpTrue", hit.point, SendMessageOptions.DontRequireReceiver);
+                        leftMover.SetActive(false);
+                    }
                 }
 
                 if (touch.phase == TouchPhase.Ended)
                 {
-                    recipient.SendMessage("OnTouchUp", hit.point, SendMessageOptions.DontRequireReceiver);
+                    recipient.SendMessage("StopMoving", hit.point, SendMessageOptions.DontRequireReceiver);
+                    recipient.SendMessage("MakeJumpFalse", hit.point, SendMessageOptions.DontRequireReceiver);
+                    leftMover.SetActive(true);
+                    rightMover.SetActive(true);
                 }
 
                 if (touch.phase == TouchPhase.Stationary || touch.phase == TouchPhase.Moved)
                 {
-                    recipient.SendMessage("OnTouchStay", hit.point, SendMessageOptions.DontRequireReceiver);
+                    recipient.SendMessage("Move", hit.point, SendMessageOptions.DontRequireReceiver);
                 }
 
                 if (touch.phase == TouchPhase.Canceled)
                 {
-                    recipient.SendMessage("OnTouchExit", hit.point, SendMessageOptions.DontRequireReceiver);
+                    recipient.SendMessage("StopMoving", hit.point, SendMessageOptions.DontRequireReceiver);
+                    recipient.SendMessage("MakeJumpFalse", hit.point, SendMessageOptions.DontRequireReceiver);
+                    leftMover.SetActive(true);
+                    rightMover.SetActive(true);
                 }
             }
 
@@ -86,5 +108,4 @@ public class TouchInput : MonoBehaviour
             }
         }
     }
-
 }

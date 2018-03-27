@@ -12,7 +12,6 @@ using UnityEngine;
 
 public class Swipe : MonoBehaviour
 {
-
     private bool tap;
     private bool swipeLeft;
     private bool swipeRight;
@@ -26,22 +25,6 @@ public class Swipe : MonoBehaviour
     private void Update()
     {
         tap = swipeLeft = swipeRight = swipeUp = swipeDown = false;
-
-        #region Standalone Inputs
-
-        if (Input.GetMouseButtonDown(0))
-        {
-            tap = true;
-            isDraging = true;
-            startTouch = Input.mousePosition;
-        }
-        else if (Input.GetMouseButtonUp(0))
-        {
-            isDraging = false;
-            Reset();
-        }
-
-        #endregion
 
         #region Mobile Inputs
 
