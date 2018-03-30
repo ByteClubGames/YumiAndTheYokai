@@ -39,7 +39,7 @@ Transform:
   m_GameObject: {fileID: 1907276841444114}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 1, y: 0.01, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -127,4 +127,9 @@ MonoBehaviour:
   secondPressPos: {x: 0, y: 0}
   currentSwipe: {x: 0, y: 0}
   extendFactor: 25
+  extendSpeed: 0.1
+  destroyTime: 5
+  maxSpells: 3
   earthGrowingY: 0
+  earthGrowingNegY: 0
+  earthGrowingX: 0
