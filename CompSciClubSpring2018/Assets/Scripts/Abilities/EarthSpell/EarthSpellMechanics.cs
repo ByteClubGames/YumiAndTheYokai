@@ -1,6 +1,6 @@
 ﻿/* EarthSpellMechanics.cs
  * Date Created: 3/15/18
- * Last Edited: 3/17/18
+ * Last Edited: 3/29/18
  * Programmer: Daniel Jaffe
  * Description: Functionality of Earth Spell - Attach to the earthSpell object (cube):
  *      1. Tests if there is collision with another gameobject. If so, despawns.
@@ -18,8 +18,14 @@ public class EarthSpellMechanics : MonoBehaviour {
     public Vector2 firstPressPos = new Vector2(0, 0);
     public Vector2 secondPressPos;
     public Vector2 currentSwipe;
-    public float extendFactor = 3;
     private float deltaX, deltaY;
+
+    public float extendFactor = 500;
+
+    public bool earthGrowingY = false; //These are used to make use of the update function to grow the eSpell
+    private int earthGrowingYIncrement = 0;
+    
+    
 
 
 
@@ -45,7 +51,7 @@ public class EarthSpellMechanics : MonoBehaviour {
 
     private void Update()
     {
-        
+        Swiper();
     }
 
     private void Swiper()
@@ -66,11 +72,24 @@ public class EarthSpellMechanics : MonoBehaviour {
             currentSwipe = new Vector2(deltaX, deltaY);
         }
 
-        if (currentSwipe.y > 50 && currentSwipe.y != 0)
+        //Once the earthspell starts growing, this if statement will run until the incrementor ends
+        //This is to grow the eSpell every frame using the Update() function
+        if (currentSwipe.y > 300 && currentSwipe.y != 0 || this.earthGrowingY)
         {
-            eSpell.transform.Translate(transform.up * Time.deltaTime * extendFactor);
-            eSpell.transform.localScale += new Vector3(secondPressPos.x - firstPressPos.x, 0, 0);
-
+            this.earthGrowingY = true;
+            if (this.earthGrowingY)
+            {
+                print(earthGrowingYIncrement);
+                this.gameObject.transform.localScale += new Vector3(0, .1F, 0);
+                this.gameObject.transform.Translate(0, (.1F) / 2, 0);
+                earthGrowingYIncrement++;
+                
+                if (earthGrowingYIncrement == extendFactor)
+                {
+                    this.earthGrowingY = false;
+                    earthGrowingYIncrement = 0;
+                }
+            }
 
             firstPressPos = new Vector2(0, 0);
             secondPressPos = new Vector2(0, 0);
@@ -80,4 +99,13 @@ public class EarthSpellMechanics : MonoBehaviour {
 
 
 }
+
+
+
+
+
+
+
+
+
 

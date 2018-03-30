@@ -1,6 +1,6 @@
 ﻿/* EarthSpellUse.cs
  * Date Created: 3/15/18
- * Last Edited: 3/17/18
+ * Last Edited: 3/29/18
  * Programmer: Daniel Jaffe
  * Description: Spawn in the earthSpell object (cube) - Attach to the Earth Spell Spawner object:
  *      1. Spawns a eSpell object at the point of click
@@ -40,40 +40,42 @@ public class EarthSpellUse : MonoBehaviour
                             Vector3(Input.mousePosition.x, Input.mousePosition.y, 10.0f));
                 //spawns the eSpell object into play
                 Instantiate(eSpell, new Vector3(playerinput.x, playerinput.y, 0), Quaternion.identity);
-                Swiper();
+                //Swiper(); Swiper is now used in EarthSpellMechanics
             }
         }
     }
 
 
 
-    private void Swiper()
-    {
-        //get user input
-        if (Input.GetMouseButtonDown(0))
-        {
-            //get first mouse position
-            firstPressPos.x = Input.mousePosition.x;
-            firstPressPos.y = Input.mousePosition.y;
-        }
-        if (Input.GetMouseButtonUp(0))
-        {
-            secondPressPos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
-            deltaX = secondPressPos.x - firstPressPos.x;
-            deltaY = secondPressPos.y - firstPressPos.y;
+    //private void Swiper()
+    //{
+    //    //get user input
+    //    if (Input.GetMouseButtonDown(0))
+    //    {
+    //        //get first mouse position
+    //        firstPressPos.x = Input.mousePosition.x;
+    //        firstPressPos.y = Input.mousePosition.y;
+    //    }
+    //    if (Input.GetMouseButtonUp(0))
+    //    {
+    //        secondPressPos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+    //        deltaX = secondPressPos.x - firstPressPos.x;
+    //        deltaY = secondPressPos.y - firstPressPos.y;
 
-            currentSwipe = new Vector2(deltaX, deltaY);
-        }
+    //        currentSwipe = new Vector2(deltaX, deltaY);
+    //    }
 
-        if (currentSwipe.y > 50 && currentSwipe.y != 0)
-        {
-            eSpell.transform.Translate(transform.up * Time.deltaTime * extendFactor);
-            eSpell.transform.localScale += new Vector3(secondPressPos.x - firstPressPos.x, 0, 0);
+    //    if (currentSwipe.y > 50 && currentSwipe.y != 0)
+    //    {
+    //        eSpell.transform.Translate(transform.up * Time.deltaTime * extendFactor);
+    //        eSpell.transform.localScale += new Vector3(secondPressPos.x - firstPressPos.x, 0, 0);
     
 
-            firstPressPos = new Vector2(0, 0);
-            secondPressPos = new Vector2(0, 0);
-            currentSwipe = new Vector2(0, 0);
-        }
-    }
+    //        firstPressPos = new Vector2(0, 0);
+    //        secondPressPos = new Vector2(0, 0);
+    //        currentSwipe = new Vector2(0, 0);
+    //    }
+    //}
 }
+
+
