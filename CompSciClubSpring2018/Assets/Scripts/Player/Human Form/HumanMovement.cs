@@ -13,7 +13,6 @@ using UnityEngine;
 public class HumanMovement : MonoBehaviour
 {
     public float speed;
-    public float jumpSpeed;
     public Rigidbody2D playerRB;
     public bool isJump;
     public bool isLeft;

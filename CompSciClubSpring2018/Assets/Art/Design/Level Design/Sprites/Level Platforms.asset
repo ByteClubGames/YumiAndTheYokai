@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Level Platforms
   m_EditorClassIdentifier: 
   m_Sprite: {fileID: 21300000, guid: 881422868c844c54594a44816c9d9948, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 1}
   m_Transform:
     e00: 1
     e01: 0
