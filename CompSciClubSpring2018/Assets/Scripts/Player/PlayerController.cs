@@ -1,8 +1,8 @@
 ﻿/*
  * 
- * Authors: Spencer Wilson
+ * Authors: Spencer Wilson, Keiran Glynn
  * Date Created: 3/5/2018 @ 3:11 pm
- * Date Modified: 3/6/2018 @ 5:22 pm
+ * Date Modified: 3/10/2018 @ 11:52 am
  * Project: CompSciClubSpring2018
  * File: PlayerController.cs
  * Description: This class controls the interaction between the player's physical and yokai form as well as any extraneous things.
@@ -17,10 +17,10 @@ public class PlayerController : MonoBehaviour {
 
     public GameObject humanGameObject; // Public game object that holds the little girl game object.
     public GameObject ferroxGameObject; // Public game object that holds the ferrox's game object.
-    private bool isProjecting; // Creating a private boolean variable that represents whether or not the player is projecting.
+    private bool isProjecting = true; // Creating a private boolean variable that represents whether or not the player is projecting.
 	// Use this for initialization
 	public void Start () {
-        isProjecting = false; // Initializing isProjecting to be false at the start of the level.
+        SetIsProjecting(); // Initializing isProjecting to be false at the start of the level.
 	}
 	
 	// Update is called once per frame
@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour {
     {
         if(Input.GetKeyUp("g")) // When "g" is pressed, switch the isProjecting value to it's opposite boolean value.
         {
-            isProjecting = !isProjecting;
+            SetIsProjecting();
         }
     }
 
@@ -56,6 +56,14 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
-
+    /* This script modularizes Spencer's script for swapping the value of 'isProjecting' between true and false. It is called on by this
+     * class, as well as other classes, like FerroxHealth.cs. Right now this class only changes the value of 'isProjecting to its opposite value.
+     * In the future, it may be benneficial to have it accept a true or false paramater so that the value of 'isProjecing can be 
+     * explicitly chosen. 
+     */
+     public void SetIsProjecting()
+    {
+        isProjecting = !isProjecting;
+    }
 
 }

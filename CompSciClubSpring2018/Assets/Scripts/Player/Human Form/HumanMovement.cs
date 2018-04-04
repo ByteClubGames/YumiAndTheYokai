@@ -13,7 +13,6 @@ using UnityEngine;
 public class HumanMovement : MonoBehaviour
 {
     public float speed;
-    public float jumpSpeed;
     public Rigidbody2D playerRB;
     public bool isJump;
     public bool isLeft;
@@ -35,19 +34,15 @@ public class HumanMovement : MonoBehaviour
         }
     }
 
-    private void Movement() // Function that houses the code that accounts for the human's movement.
+    private void Movement() // Function that houses the code that accounts for the human's movement.k
     {
-        if (/*touched && isLeft*/ Input.GetKey("a"))
+        if (Input.GetKey("a"))
         {
             playerRB.transform.Translate(-transform.right * Time.deltaTime * speed);
         }
-        if (/*touched && isRight*/ Input.GetKey("d"))
+        if (Input.GetKey("d"))
         {
             playerRB.transform.Translate(transform.right * Time.deltaTime * speed);
-        }
-        if (/*touched && isJump*/ Input.GetKey("space"))
-        {
-            playerRB.transform.Translate(transform.up * Time.deltaTime * jumpSpeed);
         }
     }
 
@@ -64,5 +59,21 @@ public class HumanMovement : MonoBehaviour
     private void OnMouseUp()
     {
         touched = false;
+    }
+
+    void OnCollisionEnter2D(Collision2D other) // this is allows for the player to become a child of the moving platform prefab
+    {
+        if(other.transform.tag == "MovingPlatform") //this finds the object with the tag "MovingPlatform"
+        {
+            transform.parent = other.transform; //this makes what is colliding with that tag into the child of that tag
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D other) // this is allows for the player not be a child of the moving platform prefab
+    {
+        if (other.transform.tag == "MovingPlatform") //this finds the object with the tag "MovingPlatform"
+        {
+            transform.parent = null; //this makes what is colliding with that tag stop being a child of that tag
+        }
     }
 }

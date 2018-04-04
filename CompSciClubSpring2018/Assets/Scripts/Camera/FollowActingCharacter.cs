@@ -1,8 +1,8 @@
 ﻿/* 
  * 
  * Author: Spencer Wilson
- * Date Created: 3/6/2018 @ 4:33 pm
- * Date Modified: 3/6/2018 @ 5:22 pm
+ * Date Created: 03/6/2018 @ 4:33 pm
+ * Date Modified: 03/10/2018 @ 10:20 pm
  * Project: CompSciClubSpring2018
  * File: FollowActingCharacter.cs
  * Description: This script houses the code for the Main Camera to follow the acting character.
