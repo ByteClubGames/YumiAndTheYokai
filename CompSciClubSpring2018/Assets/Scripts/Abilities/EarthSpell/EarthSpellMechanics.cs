@@ -19,6 +19,7 @@ public class EarthSpellMechanics : MonoBehaviour {
     public Vector2 secondPressPos;
     public Vector2 currentSwipe;
     private float deltaX, deltaY;
+    public float swipeThreshold;
 
     public float extendFactor = 25;
     public float extendSpeed = .1f;
@@ -26,16 +27,18 @@ public class EarthSpellMechanics : MonoBehaviour {
 
     public int maxSpells = 3;
 
-    public bool earthGrowingY = false; //These are used to make use of the update function to grow the eSpell
+    //These earthGrowing variables are used to make use of the update function to grow the eSpell
+    public bool earthGrowingY = false; //Positive Y growth
     private int earthGrowingYIncrement = 0;
 
-    //public bool earthGrowingNegY = false; //These are used to make use of the update function to grow the eSpell
-    //private int earthGrowingNegYIncrement = 0;
+    public bool earthGrowingNegY = false; //Negative Y growth
+    private int earthGrowingNegYIncrement = 0;
 
-    public bool earthGrowingX = false; //These are used to make use of the update function to grow the eSpell
+    public bool earthGrowingX = false; //Positive X growth
     private int earthGrowingXIncrement = 0;
 
-
+    public bool earthGrowingNegX = false; //Negative X growth
+    private int earthGrowingNegXIncrement = 0;
 
 
 
@@ -54,6 +57,8 @@ public class EarthSpellMechanics : MonoBehaviour {
 
     private void Start () 
     {
+        
+
         /***Resolved in Earth Spell Use***
         //check for collision
         OnCollisionEnter(col);*/
@@ -89,72 +94,52 @@ public class EarthSpellMechanics : MonoBehaviour {
 
             currentSwipe = new Vector2(deltaX, deltaY);
         }
-        
-        //Once the earthspell starts growing, this if statement will run until the incrementor ends
-        //This is to grow the eSpell every frame using the Update() function
-        if (currentSwipe.y > 300 && currentSwipe.y != 0 || this.earthGrowingY)
-        {
-            this.earthGrowingY = true;
-            if (this.earthGrowingY)
-            {
-                
-                this.gameObject.transform.localScale += new Vector3(0, extendSpeed, 0);
-                this.gameObject.transform.Translate(0, (extendSpeed) / 2, 0);
-                earthGrowingYIncrement++;
-                
-                if (earthGrowingYIncrement == extendFactor)
-                {
-                    this.earthGrowingY = false;
-                    earthGrowingYIncrement = 0;
-                }
-            }
 
-            firstPressPos = new Vector2(0, 0);
-            secondPressPos = new Vector2(0, 0);
-            currentSwipe = new Vector2(0, 0);
+
+        //Decides which direction to grow by setting the earthGrowing boolean to true
+        print(Mathf.Abs(currentSwipe.y) + " " + Mathf.Abs(currentSwipe.x));
+        if (Mathf.Abs(currentSwipe.y) > Mathf.Abs(currentSwipe.x)) //Check if abs value of y or x is greater.
+        {
+            if (currentSwipe.y > swipeThreshold)
+            {
+                earthGrowingY = true;
+                print("1");
+            }
+            else //if (currentSwipe.y < -swipeThreshold)
+            {
+                earthGrowingNegY = true;
+                print("2");
+            }
+        }
+        else if (Mathf.Abs(currentSwipe.x) > Mathf.Abs(currentSwipe.y))
+        {
+            if (currentSwipe.x > swipeThreshold)
+            {
+                earthGrowingX = true;
+                print("3");
+            }
+            if (currentSwipe.x < -swipeThreshold)
+            {
+                earthGrowingNegX = true;
+                print("4");
+            }
         }
 
-        ////Once the earthspell starts growing, this if statement will run until the incrementor ends
-        ////This is to grow the eSpell every frame using the Update() function
-        //if (currentSwipe.y < -300 && currentSwipe.y != 0 || this.earthGrowingNegY)
-        //{
-        //    this.earthGrowingNegY = true;
-        //    if (this.earthGrowingNegY)
-        //    {
 
-        //        this.gameObject.transform.localScale += new Vector3(0, -extendSpeed, 0);
-        //        this.gameObject.transform.Translate(0, -(extendSpeed) / 2, 0);
-        //        earthGrowingNegYIncrement++;
-
-        //        if (earthGrowingNegYIncrement == extendFactor)
-        //        {
-        //            this.earthGrowingNegY = false;
-        //            earthGrowingNegYIncrement = 0;
-        //        }
-        //    }
-
-        //    firstPressPos = new Vector2(0, 0);
-        //    secondPressPos = new Vector2(0, 0);
-        //    currentSwipe = new Vector2(0, 0);
-        //}
-
-        //Once the earthspell starts growing, this if statement will run until the incrementor ends
-        //This is to grow the eSpell every frame using the Update() function
-        if (currentSwipe.x > 300 && currentSwipe.x != 0 || this.earthGrowingX)
+        /*
+        grows the earthSpell depending on the chosen direction
+        */
+        if (earthGrowingY)
         {
-            this.earthGrowingX = true;
-            if (this.earthGrowingX)
+
+            gameObject.transform.localScale += new Vector3(0, extendSpeed, 0);
+            gameObject.transform.Translate(0, (extendSpeed) / 2, 0);
+            earthGrowingYIncrement++;
+                
+            if (earthGrowingYIncrement == extendFactor)
             {
-
-                this.gameObject.transform.localScale += new Vector3(extendSpeed, 0, 0);
-                this.gameObject.transform.Translate((extendSpeed) / 2, 0, 0);
-                earthGrowingXIncrement++;
-
-                if (earthGrowingXIncrement == extendFactor)
-                {
-                    this.earthGrowingX = false;
-                    earthGrowingXIncrement = 0;
-                }
+                earthGrowingY = false; //once done growing, resets these values
+                earthGrowingYIncrement = 0;
             }
 
             firstPressPos = new Vector2(0, 0);
@@ -164,14 +149,81 @@ public class EarthSpellMechanics : MonoBehaviour {
 
 
 
-        //this is an attempt to use a different method of growing
+        /*
+         Attempt to grow in the negative directions.
+         */
+        if (earthGrowingNegY)
+        {
+            gameObject.transform.localScale += new Vector3(0, extendSpeed, 0);
+            gameObject.transform.Translate(0, -(extendSpeed) / 2, 0);
+            earthGrowingNegYIncrement++;
+
+            if (earthGrowingNegYIncrement == extendFactor)
+            {
+                earthGrowingNegY = false;
+                earthGrowingNegYIncrement = 0;
+            }
+
+
+            firstPressPos = new Vector2(0, 0);
+            secondPressPos = new Vector2(0, 0);
+            currentSwipe = new Vector2(0, 0);
+        }
+
+
+        if (earthGrowingX)
+        {
+
+            gameObject.transform.localScale += new Vector3(extendSpeed, 0, 0);
+            gameObject.transform.Translate((extendSpeed) / 2, 0, 0);
+            earthGrowingXIncrement++;
+
+            if (earthGrowingXIncrement == extendFactor)
+            {
+                earthGrowingX = false;
+                earthGrowingXIncrement = 0;
+            }
+
+
+            firstPressPos = new Vector2(0, 0);
+            secondPressPos = new Vector2(0, 0);
+            currentSwipe = new Vector2(0, 0);
+        }
+
+        if (earthGrowingNegX)
+        {
+
+            gameObject.transform.localScale += new Vector3(extendSpeed, 0, 0);
+            gameObject.transform.Translate((-extendSpeed) / 2, 0, 0);
+            earthGrowingNegXIncrement++;
+
+            if (earthGrowingNegXIncrement == extendFactor)
+            {
+                earthGrowingNegX = false;
+                earthGrowingNegXIncrement = 0;
+            }
+
+
+            firstPressPos = new Vector2(0, 0);
+            secondPressPos = new Vector2(0, 0);
+            currentSwipe = new Vector2(0, 0);
+        }
+
+
+        /*
+        this is an attempt to use a different method of growing
+        it didnt work :(
+        it is supposed to use WaitForSeconds which required modification 
+        to the headers with the IEnumerator
+         */
+
         //if (currentSwipe.y > 300 && currentSwipe.y != 0)
         //{
 
         //    for (int i = 0; i < extendFactor; i++)
         //    { 
-        //        this.gameObject.transform.localScale += new Vector3(0, extendSpeed, 0);
-        //        this.gameObject.transform.Translate(0, (extendSpeed) / 2, 0);
+        //        gameObject.transform.localScale += new Vector3(0, extendSpeed, 0);
+        //        gameObject.transform.Translate(0, (extendSpeed) / 2, 0);
         //        print(i);
         //        yield return new WaitForSeconds(.5f);
 
@@ -183,7 +235,7 @@ public class EarthSpellMechanics : MonoBehaviour {
         //}
     }
 
-
+    
 }
 
 

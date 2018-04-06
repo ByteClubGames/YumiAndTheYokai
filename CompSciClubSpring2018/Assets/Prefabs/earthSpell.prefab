@@ -58,7 +58,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 7d661843fe10a7947bb5e65259807f05, type: 2}
+  - {fileID: 2100000, guid: e480c6e141cec5540b7c1533235937e5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -126,6 +126,7 @@ MonoBehaviour:
   firstPressPos: {x: 0, y: 0}
   secondPressPos: {x: 0, y: 0}
   currentSwipe: {x: 0, y: 0}
+  swipeThreshold: 0
   extendFactor: 25
   extendSpeed: 0.1
   destroyTime: 5
@@ -133,3 +134,4 @@ MonoBehaviour:
   earthGrowingY: 0
   earthGrowingNegY: 0
   earthGrowingX: 0
+  earthGrowingNegX: 0
