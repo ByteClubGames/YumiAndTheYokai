@@ -15,9 +15,7 @@ public class EarthSpellUse : MonoBehaviour
 {
 
     public GameObject eSpell;
-    Vector3 playerinput = new Vector3(1, 1, 0); //gets player input
-
-
+    public Vector3 playerinput = new Vector3(1, 1, 0); //gets player input
 
     void Start()
     {
@@ -44,38 +42,6 @@ public class EarthSpellUse : MonoBehaviour
             }
         }
     }
-
-
-
-    //private void Swiper()
-    //{
-    //    //get user input
-    //    if (Input.GetMouseButtonDown(0))
-    //    {
-    //        //get first mouse position
-    //        firstPressPos.x = Input.mousePosition.x;
-    //        firstPressPos.y = Input.mousePosition.y;
-    //    }
-    //    if (Input.GetMouseButtonUp(0))
-    //    {
-    //        secondPressPos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
-    //        deltaX = secondPressPos.x - firstPressPos.x;
-    //        deltaY = secondPressPos.y - firstPressPos.y;
-
-    //        currentSwipe = new Vector2(deltaX, deltaY);
-    //    }
-
-    //    if (currentSwipe.y > 50 && currentSwipe.y != 0)
-    //    {
-    //        eSpell.transform.Translate(transform.up * Time.deltaTime * extendFactor);
-    //        eSpell.transform.localScale += new Vector3(secondPressPos.x - firstPressPos.x, 0, 0);
-    
-
-    //        firstPressPos = new Vector2(0, 0);
-    //        secondPressPos = new Vector2(0, 0);
-    //        currentSwipe = new Vector2(0, 0);
-    //    }
-    //}
 }
 
 
