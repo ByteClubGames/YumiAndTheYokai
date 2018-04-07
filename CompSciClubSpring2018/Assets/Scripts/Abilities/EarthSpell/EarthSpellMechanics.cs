@@ -18,6 +18,7 @@ public class EarthSpellMechanics : MonoBehaviour {
     private Vector2 secondPressPos;
     private float deltaX = 0f, deltaY = 0f;
     private bool grow = false;
+    private Collision col;
 
     public int maxSpells = 3;
     public float extendFactor = 25f;
@@ -36,6 +37,8 @@ public class EarthSpellMechanics : MonoBehaviour {
 
     private void Update()
     {
+        //OnCollisionEnter(col);  //*****NOT WORKING YET-- Should stop the earth spell from growing through no earth objects*****
+
         if (Input.GetMouseButtonUp(0))
         {
             secondPressPos = Input.mousePosition;
@@ -48,6 +51,8 @@ public class EarthSpellMechanics : MonoBehaviour {
             print("Second: " + secondPressPos.x + " " + secondPressPos.y + "\n");
             grow = true;
         }
+
+        
 
         if (GameObject.FindGameObjectsWithTag("Earth Spell Object").Length > maxSpells) //destroy the earliest spell when there are too many
         {
@@ -121,6 +126,16 @@ public class EarthSpellMechanics : MonoBehaviour {
             return true;
         }
         else return false;
+    }
+
+
+    private void OnCollisionEnter(Collision col)
+    {
+        if (col.collider.gameObject.layer == LayerMask.NameToLayer("Floor"))
+        {
+            print("test");
+            StopCoroutine("Grow");
+        }
     }
 }
 

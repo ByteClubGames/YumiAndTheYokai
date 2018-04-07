@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 23427536694316588}
   - component: {fileID: 54740048523731614}
   - component: {fileID: 114862322374708378}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: earthSpell
   m_TagString: Earth Spell Object
   m_Icon: {fileID: 0}
@@ -123,15 +123,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dae929f6956cd5943b2cee3cf171a107, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstPressPos: {x: 0, y: 0}
-  secondPressPos: {x: 0, y: 0}
-  currentSwipe: {x: 0, y: 0}
-  swipeThreshold: 0
+  maxSpells: 3
   extendFactor: 25
   extendSpeed: 0.1
+  maxGrow: 3
   destroyTime: 5
-  maxSpells: 3
-  earthGrowingY: 0
-  earthGrowingNegY: 0
-  earthGrowingX: 0
-  earthGrowingNegX: 0
