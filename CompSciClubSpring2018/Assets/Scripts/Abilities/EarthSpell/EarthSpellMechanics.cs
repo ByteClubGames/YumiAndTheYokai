@@ -17,42 +17,41 @@ public class EarthSpellMechanics : MonoBehaviour {
     private Vector2 firstPressPos;
     private Vector2 secondPressPos;
     private float deltaX = 0f, deltaY = 0f;
+    private bool grow = false;
 
+    public int maxSpells = 3;
     public float extendFactor = 25f;
     public float extendSpeed = .1f;
     public float maxGrow = 3.0f;
     public int destroyTime = 5;
-    private bool grow = false;
-
-    public EarthSpellUse spell;
+    
     
     //Start
     private void Start()
     {
+        firstPressPos = Input.mousePosition;
         StartCoroutine(Grow(extendSpeed));
         Destroy(gameObject, destroyTime); //Destroy timer starts on creation
     }
 
     private void Update()
     {
-        //get user input
-        if (Input.GetMouseButtonDown(0))
-        {
-            //get first mouse position
-            firstPressPos = spell.playerinput;
-        }
         if (Input.GetMouseButtonUp(0))
         {
-            //get second mouse position
-            secondPressPos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+            secondPressPos = Input.mousePosition;
+            
             //calculate the difference between firstposition and second position
             deltaX = secondPressPos.x - firstPressPos.x;
             deltaY = secondPressPos.y - firstPressPos.y;
-            
 
-            print("First: " + firstPressPos.x + " " + firstPressPos.y);
+            print("First: " + firstPressPos.x + " " + firstPressPos.y + "\n");
             print("Second: " + secondPressPos.x + " " + secondPressPos.y + "\n");
             grow = true;
+        }
+
+        if (GameObject.FindGameObjectsWithTag("Earth Spell Object").Length > maxSpells) //destroy the earliest spell when there are too many
+        {
+            Destroy(GameObject.FindGameObjectsWithTag("Earth Spell Object")[0]);
         }
     }
 
@@ -63,29 +62,57 @@ public class EarthSpellMechanics : MonoBehaviour {
         //Waits until IsGrowing returns true;
         yield return new WaitUntil(IsGrowing);
 
-        if (deltaX > deltaY)
+        if (Mathf.Abs(deltaX) > Mathf.Abs(deltaY))
         {
-            for (int i = 0; i < extendFactor; i++)
+            if (deltaX > 0) {
+                for (int i = 0; i < extendFactor; i++)
+                {
+                    //stretches object in the X direction
+                    gameObject.transform.localScale += new Vector3(extendSpeed, 0, 0);
+                    //moves the object along to accomidate for equal stretching on both sides
+                    gameObject.transform.Translate((extendSpeed) / 2, 0, 0);
+                    yield return new WaitForSeconds(extendSpeed / 10);
+                }
+            }
+            if (deltaX < 0)
             {
-                //stretches object in the X direction
-                gameObject.transform.localScale += new Vector3(extendSpeed, 0, 0);
-                //moves the object along to accomidate for equal stretching on both sides
-                gameObject.transform.Translate((extendSpeed) / 2, 0, 0);
-                yield return new WaitForSeconds(extendSpeed / 10);
+                for (int i = 0; i < extendFactor; i++)
+                {
+                    //stretches object in the X direction
+                    gameObject.transform.localScale += new Vector3(extendSpeed, 0, 0);
+                    //moves the object along to accomidate for equal stretching on both sides
+                    gameObject.transform.Translate((-extendSpeed) / 2, 0, 0);
+                    yield return new WaitForSeconds(extendSpeed / 10);
+                }
             }
         }
-        else if (deltaX < deltaY)
+        else if (Mathf.Abs(deltaX) < Mathf.Abs(deltaY))
         {
-            for (int i = 0; i < extendFactor; i++)
+            if (deltaY > 0)
             {
-                //stretches object in the Y direction
-                gameObject.transform.localScale += new Vector3(0, extendSpeed, 0);
-                //moves the object along to accomidate for equal stretching on both sides
-                gameObject.transform.Translate(0, (extendSpeed / 2), 0);
-                yield return new WaitForSeconds(extendSpeed / 10);
+                for (int i = 0; i < extendFactor; i++)
+                {
+                    //stretches object in the Y direction
+                    gameObject.transform.localScale += new Vector3(0, extendSpeed, 0);
+                    //moves the object along to accomidate for equal stretching on both sides
+                    gameObject.transform.Translate(0, (extendSpeed / 2), 0);
+                    yield return new WaitForSeconds(extendSpeed / 10);
+                }
+            }
+            if (deltaY < 0)
+            {
+                for (int i = 0; i < extendFactor; i++)
+                {
+                    //stretches object in the Y direction
+                    gameObject.transform.localScale += new Vector3(0, extendSpeed, 0);
+                    //moves the object along to accomidate for equal stretching on both sides
+                    gameObject.transform.Translate(0, (-extendSpeed / 2), 0);
+                    yield return new WaitForSeconds(extendSpeed / 10);
+                }
             }
         }
     }
+
     //returns true or false based on if the object should be growing or not
     public bool IsGrowing()
     {
