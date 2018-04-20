@@ -49,8 +49,8 @@ public class EarthSpellMechanics : MonoBehaviour {
             deltaX = secondPressPos.x - firstPressPos.x;
             deltaY = secondPressPos.y - firstPressPos.y;
 
-            print("First: " + firstPressPos.x + " " + firstPressPos.y + "\n");
-            print("Second: " + secondPressPos.x + " " + secondPressPos.y + "\n");
+            //print("First: " + firstPressPos.x + " " + firstPressPos.y + "\n");
+            //print("Second: " + secondPressPos.x + " " + secondPressPos.y + "\n");
             grow = true;
         }
 
@@ -136,6 +136,12 @@ public class EarthSpellMechanics : MonoBehaviour {
             print("Stop Cooroutine");
             StopCoroutine(co);
         }
+    }
+
+    public void StopCoroutineGrow()
+    {
+        print("StopCorutineGrow()");
+        StopCoroutine(co);
     }
 }
 
