@@ -19,25 +19,27 @@ public class EarthSpellMechanics : MonoBehaviour {
     private float deltaX = 0f, deltaY = 0f;
     private bool grow = false;
     private Collision col;
+    private IEnumerator co;
 
     public int maxSpells = 3;
     public float extendFactor = 25f;
     public float extendSpeed = .1f;
     public float maxGrow = 3.0f;
     public int destroyTime = 5;
+    public bool stopOnHitEarth = true; 
     
     
     //Start
     private void Start()
     {
         firstPressPos = Input.mousePosition;
-        StartCoroutine(Grow(extendSpeed));
+        co = Grow(extendSpeed);
+        StartCoroutine(co);
         Destroy(gameObject, destroyTime); //Destroy timer starts on creation
     }
 
     private void Update()
     {
-        //OnCollisionEnter(col);  //*****NOT WORKING YET-- Should stop the earth spell from growing through no earth objects*****
 
         if (Input.GetMouseButtonUp(0))
         {
@@ -59,7 +61,6 @@ public class EarthSpellMechanics : MonoBehaviour {
             Destroy(GameObject.FindGameObjectsWithTag("Earth Spell Object")[0]);
         }
     }
-
 
     //Called at start and is a slow progression loop
     private IEnumerator Grow(float extendSpeed)
@@ -128,13 +129,12 @@ public class EarthSpellMechanics : MonoBehaviour {
         else return false;
     }
 
-
     private void OnCollisionEnter(Collision col)
     {
         if (col.collider.gameObject.layer == LayerMask.NameToLayer("Floor"))
         {
-            print("test");
-            StopCoroutine("Grow");
+            print("Stop Cooroutine");
+            StopCoroutine(co);
         }
     }
 }
