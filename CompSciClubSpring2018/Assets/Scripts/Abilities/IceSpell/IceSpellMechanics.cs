@@ -53,6 +53,8 @@ public class IceSpellMechanics : MonoBehaviour {
         {
             col.gameObject.GetComponent<IceSpellAffectedSurface>().Freeze();
         }
+        //FreezeEnemy(col.gameObject);
+        //FreezeWater(col.gameObject);
 
         //FreezeEnemy(col.gameObject);
         //FreezeWater(col.gameObject);
@@ -83,6 +85,7 @@ public class IceSpellMechanics : MonoBehaviour {
 
     }
 
+<<<<<<< Updated upstream
     private void UnFreezeEnemy(GameObject enemy)
     {
         if (enemy.name == "Test Enemy")
@@ -106,6 +109,22 @@ public class IceSpellMechanics : MonoBehaviour {
             (water.GetComponent(typeof(Collider)) as Collider).isTrigger = true;
         }
 
+=======
+    private void FreezeWater (GameObject water) 
+    {
+        if (water.gameObject.tag == "Water"){
+            
+            (water.GetComponent(typeof(Collider)) as Collider).isTrigger = true;
+        }
+
+        //if there is a tile colliding with IceSpell
+        //setActive
+        //Check if it is a 'water' tile
+        //and turn it into an 'ice' tile
+
+        //after 'freezeTime' has elapsed 'unfreeze'
+        //change 'ice' tile back to 'water' tile
+>>>>>>> Stashed changes
     }
     *
     *
