@@ -9,8 +9,8 @@ using UnityEngine;
 using System.Collections;
 using System.Diagnostics;
 
-public class BackAndForth : MonoBehaviour {
-
+public class BackAndForth : MonoBehaviour
+{
     public float delta = 55.0f;  // Amount to move left and right from the start point
     public float speed = 2.0f;
     private Vector3 startPos;
