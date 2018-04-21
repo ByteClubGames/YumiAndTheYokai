@@ -13,31 +13,44 @@ using UnityEngine;
 public class HumanJump : MonoBehaviour
 {
     public Rigidbody2D humanRB;
-    public float jumpSpeed;
+    public float jumpForce;
 
     public Vector2 firstPressPos = new Vector2(0, 0);
     public Vector2 secondPressPos;
     public Vector2 currentSwipe;
 
-    private bool isGrounded; // Boolean variable than represents whether or not an object is grounded or not.
+    public bool isJumping; 
+
+    public bool isGrounded; // Boolean variable than represents whether or not an object is grounded or not.
 
     private void FixedUpdate()
     {
-        Jump();
-        //Swiper();
+        Jump(); 
+        // Swiper(); 
+        isJumping = false; 
     }
 
     private void Jump() // Script that allows the player to jump.
     {
-            if (Input.GetKeyDown("space") && (humanRB.velocity.y == 0f) && isGrounded)
-            {
-                humanRB.AddForce(Vector2.up * Time.deltaTime * jumpSpeed);
-            }
+        if (isJumping && (humanRB.velocity.y == 0f) && isGrounded)
+        {
+            humanRB.AddForce(Vector2.up * Time.deltaTime * jumpForce);
+        }
+
+        //if (jump && /*(humanRB.velocity.y == 0f) &&*/ isGrounded)
+        //{
+        //    humanRB.AddForce(Vector2.up * Time.deltaTime * jumpForce);
+        //}
     }
 
     public void SetIsGrounded(bool value) // Allows the player to set isGrounded.
     {
         isGrounded = value;
+    }
+
+    public void MakeJumpTrue()
+    {
+        isJumping = true; 
     }
 
     //private void Swiper()

@@ -13,13 +13,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour {
-
+public class YokaiSwitcher : MonoBehaviour
+{
     public GameObject humanGameObject; // Public game object that holds the little girl game object.
     public GameObject ferroxGameObject; // Public game object that holds the ferrox's game object.
     private bool isProjecting = true; // Creating a private boolean variable that represents whether or not the player is projecting.
 	// Use this for initialization
-	public void Start () {
+	public void Start ()
+    {
         SetIsProjecting(); // Initializing isProjecting to be false at the start of the level.
 	}
 	
@@ -65,5 +66,4 @@ public class PlayerController : MonoBehaviour {
     {
         isProjecting = !isProjecting;
     }
-
 }

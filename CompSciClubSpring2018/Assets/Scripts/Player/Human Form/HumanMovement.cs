@@ -13,6 +13,9 @@ using UnityEngine;
 public class HumanMovement : MonoBehaviour
 {
     public float speed;
+
+    private float previousPos; // Stores the position on the x-axis of the human from the last frame.
+
     public Rigidbody2D playerRB;
     public bool isJump;
     public bool isLeft;
@@ -20,6 +23,7 @@ public class HumanMovement : MonoBehaviour
     public bool touched;
 
     public bool isActive; // True an false variable that determines whether or not the player's current movement is active.
+    public bool isGrounded; // Boolean variable that represents whether or not the human is grounded or not.
 
     private void FixedUpdate()
     {
@@ -36,19 +40,49 @@ public class HumanMovement : MonoBehaviour
 
     private void Movement() // Function that houses the code that accounts for the human's movement.k
     {
-        if (Input.GetKey("a"))
+        if(isGrounded) // While the player is grounded, make them move like such.
         {
-            playerRB.transform.Translate(-transform.right * Time.deltaTime * speed);
+            if (Input.GetKey("a"))
+            {
+                playerRB.transform.Translate(-transform.right * Time.deltaTime * speed);
+            }
+            if (Input.GetKey("d"))
+            {
+                playerRB.transform.Translate(transform.right * Time.deltaTime * speed);
+            }
         }
-        if (Input.GetKey("d"))
+        else if (!isGrounded)
         {
-            playerRB.transform.Translate(transform.right * Time.deltaTime * speed);
+            Debug.Log(GetVelocityX());
+            if (GetVelocityX() < 0 || Input.GetKey("a"))  
+            {
+                Debug.Log(GetVelocityX());
+                playerRB.transform.Translate(-transform.right * Time.deltaTime * speed);
+                Debug.Log("Is not grounded and flying gracefully through the sky.");
+            }
+            else if(GetVelocityX() > 0 || Input.GetKey("d"))
+            {
+                playerRB.transform.Translate(transform.right * Time.deltaTime * speed);
+                Debug.Log("Is not grounded and flying gracefully through the sky.");
+            }
         }
+    }
+
+    private float GetVelocityX()
+    {
+        float velocityX = (transform.position.x - previousPos) / Time.deltaTime;
+        previousPos = transform.position.x;
+        return velocityX; // Returns the calculated velocity.
     }
 
     public void SetIfActive(bool incomingVal) // Function that sets isActive to incomingVal.
     {
         isActive = incomingVal;
+    }
+
+    public void SetIsGrounded(bool value) // Sets isGrounded to true or false.
+    {
+        isGrounded = value;
     }
 
     void OnMouseDown()
