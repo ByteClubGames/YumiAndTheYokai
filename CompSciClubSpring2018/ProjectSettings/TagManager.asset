@@ -4,7 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Earth Spell Object
+  - Water
   layers:
   - Default
   - TransparentFX
@@ -14,9 +14,9 @@ TagManager:
   - UI
   - 
   - 
-  - Earth
-  - Floor
-  - Spell
+  - TouchInput
+  - Player
+  - 
   - 
   - 
   - 
