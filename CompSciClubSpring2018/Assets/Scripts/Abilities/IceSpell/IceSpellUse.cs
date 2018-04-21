@@ -13,21 +13,61 @@ using UnityEngine;
 public class IceSpellUse : MonoBehaviour {
 
     public GameObject iceSpellPrefab;
-    private IceSpell iceS;
-    private Stopwatch abilityCooldownTimer;
+    private GameObject myCurrentObject;
 
-	private void Update()
+    private bool _isDragging = false;
+    private void Update()
 	{
 		//Instantiates iceSpellPrefab upon clicking in the position of the click
-        if (Input.GetMouseButtonDown(0))
+        /*if (Input.GetMouseButtonDown(0))
         {
+           
             Vector3 p = Camera.main.ScreenToWorldPoint(new 
-                        Vector3(Input.mousePosition.x, Input.mousePosition.y, 10.0f));
+                Vector3(Input.mousePosition.x, Input.mousePosition.y, 10.0f));
             Instantiate(iceSpellPrefab, new Vector3(p.x, p.y, 0.0f), 
                         Quaternion.identity);
+           iceSpellPrefab.transform.position = Input.mousePosition;
+        }*/
+
+       if (Input.GetMouseButtonDown(0))
+        {
+            _isDragging = true;
+        }
+        if (Input.GetMouseButtonUp(0))
+        {
+            _isDragging = false;
+            return;
+        }
+        if (_isDragging)
+        {
+            //Runs ice prefab is mouse button is pushed down
+            Vector3 p = Camera.main.ScreenToWorldPoint(new
+              Vector3(Input.mousePosition.x, Input.mousePosition.y, 10.0f));
+            Instantiate(iceSpellPrefab, new Vector3(p.x, p.y, 0.0f),
+                        Quaternion.identity);
+            iceSpellPrefab.transform.position = Input.mousePosition;
         }
 
 
-	}
+    }
 
+
+
+
+    /*function Update()
+    var objectToInstantiate : GameObject;
+ private var myCurrentObject : GameObject;
+ 
+ function Update(){
+ if(Input.GetMouseButtonDown(0)){
+ myCurrentObject = Instantiate(objectToInstantiate,Input.mousePosition,Quaternion.identity);
+     }
+ if(Input.GetMouseButton(0) && myCurrentObject){
+ myCurrentObject.transform.position = Input.mousePosition;
+     }
+ if(Input.GetMouseButtonUp(0) && myCurrentObject){
+ myCurrentObject = null;
+     }
+ 
+    }*/
 }

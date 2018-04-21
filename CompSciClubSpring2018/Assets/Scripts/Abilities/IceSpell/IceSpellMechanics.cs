@@ -1,6 +1,6 @@
 ﻿/* IceSpellMechanics.cs
  * Date Created: 3/10/18
- * Last Edited: 3/11/18
+ * Last Edited: 3/17/18
  * Programmer: Jack Bruce
  * Description: Functionality of Ice Spell:
  *      1. Freeze enemies within collider (for a limited time)
@@ -15,13 +15,11 @@ using System.Diagnostics;
 using UnityEngine;
 
 public class IceSpellMechanics : MonoBehaviour {
-
-    // public vars for testing
+    
     public float lifeTime;
-    public float freezeTime;
-    //
-
+    //public float freezeTime;
     private Stopwatch freezeTimer = new Stopwatch();
+    private GameObject frozenEnemy;
 
 
 	// Use this for initialization
@@ -31,51 +29,105 @@ public class IceSpellMechanics : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		
-	}
-
-    //called when there is a collision
-	private void OnCollisionEnter(Collision col)
-	{
-
-        FreezeEnemy(col.gameObject);
-
-
-
-	}
-
-    //freezes collided object if it is moving
-    private void FreezeEnemy(GameObject enemy) 
+	void Update () 
     {
+      
+        //if (freezeTimer.ElapsedMilliseconds >= freezeTime * 999)
+        //{
+        //    UnFreezeEnemy(frozenEnemy);
+        //    print("yo");
+        //    freezeTimer.Reset();
+        //}
 
+	}
+
+    // called when there is a collision (make sure IceSpell isTrigger)
+	private void OnTriggerEnter(Collider col)
+	{
+        if (col.gameObject.name == "Test Enemy")
+        {
+            col.gameObject.GetComponent<IceSpellAffectedEnemy>().Freeze();
+        }
+
+        if (col.gameObject.tag == "Water")
+        {
+            col.gameObject.GetComponent<IceSpellAffectedSurface>().Freeze();
+        }
+        //FreezeEnemy(col.gameObject);
+        //FreezeWater(col.gameObject);
+
+        //FreezeEnemy(col.gameObject);
+        //FreezeWater(col.gameObject);
+
+	}
+
+
+    /* I PUT THESE METHODS IN "IceSpellAffectedEnemy.cs" THEY MAKE MORE SENSE
+     * TO BE ATTACHED TO THE OBJECT THAT IS BEING FROZEN
+     * 
+	//freezes collided object if it is moving
+	private void FreezeEnemy(GameObject enemy) 
+    {
+        
         // will have to find a way to make this dynamic for other objects
-        if (enemy.name == "TestEnemy" &&
+        if (enemy.name == "Test Enemy" &&
             enemy.GetComponent<Rigidbody>().velocity != Vector3.zero)
         {
-            //stops enemy very unnaturally
-            //try stopping moving objects without directly accessing speed/vel
-            enemy.GetComponent<BackAndForth>().speed = 0;
+            freezeTimer.Start();
+
+            //could freeze enemy more smoothly
+            enemy.GetComponent<BackAndForth>().isFrozen = true; 
 
             //change enemy model to frozen enemy model
 
-            //after 'freezeTime' has elapsed 'unfreeze'
-                //change frozen enemy model to enemy model
-                //restore objects origninal speed
+            frozenEnemy = enemy; // used to access collided object in update
         }
 
     }
 
-    private void FreezeTile (GameObject tile) 
+<<<<<<< Updated upstream
+    private void UnFreezeEnemy(GameObject enemy)
     {
-        tile.GetType();
-        //if there is a tile colliding with IceSpell
+        if (enemy.name == "Test Enemy")
+        {
 
-            //Check if it is a 'water' tile
-            //and turn it into an 'ice' tile
+            enemy.GetComponent<BackAndForth>().isFrozen = false;
 
-            //after 'freezeTime' has elapsed 'unfreeze'
-                //change 'ice' tile back to 'water' tile
+            //change frozen enemy model to unfrozen model
+
+        }
     }
+
+
+    private void FreezeWater(GameObject water)
+    {
+        //technically melts... lol 
+        //I need a test player to test the reverse
+        //isTrigger will need to be set to false for freeze
+        if (water.gameObject.tag == "Water")
+        {
+            (water.GetComponent(typeof(Collider)) as Collider).isTrigger = true;
+        }
+
+=======
+    private void FreezeWater (GameObject water) 
+    {
+        if (water.gameObject.tag == "Water"){
+            
+            (water.GetComponent(typeof(Collider)) as Collider).isTrigger = true;
+        }
+
+        //if there is a tile colliding with IceSpell
+        //setActive
+        //Check if it is a 'water' tile
+        //and turn it into an 'ice' tile
+
+        //after 'freezeTime' has elapsed 'unfreeze'
+        //change 'ice' tile back to 'water' tile
+>>>>>>> Stashed changes
+    }
+    *
+    *
+    */
 
 }
