@@ -1,10 +1,16 @@
 ﻿/* EarthSpellMechanics.cs
  * Date Created: 3/15/18
- * Last Edited: 4/06/18
+ * Last Edited: 4/20/18
  * Programmer: Daniel Jaffe & Darrell Wong
  * Description: Functionality of Earth Spell - Attach to the earthSpell object (cube):
- *      1. Tests if there is collision with another gameobject. If so, despawns.
- *      2. Not yet implemented: Spawns in without mesh layer. If collision == false, then turn mesh layer on. 
+ *      1. When an earth spell is created from EarthSpellUse.cs, the properties of the earth spell are defined here
+ *      2. Click and drag functionality decides growth direction
+ *      3. Properties of growth speed/distance, maxSpells, and decay time are public variables
+ *      4. Earth spell growth will stop on collision with specified objects with:
+ *          a)"Floor" layer
+ *          b)"Earth" layer
+ *          c)"Earth Spell Object" tag
+ *          
  */
 
 using System.Collections;
@@ -26,12 +32,14 @@ public class EarthSpellMechanics : MonoBehaviour {
     public float extendSpeed = .1f;
     public float maxGrow = 3.0f;
     public int destroyTime = 5;
-    public bool stopOnHitEarth = true; 
-    
-    
+    public bool stopOnHitEarth = true;
+    bool firstCollision;
+
+
     //Start
     private void Start()
     {
+        firstCollision = false;
         firstPressPos = Input.mousePosition;
         co = Grow(extendSpeed);
         StartCoroutine(co);
@@ -53,8 +61,6 @@ public class EarthSpellMechanics : MonoBehaviour {
             //print("Second: " + secondPressPos.x + " " + secondPressPos.y + "\n");
             grow = true;
         }
-
-        
 
         if (GameObject.FindGameObjectsWithTag("Earth Spell Object").Length > maxSpells) //destroy the earliest spell when there are too many
         {
@@ -131,18 +137,26 @@ public class EarthSpellMechanics : MonoBehaviour {
 
     private void OnCollisionEnter(Collision col)
     {
-        if (col.collider.gameObject.layer == LayerMask.NameToLayer("Floor"))
+        //The earth spell growth can be stopped by adding more tags to this if statement
+        if (col.collider.gameObject.layer == LayerMask.NameToLayer("Floor")     
+            || col.collider.gameObject.layer == LayerMask.NameToLayer("Earth")  
+            || col.collider.gameObject.CompareTag("Earth Spell Object"))    
         {
-            print("Stop Cooroutine");
-            StopCoroutine(co);
+            
+            if (!firstCollision)    //This is used to negate the initial collision of instantiating the earth spell inside of an earth block
+                                    //bool firstCollision is instantiated in the Start() function
+            {
+                firstCollision = true;
+            }
+            else
+            { 
+                //print("Stop Cooroutine");
+                StopCoroutine(co);
+            }
+            
         }
     }
 
-    public void StopCoroutineGrow()
-    {
-        print("StopCorutineGrow()");
-        StopCoroutine(co);
-    }
 }
 
 
