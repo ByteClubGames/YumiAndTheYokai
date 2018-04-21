@@ -1,4 +1,13 @@
-﻿using System.Collections;
+﻿/*
+ * Author: Keiran Glynn
+ * Date Created: 3/17/2018 @ 11:30 am
+ * Date Modified: 3/17/2018 @ 11:30 am
+ * Project: CompSciClubSpring2018
+ * File: TurretHeadTurner.cs
+ * Description: This script is responsible for making the head of the enemy face towards the player at all times.
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

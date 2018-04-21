@@ -2,10 +2,10 @@
  * Author: Keiran Glynn
  * Date Created: 3/17/2018 @ 11:30 am
  * Date Modified: 3/17/2018 @ 11:30 am
- * Project: CompSciClubFall2017
+ * Project: CompSciClubSpring2018
  * File: TurretEnemy.cs
  * Description: This script houses the main control script for the turret enemy. It's main purpose is to Istantiate projectile objects when the astral is 
- * within range of the turret enemy. * 
+ * within range of the turret enemy.  
  */
 
 using System.Collections;
