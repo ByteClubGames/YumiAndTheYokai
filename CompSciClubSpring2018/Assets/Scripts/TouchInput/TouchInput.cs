@@ -12,7 +12,6 @@ using UnityEngine;
 
 public class TouchInput : MonoBehaviour
 {
-
     public LayerMask touchInputMask;
     public List<GameObject> touchList = new List<GameObject>();
     public GameObject[] touchesOld;
