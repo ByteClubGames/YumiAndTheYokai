@@ -6,6 +6,7 @@ public class TurretHeadTurner : MonoBehaviour {
 
     private Quaternion rotation;
     public Transform target;
+    private Vector2 direction;
 
 	// Use this for initialization
 	void Start () {
@@ -20,7 +21,9 @@ public class TurretHeadTurner : MonoBehaviour {
 
     private void RotateHead()
     {
-        Quaternion rotation = Quaternion.LookRotation(target.transform.position - transform.position, transform.TransformDirection(Vector3.up));
+        direction = target.transform.position - transform.position;
+        direction = direction.normalized;
+        Quaternion rotation = Quaternion.LookRotation(direction, transform.TransformDirection(Vector3.forward));
         transform.rotation = new Quaternion(0, 0, rotation.z, rotation.w);
     }
 

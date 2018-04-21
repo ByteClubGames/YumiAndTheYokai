@@ -25,6 +25,7 @@ public class TurretProjectile : MonoBehaviour {
     private bool isTooFar = false; // will indicate if the projectile is far from the astral (if it missed its target)
     private Vector2 projectilePos;
     private Vector2 yokaiPos;
+    private Vector2 target;
     
 	// Use this for initialization
 	void Start ()
@@ -62,10 +63,14 @@ public class TurretProjectile : MonoBehaviour {
     }
 
     public void ProjectileMovement() // Makes the projectile move in a straight line towards the player
-    {        
-        if(turretProjectileRB.velocity.x == 0f && turretProjectileRB.velocity.y == 0f) // As long as it isnt already moving: do action
+    {
+        
+
+        if (turretProjectileRB.velocity.x == 0f && turretProjectileRB.velocity.y == 0f) // As long as it isnt already moving: do action
         {
-            turretProjectileRB.AddForce((yokaiRB.position - turretProjectileRB.position) * speed, ForceMode2D.Impulse); // Adds an instantaneous force towards yokai
+            target = (yokaiRB.position - turretProjectileRB.position);
+            target = target.normalized;
+            turretProjectileRB.AddForce(target * speed, ForceMode2D.Impulse); // Adds an instantaneous force towards yokai
         }
     }
 
