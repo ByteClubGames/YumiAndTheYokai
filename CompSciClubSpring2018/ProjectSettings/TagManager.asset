@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Water
+  - Earth Spell Object
   layers:
   - Default
   - TransparentFX
@@ -16,7 +17,7 @@ TagManager:
   - 
   - TouchInput
   - Player
-  - 
+  - Earth
   - 
   - 
   - 

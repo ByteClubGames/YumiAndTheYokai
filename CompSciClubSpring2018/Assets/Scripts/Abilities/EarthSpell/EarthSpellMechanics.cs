@@ -18,8 +18,8 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
 
-public class EarthSpellMechanics : MonoBehaviour {
-
+public class EarthSpellMechanics : MonoBehaviour
+{
     private Vector2 firstPressPos;
     private Vector2 secondPressPos;
     private float deltaX = 0f, deltaY = 0f;
@@ -35,6 +35,7 @@ public class EarthSpellMechanics : MonoBehaviour {
     public bool stopOnHitEarth = true;
     bool firstCollision;
 
+    public bool tester; 
 
     //Start
     private void Start()
@@ -158,9 +159,3 @@ public class EarthSpellMechanics : MonoBehaviour {
     }
 
 }
-
-
-
-
-
-

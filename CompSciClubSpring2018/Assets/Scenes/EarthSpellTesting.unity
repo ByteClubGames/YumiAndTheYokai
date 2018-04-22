@@ -226,7 +226,7 @@ GameObject:
   - component: {fileID: 971447780}
   - component: {fileID: 971447784}
   - component: {fileID: 971447785}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Earth Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -507,7 +507,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1637353659}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 5.78, y: 2.85, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -526,6 +526,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eSpell: {fileID: 1907276841444114, guid: 4753e1a5cf66be34186583ddc65045ba, type: 2}
   playerinput: {x: 1, y: 1, z: 0}
+  tester1: 0
+  tester2: 0
+  tester3: 0
+  tester4: 0
+  tester5: 0
+  tester6: 0
 --- !u!1 &1746124135
 GameObject:
   m_ObjectHideFlags: 0
@@ -539,7 +545,7 @@ GameObject:
   - component: {fileID: 1746124137}
   - component: {fileID: 1746124136}
   - component: {fileID: 1746124141}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Earth Floor (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -651,7 +657,7 @@ GameObject:
   - component: {fileID: 1913820462}
   - component: {fileID: 1913820461}
   - component: {fileID: 1913820466}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Earth Floor (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

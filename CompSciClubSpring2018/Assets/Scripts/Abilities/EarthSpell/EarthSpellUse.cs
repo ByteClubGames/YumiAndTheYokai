@@ -15,7 +15,7 @@ public class EarthSpellUse : MonoBehaviour
 {
 
     public GameObject eSpell;
-    public Vector3 playerinput = new Vector3(1, 1, 0); //gets player input
+    public Vector3 playerinput = new Vector3(1, 1, 0); //gets player input 
 
     void Start()
     {
