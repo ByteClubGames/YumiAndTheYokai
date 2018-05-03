@@ -23,10 +23,10 @@ public class IceSpellButton : MonoBehaviour {
         Debug.Log("You clicked the shit out of this button...");
 
         if (!spellOn) {
-            Instantiate(spawner)
+            Instantiate(spawner);
             spellOn = true;
         } else {
-            DestroyImmediate(spawner, true);
+            Destroy(spawner);
             spellOn = false;
         }
     }
