@@ -8,6 +8,7 @@ public class IceSpellButton : MonoBehaviour {
 
     public Button butt;
     public GameObject spawner;
+    private GameObject spawnerInst;
     private bool spellOn;
     private int objCount;
 
@@ -23,10 +24,10 @@ public class IceSpellButton : MonoBehaviour {
         Debug.Log("You clicked the shit out of this button...");
 
         if (!spellOn) {
-            Instantiate(spawner);
+            spawnerInst = Instantiate(spawner);
             spellOn = true;
         } else {
-            Destroy(spawner);
+            Destroy(spawnerInst);
             spellOn = false;
         }
     }
