@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -393,7 +393,7 @@ GameObject:
   - component: {fileID: 61999743}
   m_Layer: 0
   m_Name: Platform-Middle
-  m_TagString: Untagged
+  m_TagString: Platforms
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1621,7 +1621,7 @@ GameObject:
   - component: {fileID: 503962622}
   - component: {fileID: 503962626}
   m_Layer: 0
-  m_Name: Platform 6
+  m_Name: Platform 3
   m_TagString: Platforms
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1694,7 +1694,7 @@ GameObject:
   - component: {fileID: 509916036}
   - component: {fileID: 509916035}
   m_Layer: 0
-  m_Name: Platform 4
+  m_Name: Platform 2
   m_TagString: Platforms
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11984,6 +11984,18 @@ Prefab:
       propertyPath: m_Name
       value: Right
       objectReference: {fileID: 0}
+    - target: {fileID: 1566224477112360, guid: 52dd0a59f9305f94aaa5aca52258cc8a, type: 2}
+      propertyPath: m_TagString
+      value: Platforms
+      objectReference: {fileID: 0}
+    - target: {fileID: 1741792691763710, guid: 52dd0a59f9305f94aaa5aca52258cc8a, type: 2}
+      propertyPath: m_TagString
+      value: Platforms
+      objectReference: {fileID: 0}
+    - target: {fileID: 1490607225030634, guid: 52dd0a59f9305f94aaa5aca52258cc8a, type: 2}
+      propertyPath: m_TagString
+      value: Platforms
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 52dd0a59f9305f94aaa5aca52258cc8a, type: 2}
   m_IsPrefabParent: 0
@@ -12291,6 +12303,18 @@ Prefab:
       propertyPath: m_LocalPosition.x
       value: 9.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1566224477112360, guid: 52dd0a59f9305f94aaa5aca52258cc8a, type: 2}
+      propertyPath: m_TagString
+      value: Platforms
+      objectReference: {fileID: 0}
+    - target: {fileID: 1741792691763710, guid: 52dd0a59f9305f94aaa5aca52258cc8a, type: 2}
+      propertyPath: m_TagString
+      value: Platforms
+      objectReference: {fileID: 0}
+    - target: {fileID: 1490607225030634, guid: 52dd0a59f9305f94aaa5aca52258cc8a, type: 2}
+      propertyPath: m_TagString
+      value: Platforms
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 52dd0a59f9305f94aaa5aca52258cc8a, type: 2}
   m_IsPrefabParent: 0
@@ -12363,6 +12387,14 @@ Prefab:
       propertyPath: points.Array.data[2]
       value: 
       objectReference: {fileID: 2106220189}
+    - target: {fileID: 1174549638406182, guid: 640ca10c21ccf55469400ab5111df0a2, type: 2}
+      propertyPath: m_TagString
+      value: Platforms
+      objectReference: {fileID: 0}
+    - target: {fileID: 1225389617529290, guid: 640ca10c21ccf55469400ab5111df0a2, type: 2}
+      propertyPath: m_TagString
+      value: Platforms
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 640ca10c21ccf55469400ab5111df0a2, type: 2}
   m_IsPrefabParent: 0
@@ -12530,6 +12562,18 @@ Prefab:
       propertyPath: points.Array.data[3]
       value: 
       objectReference: {fileID: 39114488}
+    - target: {fileID: 1566224477112360, guid: 52dd0a59f9305f94aaa5aca52258cc8a, type: 2}
+      propertyPath: m_TagString
+      value: Platforms
+      objectReference: {fileID: 0}
+    - target: {fileID: 1741792691763710, guid: 52dd0a59f9305f94aaa5aca52258cc8a, type: 2}
+      propertyPath: m_TagString
+      value: Platforms
+      objectReference: {fileID: 0}
+    - target: {fileID: 1490607225030634, guid: 52dd0a59f9305f94aaa5aca52258cc8a, type: 2}
+      propertyPath: m_TagString
+      value: Platforms
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 52dd0a59f9305f94aaa5aca52258cc8a, type: 2}
   m_IsPrefabParent: 0
@@ -13318,7 +13362,7 @@ GameObject:
   - component: {fileID: 1142669722}
   m_Layer: 0
   m_Name: Platform-Middle
-  m_TagString: Untagged
+  m_TagString: Platforms
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13738,7 +13782,7 @@ GameObject:
   - component: {fileID: 1291605876}
   m_Layer: 0
   m_Name: Platform-Middle
-  m_TagString: Untagged
+  m_TagString: Platforms
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13958,7 +14002,7 @@ GameObject:
   - component: {fileID: 1338685382}
   m_Layer: 0
   m_Name: Platform-Middle
-  m_TagString: Untagged
+  m_TagString: Platforms
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14112,7 +14156,7 @@ GameObject:
   - component: {fileID: 1345159486}
   m_Layer: 0
   m_Name: Platform-Middle
-  m_TagString: Untagged
+  m_TagString: Platforms
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40614,6 +40658,22 @@ Prefab:
       propertyPath: points.Array.data[1]
       value: 
       objectReference: {fileID: 1788732584}
+    - target: {fileID: 1932675982886126, guid: 52dd0a59f9305f94aaa5aca52258cc8a, type: 2}
+      propertyPath: m_TagString
+      value: Platforms
+      objectReference: {fileID: 0}
+    - target: {fileID: 1566224477112360, guid: 52dd0a59f9305f94aaa5aca52258cc8a, type: 2}
+      propertyPath: m_TagString
+      value: Platforms
+      objectReference: {fileID: 0}
+    - target: {fileID: 1741792691763710, guid: 52dd0a59f9305f94aaa5aca52258cc8a, type: 2}
+      propertyPath: m_TagString
+      value: Platforms
+      objectReference: {fileID: 0}
+    - target: {fileID: 1490607225030634, guid: 52dd0a59f9305f94aaa5aca52258cc8a, type: 2}
+      propertyPath: m_TagString
+      value: Platforms
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 52dd0a59f9305f94aaa5aca52258cc8a, type: 2}
   m_IsPrefabParent: 0
@@ -40680,6 +40740,14 @@ Prefab:
         type: 2}
       propertyPath: moveSpeed
       value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1174549638406182, guid: 640ca10c21ccf55469400ab5111df0a2, type: 2}
+      propertyPath: m_TagString
+      value: Platforms
+      objectReference: {fileID: 0}
+    - target: {fileID: 1225389617529290, guid: 640ca10c21ccf55469400ab5111df0a2, type: 2}
+      propertyPath: m_TagString
+      value: Platforms
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 640ca10c21ccf55469400ab5111df0a2, type: 2}
