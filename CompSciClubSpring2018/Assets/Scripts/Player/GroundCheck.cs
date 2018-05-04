@@ -27,7 +27,7 @@ public class GroundCheck : MonoBehaviour
     private void OnCollisionExit2D(Collision2D collision)
     {
 
-            if (character.gameObject.name == "MovePlayerJump")
+            if (character.gameObject.name == "Human")
             {
                 character.GetComponent<HumanJump>().SetIsGrounded(false);
                 // character.GetComponent<HumanMovement>().SetIsGrounded(false);
@@ -43,7 +43,7 @@ public class GroundCheck : MonoBehaviour
     {
         if (collision.gameObject.tag == "Platforms")
         {
-            if (character.gameObject.name == "MovePlayerJump")
+            if (character.gameObject.name == "Human")
             {
                 character.GetComponent<HumanJump>().SetIsGrounded(true);
                 // character.GetComponent<HumanMovement>().SetIsGrounded(true);
