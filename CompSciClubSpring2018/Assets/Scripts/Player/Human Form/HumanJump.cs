@@ -1,9 +1,9 @@
 ﻿/*
- * Programmer:   Hunter Goodin, Spencer Wilson, Keiran Glynn, Andrew Ramirez, Daniel Jaffe
+ * Programmer:   Hunter Goodin 
  * Date Created: 02/16/2018 @  9:40 PM 
- * Last Updated: 05/04/2018 @ 2:36 PM 
+ * Last Updated: 02/16/2018 @ 11:35 PM 
  * File Name:    PlayerJumper.cs 
- * Description:  This script will be responsible for the player's jump. 
+ * Description:  This script will be responsible for the player's movements. 
  */
 
 using System.Collections;
@@ -14,78 +14,31 @@ public class HumanJump : MonoBehaviour
 {
     public Rigidbody2D humanRB;
     public float jumpSpeed;
-    public bool isGrounded;
 
-    void Start()
-    {
-        humanRB = GetComponent<Rigidbody2D>();
-    }
+    public Vector2 firstPressPos = new Vector2(0, 0);
+    public Vector2 secondPressPos;
+    public Vector2 currentSwipe;
+
+    private bool isGrounded; // Boolean variable than represents whether or not an object is grounded or not.
 
     private void FixedUpdate()
     {
         Jump();
+        //Swiper();
     }
 
-    private void Jump()
+    private void Jump() // Script that allows the player to jump.
     {
-        if (Input.GetKey("space") && (humanRB.velocity.y == 0f))
-        {
-            humanRB.AddForce(Vector2.up * Time.deltaTime * jumpSpeed);
-
-        }
+            if (Input.GetKeyDown("space") && (humanRB.velocity.y == 0f) && isGrounded)
+            {
+                humanRB.AddForce(Vector2.up * Time.deltaTime * jumpSpeed);
+            }
     }
 
     public void SetIsGrounded(bool value) // Allows the player to set isGrounded.
     {
         isGrounded = value;
     }
-}
-
-
-
-///////////**Old unused code**//////////////
-
-
-    //public Rigidbody2D humanRB;
-    //public float jumpForce;
-
-    //public Vector2 firstPressPos = new Vector2(0, 0);
-    //public Vector2 secondPressPos;
-    //public Vector2 currentSwipe;
-
-    //public bool isJumping; 
-
-    //public bool isGrounded; // Boolean variable than represents whether or not an object is grounded or not.
-
-    //private void FixedUpdate()
-    //{
-    //    Jump(); 
-    //    // Swiper(); 
-    //    isJumping = false; 
-    //}
-
-    //private void Jump() // Script that allows the player to jump.
-    //{
-    //    if (isJumping && (humanRB.velocity.y == 0f) && isGrounded)
-    //    {
-    //        humanRB.AddForce(Vector2.up * Time.deltaTime * jumpForce);
-    //    }
-
-    //    //if (jump && /*(humanRB.velocity.y == 0f) &&*/ isGrounded)
-    //    //{
-    //    //    humanRB.AddForce(Vector2.up * Time.deltaTime * jumpForce);
-    //    //}
-    //}
-
-    //public void SetIsGrounded(bool value) // Allows the player to set isGrounded.
-    //{
-    //    isGrounded = value;
-    //}
-
-    //public void MakeJumpTrue()
-    //{
-    //    isJumping = true; 
-    //}
 
     //private void Swiper()
     //{
@@ -112,3 +65,4 @@ public class HumanJump : MonoBehaviour
     //        currentSwipe = new Vector2(0, 0);
     //    }
     //}
+}

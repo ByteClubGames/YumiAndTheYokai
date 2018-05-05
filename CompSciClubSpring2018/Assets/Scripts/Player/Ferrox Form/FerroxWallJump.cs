@@ -2,7 +2,7 @@
  * 
  * Authors: Spencer Wilson, Andrew Ramirez
  * Date Created: 3/5/2018 @ 3:16 pm
- * Date Modified: 4/7/2018 @ 10:20am
+ * Date Modified: 4/22/2018 @ 11:34 pm
  * Project: CompSciClubSpring2018
  * File: FerroxWallJump.cs
  * Description: This class houses the code for the ferrox's wall jump.
@@ -29,7 +29,7 @@ public class FerroxWallJump : MonoBehaviour {
     void Start()
     {
         // default speed for wall jump, this affects the height of the jump
-        speed = 16;
+        speed = 20;
     }
 
     // Update is called once per frame
@@ -51,10 +51,10 @@ public class FerroxWallJump : MonoBehaviour {
 
                     // sets velocity to a new vector2, modify the parameters to adjust the walljump, note that it follows this format Vector2(x, y)
                     GetComponent<Rigidbody2D>().velocity = new Vector2(speed / 3 * hit.normal.x, speed);
-                    
+
 
                     // pause input to prevent infinite wall jumping
-                    GetComponent<FerroxMovement>().pauseInput = true;
+                    //GetComponent<FerroxMovement>().pauseInput = true;
 
                     ///////////////////////// need to finish //////////////////////////
                     // temporarily slow down the players air speed after a jump
@@ -74,7 +74,7 @@ public class FerroxWallJump : MonoBehaviour {
     // checks if the player is touching a wall
     private void OnCollisionEnter2D(Collision2D collision)
     {
-            touchingWall = collision.gameObject.tag == "wall";
+            touchingWall = collision.gameObject.tag == "Walls";
     }
 
     // draws hitbox to detect walls; hint turn on gizmos to view

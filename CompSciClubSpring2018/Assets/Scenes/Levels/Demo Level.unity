@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -13146,6 +13146,11 @@ MonoBehaviour:
   - {fileID: 1358600482}
   - {fileID: 674814711}
   pointSelection: 0
+--- !u!1 &755215357 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1583462892046584, guid: 93181538680688a4d9d257db33a02da6,
+    type: 2}
+  m_PrefabInternal: {fileID: 2024394094}
 --- !u!1001 &774490933
 Prefab:
   m_ObjectHideFlags: 0
@@ -20298,11 +20303,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4136022511400970, guid: 93181538680688a4d9d257db33a02da6, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 10.22
+      value: 108.3
       objectReference: {fileID: 0}
     - target: {fileID: 4136022511400970, guid: 93181538680688a4d9d257db33a02da6, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 15.91
+      value: 4.2
       objectReference: {fileID: 0}
     - target: {fileID: 4136022511400970, guid: 93181538680688a4d9d257db33a02da6, type: 2}
       propertyPath: m_LocalPosition.z
@@ -42895,6 +42900,41 @@ TilemapCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+--- !u!1 &2043466603 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1128226839337886, guid: 93181538680688a4d9d257db33a02da6,
+    type: 2}
+  m_PrefabInternal: {fileID: 2024394094}
+--- !u!114 &2043466604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2043466603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e99be1d6bf256d468c0dde9fc84d5f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ferroxHP: 1
+  playerGameObject: {fileID: 755215357}
+  humanGameObject: {fileID: 1538141376}
+  ferroxGameObject: {fileID: 2043466603}
+--- !u!114 &2043466605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2043466603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57cdd3e211c538646a013ac230a5e7f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ferroxGameObject: {fileID: 2043466603}
+  speed: 0
+  distance: 0.6
+  touchingWall: 0
 --- !u!1 &2045907499 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1400673594420160, guid: 2b9ad9b67ab97ed4ca6e14d8c7b25db7,

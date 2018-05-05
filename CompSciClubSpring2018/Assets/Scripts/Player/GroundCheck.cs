@@ -17,7 +17,6 @@ public class GroundCheck : MonoBehaviour
 {
 
     public GameObject character; // Public game object named character that holds the reference to the attached character. 
-    // public GameObject character3D; 
     // Use this for initialization
     private void Start()
     {
@@ -26,17 +25,16 @@ public class GroundCheck : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-
             if (character.gameObject.name == "Human")
             {
                 character.GetComponent<HumanJump>().SetIsGrounded(false);
-                // character.GetComponent<HumanMovement>().SetIsGrounded(false);
-            }
+                character.GetComponent<HumanMovement>().SetIsGrounded(false);
+        }
             else if (character.gameObject.name == "Ferrox")
             {
                 character.GetComponent<FerroxJump>().SetIsGrounded(false);
                 //character.GetComponent<FerroxMovement>().SetIsGrounded(false);
-            }
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -46,7 +44,7 @@ public class GroundCheck : MonoBehaviour
             if (character.gameObject.name == "Human")
             {
                 character.GetComponent<HumanJump>().SetIsGrounded(true);
-                // character.GetComponent<HumanMovement>().SetIsGrounded(true);
+                character.GetComponent<HumanMovement>().SetIsGrounded(true);
             }
             else if (character.gameObject.name == "Ferrox")
             {
