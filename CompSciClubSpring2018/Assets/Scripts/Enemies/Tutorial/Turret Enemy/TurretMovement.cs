@@ -41,7 +41,7 @@ public class TurretMovement : MonoBehaviour {
 
     private void OnPatrol(float range)
     {
-        Debug.Log("I should be moving");
+        Debug.Log("TurretEnemy should be moving");
         currTurretPos = GameObject.Find("TurretEnemy").GetComponent<Transform>().position;
         turretRot = GameObject.Find("TurretEnemy").GetComponent<Transform>().eulerAngles.z;
         range = patrolRange;
