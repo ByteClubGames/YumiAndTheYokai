@@ -19,6 +19,10 @@ public class CircuitPuzzleController : MonoBehaviour {
     public GameObject ring2; // Holds the reference to the Ring2 game object.
     public GameObject ring3; // Holds the reference to the Ring3 game object.
     public GameObject ring4; // Holds the reference to the Ring4 game object.
+    public float rrotate1 = 360f;
+    public float rrotate2 = 360f;
+    public float rrotate3 = 360f;
+    public float rrotate4 = 360f;
 
     public GameObject levelExit; // Holds the reference to the level exit / door.
 
@@ -68,7 +72,7 @@ public class CircuitPuzzleController : MonoBehaviour {
         if(switch1)
         {
             canSwitch1Active = false; // Player cannot activate switch1 until after the ring completes it's rotation.
-            StartCoroutine(Rotate(ring1, 360f, 3f)); // Rotates Ring1, the center ring.
+            StartCoroutine(Rotate(ring1, rrotate1, 3f)); // Rotates Ring1, the center ring.
             canSwitch1Active = true; // 
             switch1 = false;
             //StartCoroutine(WaitAmountOfSeconds(switch1, 3f));
@@ -76,7 +80,7 @@ public class CircuitPuzzleController : MonoBehaviour {
         if(switch2)
         {
             canSwitch2Active = false; // Player cannot activate switch2 until after the ring completes it's rotation.
-            StartCoroutine(Rotate(ring2, -360f, 3f)); // Rotates Ring2, the ring second from the center.
+            StartCoroutine(Rotate(ring2, rrotate2, 3f)); // Rotates Ring2, the ring second from the center.
             canSwitch2Active = true;
             switch2 = false;
             //StartCoroutine(WaitAmountOfSeconds(switch2, 3f));
@@ -84,7 +88,7 @@ public class CircuitPuzzleController : MonoBehaviour {
         if(switch3)
         {
             canSwitch3Active = false; // Player cannot activate switch3 until after the ring completes it's rotation.
-            StartCoroutine(Rotate(ring3, 360f, 3f)); // Rotates Ring3, the ring third from the center.
+            StartCoroutine(Rotate(ring3, rrotate3, 3f)); // Rotates Ring3, the ring third from the center.
             canSwitch3Active = true;
             switch3 = false;
             //StartCoroutine(WaitAmountOfSeconds(switch3, 3f));
@@ -92,7 +96,7 @@ public class CircuitPuzzleController : MonoBehaviour {
         if(switch4)
         {
             canSwitch4Active = false; // Player cannot activate switch4 until after the ring completes it's rotation.
-            StartCoroutine(Rotate(ring4, -360f, 3f)); // Rotates Ring4, the outermost ring.
+            StartCoroutine(Rotate(ring4, rrotate4, 3f)); // Rotates Ring4, the outermost ring.
             canSwitch4Active = true;
             switch4 = false;
             //StartCoroutine(WaitAmountOfSeconds(switch4, 3f));
