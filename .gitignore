@@ -34,3 +34,5 @@ sysinfo.txt
 *.unitypackage
 
 CompSciClubFall2017/Library/
+
+*.lock
