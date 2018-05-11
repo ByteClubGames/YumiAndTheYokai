@@ -1,9 +1,8 @@
 ﻿<Properties StartupConfiguration="{E260E41B-D93A-C975-6519-2CA5303D2943}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Abilities/WindSpell/WindSpellUse.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Abilities/WindSpell/WindSpellMover.cs">
     <Files>
-      <File FileName="Assets/Scripts/Abilities/IceSpell/IceSpellButton.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs" Line="13" Column="39" />
-      <File FileName="Assets/Scripts/Abilities/WindSpell/WindSpellUse.cs" Line="5" Column="36" />
+      <File FileName="Assets/Scripts/Abilities/WindSpell/WindSpellUse.cs" Line="61" Column="4" />
+      <File FileName="Assets/Scripts/Abilities/WindSpell/WindSpellMover.cs" Line="8" Column="60" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
