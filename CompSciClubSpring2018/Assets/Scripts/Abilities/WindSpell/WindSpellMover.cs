@@ -16,14 +16,13 @@ public class WindSpellMover : MonoBehaviour {
 
 	public float speed = 10;
 
-	private Transform[] targets = new Transform[100];
+	private Transform[] targets;
 	private Transform nextPos;
 	private int current;
 
 	// Use this for initialization
 	void Start () {
-		WindSpellUse spellUse = new WindSpellUse();
-		targets = spellUse.GetTransforms(); //this does not get the loaded array.. it is an empty array
+		targets = GameObject.Find("WindSpellSpawner").GetComponent<WindSpellUse>().GetTransforms();//DOEsnt fnuncjnw work
 		current = 0;
 	}
 	
