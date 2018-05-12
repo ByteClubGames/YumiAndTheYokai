@@ -1,6 +1,6 @@
 ﻿/* WindSpellMover.cs
  * Date Created: 5/08/18
- * Last Edited: 5/10/18
+ * Last Edited: 5/12/18
  * Programmer: Jack Bruce
  * Description: Moves 'WindSpell' obj on desired path
  *  - WindSpellSpawner will populate targetarray
@@ -16,27 +16,35 @@ public class WindSpellMover : MonoBehaviour {
 
 	public float speed = 10;
 
-	private Transform[] targets;
-	private Transform nextPos;
+	private Vector3[] wsTargets;
+	private Vector3 nextPos;
 	private int current;
+	private int wsTargetsSize;
 
 	// Use this for initialization
 	void Start () {
-		targets = GameObject.Find("WindSpellSpawner").GetComponent<WindSpellUse>().GetTransforms();//DOEsnt fnuncjnw work
-		current = 0;
+		//wsTargets = GameObject.Find("WindSpellSpawner").GetComponent<WindSpellUse>().GetPositions();//I dont think you can pass an array like that
+		wsTargetsSize = GameObject.Find("WindSpellSpawner").GetComponent<WindSpellUse>().GetTrgtAmnt();
+		wsTargets = new Vector3[wsTargetsSize];
+		for (int i = 0; i < wsTargets.Length; i++)
+		{
+			wsTargets[i] = GameObject.Find("WindSpellSpawner").GetComponent<WindSpellUse>().GetTarget(i);
+		}
+		current = 1;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		nextPos = targets[current];
+		nextPos = wsTargets[current];
 		// move until you reach the current obj
-		if (transform.position != nextPos.position)
+		if (transform.position != nextPos)
 		{
 			Vector3 pos = Vector3.MoveTowards(transform.position,
-			                                  nextPos.position, speed * Time.deltaTime);
+			                                  nextPos, speed * Time.deltaTime);
 			GetComponent<Rigidbody>().MovePosition(pos);
 		}
-		else current = (current + 1) % targets.Length; // obj reached, move to the next obj
+		else if (current < wsTargets.Length)
+			current++; // obj reached, move to the next obj
 	}
 
 

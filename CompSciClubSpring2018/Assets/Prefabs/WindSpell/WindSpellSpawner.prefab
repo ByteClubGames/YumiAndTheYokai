@@ -56,4 +56,4 @@ MonoBehaviour:
   player: {fileID: 0}
   windSpellPrefab: {fileID: 1617739696271592, guid: 4e04ae8723eaf45b08d0dc83e08974a3,
     type: 2}
-  trgtAmnt: 10
+  trgtAmnt: 50
