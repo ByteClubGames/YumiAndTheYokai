@@ -665,7 +665,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1486203276703148}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -33.64, z: 0}
+  m_LocalPosition: {x: 22.2, y: -117.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4594354340159228}
@@ -814,7 +814,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1903541293226890}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 33, z: 0}
+  m_LocalPosition: {x: 121.5, y: 123.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4264467990058660}
@@ -1566,6 +1566,15 @@ MonoBehaviour:
   ring2: {fileID: 1951252541580250}
   ring3: {fileID: 1942070153475516}
   ring4: {fileID: 1102768590731236}
+  switch1GO: {fileID: 1244072379469088}
+  switch2GO: {fileID: 1147915273495852}
+  switch3GO: {fileID: 1570189604269354}
+  switch4GO: {fileID: 1950213917674826}
+  spinAngle1: 45
+  spinAngle2: 60
+  spinAngle3: 45
+  spinAngle4: 90
+  spinTime: 3
   levelExit: {fileID: 0}
 --- !u!135 &135598905369712414
 SphereCollider:
