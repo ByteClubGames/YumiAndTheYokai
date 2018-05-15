@@ -43,9 +43,13 @@ public class WindSpellMover : MonoBehaviour {
 			                                  nextPos, speed * Time.deltaTime);
 			GetComponent<Rigidbody>().MovePosition(pos);
 		}
-		else if (current < wsTargets.Length)
+		else if (current < wsTargets.Length - 1)
 			current++; // obj reached, move to the next obj
-	}
 
+		if (transform.position == wsTargets[wsTargetsSize -1]) // I want wind Spell to die at the end of its path
+			Destroy(this);
+		
+	}
+    
 
 }
