@@ -33,6 +33,8 @@ sysinfo.txt
 *.apk
 *.unitypackage
 
+.DS*
+
 CompSciClubFall2017/Library/
 
 *.lock
