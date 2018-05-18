@@ -5,29 +5,43 @@ using UnityEngine;
 public class FlapMovement : MonoBehaviour {
     private Vector2 currFlapPos;
     private Vector2 startFlapPos;
+    private Vector2 aceFlapPos;
     private float flapRot;
     private Transform flapRB;
     private float minRange = 0f;
     private float maxRange = 0f;
     private int direction = -1;
     private int directionB = -1;
+    private int directionC = -1;
+    private bool overPlayer = false;
+    private bool canAttack = true;
 
     public float patrolRange = 5f;
-    public float speed = 2f;
+    public float patrolSpeed = 2f;
+    public float bounceSpeed = 2f;
     public float bounceHeight = 1f;
+    public float dropRange = 5f;
 
     // Use this for initialization
-    void Start ()
+    void Start()
     {
         flapRB = GameObject.Find("FlapEnemy").GetComponent<Transform>();
-        startFlapPos = GameObject.Find("FLapEnemy").GetComponent<Transform>().position;
+        startFlapPos = GameObject.Find("FlapEnemy").GetComponent<Transform>().position;
     }
-	
-	// Update is called once per frame
-	void Update ()
+
+    // Update is called once per frame
+    void Update()
     {
-        OnPatrol(patrolRange);
-        Bounce();
+        if (overPlayer)
+        {
+            Debug.Log("Bingo");
+            Attack();
+        }
+        else
+        {
+            OnPatrol(patrolRange);
+            Bounce();
+        }
     }
 
     private void OnPatrol(float range)
@@ -45,7 +59,7 @@ public class FlapMovement : MonoBehaviour {
                 case -1:
                     if (currFlapPos.x > (startFlapPos.x + minRange))
                     {
-                        flapRB.transform.Translate(-transform.right * Time.deltaTime * speed);
+                        flapRB.transform.Translate(-transform.right * Time.deltaTime * patrolSpeed);
                     }
                     else
                     {
@@ -55,7 +69,7 @@ public class FlapMovement : MonoBehaviour {
                 case 1:
                     if (currFlapPos.x < (startFlapPos.x + maxRange))
                     {
-                        flapRB.transform.Translate(transform.right * Time.deltaTime * speed);
+                        flapRB.transform.Translate(transform.right * Time.deltaTime * patrolSpeed);
                     }
                     else
                     {
@@ -71,7 +85,7 @@ public class FlapMovement : MonoBehaviour {
                 case -1:
                     if (currFlapPos.y > (startFlapPos.y + minRange))
                     {
-                        flapRB.transform.Translate(transform.up * Time.deltaTime * speed);
+                        flapRB.transform.Translate(transform.up * Time.deltaTime * patrolSpeed);
                     }
                     else
                     {
@@ -81,7 +95,7 @@ public class FlapMovement : MonoBehaviour {
                 case 1:
                     if (currFlapPos.y < (startFlapPos.y + maxRange))
                     {
-                        flapRB.transform.Translate(-transform.up * Time.deltaTime * speed);
+                        flapRB.transform.Translate(-transform.up * Time.deltaTime * patrolSpeed);
                     }
                     else
                     {
@@ -100,7 +114,7 @@ public class FlapMovement : MonoBehaviour {
     {
         Debug.Log("FlapEnemy should be bouncing");
         currFlapPos = GameObject.Find("FlapEnemy").GetComponent<Transform>().position;
-        flapRot = GameObject.Find("FlapEnemy").GetComponent<Transform>().eulerAngles.z;        
+        flapRot = GameObject.Find("FlapEnemy").GetComponent<Transform>().eulerAngles.z;
         minRange = -1 * bounceHeight;
         maxRange = bounceHeight;
 
@@ -109,7 +123,7 @@ public class FlapMovement : MonoBehaviour {
             case -1:
                 if (currFlapPos.y > (startFlapPos.y + minRange))
                 {
-                    flapRB.transform.Translate(-transform.up * Time.deltaTime * speed);
+                    flapRB.transform.Translate(-transform.up * Time.deltaTime * bounceSpeed);
                 }
                 else
                 {
@@ -119,7 +133,7 @@ public class FlapMovement : MonoBehaviour {
             case 1:
                 if (currFlapPos.y < (startFlapPos.y + maxRange))
                 {
-                    flapRB.transform.Translate(transform.up * Time.deltaTime * speed);
+                    flapRB.transform.Translate(transform.up * Time.deltaTime * bounceSpeed);
                 }
                 else
                 {
@@ -127,5 +141,36 @@ public class FlapMovement : MonoBehaviour {
                 }
                 break;
         }
+    }
+
+    private void Attack()
+    {
+        canAttack = false;
+        aceFlapPos = GameObject.Find("FlapEnemy").GetComponent<Transform>().position;
+
+        while(currFlapPos.y > (aceFlapPos.y + dropRange))
+        {
+            flapRB.transform.Translate(-transform.up * Time.deltaTime * bounceSpeed);
+        }
+        for(int i = 0; i < 100; i++)
+        {
+            Debug.Log("Flap is biting and chilllin'");
+        }
+        while(currFlapPos.y < aceFlapPos.y)
+        {
+            flapRB.transform.Translate(transform.up * Time.deltaTime * bounceSpeed);
+        }
+        flapRB.transform.position = aceFlapPos;
+        canAttack = true;
+    }
+
+    public void SetOverPlayer(bool value)
+    {
+        overPlayer = value;
+    }
+
+    public bool GetCanAttack()
+    {
+        return canAttack;
     }
 }

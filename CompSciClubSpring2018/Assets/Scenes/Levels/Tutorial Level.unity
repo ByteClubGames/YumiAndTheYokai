@@ -4864,9 +4864,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce038e645d9385a4a899dfad29669309, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patrolRange: 5
-  speed: 3
-  bounceHeight: 1
+  patrolRange: 10
+  patrolSpeed: 3
+  bounceSpeed: 2.2
+  bounceHeight: 0.5
+  dropRange: 5
 --- !u!4 &1031534018
 Transform:
   m_ObjectHideFlags: 0
@@ -6251,6 +6253,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1420200731}
   - component: {fileID: 1420200732}
+  - component: {fileID: 1420200733}
   m_Layer: 0
   m_Name: FlapCollider
   m_TagString: Untagged
@@ -6265,8 +6268,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1420200730}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: -2.5, z: 0}
+  m_LocalScale: {x: 1.61, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 1031534018}
   m_RootOrder: 0
@@ -6296,6 +6299,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1420200733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1420200730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e1304559c04c4b4eaedf86b842953da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1444845983
 GameObject:
   m_ObjectHideFlags: 0
