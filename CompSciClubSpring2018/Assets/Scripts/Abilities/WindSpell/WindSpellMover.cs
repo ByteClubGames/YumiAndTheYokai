@@ -25,31 +25,48 @@ public class WindSpellMover : MonoBehaviour {
 	void Start () {
 		//wsTargets = GameObject.Find("WindSpellSpawner").GetComponent<WindSpellUse>().GetPositions();//I dont think you can pass an array like that
 		wsTargetsSize = GameObject.Find("WindSpellSpawner").GetComponent<WindSpellUse>().GetTrgtAmnt();
-		wsTargets = new Vector3[wsTargetsSize];
-		for (int i = 0; i < wsTargets.Length; i++)
-		{
-			wsTargets[i] = GameObject.Find("WindSpellSpawner").GetComponent<WindSpellUse>().GetTarget(i);
-		}
-		current = 1;
+        wsTargets = GameObject.Find("WindSpellSpawner").GetComponent<WindSpellUse>().GetTargets();
+        current = 0;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		nextPos = wsTargets[current];
-		// move until you reach the current obj
-		if (transform.position != nextPos)
-		{
-			Vector3 pos = Vector3.MoveTowards(transform.position,
-			                                  nextPos, speed * Time.deltaTime);
-			GetComponent<Rigidbody>().MovePosition(pos);
-		}
-		else if (current < wsTargets.Length - 1)
-			current++; // obj reached, move to the next obj
+        if (transform.position == wsTargets[wsTargetsSize - 1])
+        { // die at end of path (transform.position == wsTargets[wsTargets.Length - 1])
+            GameObject.Find("WindSpellSpawner").GetComponent<WindSpellUse>().CleanUp();
+            //Destroy(this);
 
-		if (transform.position == wsTargets[wsTargetsSize -1]) // I want wind Spell to die at the end of its path
-			Destroy(this);
+        }
+
+        nextPos = wsTargets[current];
+        // move until you reach the current obj
+        if (transform.position != nextPos)
+        {
+            Vector3 pos = Vector3.MoveTowards(transform.position,
+                                              nextPos, speed * Time.deltaTime);
+            if (isZero(nextPos)) { // if array ended early, virtually shorten array
+                wsTargetsSize = current;
+                current = wsTargetsSize - 1;
+                return;
+            }
+            GetComponent<Rigidbody>().MovePosition(pos);
+        }
+        else if (current < wsTargetsSize - 1)
+        {
+            current++; // obj reached, move to the next obj
+        }
 		
 	}
+
+    private bool isZero(Vector3 inpos)
+    {
+        if (inpos.x == 0 && inpos.y == 0)
+        {
+            return true;
+        }
+        else
+            return false;
+    }
     
 
 }

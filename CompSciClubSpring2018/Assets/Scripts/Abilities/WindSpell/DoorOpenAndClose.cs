@@ -10,16 +10,20 @@ public class DoorOpenAndClose : MonoBehaviour {
     private bool open = false;
     // Use this for initialization
     void Start () {
-		if (open)
-        {
-            door.position = Vector3.Lerp(door.position, openPositon, Time.deltaTime * openspeed);
-        }
-	}
+        door = GetComponent<Transform>();
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        if (open)
+        {
+            door.position = Vector3.Lerp(door.position, openPositon, Time.deltaTime * openspeed);
+        } else
+        {
+            door.position = Vector3.Lerp(door.position, closedPositon, Time.deltaTime * openspeed);
+        }
+    }
     public void openDoor()
     {
         open = true;

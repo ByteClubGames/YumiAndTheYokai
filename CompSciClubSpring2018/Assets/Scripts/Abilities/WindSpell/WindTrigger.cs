@@ -7,19 +7,19 @@ public class WindTrigger : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Wind Spell")
+        if(other.tag == "WindSpell")
         {
-            other.GetComponent<DoorOpenAndClose>().openDoor();
+            GameObject.Find("Door").GetComponent<DoorOpenAndClose>().openDoor();
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if(other.tag == "Wind Spell")
+        if(other.tag == "WindSpell")
         {
-            other.GetComponent<DoorOpenAndClose>().openDoor();
+            GameObject.Find("Door").GetComponent<DoorOpenAndClose>().closeDoor();
         }
-       
+
     }
 
     // Use this for initialization
