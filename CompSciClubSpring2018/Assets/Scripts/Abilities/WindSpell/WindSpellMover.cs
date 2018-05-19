@@ -24,8 +24,8 @@ public class WindSpellMover : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		//wsTargets = GameObject.Find("WindSpellSpawner").GetComponent<WindSpellUse>().GetPositions();//I dont think you can pass an array like that
-		wsTargetsSize = GameObject.Find("WindSpellSpawner").GetComponent<WindSpellUse>().GetTrgtAmnt();
         wsTargets = GameObject.Find("WindSpellSpawner").GetComponent<WindSpellUse>().GetTargets();
+        wsTargetsSize = wsTargets.Length;
         current = 0;
 	}
 
@@ -50,13 +50,7 @@ public class WindSpellMover : MonoBehaviour {
         // move until you reach the current obj
         if (transform.position != nextPos)
         {
-            Vector3 pos = Vector3.MoveTowards(transform.position,
-                                              nextPos, speed * Time.deltaTime);
-            if (isZero(nextPos)) { // if array ended early, virtually shorten array
-                wsTargetsSize = current;
-                current = wsTargetsSize - 1;
-                return;
-            }
+            Vector3 pos = Vector3.MoveTowards(transform.position, nextPos, speed * Time.deltaTime);
             GetComponent<Rigidbody>().MovePosition(pos);
         }
         else if (current < wsTargetsSize - 1)
