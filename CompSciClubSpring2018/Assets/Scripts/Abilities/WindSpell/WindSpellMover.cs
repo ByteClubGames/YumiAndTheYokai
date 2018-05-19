@@ -28,9 +28,17 @@ public class WindSpellMover : MonoBehaviour {
         wsTargets = GameObject.Find("WindSpellSpawner").GetComponent<WindSpellUse>().GetTargets();
         current = 0;
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+    private void OnTriggerEnter(Collider collision)
+    {
+        if (!collision.gameObject.CompareTag("WindSpellTrigger") && collision.gameObject.name != "Player") {
+            GameObject.Find("WindSpellSpawner").GetComponent<WindSpellUse>().CleanUp();
+
+        }
+    }
+
+    // Update is called once per frame
+    void Update () {
         if (transform.position == wsTargets[wsTargetsSize - 1])
         { // die at end of path (transform.position == wsTargets[wsTargets.Length - 1])
             GameObject.Find("WindSpellSpawner").GetComponent<WindSpellUse>().CleanUp();

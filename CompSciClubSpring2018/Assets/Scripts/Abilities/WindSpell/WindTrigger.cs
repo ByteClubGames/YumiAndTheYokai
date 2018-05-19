@@ -3,13 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class WindTrigger : MonoBehaviour {
+    public double maxopentime;
+    private double opentime;
     private bool open = false;
 
     private void OnTriggerEnter(Collider other)
     {
+        if (open)
+        {
+            open = false;
+            return;
+        }
         if(other.tag == "WindSpell")
         {
-            GameObject.Find("Door").GetComponent<DoorOpenAndClose>().openDoor();
+            opentime = Time.fixedTime;
+            open = true;
         }
     }
 
@@ -17,7 +25,7 @@ public class WindTrigger : MonoBehaviour {
     {
         if(other.tag == "WindSpell")
         {
-            GameObject.Find("Door").GetComponent<DoorOpenAndClose>().closeDoor();
+            //open = false;
         }
 
     }
@@ -27,6 +35,17 @@ public class WindTrigger : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-		
-	}
+        if (Time.fixedTime - opentime > maxopentime)
+        {
+            open = false;
+        }
+        if (open)
+        {
+            GameObject.Find("Door").GetComponent<DoorOpenAndClose>().openDoor();
+        } else
+        {
+            GameObject.Find("Door").GetComponent<DoorOpenAndClose>().closeDoor();
+        }
+
+    }
 }
