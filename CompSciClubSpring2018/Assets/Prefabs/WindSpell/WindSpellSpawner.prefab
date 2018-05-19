@@ -57,3 +57,5 @@ MonoBehaviour:
   windSpellPrefab: {fileID: 1617739696271592, guid: 4e04ae8723eaf45b08d0dc83e08974a3,
     type: 2}
   trgtAmnt: 50
+  dTime: 1
+  minDeltaDis: 0.5
