@@ -16,15 +16,13 @@ public class WindSpellUse : MonoBehaviour
 {
 
 	public GameObject targetPrefab; //empty gameobject used for Transform
-	public GameObject player;
+	private GameObject player;
 	public GameObject windSpellPrefab;
-    public int trgtAmnt, dTime;
     public double minDeltaDis;
     
 	private GameObject windSpell;
 	private GameObject tempTarget;
-	private Vector3[] targets;
-	private int trgtNX;
+	private TargList targets;
 	private bool drawMode;
 	private bool _isDragging = false;
     private bool _isDone;
@@ -35,9 +33,9 @@ public class WindSpellUse : MonoBehaviour
 	{
 		drawMode = true;
         _isDone = false;
-        trgtNX = 1;
-		targets = new Vector3[trgtAmnt];
-		targets[0] = player.transform.position;
+		targets = new TargList();
+        player = GameObject.Find("Player");
+        targets.addTarg(player.transform.position);
         windSpell = null;
     }
 
@@ -47,13 +45,13 @@ public class WindSpellUse : MonoBehaviour
 
 		//Once array is full OR Draw mode is manually turned off
 		//Spawn WindSpell Object and load it with target array
-		if (_isDone || (trgtNX >= targets.Length && drawMode))
+		if (_isDone && drawMode) // also add time draw check? currently no length limit
 		{
             _isDone = false;
 			drawMode = false;
             if (windSpell == null)
             {
-                windSpell = Instantiate(windSpellPrefab, targets[0], Quaternion.identity); //spawn wind spell object @ player pos
+                windSpell = Instantiate(windSpellPrefab, targets.getTop(), Quaternion.identity); //spawn wind spell object @ player pos
                 windSpell.tag = "WindSpell";
             }
             //And Destroy all target objects
@@ -69,50 +67,37 @@ public class WindSpellUse : MonoBehaviour
 			_isDragging = false;
 			return;
 		}
-		if (_isDragging && drawMode) //SPAWNS WAY TO MANY OBJECTS AT ONCE! try per time
+		if (_isDragging && drawMode) 
 		{
 			
 			//Runs wind prefab is mouse button is pushed down
 			Vector3 p = Camera.main.ScreenToWorldPoint(new
-			Vector3(Input.mousePosition.x, Input.mousePosition.y, 10.0f)); //THERE MUST BE SOMETHING WRONG WITH THIS...B/C ARRAY VALUES ARE WHACK
-            float dist = GetDistanceFast(p.x, p.y, targets[trgtNX - 1].x, targets[trgtNX - 1].y);
-            if (dist >= minDeltaDis) // check if distance changed enough || that enough time has passed
+			Vector3(Input.mousePosition.x, Input.mousePosition.y, 10.0f)); 
+            double dist = GetDistance(p.x, p.y, targets.getBottom().x, targets.getBottom().y);
+            if (dist >= minDeltaDis) // check if distance changed enough || that enough time has passed ??
             {
                 tempTarget = Instantiate(targetPrefab, new Vector3(p.x, p.y, 0.0f), //spawns target
                     Quaternion.identity);
-                //targetPrefab.transform.position = Input.mousePosition; //@ mouse position
-                targets[trgtNX] = tempTarget.transform.position; //Adds position to target array
-                currentPos = targets[trgtNX];
-                trgtNX++;
+                targets.addTarg(tempTarget.transform.position); //Adds position to target array
                 //Destroys all target objects immediately after spawning.
                 //You may want to disable this for tracking how many targets spawn.
                 //Hell, it may not even matter how many objects spawn if I delete them so dang fast
+                //tempTarget.make sprite
                 Destroy(tempTarget);
             }
-            
 		}
-
-	}
-
-	public Vector3 GetTarget(int NX)
-	{
-		return targets[NX];
 	}
 
     public Vector3[] GetTargets()
     {
-        return targets;
+        return targets.getArray();
     }
 
-    public int GetTrgtAmnt()
-	{
-		return trgtAmnt;
-	}
-
-    public float GetDistanceFast(float x1, float y1, float x2, float y2)
+    public double GetDistance(double x1, double y1, double x2, double y2)
     {
-        float distance = x1 + y1 - x2 - y2; // Is fast because it gives a relative distance without using CPU heavy sqrt()
-        distance = distance < 0 ? -distance : distance; // absolute value
+        double inside = (System.Math.Pow((x1 - x2), 2) + System.Math.Pow((y1 - y2), 2));
+        double distance = System.Math.Sqrt(inside);
+        //distance = distance < 0 ? -distance : distance; // absolute value
         return distance;
     }
 
@@ -120,5 +105,86 @@ public class WindSpellUse : MonoBehaviour
     {
         Destroy(windSpell);
         Start();
+    }
+}
+
+public class TargList
+{
+    private TargLink top = null;
+    private TargLink bottom = null;
+    private int length;
+    
+    public TargList()
+    {
+        top = null;
+        bottom = null;
+        length = 0;
+    }
+
+    public void addTarg (TargLink inlink)
+    {
+        if (top == null )
+        {
+            top = inlink;
+        } else
+        {
+            bottom.setNext(inlink);
+        }
+        bottom = inlink;
+        length++;
+    }
+
+    public void addTarg(Vector3 invect)
+    {
+        TargLink temp = new TargLink(invect);
+        addTarg(temp);
+    }
+
+    public Vector3[] getArray()
+    {
+        Vector3[] arry = new Vector3[length];
+        TargLink cur = top;
+        for (int i = 0; i < length; i++)
+        {
+            arry[i] = cur.getData();
+            cur = cur.getNext();
+        }
+        return arry;
+    }
+
+    public Vector3 getTop()
+    {
+        return top.getData();
+    }
+
+    public Vector3 getBottom()
+    {
+        return bottom.getData();
+    }
+}
+
+public class TargLink
+{
+    private Vector3 current;
+    private TargLink next = null;
+
+    public TargLink(Vector3 intemp)
+    {
+        current = intemp;
+    }
+
+   public  void setNext(TargLink nexto)
+    {
+        next = nexto;
+    }
+
+    public Vector3 getData()
+    {
+        return current;
+    }
+
+    public TargLink getNext()
+    {
+        return next;
     }
 }

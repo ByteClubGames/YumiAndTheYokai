@@ -415,18 +415,18 @@ Prefab:
       objectReference: {fileID: 1376876780}
     - target: {fileID: 114711269033071126, guid: 8fe9fe1f152f2425c99f8f83afaa1a01,
         type: 2}
-      propertyPath: trgtAmnt
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 114711269033071126, guid: 8fe9fe1f152f2425c99f8f83afaa1a01,
-        type: 2}
       propertyPath: dTime
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114711269033071126, guid: 8fe9fe1f152f2425c99f8f83afaa1a01,
         type: 2}
       propertyPath: minDeltaDis
-      value: 0.4
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114711269033071126, guid: 8fe9fe1f152f2425c99f8f83afaa1a01,
+        type: 2}
+      propertyPath: trgtAmnt
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8fe9fe1f152f2425c99f8f83afaa1a01, type: 2}
