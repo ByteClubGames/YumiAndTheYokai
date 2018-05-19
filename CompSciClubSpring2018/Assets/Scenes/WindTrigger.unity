@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -427,6 +427,10 @@ Prefab:
         type: 2}
       propertyPath: trgtAmnt
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1917788997985728, guid: 8fe9fe1f152f2425c99f8f83afaa1a01, type: 2}
+      propertyPath: m_Name
+      value: WindSpellSpawner(Clone)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8fe9fe1f152f2425c99f8f83afaa1a01, type: 2}

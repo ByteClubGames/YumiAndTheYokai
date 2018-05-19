@@ -1,10 +1,10 @@
 ﻿/* WindSpellMover.cs
  * Date Created: 5/08/18
- * Last Edited: 5/12/18
- * Programmer: Jack Bruce
+ * Last Edited: 5/19/18
+ * Programmer: Jack Bruce and Evanito
  * Description: Moves 'WindSpell' obj on desired path
  *  - WindSpellSpawner will populate targetarray
- *  - once activated WindSpellUse will pass the target array to WindSpellMover (This is the current issue)
+ *  - once activated WindSpellUse will pass the target LinkLis to WindSpellMover
  *  - then WindSpell obj will follow path declared by array
  */
 
@@ -20,11 +20,11 @@ public class WindSpellMover : MonoBehaviour {
 	private Vector3 nextPos;
 	private int current;
 	private int wsTargetsSize;
+	private string wsSpawnerName = "WindSpellSpawner(Clone)"; //had to make this dynamic for instantiated prefab names
 
 	// Use this for initialization
 	void Start () {
-		//wsTargets = GameObject.Find("WindSpellSpawner").GetComponent<WindSpellUse>().GetPositions();//I dont think you can pass an array like that
-        wsTargets = GameObject.Find("WindSpellSpawner").GetComponent<WindSpellUse>().GetTargets();
+		wsTargets = GameObject.Find(wsSpawnerName).GetComponent<WindSpellUse>().GetTargets();
         wsTargetsSize = wsTargets.Length;
         current = 0;
 	}
@@ -32,7 +32,7 @@ public class WindSpellMover : MonoBehaviour {
     private void OnTriggerEnter(Collider collision)
     {
         if (!collision.gameObject.CompareTag("WindSpellTrigger") && collision.gameObject.name != "Player") {
-            GameObject.Find("WindSpellSpawner").GetComponent<WindSpellUse>().CleanUp();
+            GameObject.Find(wsSpawnerName).GetComponent<WindSpellUse>().CleanUp();
 
         }
     }
@@ -41,7 +41,7 @@ public class WindSpellMover : MonoBehaviour {
     void Update () {
         if (transform.position == wsTargets[wsTargetsSize - 1])
         { // die at end of path (transform.position == wsTargets[wsTargets.Length - 1])
-            GameObject.Find("WindSpellSpawner").GetComponent<WindSpellUse>().CleanUp();
+            GameObject.Find(wsSpawnerName).GetComponent<WindSpellUse>().CleanUp();
             //Destroy(this);
 
         }
