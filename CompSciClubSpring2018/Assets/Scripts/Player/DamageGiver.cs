@@ -22,9 +22,9 @@ public class DamageGiver : MonoBehaviour {
         /* Both the Ferrox and the Human are currently tagged as the "Player." This means that given this DamageGiver.cs script, until both
          * the player and the ferrox recieve their own Tag values, they will share damage taken, regardless of which entity actually took damage.
          */
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Human") || collision.gameObject.CompareTag("Ferrox"))
         {
-            humanGameObject.GetComponent<HumanHealth>().TakeDamage(1);
+            humanGameObject.GetComponent<HumanHealth>().TakeDamage(6);
             ferroxGameObject.GetComponent<FerroxHealth>().TakeDamage(1);
         }
     }
