@@ -72,7 +72,7 @@ public class FerroxHealth : MonoBehaviour {
             ferroxGameObject.SetActive(false); // Sets the ferroxGameObject to be at an inactive state.
             humanGameObject.GetComponent<HumanMovement>().SetIfActive(true); // Turns back on the human's movement.
             ferroxGameObject.transform.position = new Vector2(humanGameObject.transform.position.x + 1f, humanGameObject.transform.position.y); // Resetting the ferrox's position to the human form's position for next projection.
-            playerGameObject.GetComponent<PlayerController>().SetIsProjecting(); // Makes Ferrox dissapear back into player
+            playerGameObject.GetComponent<YokaiSwitcher>().SetIsProjecting(); // Makes Ferrox dissapear back into player
             Debug.Log("Ferrox has Died"); // Tells the console that the ferrox died :'(            
         }
     }
