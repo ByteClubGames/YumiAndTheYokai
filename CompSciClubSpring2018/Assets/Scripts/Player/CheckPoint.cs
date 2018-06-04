@@ -29,7 +29,7 @@ public class CheckPoint : MonoBehaviour {
         {
             if (checkPointName != saveName)
             {
-                savePos = GameObject.Find("Human").transform.position;
+                savePos = GameObject.Find("Player").transform.position;
                 GameObject.Find("Human").GetComponent<RespawnManager>().SetName(checkPointName);
                 GameObject.Find("Human").GetComponent<RespawnManager>().SetPos(savePos);
                 Debug.Log("Checkpoint " + checkPointName + " is now active.");
