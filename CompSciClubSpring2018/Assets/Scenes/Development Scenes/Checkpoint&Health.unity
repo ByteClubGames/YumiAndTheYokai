@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.4964127, b: 0.5748172, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -179,6 +179,27 @@ Prefab:
       propertyPath: character
       value: 
       objectReference: {fileID: 762714658}
+    - target: {fileID: 1803386527976076, guid: 93181538680688a4d9d257db33a02da6, type: 2}
+      propertyPath: m_TagString
+      value: Ferrox
+      objectReference: {fileID: 0}
+    - target: {fileID: 1601003770559216, guid: 93181538680688a4d9d257db33a02da6, type: 2}
+      propertyPath: m_TagString
+      value: Ferrox
+      objectReference: {fileID: 0}
+    - target: {fileID: 60336512692323160, guid: 93181538680688a4d9d257db33a02da6,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1128226839337886, guid: 93181538680688a4d9d257db33a02da6, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1128226839337886, guid: 93181538680688a4d9d257db33a02da6, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 93181538680688a4d9d257db33a02da6, type: 2}
   m_IsPrefabParent: 0
@@ -197,6 +218,85 @@ Transform:
   m_PrefabParentObject: {fileID: 4256989169362286, guid: 93181538680688a4d9d257db33a02da6,
     type: 2}
   m_PrefabInternal: {fileID: 37403945}
+--- !u!114 &37403952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 37403946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 056fe79d017c0d04090f932a1fd44155, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 6
+  humanHP: 6
+--- !u!1 &171242598
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 171242599}
+  - component: {fileID: 171242601}
+  - component: {fileID: 171242600}
+  m_Layer: 0
+  m_Name: DeathPitCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &171242599
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 171242598}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1649483857}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &171242600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 171242598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b1eea76cc1db144bb101cff2f1db86b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &171242601
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 171242598}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &400224285
 GameObject:
   m_ObjectHideFlags: 0
@@ -5835,7 +5935,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   humanRB: {fileID: 37403950}
-  jumpForce: 30000
+  jumpForce: 41000
   firstPressPos: {x: 0, y: 0}
   secondPressPos: {x: 0, y: 0}
   currentSwipe: {x: 0, y: 0}
@@ -5883,6 +5983,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &845493627 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1128226839337886, guid: 93181538680688a4d9d257db33a02da6,
+    type: 2}
+  m_PrefabInternal: {fileID: 37403945}
+--- !u!114 &845493634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 845493627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e99be1d6bf256d468c0dde9fc84d5f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 1
+  ferroxHP: 1
 --- !u!1 &999497345
 GameObject:
   m_ObjectHideFlags: 0
@@ -6394,6 +6512,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bbd254c2be6e1d4486cfd84c740edb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1649483855
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1649483857}
+  m_Layer: 0
+  m_Name: DeathPit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1649483857
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1649483855}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 12, y: -0.5, z: 1}
+  m_LocalScale: {x: 6, y: 3, z: 1}
+  m_Children:
+  - {fileID: 171242599}
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2015443912
 Prefab:
   m_ObjectHideFlags: 0

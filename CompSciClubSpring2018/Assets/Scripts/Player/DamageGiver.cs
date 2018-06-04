@@ -13,19 +13,24 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DamageGiver : MonoBehaviour {
-
-    public GameObject humanGameObject; // Public game object that holds the little girl game object.
-    public GameObject ferroxGameObject; // Public game object that holds the ferrox's game object.
-
+    private GameObject player;
+    private GameObject humanGameObject; // Public game object that holds the little girl game object.
+    private GameObject ferroxGameObject; // Public game object that holds the ferrox's game object.
+        
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        /* Both the Ferrox and the Human are currently tagged as the "Player." This means that given this DamageGiver.cs script, until both
-         * the player and the ferrox recieve their own Tag values, they will share damage taken, regardless of which entity actually took damage.
-         */
-        if (collision.gameObject.CompareTag("Human") || collision.gameObject.CompareTag("Ferrox"))
+        
+        if (collision.tag == "Human")
         {
+            humanGameObject = GameObject.Find("Human");
             humanGameObject.GetComponent<HumanHealth>().TakeDamage(6);
+            Debug.Log(this.name + " has hurt the human.");
+        }
+        else if (collision.tag == "Ferrox")
+        {
+            ferroxGameObject = GameObject.Find("Ferrox");
             ferroxGameObject.GetComponent<FerroxHealth>().TakeDamage(1);
+            Debug.Log(this.name + " has hurt the astral.");
         }
     }
 }

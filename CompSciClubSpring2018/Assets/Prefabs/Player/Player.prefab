@@ -436,10 +436,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   humanRB: {fileID: 50708177120583982}
-  jumpSpeed: 42000
+  jumpForce: 7
   firstPressPos: {x: 0, y: 0}
   secondPressPos: {x: 0, y: 0}
   currentSwipe: {x: 0, y: 0}
+  isJumping: 0
+  isGrounded: 0
 --- !u!114 &114132057661514978
 MonoBehaviour:
   m_ObjectHideFlags: 1

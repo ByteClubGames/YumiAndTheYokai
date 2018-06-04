@@ -38,9 +38,10 @@ public class FerroxHealth : MonoBehaviour {
 
     public void TakeDamage(int damage) // Can be called on by other classes to remove HP from the player.
     {
-        if(damage >= 0)
+        if(damage >= 0) // selection to make sure an appropriate damage value is chosen (it needs to be posititve to make sense)
         {
             ferroxHP -= damage;
+            Debug.Log("Astral was damaged for " + damage + " damage.");
         }
         else
         {
@@ -48,19 +49,21 @@ public class FerroxHealth : MonoBehaviour {
         }
     }
 
-    public void giveHealth(int health) // Can be called on by other classes to remove HP from the player.
+    public void GiveHealth(int health) // Can be called on by other classes to remove HP from the player.
     {
-        if (ferroxHP + health > maxHealth)
+        if (ferroxHP + health > maxHealth) // If health to be added will make ferroxHP exceed the ferrox's maximum health, do action...
         {
             ferroxHP = maxHealth;
+            Debug.Log("Astral was to a maximum health of " + maxHealth + ".");            
         }
-        else if (health < 0)
+        else if (health < 0) // selection to make sure an appropriate health value is chosen (it needs to be posititve to make sense)
         {
             Debug.Log("Enter in a positive health amount for health given to Astral!");
         }
-        else
+        else // If health added is neither negative nor exceeding maxHealth, do action...
         {
             ferroxHP += health;
+            Debug.Log("Astral was healed by " + health + " health.");
         }
     }
 

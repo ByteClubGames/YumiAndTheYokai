@@ -19,19 +19,16 @@ public class HumanHealth : MonoBehaviour {
 
     void Update() // Constantly calls isAlive() to make sure the player hasn't died
     {
-        if (humanHP <= 0) // If the player's health points drop below zero, then method 'SetAlive()' sets the value of humanAlive to false
-        {
-            SetAlive();
-        }
-
+        SetAlive();
         IsAlive();
     }
 
     public void TakeDamage(int damage) // Can be called on by other classes to remove HP from the player.
     {
-        if (damage >= 0)
+        if (damage >= 0) // selection to make sure an appropriate damage value is chosen (it needs to be posititve to make sense)
         {
             humanHP -= damage;
+            Debug.Log("Human was damaged for " + damage + " damage.");
         }
         else
         {
@@ -41,17 +38,19 @@ public class HumanHealth : MonoBehaviour {
 
     public void giveHealth(int health) // Can be called on by other classes to remove HP from the player.
     {
-        if (humanHP + health > maxHealth)
+        if (humanHP + health > maxHealth) // If health to be added will make humanHP exceed the human's maximum health, do action...
         {
             humanHP = maxHealth;
+            Debug.Log("Human was to a maximum health of " + maxHealth + ".");
         }
-        else if (health < 0)
+        else if (health < 0) // selection to make sure an appropriate health value is chosen (it needs to be posititve to make sense)
         {
             Debug.Log("Enter in a positive health amount for health given to human!");
         }
-        else
+        else // If health added is neither negative nor exceeding maxHealth, do action...
         {
             humanHP += health;
+            Debug.Log("Human was healed by " + health + " health.");
         }
     }
 
