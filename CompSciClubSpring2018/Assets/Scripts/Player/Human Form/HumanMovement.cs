@@ -1,7 +1,7 @@
 ﻿/*
  * Programmer:   Hunter Goodin & Spencer Wilson
  * Date Created: 02/16/2018 @  7:15 PM 
- * Last Updated: 02/16/2018 @  9:35 PM 
+ * Last Updated: 06/7/2018 @  4:07 PM 
  * File Name:    HumanMovement.cs 
  * Description:  This script will be responsible for the player's movements in their human form. 
  */
@@ -22,7 +22,7 @@ public class HumanMovement : MonoBehaviour
     public bool isRight;
     public bool touched;
 
-    public bool isActive; // True an false variable that determines whether or not the player's current movement is active.
+    public bool isActive; // True an false variable that determines whether or not the player's current human movement mechanic is active.
     public bool isGrounded; // Boolean variable that represents whether or not the human is grounded or not.
 
     private void FixedUpdate()
