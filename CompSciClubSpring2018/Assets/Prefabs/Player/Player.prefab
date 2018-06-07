@@ -40,9 +40,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4256989169362286}
   - component: {fileID: 50708177120583982}
-  - component: {fileID: 60117252996294370}
   - component: {fileID: 114819543188278698}
   - component: {fileID: 114038691684575656}
+  - component: {fileID: 61500540152914346}
   m_Layer: 8
   m_Name: Human
   m_TagString: Human
@@ -152,7 +152,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1583462892046584}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.66, z: 0}
+  m_LocalPosition: {x: -2.6351147, y: 0.45472908, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4838637959332306}
@@ -167,7 +167,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1285828761395028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 6.4, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4956157077794508}
@@ -208,7 +208,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1128226839337886}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.93, y: 0.88, z: -0.04561881}
+  m_LocalPosition: {x: 1.22, y: -0.29, z: -0.04561881}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4784868239119754}
@@ -269,50 +269,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!60 &60117252996294370
-PolygonCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1285828761395028}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.6587855, y: 0.5224906}
-      - {x: 0.37688142, y: 1.0756887}
-      - {x: -0.26705417, y: 1.0712143}
-      - {x: -0.45475322, y: 0.61839926}
-      - {x: -0.1320906, y: 0.3446244}
-      - {x: -0.448416, y: 0.05174315}
-      - {x: -0.38034075, y: -0.4786861}
-      - {x: -0.32073134, y: -0.025658488}
-      - {x: -0.039474785, y: 0.1978128}
-      - {x: -0.07612687, y: -0.74875635}
-      - {x: -0.63597697, y: -1.2173653}
-      - {x: -0.04621266, y: -0.8249262}
-      - {x: 0.4004553, y: -1.215735}
-      - {x: 0.10708797, y: -0.80901694}
-      - {x: 0.060209334, y: 0.2424897}
-      - {x: 0.3370331, y: -0.012388229}
-      - {x: 0.39064497, y: -0.44902658}
-      - {x: 0.52192557, y: -0.4704709}
-      - {x: 0.55363274, y: -0.05061102}
-      - {x: 0.20330554, y: 0.39803493}
 --- !u!60 &60240740350369350
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -399,6 +355,31 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.7313566, y: 0.122348785}
   m_EdgeRadius: 0
+--- !u!61 &61500540152914346
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1285828761395028}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.08186591}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2.2378128}
+  m_EdgeRadius: 0
 --- !u!61 &61947933175947908
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -435,12 +416,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b473ea1a9cb8d48488e7178f88d43ea7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  humanRB: {fileID: 50708177120583982}
-  jumpForce: 0
-  firstPressPos: {x: 0, y: 0}
-  secondPressPos: {x: 0, y: 0}
-  currentSwipe: {x: 0, y: 0}
-  isJumping: 0
+  HumanRB: {fileID: 0}
+  jumpSpeed: 0
+  isActive: 0
   isGrounded: 0
 --- !u!114 &114132057661514978
 MonoBehaviour:

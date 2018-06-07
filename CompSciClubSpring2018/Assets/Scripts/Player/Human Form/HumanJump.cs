@@ -1,5 +1,5 @@
 ﻿/*
- * Programmer:   Hunter Goodin  --- MODIFIED by Dan Jaffe
+ * Programmer:   Hunter Goodin  --- MODIFIED by Dan Jaffe, Spencer Wilson
  * Date Created: 02/16/2018 @  9:40 PM 
  * Last Updated: 02/16/2018 @ 11:35 PM --- MODIFIED 5/7/18 @ 2:05 AM
  * File Name:    PlayerJumper.cs 
@@ -16,6 +16,7 @@ public class HumanJump : MonoBehaviour
 
     public Rigidbody2D HumanRB;
     public float jumpSpeed;
+    public bool isActive; // True or false variable that determines whether or not the player's current human jump mechanic is active.
     public bool isGrounded;
 
     void Start()
@@ -25,7 +26,15 @@ public class HumanJump : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Jump();
+        CheckIfActive(); // Calls on the function CheckIfActive().
+    }
+
+    private void CheckIfActive()
+    {
+        if(isActive) // If isActive is equal to true, then call the function Jump().
+        {
+            Jump();
+        }
     }
 
     private void Jump()
@@ -35,6 +44,11 @@ public class HumanJump : MonoBehaviour
             HumanRB.AddForce(Vector2.up * Time.deltaTime * jumpSpeed);
 
         }
+    }
+
+    public void SetIfActive(bool incomingVal) // Function that sets isActive to incomingVal.
+    {
+        isActive = incomingVal;
     }
 
     public void SetIsGrounded(bool value) // Allows the player to set isGrounded.
