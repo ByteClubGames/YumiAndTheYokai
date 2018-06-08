@@ -6,6 +6,13 @@ TagManager:
   tags:
   - Water
   - Earth Spell Object
+  - Puzzle
+  - Platforms
+  - Borders
+  - Walls
+  - Ferrox
+  - Human
+  - MovingPlatform
   layers:
   - Default
   - TransparentFX
