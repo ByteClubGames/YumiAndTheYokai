@@ -12,29 +12,52 @@ using UnityEngine;
 
 public class HumanJump : MonoBehaviour
 {
-    public Rigidbody2D humanRB;
+    public Rigidbody actingPlayerRB; // Populated with the player's human body's 2D Rigidbody in-engine. 
+    public GameObject groundCheck; 
     public float jumpForce;
 
-    public Vector2 firstPressPos = new Vector2(0, 0);
-    public Vector2 secondPressPos;
-    public Vector2 currentSwipe;
+    public float grChComeBack = 0.0f; 
+
+    //public Vector2 firstPressPos = new Vector2(0, 0);
+    //public Vector2 secondPressPos;
+    //public Vector2 currentSwipe;
 
     public bool isJumping; 
 
     public bool isGrounded; // Boolean variable than represents whether or not an object is grounded or not.
 
-    private void FixedUpdate()
+    private void Update()
     {
+        SetIsGrounded(); 
         Jump(); 
         // Swiper(); 
-        isJumping = false; 
+        isJumping = false;
     }
 
     private void Jump() // Script that allows the player to jump.
     {
-        if (isJumping && (humanRB.velocity.y == 0f) && isGrounded)
+        if (isJumping && /*(actingPlayerObj.velocity.y == 0f) && */ isGrounded)
         {
-            humanRB.AddForce(Vector2.up * Time.deltaTime * jumpForce);
+            actingPlayerRB.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+
+            groundCheck.SetActive(false);
+            groundCheck.SetActive(true); 
+        }
+
+        if (  Input.GetKeyDown("up") && /* ( actingPlayerObj.velocity.y == 0f ) */ isGrounded)
+        {
+            actingPlayerRB.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        }
+        if ( Input.GetKeyDown("w") && /* ( actingPlayerObj.velocity.y == 0f ) */ isGrounded)
+        {
+            actingPlayerRB.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        }
+        if ( Input.GetKeyDown("space") && /* ( actingPlayerObj.velocity.y == 0f ) */ isGrounded )
+        {
+            actingPlayerRB.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+
+            groundCheck.SetActive(false);
+            groundCheck.SetActive(true);
         }
 
         //if (jump && /*(humanRB.velocity.y == 0f) &&*/ isGrounded)
@@ -43,9 +66,11 @@ public class HumanJump : MonoBehaviour
         //}
     }
 
-    public void SetIsGrounded(bool value) // Allows the player to set isGrounded.
+    public void SetIsGrounded() // Allows the player to set isGrounded.
     {
-        isGrounded = value;
+        // isGrounded = value;
+
+        isGrounded = groundCheck.GetComponent<GroundCheck>().GetIsColling();
     }
 
     public void MakeJumpTrue()

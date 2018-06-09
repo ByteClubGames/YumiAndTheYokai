@@ -12,10 +12,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
- 
 
-public class FerroxMovement : MonoBehaviour {
-
+public class FerroxMovement : MonoBehaviour
+{
     public bool facingRight;
     public float speed;
     public float horizontal; // -1 = player facing left, 1 = player facing right

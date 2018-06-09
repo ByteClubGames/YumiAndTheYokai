@@ -1,7 +1,7 @@
 ﻿/*
  * Programmer:   Hunter Goodin 
  * Date Created: 02/16/2018 @  4:00 PM 
- * Last Updated: 03/22/2018 @  6:45 PM 
+ * Last Updated: 06/06/2018 @  11:20 PM 
  * File Name:    PlayerMovement.cs 
  * Description:  This script will be responsible for the player's movements. 
  */
@@ -13,19 +13,39 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float speed;             // How fast the player character moves 
-    public Rigidbody playerRB;      // This will be populated with the player character's rigidbody in-engine 
-    public Rigidbody2D player2D; 
+    public GameObject actingPlayerObj; 
     public bool isLeft;             // This will be toggled in-engine if the object this script is attached to is the left button 
     public bool isRight;            // This will be toggled in-engine if the object this script is attached to is the right button 
-    private bool touched;           // This will be true if the object this script is attached to is being touched by the player's finger 
+    public bool touched;           // This will be true if the object this script is attached to is being touched by the player's finger 
+    public GameObject switcher; 
 
     private void FixedUpdate()
     {
-        if (touched && isLeft)      // If touched is true and isLeft is true 
-        { player2D.transform.Translate(-transform.right * Time.deltaTime * speed); }   // move the player left   
+        if ( touched && isLeft )      // If touched is true and isLeft is true 
+        {
+            actingPlayerObj.transform.Translate(-transform.right * Time.deltaTime * speed);
+            switcher.gameObject.GetComponent<YokaiSwitcher>().ChangeActiveSpawner(false);
+        }  
 
-        if (touched && isRight)     // If touched is true and isRight is true 
-        { player2D.transform.Translate(transform.right * Time.deltaTime * speed); }    // move the player right 
+        if ( touched && isRight )     // If touched is true and isRight is true 
+        {
+            actingPlayerObj.transform.Translate(transform.right * Time.deltaTime * speed);
+            switcher.gameObject.GetComponent<YokaiSwitcher>().ChangeActiveSpawner(true);
+        }
+
+        if ( Input.GetKey("a") || Input.GetKey("left") )
+        {
+            actingPlayerObj.transform.Translate(-transform.right * Time.deltaTime * speed);
+            switcher.gameObject.GetComponent<YokaiSwitcher>().ChangeActiveSpawner(false);
+        }
+
+        if ( Input.GetKey("d") || Input.GetKey("right") )
+        {
+            actingPlayerObj.transform.Translate(transform.right * Time.deltaTime * speed);
+            switcher.gameObject.GetComponent<YokaiSwitcher>().ChangeActiveSpawner(true);
+        }
+
+        touched = false; 
     }
 
     void Move()             // This function will be accessed by the TouchInput.cs script 

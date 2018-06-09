@@ -17,7 +17,7 @@ public class TouchInput : MonoBehaviour
     public GameObject[] touchesOld;
     private RaycastHit hit;
     public GameObject leftMover;
-    public GameObject rightMover; 
+    public GameObject rightMover;
 
     public GameObject recipient; 
 
@@ -70,7 +70,6 @@ public class TouchInput : MonoBehaviour
                     if (recipient.name == "MovePlayerJump")
                     {
                         recipient.SendMessage("MakeJumpTrue", hit.point, SendMessageOptions.DontRequireReceiver);
-                        leftMover.SetActive(false);
                     }
                 }
 
