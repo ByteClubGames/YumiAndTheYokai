@@ -1,6 +1,6 @@
 ﻿/* WindSpellUse.cs
  * Date Created: 5/06/18
- * Last Edited: 5/12/18
+ * Last Edited: 6/09/18
  * Programmer: Jack Bruce && Stephen && Evanito
  * Description: Modified from 'IceSpellUse.cs'
  * Attatch to WindSpellSpawner (This script is Active during "Draw Mode")
@@ -19,6 +19,7 @@ public class WindSpellUse : MonoBehaviour
 	private GameObject player;
 	public GameObject windSpellPrefab;
     public double minDeltaDis;
+	//public GameObject timeManager;
     
 	private GameObject windSpell;
 	private GameObject tempTarget;
@@ -37,6 +38,7 @@ public class WindSpellUse : MonoBehaviour
         player = GameObject.Find("Player");
         targets.addTarg(player.transform.position);
         windSpell = null;
+		this.GetComponent<TimeManager> ().StartSlowDown (); // Time is slowed when spawner is here
     }
 
 	// Update is called once per frame
@@ -53,6 +55,9 @@ public class WindSpellUse : MonoBehaviour
             {
                 windSpell = Instantiate(windSpellPrefab, targets.getTop(), Quaternion.identity); //spawn wind spell object @ player pos
                 windSpell.tag = "WindSpell";
+				this.GetComponent<TimeManager> ().StopSlowDown ();
+				//Maybe make it so spawner gets destroyed after spell is cast
+
             }
             //And Destroy all target objects
 		}
@@ -108,6 +113,8 @@ public class WindSpellUse : MonoBehaviour
     }
 }
 
+
+// LIST CODE
 public class TargList
 {
     private TargLink top = null;
