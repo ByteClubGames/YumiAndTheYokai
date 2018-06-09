@@ -12,10 +12,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class HumanHealth : MonoBehaviour {
-
+    private Rigidbody2D humanRB;
     private bool humanAlive = true;
     public int maxHealth = 6;
     public int humanHP = 6; // This is the number of health points that the player has
+
+    private void Start()
+    {
+        humanRB = GameObject.Find("Human").GetComponent<Rigidbody2D>();
+    }
 
     void Update() // Constantly calls isAlive() to make sure the player hasn't died
     {
@@ -77,9 +82,9 @@ public class HumanHealth : MonoBehaviour {
     }
 
     private void Respawn()
-    {
-        //humanHP = maxHealth;
+    {        
+        GameObject.Find("Human").transform.position = GameObject.Find("Human").GetComponent<RespawnManager>().GetPos(); // Moves the player to its respawn point
+        humanRB.velocity = Vector3.zero; // If the player was moving when they died, they won't be anymore
         Debug.Log("Human has Died"); // Tells the console that the player died
-        GameObject.Find("Human").transform.position = GameObject.Find("Human").GetComponent<RespawnManager>().GetPos();
     }
 }
