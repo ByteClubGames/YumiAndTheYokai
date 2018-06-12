@@ -279,7 +279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   butt: {fileID: 114900404295870644}
-  spawner: {fileID: 1917788997985728, guid: 8fe9fe1f152f2425c99f8f83afaa1a01, type: 2}
+  spawner: {fileID: 1495151425050826, guid: a6990c292d15e4e4f87526820468aee2, type: 2}
 --- !u!222 &222033916757830306
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -364,8 +364,8 @@ RectTransform:
   m_Father: {fileID: 224809469469695260}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -370, y: -38}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 371, y: -38}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
