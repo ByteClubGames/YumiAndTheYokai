@@ -9,48 +9,47 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1230237065132740}
+  m_RootGameObject: {fileID: 1907276841444114}
   m_IsPrefabParent: 1
---- !u!1 &1230237065132740
+--- !u!1 &1907276841444114
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4115788042599976}
-  - component: {fileID: 33155821026568194}
-  - component: {fileID: 135296666390327026}
-  - component: {fileID: 23294630755339978}
-  - component: {fileID: 54820034797045124}
-  - component: {fileID: 114368489120395986}
-  - component: {fileID: 114372226647448268}
-  m_Layer: 0
-  m_Name: Test Enemy
-  m_TagString: Untagged
+  - component: {fileID: 4347619509064322}
+  - component: {fileID: 33154120556485098}
+  - component: {fileID: 65458413392907582}
+  - component: {fileID: 23427536694316588}
+  - component: {fileID: 54740048523731614}
+  - component: {fileID: 114862322374708378}
+  m_Layer: 12
+  m_Name: earthSpell
+  m_TagString: Earth Spell Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4115788042599976
+--- !u!4 &4347619509064322
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1230237065132740}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_GameObject: {fileID: 1907276841444114}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23294630755339978
+--- !u!23 &23427536694316588
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1230237065132740}
+  m_GameObject: {fileID: 1907276841444114}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -59,7 +58,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: a9128d239149042bda4ac15b75dca1c2, type: 2}
+  - {fileID: 2100000, guid: e480c6e141cec5540b7c1533235937e5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -79,19 +78,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33155821026568194
+--- !u!33 &33154120556485098
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1230237065132740}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!54 &54820034797045124
+  m_GameObject: {fileID: 1907276841444114}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &54740048523731614
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1230237065132740}
+  m_GameObject: {fileID: 1907276841444114}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -99,43 +98,32 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
---- !u!114 &114368489120395986
-MonoBehaviour:
+--- !u!65 &65458413392907582
+BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1230237065132740}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 156dd775ceeb545b382440632feed1a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  delta: 15
-  speed: 1.5
-  isFrozen: 0
---- !u!114 &114372226647448268
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1230237065132740}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4690afaefc4bd49499a06dcb3c824d56, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  freezeTime: 3
---- !u!135 &135296666390327026
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1230237065132740}
-  m_Material: {fileID: 0}
+  m_GameObject: {fileID: 1907276841444114}
+  m_Material: {fileID: 13400000, guid: c6feb147b2c8e634fbfb5b8ec83da4e5, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.25
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114862322374708378
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1907276841444114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dae929f6956cd5943b2cee3cf171a107, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSpells: 3
+  extendFactor: 30
+  extendSpeed: 0.1
+  destroyTime: 5
