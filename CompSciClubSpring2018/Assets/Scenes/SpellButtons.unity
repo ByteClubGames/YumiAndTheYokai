@@ -648,7 +648,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4115788042599976, guid: 6470fb6573d7f45a2a81c9287c4dd037, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 7
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4115788042599976, guid: 6470fb6573d7f45a2a81c9287c4dd037, type: 2}
       propertyPath: m_LocalPosition.z
@@ -688,7 +688,7 @@ GameObject:
   - component: {fileID: 662255665}
   - component: {fileID: 662255664}
   - component: {fileID: 662255663}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -709,7 +709,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: e480c6e141cec5540b7c1533235937e5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

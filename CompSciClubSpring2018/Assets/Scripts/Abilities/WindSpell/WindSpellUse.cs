@@ -1,6 +1,6 @@
 ﻿/* WindSpellUse.cs
  * Date Created: 5/06/18
- * Last Edited: 6/09/18
+ * Last Edited: 6/16/18
  * Programmer: Jack Bruce && Stephen && Evanito
  * Description: Modified from 'IceSpellUse.cs'
  * Attatch to WindSpellSpawner (This script is Active during "Draw Mode")
@@ -55,7 +55,7 @@ public class WindSpellUse : MonoBehaviour
             {
                 windSpell = Instantiate(windSpellPrefab, targets.getTop(), Quaternion.identity); //spawn wind spell object @ player pos
                 windSpell.tag = "WindSpell";
-				this.GetComponent<TimeManager> ().StopSlowDown ();
+				//this.GetComponent<TimeManager> ().StopSlowDown ();
 				//Maybe make it so spawner gets destroyed after spell is cast
 
             }

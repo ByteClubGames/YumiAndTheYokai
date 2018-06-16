@@ -1,6 +1,6 @@
 ﻿/* EarthSpellUse.cs
  * Date Created: 3/15/18
- * Last Edited: 5/18/18
+ * Last Edited: 6/16/18
  * Programmer: Daniel Jaffe & Darrell Wong
  * Description: Spawn in the earthSpell object (cube) - Attach to the Earth Spell Spawner object:
  *      1. Uses a OverlapSphere to check eSpell overlap
@@ -22,7 +22,9 @@ public class EarthSpellUse : MonoBehaviour
 
     void Start()
     {
-        
+        ////Jack put this here
+        this.GetComponent<TimeManager>().StartSlowDown(); // Time is slowed when spawner is here
+        ///
     }
 
     // Update is called once per frame

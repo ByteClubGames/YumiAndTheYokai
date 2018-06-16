@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Water
   - WindSpell
+  - Earth Spell Object
+  - WindSpellTrigger
   layers:
   - Default
   - TransparentFX
@@ -17,9 +19,9 @@ TagManager:
   - 
   - 
   - 
+  - Earth
   - 
-  - 
-  - 
+  - Spell
   - 
   - 
   - 

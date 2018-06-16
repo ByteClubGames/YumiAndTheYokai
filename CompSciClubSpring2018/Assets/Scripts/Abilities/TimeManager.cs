@@ -3,7 +3,8 @@
  * Last Edited: 6/08/18
  * Programmer: Jack Bruce
  * Description: Slows time down. Meant for casting of spells.
- * Each Spell shall have a "
+ * Each SpellSpawner shall have this script attached.
+ * slowdownFactor and slowdownLength can be adjusted acordingly.
  */
 using UnityEngine;
 
@@ -16,8 +17,8 @@ public class TimeManager : MonoBehaviour {
 	{
 		//slowly bring time back to normal
 		//may not be desired, but I think it is cool ;)
-		//Time.timeScale += (1f / slowdownLength) * Time.unscaledDeltaTime; 
-		//Time.timeScale = Mathf.Clamp (Time.timeScale, 0f, 1f);
+		Time.timeScale += (1f / slowdownLength) * Time.unscaledDeltaTime; 
+		Time.timeScale = Mathf.Clamp (Time.timeScale, 0f, 1f);
 
 	}
 

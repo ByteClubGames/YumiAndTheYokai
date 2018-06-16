@@ -1,7 +1,10 @@
 ﻿<Properties StartupConfiguration="{E260E41B-D93A-C975-6519-2CA5303D2943}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Abilities/WindSpell/WindSpellUse.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Abilities/EarthSpell/EarthSpellUse.cs">
     <Files>
-      <File FileName="Assets/Scripts/Abilities/WindSpell/WindSpellUse.cs" Line="93" Column="29" />
+      <File FileName="Assets/Scripts/Abilities/WindSpell/WindSpellUse.cs" Line="41" Column="93" />
+      <File FileName="Assets/Scripts/Abilities/TimeManager.cs" Line="7" Column="65" />
+      <File FileName="Assets/Scripts/Abilities/EarthSpell/EarthSpellUse.cs" Line="3" Column="18" />
+      <File FileName="Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs" Line="3" Column="21" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
