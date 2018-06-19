@@ -41,3 +41,6 @@ sysinfo.txt
 *.unitypackage
 
 CompSciClubFall2017/Library/
+
+# For the mac guys
+*.DS_Store
