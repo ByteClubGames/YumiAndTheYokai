@@ -257,7 +257,7 @@ GameObject:
   - component: {fileID: 4956157077794508}
   - component: {fileID: 212732414304443978}
   m_Layer: 8
-  m_Name: GirlTempArt
+  m_Name: Yumi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -298,7 +298,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1684898315377828}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 11.82, z: -5.5}
+  m_LocalPosition: {x: 0, y: 11.820005, z: -5.5}
   m_LocalScale: {x: 28.434856, y: 2.00681, z: 1}
   m_Children: []
   m_Father: {fileID: 4256989169362286}
@@ -310,8 +310,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1285828761395028}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 6.4, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.5890257, y: -0.54406047, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4825282989668152}
@@ -346,7 +346,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1005545337404494}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.15, y: 3.6600003, z: -5.5}
+  m_LocalPosition: {x: 7.150055, y: 3.659987, z: -5.5}
   m_LocalScale: {x: 14.2, y: 13.22609, z: 1}
   m_Children: []
   m_Father: {fileID: 4256989169362286}
@@ -424,7 +424,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1128226839337886}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.93, y: 0.88, z: -0.04561881}
+  m_LocalPosition: {x: -1.5890257, y: -0.54406047, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4784868239119754}
@@ -439,7 +439,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1420931217324716}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.15, y: 3.66, z: -5.5}
+  m_LocalPosition: {x: -7.1499987, y: 3.659987, z: -5.5}
   m_LocalScale: {x: 14.2, y: 13.22609, z: 1}
   m_Children: []
   m_Father: {fileID: 4256989169362286}
@@ -1026,7 +1026,7 @@ MonoBehaviour:
   secondPressPos: {x: 0, y: 0}
   currentSwipe: {x: 0, y: 0}
   isJumping: 0
-  isGrounded: 0
+  isGrounded: 1
 --- !u!114 &114400959403666438
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1139,7 +1139,7 @@ MonoBehaviour:
   isLeft: 0
   isRight: 0
   touched: 0
-  isActive: 0
+  isActive: 1
   isGrounded: 0
 --- !u!114 &114821768286142582
 MonoBehaviour:
