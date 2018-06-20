@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.09.00">
+    <object class="Workspace" id="{f1382c3f-02c3-4669-bb7d-c8c4ea5bf8d5}">
+        <property name="builtBanksOutputDirectory"/>
+        <relationship name="masterEventFolder">
+            <destination>{b9fb3359-11d3-486d-a038-f07aa1df328a}</destination>
+        </relationship>
+        <relationship name="masterTagFolder">
+            <destination>{9303e92c-5192-48a1-b248-26b0d92859e1}</destination>
+        </relationship>
+        <relationship name="masterBankFolder">
+            <destination>{078b006e-a8e0-4b60-a8c8-88915242da33}</destination>
+        </relationship>
+        <relationship name="masterAssetFolder">
+            <destination>{c014a632-993e-4d63-9f10-265b651a69ed}</destination>
+        </relationship>
+        <relationship name="mixer">
+            <destination>{202f9779-22c1-4ece-9eb7-7ab9600e6289}</destination>
+        </relationship>
+        <relationship name="platforms">
+            <destination>{47ebdf6c-74a2-4414-8585-654c80ae78ff}</destination>
+        </relationship>
+    </object>
+    <object class="Platform" id="{47ebdf6c-74a2-4414-8585-654c80ae78ff}">
+        <property name="hardwareType">
+            <value>1</value>
+        </property>
+        <property name="name">
+            <value>Mobile</value>
+        </property>
+        <property name="subDirectory">
+            <value>Mobile</value>
+        </property>
+        <property name="speakerFormat">
+            <value>3</value>
+        </property>
+    </object>
+</objects>

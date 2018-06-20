@@ -1,0 +1,29 @@
+[LOG] System::create                           : Header version = 1.10.04. Current version = 1.10.04.
+[LOG] Manager::init                            : maxchannels = 256 studioflags = 00000006 flags 00000000 extradriverdata 0x0.
+[LOG] SystemI::init                            : Initialize version=11004 (93853), maxchannels=256, flags=0x00020000
+[LOG] SystemI::setOutputInternal               : Setting output to 'FMOD Core Audio Output'
+[LOG] OutputCoreAudio::enumerate               : Enumerating...
+[LOG] OutputCoreAudio::enumerate               : Found output driver: "Built-in Output".
+[LOG] OutputCoreAudio::enumerate               : Found output driver: "Pro Tools Aggregate I/O".
+[LOG] OutputCoreAudio::enumerate               : Found output driver: "Multi-Output Device".
+[LOG] OutputCoreAudio::enumerate               : Found output driver: "Multi-Output Device".
+[LOG] OutputCoreAudio::enumerate               : Done.
+[LOG] OutputCoreAudio::init                    : Output running 2 channels at 44100Hz sample rate.
+[LOG] OutputCoreAudio::init                    : Maximum hardware read size: 1024 samples, Software buffer size: 512 samples, Number of software buffers: 4.
+[WRN] SystemI::init                            : Output requires a sample rate of 44100Hz, resampling will occur.
+[LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 65536, Semaphore: No, Sleep Time: 10, Looping: Yes.
+[LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 49152, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
+[LOG] AsyncManager::init                       : manager 0x10ee18008 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : done
+[LOG] PlaybackSystem::init                     : 
+[LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Priority: 0, Stack Size: 65536, Semaphore: No, Sleep Time: 1, Looping: No.
+[LOG] PlaybackSystem::init                     : done
+[LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Priority: 0, Stack Size: 65536, Semaphore: No, Sleep Time: 1, Looping: No.
+[LOG] Manager::init                            : done.
+[LOG] Manager::readBank                        : fileversion = 88, compatVersion = 86 (oldest = 44, newest = 100)
+[LOG] Manager::readBank                        : fileversion = 88, compatVersion = 86 (oldest = 44, newest = 100)
+[LOG] Manager::readBank                        : fileversion = 88, compatVersion = 86 (oldest = 44, newest = 100)
+[LOG] Manager::readBank                        : fileversion = 88, compatVersion = 86 (oldest = 44, newest = 100)
+[LOG] Manager::readBank                        : fileversion = 88, compatVersion = 86 (oldest = 44, newest = 100)
+[LOG] Manager::readBank                        : fileversion = 88, compatVersion = 86 (oldest = 44, newest = 100)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 3
