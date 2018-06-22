@@ -1,7 +1,7 @@
 ﻿/*
  * Programmer:   Hunter Goodin 
  * Date Created: 02/16/2018 @  9:40 PM 
- * Last Updated: 06/2/2018 @ 11:35 PM 
+ * Last Updated: 02/16/2018 @ 11:35 PM 
  * File Name:    PlayerJumper.cs 
  * Description:  This script will be responsible for the player's movements. 
  */
@@ -12,8 +12,9 @@ using UnityEngine;
 
 public class HumanJump : MonoBehaviour
 {
-    public Rigidbody2D humanRB;
-    public float jumpForce = 7;
+    public Rigidbody actingPlayerRB; // Populated with the player's human body's 2D Rigidbody in-engine. 
+    public GameObject groundCheck; 
+    public float jumpForce;
 
     public float grChComeBack = 0.0f; 
 
@@ -27,7 +28,7 @@ public class HumanJump : MonoBehaviour
 
     private void Update()
     {
-        SpaceJump(); // Makes the player jump with the press of a spacebar. 
+        SetIsGrounded(); 
         Jump(); 
         // Swiper(); 
         isJumping = false;
@@ -75,14 +76,6 @@ public class HumanJump : MonoBehaviour
     public void MakeJumpTrue()
     {
         isJumping = true; 
-    }
-
-    private void SpaceJump() // Uses the space bar to jump. Useful for testing the game on a computer
-    {
-        if(Input.GetKey("space") && (humanRB.velocity.y == 0f) && isGrounded)
-        {
-            humanRB.AddForce(Vector2.up * Time.deltaTime * jumpForce);
-        }
     }
 
     //private void Swiper()
