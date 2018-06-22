@@ -2,7 +2,7 @@
  * 
  * Authors: Spencer Wilson, Keiran Glynn, Andrew Ramirez
  * Date Created: 3/5/2018 @ 3:15 pm
- * Date Modified: 4/7/2018 @ 10:20am
+ * Date Modified: 6/2/2018 @ 10:20am
  * Project: CompSciClubSpring2018
  * File: FerroxJump.cs
  * Description: This class houses the code for the jump mechanics of the ferrox.
@@ -31,7 +31,7 @@ public class FerroxJump : MonoBehaviour {
 
     private void Jump()
     {
-        if (Input.GetKey("space") && (ferroxRB.velocity.y == 0f))
+        if (Input.GetKey("space") && (ferroxRB.velocity.y == 0f) && isGrounded)
         {
             ferroxRB.AddForce(Vector2.up * Time.deltaTime * jumpSpeed);
 
