@@ -1,7 +1,7 @@
 ﻿/*
- * Programmer:   Hunter Goodin 
+ * Programmer:   Hunter Goodin, Keiran Glynn 
  * Date Created: 02/16/2018 @  9:40 PM 
- * Last Updated: 02/16/2018 @ 11:35 PM 
+ * Last Modified: 06/24/2018 @ 2:07 PM 
  * File Name:    PlayerJumper.cs 
  * Description:  This script will be responsible for the player's movements. 
  */
@@ -41,36 +41,29 @@ public class HumanJump : MonoBehaviour
             actingPlayerRB.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
 
             groundCheck.SetActive(false);
-            groundCheck.SetActive(true); 
+            groundCheck.SetActive(true);
         }
 
         if (  Input.GetKeyDown("up") && /* ( actingPlayerObj.velocity.y == 0f ) */ isGrounded)
         {
             actingPlayerRB.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
-        if ( Input.GetKeyDown("w") && /* ( actingPlayerObj.velocity.y == 0f ) */ isGrounded)
+        else if ( Input.GetKeyDown("w") && /* ( actingPlayerObj.velocity.y == 0f ) */ isGrounded)
         {
             actingPlayerRB.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
-        if ( Input.GetKeyDown("space") && /* ( actingPlayerObj.velocity.y == 0f ) */ isGrounded )
+        else if ( Input.GetKeyDown("space") && /* ( actingPlayerObj.velocity.y == 0f ) */ isGrounded )
         {
             actingPlayerRB.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
 
             groundCheck.SetActive(false);
             groundCheck.SetActive(true);
-        }
-
-        //if (jump && /*(humanRB.velocity.y == 0f) &&*/ isGrounded)
-        //{
-        //    humanRB.AddForce(Vector2.up * Time.deltaTime * jumpForce);
-        //}
+        }     
     }
 
     public void SetIsGrounded() // Allows the player to set isGrounded.
     {
-        // isGrounded = value;
-
-        isGrounded = groundCheck.GetComponent<GroundCheck>().GetIsColling();
+        isGrounded = groundCheck.GetComponent<GroundCheck>().GetIsColliding();
     }
 
     public void MakeJumpTrue()
@@ -78,6 +71,12 @@ public class HumanJump : MonoBehaviour
         isJumping = true; 
     }
 
+
+    /* The following code is a part of the "Swipe to Jump" system that was being implemented by Hunter. I beleive that it has become redunant and
+     * outdated with the inclusion of the "Touch Input" scripts, located in the touch input folder in the assests menu. As Hunter is no longer with us, 
+     * this section of code needs to be looked at in comparison to the other touch input scripts to determine what we really need to hold on to.
+     */
+     
     //private void Swiper()
     //{
     //    //get user input

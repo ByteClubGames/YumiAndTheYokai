@@ -248,7 +248,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 0}
-  isColling: 0
+  isColliding: 0
 --- !u!136 &136131362566922022
 CapsuleCollider:
   m_ObjectHideFlags: 1
