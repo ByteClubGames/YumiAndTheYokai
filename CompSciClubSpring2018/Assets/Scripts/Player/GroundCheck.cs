@@ -39,17 +39,20 @@ public class GroundCheck : MonoBehaviour
 
     private void OnTriggerExit(Collider collision)
     {
-        if (button.gameObject.name == "MovePlayerJump")
+        if (collision.gameObject.tag == "Platforms")
         {
-            isColliding = false;
-            // button.GetComponent<HumanJump>().SetIsGrounded(false);
-            // character.GetComponent<HumanMovement>().SetIsGrounded(false);
-        }
-        else if (button.gameObject.name == "Ferrox")
-        {
-            isColliding = false;
-            // button.GetComponent<FerroxJump>().SetIsGrounded(false);
-            // character.GetComponent<FerroxMovement>().SetIsGrounded(false);
+            if (button.gameObject.name == "MovePlayerJump")
+            {
+                isColliding = false;
+                // button.GetComponent<HumanJump>().SetIsGrounded(false);
+                // character.GetComponent<HumanMovement>().SetIsGrounded(false);
+            }
+            else if (button.gameObject.name == "Ferrox")
+            {
+                isColliding = false;
+                // button.GetComponent<FerroxJump>().SetIsGrounded(false);
+                // character.GetComponent<FerroxMovement>().SetIsGrounded(false);
+            }
         }
     }
 
