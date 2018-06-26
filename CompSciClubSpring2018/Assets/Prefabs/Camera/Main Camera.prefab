@@ -520,7 +520,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actingPlayerRB: {fileID: 0}
-  groundCheck: {fileID: 0}
   jumpForce: 19
   grChComeBack: 0
   isJumping: 0

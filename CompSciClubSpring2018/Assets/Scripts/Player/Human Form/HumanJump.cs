@@ -1,9 +1,9 @@
 ﻿/*
  * Programmer:   Hunter Goodin, Keiran Glynn 
  * Date Created: 02/16/2018 @  9:40 PM 
- * Last Modified: 06/24/2018 @ 2:07 PM 
+ * Last Modified: 06/25/2018 @ 6:19 PM 
  * File Name:    PlayerJumper.cs 
- * Description:  This script will be responsible for the player's movements. 
+ * Description:  This script makes the human-player jump. It is in the process of being modularized so that it will control the "active player" game object (like the human, ferrox, etc), so stay tuned. 
  */
 
 using System.Collections;
@@ -13,60 +13,63 @@ using UnityEngine;
 public class HumanJump : MonoBehaviour
 {
     public Rigidbody actingPlayerRB; // Populated with the player's human body's 2D Rigidbody in-engine. 
-    public GameObject groundCheck; 
+    //public GameObject groundCheck;
     public float jumpForce;
+    public float grChComeBack = 0.0f;
 
-    public float grChComeBack = 0.0f; 
+    private Vector3 colliderCenter;
+    private Vector3 colliderMin;
 
     //public Vector2 firstPressPos = new Vector2(0, 0);
     //public Vector2 secondPressPos;
     //public Vector2 currentSwipe;
 
-    public bool isJumping; 
+    public bool isJumping;
 
     public bool isGrounded; // Boolean variable than represents whether or not an object is grounded or not.
 
     private void Update()
     {
-        SetIsGrounded(); 
-        Jump(); 
+        SetIsGrounded();
+        Jump();
         // Swiper(); 
         isJumping = false;
     }
 
-    private void Jump() // Script that allows the player to jump.
+    private void Jump() // Script that allows the acting player to jump.
     {
         if (isJumping && /*(actingPlayerObj.velocity.y == 0f) && */ isGrounded)
         {
-            actingPlayerRB.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-
-            groundCheck.SetActive(false);
-            groundCheck.SetActive(true);
+            actingPlayerRB.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);            
         }
 
-        if (  Input.GetKeyDown("up") && /* ( actingPlayerObj.velocity.y == 0f ) */ isGrounded)
+        if (Input.GetKeyDown("up") && /* ( actingPlayerObj.velocity.y == 0f ) */ isGrounded)
         {
             actingPlayerRB.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
-        else if ( Input.GetKeyDown("w") && /* ( actingPlayerObj.velocity.y == 0f ) */ isGrounded)
+        else if (Input.GetKeyDown("w") && /* ( actingPlayerObj.velocity.y == 0f ) */ isGrounded)
         {
             actingPlayerRB.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
-        else if ( Input.GetKeyDown("space") && /* ( actingPlayerObj.velocity.y == 0f ) */ isGrounded )
+        else if (Input.GetKeyDown("space") && /* ( actingPlayerObj.velocity.y == 0f ) */ isGrounded)
         {
-            actingPlayerRB.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-
-            groundCheck.SetActive(false);
-            groundCheck.SetActive(true);
-        }     
+            actingPlayerRB.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);            
+        }
     }
 
-    public void SetIsGrounded() // Allows the player to set isGrounded.
+    /* The following method uses a CheckCapsule (similar to a raycast) to see if the player is standing on the ground, and therefore able to jump. It takes the position of the bottom of the character's capsule collider,
+     * and casts a capsule downward a small amount below the player checking for ground on the layer "Platforms." If it detects ground beneath the player's feet, it will change the isGrounded boolean to
+     * true, allowing the player to jump via the Jump method.
+     */
+    public void SetIsGrounded()
     {
-        isGrounded = groundCheck.GetComponent<GroundCheck>().GetIsColliding();
+        colliderCenter = GameObject.Find("Player-Human").GetComponent<CapsuleCollider>().bounds.center;
+        colliderMin = GameObject.Find("Player-Human").GetComponent<CapsuleCollider>().bounds.min;
+        int layerMask = (1 << 16); // *** Layermask is very finnicky, so be carefull. Look up the correct format for setting it to the desired layer(ex: (1<<10)) ***
+        isGrounded = Physics.CheckCapsule(colliderCenter, new Vector3(colliderCenter.x, colliderMin.y - 0.1f, colliderCenter.z), 0.15f, layerMask); // boolean requirement used in parameters of Jump function (see above)
     }
-
-    public void MakeJumpTrue()
+    
+    public void MakeJumpTrue() //I beleieve that this method is a part of Hunter's unfinished touch-triggered jump. Possibly check the touch input scripts for more info - Keiran
     {
         isJumping = true; 
     }
@@ -74,7 +77,7 @@ public class HumanJump : MonoBehaviour
 
     /* The following code is a part of the "Swipe to Jump" system that was being implemented by Hunter. I beleive that it has become redunant and
      * outdated with the inclusion of the "Touch Input" scripts, located in the touch input folder in the assests menu. As Hunter is no longer with us, 
-     * this section of code needs to be looked at in comparison to the other touch input scripts to determine what we really need to hold on to.
+     * this section of code needs to be looked at in comparison to the other touch input scripts to determine what we really need to hold on to - Keiran
      */
      
     //private void Swiper()
