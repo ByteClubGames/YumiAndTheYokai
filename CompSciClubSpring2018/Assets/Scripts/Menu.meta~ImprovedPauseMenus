@@ -1,0 +1,23 @@
+<<<<<<< HEAD:CompSciClubSpring2018/Assets/Prefabs.meta
+fileFormatVersion: 2
+guid: 6931bda32ea8e434da685027f8100fec
+folderAsset: yes
+timeCreated: 1523644325
+licenseType: Free
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+=======
+fileFormatVersion: 2
+guid: 617899b918d011540b73907dbb1aa80d
+folderAsset: yes
+timeCreated: 1522516129
+licenseType: Free
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+>>>>>>> ImprovedPauseMenus:CompSciClubSpring2018/Assets/Scripts/Menu.meta
