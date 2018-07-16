@@ -1,6 +1,6 @@
 ﻿/* IceSpellButton.cs
  * Date Created: 4/24/18
- * Last Edited: 5/08/18
+ * Last Edited: 7/15/18
  * Programmer: Jack Bruce
  * Description: Turns spell on and off.
  *  - 1st press spawns spell spawning obj

@@ -5,12 +5,13 @@ using UnityEngine;
 
 /*
  * Byte Club 
- * 2/26/18
+ * Date Created: 2/26/18
+ * Last Edited: 7/15/18
  * Author: Rory Glenn
  * TouchInput 
  */
 
-public class Button : MonoBehaviour
+public class ButtonRory : MonoBehaviour
 {
     public Color defaultColor;
     public Color selectedColor;
