@@ -43,3 +43,6 @@ sysinfo.txt
 CompSciClubFall2017/Library/
 
 CompSciClubSpring2018/\.vs/CompSciClubSpring2018/v15/sqlite3/
+
+# For the mac guys
+*.DS_Store

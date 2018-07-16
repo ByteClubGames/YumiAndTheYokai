@@ -5,7 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Water
+  - WindSpell
   - Earth Spell Object
+  - WindSpellTrigger
   layers:
   - Default
   - TransparentFX
@@ -20,6 +22,9 @@ TagManager:
   - Earth
   - 
   - 
+  - Earth
+  - 
+  - Spell
   - 
   - 
   - 

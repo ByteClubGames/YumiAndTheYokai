@@ -1,16 +1,16 @@
 ﻿/* EarthSpellMechanics.cs
  * Date Created: 3/15/18
- * Last Edited: 4/20/18
+ * Last Edited: 5/18/18
  * Programmer: Daniel Jaffe & Darrell Wong
  * Description: Functionality of Earth Spell - Attach to the earthSpell object (cube):
- *      1. When an earth spell is created from EarthSpellUse.cs, the properties of the earth spell are defined here
+ *      1. When an earth spell is created from EarthSpellUse.cs, the properties of the earth spell are defined
  *      2. Click and drag functionality decides growth direction
  *      3. Properties of growth speed/distance, maxSpells, and decay time are public variables
  *      4. Earth spell growth will stop on collision with specified objects with:
  *          a)"Floor" layer
  *          b)"Earth" layer
  *          c)"Earth Spell Object" tag
- *          
+ *      5. EarthSpell starts with size 0,0,0. Grows to 1,1,1 once grow direction is specified.
  */
 
 using System.Collections;
@@ -18,8 +18,8 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
 
-public class EarthSpellMechanics : MonoBehaviour
-{
+public class EarthSpellMechanics : MonoBehaviour {
+
     private Vector2 firstPressPos;
     private Vector2 secondPressPos;
     private float deltaX = 0f, deltaY = 0f;
@@ -30,12 +30,11 @@ public class EarthSpellMechanics : MonoBehaviour
     public int maxSpells = 3;
     public float extendFactor = 25f;
     public float extendSpeed = .1f;
-    public float maxGrow = 3.0f;
     public int destroyTime = 5;
-    public bool stopOnHitEarth = true;
+    private bool stopOnHitEarth = true;
     bool firstCollision;
+    bool sizeNotSet = true;
 
-    public bool tester; 
 
     //Start
     private void Start()
@@ -77,6 +76,12 @@ public class EarthSpellMechanics : MonoBehaviour
 
         if (Mathf.Abs(deltaX) > Mathf.Abs(deltaY))
         {
+            if (sizeNotSet)
+            {
+                gameObject.transform.localScale = new Vector3(0, 1, 1);
+                sizeNotSet = false;
+            }
+
             if (deltaX > 0) {
                 for (int i = 0; i < extendFactor; i++)
                 {
@@ -101,11 +106,19 @@ public class EarthSpellMechanics : MonoBehaviour
         }
         else if (Mathf.Abs(deltaX) < Mathf.Abs(deltaY))
         {
+            if (sizeNotSet)
+            {
+                gameObject.transform.localScale = new Vector3(1, 0F, 1);
+                sizeNotSet = false;
+            }
+
+
             if (deltaY > 0)
             {
                 for (int i = 0; i < extendFactor; i++)
                 {
                     //stretches object in the Y direction
+
                     gameObject.transform.localScale += new Vector3(0, extendSpeed, 0);
                     //moves the object along to accomidate for equal stretching on both sides
                     gameObject.transform.Translate(0, (extendSpeed / 2), 0);
@@ -141,11 +154,12 @@ public class EarthSpellMechanics : MonoBehaviour
         //The earth spell growth can be stopped by adding more tags to this if statement
         if (col.collider.gameObject.layer == LayerMask.NameToLayer("Floor")     
             || col.collider.gameObject.layer == LayerMask.NameToLayer("Earth")  
-            || col.collider.gameObject.CompareTag("Earth Spell Object"))    
+            || col.collider.gameObject.CompareTag("Earth Spell Object"))
         {
-            
-            if (!firstCollision)    //This is used to negate the initial collision of instantiating the earth spell inside of an earth block
-                                    //bool firstCollision is instantiated in the Start() function
+
+            // bool firstCollision is instantiated in the Start() function
+            //This is used to negate the initial collision of instantiating the earth spell inside of an earth block
+            if (!firstCollision)            
             {
                 firstCollision = true;
             }
@@ -159,3 +173,9 @@ public class EarthSpellMechanics : MonoBehaviour
     }
 
 }
+
+
+
+
+
+

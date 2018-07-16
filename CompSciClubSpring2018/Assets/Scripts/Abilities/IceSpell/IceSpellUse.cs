@@ -1,6 +1,6 @@
 ﻿/* IceSpellUse.cs
  * Date Created: 3/10/18
- * Last Edited: 3/10/18
+ * Last Edited: 6/16/18
  * Programmer: Jack Bruce
  * Description: Script for instantiating ice spell objects upon mouse clicks
  */
@@ -16,7 +16,13 @@ public class IceSpellUse : MonoBehaviour {
     private GameObject myCurrentObject;
 
     private bool _isDragging = false;
-    private void Update()
+
+    void Start()
+    {
+        this.GetComponent<TimeManager>().StartSlowDown(); // Time is slowed when spawner is here
+    }
+
+    void Update()
 	{
 		//Instantiates iceSpellPrefab upon clicking in the position of the click
         /*if (Input.GetMouseButtonDown(0))

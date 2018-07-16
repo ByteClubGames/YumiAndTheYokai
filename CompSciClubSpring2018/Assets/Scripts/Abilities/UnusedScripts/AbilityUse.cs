@@ -25,7 +25,7 @@ public class AbilityUse : MonoBehaviour {
         fillImage = btn.transform.GetChild(0).gameObject.GetComponent<Image>();
         UnityEngine.Debug.Log(btn.transform.GetChild(0).gameObject.name);
         button = btn.GetComponent<Button>();
-        // button.interactable = false;     // Hunter commented out because it's weird on master 
+        button.interactable = false;
         fillImage.fillAmount = 1;
         abilityCooldownTimer = new Stopwatch();
         abilityCooldownTimer.Start();
@@ -47,7 +47,7 @@ public class AbilityUse : MonoBehaviour {
             yield return null;
         }
         fillImage.fillAmount = 0;
-        // button.interactable = true;      // Hunter commented out because it's weird on master  
+        button.interactable = true;
         abilityCooldownTimer.Stop();
         abilityCooldownTimer.Reset();
 
