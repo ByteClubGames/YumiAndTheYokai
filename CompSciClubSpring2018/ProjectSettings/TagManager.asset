@@ -11,6 +11,10 @@ TagManager:
   - Platforms
   - Human
   - Ferrox
+  - Puzzle
+  - Borders
+  - Walls
+  - MovingPlatform
   layers:
   - Default
   - TransparentFX

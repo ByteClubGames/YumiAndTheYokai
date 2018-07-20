@@ -1,8 +1,8 @@
 ﻿/*
  *  
- * Author: Spencer Wilson
+ * Author: Spencer Wilson, Keiran Glynn
  * Date Created: 3/16/2018 @ 8:38 pm
- * Date Modified: 3/23/2018 @ 10:18 pm
+ * Date Modified: 5/12/2018 @ 12:18 pm
  * Project: CompSciClubSpring2018
  * File: CircuitPuzzle.cs
  * Description: Script that controls the circuit puzzle.
@@ -19,6 +19,15 @@ public class CircuitPuzzleController : MonoBehaviour {
     public GameObject ring2; // Holds the reference to the Ring2 game object.
     public GameObject ring3; // Holds the reference to the Ring3 game object.
     public GameObject ring4; // Holds the reference to the Ring4 game object.
+    public GameObject switch1GO; // References the switch1 game object
+    public GameObject switch2GO; // References the switch2 game object
+    public GameObject switch3GO; // References the switch3 game object
+    public GameObject switch4GO; // References the switch4 game object
+    public float spinAngle1 = 30f; // Determines what angle ring1 will rotate at
+    public float spinAngle2 = 30f; // Determines what angle ring2 will rotate at
+    public float spinAngle3 = 30f; // Determines what angle ring3 will rotate at
+    public float spinAngle4 = 30f; // Determines what angle ring4 will rotate at
+    public float spinTime = 3f; // Determines how long a ring will take to complete its rotation
 
     public GameObject levelExit; // Holds the reference to the level exit / door.
 
@@ -36,7 +45,7 @@ public class CircuitPuzzleController : MonoBehaviour {
     private bool levelExitAccess; // Private boolean value that represents whether or not the player can access the level exit.
 
     private void Start()
-    {
+    {       
         switch1 = false; // Initializes switch1 to false at the start of the game.
         switch2 = false; // Initializes switch2 to false at the start of the game.
         switch3 = false; // Initializes switch3 to false at the start of the game
@@ -52,14 +61,14 @@ public class CircuitPuzzleController : MonoBehaviour {
 
     public void Update()
     {
-        IsPuzzleActive();
+        IsPuzzleActive();        
     }
 
     public void IsPuzzleActive() // Function that checks if the puzzle has been powered on or not.
     {
-        //if(puzzleActive) // If the puzzle is active, it's features and functionalities are accessible.
+        if(switch1 || switch2 || switch3 || switch4) //If a switch is being pushed and the ring should rotate, then do action
         {
-            SwitchControl();
+            SwitchControl(); // responsible for deciding which ring should rotate based on the switch that was activated
         }
     }
 
@@ -68,92 +77,75 @@ public class CircuitPuzzleController : MonoBehaviour {
         if(switch1)
         {
             canSwitch1Active = false; // Player cannot activate switch1 until after the ring completes it's rotation.
-            StartCoroutine(Rotate(ring1, 360f, 3f)); // Rotates Ring1, the center ring.
+            StartCoroutine(Rotate(ring1, Vector3.forward, spinAngle1, spinTime, switch1GO)); // Rotates Ring1, the center ring.
             canSwitch1Active = true; // 
             switch1 = false;
-            //StartCoroutine(WaitAmountOfSeconds(switch1, 3f));
         }
         if(switch2)
         {
             canSwitch2Active = false; // Player cannot activate switch2 until after the ring completes it's rotation.
-            StartCoroutine(Rotate(ring2, -360f, 3f)); // Rotates Ring2, the ring second from the center.
+
+            StartCoroutine(Rotate(ring2, Vector3.forward, spinAngle2, spinTime, switch2GO)); // Rotates Ring2, the ring second from the center.
             canSwitch2Active = true;
             switch2 = false;
-            //StartCoroutine(WaitAmountOfSeconds(switch2, 3f));
         }
         if(switch3)
         {
             canSwitch3Active = false; // Player cannot activate switch3 until after the ring completes it's rotation.
-            StartCoroutine(Rotate(ring3, 360f, 3f)); // Rotates Ring3, the ring third from the center.
+
+            StartCoroutine(Rotate(ring3, Vector3.forward, spinAngle3, spinTime, switch3GO)); // Rotates Ring3, the ring third from the center.
             canSwitch3Active = true;
             switch3 = false;
-            //StartCoroutine(WaitAmountOfSeconds(switch3, 3f));
         }
         if(switch4)
         {
             canSwitch4Active = false; // Player cannot activate switch4 until after the ring completes it's rotation.
-            StartCoroutine(Rotate(ring4, -360f, 3f)); // Rotates Ring4, the outermost ring.
+
+            StartCoroutine(Rotate(ring4, Vector3.forward, spinAngle4, spinTime, switch4GO)); // Rotates Ring4, the outermost ring.
             canSwitch4Active = true;
             switch4 = false;
-            //StartCoroutine(WaitAmountOfSeconds(switch4, 3f));
         }
     }
 
-    public void ActivateSwitch(int i) // Takes an integer value to establish which switch to activate.
+    public void ActivateSwitch(int i) // Takes an integer value to establish which switch to activate. Will activate when called by ActivateTrigger.cs
     {
         if(i == 0 && canSwitch1Active)
         {
             switch1 = true;
+            Debug.Log("Switch1 Activated");
         }
         else if(i == 1 && canSwitch2Active)
         {
             switch2 = true;
+            Debug.Log("Switch2 Activated");
         }
         else if(i == 2 && canSwitch3Active)
         {
             switch3 = true;
+            Debug.Log("Switch3 Activated");
         }
         else if(i == 3 && canSwitch4Active)
         {
             switch4 = true;
+            Debug.Log("Switch4 Activated");
         }
     }
-
-    IEnumerator WaitAmountOfSeconds(bool switchNum, float duration) // work on
+    
+    IEnumerator Rotate(GameObject ring, Vector3 axis, float angle, float duration, GameObject switchObj)
     {
-        float start = Time.time;
-        float end = start + duration;
-        float progress = 0f;
-        while(progress < 1)
-        {
-            progress = (Time.time - start) / duration;
-        }
-        switchNum = false;
-        yield return null;
-    }
+        Quaternion current = ring.transform.rotation; // holds the current rotation position of the given ring
+        Quaternion to = ring.transform.rotation; // Will hold the desired rotation position of the given ring
+        to *= Quaternion.Euler(axis * angle); // Modifies the "to" rotation position to what we want it to be
 
-    IEnumerator Rotate(GameObject ring, float byDegrees, float duration) // Coroutine function rotates the puzzle rings.
-    {
-        Vector3 currentE = ring.transform.eulerAngles; // Gets the Euler rotation values from the ring game object and stores them in a Vector3 variable.
-        Vector3 newRotationE = new Vector3(currentE.x, currentE.y, Mathf.Round(currentE.z + byDegrees)); // Stores the new Euler rotation values that the ring game object will slerp to in a Vector3 variable.
-        Quaternion currentQ = ring.transform.rotation; // Assigns Quaternion variable currentQ the Quaterion rotation values of the ring game object.
-        Quaternion newRotationQ = Quaternion.Euler(newRotationE); // Converts newRotationE to Quaternion format and stores it in newRotationQ.
-        
-        if(duration > 0f) // If duration is greater than 0.
+        float elapsed = 0f;
+        while(elapsed <= duration) // Compares how much time has elapsed out of how much time we want it to take to rotate the ring
         {
-            float startT = Time.time; // startT is assigned the value of Time.time, represents the start.
-            float endT = startT + duration; // endT is assigned the combined values of startT and duration.
-            ring.transform.rotation = currentQ; // Assigns the rings current rotation to the values stored in currentQ.
+            ring.transform.rotation = Quaternion.Slerp(current, to, elapsed / duration); // "Moves" (rotates) the ring towards its desired rotation
+            elapsed += Time.deltaTime; // Measures how much time has passed while completing the rotate movement
             yield return null;
-
-            while(Time.time < endT) // While loop that slerps the ring for a duration of time.
-            {
-                float progress = (Time.time - startT) / duration; // Gives the perentage value between 0 and 1 that the slerp is currently at.
-                ring.transform.rotation = Quaternion.Slerp(currentQ, newRotationQ, progress);
-                yield return null;
-            }
-            ring.transform.rotation = newRotationQ; // Sets the ring's rotation to the final rotation that it should end at.
         }
-        yield return null;
-    }
+        ring.transform.rotation = to;
+        switchObj.GetComponent<ActivateTrigger>().SetGreenLight(); // Calls a function that stops the switch from being activated a second time and tells it that
+                                                                   // it can be activated again.
+    }    
 }
