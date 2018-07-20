@@ -8,6 +8,9 @@ TagManager:
   - WindSpell
   - Earth Spell Object
   - WindSpellTrigger
+  - Platforms
+  - Human
+  - Ferrox
   layers:
   - Default
   - TransparentFX
@@ -27,6 +30,7 @@ TagManager:
   - Spell
   - 
   - 
+  - Platforms
   - 
   - 
   - 
