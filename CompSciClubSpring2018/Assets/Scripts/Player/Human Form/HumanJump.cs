@@ -44,34 +44,26 @@ public class HumanJump : MonoBehaviour
     {
         if (isJumping && /*(actingPlayerObj.velocity.y == 0f) && */ isGrounded)
         {
-            Vector3 v = actingPlayerRB.velocity;
-            v.y = 0f;
-            actingPlayerRB.velocity = v;
+            actingPlayerRB.velocity = Vector3.zero;
             actingPlayerRB.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             isGrounded = false;
         }
 
         if (Input.GetKeyDown("up") && /* ( actingPlayerObj.velocity.y == 0f ) */ isGrounded)
         {
-            Vector3 v = actingPlayerRB.velocity;
-            v.y = 0f;
-            actingPlayerRB.velocity = v;
+            actingPlayerRB.velocity = Vector3.zero;
             actingPlayerRB.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             isGrounded = false;
         }
         else if (Input.GetKeyDown("w") && /* ( actingPlayerObj.velocity.y == 0f ) */ isGrounded)
         {
-            Vector3 v = actingPlayerRB.velocity;
-            v.y = 0f;
-            actingPlayerRB.velocity = v;
+            actingPlayerRB.velocity = Vector3.zero;
             actingPlayerRB.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             isGrounded = false;
         }
         else if (Input.GetKeyDown("space") && /* ( actingPlayerObj.velocity.y == 0f ) */ isGrounded)
         {
-            Vector3 v = actingPlayerRB.velocity;
-            v.y = 0f;
-            actingPlayerRB.velocity = v;
+            actingPlayerRB.velocity = Vector3.zero;
             actingPlayerRB.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             isGrounded = false;
         }
