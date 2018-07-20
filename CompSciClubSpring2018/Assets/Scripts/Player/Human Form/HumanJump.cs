@@ -15,9 +15,12 @@ public class HumanJump : MonoBehaviour
     public Rigidbody actingPlayerRB; // Populated with the player's human body's 2D Rigidbody in-engine. 
     //public GameObject groundCheck;
     public float jumpForce;
-    public float grChComeBack = 0.0f;
-    public int defaultGroundFrames = 50;
-    private int groundFrames = 0;
+    //public float grChComeBack = 0.0f;
+    public int defaultGroundFrames = 30;
+    private int groundFrames = -1;
+    public int defaultAirFrames = 30;
+    private int airFrames = -1;
+    private bool jumpNow = false;
 
     private Vector3 colliderCenter;
     private Vector3 colliderMin;
@@ -34,7 +37,9 @@ public class HumanJump : MonoBehaviour
     {
         if (!isGrounded) SetIsGrounded();
         if (isGrounded && groundFrames > 0) groundFrames--;
-        if (isGrounded && groundFrames == 0) isGrounded = false;
+        if (isGrounded && groundFrames <= 0) isGrounded = false;
+        if (!isGrounded) airFrames--;
+        if (airFrames <= 0) jumpNow = false;
         Jump();
         // Swiper(); 
         isJumping = false;
@@ -42,30 +47,17 @@ public class HumanJump : MonoBehaviour
 
     private void Jump() // Script that allows the acting player to jump.
     {
-        if (isJumping && /*(actingPlayerObj.velocity.y == 0f) && */ isGrounded)
+        if (Input.GetKeyDown("space") || Input.GetKeyDown("w") || Input.GetKeyDown("up") || isJumping)
         {
-            actingPlayerRB.velocity = Vector3.zero;
-            actingPlayerRB.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-            isGrounded = false;
+            jumpNow = true;
+            airFrames = defaultAirFrames;
         }
-
-        if (Input.GetKeyDown("up") && /* ( actingPlayerObj.velocity.y == 0f ) */ isGrounded)
+        if (jumpNow && isGrounded)
         {
             actingPlayerRB.velocity = Vector3.zero;
             actingPlayerRB.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             isGrounded = false;
-        }
-        else if (Input.GetKeyDown("w") && /* ( actingPlayerObj.velocity.y == 0f ) */ isGrounded)
-        {
-            actingPlayerRB.velocity = Vector3.zero;
-            actingPlayerRB.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-            isGrounded = false;
-        }
-        else if (Input.GetKeyDown("space") && /* ( actingPlayerObj.velocity.y == 0f ) */ isGrounded)
-        {
-            actingPlayerRB.velocity = Vector3.zero;
-            actingPlayerRB.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-            isGrounded = false;
+            jumpNow = false;
         }
     }
 
