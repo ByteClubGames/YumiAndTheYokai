@@ -35,7 +35,7 @@ public class TempMovement : MonoBehaviour
             player.transform.Translate(transform.right * Time.deltaTime * speed); // Horizontal movement right
         }
 
-        if (Input.GetKey("w") || Input.GetKey("up") || Input.GetKey("space") && player.GetComponent<Rigidbody2D>().velocity.y == 0f)
+        if ((Input.GetKey("w") || Input.GetKey("up") || Input.GetKey("space")) && player.GetComponent<Rigidbody2D>().velocity.y == 0f)
         {
             player.GetComponent<Rigidbody2D>().AddForce(Vector3.up * jumpSpeed, ForceMode2D.Impulse); // Jumping
         }

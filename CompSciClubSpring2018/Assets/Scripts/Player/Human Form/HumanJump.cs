@@ -16,6 +16,8 @@ public class HumanJump : MonoBehaviour
     //public GameObject groundCheck;
     public float jumpForce;
     public float grChComeBack = 0.0f;
+    public int defaultGroundFrames = 50;
+    private int groundFrames = 0;
 
     private Vector3 colliderCenter;
     private Vector3 colliderMin;
@@ -30,7 +32,9 @@ public class HumanJump : MonoBehaviour
 
     private void Update()
     {
-        SetIsGrounded();
+        if (!isGrounded) SetIsGrounded();
+        if (isGrounded && groundFrames > 0) groundFrames--;
+        if (isGrounded && groundFrames == 0) isGrounded = false;
         Jump();
         // Swiper(); 
         isJumping = false;
@@ -40,20 +44,36 @@ public class HumanJump : MonoBehaviour
     {
         if (isJumping && /*(actingPlayerObj.velocity.y == 0f) && */ isGrounded)
         {
-            actingPlayerRB.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);            
+            Vector3 v = actingPlayerRB.velocity;
+            v.y = 0f;
+            actingPlayerRB.velocity = v;
+            actingPlayerRB.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            isGrounded = false;
         }
 
         if (Input.GetKeyDown("up") && /* ( actingPlayerObj.velocity.y == 0f ) */ isGrounded)
         {
+            Vector3 v = actingPlayerRB.velocity;
+            v.y = 0f;
+            actingPlayerRB.velocity = v;
             actingPlayerRB.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            isGrounded = false;
         }
         else if (Input.GetKeyDown("w") && /* ( actingPlayerObj.velocity.y == 0f ) */ isGrounded)
         {
+            Vector3 v = actingPlayerRB.velocity;
+            v.y = 0f;
+            actingPlayerRB.velocity = v;
             actingPlayerRB.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            isGrounded = false;
         }
         else if (Input.GetKeyDown("space") && /* ( actingPlayerObj.velocity.y == 0f ) */ isGrounded)
         {
-            actingPlayerRB.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);            
+            Vector3 v = actingPlayerRB.velocity;
+            v.y = 0f;
+            actingPlayerRB.velocity = v;
+            actingPlayerRB.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            isGrounded = false;
         }
     }
 
@@ -67,6 +87,7 @@ public class HumanJump : MonoBehaviour
         colliderMin = GameObject.Find("Player-Human").GetComponent<CapsuleCollider>().bounds.min;
         int layerMask = (1 << 16); // *** Layermask is very finnicky, so be carefull. Look up the correct format for setting it to the desired layer(ex: (1<<10)) ***
         isGrounded = Physics.CheckCapsule(colliderCenter, new Vector3(colliderCenter.x, colliderMin.y - 0.1f, colliderCenter.z), 0.15f, layerMask); // boolean requirement used in parameters of Jump function (see above)
+        groundFrames = defaultGroundFrames;
     }
     
     public void MakeJumpTrue() //I beleieve that this method is a part of Hunter's unfinished touch-triggered jump. Possibly check the touch input scripts for more info - Keiran
