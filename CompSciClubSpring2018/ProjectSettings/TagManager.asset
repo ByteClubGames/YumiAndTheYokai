@@ -15,6 +15,7 @@ TagManager:
   - Borders
   - Walls
   - MovingPlatform
+  - EnemyDetector
   layers:
   - Default
   - TransparentFX
