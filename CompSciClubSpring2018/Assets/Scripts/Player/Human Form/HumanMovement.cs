@@ -1,7 +1,7 @@
 ﻿/*
- * Programmer:   Hunter Goodin & Spencer Wilson
+ * Programmer:   Hunter Goodin, Spencer Wilson, Keiran Glynn
  * Date Created: 02/16/2018 @  7:15 PM 
- * Last Updated: 02/16/2018 @  9:35 PM 
+ * Last Updated: 07/23/2018 @  1:35 AM 
  * File Name:    HumanMovement.cs 
  * Description:  This script will be responsible for the player's movements in their human form. 
  */
@@ -10,104 +10,137 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HumanMovement : MonoBehaviour
+public class HumanMovement : Movement
 {
-    public float speed;
+    //private CharacterController controller;
+    //private Vector3 movement;
 
-    private float previousPos; // Stores the position on the x-axis of the human from the last frame.
+    //public float gravity = 10f;
+    //public float jumpForce = 5f;
+    //public float jumpVelocity;
+    public bool ya;
 
-    public Rigidbody2D playerRB;
-    public bool isJump;
-    public bool isLeft;
-    public bool isRight;
-    public bool touched;
+    
 
-    public bool isActive; // True an false variable that determines whether or not the player's current movement is active.
-    public bool isGrounded; // Boolean variable that represents whether or not the human is grounded or not.
-
-    private void FixedUpdate()
+    private void Start()
     {
-        CheckIfActive(); // Calls on the CheckIfActive() function.
-    }
+        jumpForce = 10f;
+        movementSpeed = 5f;
+        controller = GameObject.Find("Player-Human").GetComponent<CharacterController>();
+    }  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    //public float speed;
 
-    private void CheckIfActive() // Private function that detects whether or not this script is active.
-    {
-        if(isActive) // If isActive is equal to true, then call the function Movement().
-        {
-            Movement();
-        }
-    }
+    //private float previousPos; // Stores the position on the x-axis of the human from the last frame.
 
-    private void Movement() // Function that houses the code that accounts for the human's movement.k
-    {
-        if(isGrounded) // While the player is grounded, make them move like such.
-        {
-            if (Input.GetKey("a"))
-            {
-                playerRB.transform.Translate(-transform.right * Time.deltaTime * speed);
-            }
-            if (Input.GetKey("d"))
-            {
-                playerRB.transform.Translate(transform.right * Time.deltaTime * speed);
-            }
-        }
-        else if (!isGrounded)
-        {
-            Debug.Log(GetVelocityX());
-            if (GetVelocityX() < 0 || Input.GetKey("a"))  
-            {
-                Debug.Log(GetVelocityX());
-                playerRB.transform.Translate(-transform.right * Time.deltaTime * speed);
-                Debug.Log("Is not grounded and flying gracefully through the sky.");
-            }
-            else if(GetVelocityX() > 0 || Input.GetKey("d"))
-            {
-                playerRB.transform.Translate(transform.right * Time.deltaTime * speed);
-                Debug.Log("Is not grounded and flying gracefully through the sky.");
-            }
-        }
-    }
+    //public Rigidbody2D playerRB;
+    //public bool isJump;
+    //public bool isLeft;
+    //public bool isRight;
+    //public bool touched;
 
-    private float GetVelocityX()
-    {
-        float velocityX = (transform.position.x - previousPos) / Time.deltaTime;
-        previousPos = transform.position.x;
-        return velocityX; // Returns the calculated velocity.
-    }
+    //public bool isActive; // True an false variable that determines whether or not the player's current movement is active.
+    //public bool isGrounded; // Boolean variable that represents whether or not the human is grounded or not.
 
-    public void SetIfActive(bool incomingVal) // Function that sets isActive to incomingVal.
-    {
-        isActive = incomingVal;
-    }
+    //private void FixedUpdate()
+    //{
+    //    CheckIfActive(); // Calls on the CheckIfActive() function.
+    //}
 
-    public void SetIsGrounded(bool value) // Sets isGrounded to true or false.
-    {
-        isGrounded = value;
-    }
+    //private void CheckIfActive() // Private function that detects whether or not this script is active.
+    //{
+    //    if(isActive) // If isActive is equal to true, then call the function Movement().
+    //    {
+    //        Movement();
+    //    }
+    //}
 
-    void OnMouseDown()
-    {
-        touched = true;
-    }
+    //private void Movement() // Function that houses the code that accounts for the human's movement.k
+    //{
+    //    if(isGrounded) // While the player is grounded, make them move like such.
+    //    {
+    //        if (Input.GetKey("a"))
+    //        {
+    //            playerRB.transform.Translate(-transform.right * Time.deltaTime * speed);
+    //        }
+    //        if (Input.GetKey("d"))
+    //        {
+    //            playerRB.transform.Translate(transform.right * Time.deltaTime * speed);
+    //        }
+    //    }
+    //    else if (!isGrounded)
+    //    {
+    //        Debug.Log(GetVelocityX());
+    //        if (GetVelocityX() < 0 || Input.GetKey("a"))  
+    //        {
+    //            Debug.Log(GetVelocityX());
+    //            playerRB.transform.Translate(-transform.right * Time.deltaTime * speed);
+    //            Debug.Log("Is not grounded and flying gracefully through the sky.");
+    //        }
+    //        else if(GetVelocityX() > 0 || Input.GetKey("d"))
+    //        {
+    //            playerRB.transform.Translate(transform.right * Time.deltaTime * speed);
+    //            Debug.Log("Is not grounded and flying gracefully through the sky.");
+    //        }
+    //    }
+    //}
 
-    private void OnMouseUp()
-    {
-        touched = false;
-    }
+    //private float GetVelocityX()
+    //{
+    //    float velocityX = (transform.position.x - previousPos) / Time.deltaTime;
+    //    previousPos = transform.position.x;
+    //    return velocityX; // Returns the calculated velocity.
+    //}
 
-    void OnCollisionEnter2D(Collision2D other) // this is allows for the player to become a child of the moving platform prefab
-    {
-        if(other.transform.tag == "MovingPlatform") //this finds the object with the tag "MovingPlatform"
-        {
-            transform.parent = other.transform; //this makes what is colliding with that tag into the child of that tag
-        }
-    }
+    //public void SetIfActive(bool incomingVal) // Function that sets isActive to incomingVal.
+    //{
+    //    isActive = incomingVal;
+    //}
 
-    void OnCollisionExit2D(Collision2D other) // this is allows for the player not be a child of the moving platform prefab
-    {
-        if (other.transform.tag == "MovingPlatform") //this finds the object with the tag "MovingPlatform"
-        {
-            transform.parent = null; //this makes what is colliding with that tag stop being a child of that tag
-        }
-    }
+    //public void SetIsGrounded(bool value) // Sets isGrounded to true or false.
+    //{
+    //    isGrounded = value;
+    //}
+
+    //void OnMouseDown()
+    //{
+    //    touched = true;
+    //}
+
+    //private void OnMouseUp()
+    //{
+    //    touched = false;
+    //}
+
+    //void OnCollisionEnter2D(Collision2D other) // this is allows for the player to become a child of the moving platform prefab
+    //{
+    //    if(other.transform.tag == "MovingPlatform") //this finds the object with the tag "MovingPlatform"
+    //    {
+    //        transform.parent = other.transform; //this makes what is colliding with that tag into the child of that tag
+    //    }
+    //}
+
+    //void OnCollisionExit2D(Collision2D other) // this is allows for the player not be a child of the moving platform prefab
+    //{
+    //    if (other.transform.tag == "MovingPlatform") //this finds the object with the tag "MovingPlatform"
+    //    {
+    //        transform.parent = null; //this makes what is colliding with that tag stop being a child of that tag
+    //    }
+    //}
 }
