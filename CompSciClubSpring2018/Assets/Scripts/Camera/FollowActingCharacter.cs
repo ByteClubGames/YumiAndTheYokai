@@ -24,7 +24,7 @@ public class FollowActingCharacter : MonoBehaviour {
 	void LateUpdate () // LateUpdate is called after Update and FixedUpdate have been called. Good for tracking stuff.
     {
         actingCharacterTransform = actingCharacter.transform; // Assigns the actingCharacterTransform variable with the value stored in actingCharacter.transform.
-        newPos = new Vector3(actingCharacterTransform.position.x, actingCharacterTransform.position.y + 5, -20f); // Getting the x,y coordinates of the current acting character and a z value of -20 and storing it into newPos. 
+        newPos = new Vector3(actingCharacterTransform.position.x, actingCharacterTransform.position.y + 1.2f, -6.15f); // Getting the x,y coordinates of the current acting character and a z value of -20 and storing it into newPos. 
         gameObject.transform.position = newPos; // Setting the currently selected game object's position to that of the value stored in newPos.
 	}
 
