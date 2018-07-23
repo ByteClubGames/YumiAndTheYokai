@@ -1214,8 +1214,23 @@ Prefab:
         type: 2}
       propertyPath: actingCharacter
       value: 
-      objectReference: {fileID: 595641420}
+      objectReference: {fileID: 2142058717}
     - target: {fileID: 114872148053637042, guid: d8d73941dce9c8948b7f09704aa0911a,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114018132672225776, guid: d8d73941dce9c8948b7f09704aa0911a,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114889010867731332, guid: d8d73941dce9c8948b7f09704aa0911a,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114813996152763584, guid: d8d73941dce9c8948b7f09704aa0911a,
         type: 2}
       propertyPath: m_Enabled
       value: 0
@@ -1732,6 +1747,23 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1722879200128792, guid: 0dd2532d035311a47a04cbce2f03df7f,
     type: 2}
   m_PrefabInternal: {fileID: 1589081053}
+--- !u!114 &2142058718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2142058717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1379cc6df4fa3ec4f93a498488619123, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 0}
+  movementVector: {x: 0, y: 0, z: 0}
+  gravity: 10
+  jumpForce: 0
+  jumpVelocity: 0
+  movementSpeed: 0
 --- !u!143 &2142058719
 CharacterController:
   m_ObjectHideFlags: 0
@@ -1742,10 +1774,10 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 2
-  m_Radius: 0.5
-  m_SlopeLimit: 45
+  m_Height: 2.22
+  m_Radius: 0.6
+  m_SlopeLimit: 46
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: -0.05, z: 0}
