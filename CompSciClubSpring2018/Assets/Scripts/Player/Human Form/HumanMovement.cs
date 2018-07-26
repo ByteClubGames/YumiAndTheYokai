@@ -26,7 +26,7 @@ public class HumanMovement : Movement
     {
         jumpForce = 10f;
         movementSpeed = 5f;
-        controller = GameObject.Find("Player-Human").GetComponent<CharacterController>();
+        //controller = GameObject.Find("Player-Human").GetComponent<CharacterController>();
     }  
     
     

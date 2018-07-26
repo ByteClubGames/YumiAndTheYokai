@@ -27,35 +27,35 @@ public class InputListener : MonoBehaviour {
 	
 	void Update () {
         
-        // Movement Left
-        if(Input.GetKey("a") || Input.GetKey("left"))
-        {
-            human.MoveLeft(true);
-        }
-        else
-        {
-            human.MoveLeft(false);
-        }
+        //// Movement Left
+        //if(Input.GetKey("a") || Input.GetKey("left"))
+        //{
+        //    human.MoveLeft(true);
+        //}
+        //else
+        //{
+        //    human.MoveLeft(false);
+        //}
 
-        // Movement Right
-        if (Input.GetKey("d") || Input.GetKey("right"))
-        {
-            human.MoveRight(true);
-        }
-        else
-        {
-            human.MoveRight(false);
-        }
+        //// Movement Right
+        //if (Input.GetKey("d") || Input.GetKey("right"))
+        //{
+        //    human.MoveRight(true);
+        //}
+        //else
+        //{
+        //    human.MoveRight(false);
+        //}
 
-        // Jumping
-        if (Input.GetKeyDown("w") || Input.GetKeyDown("up") || Input.GetKeyDown("space"))
-        {
-            human.Jump(true);
-        }
-        else
-        {
-            human.Jump(false);
-        }
+        //// Jumping
+        //if (Input.GetKeyDown("w") || Input.GetKeyDown("up") || Input.GetKeyDown("space"))
+        //{
+        //    human.Jump(true);
+        //}
+        //else
+        //{
+        //    human.Jump(false);
+        //}
 
 
 
