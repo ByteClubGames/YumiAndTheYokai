@@ -3,6 +3,28 @@ guid: 23b80895fb4dc0e4fa97300c0ace8dcc
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
+    100000: Cube
+    100002: Cube_002
+    100004: //RootNode
+    100006: Plane
+    400000: Cube
+    400002: Cube_002
+    400004: //RootNode
+    400006: Plane
+    2100000: moss
+    2100002: hedge
+    2100004: megatree-bark
+    2300000: Cube
+    2300002: Cube_002
+    2300004: Plane
+    3300000: Cube
+    3300002: Cube_002
+    3300004: Plane
+    4300000: Plane
+    4300002: Cube_002
+    4300004: Cube
+    7400000: Default Take
+    9500000: //RootNode
     2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
@@ -56,7 +78,7 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
     previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
