@@ -1,4 +1,12 @@
-﻿using System.Collections;
+﻿/*
+ * 
+ * Programmer: Brenden Plong
+ * Date Created: 7/25/2018
+ * Date Updated: 8/1/2018
+ * Description: Script will make it so that the player will stick onto the platform
+ * 
+ */
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

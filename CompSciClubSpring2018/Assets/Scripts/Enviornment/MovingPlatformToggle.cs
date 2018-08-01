@@ -2,7 +2,7 @@
  * 
  * Programmer: Brenden Plong
  * Date Created: 7/25/2018
- * Date Updated: 7/25/2018
+ * Date Updated: 8/1/2018
  * Description: Script will make it so that a platform can be activated when the player collides or interacts with it in some way
  * 
  */
@@ -23,12 +23,13 @@ public class MovingPlatformToggle : MonoBehaviour {
     
 	// Use this for initialization
 	void Start () {
-        OnCollisionStay2D();//ChangeTarget();// Calls upon the ChangeTarget() method
+        OnCollisionStay2D();
+        //ChangeTarget();
 	}
 
     // Update is called once per frame
     void FixedUpdate () {
-         // This allows for the platform to move
+         
 	}
     void ChangeTarget() // Will monitor the currentState of the platform and update it accordingly 
     {
@@ -50,9 +51,9 @@ public class MovingPlatformToggle : MonoBehaviour {
         Invoke("ChangeTarget", resetTime); // When a position has been reached, this sets the time in which the platform will move again
     }
     private void OnCollisionStay2D()
-    { 
-            platform.position = Vector3.Lerp(platform.position, newPosition, smooth * Time.deltaTime);
-            ChangeTarget();    
+    {
+            platform.position = Vector3.Lerp(platform.position, newPosition, smooth * Time.deltaTime); // This allows for the platform to move
+            ChangeTarget(); // Calls upon the ChangeTarget() method
     }
 }
 
