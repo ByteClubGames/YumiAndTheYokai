@@ -1,7 +1,7 @@
 ﻿/*
- * Programmer: Keiran Glynn
+ * Programmer: Keiran Glynn, Spencer Wilson
  * Date Created: 07/23/2018 @ 12:30 AM
- * Last Modified: 07/23/2018 @ 12:30 AM
+ * Last Modified: 07/31/2018 @ 3:17 PM
  * File Name: InputListener.cs
  * Description: 
  */
@@ -11,8 +11,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class InputListener : MonoBehaviour {
-    private HumanMovement human;
-    
+
+    private HumanMovement human; // HumanMovement object named human that will hold the HumanMovement script.
+    // public GameObject yokaiGameObj;
+    public YokaiSwitcher switcherScript; // YokaiSwitcher object named switcherScript that will store the YokaiSwitcher script.
+    private bool facingRight; // Boolean value that represents whether or not the player is facing right.
     
 
 
@@ -23,6 +26,7 @@ public class InputListener : MonoBehaviour {
         //yokai = GameObject.Find("");
 
         human = GameObject.Find("Player-Human").GetComponent<HumanMovement>();
+        facingRight = true; // Player is initialized to face right.
 	}
 	
 	void Update () {
@@ -31,6 +35,7 @@ public class InputListener : MonoBehaviour {
         if(Input.GetKey("a") || Input.GetKey("left"))
         {
             human.MoveLeft(true);
+            facingRight = false; // Boolean variable facingRight is set to false.
         }
         else
         {
@@ -41,6 +46,7 @@ public class InputListener : MonoBehaviour {
         if (Input.GetKey("d") || Input.GetKey("right"))
         {
             human.MoveRight(true);
+            facingRight = true; // Boolean variable facingRight is set to true.
         }
         else
         {
@@ -62,7 +68,8 @@ public class InputListener : MonoBehaviour {
         // Character Swap
         if (Input.GetKeyDown("g"))
         {
-            // soon to be implemented
+            switcherScript.SetFacingRight(facingRight);
+            switcherScript.SetProjection();
         }
     }
 }

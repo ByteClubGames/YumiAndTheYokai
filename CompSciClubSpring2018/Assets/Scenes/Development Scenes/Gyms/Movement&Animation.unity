@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -408,6 +408,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50b6562456f8cec40b8c046928947dfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  switcherScript: {fileID: 1589081054}
 --- !u!1 &541447689
 GameObject:
   m_ObjectHideFlags: 0
@@ -698,7 +699,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4991565941858752, guid: 179e93a3a8996b4468f2b1cd28befde7, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4508825363145442, guid: 179e93a3a8996b4468f2b1cd28befde7, type: 2}
       propertyPath: m_LocalScale.x
@@ -966,6 +967,11 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 999045758}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &999406343 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1766990494964196, guid: 179e93a3a8996b4468f2b1cd28befde7,
+    type: 2}
+  m_PrefabInternal: {fileID: 859740909}
 --- !u!1 &1004684261
 GameObject:
   m_ObjectHideFlags: 0
@@ -1258,7 +1264,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4961196474446154, guid: d8d73941dce9c8948b7f09704aa0911a, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114812378247615568, guid: d8d73941dce9c8948b7f09704aa0911a,
         type: 2}
@@ -1586,10 +1592,26 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114342815355907538, guid: 0dd2532d035311a47a04cbce2f03df7f,
+        type: 2}
+      propertyPath: ferroxGameObj
+      value: 
+      objectReference: {fileID: 999406343}
+    - target: {fileID: 114342815355907538, guid: 0dd2532d035311a47a04cbce2f03df7f,
+        type: 2}
+      propertyPath: humanGameObj
+      value: 
+      objectReference: {fileID: 2142058717}
     m_RemovedComponents:
     - {fileID: 54661157800944952, guid: 0dd2532d035311a47a04cbce2f03df7f, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 0dd2532d035311a47a04cbce2f03df7f, type: 2}
   m_IsPrefabAsset: 0
+--- !u!114 &1589081054 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114342815355907538, guid: 0dd2532d035311a47a04cbce2f03df7f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1589081053}
+  m_Script: {fileID: 11500000, guid: 777df4fc5d9c4de4f81f2c9ce885d2e9, type: 3}
 --- !u!1 &1597893324
 GameObject:
   m_ObjectHideFlags: 0
