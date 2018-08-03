@@ -23,13 +23,13 @@ public class MovingPlatformToggle : MonoBehaviour {
     
 	// Use this for initialization
 	void Start () {
-        OnCollisionStay2D();
-        //ChangeTarget();
+        //OnCollisionStay2D(); // Will call upon the OnCollisionStay method // Note: Seems this method may not be needed as OnCollision Will be "called" when the player obj collides with the trigger
+        //ChangeTarget(); // Moved ChangeTarget to be called in OnCollisionStay method; may keep here for future modification
 	}
 
     // Update is called once per frame
     void FixedUpdate () {
-         
+        // Empty until further changes 
 	}
     void ChangeTarget() // Will monitor the currentState of the platform and update it accordingly 
     {
@@ -43,7 +43,7 @@ public class MovingPlatformToggle : MonoBehaviour {
             currentState = "Moving to position 1"; // if true the currentPositon will change its position to position 1
             newPosition = position1.position;
         }
-        else if (currentState == "") // Checks if the currentPosition is currently at nothing
+        else if (currentState == "") // Checks if the currentPosition is currently at neither position
         {
             currentState = "Moving to position 2"; // if true the position will head to position 2 by default and wraps back into the other if else "loop"
             newPosition = position2.position;
@@ -52,8 +52,12 @@ public class MovingPlatformToggle : MonoBehaviour {
     }
     private void OnCollisionStay2D()
     {
-            platform.position = Vector3.Lerp(platform.position, newPosition, smooth * Time.deltaTime); // This allows for the platform to move
-            ChangeTarget(); // Calls upon the ChangeTarget() method
+        ChangeTarget(); // Calls upon the ChangeTarget() method
+        platform.position = Vector3.Lerp(platform.position, newPosition, smooth * Time.deltaTime); // This allows for the platform to move      
+    }
+    private void OnCollisionExit2D()
+    {
+        
     }
 }
 
