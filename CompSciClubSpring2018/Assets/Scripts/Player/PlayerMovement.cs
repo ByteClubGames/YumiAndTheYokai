@@ -1,7 +1,7 @@
 ﻿/*
- * Programmer:   Hunter Goodin 
+ * Programmer:   Hunter Goodin, Spencer Wilson
  * Date Created: 02/16/2018 @  4:00 PM 
- * Last Updated: 06/06/2018 @  11:20 PM 
+ * Last Updated: 07/31/2018 @  3:17 PM 
  * File Name:    PlayerMovement.cs 
  * Description:  This script will be responsible for the player's movements. 
  */
@@ -24,25 +24,25 @@ public class PlayerMovement : MonoBehaviour
         if ( touched && isLeft )      // If touched is true and isLeft is true 
         {
             actingPlayerObj.transform.Translate(-transform.right * Time.deltaTime * speed);
-            switcher.gameObject.GetComponent<YokaiSwitcher>().ChangeActiveSpawner(false);
+            //switcher.gameObject.GetComponent<YokaiSwitcher>().ChangeActiveSpawner(false);
         }  
 
         if ( touched && isRight )     // If touched is true and isRight is true 
         {
             actingPlayerObj.transform.Translate(transform.right * Time.deltaTime * speed);
-            switcher.gameObject.GetComponent<YokaiSwitcher>().ChangeActiveSpawner(true);
+            //switcher.gameObject.GetComponent<YokaiSwitcher>().ChangeActiveSpawner(true);
         }
 
         if ( Input.GetKey("a") || Input.GetKey("left") )
         {
             actingPlayerObj.transform.Translate(-transform.right * Time.deltaTime * speed);
-            switcher.gameObject.GetComponent<YokaiSwitcher>().ChangeActiveSpawner(false);
+            //switcher.gameObject.GetComponent<YokaiSwitcher>().ChangeActiveSpawner(false);
         }
 
         if ( Input.GetKey("d") || Input.GetKey("right") )
         {
             actingPlayerObj.transform.Translate(transform.right * Time.deltaTime * speed);
-            switcher.gameObject.GetComponent<YokaiSwitcher>().ChangeActiveSpawner(true);
+            //switcher.gameObject.GetComponent<YokaiSwitcher>().ChangeActiveSpawner(true);
         }
 
         touched = false; 
