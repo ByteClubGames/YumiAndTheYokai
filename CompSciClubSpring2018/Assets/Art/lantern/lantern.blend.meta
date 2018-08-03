@@ -3,17 +3,6 @@ guid: cdde5dcf1b9863749852d5f9ecea2c12
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2100000: Material_002
-    2100002: Material_001
-    2100004: Material_003
-    2100006: Material_004
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Sphere
-    7400000: Default Take
-    9500000: //RootNode
     2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
@@ -67,7 +56,7 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
     previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
