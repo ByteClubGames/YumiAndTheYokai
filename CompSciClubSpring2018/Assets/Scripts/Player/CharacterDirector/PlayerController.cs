@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour {
     private Vector3 lBLC;
     private Quaternion playerRotation;
     public bool isGrounded;
+    public bool isBelow;
     private float currGravity;
 
     private float currSideMovement;
@@ -91,7 +92,8 @@ public class PlayerController : MonoBehaviour {
             currGravity += -gravity * Time.deltaTime; // set up value for terminal velocity
         }
     }
-
+    
+    // Method that returns the Vector3 positioin of the floor platform below the player. If no floor is detected, then it returns Vector3.zero
     public Vector3 IsGrounded()
     {
         Ray rightDown = new Ray(uRC, Vector3.down); //Right side of 'ground checker'
@@ -100,23 +102,89 @@ public class PlayerController : MonoBehaviour {
         Ray leftDown = new Ray(uLC, Vector3.down); //Left Side of 'ground checker'
         RaycastHit hitLeftDown;
 
+        // if the ground is detected anywhere along the path from the upper right-hand corner of the box to the lower right-hand corner of the box:
         if (Physics.Raycast(rightDown, out hitRightDown, (uRC - bRC).magnitude, ground))
         {
-            Debug.DrawLine(uRC, bRC, Color.red);
-            Debug.Log("Player is Grounded");
-            isGrounded = true;
-            return hitRightDown.point;
+            if(hitRightDown.normal.y > 0f) // if the detected "ground" surface was below the player:
+            {
+                Debug.DrawLine(uRC, bRC, Color.red);
+                Debug.Log("Player is Grounded");
+                isGrounded = true;
+                return hitRightDown.point;
+            }
+            else // The roof was detected
+            {
+                isGrounded = false;
+                return Vector3.zero;
+            }
         }
+        // if the ground is detected anywhere along the path from the upper left-hand corner of the box to the lower left-hand corner of the box:
         else if (Physics.Raycast(leftDown, out hitLeftDown, (uLC - bLC).magnitude, ground))
         {
-            Debug.DrawLine(uLC, bLC, Color.red);
-            Debug.Log("Player is Grounded");
-            isGrounded = true;
-            return hitLeftDown.point;
+            if(hitLeftDown.normal.y > 0f) // if the detected "ground" surface was below the player: 
+            {
+                Debug.DrawLine(uLC, bLC, Color.red);
+                Debug.Log("Player is Grounded");
+                isGrounded = true;
+                return hitLeftDown.point;
+            }
+            else // The roof was detected
+            {
+                isGrounded = false;
+                return Vector3.zero;
+            }            
         }
-        else
+        else // Case in which the player probably isn't grounded
         {
             isGrounded = false;
+            return Vector3.zero;
+        }
+    }
+
+    // Method that returns the Vector3 positioin of the roof platform above the player. If no roof is detected, then it returns Vector3.zero
+    public Vector3 IsBelow()
+    {
+        Ray rightUp = new Ray(bRC, Vector3.up); //Right side of 'ceiling checker'
+        RaycastHit hitRightUp;
+
+        Ray leftUp = new Ray(bLC, Vector3.up); //Left Side of 'ceiling checker'
+        RaycastHit hitLeftUp;
+
+        // if the ground is detected anywhere along the path from the lower right-hand corner of the box to the upper right-hand corner of the box:
+        if (Physics.Raycast(rightUp, out hitRightUp, (uRC - bRC).magnitude, ground))
+        {
+            if (hitRightUp.normal.y < 0f) // if the detected "roof" surface was above the player:
+            {
+                Debug.DrawLine(bRC, uRC, Color.magenta);
+                Debug.Log("Player is colliding with ceiling");
+                isBelow = true;
+                return hitRightUp.point;
+            }
+            else // The floor was detected
+            {
+                isBelow = false;
+                return Vector3.zero;
+            }
+        }
+        // if the roof is detected anywhere along the path from the lower left-hand corner of the box to the upper left-hand corner of the box:
+        else if (Physics.Raycast(leftUp, out hitLeftUp, (uLC - bLC).magnitude, ground))
+        {
+            if (hitLeftUp.normal.y < 0f) // if the detected "roof" surface was above the player: 
+            {
+                Debug.DrawLine(bLC, uLC, Color.magenta);
+                Debug.Log("Player is colliding with ceiling");
+                isBelow = true;
+                return hitLeftUp.point;
+            }
+            else // The floor was detected
+            {
+                isBelow = false;
+                return Vector3.zero;
+            }
+        }
+        else // Case in which the player probably isn't hitting the ceiling
+        {
+            isBelow = false;
             return Vector3.zero;
         }
     }
