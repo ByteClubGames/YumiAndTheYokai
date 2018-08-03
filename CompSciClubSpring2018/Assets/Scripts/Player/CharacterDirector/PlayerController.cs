@@ -76,7 +76,7 @@ public class PlayerController : MonoBehaviour {
             currGravity = 0f;
             if (!posFlag)
             {
-                playerTransform.position = new Vector3(playerTransform.position.x, groundPos.y - 1.5f * colliderBox.bounds.extents.y, 0f);
+                playerTransform.position = new Vector3(playerTransform.position.x, groundPos.y + colliderBox.bounds.extents.y, 0f);
                 posFlag = true;
             }
 
@@ -94,23 +94,25 @@ public class PlayerController : MonoBehaviour {
 
     public Vector3 IsGrounded()
     {
-        Ray rightDown = new Ray(bRC, Vector3.down); //Right side of 'ground checker'
+        Ray rightDown = new Ray(uRC, Vector3.down); //Right side of 'ground checker'
         RaycastHit hitRightDown;
 
-        Ray leftDown = new Ray(bLC, Vector3.down); //Left Side of 'ground checker'
+        Ray leftDown = new Ray(uLC, Vector3.down); //Left Side of 'ground checker'
         RaycastHit hitLeftDown;
 
-        if (Physics.Raycast(rightDown, out hitRightDown, 0.5f, ground))
+        if (Physics.Raycast(rightDown, out hitRightDown, (uRC - bRC).magnitude, ground))
         {
+            Debug.DrawLine(uRC, bRC, Color.red);
             Debug.Log("Player is Grounded");
             isGrounded = true;
-            return hitRightDown.point + playerTransform.position;
+            return hitRightDown.point;
         }
-        else if (Physics.Raycast(leftDown, out hitLeftDown, 0.5f, ground))
+        else if (Physics.Raycast(leftDown, out hitLeftDown, (uLC - bLC).magnitude, ground))
         {
+            Debug.DrawLine(uLC, bLC, Color.red);
             Debug.Log("Player is Grounded");
             isGrounded = true;
-            return hitLeftDown.point + playerTransform.position;
+            return hitLeftDown.point;
         }
         else
         {
