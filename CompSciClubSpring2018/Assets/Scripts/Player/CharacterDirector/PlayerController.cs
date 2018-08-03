@@ -7,12 +7,16 @@ public class PlayerController : MonoBehaviour {
     [Header("Physics")]
     public float gravity;
     public float coyoteTime;
+    public float terminalSpeed;
+    public float buffer = .1f;
 
     [Header("External")]
     public LayerMask excludePlayer;
     public LayerMask ground;
-    public bool posFlag;
-
+    public bool verticalFlag;
+    private bool jump;
+    private bool canJump;
+   
 
     private Transform playerTransform;
     private Vector3 checkBoxCenter;
@@ -31,65 +35,142 @@ public class PlayerController : MonoBehaviour {
     private float currSideMovement;
     public float maxRayDistance = 2.1f; // used in side collision; makes sure cross rays don't go above and below character.
 
-    private Vector3 jumpVector;
+    private Vector3 verticalVector;
     private Vector3 strafeVector;
-    private float jumpForce;
+    public float jumpSpeed;
     public float velocity = 2;
+    public bool moveX;
 
     void Start()
     {
-        posFlag = false;
+        jump = false;
+        terminalSpeed = 4;
+        verticalFlag = false;
         playerTransform = this.gameObject.transform;
         colliderBox = this.gameObject.GetComponent<BoxCollider>();
+        verticalVector = Vector3.zero;
     }
 
     void Update()
-    {        
+    {
+        // Used to identify each corner of the Box Collider around the player
+        #region BoxCollider Initialization
         bRC = colliderBox.bounds.center + new Vector3(colliderBox.bounds.extents.x, -colliderBox.bounds.extents.y, 0f);
         uRC = colliderBox.bounds.center + new Vector3(colliderBox.bounds.extents.x, colliderBox.bounds.extents.y, 0f);
         bLC = colliderBox.bounds.center + new Vector3(-colliderBox.bounds.extents.x, -colliderBox.bounds.extents.y, 0f);
         uLC = colliderBox.bounds.center + new Vector3(-colliderBox.bounds.extents.x, colliderBox.bounds.extents.y, 0f);
         lBRC = colliderBox.bounds.center + new Vector3(colliderBox.bounds.extents.x, -colliderBox.bounds.extents.y, 0f) - playerTransform.position;
         lBLC = colliderBox.bounds.center + new Vector3(-colliderBox.bounds.extents.x, -colliderBox.bounds.extents.y, 0f) - playerTransform.position;
-        Move();
+        #endregion
+
+        
+        // Check if Player is colliding anywhere and return the position vector of that collision
+        Vector3 ceilingPos = IsBelow();
+        Vector3 groundPos = IsGrounded();
+
+
+        if (jump && canJump)
+        {
+            canJump = false;            
+            verticalVector = new Vector3(0f, jumpSpeed * Time.deltaTime, 0f);
+            jump = false;
+            Debug.Log("D");
+        }
+        else if((ceilingPos != Vector3.zero) && (groundPos != Vector3.zero))
+        {
+            /* This case would occur if the player was hitting the floor and the roof at the same exact time (most likely occuring if the player walks on a path that is
+             * too narrow for its height). This is not immediately important so it will be ignored, however it will need to be addressed soon as it could lead to gamebreaking
+             * bugs */
+            canJump = false;
+            verticalVector = Vector3.zero;
+            jump = false;
+            Debug.Log("A");
+        }        
+        else if(ceilingPos != Vector3.zero) // if colliding with ground above the player
+        {
+            CollidingTop(ceilingPos);
+            verticalFlag = false;
+            canJump = false;
+            verticalVector = Vector3.zero;
+            jump = false;
+            Debug.Log("B");
+        }        
+        else if(groundPos != Vector3.zero) // if colliding with ground below the player
+        {
+            CollidingBottom(groundPos);
+            verticalFlag = false;
+            canJump = true;
+            verticalVector = Vector3.zero;
+            jump = false;
+            Debug.Log("C");
+        }        
+        else
+        {
+            if ((verticalVector.y < terminalSpeed) && (canJump != true))
+            {
+                verticalVector += new Vector3(0f, -gravity * Time.deltaTime, 0f);
+                jump = false;
+                Debug.Log("E");
+            }
+        }
+
+        if (!moveX)
+        {
+            strafeVector = Vector3.zero;
+        }
+
+        
+        Move(verticalVector, strafeVector);
+        moveX = false;
+        
+
+        //Move();
         //Gravity(false);
         //jump();
         //sideways();
     }
 
-    public void Move()
+    public void Move(Vector3 vertical, Vector3 horizontal)
     {
-        Gravity(false);
-        MoveRight(false);
-        MoveLeft(false);
-        jumpVector = new Vector3(0f, currGravity * Time.deltaTime, 0f);
-        strafeVector = new Vector3(currSideMovement * Time.deltaTime, 0f, 0f);  // currSideMovement is changed in the MoveRight() and MoveLeft() functions
-        playerTransform.position += (jumpVector);
+        Vector3 sumVector = vertical + horizontal;
+        playerTransform.position += sumVector;
     }
 
-    public void Gravity(bool jump)
+    public void TempStrafe(bool leftRight)
     {
-        Vector3 groundPos = IsGrounded();
-        
+        ;
 
-        if (isGrounded)
+        if (leftRight)
         {
-            currGravity = 0f;
-            if (!posFlag)
-            {
-                playerTransform.position = new Vector3(playerTransform.position.x, groundPos.y + colliderBox.bounds.extents.y, 0f);
-                posFlag = true;
-            }
-
-            if (jump)
-            {
-                currGravity = jumpForce * Time.deltaTime;
-            }
+            strafeVector = new Vector3(velocity * Time.deltaTime, 0f, 0f);
         }
         else
         {
-            posFlag = false;
-            currGravity += -gravity * Time.deltaTime; // set up value for terminal velocity
+            strafeVector = new Vector3(-velocity * Time.deltaTime, 0f, 0f);
+        }        
+    }
+
+    public void Jump()
+    {
+        jump = true;
+        //jump = false;
+    }
+
+    public void CollidingBottom(Vector3 pos)
+    {
+        if (!verticalFlag)
+        {
+            playerTransform.position = new Vector3(playerTransform.position.x, pos.y + colliderBox.bounds.extents.y, 0f);
+            verticalFlag = true;
+        }
+    }
+
+    public void CollidingTop(Vector3 pos)
+    {
+        if (!verticalFlag)
+        {
+            playerTransform.position = new Vector3(playerTransform.position.x, pos.y - colliderBox.bounds.extents.y, 0f);
+            verticalFlag = true;
         }
     }
     
