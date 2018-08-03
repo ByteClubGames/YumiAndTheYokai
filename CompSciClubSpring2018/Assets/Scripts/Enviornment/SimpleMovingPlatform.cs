@@ -1,5 +1,5 @@
 ﻿/**
- * Author: Brenda De los Santos
+ * Author(s): Brenda De los Santos
  * Date Created: 7/25/18
  * Last Modified: 7/26/18 
  * File Name:SimpleMovingPlatform.cs
@@ -19,7 +19,6 @@ public class SimpleMovingPlatform : MonoBehaviour {
     private Vector3 originPos;//Starting/current position
     private Vector3 posB;//A position
     private Vector3 nextPos;//Used to store the next position
-    //Vector3[] positions = new Vector3[2];
 
     [SerializeField]
     //Sets the speed at which the platform moves
