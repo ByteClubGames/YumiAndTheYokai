@@ -124,7 +124,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1381446288312214}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.014, y: -0.0029, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.44310454, y: 0.44310454, z: 0.44310454}
   m_Children: []
   m_Father: {fileID: 4677459353645124}
@@ -137,7 +137,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1722879200128792}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.06870368, y: 3.0559194, z: 0}
+  m_LocalPosition: {x: 28.1, y: 9.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4470050141939640}
@@ -170,8 +170,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 2.2, z: 1}
-  m_Center: {x: 0, y: -0.05, z: 0}
+  m_Size: {x: 1, y: 2.27, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114329015629843224
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -183,11 +183,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f50b7f8295b71bc47879f72eadc8a443, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gravity: 0
-  coyoteTime: 0
+  gravity: 0.3
+  coyoteTime: 0.1
+  terminalSpeed: 1
+  buffer: 0.1
   excludePlayer:
     serializedVersion: 2
-    m_Bits: 304439
+    m_Bits: 296247
+  ground:
+    serializedVersion: 2
+    m_Bits: 262144
+  ceilingFlag: 0
+  isGrounded: 0
+  isBelow: 0
+  maxClimbableSlope: 70
+  jumpSpeed: 10
+  velocity: 5
+  moveX: 0
 --- !u!114 &114342815355907538
 MonoBehaviour:
   m_ObjectHideFlags: 1

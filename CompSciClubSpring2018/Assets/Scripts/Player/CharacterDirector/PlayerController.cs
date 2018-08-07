@@ -22,25 +22,25 @@ public class PlayerController : MonoBehaviour {
     [Header("External")]
     public LayerMask excludePlayer;
     public LayerMask ground;
-    public bool verticalFlag;
+    public bool ceilingFlag;
     private bool jump;
     private bool canJump;
     private bool isTouchingWall;
    
 
     private Transform playerTransform;
-    private Vector3 checkBoxCenter;
     private Collider colliderBox;
-    private Vector3 bRC;
-    private Vector3 uRC;
-    private Vector3 bLC;
-    private Vector3 uLC;
-    private Vector3 lBRC;
-    private Vector3 lBLC;
-    private Quaternion playerRotation;
+    private Vector3 center;
+    private Vector3 bM; // bottom middle
+    private Vector3 uM; // upper middle
+    private Vector3 bRC; // bottom right corner
+    private Vector3 uRC; // upper right corner
+    private Vector3 bLC; // bottom left corner
+    private Vector3 uLC; // upper left corner
+    private Vector3 lBRC; // local bottom right corner
+    private Vector3 lBLC; // local bottom left corner
     public bool isGrounded;
     public bool isBelow;
-    private float currGravity;
 
     private float currSideMovement;
     public float maxClimbableSlope = 70; //in degrees
@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour {
     {
         jump = false;
         terminalSpeed = 4;
-        verticalFlag = false;
+        ceilingFlag = false;
         playerTransform = this.gameObject.transform;
         colliderBox = this.gameObject.GetComponent<BoxCollider>();
         verticalVector = Vector3.zero;
@@ -64,6 +64,9 @@ public class PlayerController : MonoBehaviour {
     {
         // Used to identify each corner of the Box Collider around the player
         #region BoxCollider Initialization
+        center = colliderBox.bounds.center;
+        bM = colliderBox.bounds.center + new Vector3(0f, -colliderBox.bounds.extents.y, 0f);
+        uM = colliderBox.bounds.center + new Vector3(0f, colliderBox.bounds.extents.y, 0f);
         bRC = colliderBox.bounds.center + new Vector3(colliderBox.bounds.extents.x, -colliderBox.bounds.extents.y, 0f);
         uRC = colliderBox.bounds.center + new Vector3(colliderBox.bounds.extents.x, colliderBox.bounds.extents.y, 0f);
         bLC = colliderBox.bounds.center + new Vector3(-colliderBox.bounds.extents.x, -colliderBox.bounds.extents.y, 0f);
@@ -85,8 +88,8 @@ public class PlayerController : MonoBehaviour {
 
         if (sidePos != Vector3.zero)
         {
-            isTouchingWall = true;
             CollidingSide(sidePos);
+            isTouchingWall = true;            
         }
         else
         {
@@ -95,59 +98,53 @@ public class PlayerController : MonoBehaviour {
 
         if (jump && canJump)
         {
-            canJump = false;
             verticalVector = new Vector3(0f, jumpSpeed * Time.deltaTime, 0f);
+            canJump = false;            
             jump = false;
             Debug.Log("D");
         }
-
         else if ((ceilingPos != Vector3.zero) && (groundPos != Vector3.zero))
         {
             /* This case would occur if the player was hitting the floor and the roof at the same exact time (most likely occuring if the player walks on a path that is
              * too narrow for its height). This is not immediately important so it will be ignored, however it will need to be addressed soon as it could lead to gamebreaking
              * bugs */
-            canJump = false;
             verticalVector = Vector3.zero;
+            canJump = false;            
             jump = false;
-            Debug.Log("A");
+            Debug.Log("Colliding with ground and ceiling");
         }
-        else if (ceilingPos != Vector3.zero) // if colliding with ground above the player
+        else if (ceilingPos != Vector3.zero && !ceilingFlag) // if colliding with ground above the player
         {
             CollidingTop(ceilingPos);
-            verticalFlag = false;
-            canJump = false;
             verticalVector = Vector3.zero;
+            ceilingFlag = true;            
+            canJump = false;
             jump = false;
-            Debug.Log("B");
+            Debug.Log("Colliding with ceiling");
         }
         else if (groundPos != Vector3.zero) // if colliding with ground below the player
         {
             CollidingBottom(groundPos);
-            verticalFlag = false;
-            canJump = true;
             verticalVector = Vector3.zero;
+            ceilingFlag = false;
+            canJump = true;            
             jump = false;
-            Debug.Log("C");
+            Debug.Log("colliding with ground");
         }
         else
         {
-            if ((verticalVector.y < terminalSpeed) && (canJump != true) || groundPos == Vector3.zero || ceilingPos != Vector3.zero)
+            if ((verticalVector.y < terminalSpeed) && (canJump != true) || groundPos == Vector3.zero || ceilingPos == Vector3.zero)
             {
                 verticalVector += new Vector3(0f, -gravity * Time.deltaTime, 0f);
+                ceilingFlag = false;
                 jump = false;
-                Debug.Log("E");
+                Debug.Log("Falling due to gravity");
             }
         }
 
 
         Move(verticalVector, strafeVector);
         moveX = false;
-        
-
-        //Move();
-        //Gravity(false);
-        //jump();
-        //sideways();
     }
 
     public void Move(Vector3 vertical, Vector3 horizontal)
@@ -173,25 +170,28 @@ public class PlayerController : MonoBehaviour {
     public void Jump()
     {
         jump = true;
-        //jump = false;
     }
 
     public void CollidingBottom(Vector3 pos)
     {
-        if (!verticalFlag)
-        {
-            playerTransform.position = new Vector3(playerTransform.position.x, pos.y + colliderBox.bounds.extents.y, 0f);
-            verticalFlag = true;
-        }
+        playerTransform.position = new Vector3(playerTransform.position.x, pos.y + colliderBox.bounds.extents.y, 0f);
+        //verticalFlag = true;
+        //if (!verticalFlag)
+        //{
+        //    playerTransform.position = new Vector3(playerTransform.position.x, pos.y + colliderBox.bounds.extents.y, 0f);
+        //    verticalFlag = true;
+        //}
     }
 
     public void CollidingTop(Vector3 pos)
     {
-        if (!verticalFlag)
-        {
-            playerTransform.position = new Vector3(playerTransform.position.x, pos.y - colliderBox.bounds.extents.y, 0f);
-            verticalFlag = true;
-        }
+        playerTransform.position = new Vector3(playerTransform.position.x, pos.y - colliderBox.bounds.extents.y - 0.01f, 0f);
+        //verticalFlag = true;
+        //if (!verticalFlag)
+        //{
+        //    playerTransform.position = new Vector3(playerTransform.position.x, pos.y - colliderBox.bounds.extents.y, 0f);
+        //    verticalFlag = true;
+        //}
     }
 
     public void CollidingSide(Vector3 pos) //transform position for side collisions
@@ -209,19 +209,34 @@ public class PlayerController : MonoBehaviour {
     // Method that returns the Vector3 positioin of the floor platform below the player. If no floor is detected, then it returns Vector3.zero
     public Vector3 IsGrounded()
     {
+        Ray middleDown = new Ray(center, Vector3.down);
+        RaycastHit hitMiddleDown;
+
         Ray rightDown = new Ray(uRC, Vector3.down); //Right side of 'ground checker'
         RaycastHit hitRightDown;
 
         Ray leftDown = new Ray(uLC, Vector3.down); //Left Side of 'ground checker'
         RaycastHit hitLeftDown;
 
+        if (Physics.Raycast(middleDown, out hitMiddleDown, (center - bM).magnitude, ground)){
+            if (hitMiddleDown.normal.y > 0f) // if the detected "ground" surface was below the player:
+            {
+                Debug.DrawLine(center, bM, Color.red);
+                isGrounded = true;
+                return hitMiddleDown.point;
+            }
+            else // The roof was detected
+            {
+                isGrounded = false;
+                return Vector3.zero;
+            }
+        }
         // if the ground is detected anywhere along the path from the upper right-hand corner of the box to the lower right-hand corner of the box:
-        if (Physics.Raycast(rightDown, out hitRightDown, (uRC - bRC).magnitude, ground))
+        else if (Physics.Raycast(rightDown, out hitRightDown, (uRC - bRC).magnitude, ground))
         {
-            if(hitRightDown.normal.y > 0f) // if the detected "ground" surface was below the player:
+            if (hitRightDown.normal.y > 0f) // if the detected "ground" surface was below the player:
             {
                 Debug.DrawLine(uRC, bRC, Color.red);
-                Debug.Log("Player is Grounded");
                 isGrounded = true;
                 return hitRightDown.point;
             }
@@ -234,10 +249,9 @@ public class PlayerController : MonoBehaviour {
         // if the ground is detected anywhere along the path from the upper left-hand corner of the box to the lower left-hand corner of the box:
         else if (Physics.Raycast(leftDown, out hitLeftDown, (uLC - bLC).magnitude, ground))
         {
-            if(hitLeftDown.normal.y > 0f) // if the detected "ground" surface was below the player: 
+            if (hitLeftDown.normal.y > 0f) // if the detected "ground" surface was below the player: 
             {
                 Debug.DrawLine(uLC, bLC, Color.red);
-                Debug.Log("Player is Grounded");
                 isGrounded = true;
                 return hitLeftDown.point;
             }
@@ -257,19 +271,35 @@ public class PlayerController : MonoBehaviour {
     // Method that returns the Vector3 positioin of the roof platform above the player. If no roof is detected, then it returns Vector3.zero
     public Vector3 IsBelow()
     {
+        Ray middleUp = new Ray(center, Vector3.up);
+        RaycastHit hitMiddleUp;
+
         Ray rightUp = new Ray(bRC, Vector3.up); //Right side of 'ceiling checker'
         RaycastHit hitRightUp;
 
         Ray leftUp = new Ray(bLC, Vector3.up); //Left Side of 'ceiling checker'
         RaycastHit hitLeftUp;
 
+        if (Physics.Raycast(middleUp, out hitMiddleUp, (center - uM).magnitude, ground))
+        {
+            if (hitMiddleUp.normal.y < 0f) // if the detected "roof" surface was above the player:
+            {
+                Debug.DrawLine(center, uM, Color.magenta);
+                isBelow = true;
+                return hitMiddleUp.point;
+            }
+            else // The floor was detected
+            {
+                isBelow = false;
+                return Vector3.zero;
+            }
+        }
         // if the ground is detected anywhere along the path from the lower right-hand corner of the box to the upper right-hand corner of the box:
-        if (Physics.Raycast(rightUp, out hitRightUp, (uRC - bRC).magnitude, ground))
+        else if (Physics.Raycast(rightUp, out hitRightUp, (uRC - bRC).magnitude, ground))
         {
             if (hitRightUp.normal.y < 0f) // if the detected "roof" surface was above the player:
             {
                 Debug.DrawLine(bRC, uRC, Color.magenta);
-                Debug.Log("Player is colliding with ceiling");
                 isBelow = true;
                 return hitRightUp.point;
             }
@@ -285,7 +315,6 @@ public class PlayerController : MonoBehaviour {
             if (hitLeftUp.normal.y < 0f) // if the detected "roof" surface was above the player: 
             {
                 Debug.DrawLine(bLC, uLC, Color.magenta);
-                Debug.Log("Player is colliding with ceiling");
                 isBelow = true;
                 return hitLeftUp.point;
             }
