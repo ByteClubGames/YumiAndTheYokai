@@ -1667,6 +1667,41 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114329015629843224, guid: 0dd2532d035311a47a04cbce2f03df7f,
+        type: 2}
+      propertyPath: gravity
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114329015629843224, guid: 0dd2532d035311a47a04cbce2f03df7f,
+        type: 2}
+      propertyPath: terminalSpeed
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 114329015629843224, guid: 0dd2532d035311a47a04cbce2f03df7f,
+        type: 2}
+      propertyPath: excludePlayer.m_Bits
+      value: 304439
+      objectReference: {fileID: 0}
+    - target: {fileID: 114329015629843224, guid: 0dd2532d035311a47a04cbce2f03df7f,
+        type: 2}
+      propertyPath: ground.m_Bits
+      value: 262144
+      objectReference: {fileID: 0}
+    - target: {fileID: 114329015629843224, guid: 0dd2532d035311a47a04cbce2f03df7f,
+        type: 2}
+      propertyPath: moveX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114329015629843224, guid: 0dd2532d035311a47a04cbce2f03df7f,
+        type: 2}
+      propertyPath: jumpSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114773992784345430, guid: 0dd2532d035311a47a04cbce2f03df7f,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0dd2532d035311a47a04cbce2f03df7f, type: 2}
   m_IsPrefabAsset: 0

@@ -15,19 +15,18 @@ public class PlayerController : MonoBehaviour {
 
     [Header("Physics")]
     public float gravity;
-    public float coyoteTime;
     public float terminalSpeed;
-    public float buffer = .1f;
+    public float maxClimbableSlope = 70; //in degrees
+
+    [Header("Player")]
+    public float jumpSpeed = 10;
+    public float velocity = 5;
 
     [Header("External")]
     public LayerMask excludePlayer;
-    public LayerMask ground;
-    public bool ceilingFlag;
-    private bool jump;
-    private bool canJump;
-    private bool isTouchingWall;
-   
+    public LayerMask ground;    
 
+    #region Transfrom/ Collider Declaration
     private Transform playerTransform;
     private Collider colliderBox;
     private Vector3 center;
@@ -39,25 +38,34 @@ public class PlayerController : MonoBehaviour {
     private Vector3 uLC; // upper left corner
     private Vector3 lBRC; // local bottom right corner
     private Vector3 lBLC; // local bottom left corner
-    public bool isGrounded;
-    public bool isBelow;
+    #endregion
 
-    private float currSideMovement;
-    public float maxClimbableSlope = 70; //in degrees
+    #region Booleans and Flags
+    private bool ceilingFlag;
+    private bool jump;
+    private bool canJump;
+    private bool isTouchingWall;
+    private bool isGrounded;
+    private bool isBelow;
+    public bool moveX;
+    #endregion
+    
+    // passed into the move method to manipulate the player's velocity
+    #region Movement Vectors
     private Vector3 verticalVector;
     private Vector3 strafeVector;
-    public float jumpSpeed = 10;
-    public float velocity = 5;
-    public bool moveX;
+    #endregion
+
+    private float currSideMovement;
+
 
     void Start()
     {
-        jump = false;
-        terminalSpeed = 4;
-        ceilingFlag = false;
-        playerTransform = this.gameObject.transform;
         colliderBox = this.gameObject.GetComponent<BoxCollider>();
+        playerTransform = this.gameObject.transform;
         verticalVector = Vector3.zero;
+        jump = false;
+        ceilingFlag = false;        
     }
 
     void Update()
@@ -96,18 +104,17 @@ public class PlayerController : MonoBehaviour {
             isTouchingWall = false;
         }
 
-        if (jump && canJump)
+        if (jump && canJump) // if player is jumping
         {
             verticalVector = new Vector3(0f, jumpSpeed * Time.deltaTime, 0f);
             canJump = false;            
             jump = false;
-            Debug.Log("D");
+            Debug.Log("Jumping");
         }
         else if ((ceilingPos != Vector3.zero) && (groundPos != Vector3.zero))
         {
-            /* This case would occur if the player was hitting the floor and the roof at the same exact time (most likely occuring if the player walks on a path that is
-             * too narrow for its height). This is not immediately important so it will be ignored, however it will need to be addressed soon as it could lead to gamebreaking
-             * bugs */
+            /* This case would occur if the player was hitting the floor and the roof at the same exact time. This case happens any time the player is in a narrow passageway,
+             * or if it is intersected by a norrow platform */
             verticalVector = Vector3.zero;
             canJump = false;            
             jump = false;
@@ -131,7 +138,7 @@ public class PlayerController : MonoBehaviour {
             jump = false;
             Debug.Log("colliding with ground");
         }
-        else
+        else // apply gravity
         {
             if ((verticalVector.y < terminalSpeed) && (canJump != true) || groundPos == Vector3.zero || ceilingPos == Vector3.zero)
             {
@@ -141,18 +148,42 @@ public class PlayerController : MonoBehaviour {
                 Debug.Log("Falling due to gravity");
             }
         }
-
-
+        
         Move(verticalVector, strafeVector);
         moveX = false;
     }
 
+    #region Collision Correction Methods
+    public void CollidingBottom(Vector3 pos)
+    {
+        playerTransform.position = new Vector3(playerTransform.position.x, pos.y + colliderBox.bounds.extents.y, 0f);
+    }
+
+    public void CollidingTop(Vector3 pos)
+    {
+        playerTransform.position = new Vector3(playerTransform.position.x, pos.y - colliderBox.bounds.extents.y - 0.01f, 0f);
+    }
+
+    public void CollidingSide(Vector3 pos) //transform position for side collisions
+    {
+        if (pos.x > playerTransform.position.x)
+        {
+            playerTransform.position = new Vector3(pos.x - colliderBox.bounds.extents.x - .1f, playerTransform.position.y, 0f);
+        }
+        if (pos.x < playerTransform.position.x)
+        {
+            playerTransform.position = new Vector3(pos.x + colliderBox.bounds.extents.x + .1f, playerTransform.position.y, 0f);
+        }
+    }
+    #endregion
+
+    #region Movement Methods
     public void Move(Vector3 vertical, Vector3 horizontal)
     {
         Vector3 sumVector = vertical + horizontal;
         playerTransform.position += sumVector;
     }
-
+    
     public void TempStrafe(bool leftRight)
     {
         ;
@@ -170,104 +201,30 @@ public class PlayerController : MonoBehaviour {
     public void Jump()
     {
         jump = true;
-    }
+    }    
 
-    public void CollidingBottom(Vector3 pos)
+    public void MoveRight(bool isMovingRight)   //Same methods from the Inputlistener script
     {
-        playerTransform.position = new Vector3(playerTransform.position.x, pos.y + colliderBox.bounds.extents.y, 0f);
-        //verticalFlag = true;
-        //if (!verticalFlag)
-        //{
-        //    playerTransform.position = new Vector3(playerTransform.position.x, pos.y + colliderBox.bounds.extents.y, 0f);
-        //    verticalFlag = true;
-        //}
+        currSideMovement = 0f;
+
+        if (isMovingRight)
+        {
+            currSideMovement = velocity; //currSideMovement will be added to the strafeVector in the Move() function to determine sideways movement
+        }
     }
 
-    public void CollidingTop(Vector3 pos)
+    public void MoveLeft(bool isMovingLeft)
     {
-        playerTransform.position = new Vector3(playerTransform.position.x, pos.y - colliderBox.bounds.extents.y - 0.01f, 0f);
-        //verticalFlag = true;
-        //if (!verticalFlag)
-        //{
-        //    playerTransform.position = new Vector3(playerTransform.position.x, pos.y - colliderBox.bounds.extents.y, 0f);
-        //    verticalFlag = true;
-        //}
-    }
+        currSideMovement = 0f;
 
-    public void CollidingSide(Vector3 pos) //transform position for side collisions
-    {
-        if (pos.x > playerTransform.position.x)
+        if (isMovingLeft && currSideMovement <= 0)  // You cant be moving left and right at the same time
         {
-            playerTransform.position = new Vector3(pos.x - colliderBox.bounds.extents.x - .1f, playerTransform.position.y, 0f);
-        }
-        if (pos.x < playerTransform.position.x)
-        {
-            playerTransform.position = new Vector3(pos.x + colliderBox.bounds.extents.x + .1f, playerTransform.position.y, 0f);
+            currSideMovement = -velocity;
         }
     }
+    #endregion
 
-    // Method that returns the Vector3 positioin of the floor platform below the player. If no floor is detected, then it returns Vector3.zero
-    public Vector3 IsGrounded()
-    {
-        Ray middleDown = new Ray(center, Vector3.down);
-        RaycastHit hitMiddleDown;
-
-        Ray rightDown = new Ray(uRC, Vector3.down); //Right side of 'ground checker'
-        RaycastHit hitRightDown;
-
-        Ray leftDown = new Ray(uLC, Vector3.down); //Left Side of 'ground checker'
-        RaycastHit hitLeftDown;
-
-        if (Physics.Raycast(middleDown, out hitMiddleDown, (center - bM).magnitude, ground)){
-            if (hitMiddleDown.normal.y > 0f) // if the detected "ground" surface was below the player:
-            {
-                Debug.DrawLine(center, bM, Color.red);
-                isGrounded = true;
-                return hitMiddleDown.point;
-            }
-            else // The roof was detected
-            {
-                isGrounded = false;
-                return Vector3.zero;
-            }
-        }
-        // if the ground is detected anywhere along the path from the upper right-hand corner of the box to the lower right-hand corner of the box:
-        else if (Physics.Raycast(rightDown, out hitRightDown, (uRC - bRC).magnitude, ground))
-        {
-            if (hitRightDown.normal.y > 0f) // if the detected "ground" surface was below the player:
-            {
-                Debug.DrawLine(uRC, bRC, Color.red);
-                isGrounded = true;
-                return hitRightDown.point;
-            }
-            else // The roof was detected
-            {
-                isGrounded = false;
-                return Vector3.zero;
-            }
-        }
-        // if the ground is detected anywhere along the path from the upper left-hand corner of the box to the lower left-hand corner of the box:
-        else if (Physics.Raycast(leftDown, out hitLeftDown, (uLC - bLC).magnitude, ground))
-        {
-            if (hitLeftDown.normal.y > 0f) // if the detected "ground" surface was below the player: 
-            {
-                Debug.DrawLine(uLC, bLC, Color.red);
-                isGrounded = true;
-                return hitLeftDown.point;
-            }
-            else // The roof was detected
-            {
-                isGrounded = false;
-                return Vector3.zero;
-            }            
-        }
-        else // Case in which the player probably isn't grounded
-        {
-            isGrounded = false;
-            return Vector3.zero;
-        }
-    }
-
+    #region Collision Detection
     // Method that returns the Vector3 positioin of the roof platform above the player. If no roof is detected, then it returns Vector3.zero
     public Vector3 IsBelow()
     {
@@ -331,24 +288,66 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
-
-    public void MoveRight(bool isMovingRight)   //Same methods from the Inputlistener script
+    // Method that returns the Vector3 positioin of the floor platform below the player. If no floor is detected, then it returns Vector3.zero
+    public Vector3 IsGrounded()
     {
-        currSideMovement = 0f;
+        Ray middleDown = new Ray(center, Vector3.down);
+        RaycastHit hitMiddleDown;
 
-        if (isMovingRight)
+        Ray rightDown = new Ray(uRC, Vector3.down); //Right side of 'ground checker'
+        RaycastHit hitRightDown;
+
+        Ray leftDown = new Ray(uLC, Vector3.down); //Left Side of 'ground checker'
+        RaycastHit hitLeftDown;
+
+        if (Physics.Raycast(middleDown, out hitMiddleDown, (center - bM).magnitude, ground))
         {
-            currSideMovement = velocity; //currSideMovement will be added to the strafeVector in the Move() function to determine sideways movement
+            if (hitMiddleDown.normal.y > 0f) // if the detected "ground" surface was below the player:
+            {
+                Debug.DrawLine(center, bM, Color.red);
+                isGrounded = true;
+                return hitMiddleDown.point;
+            }
+            else // The roof was detected
+            {
+                isGrounded = false;
+                return Vector3.zero;
+            }
         }
-    }
-
-    public void MoveLeft(bool isMovingLeft)
-    {
-        currSideMovement = 0f;
-
-        if (isMovingLeft && currSideMovement <= 0)  // You cant be moving left and right at the same time
+        // if the ground is detected anywhere along the path from the upper right-hand corner of the box to the lower right-hand corner of the box:
+        else if (Physics.Raycast(rightDown, out hitRightDown, (uRC - bRC).magnitude, ground))
         {
-            currSideMovement = -velocity;
+            if (hitRightDown.normal.y > 0f) // if the detected "ground" surface was below the player:
+            {
+                Debug.DrawLine(uRC, bRC, Color.red);
+                isGrounded = true;
+                return hitRightDown.point;
+            }
+            else // The roof was detected
+            {
+                isGrounded = false;
+                return Vector3.zero;
+            }
+        }
+        // if the ground is detected anywhere along the path from the upper left-hand corner of the box to the lower left-hand corner of the box:
+        else if (Physics.Raycast(leftDown, out hitLeftDown, (uLC - bLC).magnitude, ground))
+        {
+            if (hitLeftDown.normal.y > 0f) // if the detected "ground" surface was below the player: 
+            {
+                Debug.DrawLine(uLC, bLC, Color.red);
+                isGrounded = true;
+                return hitLeftDown.point;
+            }
+            else // The roof was detected
+            {
+                isGrounded = false;
+                return Vector3.zero;
+            }
+        }
+        else // Case in which the player probably isn't grounded
+        {
+            isGrounded = false;
+            return Vector3.zero;
         }
     }
 
@@ -436,4 +435,5 @@ public class PlayerController : MonoBehaviour {
             return Vector3.zero;
         }
     }
+    #endregion
 }
