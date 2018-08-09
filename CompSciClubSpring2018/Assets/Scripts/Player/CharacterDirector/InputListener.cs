@@ -54,8 +54,8 @@ public class InputListener : MonoBehaviour
         // Character Swap
         if (Input.GetKeyDown("g"))
         {
-            switcherScript.SetFacingRight(facingRight);
-            switcherScript.SetProjection();
+            //switcherScript.SetFacingRight(facingRight);
+            //switcherScript.SetProjection();
         }
     }
 }
