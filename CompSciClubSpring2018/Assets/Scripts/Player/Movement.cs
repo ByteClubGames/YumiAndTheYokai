@@ -11,7 +11,7 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour {
 
-    public CharacterController controller;
+    //public CharacterController controller;
     public Vector3 movementVector;
     public float gravity = 18f;
     //public float maxCoyoteTime = .1f;
@@ -22,53 +22,53 @@ public class Movement : MonoBehaviour {
 
     
 
-    public void MoveLeft(bool left)
-    {
-        if (left)
-        {
-            movementVector.x = movementSpeed;
-        }
-        else
-        {
-            movementVector.x = 0f;
-        }
-        controller.Move(-movementVector * Time.deltaTime);
-    }
+    //public void MoveLeft(bool left)
+    //{
+    //    if (left)
+    //    {
+    //        movementVector.x = movementSpeed;
+    //    }
+    //    else
+    //    {
+    //        movementVector.x = 0f;
+    //    }
+    //    controller.Move(-movementVector * Time.deltaTime);
+    //}
 
-    public void MoveRight(bool right)
-    {
-        if (right)
-        {
-            movementVector.x = movementSpeed;
-        }
-        else
-        {
-            movementVector.x = 0f;
-        }        
-        controller.Move(movementVector * Time.deltaTime);
-    }
+    //public void MoveRight(bool right)
+    //{
+    //    if (right)
+    //    {
+    //        movementVector.x = movementSpeed;
+    //    }
+    //    else
+    //    {
+    //        movementVector.x = 0f;
+    //    }        
+    //    controller.Move(movementVector * Time.deltaTime);
+    //}
 
-    public void Jump(bool jump)
-    {
-        if (controller.isGrounded)
-        {
-            Debug.Log("Player Grounded");
-            jumpVelocity = -controller.stepOffset / Time.deltaTime;
+    //public void Jump(bool jump)
+    //{
+    //    if (controller.isGrounded)
+    //    {
+    //        Debug.Log("Player Grounded");
+    //        jumpVelocity = -controller.stepOffset / Time.deltaTime;
 
-            if (jump)
-            {
-                jumpVelocity = jumpForce;
-            }
-        }
-        else
-        {
-            jumpVelocity -= gravity * Time.deltaTime;
-        }
+    //        if (jump)
+    //        {
+    //            jumpVelocity = jumpForce;
+    //        }
+    //    }
+    //    else
+    //    {
+    //        jumpVelocity -= gravity * Time.deltaTime;
+    //    }
 
-        //movementVector = Vector3.zero;
-        movementVector.y = jumpVelocity;
-        controller.Move(movementVector * Time.deltaTime);
-    }
+    //    //movementVector = Vector3.zero;
+    //    movementVector.y = jumpVelocity;
+    //    controller.Move(movementVector * Time.deltaTime);
+    //}
 
 
 }
