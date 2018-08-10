@@ -38,6 +38,14 @@ public class PlayerController : MonoBehaviour {
     private Vector3 uLC; // upper left corner
     private Vector3 lBRC; // local bottom right corner
     private Vector3 lBLC; // local bottom left corner
+    public int totalVerticalRays;   // Total rays that will check collisions to prevent being impaled. 
+    public int totalHorizontalRays;
+    private float verticalDistanceBetweenRays; // used to calculate the multiple arrays
+    private float horizontalDistanceBetweenRays;
+    private Vector3 verticalRaycCastHit;
+    private Vector3 horizontalRaycastHit;
+    public float bufferWidth = .05f; // This is the buffer the top and horizontal rays will be placed away from the top and bottom of the collider box
+                                    // Increasing the value will decrease unintended teleporting
     #endregion
 
     #region Booleans and Flags
@@ -65,7 +73,8 @@ public class PlayerController : MonoBehaviour {
         playerTransform = this.gameObject.transform;
         verticalVector = Vector3.zero;
         jump = false;
-        ceilingFlag = false;        
+        ceilingFlag = false;
+        recalculateDistanceBetweenRays();
     }
 
     void Update()
@@ -225,6 +234,22 @@ public class PlayerController : MonoBehaviour {
     #endregion
 
     #region Collision Detection
+
+    // Method is used to create multiple rays for collision to prevent being impaled.
+    public void recalculateDistanceBetweenRays()
+    {
+        // figure out the distance between our rays in both directions
+        // horizontal
+        var colliderUseableHeight = colliderBox.bounds.size.y - (2f * bufferWidth);
+        print("usable height" + colliderUseableHeight);
+        verticalDistanceBetweenRays = colliderUseableHeight / (totalHorizontalRays - 1);
+        print("verticalDistance" + verticalDistanceBetweenRays);
+        // vertical
+        var colliderUseableWidth = colliderBox.bounds.size.x - (2f * bufferWidth);
+        print(colliderUseableWidth);
+        horizontalDistanceBetweenRays = colliderUseableWidth / (totalVerticalRays - 1);
+    }
+
     // Method that returns the Vector3 positioin of the roof platform above the player. If no roof is detected, then it returns Vector3.zero
     public Vector3 IsBelow()
     {
@@ -351,89 +376,126 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
-    public Vector3 SideCollision() //Incomplete function
+    public Vector3 SideCollision() 
     {
-        Ray upRight = new Ray(uLC, Vector3.right); //from left to right
-        RaycastHit hitUpRight;
-
-        Ray downRight = new Ray(bLC + new Vector3(0f, .1f, 0f), Vector3.right); //from left to right
-        RaycastHit hitDownRight;
-
-        Ray upLeft = new Ray(uRC, Vector3.left); //from right to left
-        RaycastHit hitUpLeft;
-
-        Ray downLeft = new Ray(bRC + new Vector3(0f, .1f, 0f), Vector3.left); //from right to left
-        RaycastHit hitDownLeft;
-
-
-        //  Right side of  collision detections
-        if (Physics.Raycast(upRight, out hitUpRight, (uRC - uLC).magnitude + .1f, ground))
+        print("totalHOrizontalRays :" + totalHorizontalRays);
+        for (float i = 0; i < totalHorizontalRays; i++)
         {
-            //print(Mathf.Atan2(hitUpRight.normal.y, hitUpRight.normal.x) * Mathf.Rad2Deg +" uR");
-            
-            if (Mathf.Atan2(hitUpRight.normal.y, hitUpRight.normal.x) * Mathf.Rad2Deg > maxClimbableSlope + 90) //This if statement checks angle of the normal to make sure it is a climable slope
-            {
-                Debug.DrawLine(uLC, uRC, Color.blue);
-                Debug.Log("Player is Touching wall up right");
-                return hitUpRight.point;
-            }
-            else
-            {
-                return Vector3.zero;
-            }
-        }
-        else if (Physics.Raycast(downRight, out hitDownRight, (bRC - bLC).magnitude + .1f, ground))
-        {
-            print(Mathf.Atan2(hitDownRight.normal.y, hitDownRight.normal.x) * Mathf.Rad2Deg + " dR" );
+            print("i = " + i + " " + verticalDistanceBetweenRays *i);
+            Ray rayRight = new Ray(bLC + new Vector3(0f, bufferWidth + verticalDistanceBetweenRays * i, 0f), Vector3.right);
+            RaycastHit hitRayRight;
+            Ray rayLeft = new Ray(bRC + new Vector3(0f, bufferWidth + verticalDistanceBetweenRays * i, 0f), Vector3.left);
+            RaycastHit hitRayLeft;
 
-            if (Mathf.Atan2(hitDownRight.normal.y, hitDownRight.normal.x) * Mathf.Rad2Deg > maxClimbableSlope + 90)
+            Debug.DrawLine(bLC + new Vector3(0f, bufferWidth + verticalDistanceBetweenRays * i, 0f), bRC + new Vector3(0f, bufferWidth + verticalDistanceBetweenRays * i, 0f), Color.blue);
+
+            // Right side
+            if (Physics.Raycast(rayRight, out hitRayRight,(uRC - uLC).magnitude + .1f, ground))
             {
-                Debug.DrawLine(bLC, bRC, Color.blue);
-                Debug.Log("Player is Touching wall down right");
-                return hitDownRight.point;
+                //print(Mathf.Atan2(hitUpRight.normal.y, hitUpRight.normal.x) * Mathf.Rad2Deg +" uR");
+                print("hit right");
+
+                if (Mathf.Atan2(hitRayRight.normal.y, hitRayRight.normal.x) * Mathf.Rad2Deg > maxClimbableSlope + 90) //This if statement checks angle of the normal to make sure it is a climable slope
+                {
+                   // Debug.DrawLine(uLC, uRC, Color.blue);
+                    Debug.Log("Player is Touching wall up right with ray #" + i);
+                    return hitRayRight.point;
+                }
             }
-            else
+            // Left side
+           else if (Physics.Raycast(rayLeft, out hitRayLeft, (uRC - uLC).magnitude + .1f, ground))
             {
-                return Vector3.zero;
+                //print(Mathf.Atan2(hitUpRight.normal.y, hitUpRight.normal.x) * Mathf.Rad2Deg +" uR");
+
+                if (Mathf.Atan2(hitRayLeft.normal.x, hitRayLeft.normal.y) * Mathf.Rad2Deg > maxClimbableSlope) //This if statement checks angle of the normal to make sure it is a climable slope
+                {
+                    //Debug.DrawLine(uLC, uRC, Color.blue);
+                    Debug.Log("Player is Touching wall left with ray #" + i);
+                    return hitRayLeft.point;
+                }
             }
         }
 
-        //Left side of collision detections
-        if (Physics.Raycast(upLeft, out hitUpLeft, (uRC - uLC).magnitude + .1f, ground))
-        {
-            //print(Mathf.Atan2(hitDownRight.normal.x, hitDownRight.normal.y) * Mathf.Rad2Deg + " uL");
+        return Vector3.zero;
 
-            if (Mathf.Atan2(hitUpLeft.normal.x, hitUpLeft.normal.y) * Mathf.Rad2Deg > maxClimbableSlope)
-            {
-                Debug.DrawLine(uLC, uRC, Color.blue);
-                Debug.Log("Player is Touching wall up left");
-                return hitUpLeft.point;
-            }
-            else
-            {
-                return Vector3.zero;
-            }
-        }
-        else if (Physics.Raycast(downLeft, out hitDownLeft, (bRC - bLC).magnitude + .1f, ground))
-        {
-            //print(Mathf.Atan2(hitDownLeft.normal.x, hitDownLeft.normal.y) * Mathf.Rad2Deg + " dL");
+        //Ray upRight = new Ray(uLC - new Vector3(0f, .1f, 0f), Vector3.right); //from left to right
+        //RaycastHit hitUpRight;
 
-            if (Mathf.Atan2(hitDownLeft.normal.x, hitDownLeft.normal.y) * Mathf.Rad2Deg > maxClimbableSlope)
-            {
-                Debug.DrawLine(bLC, bRC, Color.blue);
-                Debug.Log("Player is Touching wall down left");
-                return hitDownLeft.point;
-            }
-            else
-            {
-                return Vector3.zero;
-            }
-        }
+        //Ray downRight = new Ray(bLC + new Vector3(0f, .1f, 0f), Vector3.right); //from left to right
+        //RaycastHit hitDownRight;
 
-        else
-        {
-            return Vector3.zero;
-        }
+        //Ray upLeft = new Ray(uRC - new Vector3(0f, .1f, 0f), Vector3.left); //from right to left
+        //RaycastHit hitUpLeft;
+
+        //Ray downLeft = new Ray(bRC + new Vector3(0f, .1f, 0f), Vector3.left); //from right to left
+        //RaycastHit hitDownLeft;
+
+
+        ////  Right side of  collision detections
+        //if (Physics.Raycast(upRight, out hitUpRight, (uRC - uLC).magnitude + .1f, ground))
+        //{
+        //    //print(Mathf.Atan2(hitUpRight.normal.y, hitUpRight.normal.x) * Mathf.Rad2Deg +" uR");
+
+        //    if (Mathf.Atan2(hitUpRight.normal.y, hitUpRight.normal.x) * Mathf.Rad2Deg > maxClimbableSlope + 90) //This if statement checks angle of the normal to make sure it is a climable slope
+        //    {
+        //        Debug.DrawLine(uLC, uRC, Color.blue);
+        //        Debug.Log("Player is Touching wall up right");
+        //        return hitUpRight.point;
+        //    }
+        //    else
+        //    {
+        //        return Vector3.zero;
+        //    }
+        //}
+        //else if (Physics.Raycast(downRight, out hitDownRight, (bRC - bLC).magnitude + .1f, ground))
+        //{
+        //    print(Mathf.Atan2(hitDownRight.normal.y, hitDownRight.normal.x) * Mathf.Rad2Deg + " dR" );
+
+        //    if (Mathf.Atan2(hitDownRight.normal.y, hitDownRight.normal.x) * Mathf.Rad2Deg > maxClimbableSlope + 90)
+        //    {
+        //        Debug.DrawLine(bLC, bRC, Color.blue);
+        //        Debug.Log("Player is Touching wall down right");
+        //        return hitDownRight.point;
+        //    }
+        //    else
+        //    {
+        //        return Vector3.zero;
+        //    }
+        //}
+
+        ////Left side of collision detections
+        //if (Physics.Raycast(upLeft, out hitUpLeft, (uRC - uLC).magnitude + .1f, ground))
+        //{
+        //    //print(Mathf.Atan2(hitDownRight.normal.x, hitDownRight.normal.y) * Mathf.Rad2Deg + " uL");
+
+        //    if (Mathf.Atan2(hitUpLeft.normal.x, hitUpLeft.normal.y) * Mathf.Rad2Deg > maxClimbableSlope)
+        //    {
+        //        Debug.DrawLine(uLC, uRC, Color.blue);
+        //        Debug.Log("Player is Touching wall up left");
+        //        return hitUpLeft.point;
+        //    }
+        //    else
+        //    {
+        //        return Vector3.zero;
+        //    }
+        //}
+        //else if (Physics.Raycast(downLeft, out hitDownLeft, (bRC - bLC).magnitude + .1f, ground))
+        //{
+        //    //print(Mathf.Atan2(hitDownLeft.normal.x, hitDownLeft.normal.y) * Mathf.Rad2Deg + " dL");
+
+        //    if (Mathf.Atan2(hitDownLeft.normal.x, hitDownLeft.normal.y) * Mathf.Rad2Deg > maxClimbableSlope)
+        //    {
+        //        Debug.DrawLine(bLC, bRC, Color.blue);
+        //        Debug.Log("Player is Touching wall down left");
+        //        return hitDownLeft.point;
+        //    }
+        //    else
+        //    {
+        //        return Vector3.zero;
+        //    }
+        //}
+
+        
     }
     #endregion
 }
