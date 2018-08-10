@@ -20,7 +20,7 @@ public class MovingPlatformToggle : MonoBehaviour {
     public string currentState; // Helps with informing users(Programmer) of the position the platform is transforming to
     public float smooth; // Sets the speed in which the platform will transform to its next position
     public float resetTime; // Sets the time interval in which the platform will move back to its origin
-    
+    public GameObject PlatformTrigger;
 	// Use this for initialization
 	void Start () {
         //OnCollisionStay2D(); // Will call upon the OnCollisionStay method // Note: Seems this method may not be needed as OnCollision Will be "called" when the player obj collides with the trigger
@@ -53,11 +53,14 @@ public class MovingPlatformToggle : MonoBehaviour {
     private void OnCollisionStay2D()
     {
         ChangeTarget(); // Calls upon the ChangeTarget() method
-        platform.position = Vector3.Lerp(platform.position, newPosition, smooth * Time.deltaTime); // This allows for the platform to move      
+        platform.position = Vector3.Lerp(platform.position, newPosition, smooth * Time.deltaTime);// This allows for the platform to move
     }
-    private void OnCollisionExit2D()
+    private void OnCollisionExit2D() // Currently does not work
     {
-        
+        if (PlatformTrigger.gameObject != Player.gameObject){
+            ChangeTarget();
+            platform.position = Vector3.Lerp(platform.position, newPosition, smooth * Time.deltaTime);
+        }  
     }
 }
 
