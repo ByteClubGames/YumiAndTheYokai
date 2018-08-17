@@ -2,7 +2,7 @@
  * 
  * Programmer: Brenden Plong
  * Date Created: 7/25/2018
- * Date Updated: 8/1/2018
+ * Date Updated: 8/17/2018
  * Description: Script will make it so that a platform can be activated when the player collides or interacts with it in some way
  * 
  */
@@ -31,36 +31,14 @@ public class MovingPlatformToggle : MonoBehaviour {
     void FixedUpdate () {
         // Empty until further changes 
 	}
-    void ChangeTarget() // Will monitor the currentState of the platform and update it accordingly 
+    void ChangeTargetUp() // Will monitor the currentState of the platform and update it accordingly 
     {
-        if(currentState == "Moving to position 1") // Checks if the currrentState is moving to position 1
-        {
-            currentState = "Moving to position 2"; // if true the currentPosition will change its position to position 2
-            newPosition = position2.position;
-        }
-        else if (currentState == "Moving to position 2") // Checks if the currentState is moving to position 2
-        {
-            currentState = "Moving to position 1"; // if true the currentPositon will change its position to position 1
-            newPosition = position1.position;
-        }
-        else if (currentState == "") // Checks if the currentPosition is currently at neither position
-        {
-            currentState = "Moving to position 2"; // if true the position will head to position 2 by default and wraps back into the other if else "loop"
-            newPosition = position2.position;
-        }
-        Invoke("ChangeTarget", resetTime); // When a position has been reached, this sets the time in which the platform will move again
+        newPosition = position2.position; // Updates the position of the platform to the 2nd position
     }
     private void OnCollisionStay2D()
-    {
-        ChangeTarget(); // Calls upon the ChangeTarget() method
+    {       
+        ChangeTargetUp(); // Calls upon the ChangeTarget() method
         platform.position = Vector3.Lerp(platform.position, newPosition, smooth * Time.deltaTime);// This allows for the platform to move
-    }
-    private void OnCollisionExit2D() // Currently does not work
-    {
-        if (PlatformTrigger.gameObject != Player.gameObject){
-            ChangeTarget();
-            platform.position = Vector3.Lerp(platform.position, newPosition, smooth * Time.deltaTime);
-        }  
     }
 }
 

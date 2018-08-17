@@ -2,7 +2,7 @@
  * 
  * Programmer: Brenden Plong
  * Date Created: 8/10/2018
- * Date Updated: 8/10/2018
+ * Date Updated: 8/17/2018
  * Description: Script will make it so that a platform will lower the platform when it is collided by the player
  * 
  */
@@ -24,10 +24,10 @@ public class PlatformTriggerDrop : MonoBehaviour {
     private void OnCollisionStay2D()
     {
         ChangeTarget();
-        platform.position = Vector3.Lerp(platform.position, newPosition, smooth * Time.deltaTime);
+        platform.position = Vector3.Lerp(platform.position, newPosition, smooth * Time.deltaTime); // Allows the platform to move
     }
     void ChangeTarget() // Gives the newPosition vector its target position
     {
-            newPosition = position1.position; // Will set the platform back to its first position
+         newPosition = position1.position; // Will set the platform back to its first position
     }
 }
