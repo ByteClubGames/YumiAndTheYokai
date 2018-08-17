@@ -55,8 +55,8 @@ public class WindSpellUse : MonoBehaviour
             {
                 windSpell = Instantiate(windSpellPrefab, targets.getTop(), Quaternion.identity); //spawn wind spell object @ player pos
                 windSpell.tag = "WindSpell";
-				//this.GetComponent<TimeManager> ().StopSlowDown ();
-				//Maybe make it so spawner gets destroyed after spell is cast
+				this.GetComponent<TimeManager> ().StopSlowDown (); // return time to normal
+                
 
             }
             //And Destroy all target objects
@@ -109,7 +109,8 @@ public class WindSpellUse : MonoBehaviour
     public void CleanUp()
     {
         Destroy(windSpell);
-        Start();
+        Destroy(gameObject);
+        //Start();
     }
 }
 

@@ -31,7 +31,7 @@ public class SpellButton : MonoBehaviour {
 
     void TaskOnClick()
     {
-        Debug.Log("You clicked the shit out of this button...");
+        // Debug.Log("You clicked the shit out of this button...");
 
         if (!spellOn) {
             spawnerInst = Instantiate(spawner);
