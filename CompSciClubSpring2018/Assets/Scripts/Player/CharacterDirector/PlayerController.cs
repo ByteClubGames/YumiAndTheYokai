@@ -15,18 +15,38 @@ public class PlayerController : MonoBehaviour {
     public float gravity = -25f;
     public float horizontalSpeed = 8f;
     public float jumpSpeed = 3f;
+    public float skinWidth;
+    public int horizontalRays = 8;
+    public int verticalRays = 4;
+    public LayerMask platformMask;
+    public float error = .01f;
     public bool isGrounded = false;
     public bool isOnSlope = false;
+    public bool isRight = false;
+    public bool isLeft = false;
 
     private bool right = false;
     private bool left = false;
     private bool jump = false;
 
+    private Vector3 TL; // Top Left corner of the box collider
+    private Vector3 TR; // Top Right corner of the box collider
+    private Vector3 BL; // Bottom Left corner of the box collider
+    private Vector3 BR; // Bottom Right corner of the box collider
+    private BoxCollider boxCollider;
+
 
     private float normalizedHorizontalSpeed = 0f;
+    private float verticalRaySeparation;
+    private float horizontalRaySeparation;
 
     private Vector3 velocity;
-    
+
+    private void Awake()
+    {
+        boxCollider = this.GetComponentInParent<BoxCollider>();
+    }
+
     void Start()
     {
 
@@ -121,7 +141,7 @@ public class PlayerController : MonoBehaviour {
         //collisionState.reset();
         isOnSlope = false;
 
-        //RaycastStartPoints();
+        RaycastStartPoints();
 
 
         //////// first, we check for a slope below us before moving
@@ -129,9 +149,12 @@ public class PlayerController : MonoBehaviour {
         //////if (deltaMovement.y < 0f) // && collisionState.wasGroundedLastFrame
         //////    handleVerticalSlope(ref deltaMovement);
 
-        //////// now we check movement in the horizontal dir
-        //////if (deltaMovement.x != 0f)
-        //////    moveHorizontally(ref deltaMovement);
+        // now we check movement in the horizontal dir
+        if (deltaMovement.x != 0f)
+        {
+            deltaMovement.x = HorizontalCollision(deltaMovement);
+        }
+            
 
         //////// next, check movement in the vertical dir
         //////if (deltaMovement.y != 0f)
@@ -154,5 +177,64 @@ public class PlayerController : MonoBehaviour {
         //////    velocity.y = 0;
 
         
+    }
+
+    public void RaycastStartPoints()
+    {
+        var skinBounds = boxCollider.bounds;
+        skinBounds.Expand(-2f * skinWidth);
+
+        TL = new Vector3(skinBounds.min.x, skinBounds.max.y, 0f);
+        TR = new Vector3(skinBounds.max.x, skinBounds.max.y, 0f);
+        BL = new Vector3(skinBounds.min.x, skinBounds.min.y, 0f);
+        BR = new Vector3(skinBounds.max.x, skinBounds.min.y, 0f);
+    }
+
+    private float HorizontalCollision(Vector3 deltaMovement)
+    {
+        isRight = deltaMovement.x > 0f;
+        //isLeft = deltaMovement.x < 0f;
+        float rayLength = Mathf.Abs(deltaMovement.x) + skinWidth;
+        Vector3 rayDirection = isRight ? Vector3.right : Vector3.left;
+        Vector3 firstRayStartPoint = isRight ? BR : BL;
+
+        float colliderUseableHeight = boxCollider.size.y * Mathf.Abs(transform.localScale.y) - (2f * skinWidth);
+        verticalRaySeparation = colliderUseableHeight / (horizontalRays - 1);
+
+        for (int i = 0; i < horizontalRays; i++)
+        {
+            Vector3 ray = new Vector3(firstRayStartPoint.x, firstRayStartPoint.y + i * verticalRaySeparation, 0f);
+            RaycastHit hit;
+
+            Debug.DrawRay(ray, rayDirection * rayLength, Color.magenta);
+
+            bool raycastHit = Physics.Raycast(ray, rayDirection, out hit, rayLength, platformMask);
+
+            if (raycastHit)
+            {
+                // something something Darrell plz make slopes work
+
+                deltaMovement.x = hit.point.x - ray.x;
+                rayLength = Mathf.Abs(deltaMovement.x);
+                //Debug.Log(deltaMovement.x);
+
+                if (isRight)
+                {
+                    deltaMovement.x -= skinWidth;
+                }
+                else
+                {
+                    deltaMovement.x += skinWidth;
+                }
+
+                if (rayLength < skinWidth + error)
+                {
+                    break;
+                }
+                Debug.Log("Hmmmmmmmmmmmmmmmmm");
+                //Debug.Log(hit.point.x + " " + hit.point.y);
+            }
+        }
+        return deltaMovement.x;
     }
 }
