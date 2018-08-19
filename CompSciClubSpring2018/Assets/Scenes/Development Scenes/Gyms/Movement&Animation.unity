@@ -1837,7 +1837,7 @@ Prefab:
     - target: {fileID: 114329015629843224, guid: 0dd2532d035311a47a04cbce2f03df7f,
         type: 2}
       propertyPath: gravity
-      value: 0.3
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 114329015629843224, guid: 0dd2532d035311a47a04cbce2f03df7f,
         type: 2}

@@ -23,11 +23,12 @@ public class PlayerController : MonoBehaviour {
     public bool isGrounded = false;
     public bool isOnSlope = false;
     public bool isRight = false;
-    public bool isLeft = false;
+    //public bool isLeft = false;
 
     private bool right = false;
     private bool left = false;
     private bool jump = false;
+
 
     private Vector3 TL; // Top Left corner of the box collider
     private Vector3 TR; // Top Right corner of the box collider
@@ -55,7 +56,12 @@ public class PlayerController : MonoBehaviour {
     void Update()
     {
         if (isGrounded)
+        {
             velocity.y = 0;
+        }
+            
+
+        
 
         if (right)
         {
@@ -82,6 +88,7 @@ public class PlayerController : MonoBehaviour {
         // we can only jump whilst grounded
         if (isGrounded && jump)
         {
+            jump = false;
             velocity.y = Mathf.Sqrt(2f * jumpSpeed * -gravity);
             
         }
@@ -92,7 +99,7 @@ public class PlayerController : MonoBehaviour {
         velocity.x = Mathf.Lerp(velocity.x, normalizedHorizontalSpeed * horizontalSpeed, Time.deltaTime * 20f);
 
         // apply gravity before moving
-        //velocity.y += gravity * Time.deltaTime;
+        velocity.y += gravity * Time.deltaTime;
 
         
         Move(velocity * Time.deltaTime);
@@ -127,8 +134,7 @@ public class PlayerController : MonoBehaviour {
 
     public void CallJump()
     {
-        jump = true;
-        jump = false;
+        jump = true;        
     }
     #endregion
 
@@ -154,11 +160,14 @@ public class PlayerController : MonoBehaviour {
         {
             deltaMovement.x = HorizontalCollision(deltaMovement);
         }
-            
 
-        //////// next, check movement in the vertical dir
-        //////if (deltaMovement.y != 0f)
-        //////    moveVertically(ref deltaMovement);
+
+        // next, check movement in the vertical dir
+        if (deltaMovement.y != 0f)
+        {
+            deltaMovement.y = VerticalCollision(deltaMovement);
+        }
+            
 
         // move then update our state
         deltaMovement.z = 0;
@@ -173,10 +182,10 @@ public class PlayerController : MonoBehaviour {
         //    collisionState.becameGroundedThisFrame = true;
 
         // if we are going up a slope we artificially set a y velocity so we need to zero it out here
-        //////if (_isGoingUpSlope)
-        //////    velocity.y = 0;
+        if (isOnSlope)
+            velocity.y = 0;
 
-        
+
     }
 
     public void RaycastStartPoints()
@@ -216,8 +225,7 @@ public class PlayerController : MonoBehaviour {
 
                 deltaMovement.x = hit.point.x - ray.x;
                 rayLength = Mathf.Abs(deltaMovement.x);
-                //Debug.Log(deltaMovement.x);
-
+                
                 if (isRight)
                 {
                     deltaMovement.x -= skinWidth;
@@ -231,10 +239,59 @@ public class PlayerController : MonoBehaviour {
                 {
                     break;
                 }
-                Debug.Log("Hmmmmmmmmmmmmmmmmm");
-                //Debug.Log(hit.point.x + " " + hit.point.y);
             }
         }
+
         return deltaMovement.x;
+    }
+
+    private float VerticalCollision(Vector3 deltaMovement)
+    {
+        bool isUp = deltaMovement.y > 0f;
+        float rayLength = Mathf.Abs(deltaMovement.y) + skinWidth;
+        Vector3 rayDirection = isUp ? Vector3.up : -Vector3.up;
+        Vector3 firstRayStartPoint = isRight ? TL : BL;
+        firstRayStartPoint.x += deltaMovement.x;
+
+        float colliderUseableWidth = boxCollider.size.x * Mathf.Abs(transform.localScale.x) - (2f *skinWidth);
+        horizontalRaySeparation = colliderUseableWidth / (verticalRays - 1);
+
+        for(int i = 0; i < verticalRays; i++)
+        {
+            Vector3 ray = new Vector3(firstRayStartPoint.x + i * horizontalRaySeparation,firstRayStartPoint.y, 0f);
+            RaycastHit hit;
+
+            Debug.DrawRay(ray, rayDirection * rayLength, Color.magenta);
+
+            bool raycastHit = Physics.Raycast(ray, rayDirection, out hit, rayLength, platformMask);
+
+            if (raycastHit)
+            {
+                deltaMovement.y = hit.point.y - ray.y;
+                rayLength = Mathf.Abs(deltaMovement.y);
+
+                if (isUp)
+                {
+                    deltaMovement.y -= skinWidth;
+                }
+                else
+                {
+                    deltaMovement.y += skinWidth;
+                    isGrounded = true;
+                }
+
+                if (!isUp && deltaMovement.y > 0.00001f)
+                {
+                    isOnSlope = true;
+                }                    
+
+                if (rayLength < skinWidth + error)
+                {
+                    break;
+                }
+            }
+        }
+
+        return deltaMovement.y;
     }
 }
