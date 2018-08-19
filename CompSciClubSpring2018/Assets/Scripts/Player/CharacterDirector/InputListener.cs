@@ -32,21 +32,24 @@ public class InputListener : MonoBehaviour
         // Movement Left
         if (Input.GetKey("a") || Input.GetKey("left"))
         {
-            human.moveX = true; // for temp only
-            human.TempStrafe(false);
-        }
-        
-        // Movement Right
-        if (Input.GetKey("d") || Input.GetKey("right"))
+            human.CallLeft(true);
+            human.CallRight(false);
+        }        
+        else if (Input.GetKey("d") || Input.GetKey("right"))
         {
-            human.moveX = true; // for temp only
-            human.TempStrafe(true);
+            human.CallLeft(false);
+            human.CallRight(true);
         }
-        
+        else
+        {
+            human.CallLeft(false);
+            human.CallRight(false);
+        }
+
         // Jumping
         if (Input.GetKeyDown("w") || Input.GetKeyDown("up") || Input.GetKeyDown("space"))
         {
-            human.Jump();
+            human.CallJump();
         }
 
 
