@@ -19,6 +19,7 @@ public class WindSpellUse : MonoBehaviour
 	private GameObject player;
 	public GameObject windSpellPrefab;
     public double minDeltaDis;
+    public int drawSeconds = 10;
 	//public GameObject timeManager;
     
 	private GameObject windSpell;
@@ -28,6 +29,7 @@ public class WindSpellUse : MonoBehaviour
 	private bool _isDragging = false;
     private bool _isDone;
 	private Vector3 currentPos;
+    private Stopwatch drawTimer = new Stopwatch();
 
 	// Use this for initialization
 	void Start()
@@ -38,7 +40,7 @@ public class WindSpellUse : MonoBehaviour
         player = GameObject.Find("Player");
         targets.addTarg(player.transform.position);
         windSpell = null;
-		this.GetComponent<TimeManager> ().StartSlowDown (); // Time is slowed when spawner is here
+		this.GetComponent<TimeManager>().StartSlowDown (); // Time is slowed when spawner is here
     }
 
 	// Update is called once per frame
@@ -47,14 +49,17 @@ public class WindSpellUse : MonoBehaviour
 
 		//Once array is full OR Draw mode is manually turned off
 		//Spawn WindSpell Object and load it with target array
-		if (_isDone && drawMode) // also add time draw check? currently no length limit
+		if ((_isDone && drawMode )|| drawTimer.ElapsedMilliseconds > drawSeconds * 1000)
 		{
+            drawTimer.Stop();
+            drawTimer.Reset();
             _isDone = false;
 			drawMode = false;
             if (windSpell == null)
             {
                 windSpell = Instantiate(windSpellPrefab, targets.getTop(), Quaternion.identity); //spawn wind spell object @ player pos
                 windSpell.tag = "WindSpell";
+                windSpell.SendMessage("SetSpawner", gameObject);
 				this.GetComponent<TimeManager> ().StopSlowDown (); // return time to normal
                 
 
@@ -65,6 +70,7 @@ public class WindSpellUse : MonoBehaviour
 		if (Input.GetMouseButtonDown(0))
 		{
 			_isDragging = true;
+            drawTimer.Start();
 		}
 		if (Input.GetMouseButtonUp(0))
 		{
@@ -74,7 +80,6 @@ public class WindSpellUse : MonoBehaviour
 		}
 		if (_isDragging && drawMode) 
 		{
-			
 			//Runs wind prefab is mouse button is pushed down
 			Vector3 p = Camera.main.ScreenToWorldPoint(new
 			Vector3(Input.mousePosition.x, Input.mousePosition.y, 10.0f)); 

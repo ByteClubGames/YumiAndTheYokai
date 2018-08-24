@@ -344,6 +344,11 @@ Prefab:
       propertyPath: m_Colors.m_PressedColor.b
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114267010580436614, guid: f67d0f391e35a476baffbdb707bd2f63,
+        type: 2}
+      propertyPath: Toggleable
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f67d0f391e35a476baffbdb707bd2f63, type: 2}
   m_IsPrefabAsset: 0
@@ -713,7 +718,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1230237065132740, guid: 6470fb6573d7f45a2a81c9287c4dd037, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6470fb6573d7f45a2a81c9287c4dd037, type: 2}
