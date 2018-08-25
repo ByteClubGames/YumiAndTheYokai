@@ -24,6 +24,8 @@ public class PlayerController : MonoBehaviour {
     public bool isOnSlope = false;
     public bool isRight = false;
     //public bool isLeft = false;
+    public float maxClimbableSlope = 50f; //in degrees
+    private bool climbableSlope;
 
     private bool right = false;
     private bool left = false;
@@ -215,6 +217,7 @@ public class PlayerController : MonoBehaviour {
 
         for (int i = 0; i < horizontalRays; i++)
         {
+            climbableSlope = false;
             Vector3 ray = new Vector3(firstRayStartPoint.x, firstRayStartPoint.y + i * verticalRaySeparation, 0f);
             RaycastHit hit;
 
@@ -222,9 +225,22 @@ public class PlayerController : MonoBehaviour {
 
             bool raycastHit = Physics.Raycast(ray, rayDirection, out hit, rayLength, platformMask);
 
-            if (raycastHit)
+            // can only hit slope with the bottom horizontal raycast && isRight && slope is <70
+            if (isRight && (Mathf.Atan2(hit.normal.y, hit.normal.x) * Mathf.Rad2Deg -90f < maxClimbableSlope)) 
             {
-                // something something Darrell plz make slopes work
+                //print("Slope on right: " + (Mathf.Atan2(hit.normal.y, hit.normal.x) * Mathf.Rad2Deg ));
+                climbableSlope = true;
+            }
+
+            if (!isRight && (Mathf.Atan2(hit.normal.x, hit.normal.y) * Mathf.Rad2Deg < maxClimbableSlope))
+            {
+                //print("Slope on left: " + Mathf.Atan2(hit.normal.x, hit.normal.y) * Mathf.Rad2Deg);
+                climbableSlope = true;
+            }
+
+            if (raycastHit && !climbableSlope)
+            {
+                // something something Darrell plz make slopes work ... ok
 
                 deltaMovement.x = hit.point.x - ray.x;
                 rayLength = Mathf.Abs(deltaMovement.x);
