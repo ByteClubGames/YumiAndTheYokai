@@ -12,428 +12,397 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
+    public float gravity = -25f;
+    public float horizontalSpeed = 8f;
+    public float jumpSpeed = 3f;
+    public float skinWidth;
+    public int horizontalRays = 8;
+    public int verticalRays = 4;
+    public LayerMask platformMask;
+    public float error = .01f;
+    public bool isGrounded = false;
+    public bool isOnSlope = false;
+    public bool isRight = false;
+    //public bool isLeft = false;
+    public float maxClimbableSlope = 50f; //in degrees
+    private bool climbableSlope;
 
-    [Header("Physics")]
-    public float gravity;
-    public float terminalSpeed;
-    public float maxClimbableSlope = 70; //in degrees
+    private bool right = false;
+    private bool left = false;
+    private bool jump = false;
+    private bool jumpedThisFrame = false;
 
-    [Header("Player")]
-    public float jumpSpeed = 10;
-    public float velocity = 5;
 
-    [Header("External")]
-    public LayerMask excludePlayer;
-    public LayerMask ground;    
+    private Vector3 TL; // Top Left corner of the box collider
+    private Vector3 TR; // Top Right corner of the box collider
+    private Vector3 BL; // Bottom Left corner of the box collider
+    private Vector3 BR; // Bottom Right corner of the box collider
+    private BoxCollider boxCollider;
 
-    #region Transfrom/ Collider Declaration
-    private Transform playerTransform;
-    private Collider colliderBox;
-    private Vector3 center;
-    private Vector3 bM; // bottom middle
-    private Vector3 uM; // upper middle
-    private Vector3 bRC; // bottom right corner
-    private Vector3 uRC; // upper right corner
-    private Vector3 bLC; // bottom left corner
-    private Vector3 uLC; // upper left corner
-    private Vector3 lBRC; // local bottom right corner
-    private Vector3 lBLC; // local bottom left corner
-    #endregion
 
-    #region Booleans and Flags
-    private bool ceilingFlag;
-    private bool jump;
-    private bool canJump;
-    private bool isTouchingWall;
-    private bool isGrounded;
-    private bool isBelow;
-    public bool moveX;
-    #endregion
-    
-    // passed into the move method to manipulate the player's velocity
-    #region Movement Vectors
-    private Vector3 verticalVector;
-    private Vector3 strafeVector;
-    #endregion
+    private float normalizedHorizontalSpeed = 0f;
+    private float verticalRaySeparation;
+    private float horizontalRaySeparation;
 
-    private float currSideMovement;
+    private Vector3 velocity;
 
+    private void Awake()
+    {
+        boxCollider = this.GetComponentInParent<BoxCollider>();
+    }
 
     void Start()
     {
-        colliderBox = this.gameObject.GetComponent<BoxCollider>();
-        playerTransform = this.gameObject.transform;
-        verticalVector = Vector3.zero;
-        jump = false;
-        ceilingFlag = false;        
+
     }
 
     void Update()
     {
-        // Used to identify each corner of the Box Collider around the player
-        #region BoxCollider Initialization
-        center = colliderBox.bounds.center;
-        bM = colliderBox.bounds.center + new Vector3(0f, -colliderBox.bounds.extents.y, 0f);
-        uM = colliderBox.bounds.center + new Vector3(0f, colliderBox.bounds.extents.y, 0f);
-        bRC = colliderBox.bounds.center + new Vector3(colliderBox.bounds.extents.x, -colliderBox.bounds.extents.y, 0f);
-        uRC = colliderBox.bounds.center + new Vector3(colliderBox.bounds.extents.x, colliderBox.bounds.extents.y, 0f);
-        bLC = colliderBox.bounds.center + new Vector3(-colliderBox.bounds.extents.x, -colliderBox.bounds.extents.y, 0f);
-        uLC = colliderBox.bounds.center + new Vector3(-colliderBox.bounds.extents.x, colliderBox.bounds.extents.y, 0f);
-        lBRC = colliderBox.bounds.center + new Vector3(colliderBox.bounds.extents.x, -colliderBox.bounds.extents.y, 0f) - playerTransform.position;
-        lBLC = colliderBox.bounds.center + new Vector3(-colliderBox.bounds.extents.x, -colliderBox.bounds.extents.y, 0f) - playerTransform.position;
-        #endregion
-
-
-        // Check if Player is colliding anywhere and return the position vector of that collision
-        Vector3 ceilingPos = IsBelow();
-        Vector3 groundPos = IsGrounded();
-        Vector3 sidePos = SideCollision();
-
-        if (!moveX)
+        if (isGrounded)
         {
-            strafeVector = Vector3.zero;
+            velocity.y = 0;
         }
-
-        if (sidePos != Vector3.zero)
-        {
-            CollidingSide(sidePos);
-            isTouchingWall = true;            
-        }
-        else
-        {
-            isTouchingWall = false;
-        }
-
-        if (jump && canJump) // if player is jumping
-        {
-            verticalVector = new Vector3(0f, jumpSpeed * Time.deltaTime, 0f);
-            canJump = false;            
-            jump = false;
-            Debug.Log("Jumping");
-        }
-        else if ((ceilingPos != Vector3.zero) && (groundPos != Vector3.zero))
-        {
-            /* This case would occur if the player was hitting the floor and the roof at the same exact time. This case happens any time the player is in a narrow passageway,
-             * or if it is intersected by a norrow platform */
-            verticalVector = Vector3.zero;
-            canJump = false;            
-            jump = false;
-            Debug.Log("Colliding with ground and ceiling");
-        }
-        else if (ceilingPos != Vector3.zero && !ceilingFlag) // if colliding with ground above the player
-        {
-            CollidingTop(ceilingPos);
-            verticalVector = Vector3.zero;
-            ceilingFlag = true;            
-            canJump = false;
-            jump = false;
-            Debug.Log("Colliding with ceiling");
-        }
-        else if (groundPos != Vector3.zero) // if colliding with ground below the player
-        {
-            CollidingBottom(groundPos);
-            verticalVector = Vector3.zero;
-            ceilingFlag = false;
-            canJump = true;            
-            jump = false;
-            Debug.Log("colliding with ground");
-        }
-        else // apply gravity
-        {
-            if ((verticalVector.y < terminalSpeed) && (canJump != true) || groundPos == Vector3.zero || ceilingPos == Vector3.zero)
-            {
-                verticalVector += new Vector3(0f, -gravity * Time.deltaTime, 0f);
-                ceilingFlag = false;
-                jump = false;
-                Debug.Log("Falling due to gravity");
-            }
-        }
-        
-        Move(verticalVector, strafeVector);
-        moveX = false;
-    }
-
-    #region Collision Correction Methods
-    public void CollidingBottom(Vector3 pos)
-    {
-        playerTransform.position = new Vector3(playerTransform.position.x, pos.y + colliderBox.bounds.extents.y, 0f);
-    }
-
-    public void CollidingTop(Vector3 pos)
-    {
-        playerTransform.position = new Vector3(playerTransform.position.x, pos.y - colliderBox.bounds.extents.y - 0.01f, 0f);
-    }
-
-    public void CollidingSide(Vector3 pos) //transform position for side collisions
-    {
-        if (pos.x > playerTransform.position.x)
-        {
-            playerTransform.position = new Vector3(pos.x - colliderBox.bounds.extents.x - .1f, playerTransform.position.y, 0f);
-        }
-        if (pos.x < playerTransform.position.x)
-        {
-            playerTransform.position = new Vector3(pos.x + colliderBox.bounds.extents.x + .1f, playerTransform.position.y, 0f);
-        }
-    }
-    #endregion
-
-    #region Movement Methods
-    public void Move(Vector3 vertical, Vector3 horizontal)
-    {
-        Vector3 sumVector = vertical + horizontal;
-        playerTransform.position += sumVector;
-    }
-    
-    public void TempStrafe(bool leftRight)
-    {
-        ;
-
-        if (leftRight)
-        {
-            strafeVector = new Vector3(velocity * Time.deltaTime, 0f, 0f);
-        }
-        else
-        {
-            strafeVector = new Vector3(-velocity * Time.deltaTime, 0f, 0f);
-        }        
-    }
-
-    public void Jump()
-    {
-        jump = true;
-    }    
-
-    public void MoveRight(bool isMovingRight)   //Same methods from the Inputlistener script
-    {
-        currSideMovement = 0f;
-
-        if (isMovingRight)
-        {
-            currSideMovement = velocity; //currSideMovement will be added to the strafeVector in the Move() function to determine sideways movement
-        }
-    }
-
-    public void MoveLeft(bool isMovingLeft)
-    {
-        currSideMovement = 0f;
-
-        if (isMovingLeft && currSideMovement <= 0)  // You cant be moving left and right at the same time
-        {
-            currSideMovement = -velocity;
-        }
-    }
-    #endregion
-
-    #region Collision Detection
-    // Method that returns the Vector3 positioin of the roof platform above the player. If no roof is detected, then it returns Vector3.zero
-    public Vector3 IsBelow()
-    {
-        Ray middleUp = new Ray(center, Vector3.up);
-        RaycastHit hitMiddleUp;
-
-        Ray rightUp = new Ray(bRC, Vector3.up); //Right side of 'ceiling checker'
-        RaycastHit hitRightUp;
-
-        Ray leftUp = new Ray(bLC, Vector3.up); //Left Side of 'ceiling checker'
-        RaycastHit hitLeftUp;
-
-        if (Physics.Raycast(middleUp, out hitMiddleUp, (center - uM).magnitude, ground))
-        {
-            if (hitMiddleUp.normal.y < 0f) // if the detected "roof" surface was above the player:
-            {
-                Debug.DrawLine(center, uM, Color.magenta);
-                isBelow = true;
-                return hitMiddleUp.point;
-            }
-            else // The floor was detected
-            {
-                isBelow = false;
-                return Vector3.zero;
-            }
-        }
-        // if the ground is detected anywhere along the path from the lower right-hand corner of the box to the upper right-hand corner of the box:
-        else if (Physics.Raycast(rightUp, out hitRightUp, (uRC - bRC).magnitude, ground))
-        {
-            if (hitRightUp.normal.y < 0f) // if the detected "roof" surface was above the player:
-            {
-                Debug.DrawLine(bRC, uRC, Color.magenta);
-                isBelow = true;
-                return hitRightUp.point;
-            }
-            else // The floor was detected
-            {
-                isBelow = false;
-                return Vector3.zero;
-            }
-        }
-        // if the roof is detected anywhere along the path from the lower left-hand corner of the box to the upper left-hand corner of the box:
-        else if (Physics.Raycast(leftUp, out hitLeftUp, (uLC - bLC).magnitude, ground))
-        {
-            if (hitLeftUp.normal.y < 0f) // if the detected "roof" surface was above the player: 
-            {
-                Debug.DrawLine(bLC, uLC, Color.magenta);
-                isBelow = true;
-                return hitLeftUp.point;
-            }
-            else // The floor was detected
-            {
-                isBelow = false;
-                return Vector3.zero;
-            }
-        }
-        else // Case in which the player probably isn't hitting the ceiling
-        {
-            isBelow = false;
-            return Vector3.zero;
-        }
-    }
-
-    // Method that returns the Vector3 positioin of the floor platform below the player. If no floor is detected, then it returns Vector3.zero
-    public Vector3 IsGrounded()
-    {
-        Ray middleDown = new Ray(center, Vector3.down);
-        RaycastHit hitMiddleDown;
-
-        Ray rightDown = new Ray(uRC, Vector3.down); //Right side of 'ground checker'
-        RaycastHit hitRightDown;
-
-        Ray leftDown = new Ray(uLC, Vector3.down); //Left Side of 'ground checker'
-        RaycastHit hitLeftDown;
-
-        if (Physics.Raycast(middleDown, out hitMiddleDown, (center - bM).magnitude, ground))
-        {
-            if (hitMiddleDown.normal.y > 0f) // if the detected "ground" surface was below the player:
-            {
-                Debug.DrawLine(center, bM, Color.red);
-                isGrounded = true;
-                return hitMiddleDown.point;
-            }
-            else // The roof was detected
-            {
-                isGrounded = false;
-                return Vector3.zero;
-            }
-        }
-        // if the ground is detected anywhere along the path from the upper right-hand corner of the box to the lower right-hand corner of the box:
-        else if (Physics.Raycast(rightDown, out hitRightDown, (uRC - bRC).magnitude, ground))
-        {
-            if (hitRightDown.normal.y > 0f) // if the detected "ground" surface was below the player:
-            {
-                Debug.DrawLine(uRC, bRC, Color.red);
-                isGrounded = true;
-                return hitRightDown.point;
-            }
-            else // The roof was detected
-            {
-                isGrounded = false;
-                return Vector3.zero;
-            }
-        }
-        // if the ground is detected anywhere along the path from the upper left-hand corner of the box to the lower left-hand corner of the box:
-        else if (Physics.Raycast(leftDown, out hitLeftDown, (uLC - bLC).magnitude, ground))
-        {
-            if (hitLeftDown.normal.y > 0f) // if the detected "ground" surface was below the player: 
-            {
-                Debug.DrawLine(uLC, bLC, Color.red);
-                isGrounded = true;
-                return hitLeftDown.point;
-            }
-            else // The roof was detected
-            {
-                isGrounded = false;
-                return Vector3.zero;
-            }
-        }
-        else // Case in which the player probably isn't grounded
-        {
-            isGrounded = false;
-            return Vector3.zero;
-        }
-    }
-
-    public Vector3 SideCollision() //Incomplete function
-    {
-        Ray upRight = new Ray(uLC, Vector3.right); //from left to right
-        RaycastHit hitUpRight;
-
-        Ray downRight = new Ray(bLC + new Vector3(0f, .1f, 0f), Vector3.right); //from left to right
-        RaycastHit hitDownRight;
-
-        Ray upLeft = new Ray(uRC, Vector3.left); //from right to left
-        RaycastHit hitUpLeft;
-
-        Ray downLeft = new Ray(bRC + new Vector3(0f, .1f, 0f), Vector3.left); //from right to left
-        RaycastHit hitDownLeft;
-
-
-        //  Right side of  collision detections
-        if (Physics.Raycast(upRight, out hitUpRight, (uRC - uLC).magnitude + .1f, ground))
-        {
-            //print(Mathf.Atan2(hitUpRight.normal.y, hitUpRight.normal.x) * Mathf.Rad2Deg +" uR");
             
-            if (Mathf.Atan2(hitUpRight.normal.y, hitUpRight.normal.x) * Mathf.Rad2Deg > maxClimbableSlope + 90) //This if statement checks angle of the normal to make sure it is a climable slope
-            {
-                Debug.DrawLine(uLC, uRC, Color.blue);
-                Debug.Log("Player is Touching wall up right");
-                return hitUpRight.point;
-            }
-            else
-            {
-                return Vector3.zero;
-            }
-        }
-        else if (Physics.Raycast(downRight, out hitDownRight, (bRC - bLC).magnitude + .1f, ground))
+
+        
+
+        if (right)
         {
-            print(Mathf.Atan2(hitDownRight.normal.y, hitDownRight.normal.x) * Mathf.Rad2Deg + " dR" );
+            normalizedHorizontalSpeed = 1;
+            //if (transform.localScale.x < 0f)
+            //    transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
 
-            if (Mathf.Atan2(hitDownRight.normal.y, hitDownRight.normal.x) * Mathf.Rad2Deg > maxClimbableSlope + 90)
-            {
-                Debug.DrawLine(bLC, bRC, Color.blue);
-                Debug.Log("Player is Touching wall down right");
-                return hitDownRight.point;
-            }
-            else
-            {
-                return Vector3.zero;
-            }
+            
         }
-
-        //Left side of collision detections
-        if (Physics.Raycast(upLeft, out hitUpLeft, (uRC - uLC).magnitude + .1f, ground))
+        else if (left)
         {
-            //print(Mathf.Atan2(hitDownRight.normal.x, hitDownRight.normal.y) * Mathf.Rad2Deg + " uL");
+            normalizedHorizontalSpeed = -1;
+            //if (transform.localScale.x > 0f)
+            //    transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
 
-            if (Mathf.Atan2(hitUpLeft.normal.x, hitUpLeft.normal.y) * Mathf.Rad2Deg > maxClimbableSlope)
-            {
-                Debug.DrawLine(uLC, uRC, Color.blue);
-                Debug.Log("Player is Touching wall up left");
-                return hitUpLeft.point;
-            }
-            else
-            {
-                return Vector3.zero;
-            }
+            
         }
-        else if (Physics.Raycast(downLeft, out hitDownLeft, (bRC - bLC).magnitude + .1f, ground))
-        {
-            //print(Mathf.Atan2(hitDownLeft.normal.x, hitDownLeft.normal.y) * Mathf.Rad2Deg + " dL");
-
-            if (Mathf.Atan2(hitDownLeft.normal.x, hitDownLeft.normal.y) * Mathf.Rad2Deg > maxClimbableSlope)
-            {
-                Debug.DrawLine(bLC, bRC, Color.blue);
-                Debug.Log("Player is Touching wall down left");
-                return hitDownLeft.point;
-            }
-            else
-            {
-                return Vector3.zero;
-            }
-        }
-
         else
         {
-            return Vector3.zero;
+            normalizedHorizontalSpeed = 0;            
+        }
+
+
+        // we can only jump whilst grounded
+        if (isGrounded && jump)
+        {
+            jump = false;
+            isGrounded = false;            
+            velocity.y = Mathf.Sqrt(2f * jumpSpeed * -gravity);            
+        }
+
+
+        // apply horizontal speed smoothing it. dont really do this with Lerp. Use SmoothDamp or something that provides more control
+        //var smoothedMovementFactor = isGrounded ? groundDamping : inAirDamping; // how fast do we change direction?
+        velocity.x = Mathf.Lerp(velocity.x, normalizedHorizontalSpeed * horizontalSpeed, Time.deltaTime * 20f);
+
+        // apply gravity before moving
+        velocity.y += gravity * Time.deltaTime;
+
+        
+        Move(velocity * Time.deltaTime);
+
+        jumpedThisFrame = false;
+    }
+
+    #region Movement Calls
+    public void CallRight(bool call)
+    {
+        if (call)
+        {
+            right = true;
+        }
+        else
+        {
+            right = false;
+        }
+    }
+
+    public void CallLeft(bool call)
+    {
+        if (call)
+        {
+            left = true;
+        }
+        else
+        {
+            left = false;
+        }
+    }
+
+    public void CallJump()
+    {
+        if (isGrounded)
+        {            
+            jump = true;            
         }
     }
     #endregion
+
+    public void Move(Vector3 deltaMovement)
+    {
+        //// save off our current grounded state which we will use for wasGroundedLastFrame and becameGroundedThisFrame
+        //collisionState.wasGroundedLastFrame = collisionState.below;
+
+        //// clear our state
+        //collisionState.reset();
+        isGrounded = false;
+        isOnSlope = false;
+
+        RaycastStartPoints();
+
+
+        //////// first, we check for a slope below us before moving
+        //////// only check slopes if we are going down and grounded
+        if (deltaMovement.y < 0f) // && collisionState.wasGroundedLastFrame
+            deltaMovement = VerticalSlopeDetection(ref deltaMovement);
+
+        // now we check movement in the horizontal dir
+        if (deltaMovement.x != 0f)
+        {
+            deltaMovement = HorizontalCollision(deltaMovement);
+        }
+
+
+        // next, check movement in the vertical dir
+        if (deltaMovement.y != 0f)
+        {
+            deltaMovement = VerticalCollision(deltaMovement);            
+        }
+            
+
+        // move then update our state
+        deltaMovement.z = 0;
+        transform.Translate(deltaMovement, Space.World);
+
+        // only calculate velocity if we have a non-zero deltaTime
+        if (Time.deltaTime > 0f)
+            velocity = deltaMovement / Time.deltaTime;
+
+        //// set our becameGrounded state based on the previous and current collision state
+        //if (!collisionState.wasGroundedLastFrame && collisionState.below)
+        //    collisionState.becameGroundedThisFrame = true;
+
+        // if we are going up a slope we artificially set a y velocity so we need to zero it out here
+        if (isOnSlope)
+            velocity.y = 0;
+
+
+    }
+
+    public void RaycastStartPoints()
+    {
+        var skinBounds = boxCollider.bounds;
+        skinBounds.Expand(-2f * skinWidth);
+
+        TL = new Vector3(skinBounds.min.x, skinBounds.max.y, 0f);
+        TR = new Vector3(skinBounds.max.x, skinBounds.max.y, 0f);
+        BL = new Vector3(skinBounds.min.x, skinBounds.min.y, 0f);
+        BR = new Vector3(skinBounds.max.x, skinBounds.min.y, 0f);
+    }
+
+    private Vector3 HorizontalCollision(Vector3 deltaMovement)
+    {
+        isRight = deltaMovement.x > 0f;
+        //isLeft = deltaMovement.x < 0f;
+        float rayLength = Mathf.Abs(deltaMovement.x) + skinWidth;
+        Vector3 rayDirection = isRight ? Vector3.right : Vector3.left;
+        Vector3 firstRayStartPoint = isRight ? BR : BL;
+
+        float colliderUseableHeight = boxCollider.size.y * Mathf.Abs(transform.localScale.y) - (2f * skinWidth);
+        verticalRaySeparation = colliderUseableHeight / (horizontalRays - 1);
+
+        for (int i = 0; i < horizontalRays; i++)
+        {
+            climbableSlope = false;
+            Vector3 ray = new Vector3(firstRayStartPoint.x, firstRayStartPoint.y + i * verticalRaySeparation, 0f);
+            RaycastHit hit;
+
+            Debug.DrawRay(ray, rayDirection * rayLength, Color.magenta);
+
+            bool raycastHit = Physics.Raycast(ray, rayDirection, out hit, rayLength, platformMask);
+
+            // can only hit slope with the bottom horizontal raycast && isRight && slope is <70
+            if (isRight && (Mathf.Atan2(hit.normal.y, hit.normal.x) * Mathf.Rad2Deg -90f < maxClimbableSlope)) 
+            {
+                //print("Slope on right: " + (Mathf.Atan2(hit.normal.y, hit.normal.x) * Mathf.Rad2Deg ));
+                climbableSlope = true;
+            }
+
+            if (!isRight && (Mathf.Atan2(hit.normal.x, hit.normal.y) * Mathf.Rad2Deg < maxClimbableSlope))
+            {
+                //print("Slope on left: " + Mathf.Atan2(hit.normal.x, hit.normal.y) * Mathf.Rad2Deg);
+                climbableSlope = true;
+            }
+
+            if (raycastHit && !climbableSlope)
+            {
+                // something something Darrell plz make slopes work ... ok
+
+                deltaMovement.x = hit.point.x - ray.x;
+                rayLength = Mathf.Abs(deltaMovement.x);
+                
+                if (isRight)
+                {
+                    deltaMovement.x -= skinWidth;
+                }
+                else
+                {
+                    deltaMovement.x += skinWidth;
+                }
+
+                if (rayLength < skinWidth + error)
+                {
+                    break;
+                }
+            }
+        }
+
+        return deltaMovement;
+    }
+
+    private Vector3 VerticalCollision(Vector3 deltaMovement)
+    {
+        bool isUp = deltaMovement.y > 0f;
+        isRight = deltaMovement.x > 0f;
+        float rayLength = Mathf.Abs(deltaMovement.y) + skinWidth;
+        Vector3 rayDirection = isUp ? Vector3.up : -Vector3.up;
+        Vector3 firstRayStartPoint = isUp ? TL : BL;
+        firstRayStartPoint.x += deltaMovement.x;
+        
+
+        float colliderUseableWidth = boxCollider.size.x * Mathf.Abs(transform.localScale.x) - (2f *skinWidth);
+        horizontalRaySeparation = colliderUseableWidth / (verticalRays - 1);
+
+        for(int i = 0; i < verticalRays; i++)
+        {
+            Vector3 ray = new Vector3(firstRayStartPoint.x + i * horizontalRaySeparation, firstRayStartPoint.y, 0f);
+            RaycastHit hit;
+
+            Debug.DrawRay(ray, rayDirection * rayLength, Color.magenta);
+
+            bool raycastHit = Physics.Raycast(ray, rayDirection, out hit, rayLength, platformMask);
+
+            if (raycastHit)
+            {
+                deltaMovement.y = hit.point.y - ray.y;
+                rayLength = Mathf.Abs(deltaMovement.y);
+
+                if (isUp)
+                {
+                    deltaMovement.y -= skinWidth;
+                }
+                else
+                {
+                    deltaMovement.y += skinWidth;
+                    isGrounded = true;
+                }
+
+                if (!isUp && deltaMovement.y > 0.00001f)
+                {
+                    isOnSlope = true;
+                }                    
+
+                if (rayLength < skinWidth + error)
+                {
+                    break;
+                }
+            }
+        }
+
+        return deltaMovement;
+    }
+
+    private Vector3 VerticalSlopeDetection(ref Vector3 deltaMovement)
+    {
+        // slope check from the center of our collider
+        float centerOfCollider = (BL.x + BR.x) * 0.5f;
+        Vector3 rayDirection = Vector3.down;
+
+        // the ray distance is based on our slopeLimit
+        float slopeLimitTangent = Mathf.Tan(maxClimbableSlope * Mathf.Deg2Rad);
+        float slopeCheckRayDistance = slopeLimitTangent * (BR.x - centerOfCollider);
+
+        var slopeRay = new Vector3(centerOfCollider, BL.y);
+        Debug.DrawRay(slopeRay, rayDirection * slopeCheckRayDistance, Color.yellow);
+        RaycastHit hit;
+        bool raycastHit = Physics.Raycast(slopeRay, rayDirection, out hit, slopeCheckRayDistance, platformMask);        
+        if (raycastHit)
+        {
+            // bail out if we have no slope
+            var angle = Vector3.Angle(hit.normal, Vector2.up);
+            if (angle == 0)
+                return Vector3.zero;
+
+            // we are moving down the slope if our normal and movement direction are in the same x direction
+            var isMovingDownSlope = Mathf.Sign(hit.normal.x) == Mathf.Sign(deltaMovement.x);
+            if (isMovingDownSlope)
+            {                
+                // we add the extra downward movement here to ensure we "stick" to the surface below
+                deltaMovement.y += hit.point.y - slopeRay.y - skinWidth;                
+                //collisionState.movingDownSlope = true;
+                //collisionState.slopeAngle = angle;
+            }
+        }
+        return deltaMovement;
+    }
+
+    //bool handleHorizontalSlope(ref Vector3 deltaMovement, float angle)
+    //{
+    //    // disregard 90 degree angles (walls)
+    //    if (Mathf.RoundToInt(angle) == 90)
+    //        return false;
+
+    //    // if we can walk on slopes and our angle is small enough we need to move up
+    //    if (angle < slopeLimit)
+    //    {
+    //        // we only need to adjust the deltaMovement if we are not jumping
+    //        // TODO: this uses a magic number which isn't ideal! The alternative is to have the user pass in if there is a jump this frame
+    //        if (jump  & isGrounded)
+    //        {
+    //            // apply the slopeModifier to slow our movement up the slope
+    //            var slopeModifier = slopeSpeedMultiplier.Evaluate(angle);
+    //            deltaMovement.x *= slopeModifier;
+
+    //            // we dont set collisions on the sides for this since a slope is not technically a side collision.
+    //            // smooth y movement when we climb. we make the y movement equivalent to the actual y location that corresponds
+    //            // to our new x location using our good friend Pythagoras
+    //            deltaMovement.y = Mathf.Abs(Mathf.Tan(angle * Mathf.Deg2Rad) * deltaMovement.x);
+    //            var isGoingRight = deltaMovement.x > 0;
+
+    //            // safety check. we fire a ray in the direction of movement just in case the diagonal we calculated above ends up
+    //            // going through a wall. if the ray hits, we back off the horizontal movement to stay in bounds.
+    //            var ray = isGoingRight ? _raycastOrigins.bottomRight : _raycastOrigins.bottomLeft;
+    //            RaycastHit2D raycastHit;
+    //            if (collisionState.wasGroundedLastFrame)
+    //                raycastHit = Physics2D.Raycast(ray, deltaMovement.normalized, deltaMovement.magnitude, platformMask);
+    //            else
+    //                raycastHit = Physics2D.Raycast(ray, deltaMovement.normalized, deltaMovement.magnitude, platformMask & ~oneWayPlatformMask);
+
+    //            if (raycastHit)
+    //            {
+    //                // we crossed an edge when using Pythagoras calculation, so we set the actual delta movement to the ray hit location
+    //                deltaMovement = (Vector3)raycastHit.point - ray;
+    //                if (isGoingRight)
+    //                    deltaMovement.x -= _skinWidth;
+    //                else
+    //                    deltaMovement.x += _skinWidth;
+    //            }
+
+    //            _isGoingUpSlope = true;
+    //            collisionState.below = true;
+    //        }
+    //    }
+    //    else // too steep. get out of here
+    //    {
+    //        deltaMovement.x = 0;
+    //    }
+
+    //    return true;
+    //}
 }
