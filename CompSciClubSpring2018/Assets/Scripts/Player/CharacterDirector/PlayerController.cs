@@ -89,6 +89,7 @@ public class PlayerController : MonoBehaviour {
         if (isGrounded && jump)
         {
             jump = false;
+            isGrounded = false;
             velocity.y = Mathf.Sqrt(2f * jumpSpeed * -gravity);
             
         }
@@ -145,6 +146,7 @@ public class PlayerController : MonoBehaviour {
 
         //// clear our state
         //collisionState.reset();
+        isGrounded = false;
         isOnSlope = false;
 
         RaycastStartPoints();
@@ -166,6 +168,7 @@ public class PlayerController : MonoBehaviour {
         if (deltaMovement.y != 0f)
         {
             deltaMovement.y = VerticalCollision(deltaMovement);
+            Debug.Log("RED ALERT");
         }
             
 
@@ -248,17 +251,19 @@ public class PlayerController : MonoBehaviour {
     private float VerticalCollision(Vector3 deltaMovement)
     {
         bool isUp = deltaMovement.y > 0f;
+        isRight = deltaMovement.x > 0f;
         float rayLength = Mathf.Abs(deltaMovement.y) + skinWidth;
         Vector3 rayDirection = isUp ? Vector3.up : -Vector3.up;
-        Vector3 firstRayStartPoint = isRight ? TL : BL;
+        Vector3 firstRayStartPoint = isUp ? TL : BL;
         firstRayStartPoint.x += deltaMovement.x;
+        
 
         float colliderUseableWidth = boxCollider.size.x * Mathf.Abs(transform.localScale.x) - (2f *skinWidth);
         horizontalRaySeparation = colliderUseableWidth / (verticalRays - 1);
 
         for(int i = 0; i < verticalRays; i++)
         {
-            Vector3 ray = new Vector3(firstRayStartPoint.x + i * horizontalRaySeparation,firstRayStartPoint.y, 0f);
+            Vector3 ray = new Vector3(firstRayStartPoint.x + i * horizontalRaySeparation, firstRayStartPoint.y, 0f);
             RaycastHit hit;
 
             Debug.DrawRay(ray, rayDirection * rayLength, Color.magenta);
