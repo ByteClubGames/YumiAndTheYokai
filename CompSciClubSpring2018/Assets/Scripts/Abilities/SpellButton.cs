@@ -18,6 +18,7 @@ public class SpellButton : MonoBehaviour {
 
     public Button butt;
     public GameObject spawner;
+    public bool Toggleable = true;
     private GameObject spawnerInst;
     private bool spellOn;
     private int objCount;
@@ -31,13 +32,26 @@ public class SpellButton : MonoBehaviour {
 
     void TaskOnClick()
     {
-        Debug.Log("You clicked the shit out of this button...");
+        // Debug.Log("You clicked the shit out of this button...");
 
         if (!spellOn) {
             spawnerInst = Instantiate(spawner);
             spellOn = true;
-        } else {
+        } else if (Toggleable) {
             Destroy(spawnerInst);
+            spellOn = false;
+        }
+    }
+
+    private void Update()
+    {
+        try
+        {
+            if (spawnerInst.active) {
+                spellOn = true;
+            }
+        } catch
+        {
             spellOn = false;
         }
     }

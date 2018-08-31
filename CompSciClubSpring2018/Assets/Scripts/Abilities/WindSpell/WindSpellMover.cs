@@ -21,28 +21,42 @@ public class WindSpellMover : MonoBehaviour {
 	private int current;
 	private int wsTargetsSize;
 	private string wsSpawnerName = "WindSpellSpawner(Clone)"; //had to make this dynamic for instantiated prefab names
+    private GameObject spawnerObj;
 
 	// Use this for initialization
 	void Start () {
-		wsTargets = GameObject.Find(wsSpawnerName).GetComponent<WindSpellUse>().GetTargets();
+        SetSpawner(GameObject.Find(wsSpawnerName));
+		wsTargets = spawnerObj.GetComponent<WindSpellUse>().GetTargets();
         wsTargetsSize = wsTargets.Length;
+        NoiseReduction(wsTargets);
         current = 0;
 	}
 
     private void OnTriggerEnter(Collider collision)
     {
         if (!collision.gameObject.CompareTag("WindSpellTrigger") && collision.gameObject.name != "Player") {
-            GameObject.Find(wsSpawnerName).GetComponent<WindSpellUse>().CleanUp();
+            spawnerObj.GetComponent<WindSpellUse>().CleanUp();
 
         }
+    }
+
+    private void SetSpawner(GameObject spawner)
+    {
+        spawnerObj = spawner;
     }
 
     // Update is called once per frame
     void Update () {
         if (transform.position == wsTargets[wsTargetsSize - 1])
         { // die at end of path (transform.position == wsTargets[wsTargets.Length - 1])
-            GameObject.Find(wsSpawnerName).GetComponent<WindSpellUse>().CleanUp();
-            //Destroy(this);
+            try
+            {
+                spawnerObj.GetComponent<WindSpellUse>().CleanUp();
+            }
+            catch
+            {
+                Destroy(gameObject);
+            }
 
         }
 
@@ -69,6 +83,29 @@ public class WindSpellMover : MonoBehaviour {
         else
             return false;
     }
-    
 
+    private void NoiseReduction(Vector3[] src, int severity = 1)
+    {
+        for (int i = 1; i < src.Length; i++)
+        {
+            //---------------------------------------------------------------avg
+            var start = (i - severity > 0 ? i - severity : 0);
+            var end = (i + severity < src.Length ? i + severity : src.Length);
+
+            float sumx = 0, sumy = 0;
+
+            for (int j = start; j < end; j++)
+            {
+                sumx += src[j].x;
+                sumy += src[j].y;
+            }
+
+            var avgx = sumx / (end - start);
+            var avgy = sumy / (end - start);
+            src[i].x = avgx;
+            src[i].y = avgy;
+
+        }
+    }
 }
+
