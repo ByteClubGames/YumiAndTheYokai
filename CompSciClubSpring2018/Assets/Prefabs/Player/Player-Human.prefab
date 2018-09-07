@@ -199,19 +199,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gravity: -20
-  horizontalSpeed: 8
   jumpSpeed: 2.5
+  horizontalSpeed: 8
+  maxClimbableSlope: 50
   skinWidth: 0.3
   horizontalRays: 10
   verticalRays: 4
+  error: 0.001
   platformMask:
     serializedVersion: 2
     m_Bits: 262144
-  error: 0.001
-  isGrounded: 0
-  isOnSlope: 0
-  isRight: 0
-  maxClimbableSlope: 50
 --- !u!114 &114342815355907538
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -13,6 +13,10 @@ using UnityEngine;
 public class InputListener : MonoBehaviour
 {
     private PlayerController human;
+    private PlayerController yokai;
+    private PlayerController activePlayer;
+
+    private bool yumiActive;
 
 
 
@@ -20,36 +24,34 @@ public class InputListener : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        //human = GameObject.Find("Player-Human");
-        //yokai = GameObject.Find("");
-
-        human = GameObject.Find("Player-Human").GetComponent<PlayerController>();
+        human = GameObject.Find("Player-Human").GetComponent<PlayerController>();        
     }
 
     void Update()
     {
+        activePlayer = yumiActive ? human : yokai;
 
         // Movement Left
         if (Input.GetKey("a") || Input.GetKey("left"))
         {
-            human.CallLeft(true);
-            human.CallRight(false);
+            activePlayer.CallLeft(true);
+            activePlayer.CallRight(false);
         }        
         else if (Input.GetKey("d") || Input.GetKey("right"))
         {
-            human.CallLeft(false);
-            human.CallRight(true);
+            activePlayer.CallLeft(false);
+            activePlayer.CallRight(true);
         }
         else
         {
-            human.CallLeft(false);
-            human.CallRight(false);
+            activePlayer.CallLeft(false);
+            activePlayer.CallRight(false);
         }
 
         // Jumping
         if (Input.GetKeyDown("w") || Input.GetKeyDown("up") || Input.GetKeyDown("space"))
         {
-            human.CallJump();
+            activePlayer.CallJump();
         }
 
 
@@ -59,6 +61,12 @@ public class InputListener : MonoBehaviour
         {
             //switcherScript.SetFacingRight(facingRight);
             //switcherScript.SetProjection();
+            yokai = GameObject.Find("Player-Ferrox").GetComponent<PlayerController>();
         }
+    }
+
+    public void SetYumiActive(bool active)
+    {
+        yumiActive = active ? true : false;        
     }
 }
