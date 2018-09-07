@@ -12,33 +12,52 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
-    public float gravity = -25f;
-    public float horizontalSpeed = 8f;
+    [Header("Physics/ Player Attributes")]
+    public float gravity = -25f; // Negative input value
     public float jumpSpeed = 3f;
-    public float skinWidth;
-    public int horizontalRays = 8;
-    public int verticalRays = 4;
-    public LayerMask platformMask;
-    public float error = .01f;
-    public bool isGrounded = false;
-    public bool isOnSlope = false;
-    public bool isRight = false;
-    //public bool isLeft = false;
+    public float horizontalSpeed = 8f; // Movement speed along horizontal axis
     public float maxClimbableSlope = 50f; //in degrees
-    private bool climbableSlope;
+    public float skinWidth; // Acts as an inset start point on the collider for the Ray orgin points
 
+    [Header("Collision Detection")]
+    [Range( 2, 12)]
+    public int horizontalRays = 8;
+    [Range(2, 10)]
+    public int verticalRays = 4;
+    public float error = .01f;
+    public LayerMask platformMask;
+
+    #region Hit Detection Flags    
+    private bool climbableSlope;
+    private bool isGrounded = false;
+    private bool isOnSlope = false;
+    private bool isRight = false;
+    #endregion
+
+    #region Movement Call Flags
     private bool right = false;
     private bool left = false;
     private bool jump = false;
-    private bool jumpedThisFrame = false;
+    #endregion
 
-
+    #region Box Collider Bounds
+    private BoxCollider boxCollider;
     private Vector3 TL; // Top Left corner of the box collider
     private Vector3 TR; // Top Right corner of the box collider
     private Vector3 BL; // Bottom Left corner of the box collider
     private Vector3 BR; // Bottom Right corner of the box collider
-    private BoxCollider boxCollider;
 
+    private void RaycastStartPoints()
+    {
+        var skinBounds = boxCollider.bounds;
+        skinBounds.Expand(-2f * skinWidth);
+
+        TL = new Vector3(skinBounds.min.x, skinBounds.max.y, 0f);
+        TR = new Vector3(skinBounds.max.x, skinBounds.max.y, 0f);
+        BL = new Vector3(skinBounds.min.x, skinBounds.min.y, 0f);
+        BR = new Vector3(skinBounds.max.x, skinBounds.min.y, 0f);
+    }
+    #endregion
 
     private float normalizedHorizontalSpeed = 0f;
     private float verticalRaySeparation;
@@ -51,44 +70,30 @@ public class PlayerController : MonoBehaviour {
         boxCollider = this.GetComponentInParent<BoxCollider>();
     }
 
-    void Start()
-    {
-
-    }
-
     void Update()
     {
+        /* If the player is grounded, set vertical velocity to zero. This stops the player from accelerating downward */
         if (isGrounded)
         {
             velocity.y = 0;
         }
-            
 
         
-
+        /* The following selection decides the directioin of horizontal movement (right, left, none) */
         if (right)
         {
             normalizedHorizontalSpeed = 1;
-            //if (transform.localScale.x < 0f)
-            //    transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
-
-            
         }
         else if (left)
         {
-            normalizedHorizontalSpeed = -1;
-            //if (transform.localScale.x > 0f)
-            //    transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
-
-            
+            normalizedHorizontalSpeed = -1;            
         }
         else
         {
             normalizedHorizontalSpeed = 0;            
         }
-
-
-        // we can only jump whilst grounded
+        
+        /* This selection will make the player jump given it is touching the ground platform and spacebar is pressed*/
         if (isGrounded && jump)
         {
             jump = false;
@@ -97,17 +102,18 @@ public class PlayerController : MonoBehaviour {
         }
 
 
-        // apply horizontal speed smoothing it. dont really do this with Lerp. Use SmoothDamp or something that provides more control
-        //var smoothedMovementFactor = isGrounded ? groundDamping : inAirDamping; // how fast do we change direction?
+        //Horizontal velocity
         velocity.x = Mathf.Lerp(velocity.x, normalizedHorizontalSpeed * horizontalSpeed, Time.deltaTime * 20f);
 
-        // apply gravity before moving
+        // Gravity (Vertical component of Velocity if not jumping)
         velocity.y += gravity * Time.deltaTime;
 
-        
-        Move(velocity * Time.deltaTime);
 
-        jumpedThisFrame = false;
+        /*The velocities (speed and directions that we would like to move in) are multiplied by Time to turn them into a position that
+         * we would like to move towards. The Move function then passes then modifies these positions based on if the player is colldiding
+         * with the world. After the movement positions are modified to prevent passing through walls and floors, the player is moved using 
+         * transform.translate. */
+        Move(velocity * Time.deltaTime);        
     }
 
     #region Movement Calls
@@ -146,37 +152,39 @@ public class PlayerController : MonoBehaviour {
 
     public void Move(Vector3 deltaMovement)
     {
-        //// save off our current grounded state which we will use for wasGroundedLastFrame and becameGroundedThisFrame
-        //collisionState.wasGroundedLastFrame = collisionState.below;
-
-        //// clear our state
-        //collisionState.reset();
+        /* Reset of collsion flags for detecting the ground */
         isGrounded = false;
         isOnSlope = false;
 
+        /* Recalculates the corners of our collider box so that the detection rays can be casted accurately */
         RaycastStartPoints();
 
 
-        //////// first, we check for a slope below us before moving
-        //////// only check slopes if we are going down and grounded
-        if (deltaMovement.y < 0f) // && collisionState.wasGroundedLastFrame
-            deltaMovement = VerticalSlopeDetection(ref deltaMovement);
+        
+        if (deltaMovement.y < 0f)
+        {
+            deltaMovement = VerticalSlopeDetection(ref deltaMovement); 
+        }
+            
 
-        // now we check movement in the horizontal dir
+        /* Check for collisions to the left and right, and modify the position we want to move towards if we aren't supposed to 
+         * go there. */
         if (deltaMovement.x != 0f)
         {
             deltaMovement = HorizontalCollision(deltaMovement);
         }
 
 
-        // next, check movement in the vertical dir
+        /* Check for collisions with the ceilings and floors, and modify the position we want to move towards if we aren't supposed to 
+         * go there. */
         if (deltaMovement.y != 0f)
         {
             deltaMovement = VerticalCollision(deltaMovement);            
         }
             
 
-        // move then update our state
+        /* Given our 2.5D game, we should always be zero in the z-axis. Once all of the movement positions have been modified based on 
+         * the players collisions, use transform.Translate to move the player towards those positions */
         deltaMovement.z = 0;
         transform.Translate(deltaMovement, Space.World);
 
@@ -184,32 +192,20 @@ public class PlayerController : MonoBehaviour {
         if (Time.deltaTime > 0f)
             velocity = deltaMovement / Time.deltaTime;
 
-        //// set our becameGrounded state based on the previous and current collision state
-        //if (!collisionState.wasGroundedLastFrame && collisionState.below)
-        //    collisionState.becameGroundedThisFrame = true;
-
-        // if we are going up a slope we artificially set a y velocity so we need to zero it out here
+        
+        // to be used more in slope detection when its fixed
         if (isOnSlope)
             velocity.y = 0;
-
-
     }
 
-    public void RaycastStartPoints()
-    {
-        var skinBounds = boxCollider.bounds;
-        skinBounds.Expand(-2f * skinWidth);
-
-        TL = new Vector3(skinBounds.min.x, skinBounds.max.y, 0f);
-        TR = new Vector3(skinBounds.max.x, skinBounds.max.y, 0f);
-        BL = new Vector3(skinBounds.min.x, skinBounds.min.y, 0f);
-        BR = new Vector3(skinBounds.max.x, skinBounds.min.y, 0f);
-    }
-
+    
+    /*Rays are casted from the bottom of the box collider to the top using a for-loop. The direction they are casted in is decided based on
+     * the current movement direction. If a collision is detected, it will subtract from the target position as to prevent the player from 
+     * moving past the location in which the ray struck the wall. This new modified target position is returned to the original movement 
+     * function. */
     private Vector3 HorizontalCollision(Vector3 deltaMovement)
     {
         isRight = deltaMovement.x > 0f;
-        //isLeft = deltaMovement.x < 0f;
         float rayLength = Mathf.Abs(deltaMovement.x) + skinWidth;
         Vector3 rayDirection = isRight ? Vector3.right : Vector3.left;
         Vector3 firstRayStartPoint = isRight ? BR : BL;
@@ -266,6 +262,10 @@ public class PlayerController : MonoBehaviour {
         return deltaMovement;
     }
 
+    /*Rays are casted from the left of the box collider to the right using a for-loop. The direction they are casted in is decided based on
+     * the current movement direction. If a collision is detected, it will subtract from the target position as to prevent the player from 
+     * moving past the location in which the ray struck the floor/ ceiling. This new modified target position is returned to the original 
+     * movement function. */
     private Vector3 VerticalCollision(Vector3 deltaMovement)
     {
         bool isUp = deltaMovement.y > 0f;
