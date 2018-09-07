@@ -15,6 +15,8 @@ public class InputListener : MonoBehaviour
     private PlayerController human;
     private PlayerController yokai;
     private PlayerController activePlayer;
+    private YokaiSwitcher switcher;
+    private Transform cameraTarget;
 
     private bool yumiActive;
 
@@ -24,23 +26,29 @@ public class InputListener : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        human = GameObject.Find("Player-Human").GetComponent<PlayerController>();        
+        human = GameObject.Find("Player-Human").GetComponent<PlayerController>();
+        switcher = GameObject.Find("Player-Human").GetComponentInChildren<YokaiSwitcher>();        
+
+        yumiActive = true;
+        activePlayer = human;
     }
 
     void Update()
     {
         activePlayer = yumiActive ? human : yokai;
-
-        // Movement Left
+        Debug.Log(activePlayer);
+                
         if (Input.GetKey("a") || Input.GetKey("left"))
         {
             activePlayer.CallLeft(true);
             activePlayer.CallRight(false);
+            switcher.SetSpawnOffset(false);
         }        
         else if (Input.GetKey("d") || Input.GetKey("right"))
         {
             activePlayer.CallLeft(false);
             activePlayer.CallRight(true);
+            switcher.SetSpawnOffset(true);
         }
         else
         {
@@ -61,7 +69,10 @@ public class InputListener : MonoBehaviour
         {
             //switcherScript.SetFacingRight(facingRight);
             //switcherScript.SetProjection();
-            yokai = GameObject.Find("Player-Ferrox").GetComponent<PlayerController>();
+            switcher.ProjectYokai();
+            yokai = GameObject.Find("Player-Ferrox(Clone)").GetComponent<PlayerController>();
+            activePlayer.ClearCalls();
+            SetYumiActive(false);
         }
     }
 

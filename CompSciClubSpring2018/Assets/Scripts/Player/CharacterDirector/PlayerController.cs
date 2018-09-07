@@ -67,11 +67,11 @@ public class PlayerController : MonoBehaviour {
 
     private void Awake()
     {
-        boxCollider = this.GetComponentInParent<BoxCollider>();
+        boxCollider = this.GetComponent<BoxCollider>();
     }
 
     void Update()
-    {
+    {        
         /* If the player is grounded, set vertical velocity to zero. This stops the player from accelerating downward */
         if (isGrounded)
         {
@@ -147,6 +147,11 @@ public class PlayerController : MonoBehaviour {
         {            
             jump = true;            
         }
+    }
+
+    public void ClearCalls()
+    {
+        right = left = false;
     }
     #endregion
 

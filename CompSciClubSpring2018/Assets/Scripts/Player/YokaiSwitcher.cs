@@ -15,57 +15,47 @@ using UnityEngine;
 
 public class YokaiSwitcher : MonoBehaviour
 {
-    public GameObject humanGameObj; // Public game object that holds the human game object. 
-    public GameObject ferroxGameObj; // Public game object that holds a reference to the ferrox prefab.
-    private bool facingRight; // Declaring a private boolean variable that determines whether the player is facing left or right.
-    private bool isProjecting; // Declaring a private boolean variable that represents whether or not the player is projecting.
+    private float spawnOffset;
+
+    private GameObject human; // Public game object that holds the human game object. 
+    public GameObject yokai; // Public game object that holds a reference to the ferrox prefab.
+    //private bool facingRight; // Declaring a private boolean variable that determines whether the player is facing left or right.
+    //private bool isProjecting; // Declaring a private boolean variable that represents whether or not the player is projecting.
 
 
     private void Start()
     {
-        isProjecting = false; // Initializing isProjecting with a boolean value of false.
+        human = GameObject.Find("Player-Human");        
     }
 
-    public void SetProjection()
+    public void SetSpawnOffset(bool spawnRight)
     {
-        SetIsProjecting(); // Calls on SetIsProjecting().
-        SetProjectionState(); // Calls on SetProjectionState().
+        float spawnOffset = spawnRight ? 1.0f : -1.0f;
     }
 
-    public void SetIsProjecting() // Sets isProjecting to the opposite boolean value it currently is at.
+    public void ProjectYokai()
     {
-        isProjecting = !isProjecting;
+        Vector3 spawnLocation;        
+
+        spawnLocation = new Vector3(human.transform.position.x + spawnOffset, human.transform.position.y, human.transform.position.z); // Instantiates the 
+        Instantiate(yokai, spawnLocation, Quaternion.identity);
     }
 
-    public void SetFacingRight(bool input) // Sets facingRight to the value stored in bool.
-    {
-        facingRight = input;
-    }
+    //public void SetProjection()
+    //{
+    //    SetIsProjecting(); // Calls on SetIsProjecting().
+    //    SetProjectionState(); // Calls on SetProjectionState().
+    //}
 
-    private void SetProjectionState()
-    {
-        if (isProjecting) // If isProjecting is true, project the player.
-        {
-            Vector3 spawnerLoc; // Vector3 variable that holds the spawn location.
-            if (facingRight)
-            {
-                spawnerLoc = new Vector3(humanGameObj.transform.position.x + 1f, humanGameObj.transform.position.y, humanGameObj.transform.position.z); // Instantiates the 
-                Instantiate(ferroxGameObj, spawnerLoc, Quaternion.identity);
+    //public void SetIsProjecting() // Sets isProjecting to the opposite boolean value it currently is at.
+    //{
+    //    isProjecting = !isProjecting;
+    //}
 
-            }
-            if (!facingRight)
-            {
-                spawnerLoc = new Vector3(humanGameObj.transform.position.x - 1f, humanGameObj.transform.position.y, humanGameObj.transform.position.z);
-                Instantiate(ferroxGameObj, spawnerLoc, Quaternion.identity);
-            }
-        }
-        else
-        {
-            // DELETE YOKAI AND RETURN CONTROL TO THE HUMAN
-            isProjecting = false; // Sets isProjecting to false.
-        }
-
-    }
+    //public void SetFacingRight(bool input) // Sets facingRight to the value stored in bool.
+    //{
+    //    facingRight = input;
+    //}    
 
 }
 

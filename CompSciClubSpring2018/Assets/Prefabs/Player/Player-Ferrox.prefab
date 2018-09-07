@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4508825363145442}
   - component: {fileID: 212057161137437112}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: FerroxTempArt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 54192220407009952}
   - component: {fileID: 65226470205905482}
   - component: {fileID: 114572348153034226}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Player-Ferrox
   m_TagString: Ferrox
   m_Icon: {fileID: 0}
@@ -65,7 +65,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1766990494964196}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.81, y: 2.73, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4508825363145442}
@@ -114,7 +114,7 @@ MonoBehaviour:
   jumpSpeed: 2.5
   horizontalSpeed: 8
   maxClimbableSlope: 50
-  skinWidth: 0
+  skinWidth: 0.3
   horizontalRays: 8
   verticalRays: 4
   error: 0.01
