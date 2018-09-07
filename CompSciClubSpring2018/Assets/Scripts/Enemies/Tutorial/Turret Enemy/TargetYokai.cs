@@ -15,18 +15,18 @@ using UnityEngine;
 
 public class TargetYokai : MonoBehaviour {
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay(Collider collision)
     {
-        if (collision.tag == "Ferrox")
+        if (collision.tag == "Ferrox" || collision.tag == "Human")
         {
             GameObject.Find("ProjectileSpawn").GetComponent<TurretEnemy>().SetInRange(true);
             Debug.Log("In range of enemy turret");
         }
     } // Activated when the astral is inside of the turret's range
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerExit(Collider collision)
     {
-        if (collision.tag == "Ferrox")
+        if (collision.tag == "Ferrox" || collision.tag == "Human")
         {
             GameObject.Find("ProjectileSpawn").GetComponent<TurretEnemy>().SetInRange(false);
             Debug.Log("Out of range of enemy turret");

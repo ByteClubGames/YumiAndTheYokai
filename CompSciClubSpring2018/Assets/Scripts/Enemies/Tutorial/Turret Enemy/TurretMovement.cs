@@ -1,10 +1,10 @@
 ﻿/*
- * Author: Keiran Glynn
+ * Author: Keiran Glynn & Karim Dabboussi
  * Date Created: 4/21/2018 @ 12:15 pm
- * Date Modified: 4/21/2018 @ 12:30 pm
+ * Date Modified: 8/16/2018 @ 12:00 pm
  * Project: CompSciClubSpring2018
  * File: TurretMovement.cs
- * Description:  This script makes the enemy strafe within a specified movement range. The enemy will walk horizontal to the surface you want it to 
+ * Description:  This script makes the enemy strafe within a specified movement positions. The enemy will walk horizontal to the surface you want it to 
  * strafe on, provided that it is placed perpendicular to that surface (otherwise it will not work). Its speed can be changed from within unity if 
  * it needs to strafe faster.
  */
@@ -14,94 +14,30 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TurretMovement : MonoBehaviour {
-    private Vector2 currTurretPos;
-    private Vector2 startTurretPos;
-    private float turretRot;
-    private Transform turretRB;
-    private float minRange = 0f;
-    private float maxRange = 0f;
-    private int direction = -1;
 
-    public float patrolRange = 5f;
-    public float speed = 2f;
+    public Vector3 tempPosition;
+    public float horizontalSpeed = 0.1f;
+    public float progress = 0f;
+    public Vector3 pos1 = new Vector3(-4f, 0f, 0f);
+    public Vector3 pos2 = new Vector3(4f, 0f, 0f);
 
-
-	// Use this for initialization
-	void Start ()
+    void Start()
     {
-		turretRB = GameObject.Find("TurretEnemy").GetComponent<Transform>();
-        startTurretPos = GameObject.Find("TurretEnemy").GetComponent<Transform>().position;
+        //default position
+        tempPosition = transform.position;
     }
-	
-	// Update is called once per frame
-	void Update ()
+    // Update is called once per frame
+    void FixedUpdate()
     {
-        OnPatrol(patrolRange);
-	}
-
-    private void OnPatrol(float range)
+        progress = Mathf.PingPong(Time.time * horizontalSpeed, 1f);
+        tempPosition.x = Mathf.Lerp(pos1.x, pos2.x, progress * 1);
+        transform.position = Movement(tempPosition.x);
+    }
+    public Vector3 Movement(float x)
     {
-        Debug.Log("TurretEnemy should be moving");
-        currTurretPos = GameObject.Find("TurretEnemy").GetComponent<Transform>().position;
-        turretRot = GameObject.Find("TurretEnemy").GetComponent<Transform>().eulerAngles.z;
-        range = patrolRange;
-        minRange = -1 * range;
-        maxRange = range;
-        if ((turretRot == 0) || (turretRot == 180))
-        {
-            switch (direction)
-            {
-                case -1:
-                    if (currTurretPos.x > (startTurretPos.x + minRange))
-                    {
-                        turretRB.transform.Translate(-transform.right * Time.deltaTime * speed);
-                    }
-                    else
-                    {
-                        direction = 1;
-                    }
-                    break;
-                case 1:
-                    if (currTurretPos.x < (startTurretPos.x + maxRange))
-                    {
-                        turretRB.transform.Translate(transform.right * Time.deltaTime * speed);
-                    }
-                    else
-                    {
-                        direction = -1;
-                    }
-                    break;
-            }
-        }
-        else if ((turretRot == 90) || (turretRot == 270))
-        {
-            switch (direction)
-            {
-                case -1:
-                    if (currTurretPos.y > (startTurretPos.y + minRange))
-                    {
-                        turretRB.transform.Translate(transform.up * Time.deltaTime * speed);
-                    }
-                    else
-                    {
-                        direction = 1;
-                    }
-                    break;
-                case 1:
-                    if (currTurretPos.y < (startTurretPos.y + maxRange))
-                    {
-                        turretRB.transform.Translate(-transform.up * Time.deltaTime * speed);
-                    }
-                    else
-                    {
-                        direction = -1;
-                    }
-                    break;
-            }
-        }
-        else
-        {
-            Debug.Log("Fix the rotation of TurretEnemy to be perpendicular to surface");
-        }
+        return new Vector3(x, transform.position.y, 0f);
     }
 }
+ 
+
+

@@ -19,21 +19,23 @@ public class TurretProjectile : MonoBehaviour {
 
     public float maxDistance;
     private float distance;
-    private Rigidbody2D turretProjectileRB;
-    private Rigidbody2D yokaiRB;
+    private Rigidbody turretProjectileRB;
+    private Rigidbody yokaiRB;
+    private Rigidbody humanRB;
     private bool isHit = false; // will indicate if the projectile had a collision
     private bool isTooFar = false; // will indicate if the projectile is far from the astral (if it missed its target)
-    private Vector2 projectilePos;
-    private Vector2 yokaiPos;
-    private Vector2 target;
+    private Vector3 projectilePos;
+    private Vector3 yokaiPos;
+    private Vector3 target;
     
 	// Use this for initialization
 	void Start ()
     {
-        turretProjectileRB = this.GetComponent<Rigidbody2D>();
-        yokaiRB = GameObject.Find("Ferrox").GetComponent<Rigidbody2D>();
+        turretProjectileRB = this.GetComponent<Rigidbody>();
+        yokaiRB = GameObject.Find("Ferrox").GetComponent<Rigidbody>();
+        humanRB = GameObject.Find("Human").GetComponent<Rigidbody>();
 
-        turretProjectileRB.gravityScale = 0; 
+        //turretProjectileRB.gravityScale = 0; 
 	}
 
     // Update is called once per frame
@@ -48,12 +50,13 @@ public class TurretProjectile : MonoBehaviour {
         CheckTooFar();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision) // This is supposed to be triggered when the projectile intercepts the astral
+    private void OnTriggerEnter(Collider collision) // This is supposed to be triggered when the projectile intercepts the astral
     {
         Debug.Log("this works"); // if this trigger function is called at all, this will show up in the console
-        if (collision.gameObject.name == "Ferrox")
+        if (collision.gameObject.name == "Ferrox" || collision.gameObject.name == "Human")
         {
             GameObject.Find("Ferrox").GetComponent<FerroxHealth>().TakeDamage(projectileDamage);
+            GameObject.Find("Human").GetComponent<HumanHealth>().TakeDamage(projectileDamage);
             isHit = true; // regardless of weather or not it hit the astral, it will be as having hit someting
         }
         else if(collision.gameObject.tag == "EnemyDetection")
@@ -70,7 +73,7 @@ public class TurretProjectile : MonoBehaviour {
         {
             target = (yokaiRB.position - turretProjectileRB.position);
             target = target.normalized;
-            turretProjectileRB.AddForce(target * speed, ForceMode2D.Impulse); // Adds an instantaneous force towards yokai
+            turretProjectileRB.AddForce(target * speed, ForceMode.Impulse); // Adds an instantaneous force towards yokai
         }
     }
 
@@ -87,7 +90,7 @@ public class TurretProjectile : MonoBehaviour {
         projectilePos = turretProjectileRB.position;
         yokaiPos = yokaiRB.position;
 
-        distance = Vector2.Distance(projectilePos, yokaiPos);
+        distance = Vector3.Distance(projectilePos, yokaiPos);
 
         if(distance > maxDistance)
         {

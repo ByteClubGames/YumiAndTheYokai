@@ -14,10 +14,10 @@ using UnityEngine;
 
 public class TurretEnemy : MonoBehaviour {
 
-    //private Rigidbody2D turretEnemyRB;
+    public Rigidbody turretEnemyRB;
     public GameObject projectile;
     private bool inRange = false;
-    private Vector2 projectileSpawn;
+    private Vector3 projectileSpawn;
     private Quaternion rotation;
     public float fireRate = 1F;
     private float nextShot = 0.0F;
@@ -27,7 +27,7 @@ public class TurretEnemy : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
-        //turretEnemyRB = GetComponent<Rigidbody2D>();
+        turretEnemyRB = GetComponent<Rigidbody>();
         
 
     }
