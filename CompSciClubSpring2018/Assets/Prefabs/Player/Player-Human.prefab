@@ -27,21 +27,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1326237685080398
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4620603246095394}
-  m_Layer: 9
-  m_Name: YokaiSpawner-Left
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1381446288312214
 GameObject:
   m_ObjectHideFlags: 0
@@ -76,21 +61,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1881177344213184
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4983669860425728}
-  m_Layer: 9
-  m_Name: YokaiSpawner-Right
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!4 &4470050141939640
 Transform:
   m_ObjectHideFlags: 1
@@ -103,19 +73,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4677459353645124}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4620603246095394
-Transform:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1326237685080398}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.5, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4677459353645124}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4676485865230420
 Transform:
@@ -142,23 +99,8 @@ Transform:
   m_Children:
   - {fileID: 4470050141939640}
   - {fileID: 4676485865230420}
-  - {fileID: 4620603246095394}
-  - {fileID: 4983669860425728}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4983669860425728
-Transform:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1881177344213184}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.5, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4677459353645124}
-  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &54420025581821784
 Rigidbody:
@@ -220,8 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 777df4fc5d9c4de4f81f2c9ce885d2e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  humanGameObj: {fileID: 0}
-  ferroxGameObj: {fileID: 0}
+  yokai: {fileID: 1766990494964196, guid: 179e93a3a8996b4468f2b1cd28befde7, type: 2}
 --- !u!212 &212910232381696716
 SpriteRenderer:
   m_ObjectHideFlags: 1

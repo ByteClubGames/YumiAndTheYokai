@@ -1,9 +1,9 @@
 ﻿/*
  * Programmer: Keiran Glynn, Spencer Wilson
  * Date Created: 07/23/2018 @ 12:30 AM
- * Last Modified: 07/31/2018 @ 3:17 PM
+ * Last Modified: 09/07/2018 @ 7:41 PM
  * File Name: InputListener.cs
- * Description: 
+ * Description: This class is responsible listening to the keyboard, and calling the corresponding actions (movement, spells, etc). 
  */
 
 using System.Collections;
@@ -14,41 +14,38 @@ public class InputListener : MonoBehaviour
 {
     private PlayerController human;
     private PlayerController yokai;
-    private PlayerController activePlayer;
-    private YokaiSwitcher switcher;
-    private Transform cameraTarget;
+    private PlayerController activePlayer; // Specifies which game object the movement is being called on (Yumi or Yokai)
+    private YokaiSwitcher switcher; // Script responsible for spawning and deleting the Yokai
 
-    private bool yumiActive;
+    private bool yumiActive; // Flag for if the human is currently active
 
-
-
-
-    // Use this for initialization
+        
     void Start()
     {
-        human = GameObject.Find("Player-Human").GetComponent<PlayerController>();
-        switcher = GameObject.Find("Player-Human").GetComponentInChildren<YokaiSwitcher>();        
+        human = GameObject.Find("Player-Human").GetComponent<PlayerController>();        
+        switcher = GameObject.Find("Player-Human").GetComponentInChildren<YokaiSwitcher>();
 
-        yumiActive = true;
+        switcher.SetSpawnOffset(true); // If Yokai is spawned, do so on the right side of human by default
         activePlayer = human;
+        yumiActive = true;        
     }
 
     void Update()
     {
-        activePlayer = yumiActive ? human : yokai;
-        Debug.Log(activePlayer);
+        activePlayer = yumiActive ? human : yokai; // Choose which character to call movement methods on
+        Debug.Log(activePlayer + " is now active");
                 
         if (Input.GetKey("a") || Input.GetKey("left"))
         {
             activePlayer.CallLeft(true);
             activePlayer.CallRight(false);
-            switcher.SetSpawnOffset(false);
+            switcher.SetSpawnOffset(false); // If Yokai is spawned, do so on the left side of human
         }        
         else if (Input.GetKey("d") || Input.GetKey("right"))
         {
             activePlayer.CallLeft(false);
             activePlayer.CallRight(true);
-            switcher.SetSpawnOffset(true);
+            switcher.SetSpawnOffset(true); // If Yokai is spawned, do so on the right side of human
         }
         else
         {
@@ -66,13 +63,19 @@ public class InputListener : MonoBehaviour
 
         // Character Swap
         if (Input.GetKeyDown("g"))
-        {
-            //switcherScript.SetFacingRight(facingRight);
-            //switcherScript.SetProjection();
-            switcher.ProjectYokai();
-            yokai = GameObject.Find("Player-Ferrox(Clone)").GetComponent<PlayerController>();
-            activePlayer.ClearCalls();
-            SetYumiActive(false);
+        {            
+            if (GameObject.Find("Player-Ferrox(Clone)") == null)
+            {
+                switcher.SpawnYokai();
+                yokai = GameObject.Find("Player-Ferrox(Clone)").GetComponent<PlayerController>();
+                activePlayer.ClearCalls();
+                SetYumiActive(false);                
+            }
+            else
+            {
+                switcher.DeleteYokai(GameObject.Find("Player-Ferrox(Clone)"));
+                SetYumiActive(true);
+            }
         }
     }
 
