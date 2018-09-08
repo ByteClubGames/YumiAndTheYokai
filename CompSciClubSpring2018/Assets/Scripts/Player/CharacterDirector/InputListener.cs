@@ -62,7 +62,7 @@ public class InputListener : MonoBehaviour
 
 
         // Character Swap
-        if (Input.GetKeyDown("g"))
+        if (Input.GetKeyDown("1") || Input.GetKeyDown("y"))
         {            
             if (GameObject.Find("Player-Ferrox(Clone)") == null)
             {
