@@ -10,6 +10,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class YokaiSwitcher : MonoBehaviour
 {
@@ -17,12 +18,14 @@ public class YokaiSwitcher : MonoBehaviour
 
     private GameObject human; // Reference to the Yumi
     public GameObject yokai; // Reference to the Yokai prefab
+    private CinemachineVirtualCamera yokaiCam;
     private bool isProjecting; // To be used later for health scripts and such
 
 
     private void Start()
     {
         human = GameObject.Find("Player-Human");
+        yokaiCam = GameObject.Find("CM vcam2").GetComponent<CinemachineVirtualCamera>();
 
         spawnOffset = 1.0f; // Used to spawn the yokai to the right of the player, rather than behind it.
     }
@@ -38,6 +41,7 @@ public class YokaiSwitcher : MonoBehaviour
 
         spawnLocation = new Vector3(human.transform.position.x + spawnOffset, human.transform.position.y, human.transform.position.z); // Instantiates the 
         Instantiate(yokai, spawnLocation, Quaternion.identity);
+        yokaiCam.Follow = GameObject.Find("Player-Ferrox(Clone)").transform;
     }
 
     public void DeleteYokai(GameObject yokai)

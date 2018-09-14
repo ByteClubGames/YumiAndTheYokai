@@ -9,6 +9,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class InputListener : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class InputListener : MonoBehaviour
     private PlayerController yokai;
     private PlayerController activePlayer; // Specifies which game object the movement is being called on (Yumi or Yokai)
     private YokaiSwitcher switcher; // Script responsible for spawning and deleting the Yokai
+    private CinemachineBrain cameraBrain;
 
     private bool yumiActive; // Flag for if the human is currently active
 
@@ -24,6 +26,7 @@ public class InputListener : MonoBehaviour
     {
         human = GameObject.Find("Player-Human").GetComponent<PlayerController>();        
         switcher = GameObject.Find("Player-Human").GetComponentInChildren<YokaiSwitcher>();
+        cameraBrain = GameObject.Find("Main Camera").GetComponent<CinemachineBrain>();
 
         switcher.SetSpawnOffset(true); // If Yokai is spawned, do so on the right side of human by default
         activePlayer = human;
@@ -69,7 +72,8 @@ public class InputListener : MonoBehaviour
                 switcher.SpawnYokai();
                 yokai = GameObject.Find("Player-Ferrox(Clone)").GetComponent<PlayerController>();
                 activePlayer.ClearCalls();
-                SetYumiActive(false);                
+                SetYumiActive(false);
+                //cameraBrain.
             }
             else
             {
