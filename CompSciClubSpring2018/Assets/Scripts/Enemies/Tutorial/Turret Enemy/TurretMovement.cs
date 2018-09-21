@@ -1,6 +1,6 @@
 ﻿/*
- * Author: Keiran Glynn & Karim Dabboussi
- * Date Created: 4/21/2018 @ 12:15 pm
+ * Author: Karim Dabboussi
+ * Date Created: 8/16/2018 @ 12:00 pm
  * Date Modified: 8/16/2018 @ 12:00 pm
  * Project: CompSciClubSpring2018
  * File: TurretMovement.cs
@@ -15,16 +15,25 @@ using UnityEngine;
 
 public class TurretMovement : MonoBehaviour {
 
-    public Vector3 tempPosition;
+    public GameObject point1;
+    public GameObject point2;
+    private Vector3 tempPosition;
     public float horizontalSpeed = 0.1f;
     public float progress = 0f;
-    public Vector3 pos1 = new Vector3(-4f, 0f, 0f);
-    public Vector3 pos2 = new Vector3(4f, 0f, 0f);
+    private Vector3 pos1;
+    private Vector3 pos2;
+  
 
     void Start()
     {
-        //default position
         tempPosition = transform.position;
+        //default position
+        float x = point1.transform.position.x;
+        float y = point1.transform.position.y;
+        float x2 = point2.transform.position.x;
+        float y2 = point2.transform.position.y;
+        pos1 = new Vector3(x, y, 0);
+        pos2 = new Vector3(x2, y2, 0);
     }
     // Update is called once per frame
     void FixedUpdate()

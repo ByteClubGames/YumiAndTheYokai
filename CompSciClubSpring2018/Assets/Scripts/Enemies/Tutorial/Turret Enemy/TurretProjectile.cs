@@ -1,5 +1,5 @@
 ﻿/*
- * Author: Keiran Glynn
+ * Author: Keiran Glynn & Karim Dabboussi
  * Date Created: 3/17/2018 @ 11:30 am
  * Date Modified: 3/17/2018 @ 11:30 am
  * Project: CompSciClubSpring2018
@@ -25,15 +25,16 @@ public class TurretProjectile : MonoBehaviour {
     private bool isHit = false; // will indicate if the projectile had a collision
     private bool isTooFar = false; // will indicate if the projectile is far from the astral (if it missed its target)
     private Vector3 projectilePos;
-    private Vector3 yokaiPos;
+    private Vector3 humanPos;
     private Vector3 target;
-    
-	// Use this for initialization
-	void Start ()
+    private GameObject player;
+
+    // Use this for initialization
+    void Start ()
     {
-        turretProjectileRB = this.GetComponent<Rigidbody>();
+        turretProjectileRB = GetComponent<Rigidbody>();
         yokaiRB = GameObject.Find("Ferrox").GetComponent<Rigidbody>();
-        humanRB = GameObject.Find("Human").GetComponent<Rigidbody>();
+        humanRB = GameObject.Find("Human-Player").GetComponent<Rigidbody>();
 
         //turretProjectileRB.gravityScale = 0; 
 	}
@@ -48,15 +49,17 @@ public class TurretProjectile : MonoBehaviour {
     {
         CheckIsHit();
         CheckTooFar();
+        player = GameObject.Find("Human-Player");
     }
 
     private void OnTriggerEnter(Collider collision) // This is supposed to be triggered when the projectile intercepts the astral
     {
         Debug.Log("this works"); // if this trigger function is called at all, this will show up in the console
-        if (collision.gameObject.name == "Ferrox" || collision.gameObject.name == "Human")
+        if (collision.gameObject.name == "Ferrox" || collision.tag == "Human")
         {
+            //ProjectileMovement();
             GameObject.Find("Ferrox").GetComponent<FerroxHealth>().TakeDamage(projectileDamage);
-            GameObject.Find("Human").GetComponent<HumanHealth>().TakeDamage(projectileDamage);
+            GameObject.Find("Player-Human").GetComponent<HumanHealth>().TakeDamage(projectileDamage);
             isHit = true; // regardless of weather or not it hit the astral, it will be as having hit someting
         }
         else if(collision.gameObject.tag == "EnemyDetection")
@@ -67,14 +70,18 @@ public class TurretProjectile : MonoBehaviour {
 
     public void ProjectileMovement() // Makes the projectile move in a straight line towards the player
     {
-        
 
-        if (turretProjectileRB.velocity.x == 0f && turretProjectileRB.velocity.y == 0f) // As long as it isnt already moving: do action
-        {
-            target = (yokaiRB.position - turretProjectileRB.position);
-            target = target.normalized;
-            turretProjectileRB.AddForce(target * speed, ForceMode.Impulse); // Adds an instantaneous force towards yokai
-        }
+        //if (turretProjectileRB.velocity.x == 0f && turretProjectileRB.velocity.y == 0f) // As long as it isnt already moving: do action
+        //{
+        turretProjectileRB.AddForce(new Vector3(player.transform.position.x,20) * speed);
+        Debug.Log("Projectile movement is called" + player.transform.position.x);
+        // target = (humanRB.position - turretProjectileRB.position);
+
+        target = humanRB.position;
+       // target = target.normalized;
+       // turretProjectileRB.AddForce(target * speed); // Adds an instantaneous force towards yokai
+            
+        //}
     }
 
     private void CheckIsHit() // Destroys the projectile if it hits somthing
@@ -88,9 +95,9 @@ public class TurretProjectile : MonoBehaviour {
     private void CheckTooFar() // Will destroy the projectile if it has missed the yokai and is far away
     {
         projectilePos = turretProjectileRB.position;
-        yokaiPos = yokaiRB.position;
+        humanPos = humanRB.position;
 
-        distance = Vector3.Distance(projectilePos, yokaiPos);
+        distance = Vector3.Distance(projectilePos, humanPos);
 
         if(distance > maxDistance)
         {
