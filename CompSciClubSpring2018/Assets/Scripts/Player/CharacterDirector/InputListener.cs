@@ -33,7 +33,7 @@ public class InputListener : MonoBehaviour
     void Update()
     {
         activePlayer = yumiActive ? human : yokai; // Choose which character to call movement methods on
-        Debug.Log(activePlayer + " is now active");
+        //Debug.Log(activePlayer + " is now active");
                 
         if (Input.GetKey("a") || Input.GetKey("left"))
         {

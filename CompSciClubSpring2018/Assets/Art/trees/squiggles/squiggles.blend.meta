@@ -3,6 +3,40 @@ guid: 964cb70d6e4c10c479ab0238a6f80683
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
+    100000: squiggle-1
+    100002: squiggle-2
+    100004: squiggle-3
+    100006: squiggle-4
+    100008: squiggle-5
+    100010: //RootNode
+    400000: squiggle-1
+    400002: squiggle-2
+    400004: squiggle-3
+    400006: squiggle-4
+    400008: squiggle-5
+    400010: //RootNode
+    2100000: squiggle-5__squiggle-5_png
+    2100002: squiggle-4__squiggle-4_png
+    2100004: squiggle-3__squiggle-3_png
+    2100006: squiggle-2__squiggle-2_png
+    2100008: squiggle-1__squiggle-1_png
+    2300000: squiggle-1
+    2300002: squiggle-2
+    2300004: squiggle-3
+    2300006: squiggle-4
+    2300008: squiggle-5
+    3300000: squiggle-1
+    3300002: squiggle-2
+    3300004: squiggle-3
+    3300006: squiggle-4
+    3300008: squiggle-5
+    4300000: squiggle-5
+    4300002: squiggle-4
+    4300004: squiggle-3
+    4300006: squiggle-2
+    4300008: squiggle-1
+    7400000: Default Take
+    9500000: //RootNode
     2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
@@ -56,7 +90,7 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
     previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0

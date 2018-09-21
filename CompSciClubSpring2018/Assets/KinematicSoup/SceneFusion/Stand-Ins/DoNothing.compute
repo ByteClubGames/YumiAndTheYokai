@@ -1,0 +1,8 @@
+// Compute shader that does nothing. Used as a stand-in for missing compute shaders.
+#pragma kernel DoNothing
+
+[numthreads(1,1,1)]
+void DoNothing(uint3 dtid : SV_DispatchThreadID)
+{
+
+}

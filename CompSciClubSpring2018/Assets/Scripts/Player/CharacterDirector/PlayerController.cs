@@ -12,6 +12,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
+
+    public enum CharacterName {
+        Yokai,
+        Yumi
+    }
+
+    public CharacterName characterName;
+
     [Header("Physics/ Player Attributes")]
     public float gravity = -25f; // Negative input value
     public float jumpSpeed = 3f;
@@ -65,13 +73,25 @@ public class PlayerController : MonoBehaviour {
 
     private Vector3 velocity;
 
+    private Animator animator;
+    private SpriteRenderer spriteRenderer;
+
     private void Awake()
     {
         boxCollider = this.GetComponent<BoxCollider>();
     }
 
+    private void Start()
+    {
+        animator = this.gameObject.GetComponentInChildren<Animator>();
+        spriteRenderer = this.gameObject.GetComponentInChildren<SpriteRenderer>();
+    }
+
     void Update()
-    {        
+    {
+
+        AnimatorStateInfo currentStateInfo = animator.GetCurrentAnimatorStateInfo(0);
+
         /* If the player is grounded, set vertical velocity to zero. This stops the player from accelerating downward */
         if (isGrounded)
         {
@@ -82,10 +102,19 @@ public class PlayerController : MonoBehaviour {
         /* The following selection decides the directioin of horizontal movement (right, left, none) */
         if (right)
         {
+            if (!currentStateInfo.IsName("yokai_run")) {
+                spriteRenderer.flipX = false;
+                animator.Play("yokai_run");
+            }
             normalizedHorizontalSpeed = 1;
         }
         else if (left)
         {
+            if (!currentStateInfo.IsName("yokai_run"))
+            {
+                spriteRenderer.flipX = true;
+                animator.Play("yokai_run");
+            }
             normalizedHorizontalSpeed = -1;            
         }
         else
@@ -101,6 +130,19 @@ public class PlayerController : MonoBehaviour {
             velocity.y = Mathf.Sqrt(2f * jumpSpeed * -gravity);            
         }
 
+        if (characterName == CharacterName.Yokai) {
+            if (!right && !left && !jump)
+            {
+                animator.Play("yokai_idle");
+            }
+            if (jump) {
+                Debug.Log(jump);
+            }
+        }
+        if (characterName == CharacterName.Yumi) {
+            animator.Play("");
+        }
+
 
         //Horizontal velocity
         velocity.x = Mathf.Lerp(velocity.x, normalizedHorizontalSpeed * horizontalSpeed, Time.deltaTime * 20f);
@@ -113,7 +155,7 @@ public class PlayerController : MonoBehaviour {
          * we would like to move towards. The Move function then passes then modifies these positions based on if the player is colldiding
          * with the world. After the movement positions are modified to prevent passing through walls and floors, the player is moved using 
          * transform.translate. */
-        Move(velocity * Time.deltaTime);        
+        Move(velocity * Time.deltaTime);
     }
 
     #region Movement Calls
