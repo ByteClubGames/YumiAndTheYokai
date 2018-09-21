@@ -6,8 +6,11 @@ public class FlapMovement : MonoBehaviour {
     private Vector2 currFlapPos;
     private Vector2 startFlapPos;
     private Vector2 aceFlapPos;
+    private Vector2 target; 
     private float flapRot;
     private Transform flapRB;
+    private Rigidbody2D playerRB;
+    private Rigidbody2D turretProjectileRB;
     private float minRange = 0f;
     private float maxRange = 0f;
     private int direction = -1;
@@ -21,12 +24,15 @@ public class FlapMovement : MonoBehaviour {
     public float bounceSpeed = 2f;
     public float bounceHeight = 1f;
     public float dropRange = 5f;
+    public float projectileSpeed;
 
     // Use this for initialization
     void Start()
     {
         flapRB = GameObject.Find("FlapEnemy").GetComponent<Transform>();
         startFlapPos = GameObject.Find("FlapEnemy").GetComponent<Transform>().position;
+        turretProjectileRB = this.GetComponent<Rigidbody2D>();
+        playerRB = GameObject.Find("Player").GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -36,6 +42,7 @@ public class FlapMovement : MonoBehaviour {
         {
             Debug.Log("Bingo");
             Attack();
+            ProjectileMovement();
         }
         else
         {
@@ -172,5 +179,15 @@ public class FlapMovement : MonoBehaviour {
     public bool GetCanAttack()
     {
         return canAttack;
+    }
+
+    public void ProjectileMovement()
+    {
+       if (turretProjectileRB.velocity.x == 0f && turretProjectileRB.velocity.y == 0f)
+        {
+            target = (playerRB.position - turretProjectileRB.position);
+            target = target.normalized;
+            turretProjectileRB.AddForce(target * projectileSpeed, ForceMode2D.Impulse);
+        }
     }
 }
