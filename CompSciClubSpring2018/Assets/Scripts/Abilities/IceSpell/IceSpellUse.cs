@@ -19,11 +19,11 @@ public class IceSpellUse : MonoBehaviour
     private GameObject myCurrentObject;
     private bool _isDragging = false;
 
-    void Start()
+    /*void Start()
     {
         this.GetComponent<TimeManager>().StartSlowDown(); // Time is slowed when spawner is here
     }
-
+    */
     void Update()
     {
         //Instantiates iceSpellPrefab upon clicking in the position of the click
@@ -48,22 +48,13 @@ public class IceSpellUse : MonoBehaviour
         }
         if (_isDragging) // Casts spell only if the mouse is held down and is dragging across the screen
         {
-            RaycastHit hit;
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition); // Casts a ray directly from the camera based on where the mouse's clicks are
-            if (Physics.Raycast(ray, out hit))
-            {
-                Vector3 playerinput = new Vector3(hit.point.x, hit.point.y, 0); // Takes the rays's collision
-                Instantiate(iceSpellPrefab, new Vector3(hit.point.x, hit.point.y, 0.0f),
-                            Quaternion.identity);
-                iceSpellPrefab.transform.position = Input.mousePosition;
-
-            }
-            //Runs ice prefab is mouse button is pushed down
-            /*Vector3 p = Camera.main.ScreenToWorldPoint(new
-              Vector3(Input.mousePosition.x, Input.mousePosition.y, 10.0f));
+            Vector3 p = Camera.main.ScreenToWorldPoint(new
+               Vector3(Input.mousePosition.x, Input.mousePosition.y, 10.0f));
             Instantiate(iceSpellPrefab, new Vector3(p.x, p.y, 0.0f),
                         Quaternion.identity);
-            iceSpellPrefab.transform.position = Input.mousePosition;*/
+            iceSpellPrefab.transform.position = Input.mousePosition;
+            //Runs ice prefab is mouse button is pushed down
+        
         }
 
         /* 
@@ -71,6 +62,7 @@ public class IceSpellUse : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out hit))
         {
+            Vector3 playerinput = new Vector3(hit.point.x, hit.point.y, 0);
             Instantiate(iceSpellPrefab, new Vector3(p.x, p.y, 0.0f),
                         Quaternion.identity);
             iceSpellPrefab.transform.position = Input.mousePosition;
@@ -97,5 +89,5 @@ public class IceSpellUse : MonoBehaviour
      }
  
     }*/
-    }
+        }
 }
