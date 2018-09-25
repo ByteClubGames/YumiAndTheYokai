@@ -143,7 +143,6 @@ public class PlayerController : MonoBehaviour {
             animator.Play("");
         }
 
-
         //Horizontal velocity
         velocity.x = Mathf.Lerp(velocity.x, normalizedHorizontalSpeed * horizontalSpeed, Time.deltaTime * 20f);
 
@@ -155,7 +154,7 @@ public class PlayerController : MonoBehaviour {
          * we would like to move towards. The Move function then passes then modifies these positions based on if the player is colldiding
          * with the world. After the movement positions are modified to prevent passing through walls and floors, the player is moved using 
          * transform.translate. */
-        Move(velocity * Time.deltaTime);
+        Move(velocity * Time.deltaTime);        
     }
 
     #region Movement Calls
@@ -245,7 +244,7 @@ public class PlayerController : MonoBehaviour {
             velocity.y = 0;
     }
 
-    
+
     /*Rays are casted from the bottom of the box collider to the top using a for-loop. The direction they are casted in is decided based on
      * the current movement direction. If a collision is detected, it will subtract from the target position as to prevent the player from 
      * moving past the location in which the ray struck the wall. This new modified target position is returned to the original movement 
@@ -271,7 +270,7 @@ public class PlayerController : MonoBehaviour {
             bool raycastHit = Physics.Raycast(ray, rayDirection, out hit, rayLength, platformMask);
 
             // can only hit slope with the bottom horizontal raycast && isRight && slope is <70
-            if (isRight && (Mathf.Atan2(hit.normal.y, hit.normal.x) * Mathf.Rad2Deg -90f < maxClimbableSlope)) 
+            if (isRight && (Mathf.Atan2(hit.normal.y, hit.normal.x) * Mathf.Rad2Deg - 90f < maxClimbableSlope))
             {
                 //print("Slope on right: " + (Mathf.Atan2(hit.normal.y, hit.normal.x) * Mathf.Rad2Deg ));
                 climbableSlope = true;
@@ -289,12 +288,12 @@ public class PlayerController : MonoBehaviour {
 
                 deltaMovement.x = hit.point.x - ray.x;
                 rayLength = Mathf.Abs(deltaMovement.x);
-                
-                if (isRight)
+
+                if (isRight && !climbableSlope)
                 {
                     deltaMovement.x -= skinWidth;
                 }
-                else
+                else if (!isRight && !climbableSlope)
                 {
                     deltaMovement.x += skinWidth;
                 }
@@ -325,42 +324,87 @@ public class PlayerController : MonoBehaviour {
 
         float colliderUseableWidth = boxCollider.size.x * Mathf.Abs(transform.localScale.x) - (2f *skinWidth);
         horizontalRaySeparation = colliderUseableWidth / (verticalRays - 1);
-
-        for(int i = 0; i < verticalRays; i++)
+        if (isRight)
         {
-            Vector3 ray = new Vector3(firstRayStartPoint.x + i * horizontalRaySeparation, firstRayStartPoint.y, 0f);
-            RaycastHit hit;
+            print("moving Right");
 
-            Debug.DrawRay(ray, rayDirection * rayLength, Color.magenta);
-
-            bool raycastHit = Physics.Raycast(ray, rayDirection, out hit, rayLength, platformMask);
-
-            if (raycastHit)
+            for (int i = verticalRays; i >= 0; i--)
             {
-                deltaMovement.y = hit.point.y - ray.y;
-                rayLength = Mathf.Abs(deltaMovement.y);
+                Vector3 ray = new Vector3(firstRayStartPoint.x + i * horizontalRaySeparation, firstRayStartPoint.y, 0f);
+                RaycastHit hit;
 
-                if (isUp)
-                {
-                    deltaMovement.y -= skinWidth;
-                }
-                else
-                {
-                    deltaMovement.y += skinWidth;
-                    isGrounded = true;
-                }
+                Debug.DrawRay(ray, rayDirection * rayLength, Color.magenta);
 
-                if (!isUp && deltaMovement.y > 0.00001f)
-                {
-                    isOnSlope = true;
-                }                    
+                bool raycastHit = Physics.Raycast(ray, rayDirection, out hit, rayLength, platformMask);
 
-                if (rayLength < skinWidth + error)
+                if (raycastHit)
                 {
-                    break;
+                    deltaMovement.y = hit.point.y - ray.y;
+                    rayLength = Mathf.Abs(deltaMovement.y);
+
+                    if (isUp)
+                    {
+                        deltaMovement.y -= skinWidth;
+                    }
+                    else
+                    {
+                        deltaMovement.y += skinWidth;
+                        isGrounded = true;
+                    }
+
+                    if (!isUp && deltaMovement.y > 0.00001f)
+                    {
+                        isOnSlope = true;
+                    }
+
+                    if (rayLength < skinWidth + error)
+                    {
+                        break;
+                    }
                 }
             }
         }
+        else
+        {
+            print("moving left");
+
+            for (int i = 0; i < verticalRays; i++)
+            {
+                Vector3 ray = new Vector3(firstRayStartPoint.x + i * horizontalRaySeparation, firstRayStartPoint.y, 0f);
+                RaycastHit hit;
+
+                Debug.DrawRay(ray, rayDirection * rayLength, Color.magenta);
+
+                bool raycastHit = Physics.Raycast(ray, rayDirection, out hit, rayLength, platformMask);
+
+                if (raycastHit)
+                {
+                    deltaMovement.y = hit.point.y - ray.y;
+                    rayLength = Mathf.Abs(deltaMovement.y);
+
+                    if (isUp)
+                    {
+                        deltaMovement.y -= skinWidth;
+                    }
+                    else
+                    {
+                        deltaMovement.y += skinWidth;
+                        isGrounded = true;
+                    }
+
+                    if (!isUp && deltaMovement.y > 0.00001f)
+                    {
+                        isOnSlope = true;
+                    }
+
+                    if (rayLength < skinWidth + error)
+                    {
+                        break;
+                    }
+                }
+            }
+        }
+        
 
         return deltaMovement;
     }
