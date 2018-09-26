@@ -41,6 +41,7 @@ public class PlayerController : MonoBehaviour {
     private bool isGrounded = false;
     private bool isOnSlope = false;
     private bool isRight = false;
+    private bool groundedLastFrame;
     #endregion
 
     #region Movement Call Flags
@@ -148,9 +149,12 @@ public class PlayerController : MonoBehaviour {
         if (isGrounded && jump)
         {
             jump = false;
+            //animator.Play("yokai_jump_forward");
             isGrounded = false;            
             velocity.y = Mathf.Sqrt(2f * jumpSpeed * -gravity);            
         }
+
+
 
         if (characterName == CharacterName.Yokai) {
             if (!right && !left && !jump)
@@ -370,7 +374,7 @@ public class PlayerController : MonoBehaviour {
                     }
                     else
                     {
-                        deltaMovement.y += skinWidth;
+                        deltaMovement.y += skinWidth;                        
                         isGrounded = true;
                     }
 
@@ -383,7 +387,7 @@ public class PlayerController : MonoBehaviour {
                     {
                         break;
                     }
-                }
+                }                
             }
         }
         else
@@ -410,7 +414,7 @@ public class PlayerController : MonoBehaviour {
                     }
                     else
                     {
-                        deltaMovement.y += skinWidth;
+                        deltaMovement.y += skinWidth;                        
                         isGrounded = true;
                     }
 
@@ -423,7 +427,7 @@ public class PlayerController : MonoBehaviour {
                     {
                         break;
                     }
-                }
+                }                
             }
         }
         
