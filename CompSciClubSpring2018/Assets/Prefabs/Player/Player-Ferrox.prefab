@@ -130,9 +130,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: 0
-  gravity: -20
-  jumpSpeed: 2.5
-  horizontalSpeed: 8
+  gravity: -40
+  jumpSpeed: 4
+  horizontalSpeed: 12
   maxClimbableSlope: 50
   skinWidth: 0.3
   horizontalRays: 8

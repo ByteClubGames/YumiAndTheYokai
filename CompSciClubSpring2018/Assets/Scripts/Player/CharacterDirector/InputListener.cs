@@ -22,8 +22,8 @@ public class InputListener : MonoBehaviour
         
     void Start()
     {
-        human = GameObject.Find("Player-Human").GetComponent<PlayerController>();        
-        switcher = GameObject.Find("Player-Human").GetComponentInChildren<YokaiSwitcher>();
+        human = GameObject.Find("Yumi").GetComponent<PlayerController>();        
+        switcher = GameObject.Find("Yumi").GetComponentInChildren<YokaiSwitcher>();
 
         switcher.SetSpawnOffset(true); // If Yokai is spawned, do so on the right side of human by default
         activePlayer = human;

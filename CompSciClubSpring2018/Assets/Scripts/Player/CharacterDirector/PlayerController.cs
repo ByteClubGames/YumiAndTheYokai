@@ -10,6 +10,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class PlayerController : MonoBehaviour {
 
@@ -76,6 +77,9 @@ public class PlayerController : MonoBehaviour {
     private Animator animator;
     private SpriteRenderer spriteRenderer;
 
+    private Transform yumi;
+    private CinemachineVirtualCamera main_follow_camera;
+
     private void Awake()
     {
         boxCollider = this.GetComponent<BoxCollider>();
@@ -83,8 +87,26 @@ public class PlayerController : MonoBehaviour {
 
     private void Start()
     {
+        main_follow_camera = GameObject.Find("Main Follow Camera").GetComponent<CinemachineVirtualCamera>();
+        yumi = GameObject.Find("Yumi").transform;
+
         animator = this.gameObject.GetComponentInChildren<Animator>();
         spriteRenderer = this.gameObject.GetComponentInChildren<SpriteRenderer>();
+        if (characterName == CharacterName.Yumi) {
+            
+        }
+        if (characterName == CharacterName.Yokai) {
+            main_follow_camera.Follow = this.gameObject.transform;
+        }
+    }
+
+    private void OnDestroy()
+    {
+        if (characterName == CharacterName.Yokai) {
+            CinemachineVirtualCamera main_follow_camera = GameObject.Find("Main Follow Camera").GetComponent<CinemachineVirtualCamera>();
+            Transform yumi = GameObject.Find("Yumi").transform;
+            main_follow_camera.Follow = yumi;
+        }
     }
 
     void Update()

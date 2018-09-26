@@ -1,0 +1,2227 @@
+2018-09-26 11:22:59.8886 [DEBUG] Scene Fusion version 1.8.1-0
+2018-09-26 11:34:57.3291 [DEBUG] Scene Fusion version 1.8.1-0
+2018-09-26 11:34:57.3971 [DEBUG] Play mode: True, sync in play mode: False
+2018-09-26 11:35:16.9429 [DEBUG] Play mode: False
+2018-09-26 11:43:57.4643 [DEBUG] Scene Fusion version 1.8.1-0
+2018-09-26 11:49:09.1083 [DEBUG] Scene Fusion version 1.8.1-0
+2018-09-26 11:49:09.2223 [DEBUG] Play mode: True, sync in play mode: False
+2018-09-26 11:49:37.7525 [DEBUG] Play mode: False
+2018-09-26 11:55:08.5218 [DEBUG] Scene Fusion version 1.8.1-0
+2018-09-26 12:04:43.7253 [DEBUG] Scene Fusion version 1.8.1-0
+2018-09-26 12:04:43.7963 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:43.8383 [DEBUG] Play mode: True, sync in play mode: False
+2018-09-26 12:04:43.8563 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:43.8773 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:43.8943 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:43.9113 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:43.9283 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:43.9443 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:43.9603 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:43.9773 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:43.9943 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:44.0103 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:44.0273 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:44.0433 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:44.0603 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:44.0773 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:44.0943 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:44.1093 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:44.1283 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:44.1463 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:44.1623 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:44.1793 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:44.1963 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:44.2133 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:44.2753 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:44.3313 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:44.3913 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:44.4403 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:44.4883 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:44.5353 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:44.5523 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:44.5693 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:44.5853 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:44.6023 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:44.6183 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:44.6353 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:44.6523 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:44.6683 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:44.6853 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:44.7014 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:44.7174 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:44.7344 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:44.7514 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:44.7684 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:44.7844 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:44.8014 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:44.8174 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:44.8334 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:44.8504 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:44.8684 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:44.8844 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:44.8994 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:44.9174 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:44.9344 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:44.9504 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:44.9674 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:44.9834 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:44.9994 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:45.0174 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:45.0334 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:45.0504 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:45.0664 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:45.0824 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:45.0984 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:45.1164 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:45.1324 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:45.1484 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:45.1655 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:45.1824 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:45.1984 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:45.2144 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:45.2314 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:45.2494 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:45.2655 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:45.2824 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:45.2975 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:45.3155 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:45.3305 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:45.3475 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:45.3645 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:45.3805 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:45.3967 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:45.4145 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:45.4295 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:45.4475 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:45.4645 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:45.4795 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:45.4965 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:45.5125 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:45.5295 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:45.5455 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:45.5635 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:45.5795 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:45.5975 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:45.6125 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:45.6285 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:45.6456 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:45.6625 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:45.6785 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:40)
+
+2018-09-26 12:04:45.6965 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:40)
+
+2018-09-26 12:04:45.7117 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:40)
+
+2018-09-26 12:04:45.7288 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:40)
+
+2018-09-26 12:04:45.7456 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:40)
+
+2018-09-26 12:04:45.7616 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:40)
+
+2018-09-26 12:04:45.7786 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:40)
+
+2018-09-26 12:04:45.7956 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:40)
+
+2018-09-26 12:04:45.8126 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:40)
+
+2018-09-26 12:04:45.8276 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:40)
+
+2018-09-26 12:04:45.8446 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:40)
+
+2018-09-26 12:04:45.8616 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:40)
+
+2018-09-26 12:04:45.8776 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:40)
+
+2018-09-26 12:04:45.8946 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:40)
+
+2018-09-26 12:04:45.9106 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:40)
+
+2018-09-26 12:04:45.9276 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:40)
+
+2018-09-26 12:04:45.9436 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:40)
+
+2018-09-26 12:04:45.9606 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:40)
+
+2018-09-26 12:04:45.9768 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:40)
+
+2018-09-26 12:04:45.9936 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:40)
+
+2018-09-26 12:04:46.0096 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:40)
+
+2018-09-26 12:04:46.0266 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:40)
+
+2018-09-26 12:04:46.0436 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:40)
+
+2018-09-26 12:04:46.0606 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:46.0766 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:46.0936 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:46.1096 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:46.1266 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:46.1441 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:46.1596 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:46.1756 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:46.1926 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:46.2086 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:46.2257 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:46.2428 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:46.2586 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:46.2756 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:46.2916 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:46.3087 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:46.3247 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:46.3417 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:46.3577 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:46.3867 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:46.3967 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:46.4137 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:46.4307 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:46.4467 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:46.4627 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:46.4797 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:46.4957 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:46.5127 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:46.5297 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:46.5467 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:46.5627 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:46.5787 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:46.5957 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:46.6127 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:46.6297 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:46.6457 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:46.6617 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:46.6787 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:46.6957 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:46.7117 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:46.7287 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:46.7457 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:46.7617 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:46.7777 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:46.7947 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:46.8117 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:46.8277 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:46.8447 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:46.8608 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:46.8778 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:46.8938 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:46.9108 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:46.9268 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:46.9448 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:46.9598 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:46.9768 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:46.9938 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:47.0108 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:47.0268 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:47.0428 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:47.0608 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:47.0758 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:47.0938 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:47.1098 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:47.1268 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:47.1428 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:47.1588 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:40)
+
+2018-09-26 12:04:47.1768 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:40)
+
+2018-09-26 12:04:47.1918 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:40)
+
+2018-09-26 12:04:47.2088 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:40)
+
+2018-09-26 12:04:47.2258 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:40)
+
+2018-09-26 12:04:47.2428 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:40)
+
+2018-09-26 12:04:47.2578 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:40)
+
+2018-09-26 12:04:47.2758 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:40)
+
+2018-09-26 12:04:47.2918 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:40)
+
+2018-09-26 12:04:47.3088 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:40)
+
+2018-09-26 12:04:47.3258 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:40)
+
+2018-09-26 12:04:47.3418 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:40)
+
+2018-09-26 12:04:47.3579 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:40)
+
+2018-09-26 12:04:47.3749 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:40)
+
+2018-09-26 12:04:47.3909 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:40)
+
+2018-09-26 12:04:47.4089 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:40)
+
+2018-09-26 12:04:47.4239 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:40)
+
+2018-09-26 12:04:47.4408 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:40)
+
+2018-09-26 12:04:47.4568 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:40)
+
+2018-09-26 12:04:47.4738 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:40)
+
+2018-09-26 12:04:47.4919 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:40)
+
+2018-09-26 12:04:47.5079 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:40)
+
+2018-09-26 12:04:47.5250 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:40)
+
+2018-09-26 12:04:47.5409 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:40)
+
+2018-09-26 12:04:47.5569 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:47.5729 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:47.5899 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:47.6079 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:47.6229 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:47.6409 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:47.6579 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:47.6739 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:47.6889 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:47.7069 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:47.7239 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:47.7389 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:47.7569 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:47.7719 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:47.7889 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:47.8059 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:47.8219 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:47.8379 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:47.8569 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:47.8728 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:47.8889 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:47.9048 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:47.9218 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:47.9379 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:47.9549 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:47.9709 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:47.9889 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:48.0049 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:48.0209 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:48.0369 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:48.0549 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:48.0699 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:48.0869 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:48.1039 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:48.1199 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:48.1369 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:48.1545 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:48.1709 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:48.1869 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:48.2029 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:48.2189 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:48.2359 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:48.2529 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:48.2699 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:48.2869 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:48.3029 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:48.3199 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:48.3349 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:48.3519 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:48.3689 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:48.3859 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:48.4019 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:48.4179 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:48.4349 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:48.4509 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:48.4679 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:48.4839 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:48.5019 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:48.5179 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:48.5339 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:48.5509 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:48.5689 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:48.5849 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:48.6009 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:48.6169 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:48.6339 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:48.6499 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:48.6669 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:48.6839 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:48.6999 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:48.7169 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:48.7329 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:48.7489 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:48.7669 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:48.7839 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:48.7989 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:48.8169 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:48.8329 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:48.8490 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:48.8660 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:48.8820 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:48.8990 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:48.9160 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:48.9330 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:48.9480 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:48.9661 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:48.9820 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:48.9980 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:49.0150 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:49.0320 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:49.0490 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:49.0660 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:49.0810 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:49.0980 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:49.1150 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:49.1310 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:49.1480 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:49.1640 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:49.1810 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:49.1980 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:49.2151 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:49.2301 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:49.2471 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:49.2631 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:49.2802 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:49.2962 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:49.3123 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:49.3293 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:49.3473 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:49.3633 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:49.3794 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:49.4019 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:49.4183 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:49.4353 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:49.4513 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:49.4683 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:49.4843 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:49.5003 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:49.5163 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:49.5333 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:49.5503 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:49.5673 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:49.5833 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:49.6003 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:49.6164 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:49.6344 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:49.6504 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:49.6674 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:49.6834 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:49.6994 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:49.7164 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:49.7324 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:49.7494 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:49.7664 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:49.7834 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:49.7984 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:49.8164 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:49.8325 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:49.8505 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:49.8655 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:49.8825 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:49.8985 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:49.9155 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:49.9325 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:49.9485 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:49.9655 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:49.9815 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:49.9986 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:50.0155 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:50.0315 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:50.0475 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:50.0646 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:50.0816 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:50.0986 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:50.1146 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:50.1306 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:50.1466 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:50.1636 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:50.1806 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:50.1966 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:50.2136 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:50.2297 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:50.2466 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:50.2636 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:50.2779 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:50.2969 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:50.3129 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:50.3299 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:50.3469 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:50.3619 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:50.3787 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:50.3969 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:50.4139 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:50.4279 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:50.4450 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:50.4620 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:50.4780 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:50.4950 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:50.5120 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:50.5280 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:50.5450 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:50.5630 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:50.5770 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:50.5950 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:50.6100 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:50.6280 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:50.6440 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:50.6610 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:50.6770 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:50.6930 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:50.7100 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:50.7260 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:50.7430 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:50.7590 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:50.7770 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:50.7920 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:50.8100 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:50.8261 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:50.8421 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:50.8591 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:50.8761 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:50.8931 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:50.9091 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:50.9261 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:50.9421 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:50.9581 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:50.9751 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:50.9911 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:51.0081 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:51.0251 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:51.0421 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:51.0581 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:51.0741 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:51.0911 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:51.1081 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:51.1251 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:51.1401 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:51.1571 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:51.1731 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:51.1911 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:51.2071 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:51.2251 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:51.2421 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:51.2581 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:51.2761 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:51.2931 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:51.3091 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:51.3261 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:51.3411 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:51.3581 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:51.3751 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:51.3911 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:51.4081 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:51.4242 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:51.4422 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:51.4582 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:51.4752 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:51.4902 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:51.5072 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:51.5242 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:51.5402 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:51.5584 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:51.5732 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:51.5902 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:51.6072 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:51.6232 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:51.6392 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:51.6562 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:51.6732 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:51.6892 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:51.7062 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:51.7222 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:51.7392 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:51.7562 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:51.7732 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:51.7892 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:51.8052 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:51.8222 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:51.8382 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:51.8552 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:51.8712 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:51.8882 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:51.9052 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:51.9212 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:51.9372 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:51.9552 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:51.9712 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:51.9892 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:52.0042 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:52.0212 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:52.0394 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:52.0572 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:52.0722 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:52.0892 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:52.1062 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:52.1222 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:52.1392 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:52.1553 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:52.1743 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:52.2394 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:52.2574 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:52.2734 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:52.2894 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:52.3064 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:52.3234 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:52.3384 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:52.3564 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:52.3724 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:52.3894 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:52.4054 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:52.4214 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:52.4384 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:52.4554 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:52.4714 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:52.4894 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:52.5104 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:52.5284 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:52.5444 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:52.5604 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:52.5774 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:52.5934 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:52.6094 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:52.6274 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:52.6434 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:52.6594 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:52.6774 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:52.6934 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:52.7105 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:52.7264 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:52.7425 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:52.7585 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:52.7755 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:52.7935 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:52.8085 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:52.8255 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:52.8415 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:52.8575 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:52.8745 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:52.8915 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:52.9075 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:52.9245 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:52.9415 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:52.9575 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:52.9755 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:52.9915 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:53.0075 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:53.0245 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:53.0405 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:53.0575 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:53.0745 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:53.0906 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:53.1076 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:53.1256 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:53.1406 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:53.1576 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:53.1746 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:53.1916 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:53.2086 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:53.2236 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:53.2406 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:53.2566 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:53.2736 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:53.2906 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:53.3066 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:53.3226 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:53.3406 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:53.3566 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:53.3736 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:53.3886 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:53.4066 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:53.4236 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:53.4506 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:53.4676 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:53.4836 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:53.4996 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:53.5176 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:53.5336 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:53.5496 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:53.5666 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:53.5826 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:53.5996 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:53.6162 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:53.6326 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:53.6496 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:53.6656 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:53.6826 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:53.6987 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:53.7167 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:53.7327 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:53.7487 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:53.7667 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:53.7827 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:53.7997 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:53.8157 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:53.8317 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:53.8487 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:53.8657 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:53.8817 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:53.8977 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:53.9147 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:53.9307 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:53.9477 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:53.9647 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:53.9807 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:53.9978 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:54.0137 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:54.0307 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:54.0477 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:54.0647 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:54.0807 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:54.0997 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:54.1167 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:54.1327 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:54.1487 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:54.1667 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:54.1818 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:54.1987 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:54.2167 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:54.2318 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:54.2487 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:54.2648 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:54.2818 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:54.2978 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:54.3147 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:54.3318 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:54.3478 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:54.3648 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:54.3818 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:54.3988 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:54.4158 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:54.4328 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:54.4488 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:54.4658 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:54.4828 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:54.4978 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:54.5158 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:54.5328 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:54.5488 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:54.5658 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:54.5818 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:54.5988 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:54.6158 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:54.6318 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:54.6488 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:54.6648 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:54.8269 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:54.8469 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:54.8679 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:54.8839 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:54.9022 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:54.9189 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:54.9359 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:54.9539 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:54.9689 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:54.9859 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:55.0019 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:55.0189 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:55.0359 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:04:56.8626 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:03.0571 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:03.0752 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:03.0932 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:03.1092 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:03.1252 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:03.1412 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:03.1582 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:03.1752 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:03.1922 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:03.2082 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:03.2252 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:03.2422 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:03.2582 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:03.2752 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:03.2912 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:03.3082 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:03.3242 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:03.3412 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:03.3572 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:03.3742 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:03.3912 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:03.4092 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:03.4232 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:03.4402 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:03.5203 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:03.6473 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:03.6633 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:03.6803 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:03.6983 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:03.7133 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:03.7303 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:03.7463 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:03.7633 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:03.7803 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:03.7963 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:03.8123 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:03.8303 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:03.8453 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:03.8633 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:03.8783 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:03.8963 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:03.9123 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:03.9293 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:03.9453 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:03.9613 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:03.9793 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:03.9953 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:04.0113 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:04.0283 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:04.0443 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:04.0613 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:04.0783 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:04.0943 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:04.1118 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:04.1283 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:04.1443 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:04.1613 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:04.1763 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:04.1933 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:04.2113 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:04.2273 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:04.2443 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:04.2613 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:04.2763 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:04.2923 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:04.3103 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:04.3263 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:04.3433 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:04.3603 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:04.3763 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:04.4453 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:34.4506 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:34.5487 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:36.3939 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:36.4159 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:36.4319 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:36.5119 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:43.4599 [DEBUG] Scene Fusion version 1.8.1-0
+2018-09-26 12:05:43.8978 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:43.9708 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:52)
+
+2018-09-26 12:05:44.1118 [DEBUG] Play mode: False
+2018-09-26 12:05:49.8742 [DEBUG] Scene Fusion version 1.8.1-0
+2018-09-26 12:05:49.9742 [DEBUG] Play mode: True, sync in play mode: False
+2018-09-26 12:05:54.4841 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+YokaiSwitcher.SpawnYokai () (at Assets/Scripts/Player/YokaiSwitcher.cs:39)
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:69)
+
+2018-09-26 12:05:57.4340 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+YokaiSwitcher.SpawnYokai () (at Assets/Scripts/Player/YokaiSwitcher.cs:39)
+InputListener.Update () (at Assets/Scripts/Player/CharacterDirector/InputListener.cs:69)
+
+2018-09-26 12:06:01.1929 [DEBUG] Play mode: False
+2018-09-26 12:06:27.5478 [DEBUG] Scene Fusion version 1.8.1-0
+2018-09-26 12:06:27.6488 [DEBUG] Play mode: True, sync in play mode: False
+2018-09-26 12:12:01.7150 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.OnDestroy () (at Assets/Scripts/Player/CharacterDirector/PlayerController.cs:106)
+
+2018-09-26 12:12:01.8830 [DEBUG] Play mode: False
+2018-09-26 12:18:14.8171 [DEBUG] Scene Fusion version 1.8.1-0
+2018-09-26 12:18:14.9171 [DEBUG] Play mode: True, sync in play mode: False
+2018-09-26 12:18:27.2687 [DEBUG] Play mode: False
+2018-09-26 12:46:44.3544 [DEBUG] Scene Fusion version 1.8.1-0
+2018-09-26 13:20:35.4997 [DEBUG] Scene Fusion version 1.8.1-0
+2018-09-26 13:20:35.6707 [DEBUG] Play mode: True, sync in play mode: False
+2018-09-26 13:20:39.3380 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.OnDestroy () (at Assets/Scripts/Player/CharacterDirector/PlayerController.cs:107)
+
+2018-09-26 13:20:39.4940 [DEBUG] Play mode: False
+2018-09-26 13:23:52.1030 [DEBUG] Scene Fusion version 1.8.1-0
+2018-09-26 13:23:52.2498 [DEBUG] Play mode: True, sync in play mode: False
+2018-09-26 13:26:39.0445 [DEBUG] Play mode: False

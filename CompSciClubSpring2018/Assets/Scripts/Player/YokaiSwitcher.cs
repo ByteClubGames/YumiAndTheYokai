@@ -22,7 +22,7 @@ public class YokaiSwitcher : MonoBehaviour
 
     private void Start()
     {
-        human = GameObject.Find("Player-Human");
+        human = GameObject.Find("Yumi");
 
         spawnOffset = 1.0f; // Used to spawn the yokai to the right of the player, rather than behind it.
     }
