@@ -119,6 +119,8 @@ public class PlayerController : MonoBehaviour {
             velocity.y = 0;
         }
 
+        bool lastFrameFacingRight = spriteRenderer.flipX ? false : true;
+        bool lastFrameFacingLeft = !lastFrameFacingRight;
         
         /* The following selection decides the directioin of horizontal movement (right, left, none) */
         if (right)
@@ -127,10 +129,16 @@ public class PlayerController : MonoBehaviour {
             {
                 spriteRenderer.flipX = false;
             }
-            if (!currentStateInfo.IsName("yokai_run") && !currentStateInfo.IsName("yokai_jump"))
+            if (!currentStateInfo.IsName("yokai_run") && !currentStateInfo.IsName("yokai_jump") && !currentStateInfo.IsName("yokai_land"))
             {
                 spriteRenderer.flipX = false;
-                animator.Play("yokai_run");
+                if (!currentStateInfo.IsName("yokai_turn_animation_anim") && lastFrameFacingLeft)
+                {
+                    animator.Play("yokai_turn_animation_anim");
+                }
+                if (!currentStateInfo.IsName("yokai_turn_animation_anim") && lastFrameFacingRight) {
+                    animator.Play("yokai_run");
+                }
             }
             normalizedHorizontalSpeed = 1;
         }
@@ -140,10 +148,17 @@ public class PlayerController : MonoBehaviour {
             {
                 spriteRenderer.flipX = true;
             }
-            if (!currentStateInfo.IsName("yokai_run") && !currentStateInfo.IsName("yokai_jump"))
+            if (!currentStateInfo.IsName("yokai_run") && !currentStateInfo.IsName("yokai_jump") && !currentStateInfo.IsName("yokai_land"))
             {
                 spriteRenderer.flipX = true;
-                animator.Play("yokai_run");
+                if (!currentStateInfo.IsName("yokai_turn_animation_anim") && lastFrameFacingRight)
+                {
+                    animator.Play("yokai_turn_animation_anim");
+                }
+                if (!currentStateInfo.IsName("yokai_turn_animation_anim") && lastFrameFacingLeft)
+                {
+                    animator.Play("yokai_run");
+                }
             }
             normalizedHorizontalSpeed = -1;            
         }
@@ -174,6 +189,9 @@ public class PlayerController : MonoBehaviour {
                 else if(!currentStateInfo.IsName("yokai_land")){
                     animator.Play("yokai_idle");
                 }
+            }
+            if (currentStateInfo.IsName("yokai_jump") && !jump && isGrounded) {
+                animator.Play("yokai_land");
             }
             if (jump) {
                 Debug.Log(jump);
