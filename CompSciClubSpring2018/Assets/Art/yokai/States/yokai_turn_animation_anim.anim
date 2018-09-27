@@ -3,9 +3,9 @@
 --- !u!74 &7400000
 AnimationClip:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: yokai-jumping
+  m_Name: yokai_turn_animation_anim
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -19,9 +19,13 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: 9838bd5b65a5e09439f43a996e107fcc, type: 3}
+      value: {fileID: 21300000, guid: fa7cb5c22f8d07345ad9714e3cd0da7c, type: 3}
     - time: 0.083333336
-      value: {fileID: 21300002, guid: 9838bd5b65a5e09439f43a996e107fcc, type: 3}
+      value: {fileID: 21300002, guid: fa7cb5c22f8d07345ad9714e3cd0da7c, type: 3}
+    - time: 0.16666667
+      value: {fileID: 21300004, guid: fa7cb5c22f8d07345ad9714e3cd0da7c, type: 3}
+    - time: 0.25
+      value: {fileID: 21300006, guid: fa7cb5c22f8d07345ad9714e3cd0da7c, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -41,14 +45,16 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300000, guid: 9838bd5b65a5e09439f43a996e107fcc, type: 3}
-    - {fileID: 21300002, guid: 9838bd5b65a5e09439f43a996e107fcc, type: 3}
+    - {fileID: 21300000, guid: fa7cb5c22f8d07345ad9714e3cd0da7c, type: 3}
+    - {fileID: 21300002, guid: fa7cb5c22f8d07345ad9714e3cd0da7c, type: 3}
+    - {fileID: 21300004, guid: fa7cb5c22f8d07345ad9714e3cd0da7c, type: 3}
+    - {fileID: 21300006, guid: fa7cb5c22f8d07345ad9714e3cd0da7c, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.16666667
+    m_StopTime: 0.33333334
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

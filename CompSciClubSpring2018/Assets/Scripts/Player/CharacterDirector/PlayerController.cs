@@ -125,7 +125,12 @@ public class PlayerController : MonoBehaviour {
         /* The following selection decides the directioin of horizontal movement (right, left, none) */
         if (right)
         {
-            if (!currentStateInfo.IsName("yokai_run")) {
+            if (currentStateInfo.IsName("yokai_jump"))
+            {
+                spriteRenderer.flipX = false;
+            }
+            if (!currentStateInfo.IsName("yokai_run") && !currentStateInfo.IsName("yokai_jump"))
+            {
                 spriteRenderer.flipX = false;
                 animator.Play("yokai_run");
             }
@@ -133,7 +138,11 @@ public class PlayerController : MonoBehaviour {
         }
         else if (left)
         {
-            if (!currentStateInfo.IsName("yokai_run"))
+            if (currentStateInfo.IsName("yokai_jump"))
+            {
+                spriteRenderer.flipX = true;
+            }
+            if (!currentStateInfo.IsName("yokai_run") && !currentStateInfo.IsName("yokai_jump"))
             {
                 spriteRenderer.flipX = true;
                 animator.Play("yokai_run");
@@ -149,7 +158,8 @@ public class PlayerController : MonoBehaviour {
         if (isGrounded && jump)
         {
             jump = false;
-            //animator.Play("yokai_jump_forward");
+            animator.Play("yokai_jump");
+            Debug.Log("jump!");
             isGrounded = false;            
             velocity.y = Mathf.Sqrt(2f * jumpSpeed * -gravity);            
         }
@@ -157,16 +167,22 @@ public class PlayerController : MonoBehaviour {
 
 
         if (characterName == CharacterName.Yokai) {
-            if (!right && !left && !jump)
+            if (!right && !left && !jump && isGrounded)
             {
-                animator.Play("yokai_idle");
+                if (currentStateInfo.IsName("yokai_jump"))
+                {
+                    animator.Play("yokai_land");
+                }
+                else if(!currentStateInfo.IsName("yokai_land")){
+                    animator.Play("yokai_idle");
+                }
             }
             if (jump) {
                 Debug.Log(jump);
             }
         }
         if (characterName == CharacterName.Yumi) {
-            animator.Play("");
+            //Do Yumi stuff
         }
 
         //Horizontal velocity
