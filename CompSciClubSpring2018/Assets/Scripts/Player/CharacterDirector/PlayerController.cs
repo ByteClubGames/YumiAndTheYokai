@@ -103,11 +103,9 @@ public class PlayerController : MonoBehaviour {
 
     private void OnDestroy()
     {
-        if (characterName == CharacterName.Yokai) {
-            CinemachineVirtualCamera main_follow_camera = GameObject.Find("Main Follow Camera").GetComponent<CinemachineVirtualCamera>();
-            Transform yumi = GameObject.Find("Yumi").transform;
-            main_follow_camera.Follow = yumi;
-        }
+        CinemachineVirtualCamera main_follow_camera = GameObject.Find("Main Follow Camera").GetComponent<CinemachineVirtualCamera>();
+        Transform yumi = GameObject.Find("Yumi").transform;
+        main_follow_camera.Follow = yumi;
     }
 
     void Update()
