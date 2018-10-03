@@ -18,14 +18,17 @@ public class IceSpellUse : MonoBehaviour
     public GameObject iceSpellPrefab;
     private GameObject myCurrentObject;
     private bool _isDragging = false;
+    public Transform camera;
+    public float zComponent = Camera.main.transform.position.z;
 
-    /*void Start()
+    void Start()
     {
         this.GetComponent<TimeManager>().StartSlowDown(); // Time is slowed when spawner is here
     }
-    */
+    
     void Update()
     {
+        camera = GameObject.Find("Main Camera").transform;
         //Instantiates iceSpellPrefab upon clicking in the position of the click
         /*if (Input.GetMouseButtonDown(0))
         {
@@ -49,7 +52,7 @@ public class IceSpellUse : MonoBehaviour
         if (_isDragging) // Casts spell only if the mouse is held down and is dragging across the screen
         {
             Vector3 p = Camera.main.ScreenToWorldPoint(new
-               Vector3(Input.mousePosition.x, Input.mousePosition.y, 10.0f));
+               Vector3(Input.mousePosition.x, Input.mousePosition.y, zComponent));
             Instantiate(iceSpellPrefab, new Vector3(p.x, p.y, 0.0f),
                         Quaternion.identity);
             iceSpellPrefab.transform.position = Input.mousePosition;
