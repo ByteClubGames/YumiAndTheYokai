@@ -36,7 +36,7 @@ public class TurretProjectile : MonoBehaviour {
         projectileTransform = GetComponent<Transform>();
         projectilePos = GameObject.Find("TurretEnemy").GetComponent<Transform>().position + projectileTransform.position;
         target = (player.position - projectilePos).normalized;
-        projectileTransform.LookAt(-player.position);
+        //projectileTransform.LookAt(-player.position);
         
 
     }
