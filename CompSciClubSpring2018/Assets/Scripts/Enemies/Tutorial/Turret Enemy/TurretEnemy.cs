@@ -14,7 +14,6 @@ using UnityEngine;
 
 public class TurretEnemy : MonoBehaviour {
 
-    public Rigidbody turretEnemyRB;
     public GameObject projectile;
     private bool inRange = false;
     private Vector3 projectileSpawn;
@@ -22,15 +21,6 @@ public class TurretEnemy : MonoBehaviour {
     public float fireRate = 1F;
     private float nextShot = 0.0F;
 
-
-
-	// Use this for initialization
-	void Start ()
-    {
-        turretEnemyRB = GetComponent<Rigidbody>();
-        
-
-    }
 	
 	// Update is called once per frame
 	void Update ()

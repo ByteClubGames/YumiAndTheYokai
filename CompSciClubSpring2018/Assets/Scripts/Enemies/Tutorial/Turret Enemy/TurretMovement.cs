@@ -47,6 +47,3 @@ public class TurretMovement : MonoBehaviour {
         return new Vector3(x, transform.position.y, 0f);
     }
 }
- 
-
-

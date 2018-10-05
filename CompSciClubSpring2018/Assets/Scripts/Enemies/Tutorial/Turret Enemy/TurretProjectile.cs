@@ -19,25 +19,27 @@ public class TurretProjectile : MonoBehaviour {
 
     public float maxDistance;
     private float distance;
-    private Rigidbody turretProjectileRB;
-    private Rigidbody yokaiRB;
-    private Rigidbody humanRB;
+    private Transform projectileTransform;
+    private Transform player;
+    //private Rigidbody humanRB;
     private bool isHit = false; // will indicate if the projectile had a collision
     private bool isTooFar = false; // will indicate if the projectile is far from the astral (if it missed its target)
     private Vector3 projectilePos;
     private Vector3 humanPos;
     private Vector3 target;
-    private GameObject player;
+    //private GameObject player;
 
     // Use this for initialization
-    void Start ()
+    void Awake ()
     {
-        turretProjectileRB = GetComponent<Rigidbody>();
-        yokaiRB = GameObject.Find("Ferrox").GetComponent<Rigidbody>();
-        humanRB = GameObject.Find("Human-Player").GetComponent<Rigidbody>();
+        PlayerTransform();
+        projectileTransform = GetComponent<Transform>();
+        projectilePos = GameObject.Find("TurretEnemy").GetComponent<Transform>().position + projectileTransform.position;
+        target = (player.position - projectilePos).normalized;
+        projectileTransform.LookAt(-player.position);
+        
 
-        //turretProjectileRB.gravityScale = 0; 
-	}
+    }
 
     // Update is called once per frame
     void FixedUpdate()
@@ -49,7 +51,6 @@ public class TurretProjectile : MonoBehaviour {
     {
         CheckIsHit();
         CheckTooFar();
-        player = GameObject.Find("Human-Player");
     }
 
     private void OnTriggerEnter(Collider collision) // This is supposed to be triggered when the projectile intercepts the astral
@@ -70,18 +71,22 @@ public class TurretProjectile : MonoBehaviour {
 
     public void ProjectileMovement() // Makes the projectile move in a straight line towards the player
     {
+        projectileTransform.Translate(target);
+    }
 
-        //if (turretProjectileRB.velocity.x == 0f && turretProjectileRB.velocity.y == 0f) // As long as it isnt already moving: do action
-        //{
-        turretProjectileRB.AddForce(new Vector3(player.transform.position.x,20) * speed);
-        Debug.Log("Projectile movement is called" + player.transform.position.x);
-        // target = (humanRB.position - turretProjectileRB.position);
-
-        target = humanRB.position;
-       // target = target.normalized;
-       // turretProjectileRB.AddForce(target * speed); // Adds an instantaneous force towards yokai
-            
-        //}
+    /// <summary>
+    /// Assigns the player variable to either the Yokai transform (if it exists), or the Yumi transform.
+    /// </summary>
+    private void PlayerTransform()
+    {
+        if (GameObject.Find("Ferrox") == null)
+        {
+            player = GameObject.Find("Player-Human").GetComponent<Transform>();
+        }
+        else
+        {
+            player = GameObject.Find("Ferrox").GetComponent<Transform>();
+        }
     }
 
     private void CheckIsHit() // Destroys the projectile if it hits somthing
@@ -94,8 +99,8 @@ public class TurretProjectile : MonoBehaviour {
 
     private void CheckTooFar() // Will destroy the projectile if it has missed the yokai and is far away
     {
-        projectilePos = turretProjectileRB.position;
-        humanPos = humanRB.position;
+        //projectilePos = turretProjectileRB.position;
+        //humanPos = humanRB.position;
 
         distance = Vector3.Distance(projectilePos, humanPos);
 
