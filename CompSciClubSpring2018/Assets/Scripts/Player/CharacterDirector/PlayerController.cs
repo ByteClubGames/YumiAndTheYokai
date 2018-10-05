@@ -127,11 +127,13 @@ public class PlayerController : MonoBehaviour {
         {
             if (currentStateInfo.IsName("yokai_jump"))
             {
-                spriteRenderer.flipX = false;
+                //Temporary fix, Brad needs to flip the sheets for consistency
+                spriteRenderer.flipX = (characterName == CharacterName.Yokai) ? false : true;
             }
             if (!currentStateInfo.IsName("yokai_run") && !currentStateInfo.IsName("yokai_jump") && !currentStateInfo.IsName("yokai_land"))
             {
-                spriteRenderer.flipX = false;
+                //Temporary fix, Brad needs to flip the sheets for consistency
+                spriteRenderer.flipX = (characterName == CharacterName.Yokai) ? false : true;
                 if (!currentStateInfo.IsName("yokai_turn_animation_anim") && lastFrameFacingLeft)
                 {
                     animator.Play("yokai_turn_animation_anim");
@@ -146,11 +148,13 @@ public class PlayerController : MonoBehaviour {
         {
             if (currentStateInfo.IsName("yokai_jump"))
             {
-                spriteRenderer.flipX = true;
+                //Temporary fix, Brad needs to flip the sheets for consistency
+                spriteRenderer.flipX = (characterName == CharacterName.Yokai) ? true : false;
             }
             if (!currentStateInfo.IsName("yokai_run") && !currentStateInfo.IsName("yokai_jump") && !currentStateInfo.IsName("yokai_land"))
             {
-                spriteRenderer.flipX = true;
+                //Temporary fix, Brad needs to flip the sheets for consistency
+                spriteRenderer.flipX = (characterName == CharacterName.Yokai) ? true : false;
                 if (!currentStateInfo.IsName("yokai_turn_animation_anim") && lastFrameFacingRight)
                 {
                     animator.Play("yokai_turn_animation_anim");
@@ -171,7 +175,10 @@ public class PlayerController : MonoBehaviour {
         if (isGrounded && jump)
         {
             jump = false;
-            animator.Play("yokai_jump");
+            if(characterName == CharacterName.Yokai)
+                animator.Play("yokai_jump");
+            if (characterName == CharacterName.Yumi)
+                animator.Play("yumi_jump");
             Debug.Log("jump!");
             isGrounded = false;            
             velocity.y = Mathf.Sqrt(2f * jumpSpeed * -gravity);            
@@ -198,7 +205,27 @@ public class PlayerController : MonoBehaviour {
             }
         }
         if (characterName == CharacterName.Yumi) {
-            //Do Yumi stuff
+            if (velocity.y < 0)
+                animator.Play("yumi_fall");
+            if (!right && !left && !jump && isGrounded)
+            {
+                if (currentStateInfo.IsName("yumi_jump"))
+                {
+                    animator.Play("yumi_land");
+                }
+                else if (!currentStateInfo.IsName("yumi_land"))
+                {
+                    animator.Play("yumi_idle");
+                }
+            }
+            if (currentStateInfo.IsName("yumi_jump") && !jump && isGrounded)
+            {
+                animator.Play("yumi_land");
+            }
+            if (jump)
+            {
+                Debug.Log(jump);
+            }
         }
 
         //Horizontal velocity

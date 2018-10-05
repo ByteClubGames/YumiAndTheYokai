@@ -1,0 +1,265 @@
+2018-10-05 12:31:41.0228 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-05 12:43:54.0244 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-05 12:43:54.1635 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-05 12:44:03.5011 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.OnDestroy () (at Assets/Scripts/Player/CharacterDirector/PlayerController.cs:107)
+
+2018-10-05 12:44:03.7571 [DEBUG] Play mode: False
+2018-10-05 12:44:40.6144 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-05 12:44:40.7054 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-05 12:44:53.4175 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.OnDestroy () (at Assets/Scripts/Player/CharacterDirector/PlayerController.cs:106)
+
+2018-10-05 12:44:53.6385 [DEBUG] Play mode: False
+2018-10-05 12:45:10.1800 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-05 12:45:10.2650 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-05 12:45:20.3997 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.OnDestroy () (at Assets/Scripts/Player/CharacterDirector/PlayerController.cs:107)
+
+2018-10-05 12:45:20.6228 [DEBUG] Play mode: False
+2018-10-05 12:50:05.3017 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-05 12:50:05.4497 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-05 12:50:24.6906 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.OnDestroy () (at Assets/Scripts/Player/CharacterDirector/PlayerController.cs:107)
+
+2018-10-05 12:50:24.9446 [DEBUG] Play mode: False
+2018-10-05 12:51:03.9663 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-05 12:51:04.1223 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-05 12:51:59.3138 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.OnDestroy () (at Assets/Scripts/Player/CharacterDirector/PlayerController.cs:107)
+
+2018-10-05 12:51:59.7008 [DEBUG] Play mode: False
+2018-10-05 12:52:13.1584 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-05 12:52:13.3061 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-05 12:52:36.7601 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.OnDestroy () (at Assets/Scripts/Player/CharacterDirector/PlayerController.cs:107)
+
+2018-10-05 12:52:37.0119 [DEBUG] Play mode: False
+2018-10-05 12:53:47.2740 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-05 12:53:47.3708 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-05 12:53:56.4114 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.OnDestroy () (at Assets/Scripts/Player/CharacterDirector/PlayerController.cs:107)
+
+2018-10-05 12:53:56.6662 [DEBUG] Play mode: False
+2018-10-05 12:55:16.2219 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-05 12:55:16.3439 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-05 12:55:26.5382 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.OnDestroy () (at Assets/Scripts/Player/CharacterDirector/PlayerController.cs:107)
+
+2018-10-05 12:55:26.7903 [DEBUG] Play mode: False
+2018-10-05 12:56:02.1677 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-05 12:56:02.2717 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-05 12:57:18.2751 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.OnDestroy () (at Assets/Scripts/Player/CharacterDirector/PlayerController.cs:107)
+
+2018-10-05 12:57:18.2761 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.OnDestroy () (at Assets/Scripts/Player/CharacterDirector/PlayerController.cs:107)
+
+2018-10-05 12:57:18.4901 [DEBUG] Play mode: False
+2018-10-05 12:57:42.3931 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-05 12:57:42.5081 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-05 12:58:06.5090 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.OnDestroy () (at Assets/Scripts/Player/CharacterDirector/PlayerController.cs:107)
+
+2018-10-05 12:58:06.7230 [DEBUG] Play mode: False
+2018-10-05 12:58:34.8092 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-05 12:58:34.9542 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-05 12:59:57.2138 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.OnDestroy () (at Assets/Scripts/Player/CharacterDirector/PlayerController.cs:107)
+
+2018-10-05 12:59:57.2148 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.OnDestroy () (at Assets/Scripts/Player/CharacterDirector/PlayerController.cs:107)
+
+2018-10-05 12:59:57.3559 [DEBUG] Play mode: False
+2018-10-05 13:00:40.3358 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-05 13:00:40.4876 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-05 13:00:49.9902 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.OnDestroy () (at Assets/Scripts/Player/CharacterDirector/PlayerController.cs:107)
+
+2018-10-05 13:00:50.1342 [DEBUG] Play mode: False
+2018-10-05 13:01:03.1794 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-05 13:01:03.2714 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-05 13:01:35.2170 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.OnDestroy () (at Assets/Scripts/Player/CharacterDirector/PlayerController.cs:107)
+
+2018-10-05 13:01:35.3807 [DEBUG] Play mode: False
+2018-10-05 13:01:53.9720 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-05 13:01:54.0611 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-05 13:03:15.3974 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.OnDestroy () (at Assets/Scripts/Player/CharacterDirector/PlayerController.cs:107)
+
+2018-10-05 13:03:15.5594 [DEBUG] Play mode: False
+2018-10-05 13:03:48.1516 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-05 13:03:48.2675 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-05 13:05:36.3313 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.OnDestroy () (at Assets/Scripts/Player/CharacterDirector/PlayerController.cs:107)
+
+2018-10-05 13:05:36.3333 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.OnDestroy () (at Assets/Scripts/Player/CharacterDirector/PlayerController.cs:107)
+
+2018-10-05 13:05:36.5633 [DEBUG] Play mode: False
+2018-10-05 13:12:07.0639 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-05 13:12:07.1883 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-05 13:13:04.7727 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.OnDestroy () (at Assets/Scripts/Player/CharacterDirector/PlayerController.cs:106)
+
+2018-10-05 13:13:04.8957 [DEBUG] Play mode: False
+2018-10-05 13:13:48.0829 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-05 13:13:48.2020 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-05 13:15:19.2262 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.OnDestroy () (at Assets/Scripts/Player/CharacterDirector/PlayerController.cs:106)
+
+2018-10-05 13:15:19.3724 [DEBUG] Play mode: False
+2018-10-05 13:17:08.1615 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-05 13:17:08.2804 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-05 13:17:31.2313 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.OnDestroy () (at Assets/Scripts/Player/CharacterDirector/PlayerController.cs:106)
+
+2018-10-05 13:17:31.4734 [DEBUG] Play mode: False
+2018-10-05 13:19:45.8518 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-05 13:20:45.8226 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-05 13:20:45.9110 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-05 13:20:50.9540 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.OnDestroy () (at Assets/Scripts/Player/CharacterDirector/PlayerController.cs:106)
+
+2018-10-05 13:20:51.1740 [DEBUG] Play mode: False
+2018-10-05 13:21:13.6239 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-05 13:21:13.7641 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-05 13:21:20.4770 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.OnDestroy () (at Assets/Scripts/Player/CharacterDirector/PlayerController.cs:106)
+
+2018-10-05 13:21:20.6920 [DEBUG] Play mode: False
+2018-10-05 13:22:52.7926 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-05 13:22:52.8966 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-05 13:23:01.6606 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.OnDestroy () (at Assets/Scripts/Player/CharacterDirector/PlayerController.cs:106)
+
+2018-10-05 13:23:01.8746 [DEBUG] Play mode: False
+2018-10-05 13:24:33.6267 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-05 13:26:32.0921 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-05 13:26:32.2022 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-05 13:26:38.9135 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.OnDestroy () (at Assets/Scripts/Player/CharacterDirector/PlayerController.cs:107)
+
+2018-10-05 13:26:39.0555 [DEBUG] Play mode: False
+2018-10-05 13:26:58.5310 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-05 13:26:58.6781 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-05 13:27:39.5256 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.OnDestroy () (at Assets/Scripts/Player/CharacterDirector/PlayerController.cs:107)
+
+2018-10-05 13:27:39.6696 [DEBUG] Play mode: False
+2018-10-05 13:27:48.7255 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-05 13:27:48.8375 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-05 13:28:09.1111 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.OnDestroy () (at Assets/Scripts/Player/CharacterDirector/PlayerController.cs:107)
+
+2018-10-05 13:28:09.2541 [DEBUG] Play mode: False
+2018-10-05 13:28:36.0595 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-05 13:28:36.1775 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-05 13:29:50.1892 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.OnDestroy () (at Assets/Scripts/Player/CharacterDirector/PlayerController.cs:107)
+
+2018-10-05 13:29:50.3532 [DEBUG] Play mode: False
+2018-10-05 13:30:00.4988 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-05 13:30:00.6248 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-05 13:31:12.1912 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.OnDestroy () (at Assets/Scripts/Player/CharacterDirector/PlayerController.cs:107)
+
+2018-10-05 13:31:12.3609 [DEBUG] Play mode: False
+2018-10-05 13:32:27.1284 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-05 13:32:27.2754 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-05 13:33:22.5873 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.OnDestroy () (at Assets/Scripts/Player/CharacterDirector/PlayerController.cs:107)
+
+2018-10-05 13:33:22.5893 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.OnDestroy () (at Assets/Scripts/Player/CharacterDirector/PlayerController.cs:107)
+
+2018-10-05 13:33:22.7654 [DEBUG] Play mode: False
+2018-10-05 13:33:51.5855 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-05 13:33:51.7275 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-05 13:35:29.5987 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.OnDestroy () (at Assets/Scripts/Player/CharacterDirector/PlayerController.cs:107)
+
+2018-10-05 13:35:29.8267 [DEBUG] Play mode: False
+2018-10-05 14:05:28.7811 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-05 14:05:28.8376 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-05 14:07:28.0787 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.OnDestroy () (at Assets/Scripts/Player/CharacterDirector/PlayerController.cs:107)
+
+2018-10-05 14:07:28.0797 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.OnDestroy () (at Assets/Scripts/Player/CharacterDirector/PlayerController.cs:106)
+
+2018-10-05 14:07:28.2367 [DEBUG] Play mode: False
+2018-10-05 14:10:20.8764 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-05 14:10:20.9628 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-05 14:13:36.5290 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.OnDestroy () (at Assets/Scripts/Player/CharacterDirector/PlayerController.cs:107)
+
+2018-10-05 14:13:36.7720 [DEBUG] Play mode: False
+2018-10-05 14:14:24.9928 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-05 14:14:25.0908 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-05 14:18:13.1944 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.OnDestroy () (at Assets/Scripts/Player/CharacterDirector/PlayerController.cs:107)
+
+2018-10-05 14:18:13.3274 [DEBUG] Play mode: False
+2018-10-05 14:21:49.6836 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-05 14:23:24.8544 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-05 14:23:24.9524 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-05 14:28:44.1295 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.OnDestroy () (at Assets/Scripts/Player/CharacterDirector/PlayerController.cs:107)
+
+2018-10-05 14:28:44.2535 [DEBUG] Play mode: False
+2018-10-05 14:29:03.7969 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-05 14:29:03.8679 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-05 14:29:48.6673 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.OnDestroy () (at Assets/Scripts/Player/CharacterDirector/PlayerController.cs:107)
+
+2018-10-05 14:29:48.7794 [DEBUG] Play mode: False
+2018-10-05 14:29:56.2733 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-05 14:29:56.4583 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-05 14:30:02.4535 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.OnDestroy () (at Assets/Scripts/Player/CharacterDirector/PlayerController.cs:107)
+
+2018-10-05 14:30:02.8335 [DEBUG] Play mode: False
+2018-10-05 14:31:07.1104 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-05 14:31:07.1664 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-05 14:31:33.7493 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.OnDestroy () (at Assets/Scripts/Player/CharacterDirector/PlayerController.cs:107)
+
+2018-10-05 14:31:34.0715 [DEBUG] Play mode: False
+2018-10-05 14:31:57.1745 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-05 14:31:57.2595 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-05 14:33:55.6486 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.OnDestroy () (at Assets/Scripts/Player/CharacterDirector/PlayerController.cs:107)
+
+2018-10-05 14:33:55.6496 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.OnDestroy () (at Assets/Scripts/Player/CharacterDirector/PlayerController.cs:106)
+
+2018-10-05 14:33:55.7717 [DEBUG] Play mode: False
+2018-10-05 14:37:38.7390 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-05 14:37:38.8170 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-05 14:39:44.2274 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.OnDestroy () (at Assets/Scripts/Player/CharacterDirector/PlayerController.cs:107)
+
+2018-10-05 14:39:44.3767 [DEBUG] Play mode: False
+2018-10-05 14:39:53.2571 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-05 14:39:53.3621 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-05 14:43:33.0585 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.OnDestroy () (at Assets/Scripts/Player/CharacterDirector/PlayerController.cs:107)
+
+2018-10-05 14:43:33.0615 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.OnDestroy () (at Assets/Scripts/Player/CharacterDirector/PlayerController.cs:106)
+
+2018-10-05 14:43:33.2105 [DEBUG] Play mode: False
+2018-10-05 14:48:10.5960 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-05 14:48:10.7190 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-05 15:06:07.8907 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.OnDestroy () (at Assets/Scripts/Player/CharacterDirector/PlayerController.cs:107)
+
+2018-10-05 15:06:08.1777 [DEBUG] Play mode: False
+2018-10-05 16:19:17.7238 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-05 16:19:17.8668 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-05 16:19:22.6622 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.OnDestroy () (at Assets/Scripts/Player/CharacterDirector/PlayerController.cs:107)
+
+2018-10-05 16:19:22.9125 [DEBUG] Play mode: False
