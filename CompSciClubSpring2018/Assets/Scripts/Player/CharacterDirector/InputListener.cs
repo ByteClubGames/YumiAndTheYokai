@@ -1,7 +1,8 @@
 ﻿/*
- * Programmer: Keiran Glynn, Spencer Wilson
+ * Programmer: Keiran Glynn, Daniel Jaffe, Spencer Wilson
  * Date Created: 07/23/2018 @ 12:30 AM
- * Last Modified: 09/07/2018 @ 7:41 PM
+ * Last Modified: 10/05/2018 @ 10:00 PM
+ * Last Modification By: Daniel Jaffe
  * File Name: InputListener.cs
  * Description: This class is responsible listening to the keyboard, and calling the corresponding actions (movement, spells, etc). 
  */
@@ -16,31 +17,32 @@ public class InputListener : MonoBehaviour
     private PlayerController yokai;
     private PlayerController activePlayer; // Specifies which game object the movement is being called on (Yumi or Yokai)
     private YokaiSwitcher switcher; // Script responsible for spawning and deleting the Yokai
-
+    private SpellCasting spellcaster;
     private bool yumiActive; // Flag for if the human is currently active
 
-        
+
     void Start()
     {
-        human = GameObject.Find("Yumi").GetComponent<PlayerController>();        
+        human = GameObject.Find("Yumi").GetComponent<PlayerController>();
         switcher = GameObject.Find("Yumi").GetComponentInChildren<YokaiSwitcher>();
+        spellcaster = GameObject.Find("Yumi").GetComponentInChildren<SpellCasting>(); //You will need a gameObject attached to Yumi called SpellAbilities. On that object, attach the script SpellCasting and the spell spawner objects to that script.
 
         switcher.SetSpawnOffset(true); // If Yokai is spawned, do so on the right side of human by default
         activePlayer = human;
-        yumiActive = true;        
+        yumiActive = true;
     }
 
     void Update()
     {
         activePlayer = yumiActive ? human : yokai; // Choose which character to call movement methods on
-        //Debug.Log(activePlayer + " is now active");
-                
+                                                   //Debug.Log(activePlayer + " is now active");
+
         if (Input.GetKey("a") || Input.GetKey("left"))
         {
             activePlayer.CallLeft(true);
             activePlayer.CallRight(false);
             switcher.SetSpawnOffset(false); // If Yokai is spawned, do so on the left side of human
-        }        
+        }
         else if (Input.GetKey("d") || Input.GetKey("right"))
         {
             activePlayer.CallLeft(false);
@@ -59,17 +61,15 @@ public class InputListener : MonoBehaviour
             activePlayer.CallJump();
         }
 
-
-
         // Character Swap
-        if (Input.GetKeyDown("1") || Input.GetKeyDown("y"))
-        {            
+        if (Input.GetKeyDown("f")) //Updated the mapping to "f" to be in line with most other games. 1-3 will be for spells. -Daniel Jaffe
+        {
             if (GameObject.Find("Player-Ferrox(Clone)") == null)
             {
                 switcher.SpawnYokai();
                 yokai = GameObject.Find("Player-Ferrox(Clone)").GetComponent<PlayerController>();
                 activePlayer.ClearCalls();
-                SetYumiActive(false);                
+                SetYumiActive(false);
             }
             else
             {
@@ -77,10 +77,29 @@ public class InputListener : MonoBehaviour
                 SetYumiActive(true);
             }
         }
+
+        // Spell Casting!!! (Finally-- lol)
+        if (Input.GetKeyDown("1") && yumiActive) //Press 1 and start the earth spell
+        {
+            spellcaster.CallEarthSpell();
+        }
+        if (Input.GetKeyDown("2") && yumiActive) //Press 2 and start the ice spell
+        {
+            spellcaster.CallIceSpell();
+        }
+        if (Input.GetKeyDown("3") && yumiActive) //Press 3 and start the wind spell
+        {
+            spellcaster.CallWindSpell();
+        }
+        if (Input.GetKeyDown("escape") && yumiActive) //Press escape and cancel out of spell casting mode
+        {
+            spellcaster.DestroySpellSpawner();
+        }
+
     }
 
     public void SetYumiActive(bool active)
     {
-        yumiActive = active ? true : false;        
+        yumiActive = active ? true : false;
     }
 }
