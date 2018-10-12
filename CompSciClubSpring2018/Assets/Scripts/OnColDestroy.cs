@@ -9,7 +9,7 @@ public class OnColDestroy : MonoBehaviour {
 
     public void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "ColSphere")
+        if(other.gameObject.tag == "Player")
         {
             Destroy(enemy);
         }

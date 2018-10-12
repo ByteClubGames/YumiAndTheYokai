@@ -17,6 +17,7 @@ TagManager:
   - MovingPlatform
   - EnemyDetector
   - wall
+  - Enemy
   layers:
   - Default
   - TransparentFX
