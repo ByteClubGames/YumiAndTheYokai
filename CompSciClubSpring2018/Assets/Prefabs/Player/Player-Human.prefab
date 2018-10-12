@@ -36,8 +36,25 @@ GameObject:
   m_Component:
   - component: {fileID: 4676485865230420}
   - component: {fileID: 212910232381696716}
+  - component: {fileID: 95690887946748774}
   m_Layer: 9
   m_Name: GirlTempArt
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1528811099508420
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4575399928031828}
+  - component: {fileID: 114530070763906362}
+  m_Layer: 9
+  m_Name: SpellCaster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,6 +91,19 @@ Transform:
   m_Father: {fileID: 4677459353645124}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4575399928031828
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1528811099508420}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4677459353645124}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4676485865230420
 Transform:
   m_ObjectHideFlags: 1
@@ -99,6 +129,7 @@ Transform:
   m_Children:
   - {fileID: 4470050141939640}
   - {fileID: 4676485865230420}
+  - {fileID: 4575399928031828}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -129,6 +160,24 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 2.27, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &95690887946748774
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1381446288312214}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114329015629843224
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -140,8 +189,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f50b7f8295b71bc47879f72eadc8a443, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gravity: -20
-  jumpSpeed: 2.5
+  characterName: 1
+  gravity: -65
+  jumpSpeed: 4.5
   horizontalSpeed: 8
   maxClimbableSlope: 50
   skinWidth: 0.3
@@ -163,6 +213,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yokai: {fileID: 1766990494964196, guid: 179e93a3a8996b4468f2b1cd28befde7, type: 2}
+--- !u!114 &114530070763906362
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1528811099508420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66c4b92c791ce1842a0c7eebed6fe723, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnerEarth: {fileID: 1495151425050826, guid: a6990c292d15e4e4f87526820468aee2,
+    type: 2}
+  spawnerIce: {fileID: 1356892672785484, guid: 7e7b613dffbf941cabc501984ef3e1d3, type: 2}
+  spawnerWind: {fileID: 1917788997985728, guid: 8fe9fe1f152f2425c99f8f83afaa1a01,
+    type: 2}
 --- !u!212 &212910232381696716
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -198,7 +264,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e62f1716d829dbc45a771e0c7fdecd8a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1124e92c8486de84ab44b17f2cdd4614, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
