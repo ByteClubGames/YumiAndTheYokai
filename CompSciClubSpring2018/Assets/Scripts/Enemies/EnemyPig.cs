@@ -38,6 +38,9 @@ public class EnemyPig : MonoBehaviour {
     public bool challenged = false;           // Determines if the enemy should be attacking the player or not
     public bool patrolRight = true;
 
+    private Animator animator;
+    private SpriteRenderer sprite_renderer;
+
     [Header("Objects")]
     private PlayerDetection detectPlayer;
     Rigidbody enemy;
@@ -51,6 +54,9 @@ public class EnemyPig : MonoBehaviour {
         detectPlayer = this.GetComponentInChildren<PlayerDetection>();
 
         originalPosition = transform.position;
+
+        animator = this.GetComponentInChildren<Animator>();
+        sprite_renderer = this.GetComponentInChildren<SpriteRenderer>();
     }
 	
 	void FixedUpdate () {
@@ -70,8 +76,14 @@ public class EnemyPig : MonoBehaviour {
     private void Movement()     
     {
 
+
+        AnimatorStateInfo anim_state = animator.GetCurrentAnimatorStateInfo(0);
+
         if (challenged)                                         //when the player is within range
         {
+            if (anim_state.IsName("pig_idle")) {
+                animator.Play("pig_wakeup");
+            }
             Vector3 directionOfPlayer = Player.transform.position - transform.position;
             moveToPosition(directionOfPlayer, AttackMaxSpeed);  //move towards the player
         }
@@ -80,6 +92,8 @@ public class EnemyPig : MonoBehaviour {
 
             if (patrolRight)                               //This if-else block makes the enemy wander left to right based on left and right boundries
             {
+
+                sprite_renderer.flipX = false;
 
                 Vector3 directionToNext = rightPos - enemy.transform.position;      //finds the direction vector to the right boundry
                 RaycastHit hit;
@@ -99,6 +113,8 @@ public class EnemyPig : MonoBehaviour {
             }
             else                                            //the enemy has now switched directions
             {
+
+                sprite_renderer.flipX = true;
 
                 Vector3 directionToNext = leftPos - enemy.transform.position;
                 RaycastHit hit;
@@ -125,6 +141,7 @@ public class EnemyPig : MonoBehaviour {
             if (enemy.velocity.x < speed)                       //if enemy speed is less than max speed 
             {
                 enemy.AddForce(Vector3.right * acceleration);   //add force to the right
+                sprite_renderer.flipX = false;
             }
         }
         else                                                    // if target direction is to the left
@@ -132,6 +149,7 @@ public class EnemyPig : MonoBehaviour {
             if (enemy.velocity.x > -speed)
             {
                 enemy.AddForce(Vector3.left * acceleration);    //add force to the left
+                sprite_renderer.flipX = true;
             }
         }
     }
