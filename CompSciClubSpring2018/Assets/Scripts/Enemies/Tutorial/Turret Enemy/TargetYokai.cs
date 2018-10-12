@@ -14,30 +14,30 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TargetYokai : MonoBehaviour {
-    public static Transform targeter;
-    private void OnTriggerStay(Collider collision)
-    {
-        if (collision.tag == "Human") 
-        {
-            targeter = GameObject.Find("Player-Human").transform;
-            GameObject.Find("ProjectileSpawn").GetComponent<TurretEnemy>().SetInRange(true);
-            Debug.Log("In range of enemy turret");
-        } else if (collision.tag == "Yokai")
-        {
-            targeter = GameObject.Find("Yokai-Human").transform;
-            GameObject.Find("ProjectileSpawn").GetComponent<TurretEnemy>().SetInRange(true);
-            Debug.Log("In range of enemy turret");
-        }
-    } // Activated when the astral is inside of the turret's range
+    //public static Transform targeter;
+    //private void OnTriggerStay(Collider collision)
+    //{
+    //    if (collision.tag == "Human") 
+    //    {
+    //        targeter = GameObject.Find("Player-Human").transform;
+    //        GameObject.Find("ProjectileSpawn").GetComponent<TurretEnemy>().SetInRange(true);
+    //        Debug.Log("In range of enemy turret");
+    //    } else if (collision.tag == "Yokai")
+    //    {
+    //        targeter = GameObject.Find("Yokai-Human").transform;
+    //        GameObject.Find("ProjectileSpawn").GetComponent<TurretEnemy>().SetInRange(true);
+    //        Debug.Log("In range of enemy turret");
+    //    }
+    //} // Activated when the astral is inside of the turret's range
 
-    private void OnTriggerExit(Collider collision)
-    {
-        if (collision.tag == "Ferrox" || collision.tag == "Human")
-        {
-            GameObject.Find("ProjectileSpawn").GetComponent<TurretEnemy>().SetInRange(false);
-            targeter = null;
-            Debug.Log("Out of range of enemy turret");
+    //private void OnTriggerExit(Collider collision)
+    //{
+    //    if (collision.tag == "Ferrox" || collision.tag == "Human")
+    //    {
+    //        GameObject.Find("ProjectileSpawn").GetComponent<TurretEnemy>().SetInRange(false);
+    //        targeter = null;
+    //        Debug.Log("Out of range of enemy turret");
 
-        }
-    } // Resets the value of TurretEnemy.inRange to false when the astral goes out of range (leaves box collider)
+    //    }
+    //} // Resets the value of TurretEnemy.inRange to false when the astral goes out of range (leaves box collider)
 }

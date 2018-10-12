@@ -34,7 +34,8 @@ public class TurretProjectile : MonoBehaviour {
     {
         PlayerTransform();
         projectileTransform = GetComponent<Transform>();
-        projectilePos = GameObject.Find("TurretEnemy").GetComponent<Transform>().position + projectileTransform.position;
+        projectilePos = GameObject.Find("ProjectileSpawn").GetComponent<Transform>().position;// + projectileTransform.position;
+        //projectilePos = GameObject.GetComponent<TurretEnemy>().projPos + projectileTransform.position;
         target = (player.position - projectilePos).normalized;
         //projectileTransform.LookAt(-player.position);
         
@@ -63,15 +64,15 @@ public class TurretProjectile : MonoBehaviour {
             GameObject.Find("Player-Human").GetComponent<HumanHealth>().TakeDamage(projectileDamage);
             isHit = true; // regardless of weather or not it hit the astral, it will be as having hit someting
         }
-        else if(collision.gameObject.tag == "EnemyDetection")
+        else if (collision.gameObject.tag == "EnemyDetection")
         {
             // Do nothing
-        }        
+        }
     }
 
     public void ProjectileMovement() // Makes the projectile move in a straight line towards the player
     {
-        projectileTransform.Translate(target);
+        projectileTransform.Translate(target * speed * Time.deltaTime);
     }
 
     /// <summary>
@@ -99,8 +100,6 @@ public class TurretProjectile : MonoBehaviour {
 
     private void CheckTooFar() // Will destroy the projectile if it has missed the yokai and is far away
     {
-        //projectilePos = turretProjectileRB.position;
-        //humanPos = humanRB.position;
 
         distance = Vector3.Distance(projectilePos, humanPos);
 

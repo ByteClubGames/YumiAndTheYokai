@@ -25,9 +25,8 @@ public class TurretHeadTurner : MonoBehaviour {
 
     void Update ()
     {
-        target = TargetYokai.targeter;
+        target = TurretEnemy.targeter;
         RotateHead();
-        
 	}
 
     private void RotateHead()
