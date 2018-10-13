@@ -39,7 +39,7 @@ public class TurretHeadTurner : MonoBehaviour {
             transform.rotation = new Quaternion(0, 0, rotation.z, rotation.w);
         } else { 
            // Debug.Log("hello");
-            rotation = Quaternion.LookRotation(defaultLook, transform.TransformDirection(Vector3.back));
+            rotation = Quaternion.LookRotation(defaultLook, transform.TransformDirection(0,0,-1));
             transform.rotation = new Quaternion(0, 0, rotation.z, rotation.w);
         }
         

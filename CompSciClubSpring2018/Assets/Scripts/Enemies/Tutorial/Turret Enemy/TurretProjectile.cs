@@ -19,6 +19,7 @@ public class TurretProjectile : MonoBehaviour {
 
     public float maxDistance;
     private float distance;
+    public float timeToDestroy;
     private Transform projectileTransform;
     private Transform player;
     //private Rigidbody humanRB;
@@ -73,6 +74,7 @@ public class TurretProjectile : MonoBehaviour {
     public void ProjectileMovement() // Makes the projectile move in a straight line towards the player
     {
         projectileTransform.Translate(target * speed * Time.deltaTime);
+        StartCoroutine(waitToDestroy(timeToDestroy));
     }
 
     /// <summary>
@@ -103,9 +105,14 @@ public class TurretProjectile : MonoBehaviour {
 
         distance = Vector3.Distance(projectilePos, humanPos);
 
-        if(distance > maxDistance)
+        if (distance > maxDistance)
         {
             Destroy(gameObject);
         }
+    }
+    private IEnumerator waitToDestroy(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+        Destroy(this.gameObject);
     }
 }
