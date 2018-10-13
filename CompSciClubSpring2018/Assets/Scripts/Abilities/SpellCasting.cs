@@ -2,15 +2,13 @@
 ********************************************************************************
 *Creator(s).........................................................Daniel Jaffe
 *Created..............................................................10/05/2018
-*Last Modified........................................................10/05/2018
+*Last Modified............................................@ 7:03PM on 10/12/2018
 *Last Modified by...................................................Daniel Jaffe
 *
-*Description:   This script is used to create the spawner objects needed to cast
-*               Yumi's spells. Note that you will need to attach the three spell
-*               spawner objects to the their associated gameObject variables on
-*               the script. Note additionally that this just creates the spawner
-*               and you will need to utilize a 2nd script to see that they are
-*               properly destroyed after casting.
+*Description:   This script is used to create or destroy the spawner objects
+*               needed to cast Yumi's spells. Note that you will need to attach
+*               the three spell spawner objects to the their associated
+*               gameObject variables on the script. 
 ********************************************************************************
  */
 using UnityEngine;
@@ -52,7 +50,7 @@ public class SpellCasting : MonoBehaviour
             spellOn = true;
         }
     }
-
+    //Used to destroy the spell spawner and hence prevent further casting of spells
     public void DestroySpellSpawner()
     {
         if (spellOn == true)
