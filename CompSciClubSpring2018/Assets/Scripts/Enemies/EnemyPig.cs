@@ -41,6 +41,8 @@ public class EnemyPig : MonoBehaviour {
     private Animator animator;
     private SpriteRenderer sprite_renderer;
 
+    public GameObject pig_explosion;
+
     [Header("Objects")]
     private PlayerDetection detectPlayer;
     Rigidbody enemy;
@@ -151,6 +153,15 @@ public class EnemyPig : MonoBehaviour {
                 enemy.AddForce(Vector3.left * acceleration);    //add force to the left
                 sprite_renderer.flipX = true;
             }
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        
+        if (collision.gameObject.name == "Yumi") {
+            Instantiate(pig_explosion, this.transform.position + Vector3.down * 0.5f, Quaternion.identity);
+            Destroy(this.gameObject);
         }
     }
 

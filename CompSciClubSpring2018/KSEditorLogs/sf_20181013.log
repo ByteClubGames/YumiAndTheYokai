@@ -1,0 +1,312 @@
+2018-10-13 11:38:40.4444 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-13 11:40:39.8827 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-13 11:41:02.8962 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-13 11:41:02.9875 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-13 11:41:09.8775 [DEBUG] Play mode: False
+2018-10-13 11:44:14.9507 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-13 11:44:15.0497 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-13 11:44:28.2057 [DEBUG] Play mode: False
+2018-10-13 11:44:42.5550 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-13 11:44:42.6500 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-13 11:44:52.1315 [DEBUG] Play mode: False
+2018-10-13 11:45:15.9548 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-13 11:45:16.0178 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-13 11:45:18.3140 [DEBUG] Play mode: False
+2018-10-13 11:45:41.8158 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-13 11:45:41.8828 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-13 11:45:42.8203 [DEBUG] Play mode: False
+2018-10-13 11:46:00.9383 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-13 11:46:01.0133 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-13 11:46:02.3269 [DEBUG] Play mode: False
+2018-10-13 11:46:28.9999 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-13 11:46:29.0881 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-13 11:46:54.7649 [DEBUG] Play mode: False
+2018-10-13 11:47:18.4268 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-13 11:47:18.5278 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-13 11:47:25.4974 [DEBUG] Play mode: False
+2018-10-13 11:48:51.8234 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-13 11:52:27.3221 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-13 11:52:41.4785 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-13 11:52:41.5775 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-13 11:52:59.1880 [ERROR] MissingReferenceException: The object of type 'GameObject' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object.
+UnityEngine.Object.Internal_InstantiateSingle (UnityEngine.Object data, Vector3 pos, Quaternion rot)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:211)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+Spawner.spawn () (at Assets/Art/pig/Spawner.cs:20)
+
+2018-10-13 11:53:00.1873 [ERROR] MissingReferenceException: The object of type 'GameObject' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object.
+UnityEngine.Object.Internal_InstantiateSingle (UnityEngine.Object data, Vector3 pos, Quaternion rot)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:211)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+Spawner.spawn () (at Assets/Art/pig/Spawner.cs:20)
+
+2018-10-13 11:53:01.1823 [ERROR] MissingReferenceException: The object of type 'GameObject' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object.
+UnityEngine.Object.Internal_InstantiateSingle (UnityEngine.Object data, Vector3 pos, Quaternion rot)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:211)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+Spawner.spawn () (at Assets/Art/pig/Spawner.cs:20)
+
+2018-10-13 11:53:02.1837 [ERROR] MissingReferenceException: The object of type 'GameObject' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object.
+UnityEngine.Object.Internal_InstantiateSingle (UnityEngine.Object data, Vector3 pos, Quaternion rot)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:211)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+Spawner.spawn () (at Assets/Art/pig/Spawner.cs:20)
+
+2018-10-13 11:53:03.1880 [ERROR] MissingReferenceException: The object of type 'GameObject' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object.
+UnityEngine.Object.Internal_InstantiateSingle (UnityEngine.Object data, Vector3 pos, Quaternion rot)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:211)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+Spawner.spawn () (at Assets/Art/pig/Spawner.cs:20)
+
+2018-10-13 11:53:04.1843 [ERROR] MissingReferenceException: The object of type 'GameObject' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object.
+UnityEngine.Object.Internal_InstantiateSingle (UnityEngine.Object data, Vector3 pos, Quaternion rot)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:211)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+Spawner.spawn () (at Assets/Art/pig/Spawner.cs:20)
+
+2018-10-13 11:53:05.1827 [ERROR] MissingReferenceException: The object of type 'GameObject' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object.
+UnityEngine.Object.Internal_InstantiateSingle (UnityEngine.Object data, Vector3 pos, Quaternion rot)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:211)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+Spawner.spawn () (at Assets/Art/pig/Spawner.cs:20)
+
+2018-10-13 11:53:06.1822 [ERROR] MissingReferenceException: The object of type 'GameObject' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object.
+UnityEngine.Object.Internal_InstantiateSingle (UnityEngine.Object data, Vector3 pos, Quaternion rot)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:211)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+Spawner.spawn () (at Assets/Art/pig/Spawner.cs:20)
+
+2018-10-13 11:53:07.1787 [ERROR] MissingReferenceException: The object of type 'GameObject' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object.
+UnityEngine.Object.Internal_InstantiateSingle (UnityEngine.Object data, Vector3 pos, Quaternion rot)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:211)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+Spawner.spawn () (at Assets/Art/pig/Spawner.cs:20)
+
+2018-10-13 11:53:08.1883 [ERROR] MissingReferenceException: The object of type 'GameObject' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object.
+UnityEngine.Object.Internal_InstantiateSingle (UnityEngine.Object data, Vector3 pos, Quaternion rot)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:211)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+Spawner.spawn () (at Assets/Art/pig/Spawner.cs:20)
+
+2018-10-13 11:53:09.1856 [ERROR] MissingReferenceException: The object of type 'GameObject' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object.
+UnityEngine.Object.Internal_InstantiateSingle (UnityEngine.Object data, Vector3 pos, Quaternion rot)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:211)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+Spawner.spawn () (at Assets/Art/pig/Spawner.cs:20)
+
+2018-10-13 11:53:10.1848 [ERROR] MissingReferenceException: The object of type 'GameObject' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object.
+UnityEngine.Object.Internal_InstantiateSingle (UnityEngine.Object data, Vector3 pos, Quaternion rot)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:211)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+Spawner.spawn () (at Assets/Art/pig/Spawner.cs:20)
+
+2018-10-13 11:53:11.1731 [ERROR] MissingReferenceException: The object of type 'GameObject' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object.
+UnityEngine.Object.Internal_InstantiateSingle (UnityEngine.Object data, Vector3 pos, Quaternion rot)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:211)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+Spawner.spawn () (at Assets/Art/pig/Spawner.cs:20)
+
+2018-10-13 11:53:12.4156 [ERROR] MissingReferenceException: The object of type 'GameObject' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object.
+UnityEngine.Object.Internal_InstantiateSingle (UnityEngine.Object data, Vector3 pos, Quaternion rot)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:211)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+Spawner.spawn () (at Assets/Art/pig/Spawner.cs:20)
+
+2018-10-13 11:53:13.1809 [ERROR] MissingReferenceException: The object of type 'GameObject' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object.
+UnityEngine.Object.Internal_InstantiateSingle (UnityEngine.Object data, Vector3 pos, Quaternion rot)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:211)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+Spawner.spawn () (at Assets/Art/pig/Spawner.cs:20)
+
+2018-10-13 11:53:14.1795 [ERROR] MissingReferenceException: The object of type 'GameObject' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object.
+UnityEngine.Object.Internal_InstantiateSingle (UnityEngine.Object data, Vector3 pos, Quaternion rot)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:211)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+Spawner.spawn () (at Assets/Art/pig/Spawner.cs:20)
+
+2018-10-13 11:53:15.1729 [ERROR] MissingReferenceException: The object of type 'GameObject' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object.
+UnityEngine.Object.Internal_InstantiateSingle (UnityEngine.Object data, Vector3 pos, Quaternion rot)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:211)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+Spawner.spawn () (at Assets/Art/pig/Spawner.cs:20)
+
+2018-10-13 11:53:16.1745 [ERROR] MissingReferenceException: The object of type 'GameObject' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object.
+UnityEngine.Object.Internal_InstantiateSingle (UnityEngine.Object data, Vector3 pos, Quaternion rot)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:211)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+Spawner.spawn () (at Assets/Art/pig/Spawner.cs:20)
+
+2018-10-13 11:53:17.1755 [ERROR] MissingReferenceException: The object of type 'GameObject' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object.
+UnityEngine.Object.Internal_InstantiateSingle (UnityEngine.Object data, Vector3 pos, Quaternion rot)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:211)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+Spawner.spawn () (at Assets/Art/pig/Spawner.cs:20)
+
+2018-10-13 11:53:18.1988 [ERROR] MissingReferenceException: The object of type 'GameObject' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object.
+UnityEngine.Object.Internal_InstantiateSingle (UnityEngine.Object data, Vector3 pos, Quaternion rot)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:211)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+Spawner.spawn () (at Assets/Art/pig/Spawner.cs:20)
+
+2018-10-13 11:53:18.5279 [DEBUG] Play mode: False
+2018-10-13 11:53:27.5138 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-13 11:53:27.6302 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-13 11:53:40.2322 [ERROR] MissingReferenceException: The object of type 'GameObject' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object.
+UnityEngine.Object.Internal_InstantiateSingle (UnityEngine.Object data, Vector3 pos, Quaternion rot)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:211)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+Spawner.spawn () (at Assets/Art/pig/Spawner.cs:20)
+
+2018-10-13 11:53:41.2296 [ERROR] MissingReferenceException: The object of type 'GameObject' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object.
+UnityEngine.Object.Internal_InstantiateSingle (UnityEngine.Object data, Vector3 pos, Quaternion rot)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:211)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+Spawner.spawn () (at Assets/Art/pig/Spawner.cs:20)
+
+2018-10-13 11:53:42.2335 [ERROR] MissingReferenceException: The object of type 'GameObject' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object.
+UnityEngine.Object.Internal_InstantiateSingle (UnityEngine.Object data, Vector3 pos, Quaternion rot)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:211)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+Spawner.spawn () (at Assets/Art/pig/Spawner.cs:20)
+
+2018-10-13 11:53:43.2277 [ERROR] MissingReferenceException: The object of type 'GameObject' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object.
+UnityEngine.Object.Internal_InstantiateSingle (UnityEngine.Object data, Vector3 pos, Quaternion rot)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:211)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+Spawner.spawn () (at Assets/Art/pig/Spawner.cs:20)
+
+2018-10-13 11:53:44.2280 [ERROR] MissingReferenceException: The object of type 'GameObject' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object.
+UnityEngine.Object.Internal_InstantiateSingle (UnityEngine.Object data, Vector3 pos, Quaternion rot)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:211)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+Spawner.spawn () (at Assets/Art/pig/Spawner.cs:20)
+
+2018-10-13 11:53:45.2222 [ERROR] MissingReferenceException: The object of type 'GameObject' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object.
+UnityEngine.Object.Internal_InstantiateSingle (UnityEngine.Object data, Vector3 pos, Quaternion rot)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:211)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+Spawner.spawn () (at Assets/Art/pig/Spawner.cs:20)
+
+2018-10-13 11:53:46.2319 [ERROR] MissingReferenceException: The object of type 'GameObject' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object.
+UnityEngine.Object.Internal_InstantiateSingle (UnityEngine.Object data, Vector3 pos, Quaternion rot)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:211)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+Spawner.spawn () (at Assets/Art/pig/Spawner.cs:20)
+
+2018-10-13 11:53:47.2325 [ERROR] MissingReferenceException: The object of type 'GameObject' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object.
+UnityEngine.Object.Internal_InstantiateSingle (UnityEngine.Object data, Vector3 pos, Quaternion rot)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:211)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+Spawner.spawn () (at Assets/Art/pig/Spawner.cs:20)
+
+2018-10-13 11:53:48.2264 [ERROR] MissingReferenceException: The object of type 'GameObject' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object.
+UnityEngine.Object.Internal_InstantiateSingle (UnityEngine.Object data, Vector3 pos, Quaternion rot)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:211)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+Spawner.spawn () (at Assets/Art/pig/Spawner.cs:20)
+
+2018-10-13 11:53:49.2327 [ERROR] MissingReferenceException: The object of type 'GameObject' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object.
+UnityEngine.Object.Internal_InstantiateSingle (UnityEngine.Object data, Vector3 pos, Quaternion rot)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:211)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+Spawner.spawn () (at Assets/Art/pig/Spawner.cs:20)
+
+2018-10-13 11:53:50.2263 [ERROR] MissingReferenceException: The object of type 'GameObject' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object.
+UnityEngine.Object.Internal_InstantiateSingle (UnityEngine.Object data, Vector3 pos, Quaternion rot)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:211)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+Spawner.spawn () (at Assets/Art/pig/Spawner.cs:20)
+
+2018-10-13 11:53:51.2205 [ERROR] MissingReferenceException: The object of type 'GameObject' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object.
+UnityEngine.Object.Internal_InstantiateSingle (UnityEngine.Object data, Vector3 pos, Quaternion rot)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:211)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+Spawner.spawn () (at Assets/Art/pig/Spawner.cs:20)
+
+2018-10-13 11:53:52.2230 [ERROR] MissingReferenceException: The object of type 'GameObject' has been destroyed but you are still trying to access it.
+Your script should either check if it is null or you should not destroy the object.
+UnityEngine.Object.Internal_InstantiateSingle (UnityEngine.Object data, Vector3 pos, Quaternion rot)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:211)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+Spawner.spawn () (at Assets/Art/pig/Spawner.cs:20)
+
+2018-10-13 11:53:53.1006 [DEBUG] Play mode: False
+2018-10-13 11:54:21.9011 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-13 11:54:21.9750 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-13 11:54:52.8928 [DEBUG] Play mode: False
+2018-10-13 11:55:09.0857 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-13 11:55:09.1647 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-13 11:56:31.2338 [DEBUG] Play mode: False
+2018-10-13 12:06:04.4114 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-13 12:06:04.5008 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-13 12:06:49.2791 [DEBUG] Play mode: False
+2018-10-13 12:06:54.7368 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-13 12:06:54.8128 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-13 12:07:59.0241 [DEBUG] Play mode: False
+2018-10-13 12:08:49.5911 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-13 12:08:49.6851 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-13 12:08:56.5038 [DEBUG] Play mode: False
+2018-10-13 12:09:22.9840 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-13 12:09:39.4488 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-13 12:09:39.5351 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-13 12:28:23.6056 [DEBUG] Play mode: False
+2018-10-13 12:29:16.6412 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-13 12:29:16.7242 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-13 12:29:23.0220 [DEBUG] Play mode: False
+2018-10-13 12:29:40.8503 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-13 12:29:40.9303 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-13 12:30:34.2623 [DEBUG] Play mode: False
+2018-10-13 12:30:44.7455 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-13 12:30:44.8075 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-13 12:35:59.3606 [DEBUG] Play mode: False
+2018-10-13 12:36:29.9436 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-13 12:36:30.0197 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-13 12:38:33.9471 [DEBUG] Play mode: False
+2018-10-13 12:38:43.1754 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-13 12:38:43.2504 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-13 12:40:45.8454 [DEBUG] Play mode: False
+2018-10-13 12:42:04.0985 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-13 12:42:04.1815 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-13 12:42:34.5517 [DEBUG] Play mode: False
+2018-10-13 12:43:27.2100 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-13 12:43:27.3173 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-13 12:45:25.5645 [DEBUG] Play mode: False
+2018-10-13 12:46:02.9836 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-13 12:46:03.0876 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-13 12:47:10.9089 [DEBUG] Play mode: False
+2018-10-13 12:47:16.9903 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-13 12:47:22.8487 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-13 12:47:22.9257 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-13 12:48:20.2076 [DEBUG] Play mode: False
