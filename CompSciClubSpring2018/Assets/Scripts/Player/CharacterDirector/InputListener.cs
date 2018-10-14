@@ -1,8 +1,8 @@
 ﻿/*
- * Programmer: Keiran Glynn, Daniel Jaffe, Spencer Wilson
+ * Programmer: Keiran Glynn, Daniel Jaffe, Spencer Wilson, Michael Sanchez
  * Date Created: 07/23/2018 @ 12:30 AM
- * Last Modified: 10/05/2018 @ 10:00 PM
- * Last Modification By: Daniel Jaffe
+ * Last Modified: 10/14/2018 @ 10:00 PM
+ * Last Modification By: Michael Sanchez
  * File Name: InputListener.cs
  * Description: This class is responsible listening to the keyboard, and calling the corresponding actions (movement, spells, etc). 
  */
