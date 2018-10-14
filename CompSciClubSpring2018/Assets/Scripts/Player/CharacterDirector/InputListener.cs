@@ -1,8 +1,8 @@
 ﻿/*
- * Programmer: Keiran Glynn, Daniel Jaffe, Spencer Wilson
+ * Programmer: Keiran Glynn, Daniel Jaffe, Spencer Wilson, Michael Sanchez
  * Date Created: 07/23/2018 @ 12:30 AM
- * Last Modified: 10/05/2018 @ 10:00 PM
- * Last Modification By: Daniel Jaffe
+ * Last Modified: 10/14/2018 @ 10:00 PM
+ * Last Modification By: Michael Sanchez
  * File Name: InputListener.cs
  * Description: This class is responsible listening to the keyboard, and calling the corresponding actions (movement, spells, etc). 
  */
@@ -18,6 +18,7 @@ public class InputListener : MonoBehaviour
     private PlayerController activePlayer; // Specifies which game object the movement is being called on (Yumi or Yokai)
     private YokaiSwitcher switcher; // Script responsible for spawning and deleting the Yokai
     private SpellCasting spellcaster;
+    private VisibilityController invisibleObjects;
     private bool yumiActive; // Flag for if the human is currently active
 
 
@@ -26,6 +27,7 @@ public class InputListener : MonoBehaviour
         human = GameObject.Find("Yumi").GetComponent<PlayerController>();
         switcher = GameObject.Find("Yumi").GetComponentInChildren<YokaiSwitcher>();
         spellcaster = GameObject.Find("Yumi").GetComponentInChildren<SpellCasting>(); //You will need a gameObject attached to Yumi called SpellAbilities. On that object, attach the script SpellCasting and the spell spawner objects to that script.
+        invisibleObjects = GameObject.Find("SceneDirector").GetComponentInChildren<VisibilityController>();
 
         switcher.SetSpawnOffset(true); // If Yokai is spawned, do so on the right side of human by default
         activePlayer = human;
@@ -67,6 +69,7 @@ public class InputListener : MonoBehaviour
             if (GameObject.Find("Player-Ferrox(Clone)") == null)
             {
                 switcher.SpawnYokai();
+                invisibleObjects.SetVisible();
                 yokai = GameObject.Find("Player-Ferrox(Clone)").GetComponent<PlayerController>();
                 activePlayer.ClearCalls();
                 SetYumiActive(false);
@@ -74,6 +77,7 @@ public class InputListener : MonoBehaviour
             else
             {
                 switcher.DeleteYokai(GameObject.Find("Player-Ferrox(Clone)"));
+                invisibleObjects.SetInvisible();
                 SetYumiActive(true);
             }
         }
