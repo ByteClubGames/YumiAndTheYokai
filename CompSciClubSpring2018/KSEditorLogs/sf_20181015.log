@@ -127,3 +127,309 @@ PlayerController.OnDestroy () (at Assets/Scripts/Player/Input & Movement/PlayerC
 
 2018-10-15 13:02:49.3997 [DEBUG] Play mode: False
 2018-10-15 13:05:34.8729 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-15 13:09:22.7414 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-15 13:10:06.3465 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-15 13:10:06.4023 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-15 13:11:35.2783 [ERROR] UnassignedReferenceException: The variable InvisibleObject of VisibilityController has not been assigned.
+You probably need to assign the InvisibleObject variable of the VisibilityController script in the inspector.
+VisibilityController.SetVisible () (at Assets/Scripts/Enviornment/VisibilityController.cs:12)
+InputListener.Update () (at Assets/Scripts/Player/Input & Movement/InputListener.cs:77)
+
+2018-10-15 13:11:39.7917 [ERROR] UnassignedReferenceException: The variable InvisibleObject of VisibilityController has not been assigned.
+You probably need to assign the InvisibleObject variable of the VisibilityController script in the inspector.
+VisibilityController.SetVisible () (at Assets/Scripts/Enviornment/VisibilityController.cs:12)
+InputListener.Update () (at Assets/Scripts/Player/Input & Movement/InputListener.cs:77)
+
+2018-10-15 13:11:41.1282 [ERROR] UnassignedReferenceException: The variable InvisibleObject of VisibilityController has not been assigned.
+You probably need to assign the InvisibleObject variable of the VisibilityController script in the inspector.
+VisibilityController.SetVisible () (at Assets/Scripts/Enviornment/VisibilityController.cs:12)
+InputListener.Update () (at Assets/Scripts/Player/Input & Movement/InputListener.cs:77)
+
+2018-10-15 13:11:41.5091 [ERROR] UnassignedReferenceException: The variable InvisibleObject of VisibilityController has not been assigned.
+You probably need to assign the InvisibleObject variable of the VisibilityController script in the inspector.
+VisibilityController.SetVisible () (at Assets/Scripts/Enviornment/VisibilityController.cs:12)
+InputListener.Update () (at Assets/Scripts/Player/Input & Movement/InputListener.cs:77)
+
+2018-10-15 13:11:42.1611 [ERROR] UnassignedReferenceException: The variable InvisibleObject of VisibilityController has not been assigned.
+You probably need to assign the InvisibleObject variable of the VisibilityController script in the inspector.
+VisibilityController.SetVisible () (at Assets/Scripts/Enviornment/VisibilityController.cs:12)
+InputListener.Update () (at Assets/Scripts/Player/Input & Movement/InputListener.cs:77)
+
+2018-10-15 13:11:42.3770 [ERROR] UnassignedReferenceException: The variable InvisibleObject of VisibilityController has not been assigned.
+You probably need to assign the InvisibleObject variable of the VisibilityController script in the inspector.
+VisibilityController.SetVisible () (at Assets/Scripts/Enviornment/VisibilityController.cs:12)
+InputListener.Update () (at Assets/Scripts/Player/Input & Movement/InputListener.cs:77)
+
+2018-10-15 13:11:43.0243 [ERROR] UnassignedReferenceException: The variable InvisibleObject of VisibilityController has not been assigned.
+You probably need to assign the InvisibleObject variable of the VisibilityController script in the inspector.
+VisibilityController.SetVisible () (at Assets/Scripts/Enviornment/VisibilityController.cs:12)
+InputListener.Update () (at Assets/Scripts/Player/Input & Movement/InputListener.cs:77)
+
+2018-10-15 13:11:44.5937 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.OnDestroy () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:107)
+
+2018-10-15 13:11:44.5937 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.OnDestroy () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:107)
+
+2018-10-15 13:11:44.5947 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.OnDestroy () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:107)
+
+2018-10-15 13:11:44.5957 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.OnDestroy () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:107)
+
+2018-10-15 13:11:44.5957 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.OnDestroy () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:107)
+
+2018-10-15 13:11:44.5967 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.OnDestroy () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:107)
+
+2018-10-15 13:11:44.7093 [DEBUG] Play mode: False
+2018-10-15 13:13:34.1854 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-15 13:13:34.2492 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-15 13:13:34.6958 [ERROR] UnassignedReferenceException: The variable yokai of YokaiSwitcher has not been assigned.
+You probably need to assign the yokai variable of the YokaiSwitcher script in the inspector.
+UnityEngine.Object.Internal_InstantiateSingle (UnityEngine.Object data, Vector3 pos, Quaternion rot)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:211)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+YokaiSwitcher.SpawnYokai () (at Assets/Scripts/Player/Input & Movement/YokaiSwitcher.cs:40)
+InputListener.Update () (at Assets/Scripts/Player/Input & Movement/InputListener.cs:76)
+
+2018-10-15 13:13:35.4196 [ERROR] UnassignedReferenceException: The variable yokai of YokaiSwitcher has not been assigned.
+You probably need to assign the yokai variable of the YokaiSwitcher script in the inspector.
+UnityEngine.Object.Internal_InstantiateSingle (UnityEngine.Object data, Vector3 pos, Quaternion rot)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:211)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+YokaiSwitcher.SpawnYokai () (at Assets/Scripts/Player/Input & Movement/YokaiSwitcher.cs:40)
+InputListener.Update () (at Assets/Scripts/Player/Input & Movement/InputListener.cs:76)
+
+2018-10-15 13:13:35.7839 [ERROR] UnassignedReferenceException: The variable yokai of YokaiSwitcher has not been assigned.
+You probably need to assign the yokai variable of the YokaiSwitcher script in the inspector.
+UnityEngine.Object.Internal_InstantiateSingle (UnityEngine.Object data, Vector3 pos, Quaternion rot)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:211)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+YokaiSwitcher.SpawnYokai () (at Assets/Scripts/Player/Input & Movement/YokaiSwitcher.cs:40)
+InputListener.Update () (at Assets/Scripts/Player/Input & Movement/InputListener.cs:76)
+
+2018-10-15 13:13:35.9653 [ERROR] UnassignedReferenceException: The variable yokai of YokaiSwitcher has not been assigned.
+You probably need to assign the yokai variable of the YokaiSwitcher script in the inspector.
+UnityEngine.Object.Internal_InstantiateSingle (UnityEngine.Object data, Vector3 pos, Quaternion rot)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:211)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+YokaiSwitcher.SpawnYokai () (at Assets/Scripts/Player/Input & Movement/YokaiSwitcher.cs:40)
+InputListener.Update () (at Assets/Scripts/Player/Input & Movement/InputListener.cs:76)
+
+2018-10-15 13:13:36.1851 [ERROR] UnassignedReferenceException: The variable yokai of YokaiSwitcher has not been assigned.
+You probably need to assign the yokai variable of the YokaiSwitcher script in the inspector.
+UnityEngine.Object.Internal_InstantiateSingle (UnityEngine.Object data, Vector3 pos, Quaternion rot)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:211)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+YokaiSwitcher.SpawnYokai () (at Assets/Scripts/Player/Input & Movement/YokaiSwitcher.cs:40)
+InputListener.Update () (at Assets/Scripts/Player/Input & Movement/InputListener.cs:76)
+
+2018-10-15 13:13:36.3474 [ERROR] UnassignedReferenceException: The variable yokai of YokaiSwitcher has not been assigned.
+You probably need to assign the yokai variable of the YokaiSwitcher script in the inspector.
+UnityEngine.Object.Internal_InstantiateSingle (UnityEngine.Object data, Vector3 pos, Quaternion rot)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:211)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+YokaiSwitcher.SpawnYokai () (at Assets/Scripts/Player/Input & Movement/YokaiSwitcher.cs:40)
+InputListener.Update () (at Assets/Scripts/Player/Input & Movement/InputListener.cs:76)
+
+2018-10-15 13:13:36.5457 [ERROR] UnassignedReferenceException: The variable yokai of YokaiSwitcher has not been assigned.
+You probably need to assign the yokai variable of the YokaiSwitcher script in the inspector.
+UnityEngine.Object.Internal_InstantiateSingle (UnityEngine.Object data, Vector3 pos, Quaternion rot)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:211)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+YokaiSwitcher.SpawnYokai () (at Assets/Scripts/Player/Input & Movement/YokaiSwitcher.cs:40)
+InputListener.Update () (at Assets/Scripts/Player/Input & Movement/InputListener.cs:76)
+
+2018-10-15 13:13:37.0592 [ERROR] UnassignedReferenceException: The variable yokai of YokaiSwitcher has not been assigned.
+You probably need to assign the yokai variable of the YokaiSwitcher script in the inspector.
+UnityEngine.Object.Internal_InstantiateSingle (UnityEngine.Object data, Vector3 pos, Quaternion rot)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:211)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+YokaiSwitcher.SpawnYokai () (at Assets/Scripts/Player/Input & Movement/YokaiSwitcher.cs:40)
+InputListener.Update () (at Assets/Scripts/Player/Input & Movement/InputListener.cs:76)
+
+2018-10-15 13:13:37.2577 [ERROR] UnassignedReferenceException: The variable yokai of YokaiSwitcher has not been assigned.
+You probably need to assign the yokai variable of the YokaiSwitcher script in the inspector.
+UnityEngine.Object.Internal_InstantiateSingle (UnityEngine.Object data, Vector3 pos, Quaternion rot)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:211)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+YokaiSwitcher.SpawnYokai () (at Assets/Scripts/Player/Input & Movement/YokaiSwitcher.cs:40)
+InputListener.Update () (at Assets/Scripts/Player/Input & Movement/InputListener.cs:76)
+
+2018-10-15 13:13:37.4235 [ERROR] UnassignedReferenceException: The variable yokai of YokaiSwitcher has not been assigned.
+You probably need to assign the yokai variable of the YokaiSwitcher script in the inspector.
+UnityEngine.Object.Internal_InstantiateSingle (UnityEngine.Object data, Vector3 pos, Quaternion rot)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:211)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+YokaiSwitcher.SpawnYokai () (at Assets/Scripts/Player/Input & Movement/YokaiSwitcher.cs:40)
+InputListener.Update () (at Assets/Scripts/Player/Input & Movement/InputListener.cs:76)
+
+2018-10-15 13:13:37.6227 [ERROR] UnassignedReferenceException: The variable yokai of YokaiSwitcher has not been assigned.
+You probably need to assign the yokai variable of the YokaiSwitcher script in the inspector.
+UnityEngine.Object.Internal_InstantiateSingle (UnityEngine.Object data, Vector3 pos, Quaternion rot)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:211)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, Vector3 position, Quaternion rotation) (at C:/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+YokaiSwitcher.SpawnYokai () (at Assets/Scripts/Player/Input & Movement/YokaiSwitcher.cs:40)
+InputListener.Update () (at Assets/Scripts/Player/Input & Movement/InputListener.cs:76)
+
+2018-10-15 13:13:43.4401 [DEBUG] Play mode: False
+2018-10-15 13:14:02.4402 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-15 13:14:02.4830 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-15 13:14:03.0729 [ERROR] UnassignedReferenceException: The variable InvisibleObject of VisibilityController has not been assigned.
+You probably need to assign the InvisibleObject variable of the VisibilityController script in the inspector.
+VisibilityController.SetVisible () (at Assets/Scripts/Enviornment/VisibilityController.cs:12)
+InputListener.Update () (at Assets/Scripts/Player/Input & Movement/InputListener.cs:77)
+
+2018-10-15 13:14:04.4462 [ERROR] UnassignedReferenceException: The variable InvisibleObject of VisibilityController has not been assigned.
+You probably need to assign the InvisibleObject variable of the VisibilityController script in the inspector.
+VisibilityController.SetVisible () (at Assets/Scripts/Enviornment/VisibilityController.cs:12)
+InputListener.Update () (at Assets/Scripts/Player/Input & Movement/InputListener.cs:77)
+
+2018-10-15 13:14:05.5587 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.OnDestroy () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:106)
+
+2018-10-15 13:14:05.6454 [DEBUG] Play mode: False
+2018-10-15 13:15:42.0116 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-15 13:15:42.0865 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-15 13:15:53.2242 [ERROR] UnassignedReferenceException: The variable InvisibleObject of VisibilityController has not been assigned.
+You probably need to assign the InvisibleObject variable of the VisibilityController script in the inspector.
+VisibilityController.SetVisible () (at Assets/Scripts/Enviornment/VisibilityController.cs:12)
+InputListener.Update () (at Assets/Scripts/Player/Input & Movement/InputListener.cs:77)
+
+2018-10-15 13:15:57.8651 [ERROR] UnassignedReferenceException: The variable InvisibleObject of VisibilityController has not been assigned.
+You probably need to assign the InvisibleObject variable of the VisibilityController script in the inspector.
+VisibilityController.SetInvisible () (at Assets/Scripts/Enviornment/VisibilityController.cs:16)
+InputListener.Update () (at Assets/Scripts/Player/Input & Movement/InputListener.cs:85)
+
+2018-10-15 13:15:58.3265 [ERROR] UnassignedReferenceException: The variable InvisibleObject of VisibilityController has not been assigned.
+You probably need to assign the InvisibleObject variable of the VisibilityController script in the inspector.
+VisibilityController.SetVisible () (at Assets/Scripts/Enviornment/VisibilityController.cs:12)
+InputListener.Update () (at Assets/Scripts/Player/Input & Movement/InputListener.cs:77)
+
+2018-10-15 13:15:59.8869 [ERROR] UnassignedReferenceException: The variable InvisibleObject of VisibilityController has not been assigned.
+You probably need to assign the InvisibleObject variable of the VisibilityController script in the inspector.
+VisibilityController.SetInvisible () (at Assets/Scripts/Enviornment/VisibilityController.cs:16)
+InputListener.Update () (at Assets/Scripts/Player/Input & Movement/InputListener.cs:85)
+
+2018-10-15 13:16:00.2181 [ERROR] UnassignedReferenceException: The variable InvisibleObject of VisibilityController has not been assigned.
+You probably need to assign the InvisibleObject variable of the VisibilityController script in the inspector.
+VisibilityController.SetVisible () (at Assets/Scripts/Enviornment/VisibilityController.cs:12)
+InputListener.Update () (at Assets/Scripts/Player/Input & Movement/InputListener.cs:77)
+
+2018-10-15 13:16:01.0175 [ERROR] UnassignedReferenceException: The variable InvisibleObject of VisibilityController has not been assigned.
+You probably need to assign the InvisibleObject variable of the VisibilityController script in the inspector.
+VisibilityController.SetInvisible () (at Assets/Scripts/Enviornment/VisibilityController.cs:16)
+InputListener.Update () (at Assets/Scripts/Player/Input & Movement/InputListener.cs:85)
+
+2018-10-15 13:16:01.3686 [ERROR] UnassignedReferenceException: The variable InvisibleObject of VisibilityController has not been assigned.
+You probably need to assign the InvisibleObject variable of the VisibilityController script in the inspector.
+VisibilityController.SetVisible () (at Assets/Scripts/Enviornment/VisibilityController.cs:12)
+InputListener.Update () (at Assets/Scripts/Player/Input & Movement/InputListener.cs:77)
+
+2018-10-15 13:16:03.5110 [ERROR] UnassignedReferenceException: The variable InvisibleObject of VisibilityController has not been assigned.
+You probably need to assign the InvisibleObject variable of the VisibilityController script in the inspector.
+VisibilityController.SetInvisible () (at Assets/Scripts/Enviornment/VisibilityController.cs:16)
+InputListener.Update () (at Assets/Scripts/Player/Input & Movement/InputListener.cs:85)
+
+2018-10-15 13:16:04.3455 [DEBUG] Play mode: False
+2018-10-15 13:17:04.2508 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-15 13:17:04.3017 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-15 13:17:05.2387 [ERROR] UnassignedReferenceException: The variable InvisibleObject of VisibilityController has not been assigned.
+You probably need to assign the InvisibleObject variable of the VisibilityController script in the inspector.
+VisibilityController.SetVisible () (at Assets/Scripts/Enviornment/VisibilityController.cs:12)
+InputListener.Update () (at Assets/Scripts/Player/Input & Movement/InputListener.cs:77)
+
+2018-10-15 13:17:06.5132 [ERROR] UnassignedReferenceException: The variable InvisibleObject of VisibilityController has not been assigned.
+You probably need to assign the InvisibleObject variable of the VisibilityController script in the inspector.
+VisibilityController.SetInvisible () (at Assets/Scripts/Enviornment/VisibilityController.cs:16)
+InputListener.Update () (at Assets/Scripts/Player/Input & Movement/InputListener.cs:85)
+
+2018-10-15 13:17:06.7958 [ERROR] UnassignedReferenceException: The variable InvisibleObject of VisibilityController has not been assigned.
+You probably need to assign the InvisibleObject variable of the VisibilityController script in the inspector.
+VisibilityController.SetVisible () (at Assets/Scripts/Enviornment/VisibilityController.cs:12)
+InputListener.Update () (at Assets/Scripts/Player/Input & Movement/InputListener.cs:77)
+
+2018-10-15 13:17:07.4259 [ERROR] UnassignedReferenceException: The variable InvisibleObject of VisibilityController has not been assigned.
+You probably need to assign the InvisibleObject variable of the VisibilityController script in the inspector.
+VisibilityController.SetInvisible () (at Assets/Scripts/Enviornment/VisibilityController.cs:16)
+InputListener.Update () (at Assets/Scripts/Player/Input & Movement/InputListener.cs:85)
+
+2018-10-15 13:17:07.9055 [ERROR] UnassignedReferenceException: The variable InvisibleObject of VisibilityController has not been assigned.
+You probably need to assign the InvisibleObject variable of the VisibilityController script in the inspector.
+VisibilityController.SetVisible () (at Assets/Scripts/Enviornment/VisibilityController.cs:12)
+InputListener.Update () (at Assets/Scripts/Player/Input & Movement/InputListener.cs:77)
+
+2018-10-15 13:17:48.2532 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.OnDestroy () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:106)
+
+2018-10-15 13:17:48.3311 [DEBUG] Play mode: False
+2018-10-15 13:19:48.4983 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-15 13:19:48.5582 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-15 13:19:52.6677 [ERROR] UnassignedReferenceException: The variable InvisibleObject of VisibilityController has not been assigned.
+You probably need to assign the InvisibleObject variable of the VisibilityController script in the inspector.
+VisibilityController.SetVisible () (at Assets/Scripts/Enviornment/VisibilityController.cs:12)
+InputListener.Update () (at Assets/Scripts/Player/Input & Movement/InputListener.cs:77)
+
+2018-10-15 13:19:59.9663 [DEBUG] Play mode: False
+2018-10-15 13:20:40.6424 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-15 13:21:14.0234 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-15 13:21:28.9034 [DEBUG] Play mode: False
+2018-10-15 13:21:39.2705 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-15 13:21:39.3688 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-15 13:22:12.6479 [ERROR] UnassignedReferenceException: The variable InvisibleObject of VisibilityController has not been assigned.
+You probably need to assign the InvisibleObject variable of the VisibilityController script in the inspector.
+VisibilityController.SetVisible () (at Assets/Scripts/Enviornment/VisibilityController.cs:12)
+InputListener.Update () (at Assets/Scripts/Player/Input & Movement/InputListener.cs:77)
+
+2018-10-15 13:22:24.1862 [DEBUG] Play mode: False
+2018-10-15 13:23:17.7510 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-15 13:23:17.8119 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-15 13:23:19.4117 [ERROR] UnassignedReferenceException: The variable InvisibleObject of VisibilityController has not been assigned.
+You probably need to assign the InvisibleObject variable of the VisibilityController script in the inspector.
+VisibilityController.SetVisible () (at Assets/Scripts/Enviornment/VisibilityController.cs:12)
+InputListener.Update () (at Assets/Scripts/Player/Input & Movement/InputListener.cs:77)
+
+2018-10-15 13:25:46.7287 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.OnDestroy () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:106)
+
+2018-10-15 13:25:46.8523 [DEBUG] Play mode: False
+2018-10-15 13:25:50.8416 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-15 13:25:50.9224 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-15 13:25:54.2312 [ERROR] UnassignedReferenceException: The variable InvisibleObject of VisibilityController has not been assigned.
+You probably need to assign the InvisibleObject variable of the VisibilityController script in the inspector.
+VisibilityController.SetVisible () (at Assets/Scripts/Enviornment/VisibilityController.cs:12)
+InputListener.Update () (at Assets/Scripts/Player/Input & Movement/InputListener.cs:77)
+
+2018-10-15 13:26:04.2724 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.OnDestroy () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:107)
+
+2018-10-15 13:26:04.3556 [DEBUG] Play mode: False
+2018-10-15 13:26:36.9139 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-15 13:26:36.9867 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-15 13:26:41.4940 [ERROR] UnassignedReferenceException: The variable InvisibleObject of VisibilityController has not been assigned.
+You probably need to assign the InvisibleObject variable of the VisibilityController script in the inspector.
+VisibilityController.SetVisible () (at Assets/Scripts/Enviornment/VisibilityController.cs:12)
+InputListener.Update () (at Assets/Scripts/Player/Input & Movement/InputListener.cs:77)
+
+2018-10-15 13:26:55.1199 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.OnDestroy () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:106)
+
+2018-10-15 13:26:55.2019 [DEBUG] Play mode: False
+2018-10-15 13:27:12.1561 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-15 13:27:12.2029 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-15 13:27:22.0596 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.OnDestroy () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:107)
+
+2018-10-15 13:27:22.1444 [DEBUG] Play mode: False
+2018-10-15 13:27:56.2644 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-15 13:28:41.0493 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-15 13:28:41.0952 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-15 13:28:42.6276 [DEBUG] Play mode: False
+2018-10-15 13:29:37.4356 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-15 13:29:37.4864 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-15 13:31:00.4559 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.OnDestroy () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:106)
+
+2018-10-15 13:31:00.5431 [DEBUG] Play mode: False

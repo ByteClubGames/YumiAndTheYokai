@@ -71,17 +71,17 @@ public class InputListener : MonoBehaviour
         // Character Swap
         if (Input.GetKeyDown("f")) //Updated the mapping to "f" to be in line with most other games. 1-3 will be for spells. -Daniel Jaffe
         {
-            if (GameObject.Find("Player-Ferrox(Clone)") == null)
+            if (GameObject.Find("Yokai(Clone)") == null)
             {
                 switcher.SpawnYokai();
                 invisibleObjects.SetVisible();
-                yokai = GameObject.Find("Player-Ferrox(Clone)").GetComponent<PlayerController>();
+                yokai = GameObject.Find("Yokai(Clone)").GetComponent<PlayerController>();                
                 activePlayer.ClearCalls();
-                SetYumiActive(false);
+                SetYumiActive(false);                
             }
             else
             {
-                switcher.DeleteYokai(GameObject.Find("Player-Ferrox(Clone)"));
+                switcher.DeleteYokai(GameObject.Find("Yokai(Clone)"));
                 invisibleObjects.SetInvisible();
                 SetYumiActive(true);
             }
