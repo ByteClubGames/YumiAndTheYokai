@@ -15,14 +15,14 @@ public class YokaiSwitcher : MonoBehaviour
 {
     private float spawnOffset;
 
-    private GameObject human; // Reference to the Yumi
+    private GameObject yumi; // Reference to the Yumi
     public GameObject yokai; // Reference to the Yokai prefab
     private bool isProjecting; // To be used later for health scripts and such
 
 
     private void Start()
     {
-        human = GameObject.Find("Yumi");
+        yumi = GameObject.Find("Yumi");
 
         spawnOffset = 1.0f; // Used to spawn the yokai to the right of the player, rather than behind it.
     }
@@ -36,7 +36,7 @@ public class YokaiSwitcher : MonoBehaviour
     {
         Vector3 spawnLocation;        
 
-        spawnLocation = new Vector3(human.transform.position.x + spawnOffset, human.transform.position.y, human.transform.position.z); // Instantiates the 
+        spawnLocation = new Vector3(yumi.transform.position.x + spawnOffset, yumi.transform.position.y, yumi.transform.position.z); // Instantiates the 
         Instantiate(yokai, spawnLocation, Quaternion.identity);
     }
 

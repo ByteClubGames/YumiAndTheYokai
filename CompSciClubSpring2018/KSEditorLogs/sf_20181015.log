@@ -86,3 +86,44 @@ VisibilityController.SetInvisible () (at Assets/Scripts/Enviornment/VisibilityCo
 InputListener.Update () (at Assets/Scripts/Player/Input & Movement/InputListener.cs:80)
 
 2018-10-15 12:30:42.6208 [DEBUG] Play mode: False
+2018-10-15 12:33:17.6158 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-15 12:34:06.6807 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-15 12:34:06.7146 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-15 12:34:07.1577 [ERROR] UnassignedReferenceException: The variable InvisibleObject of VisibilityController has not been assigned.
+You probably need to assign the InvisibleObject variable of the VisibilityController script in the inspector.
+VisibilityController.SetVisible () (at Assets/Scripts/Enviornment/VisibilityController.cs:12)
+InputListener.Update () (at Assets/Scripts/Player/Input & Movement/InputListener.cs:72)
+
+2018-10-15 12:34:21.6620 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.OnDestroy () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:106)
+
+2018-10-15 12:34:21.7388 [DEBUG] Play mode: False
+2018-10-15 12:35:55.7363 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-15 12:49:23.9038 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-15 12:49:23.9706 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-15 12:50:37.5450 [DEBUG] Play mode: False
+2018-10-15 12:58:30.4629 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-15 12:58:30.5018 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-15 12:58:32.7477 [ERROR] UnassignedReferenceException: The variable InvisibleObject of VisibilityController has not been assigned.
+You probably need to assign the InvisibleObject variable of the VisibilityController script in the inspector.
+VisibilityController.SetVisible () (at Assets/Scripts/Enviornment/VisibilityController.cs:12)
+InputListener.Update () (at Assets/Scripts/Player/Input & Movement/InputListener.cs:77)
+
+2018-10-15 12:58:34.2876 [ERROR] UnassignedReferenceException: The variable InvisibleObject of VisibilityController has not been assigned.
+You probably need to assign the InvisibleObject variable of the VisibilityController script in the inspector.
+VisibilityController.SetInvisible () (at Assets/Scripts/Enviornment/VisibilityController.cs:16)
+InputListener.Update () (at Assets/Scripts/Player/Input & Movement/InputListener.cs:85)
+
+2018-10-15 12:59:44.4390 [DEBUG] Play mode: False
+2018-10-15 13:02:44.8107 [DEBUG] Scene Fusion version 1.8.1-0
+2018-10-15 13:02:44.8575 [DEBUG] Play mode: True, sync in play mode: False
+2018-10-15 13:02:46.9547 [ERROR] UnassignedReferenceException: The variable InvisibleObject of VisibilityController has not been assigned.
+You probably need to assign the InvisibleObject variable of the VisibilityController script in the inspector.
+VisibilityController.SetVisible () (at Assets/Scripts/Enviornment/VisibilityController.cs:12)
+InputListener.Update () (at Assets/Scripts/Player/Input & Movement/InputListener.cs:77)
+
+2018-10-15 13:02:49.3179 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.OnDestroy () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:106)
+
+2018-10-15 13:02:49.3997 [DEBUG] Play mode: False
+2018-10-15 13:05:34.8729 [DEBUG] Scene Fusion version 1.8.1-0

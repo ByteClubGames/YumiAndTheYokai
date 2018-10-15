@@ -108,6 +108,45 @@ public class PlayerController : MonoBehaviour {
             main_follow_camera.Follow = yumi;
         }
     }
+    
+    #region Movement Calls
+    public void CallRight(bool call)
+    {
+        if (call)
+        {
+            right = true;
+        }
+        else
+        {
+            right = false;
+        }
+    }
+
+    public void CallLeft(bool call)
+    {
+        if (call)
+        {
+            left = true;
+        }
+        else
+        {
+            left = false;
+        }
+    }
+
+    public void CallJump()
+    {
+        if (isGrounded)
+        {
+            jump = true;
+        }
+    }
+
+    public void ClearCalls()
+    {
+        right = left = false;
+    }
+    #endregion
 
     void Update()
     {
@@ -178,45 +217,6 @@ public class PlayerController : MonoBehaviour {
          * transform.translate. */
         Move(velocity * Time.deltaTime);        
     }
-
-    #region Movement Calls
-    public void CallRight(bool call)
-    {
-        if (call)
-        {
-            right = true;
-        }
-        else
-        {
-            right = false;
-        }
-    }
-
-    public void CallLeft(bool call)
-    {
-        if (call)
-        {
-            left = true;
-        }
-        else
-        {
-            left = false;
-        }
-    }
-
-    public void CallJump()
-    {
-        if (isGrounded)
-        {            
-            jump = true;            
-        }
-    }
-
-    public void ClearCalls()
-    {
-        right = left = false;
-    }
-    #endregion
 
     public void Move(Vector3 deltaMovement)
     {

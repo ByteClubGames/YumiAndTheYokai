@@ -39,7 +39,12 @@ public class InputListener : MonoBehaviour
         activePlayer = yumiActive ? human : yokai; // Choose which character to call movement methods on
                                                    //Debug.Log(activePlayer + " is now active");
 
-        if (Input.GetKey("a") || Input.GetKey("left"))
+        if ((Input.GetKey("a") || Input.GetKey("left")) && (Input.GetKey("d") || Input.GetKey("right")))
+        {
+            activePlayer.CallLeft(false);
+            activePlayer.CallRight(false);
+        }
+        else if (Input.GetKey("a") || Input.GetKey("left"))
         {
             activePlayer.CallLeft(true);
             activePlayer.CallRight(false);
