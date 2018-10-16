@@ -39,7 +39,12 @@ public class InputListener : MonoBehaviour
         activePlayer = yumiActive ? human : yokai; // Choose which character to call movement methods on
                                                    //Debug.Log(activePlayer + " is now active");
 
-        if (Input.GetKey("a") || Input.GetKey("left"))
+        if ((Input.GetKey("a") || Input.GetKey("left")) && (Input.GetKey("d") || Input.GetKey("right")))
+        {
+            activePlayer.CallLeft(false);
+            activePlayer.CallRight(false);
+        }
+        else if (Input.GetKey("a") || Input.GetKey("left"))
         {
             activePlayer.CallLeft(true);
             activePlayer.CallRight(false);
@@ -66,17 +71,17 @@ public class InputListener : MonoBehaviour
         // Character Swap
         if (Input.GetKeyDown("f")) //Updated the mapping to "f" to be in line with most other games. 1-3 will be for spells. -Daniel Jaffe
         {
-            if (GameObject.Find("Player-Ferrox(Clone)") == null)
+            if (GameObject.Find("Yokai(Clone)") == null)
             {
                 switcher.SpawnYokai();
                 invisibleObjects.SetVisible();
-                yokai = GameObject.Find("Player-Ferrox(Clone)").GetComponent<PlayerController>();
+                yokai = GameObject.Find("Yokai(Clone)").GetComponent<PlayerController>();                
                 activePlayer.ClearCalls();
-                SetYumiActive(false);
+                SetYumiActive(false);                
             }
             else
             {
-                switcher.DeleteYokai(GameObject.Find("Player-Ferrox(Clone)"));
+                switcher.DeleteYokai(GameObject.Find("Yokai(Clone)"));
                 invisibleObjects.SetInvisible();
                 SetYumiActive(true);
             }

@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 114329015629843224}
   - component: {fileID: 54420025581821784}
   m_Layer: 9
-  m_Name: Player-Human
+  m_Name: Yumi
   m_TagString: Human
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
