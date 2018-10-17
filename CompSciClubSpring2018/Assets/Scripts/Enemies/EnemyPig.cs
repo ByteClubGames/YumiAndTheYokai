@@ -1,16 +1,22 @@
-﻿/*
- *  Authors:  Darrell Wong
- *  Date Created: 10/9/2018
- *  Last Modified: 10/11/2018
- *  EnemyPig.cs
- *  Description: Script defines the rigidbody movement of the enemy pig to patrol between 2 points(leftBoundry & rightBoundry) and chase the player
- *  Calls on PlayerDetection.cs to actually detect the player's presence.
- *  
- *  Instructions: 
- *  1. Place enemy then set rightBoundry and leftBoundry. These boundries dictate how far to the left and right the enemy will patrol.
- *  2. Adjust player detection collider size.
- *  3. Max speeds and accelerations can be adjusted to taste.
- */
+﻿/********************************************************************************
+*Creator(s)..........................................................Darrell Wong
+*Created................................................................10/9/2018
+*Last Modified................................................@ 9PM on 10/16/2018
+*Last Modified by....................................................Darrell Wong
+*
+*  Description:    Script defines the rigidbody movement of the enemy pig to 
+*                  patrol between 2 points(leftBoundry & rightBoundry) 
+*                  and chasethe player
+*                 
+*                  Calls on PlayerDetection.cs to detect the player's presence.
+*  
+*  Instructions: 
+*      1. Place enemy then set rightBoundry and leftBoundry. These boundries 
+*          dictate how far to the left and right the enemy will patrol.
+*      2. Adjust player detection collider size.
+*      3. Max speeds and accelerations can be adjusted to taste.
+*********************************************************************************
+*/
 
 using System.Collections;
 using System.Collections.Generic;
@@ -27,20 +33,22 @@ public class EnemyPig : MonoBehaviour {
     private Vector3 leftPos;            //location of left boundry
     private Vector3 rightPos;           //location of right boundry
     public float wallCheckRayLength = .5f;     //adjusting this value will determine how far away from walls the enemy will approach
-    private Vector3 originalPosition;   
+    public float explosionRadius;
+    public float chainExplodeDelay = .12f;
+    private Vector3 originalPosition;
 
-    [Header("Boolean triggers")] 
-
+    [Header("Boolean triggers")]
     private bool skidding;          //currently not being used
     private bool movingLeft;        //currently not being used
     private bool movingRight;       //currently not being used
+    private bool exploded = false;  //indicated whether this pig has already exploded
 
     public bool challenged = false;           // Determines if the enemy should be attacking the player or not
     public bool patrolRight = true;
 
+    [Header("Animation")]
     private Animator animator;
     private SpriteRenderer sprite_renderer;
-
     public GameObject pig_explosion;
 
     [Header("Objects")]
@@ -48,7 +56,7 @@ public class EnemyPig : MonoBehaviour {
     Rigidbody enemy;
     private Transform Player;
 
-    void Start () {
+    void Start() {
         enemy = GetComponent<Rigidbody>();
         enemy.isKinematic = false;
 
@@ -60,8 +68,10 @@ public class EnemyPig : MonoBehaviour {
         animator = this.GetComponentInChildren<Animator>();
         sprite_renderer = this.GetComponentInChildren<SpriteRenderer>();
     }
-	
-	void FixedUpdate () {
+
+    void FixedUpdate() {
+
+
         leftPos = new Vector3(originalPosition.x - leftBoundry, 0f, 0f);    //set leftpos
         rightPos = new Vector3(originalPosition.x + rightBoundry, 0f, 0f);  //set rightpos
 
@@ -75,10 +85,8 @@ public class EnemyPig : MonoBehaviour {
         challenged = detectPlayer.PlayerDetected();             //update challenged boolean every frame
     }
 
-    private void Movement()     
+    private void Movement()
     {
-
-
         AnimatorStateInfo anim_state = animator.GetCurrentAnimatorStateInfo(0);
 
         if (challenged)                                         //when the player is within range
@@ -86,8 +94,16 @@ public class EnemyPig : MonoBehaviour {
             if (anim_state.IsName("pig_idle")) {
                 animator.Play("pig_wakeup");
             }
-            Vector3 directionOfPlayer = Player.transform.position - transform.position;
-            moveToPosition(directionOfPlayer, AttackMaxSpeed);  //move towards the player
+            GameObject Youkai = GameObject.Find("Player-Ferrox(Clone)");
+            if (Youkai != null)
+            {
+                moveToPosition(Youkai.transform.position - transform.position, AttackMaxSpeed);
+            }
+            else
+            {
+                Vector3 directionOfPlayer = Player.transform.position - transform.position;
+                moveToPosition(directionOfPlayer, AttackMaxSpeed);  //move towards the player
+            }
         }
         else
         {
@@ -158,11 +174,53 @@ public class EnemyPig : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        
-        if (collision.gameObject.name == "Yumi") {
-            Instantiate(pig_explosion, this.transform.position + Vector3.down * 0.5f, Quaternion.identity);
-            Destroy(this.gameObject);
+        if (collision.gameObject.name == "Yumi" || collision.gameObject.name == "Player-Ferrox(Clone)")
+        {
+            explode();
         }
     }
 
+    private void explode()                          //called when triggered explosion by touching player
+    {
+        if (!exploded)                              //prevent method from being called again (prevents recursion)
+        {
+            exploded = true;
+            Collider[] explosion = Physics.OverlapSphere(enemy.transform.position, explosionRadius);
+            Instantiate(pig_explosion, this.transform.position + Vector3.down * 0.5f, Quaternion.identity);
+            Destroy(this.gameObject);
+            foreach (Collider inExplosion in explosion)
+            {
+                if (inExplosion.gameObject.tag == "Enemy")
+                {
+                    inExplosion.SendMessage("explodeOtherObjects", inExplosion, SendMessageOptions.DontRequireReceiver);
+                }
+            }
+        }
+    }
+
+    IEnumerator explodeOtherObjects()                       //called when explosions are chained together
+    {
+        yield return new WaitForSeconds(chainExplodeDelay);
+
+        if (!exploded)                                      //prevent method from being called again (prevents recursion)
+        {
+            this.exploded = true;
+            Collider[] explosion = Physics.OverlapSphere(enemy.transform.position, explosionRadius);
+            Instantiate(pig_explosion, this.transform.position + Vector3.down * 0.5f, Quaternion.identity);
+            Destroy(this.gameObject);
+            foreach (Collider inExplosion in explosion)
+            {
+                if (inExplosion.gameObject.tag == "Enemy")
+                {
+                    inExplosion.SendMessage("explode", inExplosion, SendMessageOptions.DontRequireReceiver);  //calls explodeOtherObjects to continue chain explosion
+                }
+            }
+        }
+    }
+
+    private void OnDrawGizmos()                     //see explosion radius
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, explosionRadius);
+    }
 }

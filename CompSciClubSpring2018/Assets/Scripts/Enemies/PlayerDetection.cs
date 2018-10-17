@@ -17,7 +17,7 @@ public class PlayerDetection : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.name == "Yumi" | other.name == "Yokai")
+        if (other.name == "Yumi" | other.name == "Player-Ferrox(Clone)")
         {
             detected = true;
         }
@@ -30,7 +30,7 @@ public class PlayerDetection : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.name == "Yumi" | other.name == "Yokai")
+        if (other.name == "Yumi" | other.name == "Player-Ferrox(Clone)")
         {
             detected = false;
         }

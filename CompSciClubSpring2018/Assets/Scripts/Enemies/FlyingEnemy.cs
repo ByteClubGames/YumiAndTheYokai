@@ -1,10 +1,14 @@
-﻿/*
- *  Authors: Ivonne Lopez, Darrell Wong
- *  Date Created: 9/21/2018
- *  Last Modified: 10/12/2018
- *  FlyingEnemy.cs
- *  Description: Script responsible for general(flap and grounded) movement and attack patterns. Calls on PlayerDetection.cs to actually detect the player's presence.
- */
+﻿/********************************************************************************
+*Creator(s)............................................Ivonne Lopez, Darrell Wong
+*Created................................................................9/21/2018
+*Last Modified................................................@ 2PM on 10/12/2018
+*Last Modified by....................................................Darrell Wong
+*
+* Description:  Script responsible for general(flap and grounded) movement and 
+*               attack patterns. Calls on PlayerDetection.cs to actually detect 
+*               the player's presence.
+*********************************************************************************
+*/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
