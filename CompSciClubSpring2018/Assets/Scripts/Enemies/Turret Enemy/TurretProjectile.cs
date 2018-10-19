@@ -1,5 +1,5 @@
 ﻿/*
- * Author: Keiran Glynn
+ * Author: Keiran Glynn & Karim Dabboussi
  * Date Created: 3/17/2018 @ 11:30 am
  * Date Modified: 3/17/2018 @ 11:30 am
  * Project: CompSciClubSpring2018
@@ -19,22 +19,29 @@ public class TurretProjectile : MonoBehaviour {
 
     public float maxDistance;
     private float distance;
-    private Rigidbody2D turretProjectileRB;
-    private Rigidbody2D yokaiRB;
+    public float timeToDestroy;
+    private Transform projectileTransform;
+    private Transform player;
+    //private Rigidbody humanRB;
     private bool isHit = false; // will indicate if the projectile had a collision
     private bool isTooFar = false; // will indicate if the projectile is far from the astral (if it missed its target)
-    private Vector2 projectilePos;
-    private Vector2 yokaiPos;
-    private Vector2 target;
-    
-	// Use this for initialization
-	void Start ()
-    {
-        turretProjectileRB = this.GetComponent<Rigidbody2D>();
-        yokaiRB = GameObject.Find("Ferrox").GetComponent<Rigidbody2D>();
+    private Vector3 projectilePos;
+    private Vector3 humanPos;
+    private Vector3 target;
+    //private GameObject player;
 
-        turretProjectileRB.gravityScale = 0; 
-	}
+    // Use this for initialization
+    void Awake ()
+    {
+        PlayerTransform();
+        projectileTransform = GetComponent<Transform>();
+        projectilePos = GameObject.Find("ProjectileSpawn").GetComponent<Transform>().position;// + projectileTransform.position;
+        //projectilePos = GameObject.GetComponent<TurretEnemy>().projPos + projectileTransform.position;
+        target = (player.position - projectilePos).normalized;
+        //projectileTransform.LookAt(-player.position);
+        
+
+    }
 
     // Update is called once per frame
     void FixedUpdate()
@@ -48,29 +55,40 @@ public class TurretProjectile : MonoBehaviour {
         CheckTooFar();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision) // This is supposed to be triggered when the projectile intercepts the astral
+    private void OnTriggerEnter(Collider collision) // This is supposed to be triggered when the projectile intercepts the astral
     {
         Debug.Log("this works"); // if this trigger function is called at all, this will show up in the console
-        if (collision.gameObject.name == "Ferrox")
+        if (collision.gameObject.name == "Ferrox" || collision.tag == "Human")
         {
+            //ProjectileMovement();
             GameObject.Find("Ferrox").GetComponent<FerroxHealth>().TakeDamage(projectileDamage);
+            GameObject.Find("Player-Human").GetComponent<HumanHealth>().TakeDamage(projectileDamage);
             isHit = true; // regardless of weather or not it hit the astral, it will be as having hit someting
         }
-        else if(collision.gameObject.tag == "EnemyDetection")
+        else if (collision.gameObject.tag == "EnemyDetection")
         {
             // Do nothing
-        }        
+        }
     }
 
     public void ProjectileMovement() // Makes the projectile move in a straight line towards the player
     {
-        
+        projectileTransform.Translate(target * speed * Time.deltaTime);
+        StartCoroutine(waitToDestroy(timeToDestroy));
+    }
 
-        if (turretProjectileRB.velocity.x == 0f && turretProjectileRB.velocity.y == 0f) // As long as it isnt already moving: do action
+    /// <summary>
+    /// Assigns the player variable to either the Yokai transform (if it exists), or the Yumi transform.
+    /// </summary>
+    private void PlayerTransform()
+    {
+        if (GameObject.Find("Ferrox") == null)
         {
-            target = (yokaiRB.position - turretProjectileRB.position);
-            target = target.normalized;
-            turretProjectileRB.AddForce(target * speed, ForceMode2D.Impulse); // Adds an instantaneous force towards yokai
+            player = GameObject.Find("Player-Human").GetComponent<Transform>();
+        }
+        else
+        {
+            player = GameObject.Find("Ferrox").GetComponent<Transform>();
         }
     }
 
@@ -84,14 +102,17 @@ public class TurretProjectile : MonoBehaviour {
 
     private void CheckTooFar() // Will destroy the projectile if it has missed the yokai and is far away
     {
-        projectilePos = turretProjectileRB.position;
-        yokaiPos = yokaiRB.position;
 
-        distance = Vector2.Distance(projectilePos, yokaiPos);
+        distance = Vector3.Distance(projectilePos, humanPos);
 
-        if(distance > maxDistance)
+        if (distance > maxDistance)
         {
             Destroy(gameObject);
         }
+    }
+    private IEnumerator waitToDestroy(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+        Destroy(this.gameObject);
     }
 }
