@@ -1,12 +1,16 @@
 ﻿/*
- * Author: Keiran Glynn & Karim Dabboussi
- * Date Created: 3/17/2018 @ 11:30 am
- * Date Modified: 3/17/2018 @ 11:30 am
- * Project: CompSciClubSpring2018
- * File: TurretEnemy.cs
- * Description: This script houses the main control script for the turret enemy. It's main purpose is to Istantiate projectile objects when the astral is 
- * within range of the turret enemy.  
- */
+***************************************************************************************
+*Creator(s).........................................Keiran Glynn & Karim Dabboussi
+*Created..............................................................3/17/2018
+*Last Modified............................................@ 2:05PM on 10/19/2018
+*Last Modified by...................................................Karim Dabboussi
+*
+*Description:   This script houses the main control script for the turret enemy.
+* It's main purpose is to Istantiate projectile objects when the astral is 
+* within range of the turret enemy. 
+*               
+***************************************************************************************
+*/
 
 using System.Collections;
 using System.Collections.Generic;
@@ -36,8 +40,7 @@ public class TurretEnemy : MonoBehaviour {
         if (collision.tag == "Human")
         {
             targeter = GameObject.Find("Player-Human").transform;
-            this.transform.parent.GetChild(0).GetComponent<TurretEnemy>().SetInRange(true); //THIS DOSENT WORK
-            //GameObject.Find("ProjectileSpawn").GetComponent<TurretEnemy>().SetInRange(true); THIS WORKS
+           GameObject.Find("ProjectileSpawn").GetComponent<TurretEnemy>().SetInRange(true); //THIS WORKS
             //SetInRange(true);
             Debug.Log("In range of enemy turret");
         }
