@@ -24,7 +24,7 @@ public class TurretEnemy : MonoBehaviour {
     public static Transform targeter;
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         projectileSpawn = this.transform.parent.GetChild(0).position;
         rotation = this.transform.parent.GetChild(0).rotation;
@@ -36,7 +36,8 @@ public class TurretEnemy : MonoBehaviour {
         if (collision.tag == "Human")
         {
             targeter = GameObject.Find("Player-Human").transform;
-            GameObject.Find("ProjectileSpawn").GetComponent<TurretEnemy>().SetInRange(true);
+            this.transform.parent.GetChild(0).GetComponent<TurretEnemy>().SetInRange(true); //THIS DOSENT WORK
+            //GameObject.Find("ProjectileSpawn").GetComponent<TurretEnemy>().SetInRange(true); THIS WORKS
             //SetInRange(true);
             Debug.Log("In range of enemy turret");
         }
@@ -70,7 +71,7 @@ public class TurretEnemy : MonoBehaviour {
         }
     }
 
-    public void SetInRange(bool incomingValue) // When the yokai is within the detection range of the enemy, TargetYokai.cs will call this function
+    private void SetInRange(bool incomingValue) // When the yokai is within the detection range of the enemy, TargetYokai.cs will call this function
     {
         inRange = incomingValue;
     }
