@@ -124,13 +124,13 @@ GameObject:
   - component: {fileID: 460012422}
   - component: {fileID: 460012421}
   - component: {fileID: 460012420}
-  - component: {fileID: 460012425}
-  m_Layer: 11
+  - component: {fileID: 460012424}
+  m_Layer: 9
   m_Name: TrigCube
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!65 &460012420
 BoxCollider:
@@ -199,7 +199,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &460012425
+--- !u!114 &460012424
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -210,8 +210,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 653264c079e56bb41b6b8af8fd143090, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1499636833}
+  player: {fileID: 0}
   enemy: {fileID: 460012419}
+  foe:
+    serializedVersion: 2
+    m_Bits: 2048
+  friend:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!1 &694003779
 GameObject:
   m_ObjectHideFlags: 0
@@ -452,9 +458,7 @@ GameObject:
   - component: {fileID: 1499636836}
   - component: {fileID: 1499636835}
   - component: {fileID: 1499636834}
-  - component: {fileID: 1499636839}
   - component: {fileID: 1499636840}
-  - component: {fileID: 1499636841}
   m_Layer: 9
   m_Name: ColSphere
   m_TagString: Player
@@ -542,19 +546,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1499636839
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1499636833}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 653264c079e56bb41b6b8af8fd143090, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1499636833}
-  enemy: {fileID: 460012419}
 --- !u!54 &1499636840
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -570,16 +561,3 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1499636841
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1499636833}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 653264c079e56bb41b6b8af8fd143090, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1499636833}
-  enemy: {fileID: 460012419}
