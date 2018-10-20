@@ -1,7 +1,7 @@
 ﻿/********************************************************************************
 *Creator(s)..........................................................Darrell Wong
 *Created................................................................10/9/2018
-*Last Modified................................................@ 9PM on 10/16/2018
+*Last Modified................................................@ 7PM on 10/19/2018
 *Last Modified by....................................................Darrell Wong
 *
 *  Description:    Script defines the rigidbody movement of the enemy pig to 
@@ -32,24 +32,30 @@ public class EnemyPig : MonoBehaviour {
     public float rightBoundry;          //sets the right patrol range
     private Vector3 leftPos;            //location of left boundry
     private Vector3 rightPos;           //location of right boundry
+    public float idlePauseTime = 2;
     public float wallCheckRayLength = .5f;     //adjusting this value will determine how far away from walls the enemy will approach
     public float explosionRadius;
-    public float chainExplodeDelay = .12f;
+    public float chainExplodeDelay = .11f;
     private Vector3 originalPosition;
+    private float startTimer;
 
     [Header("Boolean triggers")]
-    private bool skidding;          //currently not being used
-    private bool movingLeft;        //currently not being used
-    private bool movingRight;       //currently not being used
-    private bool exploded = false;  //indicated whether this pig has already exploded
-
-    public bool challenged = false;           // Determines if the enemy should be attacking the player or not
-    public bool patrolRight = true;
+    public bool enemyPatrols = true;
+    public bool hasIdlePause = true;
+    private bool skidding;              //currently not being used
+    private bool movingLeft;            //currently not being used
+    private bool movingRight;           //currently not being used
+    private bool idlePaused = false;    //when paused
+    private bool challenged = false;    // Determines if the enemy should be attacking the player or not
+    private bool patrolRight = true;
+    public bool canExplode = true;
+    public bool canChainExplode = true;
+    private bool exploded = false;      //indicates whether this pig has already exploded
 
     [Header("Animation")]
+    public GameObject pig_explosion;
     private Animator animator;
     private SpriteRenderer sprite_renderer;
-    public GameObject pig_explosion;
 
     [Header("Objects")]
     private PlayerDetection detectPlayer;
@@ -91,7 +97,8 @@ public class EnemyPig : MonoBehaviour {
 
         if (challenged)                                         //when the player is within range
         {
-            if (anim_state.IsName("pig_idle")) {
+            if (anim_state.IsName("pig_idle"))
+            {
                 animator.Play("pig_wakeup");
             }
             GameObject Youkai = GameObject.Find("Player-Ferrox(Clone)");
@@ -107,48 +114,91 @@ public class EnemyPig : MonoBehaviour {
         }
         else
         {
+            if (idlePaused  || !enemyPatrols)
+                animator.Play("pig_idle");
+            else
+                animator.Play("pig_run");
 
-            if (patrolRight)                               //This if-else block makes the enemy wander left to right based on left and right boundries
+            if (enemyPatrols)
             {
 
-                sprite_renderer.flipX = false;
-
-                Vector3 directionToNext = rightPos - enemy.transform.position;      //finds the direction vector to the right boundry
-                RaycastHit hit;
-                Debug.DrawLine(enemy.transform.position, enemy.transform.position + Vector3.right * wallCheckRayLength, Color.red);
-
-                if (directionToNext.x < 0 ||
-                    Physics.Raycast(transform.position, transform.TransformDirection(Vector3.right), out hit, wallCheckRayLength))  //else if the enemy has passed the right boundry
+                if (patrolRight)                               //This if-else block makes the enemy wander left to right based on left and right boundries
                 {
-                    patrolRight = false;   //switch directions
 
+                    Vector3 directionToNext = rightPos - enemy.transform.position;      //finds the direction vector to the right boundry
+                    RaycastHit hit;
+                    Debug.DrawLine(enemy.transform.position, enemy.transform.position + Vector3.right * wallCheckRayLength, Color.red);
+
+                    if (directionToNext.x < 0 ||
+                        Physics.Raycast(transform.position, transform.TransformDirection(Vector3.right), out hit, wallCheckRayLength))  //else if the enemy has passed the right boundry
+                    {
+                        patrolRight = false;   //switch directions
+                        idlePaused = true;
+
+                    }
+                    else                                                             //if the enemy is to the left of the boundry
+
+                    {
+                        if (!idlePaused)
+                        {
+                            moveToPosition(directionToNext, patrolMaxSpeed);        //move towards the boundry
+                            startTimer = Time.time;
+                        }
+                        else
+                        {
+                            if (Time.time < (startTimer + idlePauseTime) && hasIdlePause)           //timer for pause time
+                            {
+
+                                enemy.AddForce(new Vector3(-enemy.velocity.x * (acceleration / 4f), 0f, 0f));       //when entering idle slow enemy to a stop
+                            }
+                            else
+                            {
+                                idlePaused = false;
+                                moveToPosition(directionToNext, patrolMaxSpeed);    //move towards the boundry
+                            }
+                        }
+                    }
                 }
-                else                                        //if the enemy is to the left of the boundry
-
+                else                                            //the enemy has now switched directions
                 {
-                    moveToPosition(directionToNext, patrolMaxSpeed);//move towards the boundry
+                    if (idlePaused)
+                        animator.Play("pig_idle");
+                    else
+                        animator.Play("pig_run");
+
+                    Vector3 directionToNext = leftPos - enemy.transform.position;
+                    RaycastHit hit;
+                    Debug.DrawLine(enemy.transform.position, enemy.transform.position + Vector3.left * wallCheckRayLength, Color.red);
+
+                    if (directionToNext.x > 0 ||
+                        Physics.Raycast(transform.position, transform.TransformDirection(Vector3.left), out hit, wallCheckRayLength))
+                    {
+                        patrolRight = true;
+                        idlePaused = true;
+                    }
+                    else
+                    {
+                        if (!idlePaused)
+                        {
+                            moveToPosition(directionToNext, patrolMaxSpeed);//move towards the boundry
+                            startTimer = Time.time;
+                        }
+                        else
+                        {
+                            float currentTime = Time.time;
+                            if (Time.time < (startTimer + idlePauseTime) && hasIdlePause)
+                            {
+                                enemy.AddForce(new Vector3(-enemy.velocity.x * (acceleration / 4f), 0f, 0f));   //when entering idle slow enemy to a stop
+                            }
+                            else
+                            {
+                                idlePaused = false;
+                                moveToPosition(directionToNext, patrolMaxSpeed); //move towards the boundry
+                            }
+                        }
+                    }
                 }
             }
-            else                                            //the enemy has now switched directions
-            {
-
-                sprite_renderer.flipX = true;
-
-                Vector3 directionToNext = leftPos - enemy.transform.position;
-                RaycastHit hit;
-                Debug.DrawLine(enemy.transform.position, enemy.transform.position + Vector3.left * wallCheckRayLength, Color.red);
-
-                if (directionToNext.x > 0 ||
-                    Physics.Raycast(transform.position, transform.TransformDirection(Vector3.left), out hit, wallCheckRayLength))
-                {
-                    patrolRight = true;
-                }
-                else
-                {
-                    moveToPosition(directionToNext, patrolMaxSpeed);
-                }
-            }
-
         }
     }
 
@@ -174,7 +224,7 @@ public class EnemyPig : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.name == "Yumi" || collision.gameObject.name == "Player-Ferrox(Clone)")
+        if ((collision.gameObject.name == "Yumi" || collision.gameObject.name == "Player-Ferrox(Clone)") && canExplode)
         {
             explode();
         }
@@ -188,11 +238,14 @@ public class EnemyPig : MonoBehaviour {
             Collider[] explosion = Physics.OverlapSphere(enemy.transform.position, explosionRadius);
             Instantiate(pig_explosion, this.transform.position + Vector3.down * 0.5f, Quaternion.identity);
             Destroy(this.gameObject);
-            foreach (Collider inExplosion in explosion)
+            if (canChainExplode)
             {
-                if (inExplosion.gameObject.tag == "Enemy")
+                foreach (Collider inExplosion in explosion)
                 {
-                    inExplosion.SendMessage("explodeOtherObjects", inExplosion, SendMessageOptions.DontRequireReceiver);
+                    if (inExplosion.gameObject.tag == "Enemy")
+                    {
+                        inExplosion.SendMessage("explodeOtherObjects", inExplosion, SendMessageOptions.DontRequireReceiver);
+                    }
                 }
             }
         }

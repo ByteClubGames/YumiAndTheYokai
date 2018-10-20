@@ -113,7 +113,7 @@ Rigidbody:
   m_GameObject: {fileID: 1711349034853890}
   serializedVersion: 2
   m_Mass: 5
-  m_Drag: 0
+  m_Drag: 1
   m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -173,16 +173,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c21984aea5458be4184db3749a038f44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AttackMaxSpeed: 6
+  AttackMaxSpeed: 10
   patrolMaxSpeed: 2
-  acceleration: 40
+  acceleration: 60
   leftBoundry: 5
   rightBoundry: 5
+  idlePauseTime: 2
   wallCheckRayLength: 2
-  explosionRadius: 1.5
-  chainExplodeDelay: 0.11
-  challenged: 0
-  patrolRight: 1
+  explosionRadius: 1.38
+  chainExplodeDelay: 0.12
+  enemyPatrols: 1
+  hasIdlePause: 1
+  canExplode: 1
+  canChainExplode: 1
   pig_explosion: {fileID: 1417538608000086, guid: f4a124cdb9e2f804785b6ad13c14fb97,
     type: 2}
 --- !u!114 &114813279070970486

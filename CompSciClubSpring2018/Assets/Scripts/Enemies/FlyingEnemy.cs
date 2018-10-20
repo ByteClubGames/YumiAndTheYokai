@@ -17,11 +17,11 @@ public class FlyingEnemy : MonoBehaviour
 {
 
     [Header("Horizontal Flight Boundary Points")]
-    public Vector3 pos1;  //pos1 and pos2 are the initial positions of the enemy
-    public Vector3 pos2;
     public float leftBoundry = 4f;   //how far the enemy will wander to the left when not under aggro
     public float rightBoundry = 4f;  // how far the enemy will wanted to the right when not under aggro
-    public Vector3 startPos;
+    private Vector3 pos1;  //pos1 and pos2 are the initial positions of the enemy
+    private Vector3 pos2;
+    private Vector3 startPos;
     private Vector3 difference;     //how far away the 2 boundry points are. Used in calculating horizontal speeds
 
 
@@ -34,7 +34,7 @@ public class FlyingEnemy : MonoBehaviour
 
     private Transform Player;
     private Vector3 directionOfPlayer;
-    public Vector3 tempPosition;            // This position vector is modified algebraically, and then the enemy's actual position is set equal to this temp position    
+    private Vector3 tempPosition;            // This position vector is modified algebraically, and then the enemy's actual position is set equal to this temp position    
     private float progress = 0f;            // Variable determining how the percentage completion of the Lerp for the horizontal component of movement
     private bool challenged = false;        // Determines if the enemy should be attacking the player or not
     private PlayerDetection detectPlayer;
