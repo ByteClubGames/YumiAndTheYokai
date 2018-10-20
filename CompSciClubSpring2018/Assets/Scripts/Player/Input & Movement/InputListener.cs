@@ -1,8 +1,8 @@
 ﻿/*
  * Programmer: Keiran Glynn, Daniel Jaffe, Spencer Wilson, Michael Sanchez
  * Date Created: 07/23/2018 @ 12:30 AM
- * Last Modified: 10/14/2018 @ 10:00 PM
- * Last Modification By: Michael Sanchez
+ * Last Modified: 10/20/2018 @ 12:34 AM
+ * Last Modification By: Daniel Jaffe
  * File Name: InputListener.cs
  * Description: This class is responsible listening to the keyboard, and calling the corresponding actions (movement, spells, etc). 
  */
@@ -90,17 +90,29 @@ public class InputListener : MonoBehaviour
         // Spell Casting!!! (Finally-- lol)
         if (Input.GetKeyDown("1") && yumiActive) //Press 1 and start the earth spell
         {
+            if (spellcaster.GetSpellStatus())
+            {
+                spellcaster.DestroySpellSpawner();
+            }
             spellcaster.CallEarthSpell();
         }
         if (Input.GetKeyDown("2") && yumiActive) //Press 2 and start the ice spell
         {
+            if (spellcaster.GetSpellStatus())
+            {
+                spellcaster.DestroySpellSpawner();
+            }
             spellcaster.CallIceSpell();
         }
         if (Input.GetKeyDown("3") && yumiActive) //Press 3 and start the wind spell
         {
+            if (spellcaster.GetSpellStatus())
+            {
+                spellcaster.DestroySpellSpawner();
+            }
             spellcaster.CallWindSpell();
         }
-        if (Input.GetKeyDown("escape") && yumiActive) //Press escape and cancel out of spell casting mode
+        if (Input.GetKeyDown("escape") || (!yumiActive && GameObject.Find("Yokai(Clone)") != null)) //Press escape and cancel out of spell casting mode. Also cancel if Yokai is spawned.
         {
             spellcaster.DestroySpellSpawner();
         }

@@ -23,6 +23,12 @@ public class SpellCasting : MonoBehaviour
     public GameObject spawnerWind;
 
 
+    //Used to check for if the spell is active
+    public bool GetSpellStatus()
+    {
+        return spellOn;
+    }
+
     //Used to instanciate an earth spell spawner object that can be used to cast the earth spell
     public void CallEarthSpell()
     {

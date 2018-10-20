@@ -134,7 +134,7 @@ MonoBehaviour:
   jumpSpeed: 4
   horizontalSpeed: 12
   maxClimbableSlope: 50
-  skinWidth: 0.3
+  skinWidth: 0.34
   horizontalRays: 8
   verticalRays: 4
   error: 0.01

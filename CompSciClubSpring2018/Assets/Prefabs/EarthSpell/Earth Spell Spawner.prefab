@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4071921939109066}
   - component: {fileID: 114893486241768292}
-  - component: {fileID: 114953355125434810}
   m_Layer: 0
   m_Name: Earth Spell Spawner
   m_TagString: Untagged
@@ -56,16 +55,3 @@ MonoBehaviour:
   spellOverlap: 0
   eSpell: {fileID: 1907276841444114, guid: 4753e1a5cf66be34186583ddc65045ba, type: 2}
   playerinput: {x: 1, y: 1, z: 0}
---- !u!114 &114953355125434810
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1495151425050826}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 513351da0ba9b4c1d8dc37f2712d2760, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slowdownFactor: 0.5
-  slowdownLength: 2
