@@ -25,6 +25,9 @@ public class PlayerController : MonoBehaviour {
     public float gravity = -25f; // Negative input value
     public float jumpSpeed = 3f;
     public float horizontalSpeed = 8f; // Movement speed along horizontal axis
+    public float wallSlideSpeed = 2f;
+    public float wallJumpXSpeed = 6f;
+    public float wallJumpYSpeed = 8f;
     public float maxClimbableSlope = 50f; //in degrees
     public float skinWidth; // Acts as an inset start point on the collider for the Ray orgin points
 
@@ -41,12 +44,15 @@ public class PlayerController : MonoBehaviour {
     private bool isGrounded = false;
     private bool isOnSlope = false;
     private bool isRight = false;
+    private bool isWallJump = false;
+    private bool isWallSlide = false;
     #endregion
 
     #region Movement Call Flags
     private bool right = false;
     private bool left = false;
     private bool jump = false;
+    private bool wallJump = false;
     #endregion
 
     #region Box Collider Bounds
