@@ -16,6 +16,7 @@ TagManager:
   - Walls
   - MovingPlatform
   - EnemyDetector
+  - WallJump
   layers:
   - Default
   - TransparentFX
