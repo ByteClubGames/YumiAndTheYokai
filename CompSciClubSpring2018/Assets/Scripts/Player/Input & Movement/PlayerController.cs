@@ -1,12 +1,18 @@
 ﻿/*
- *  Authors: Kieran Glynn, Darrell Wong
- *  Date Created: 7/26/2018
- *  Last Modified: 8/3/2018
- *  PlayerController.cs
- *  Description: This script is the definition of the players physics. It handles:
- *      1. Movement (Jump and Strafe)
- *      2. Collisions using raycasts
- */
+********************************************************************************
+*Creator(s)...........................................Kieran Glynn, Darrell Wong
+*Created...............................................................7/26/2018
+*Last Modified...............................................@ 2:20 on 11/1/2018
+*Last Modified by...................................................Darrell Wong
+*
+*Description:   This script is the definition of the players physics. It handles:
+*               1. Movement (Jump and Strafe)
+*               2. Collisions using raycasts
+*           
+*           Notes:  Jump buffering technique inspired by Evan's work in the legacy
+*                   HumanJump.cs
+********************************************************************************
+*/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -27,6 +33,7 @@ public class PlayerController : MonoBehaviour {
     public float horizontalSpeed = 8f; // Movement speed along horizontal axis
     public float maxClimbableSlope = 50f; //in degrees
     public float skinWidth; // Acts as an inset start point on the collider for the Ray orgin points
+    public float shortHopCoefficient = 2f;   //decides how snappy the shorthop will be
 
     [Header("Collision Detection")]
     [Range( 2, 12)]
@@ -47,6 +54,8 @@ public class PlayerController : MonoBehaviour {
     private bool right = false;
     private bool left = false;
     private bool jump = false;
+    private bool bufferedJump = false;
+    private bool shortHop = false;
     #endregion
 
     #region Box Collider Bounds
@@ -71,6 +80,10 @@ public class PlayerController : MonoBehaviour {
     private float normalizedHorizontalSpeed = 0f;
     private float verticalRaySeparation;
     private float horizontalRaySeparation;
+    private int airBufferFrames = -1;         // if falling, there is a buffer where you can press jump early before touching the ground and the jump will still register
+    public int defaultAirBufferFrames = 5;
+    private int groundBufferFrames = -1;      //if walking off a platform, there is a buffer where you can still jump
+    public int defaultGroundBufferFrames = 5;
 
     private Vector3 velocity;
 
@@ -140,6 +153,23 @@ public class PlayerController : MonoBehaviour {
         {
             jump = true;
         }
+
+        if (!isGrounded && groundBufferFrames > 0)
+        {
+            bufferedJump = true;
+        }
+
+        if (!isGrounded && airBufferFrames <= 0)
+        {
+            //only reset air buffer if falling and pressing (not holding down) the jump button
+            //checking airBufferFrames prevents a player from mashing jump for the frame perfect jumps. jumps should be carefully timed
+            airBufferFrames = defaultAirBufferFrames;      
+        }
+    }
+
+    public void CallShortHop()
+    { 
+            shortHop = true;
     }
 
     public void ClearCalls()
@@ -153,12 +183,18 @@ public class PlayerController : MonoBehaviour {
 
         AnimatorStateInfo currentStateInfo = animator.GetCurrentAnimatorStateInfo(0);
 
+        if (airBufferFrames > 0) airBufferFrames--;
+        if (groundBufferFrames > 0) groundBufferFrames--;
+
+
         /* If the player is grounded, set vertical velocity to zero. This stops the player from accelerating downward */
         if (isGrounded)
         {
             velocity.y = 0;
-        }
+            shortHop = false;
 
+            groundBufferFrames = defaultGroundBufferFrames;
+        }
         
         /* The following selection decides the directioin of horizontal movement (right, left, none) */
         if (right)
@@ -182,13 +218,23 @@ public class PlayerController : MonoBehaviour {
         {
             normalizedHorizontalSpeed = 0;            
         }
-        
+
         /* This selection will make the player jump given it is touching the ground platform and spacebar is pressed*/
-        if (isGrounded && jump)
+        if (isGrounded && jump || bufferedJump || isGrounded && airBufferFrames > 0)
         {
             jump = false;
+            bufferedJump = false;
+            airBufferFrames = -1;
+            groundBufferFrames = -1;
+
             isGrounded = false;            
             velocity.y = Mathf.Sqrt(2f * jumpSpeed * -gravity);            
+        }
+
+        if (!isGrounded && velocity.y > 0 && shortHop)
+        {
+            shortHop = false;                        
+            velocity.y = velocity.y / shortHopCoefficient;
         }
 
         if (characterName == CharacterName.Yokai) {
@@ -348,7 +394,7 @@ public class PlayerController : MonoBehaviour {
         horizontalRaySeparation = colliderUseableWidth / (verticalRays - 1);
         if (isRight)
         {
-            print("moving Right");
+            //print("moving Right");
 
             for (int i = verticalRays; i >= 0; i--)
             {
@@ -388,7 +434,7 @@ public class PlayerController : MonoBehaviour {
         }
         else
         {
-            print("moving left");
+            //print("moving left");
 
             for (int i = 0; i < verticalRays; i++)
             {
