@@ -11302,3 +11302,1709 @@ PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerCont
 
 2018-11-07 12:32:01.9219 [DEBUG] Play mode: False
 2018-11-07 16:41:42.1203 [DEBUG] Scene Fusion version 1.8.1-0
+2018-11-07 20:06:39.6435 [DEBUG] Scene Fusion version 1.8.1-0
+2018-11-07 20:21:27.2449 [DEBUG] Scene Fusion version 1.8.1-0
+2018-11-07 20:21:27.2689 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:27.3319 [DEBUG] Play mode: True, sync in play mode: False
+2018-11-07 20:21:27.3409 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:27.3689 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:27.3859 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:27.4029 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:27.4189 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:27.4349 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:27.4519 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:27.4689 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:27.4849 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:27.5049 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:27.5219 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:27.5659 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:27.6089 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:27.6519 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:27.6689 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:27.6850 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:27.7020 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:27.7440 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:27.7880 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:27.8320 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:27.8770 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:27.9200 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:27.9640 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:28.0070 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:28.0490 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:28.0660 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:28.0824 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:28.0984 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:28.1155 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:28.1315 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:28.1485 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:28.1655 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:28.1816 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:28.1986 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:28.2196 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:28.2386 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:28.2547 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:28.2707 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:28.2877 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:28.3047 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:28.3297 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:28.3657 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:28.3817 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:28.3987 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:28.4152 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:28.4312 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:28.4482 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:28.4642 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:28.4847 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:28.5087 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:28.5257 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:28.5417 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:28.5587 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:28.5757 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:28.5917 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:28.6087 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:28.6253 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:28.6413 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:28.6583 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:28.6753 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:28.6913 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:28.7083 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:28.7253 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:28.7413 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:28.7583 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:28.7753 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:28.7913 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:28.8083 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:28.8243 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:28.8413 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:28.8573 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:28.8743 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:28.8913 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:28.9083 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:28.9243 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:28.9413 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:28.9583 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:28.9743 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:28.9913 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:29.0073 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:29.0243 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:29.0413 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:29.0583 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:29.0743 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:29.0913 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:29.1073 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:29.1243 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:29.1403 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:29.1573 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:29.1753 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:29.1923 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:29.2093 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:29.2254 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:29.2424 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:29.2586 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:29.2754 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:29.2914 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:29.3084 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:29.3254 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:29.3414 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:29.3574 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:29.3744 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:29.3904 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:29.4074 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:29.4244 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:29.4404 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:29.4574 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:29.4734 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:29.4904 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:29.5074 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:29.5240 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:29.5409 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:29.5569 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:29.5729 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:29.5890 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:29.6059 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:29.6229 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:29.6390 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:29.6559 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:29.6730 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:29.6890 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:29.7060 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:29.7230 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:29.7390 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:29.7559 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:29.7720 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:29.7889 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:29.8049 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:29.8220 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:29.8379 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:29.8549 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:29.8779 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:29.8949 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:29.9109 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:29.9279 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:29.9439 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:29.9610 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:29.9770 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:29.9940 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:30.0099 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:30.0269 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:30.0440 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:30.0649 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:30.0819 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:30.0989 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:30.1149 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:30.1312 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:30.1482 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:30.1652 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:30.1812 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:30.1972 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:30.2144 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:30.2314 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:30.2474 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:30.2646 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:30.2805 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:30.2975 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:30.3134 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:30.3296 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:30.3466 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:30.3636 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:30.3801 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:30.4221 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:30.4651 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:30.5102 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:30.5292 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:30.5461 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:30.5621 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:30.5792 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:30.5962 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:30.6121 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:30.6292 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:30.6451 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:30.6621 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:30.6787 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:30.6947 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:30.7123 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:30.7283 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:30.7453 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:30.7613 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:30.7783 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:30.7953 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:30.8113 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:30.8283 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:30.8443 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:30.8613 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:30.8773 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:30.8943 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:30.9104 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:30.9274 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:30.9494 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:30.9604 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:30.9774 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:30.9934 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:31.0104 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:31.0271 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:31.0430 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:31.0600 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:31.0760 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:31.0930 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:31.1096 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:31.1266 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:31.1426 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:31.1586 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:31.1756 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:31.1926 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:31.2090 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:31.2260 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:31.2420 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:31.2590 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:31.2750 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:31.2910 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:31.3080 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:31.3250 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:31.3420 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:31.3580 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:31.3750 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:31.3911 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:31.4079 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:31.4249 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:31.4409 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:31.4569 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:31.4740 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:31.4910 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:31.5073 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:31.5243 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:31.5413 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:31.5573 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:31.5733 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:31.5903 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:31.6073 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:31.6283 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:31.6443 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:31.6613 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:31.6774 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:31.6944 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:31.7103 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:31.7273 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:31.7443 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:31.7603 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:31.7778 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:31.7939 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:31.8103 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:31.8274 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:31.8443 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:31.8604 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:31.8764 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:31.8934 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:31.9104 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:31.9264 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:31.9434 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:31.9604 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:31.9764 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:31.9924 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:32.0094 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:32.0264 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:32.0434 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:32.0594 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:32.0764 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:32.0924 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:32.1084 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:32.1254 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:32.1424 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:32.1584 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:32.1754 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:32.1924 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:32.2084 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:32.2244 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:32.2414 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:32.2584 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:32.2744 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:32.2914 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:32.3084 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:32.3245 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:32.3405 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:32.3575 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:32.3745 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:32.3905 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:32.4076 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:32.4236 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:32.4406 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:32.4566 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:32.4736 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:32.4906 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:32.5066 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:32.5226 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:32.5396 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:32.5563 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:32.5726 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:32.5896 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:32.6057 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:32.6226 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:32.6396 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:32.6556 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:32.6716 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:32.6886 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:32.7056 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:32.7216 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:32.7386 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:32.7546 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:32.7716 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:32.7876 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:32.8046 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:32.8216 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:32.8376 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:32.8546 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:32.8706 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:32.8876 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:32.9046 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:32.9206 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:32.9376 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:32.9536 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:32.9696 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:32.9866 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:33.0036 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:33.0206 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:33.0366 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:33.0536 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:33.0696 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:33.0866 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:33.1036 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:33.1206 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:33.1376 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:33.1526 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:33.1696 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:33.1856 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:33.2026 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:33.2186 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:33.2356 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:33.2517 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:33.2686 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:33.2846 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:33.3016 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:33.3186 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:33.3347 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:33.3507 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:33.3727 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:33.3886 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:33.4051 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:33.4222 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:33.4392 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:33.4551 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:33.4722 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:33.4881 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:33.5051 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:33.5221 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:33.5381 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:33.5542 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:33.5712 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:33.5872 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:33.6042 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:33.6212 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:33.6372 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:33.6543 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:33.6704 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:33.6874 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:33.7034 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:33.7204 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:33.7373 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:33.7533 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:33.7703 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:33.7874 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:33.8033 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:33.8203 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:33.8373 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:33.8543 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:33.8693 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:33.8863 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:33.9023 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:33.9193 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:33.9354 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:33.9524 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:33.9684 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:33.9854 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:34.0024 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:34.0184 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:34.0354 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:34.0514 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:34.0679 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:34.0849 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:34.1009 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:34.1179 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:34.1339 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:34.1509 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:34.1679 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:34.1839 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:34.2009 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:34.2169 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:34.2333 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:34.2503 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:34.2673 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:34.2834 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:34.3004 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:34.3163 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:34.3333 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:34.3503 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:34.3663 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:34.3833 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:34.3996 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:34.4166 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:34.4323 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:34.4497 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:34.4657 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:34.4826 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:34.4987 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:34.5157 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:34.5317 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:34.5487 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:34.5656 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:34.5817 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:34.5986 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:34.6147 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:34.6317 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:34.6477 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:34.6650 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:34.6807 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:34.6977 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:34.7147 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:34.7307 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:34.7477 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:34.7637 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:34.7807 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:34.7967 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:34.8137 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:34.8307 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:34.8467 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:34.8637 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:34.8797 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:34.8967 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:34.9137 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:34.9294 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:34.9463 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:34.9634 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:34.9794 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:34.9963 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:35.0124 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:35.0290 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:35.0460 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:35.0630 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:35.0790 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:35.0950 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:35.1120 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:35.1290 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:35.1550 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:35.1640 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:35.1810 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:35.1970 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:35.2141 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:35.2307 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:35.2467 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:35.2637 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:35.2807 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:35.2967 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:35.3137 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:35.3294 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:35.3474 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:35.3634 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:35.3805 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:35.3965 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:35.4125 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:35.4296 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:35.4456 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:35.4626 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:35.4796 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:35.4956 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:35.5126 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:35.5286 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:35.5456 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:35.5616 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:35.5786 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:35.5955 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:35.6115 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:35.6285 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:35.6455 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:35.6615 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:35.6775 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:35.6946 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:35.7106 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:35.7283 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:35.7443 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:35.7604 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:35.7773 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:35.7934 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:35.8114 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:35.8272 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:35.8442 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:35.8603 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:35.8772 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:35.8934 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:35.9105 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:35.9261 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:35.9432 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:35.9592 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:35.9762 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:35.9922 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:36.0092 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:36.0297 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:36.0428 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:36.0587 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:36.0755 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:36.0925 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:36.1085 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:36.1252 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:36.1422 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:36.1582 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:36.1752 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:36.1912 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:36.2082 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:36.2242 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:36.2412 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:36.2572 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:36.2742 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:36.2913 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:36.3072 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:36.3249 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:36.3409 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:36.3569 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:36.3744 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:36.3904 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:36.4075 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:36.4235 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:36.4401 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:36.4561 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:36.4731 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:36.4894 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:36.5061 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:36.5231 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:36.5401 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:36.5561 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:36.5721 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:36.5893 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:36.6054 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:36.6223 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:36.6384 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:36.6554 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:36.6724 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:36.6884 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:36.7054 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:36.7214 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:36.7384 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:36.7545 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:36.7715 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:36.7885 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:36.8045 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:36.8215 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:36.8375 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:36.8545 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:36.8705 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:36.8876 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:36.9036 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:36.9207 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:36.9407 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:36.9567 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:36.9737 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:36.9897 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:37.0067 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:37.0227 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:37.0397 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:37.0570 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:37.0727 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:37.0887 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:37.1057 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:37.1227 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:37.1398 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:37.1558 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:37.1718 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+PlayerController.Update () (at Assets/Scripts/Player/Input & Movement/PlayerController.cs:154)
+
+2018-11-07 20:21:37.3255 [DEBUG] Play mode: False
+2018-11-07 21:42:30.9806 [DEBUG] Scene Fusion version 1.8.1-0
