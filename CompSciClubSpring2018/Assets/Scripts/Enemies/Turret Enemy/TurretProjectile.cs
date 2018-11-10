@@ -1,13 +1,20 @@
 ﻿/*
- * Author: Keiran Glynn & Karim Dabboussi
- * Date Created: 3/17/2018 @ 11:30 am
- * Date Modified: 3/17/2018 @ 11:30 am
- * Project: CompSciClubSpring2018
- * File: TurretProjectile.cs
- * Description: This script controls the function of the projectiles (bullets) fired by the turret enemy. It controls how the bullets move and when they should
- * be destroyed. It also houses values for how fast the projectiles move towards the player. If a projectile happens to hit the astral, it will 
- * cause damage to it. If it hits another object that is not the astral, it will be destroyed.
- */
+***************************************************************************************
+*Creator(s).........................................Keiran Glynn & Karim Dabboussi
+*Created..............................................................3/17/2018
+*Last Modified............................................@ 4:55PM on 11/9/2018
+*Last Modified by...................................................Karim Dabboussi
+*
+*Description:   This script controls the function of the projectiles (bullets) fired by the turret enemy. 
+*It controls how the bullets move and when they should
+* be destroyed. It also houses values for how fast the projectiles move towards the player. 
+* If a projectile happens to hit the astral, it will 
+* cause damage to it. If it hits another object that is not the astral, it will be destroyed.
+* 
+*
+*               
+***************************************************************************************
+*/
 
 using System.Collections;
 using System.Collections.Generic;
@@ -35,9 +42,9 @@ public class TurretProjectile : MonoBehaviour {
     {
         PlayerTransform();
         projectileTransform = GetComponent<Transform>();
-        projectilePos = GameObject.Find("ProjectileSpawn").GetComponent<Transform>().position;// + projectileTransform.position;
+        projectilePos = this.GetComponent<Transform>().position;// + projectileTransform.position;
         //projectilePos = GameObject.GetComponent<TurretEnemy>().projPos + projectileTransform.position;
-        target = (player.position - projectilePos).normalized;
+        target = (player.position - projectilePos).normalized; //calculates the target
         //projectileTransform.LookAt(-player.position);
         
 
@@ -62,7 +69,7 @@ public class TurretProjectile : MonoBehaviour {
         {
             //ProjectileMovement();
             GameObject.Find("Ferrox").GetComponent<FerroxHealth>().TakeDamage(projectileDamage);
-            GameObject.Find("Player-Human").GetComponent<HumanHealth>().TakeDamage(projectileDamage);
+            GameObject.Find("Yumi").GetComponent<HumanHealth>().TakeDamage(projectileDamage);
             isHit = true; // regardless of weather or not it hit the astral, it will be as having hit someting
         }
         else if (collision.gameObject.tag == "EnemyDetection")
@@ -73,8 +80,8 @@ public class TurretProjectile : MonoBehaviour {
 
     public void ProjectileMovement() // Makes the projectile move in a straight line towards the player
     {
-        projectileTransform.Translate(target * speed * Time.deltaTime);
-        StartCoroutine(waitToDestroy(timeToDestroy));
+        projectileTransform.Translate(target * speed * Time.deltaTime); //makes projectile move towards player
+        StartCoroutine(waitToDestroy(timeToDestroy)); //deletes object after given time
     }
 
     /// <summary>
@@ -84,7 +91,7 @@ public class TurretProjectile : MonoBehaviour {
     {
         if (GameObject.Find("Ferrox") == null)
         {
-            player = GameObject.Find("Player-Human").GetComponent<Transform>();
+            player = GameObject.Find("Yumi").GetComponent<Transform>();
         }
         else
         {

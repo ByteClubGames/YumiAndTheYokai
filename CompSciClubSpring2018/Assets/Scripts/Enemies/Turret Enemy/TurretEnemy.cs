@@ -2,7 +2,7 @@
 ***************************************************************************************
 *Creator(s).........................................Keiran Glynn & Karim Dabboussi
 *Created..............................................................3/17/2018
-*Last Modified............................................@ 2:05PM on 10/19/2018
+*Last Modified............................................@ 4:58PM on 11/9/2018
 *Last Modified by...................................................Karim Dabboussi
 *
 *Description:   This script houses the main control script for the turret enemy.
@@ -25,7 +25,9 @@ public class TurretEnemy : MonoBehaviour {
     public float fireRate = 1F;
     private float nextShot = 0.0F;
     public Vector3 projPos;
-    public static Transform targeter;
+    public Transform targeter;
+    public GameObject projectileo;
+    public GameObject head;
 
     // Update is called once per frame
     private void Update()
@@ -39,15 +41,15 @@ public class TurretEnemy : MonoBehaviour {
     {
         if (collision.tag == "Human")
         {
-            targeter = GameObject.Find("Player-Human").transform;
-           GameObject.Find("ProjectileSpawn").GetComponent<TurretEnemy>().SetInRange(true); //THIS WORKS
+            targeter = GameObject.Find("Yumi").transform;
+           projectileo.GetComponent<TurretEnemy>().SetInRange(true); //THIS WORKS
             //SetInRange(true);
             Debug.Log("In range of enemy turret");
         }
         else if (collision.tag == "Yokai")
         {
-            targeter = GameObject.Find("Yokai-Human").transform;
-            GameObject.Find("ProjectileSpawn").GetComponent<TurretEnemy>().SetInRange(true);
+            targeter = GameObject.Find("Yokai(Clone)").transform;
+            projectileo.GetComponent<TurretEnemy>().SetInRange(true);
             //SetInRange(true);
             Debug.Log("In range of enemy turret");
         }
@@ -57,7 +59,7 @@ public class TurretEnemy : MonoBehaviour {
       {
           if (collision.tag == "Ferrox" || collision.tag == "Human")
           {
-            GameObject.Find("ProjectileSpawn").GetComponent<TurretEnemy>().SetInRange(false);
+            projectileo.GetComponent<TurretEnemy>().SetInRange(false);
            // SetInRange(false);
             targeter = null;
             Debug.Log("Out of range of enemy turret");

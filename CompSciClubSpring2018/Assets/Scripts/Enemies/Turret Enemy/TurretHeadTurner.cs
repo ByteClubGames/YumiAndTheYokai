@@ -1,12 +1,15 @@
 ﻿/*
- * Author: Keiran Glynn & Karim Dabboussi
- * Date Created: 3/17/2018 @ 11:30 am
- * Date Modified: 3/17/2018 @ 11:30 am
- * Project: CompSciClubSpring2018
- * File: TurretHeadTurner.cs
- * Description: This script is responsible for making the head of the enemy face towards the player at all times.
- */
-
+***************************************************************************************
+*Creator(s).........................................Keiran Glynn & Karim Dabboussi
+*Created..............................................................3/17/2018
+*Last Modified............................................@ 4:55PM on 11/9/2018
+*Last Modified by...................................................Karim Dabboussi
+*
+*Description:  controls the player head rotation.
+*
+*               
+***************************************************************************************
+*/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -25,7 +28,7 @@ public class TurretHeadTurner : MonoBehaviour {
 
     void Update ()
     {
-        target = TurretEnemy.targeter;
+        target = this.transform.parent.GetComponent<TurretEnemy>().targeter;
         RotateHead();
 	}
 
