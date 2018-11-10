@@ -68,6 +68,11 @@ public class InputListener : MonoBehaviour
             activePlayer.CallJump();
         }
 
+        if (Input.GetKeyUp("w") || Input.GetKeyUp("up") || Input.GetKeyUp("space"))
+        {
+            activePlayer.CallShortHop();
+        }
+
         // Character Swap
         if (Input.GetKeyDown("f")) //Updated the mapping to "f" to be in line with most other games. 1-3 will be for spells. -Daniel Jaffe
         {

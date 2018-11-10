@@ -1,12 +1,18 @@
 ﻿/*
- *  Authors: Kieran Glynn, Darrell Wong
- *  Date Created: 7/26/2018
- *  Last Modified: 8/3/2018
- *  PlayerController.cs
- *  Description: This script is the definition of the players physics. It handles:
- *      1. Movement (Jump and Strafe)
- *      2. Collisions using raycasts
- */
+********************************************************************************
+*Creator(s)...........................................Kieran Glynn, Darrell Wong
+*Created...............................................................7/26/2018
+*Last Modified.............................................@ 3:00PM on 11/2/2018
+*Last Modified by...................................................Darrell Wong
+*
+*Description:   This script is the definition of the players physics. It handles:
+*               1. Movement (Jump and Strafe)
+*               2. Collisions using raycasts
+*           
+*           Notes:  Jump buffering technique (coyote time) inspired by Evan's work in the legacy
+*                   HumanJump.cs
+********************************************************************************
+*/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -27,6 +33,7 @@ public class PlayerController : MonoBehaviour {
     public float horizontalSpeed = 8f; // Movement speed along horizontal axis
     public float maxClimbableSlope = 50f; //in degrees
     public float skinWidth; // Acts as an inset start point on the collider for the Ray orgin points
+    public float shortHopCoefficient = 2f;   //decides how snappy the shorthop will be
 
     [Header("Collision Detection")]
     [Range( 2, 12)]
@@ -47,6 +54,16 @@ public class PlayerController : MonoBehaviour {
     private bool right = false;
     private bool left = false;
     private bool jump = false;
+    private bool bufferedJump = false;
+    private bool shortHop = false;
+
+    /* the purpose of forcedShortHop is to eliminate a bug where you can very quickly tap and release the jump button
+     * during the airBuffer frames resulting in a full jump rather than a short hop
+     *
+     * it will be used to force a short hop when jump is release before touching the ground not held down
+     */
+    private bool forcedShortHop = false; 
+
     #endregion
 
     #region Box Collider Bounds
@@ -71,6 +88,10 @@ public class PlayerController : MonoBehaviour {
     private float normalizedHorizontalSpeed = 0f;
     private float verticalRaySeparation;
     private float horizontalRaySeparation;
+    private int airBufferFrames = -1;         // if falling, there is a buffer where you can press jump early before touching the ground and the jump will still register
+    public int defaultAirBufferFrames = 5;
+    private int groundBufferFrames = -1;      //if walking off a platform, there is a buffer where you can still jump
+    public int defaultGroundBufferFrames = 5;
 
     private Vector3 velocity;
 
@@ -140,6 +161,28 @@ public class PlayerController : MonoBehaviour {
         {
             jump = true;
         }
+
+        if (!isGrounded && groundBufferFrames > 0)
+        {
+            bufferedJump = true;
+        }
+
+        if (!isGrounded && airBufferFrames <= 0)
+        {
+            //only reset air buffer if falling and pressing (not holding down) the jump button
+            //checking airBufferFrames prevents a player from mashing jump for the frame perfect jumps. jumps should be carefully timed
+            airBufferFrames = defaultAirBufferFrames;      
+        }
+    }
+
+    public void CallShortHop()
+    { 
+        if (airBufferFrames > 0 && velocity.y < 0)  //when jump is released while still falling it will force a short hop. without this, it would result in a full jump
+        {
+            forcedShortHop = true;
+        }
+        shortHop = true;
+
     }
 
     public void ClearCalls()
@@ -153,12 +196,18 @@ public class PlayerController : MonoBehaviour {
 
         AnimatorStateInfo currentStateInfo = animator.GetCurrentAnimatorStateInfo(0);
 
+        if (airBufferFrames > 0) airBufferFrames--;
+        if (groundBufferFrames > 0) groundBufferFrames--;
+
+
         /* If the player is grounded, set vertical velocity to zero. This stops the player from accelerating downward */
         if (isGrounded)
         {
             velocity.y = 0;
-        }
+            shortHop = false;
 
+            groundBufferFrames = defaultGroundBufferFrames;
+        }
         
         /* The following selection decides the directioin of horizontal movement (right, left, none) */
         if (right)
@@ -182,13 +231,44 @@ public class PlayerController : MonoBehaviour {
         {
             normalizedHorizontalSpeed = 0;            
         }
-        
-        /* This selection will make the player jump given it is touching the ground platform and spacebar is pressed*/
-        if (isGrounded && jump)
+
+        /* This selection will make the player jump given:
+         *      it is touching the ground platform and spacebar is pressed
+         *      it is walking off a ledge and jump is pressed before groundbuffer frames are not zero. (bufferedJump)
+         *      it is falling and airBufferFrames(activated by pressing jump) are not zero. (see CallJump() above) 
+         */
+        if (isGrounded && jump || bufferedJump || isGrounded && airBufferFrames > 0)
         {
             jump = false;
+            bufferedJump = false;
+            airBufferFrames = -1;
+            groundBufferFrames = -1;
+
             isGrounded = false;            
             velocity.y = Mathf.Sqrt(2f * jumpSpeed * -gravity);            
+        }
+
+        if (!isGrounded && velocity.y > 0 && (shortHop || forcedShortHop))
+        {
+            shortHop = false;
+
+            if (forcedShortHop)
+            {
+                forcedShortHop = false;
+                velocity.y = velocity.y/(shortHopCoefficient * .7f);
+
+                /*If this looks stupid that is because it is:
+                 * It seems that the input delay when the jump key is released 
+                 * gives the character enough time travel before cutting the velocity in half
+                 * 
+                 * when doing a forcedshorthop though, there is no input delay and it happens instantly
+                 * creating an unintended very very short hop. scaling the shortHopCoefficient by .7f simulates the same input delay
+                 * so that it does not make a super short hop but a regular short hop.
+                 */
+            }
+
+            else
+            velocity.y = velocity.y / shortHopCoefficient;
         }
 
         if (characterName == CharacterName.Yokai) {
@@ -348,7 +428,7 @@ public class PlayerController : MonoBehaviour {
         horizontalRaySeparation = colliderUseableWidth / (verticalRays - 1);
         if (isRight)
         {
-            print("moving Right");
+            //print("moving Right");
 
             for (int i = verticalRays; i >= 0; i--)
             {
@@ -388,7 +468,7 @@ public class PlayerController : MonoBehaviour {
         }
         else
         {
-            print("moving left");
+            //print("moving left");
 
             for (int i = 0; i < verticalRays; i++)
             {
