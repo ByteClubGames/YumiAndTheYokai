@@ -44,8 +44,14 @@ public class PlayerController : MonoBehaviour {
     private bool isGrounded = false;
     private bool isOnSlope = false;
     private bool isRight = false;
-    private bool isWallJump = false;
-    private bool isWallSlide = false;
+    private bool isOnWallRight = false;
+    private bool isOnWallLeft = false;
+
+    private void ClearOnWall()
+    {
+        isOnWallLeft = false;
+        isOnWallRight = false;
+    }
     #endregion
 
     #region Movement Call Flags
@@ -145,6 +151,14 @@ public class PlayerController : MonoBehaviour {
         if (isGrounded)
         {
             jump = true;
+        }
+        else if (isOnWallLeft)
+        {
+            wallJump = true;
+        }
+        else if (isOnWallRight)
+        {
+            wallJump = true;
         }
     }
 
@@ -320,10 +334,22 @@ public class PlayerController : MonoBehaviour {
                 if (isRight && !climbableSlope)
                 {
                     deltaMovement.x -= skinWidth;
+
+                    if((hit.transform.gameObject.tag == "WallJump") && !isGrounded)
+                    {
+                        isOnWallRight = true;
+                        Debug.Log("isOnWallRight");
+                    }                    
                 }
                 else if (!isRight && !climbableSlope)
                 {
                     deltaMovement.x += skinWidth;
+
+                    if ((hit.transform.gameObject.tag == "WallJump") && !isGrounded)
+                    {
+                        isOnWallLeft = true;
+                        Debug.Log("isOnWallLeft");
+                    }
                 }
 
                 if (rayLength < skinWidth + error)
@@ -378,6 +404,7 @@ public class PlayerController : MonoBehaviour {
                     {
                         deltaMovement.y += skinWidth;
                         isGrounded = true;
+                        ClearOnWall();
                     }
 
                     if (!isUp && deltaMovement.y > 0.00001f)
@@ -418,6 +445,7 @@ public class PlayerController : MonoBehaviour {
                     {
                         deltaMovement.y += skinWidth;
                         isGrounded = true;
+                        ClearOnWall();
                     }
 
                     if (!isUp && deltaMovement.y > 0.00001f)
