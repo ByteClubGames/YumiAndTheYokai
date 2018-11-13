@@ -168,6 +168,8 @@ public class PlayerController : MonoBehaviour {
     }
     #endregion
 
+
+
     void Update()
     {
 
@@ -179,24 +181,40 @@ public class PlayerController : MonoBehaviour {
             velocity.y = 0;
         }
 
-        
+        if (isOnWallLeft)
+        {
+            //flip sprite|animation
+            velocity.y = wallSlideSpeed * -1 * Time.deltaTime;
+
+        }
+        else if (isOnWallRight)
+        {
+            //flip sprite|animation
+            velocity.y = wallSlideSpeed * -1 * Time.deltaTime;
+
+        }
+
         /* The following selection decides the directioin of horizontal movement (right, left, none) */
-        if (right)
+        if (right && !isOnWallRight)
         {
             if (!currentStateInfo.IsName("yokai_run")) {
                 spriteRenderer.flipX = false;
                 animator.Play("yokai_run");
             }
             normalizedHorizontalSpeed = 1;
+
+            isOnWallLeft = false;
         }
-        else if (left)
+        else if (left && !isOnWallLeft)
         {
             if (!currentStateInfo.IsName("yokai_run"))
             {
                 spriteRenderer.flipX = true;
                 animator.Play("yokai_run");
             }
-            normalizedHorizontalSpeed = -1;            
+            normalizedHorizontalSpeed = -1;
+
+            isOnWallRight = false;
         }
         else
         {
@@ -210,7 +228,7 @@ public class PlayerController : MonoBehaviour {
             isGrounded = false;            
             velocity.y = Mathf.Sqrt(2f * jumpSpeed * -gravity);            
         }
-
+        
         if (characterName == CharacterName.Yokai) {
             if (!right && !left && !jump)
             {
@@ -227,8 +245,12 @@ public class PlayerController : MonoBehaviour {
         //Horizontal velocity
         velocity.x = Mathf.Lerp(velocity.x, normalizedHorizontalSpeed * horizontalSpeed, Time.deltaTime * 20f);
 
-        // Gravity (Vertical component of Velocity if not jumping)
-        velocity.y += gravity * Time.deltaTime;
+        // Gravity (Vertical component of Velocity if not wall sliding)
+        if (!isOnWallRight || !isOnWallLeft)
+        {
+            velocity.y += gravity * Time.deltaTime;
+        }
+        
 
 
         /*The velocities (speed and directions that we would like to move in) are multiplied by Time to turn them into a position that
