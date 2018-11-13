@@ -174,6 +174,7 @@ public class PlayerController : MonoBehaviour {
     {
 
         AnimatorStateInfo currentStateInfo = animator.GetCurrentAnimatorStateInfo(0);
+        bool wallJumpActive = false;
 
         /* If the player is grounded, set vertical velocity to zero. This stops the player from accelerating downward */
         if (isGrounded)
@@ -184,16 +185,38 @@ public class PlayerController : MonoBehaviour {
         if (isOnWallLeft)
         {
             //flip sprite|animation
-            velocity.y = wallSlideSpeed * -1 * Time.deltaTime;
+            velocity.y = wallSlideSpeed * -1 * Time.deltaTime * 10.0f;
             isOnWallLeft = StillOnWall(false);
+
+            if (wallJump)
+            {
+                wallJump = false;
+                wallJumpActive = true;
+
+                velocity.x = wallJumpXSpeed * Time.deltaTime * 100f;
+            }
 
         }
         else if (isOnWallRight)
         {
             //flip sprite|animation
-            velocity.y = wallSlideSpeed * -1 * Time.deltaTime;
+            velocity.y = wallSlideSpeed * -1 * Time.deltaTime * 10.0f;
             isOnWallRight = StillOnWall(true);
 
+            if (wallJump)
+            {
+                wallJump = false;
+                wallJumpActive = true;
+
+                velocity.x = wallJumpXSpeed * -1.0f * Time.deltaTime * 100f;
+            }
+
+        }
+
+        if (wallJumpActive)
+        {
+            velocity.y = Mathf.Sqrt(2f * wallJumpYSpeed * -gravity * 10f);
+            wallJumpActive = false;
         }
 
         /* The following selection decides the directioin of horizontal movement (right, left, none) */
@@ -245,10 +268,13 @@ public class PlayerController : MonoBehaviour {
         }
 
         //Horizontal velocity
-        velocity.x = Mathf.Lerp(velocity.x, normalizedHorizontalSpeed * horizontalSpeed, Time.deltaTime * 20f);
-
+        if (!wallJumpActive)
+        {
+            velocity.x = Mathf.Lerp(velocity.x, normalizedHorizontalSpeed * horizontalSpeed, Time.deltaTime * 20f);
+        }
+        
         // Gravity (Vertical component of Velocity if not wall sliding)
-        if (!isOnWallRight || !isOnWallLeft)
+        if ((!isOnWallRight || !isOnWallLeft) && !wallJumpActive)
         {
             velocity.y += gravity * Time.deltaTime;
         }
