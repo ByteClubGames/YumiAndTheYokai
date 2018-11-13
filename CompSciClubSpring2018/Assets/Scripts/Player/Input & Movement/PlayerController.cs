@@ -185,12 +185,14 @@ public class PlayerController : MonoBehaviour {
         {
             //flip sprite|animation
             velocity.y = wallSlideSpeed * -1 * Time.deltaTime;
+            isOnWallLeft = StillOnWall(false);
 
         }
         else if (isOnWallRight)
         {
             //flip sprite|animation
             velocity.y = wallSlideSpeed * -1 * Time.deltaTime;
+            isOnWallRight = StillOnWall(true);
 
         }
 
@@ -308,6 +310,34 @@ public class PlayerController : MonoBehaviour {
             velocity.y = 0;
     }
 
+    private bool StillOnWall(bool slidingRight)
+    {
+        Vector3 ray = new Vector3(boxCollider.bounds.center.x, boxCollider.bounds.center.y, 0f);
+        float rayLength = boxCollider.bounds.extents.x + 0.01f;
+        Vector3 rayDirection = slidingRight ? Vector3.right : Vector3.left;
+
+        RaycastHit hit;
+
+        Debug.DrawRay(ray, rayDirection * rayLength, Color.black);
+
+        bool raycastHit = Physics.Raycast(ray, rayDirection, out hit, rayLength, platformMask);
+
+        if (raycastHit)
+        {
+            if ((hit.transform.gameObject.tag == "WallJump") && !isGrounded)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        else
+        {
+            return false;
+        }
+    }
 
     /*Rays are casted from the bottom of the box collider to the top using a for-loop. The direction they are casted in is decided based on
      * the current movement direction. If a collision is detected, it will subtract from the target position as to prevent the player from 
@@ -378,7 +408,7 @@ public class PlayerController : MonoBehaviour {
                 {
                     break;
                 }
-            }
+            }            
         }
 
         return deltaMovement;
