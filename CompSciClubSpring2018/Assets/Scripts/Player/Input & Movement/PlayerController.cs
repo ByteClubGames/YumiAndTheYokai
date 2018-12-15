@@ -97,6 +97,8 @@ public class PlayerController : MonoBehaviour {
     private bool jump = false;
     private bool bufferedJump = false;
     private bool shortHop = false;
+    bool wallJumpActive = false;
+    bool wallJumpStarted = false;
 
     /* the purpose of forcedShortHop is to eliminate a bug where you can very quickly tap and release the jump button
      * during the airBuffer frames resulting in a full jump rather than a short hop
@@ -159,7 +161,7 @@ public class PlayerController : MonoBehaviour {
             
         }
         if (characterName == CharacterName.Yokai) {
-            main_follow_camera.Follow = this.gameObject.transform;
+            main_follow_camera.Follow = this.gameObject.transform;            
         }
     }
 
@@ -203,6 +205,14 @@ public class PlayerController : MonoBehaviour {
         {
             jump = true;
         }
+        else if (isOnWallLeft)
+        {
+            wallJump = true;
+        }
+        else if (isOnWallRight)
+        {
+            wallJump = true;
+        }
 
         if (!isGrounded && groundBufferFrames > 0)
         {
@@ -215,15 +225,24 @@ public class PlayerController : MonoBehaviour {
             //checking airBufferFrames prevents a player from mashing jump for the frame perfect jumps. jumps should be carefully timed
             airBufferFrames = defaultAirBufferFrames;      
         }
-        else if (isOnWallLeft)
-        {
-            wallJump = true;
-        }
-        else if (isOnWallRight)
-        {
-            wallJump = true;
-        }
+        
     }
+
+    //public void CallJump()
+    //{
+    //    if (isGrounded)
+    //    {
+    //        jump = true;
+    //    }
+    //    else if (isOnWallLeft)
+    //    {
+    //        wallJump = true;
+    //    }
+    //    else if (isOnWallRight)
+    //    {
+    //        wallJump = true;
+    //    }
+    //}
 
     public void CallShortHop()
     { 
@@ -241,162 +260,213 @@ public class PlayerController : MonoBehaviour {
     }
     #endregion
 
+    private void WallJumpHorizontal(Vector3 horizontalTarget)
+    {
+        //float i;
+        //for (i )
+        //{
+        //    transform.position = Vector3.MoveTowards(transform.position, horizontalTarget, i);
 
+            
+        //}
+
+        //if(i >= 0.5f)
+        //{
+        //    wallJump = false;
+        //    wallJumpActive = false;
+        //    velocity.y = Mathf.Sqrt(2f * wallJumpYSpeed * -gravity);
+        //}
+    }
+        
 
     void Update()
     {
-
-        AnimatorStateInfo currentStateInfo = animator.GetCurrentAnimatorStateInfo(0);
-        bool wallJumpActive = false;
-
-        if (airBufferFrames > 0) airBufferFrames--;
-        if (groundBufferFrames > 0) groundBufferFrames--;
-
-
-        /* If the player is grounded, set vertical velocity to zero. This stops the player from accelerating downward */
-        if (isGrounded)
+        if (wallJump || wallJumpActive)
         {
-            velocity.y = 0;
-            shortHop = false;
+            wallJump = false;
+            wallJumpActive = true;
+            
 
-            groundBufferFrames = defaultGroundBufferFrames;
-        }
-        
-        if (isOnWallLeft)
-        {
-            //flip sprite|animation
-            velocity.y = wallSlideSpeed * -1 * Time.deltaTime * 10.0f;
-            isOnWallLeft = WallJump.StillOnWall(this, false, boxCollider, isGrounded, platformMask);
+            Vector3 horizontalTarget;
+            //Vector3 verticalTarget;
 
-            if (wallJump)
+            if (isOnWallLeft && !wallJumpStarted)
             {
-                wallJump = false;
-                wallJumpActive = true;
+                //flip sprite|animation
 
-                velocity.x = wallJumpXSpeed * Time.deltaTime * 100f;
+                horizontalTarget = new Vector3(2f, 0f, 0f) + transform.position;
+                //verticalTarget = new Vector3(0f, 1f, 0f) + transform.position;
+                WallJumpHorizontal(horizontalTarget);
             }
-
-        }
-        else if (isOnWallRight)
-        {
-            //flip sprite|animation
-            velocity.y = wallSlideSpeed * -1 * Time.deltaTime * 10.0f;
-            isOnWallRight = WallJump.StillOnWall(this, true, boxCollider, isGrounded, platformMask);
-
-            if (wallJump)
+            else if (isOnWallRight && !wallJumpStarted)
             {
-                wallJump = false;
-                wallJumpActive = true;
+                //flip sprite|animation
 
-                velocity.x = wallJumpXSpeed * -1.0f * Time.deltaTime * 100f;
+                horizontalTarget = new Vector3(-2f, 0f, 0f) + transform.position;
+                //verticalTarget = new Vector3(0f, 1f, 0f) + transform.position;
+                WallJumpHorizontal(horizontalTarget);
             }
-
-        }
-
-        if (wallJumpActive)
-        {
-            velocity.y = Mathf.Sqrt(2f * wallJumpYSpeed * -gravity * 10f);
-            wallJumpActive = false;
-        }
-
-        /* The following selection decides the directioin of horizontal movement (right, left, none) */
-        if (right && !isOnWallRight)
-        {
-            if (!currentStateInfo.IsName("yokai_run")) {
-                spriteRenderer.flipX = false;
-                animator.Play("yokai_run");
-            }
-            normalizedHorizontalSpeed = 1;
-
-            isOnWallLeft = false;
-        }
-        else if (left && !isOnWallLeft)
-        {
-            if (!currentStateInfo.IsName("yokai_run"))
-            {
-                spriteRenderer.flipX = true;
-                animator.Play("yokai_run");
-            }
-            normalizedHorizontalSpeed = -1;
-
-            isOnWallRight = false;
+            
         }
         else
         {
-            normalizedHorizontalSpeed = 0;            
-        }
+            AnimatorStateInfo currentStateInfo = animator.GetCurrentAnimatorStateInfo(0);
+            
 
-        /* This selection will make the player jump given:
-         *      it is touching the ground platform and spacebar is pressed
-         *      it is walking off a ledge and jump is pressed before groundbuffer frames are not zero. (bufferedJump)
-         *      it is falling and airBufferFrames(activated by pressing jump) are not zero. (see CallJump() above) 
-         */
-        if (isGrounded && jump || bufferedJump || isGrounded && airBufferFrames > 0)
-        {
-            jump = false;
-            bufferedJump = false;
-            airBufferFrames = -1;
-            groundBufferFrames = -1;
+            if (airBufferFrames > 0) airBufferFrames--;
+            if (groundBufferFrames > 0) groundBufferFrames--;
 
-            isGrounded = false;            
-            velocity.y = Mathf.Sqrt(2f * jumpSpeed * -gravity);            
-        }
 
-        if (!isGrounded && velocity.y > 0 && (shortHop || forcedShortHop))
-        {
-            shortHop = false;
-
-            if (forcedShortHop)
+            /* If the player is grounded, set vertical velocity to zero. This stops the player from accelerating downward */
+            if (isGrounded)
             {
-                forcedShortHop = false;
-                velocity.y = velocity.y/(shortHopCoefficient * .7f);
+                velocity.y = 0;
+                shortHop = false;
 
-                /*If this looks stupid that is because it is:
-                 * It seems that the input delay when the jump key is released 
-                 * gives the character enough time travel before cutting the velocity in half
-                 * 
-                 * when doing a forcedshorthop though, there is no input delay and it happens instantly
-                 * creating an unintended very very short hop. scaling the shortHopCoefficient by .7f simulates the same input delay
-                 * so that it does not make a super short hop but a regular short hop.
-                 */
+                groundBufferFrames = defaultGroundBufferFrames;
             }
 
+            if (isOnWallLeft)
+            {
+                //flip sprite|animation
+                velocity.y = wallSlideSpeed * -1 * Time.deltaTime * 10.0f;
+                isOnWallLeft = global::WallJump.StillOnWall(this, false, boxCollider, isGrounded, platformMask);
+
+                //if (wallJump)
+                //{
+                //    wallJump = false;
+                //    wallJumpActive = true;
+
+                //    velocity.x = wallJumpXSpeed * Time.deltaTime * 100f;
+                //}
+
+            }
+            else if (isOnWallRight)
+            {
+                //flip sprite|animation
+                velocity.y = wallSlideSpeed * -1 * Time.deltaTime * 10.0f;
+                isOnWallRight = global::WallJump.StillOnWall(this, true, boxCollider, isGrounded, platformMask);
+
+                //if (wallJump)
+                //{
+                //    wallJump = false;
+                //    wallJumpActive = true;
+
+                //    velocity.x = wallJumpXSpeed * -1.0f * Time.deltaTime * 100f;
+                //}
+
+            }
+
+            //if (wallJumpActive)
+            //{
+            //    velocity.y = Mathf.Sqrt(2f * wallJumpYSpeed * -gravity * 10f);
+            //    wallJumpActive = false;
+            //}
+
+            /* The following selection decides the directioin of horizontal movement (right, left, none) */
+            if (right && !isOnWallRight)
+            {
+                if (!currentStateInfo.IsName("yokai_run"))
+                {
+                    spriteRenderer.flipX = false;
+                    animator.Play("yokai_run");
+                }
+                normalizedHorizontalSpeed = 1;
+
+                isOnWallLeft = false;
+            }
+            else if (left && !isOnWallLeft)
+            {
+                if (!currentStateInfo.IsName("yokai_run"))
+                {
+                    spriteRenderer.flipX = true;
+                    animator.Play("yokai_run");
+                }
+                normalizedHorizontalSpeed = -1;
+
+                isOnWallRight = false;
+            }
             else
-            velocity.y = velocity.y / shortHopCoefficient;
-        }
-
-        if (characterName == CharacterName.Yokai) {
-            if (!right && !left && !jump)
             {
-                animator.Play("yokai_idle");
+                normalizedHorizontalSpeed = 0;
             }
-            if (jump) {
-                Debug.Log(jump);
+
+            /* This selection will make the player jump given:
+             *      it is touching the ground platform and spacebar is pressed
+             *      it is walking off a ledge and jump is pressed before groundbuffer frames are not zero. (bufferedJump)
+             *      it is falling and airBufferFrames(activated by pressing jump) are not zero. (see CallJump() above) 
+             */
+            if (isGrounded && jump || bufferedJump || isGrounded && airBufferFrames > 0)
+            {
+                jump = false;
+                bufferedJump = false;
+                airBufferFrames = -1;
+                groundBufferFrames = -1;
+
+                isGrounded = false;
+                velocity.y = Mathf.Sqrt(2f * jumpSpeed * -gravity);
             }
-        }
-        if (characterName == CharacterName.Yumi) {
-            animator.Play("");
-        }
 
-        //Horizontal velocity
-        if (!wallJumpActive)
-        {
-            velocity.x = Mathf.Lerp(velocity.x, normalizedHorizontalSpeed * horizontalSpeed, Time.deltaTime * 20f);
-        }
-        
-        // Gravity (Vertical component of Velocity if not wall sliding)
-        if ((!isOnWallRight || !isOnWallLeft) && !wallJumpActive)
-        {
-            velocity.y += gravity * Time.deltaTime;
-        }
-        
+            if (!isGrounded && velocity.y > 0 && (shortHop || forcedShortHop))
+            {
+                shortHop = false;
+
+                if (forcedShortHop)
+                {
+                    forcedShortHop = false;
+                    velocity.y = velocity.y / (shortHopCoefficient * .7f);
+
+                    /*If this looks stupid that is because it is:
+                     * It seems that the input delay when the jump key is released 
+                     * gives the character enough time travel before cutting the velocity in half
+                     * 
+                     * when doing a forcedshorthop though, there is no input delay and it happens instantly
+                     * creating an unintended very very short hop. scaling the shortHopCoefficient by .7f simulates the same input delay
+                     * so that it does not make a super short hop but a regular short hop.
+                     */
+                }
+
+                else
+                    velocity.y = velocity.y / shortHopCoefficient;
+            }
+
+            if (characterName == CharacterName.Yokai)
+            {
+                if (!right && !left && !jump)
+                {
+                    animator.Play("yokai_idle");
+                }
+                if (jump)
+                {
+                    Debug.Log(jump);
+                }
+            }
+            if (characterName == CharacterName.Yumi)
+            {
+                animator.Play("");
+            }
+
+            //Horizontal velocity
+            if (!wallJumpActive)
+            {
+                velocity.x = Mathf.Lerp(velocity.x, normalizedHorizontalSpeed * horizontalSpeed, Time.deltaTime * 20f);
+            }
+
+            // Gravity (Vertical component of Velocity if not wall sliding)
+            if ((!isOnWallRight || !isOnWallLeft) && !wallJumpActive)
+            {
+                velocity.y += gravity * Time.deltaTime;
+            }
 
 
-        /*The velocities (speed and directions that we would like to move in) are multiplied by Time to turn them into a position that
-         * we would like to move towards. The Move function then passes then modifies these positions based on if the player is colldiding
-         * with the world. After the movement positions are modified to prevent passing through walls and floors, the player is moved using 
-         * transform.translate. */
-        Move(velocity * Time.deltaTime);        
+
+            /*The velocities (speed and directions that we would like to move in) are multiplied by Time to turn them into a position that
+             * we would like to move towards. The Move function then passes then modifies these positions based on if the player is colldiding
+             * with the world. After the movement positions are modified to prevent passing through walls and floors, the player is moved using 
+             * transform.translate. */
+            Move(velocity * Time.deltaTime);
+        }
+               
     }
 
     public void Move(Vector3 deltaMovement)

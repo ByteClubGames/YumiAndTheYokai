@@ -646,7 +646,7 @@ Prefab:
     - target: {fileID: 114329015629843224, guid: 0dd2532d035311a47a04cbce2f03df7f,
         type: 2}
       propertyPath: wallSlideSpeed
-      value: 30
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114329015629843224, guid: 0dd2532d035311a47a04cbce2f03df7f,
         type: 2}
