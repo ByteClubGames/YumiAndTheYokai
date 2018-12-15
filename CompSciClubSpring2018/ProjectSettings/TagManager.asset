@@ -31,7 +31,7 @@ TagManager:
   - Player
   - Earth
   - Enemy
-  - 
+  - Wall
   - Earth
   - 
   - Spell
