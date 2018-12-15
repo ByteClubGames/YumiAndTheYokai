@@ -42,9 +42,12 @@ public class TurretProjectile : MonoBehaviour {
     {
         PlayerTransform();
         projectileTransform = GetComponent<Transform>();
-        projectilePos = this.GetComponent<Transform>().position;// + projectileTransform.position;
+        projectilePos = this.GetComponent<Transform>().position;
         //projectilePos = GameObject.GetComponent<TurretEnemy>().projPos + projectileTransform.position;
+        
         target = (player.position - projectilePos).normalized; //calculates the target
+        Debug.Log(target);
+       // target = player.position;
         //projectileTransform.LookAt(-player.position);
         
 
@@ -80,7 +83,7 @@ public class TurretProjectile : MonoBehaviour {
 
     public void ProjectileMovement() // Makes the projectile move in a straight line towards the player
     {
-        projectileTransform.Translate(target * speed * Time.deltaTime); //makes projectile move towards player
+        projectileTransform.Translate(Vector3.up * speed * Time.deltaTime); //makes projectile move towards player
         StartCoroutine(waitToDestroy(timeToDestroy)); //deletes object after given time
     }
 
