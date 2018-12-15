@@ -31,6 +31,9 @@ public class PlayerController : MonoBehaviour {
     public float gravity = -25f; // Negative input value
     public float jumpSpeed = 3f;
     public float horizontalSpeed = 8f; // Movement speed along horizontal axis
+    public float wallSlideSpeed = 2f;
+    public float wallJumpXSpeed = 6f;
+    public float wallJumpYSpeed = 8f;
     public float maxClimbableSlope = 50f; //in degrees
     public float skinWidth; // Acts as an inset start point on the collider for the Ray orgin points
     public float shortHopCoefficient = 2f;   //decides how snappy the shorthop will be
@@ -68,6 +71,14 @@ public class PlayerController : MonoBehaviour {
     {
         isRight = flag;
     }
+    private bool isOnWallRight = false;
+    private bool isOnWallLeft = false;
+
+    private void ClearOnWall()
+    {
+        isOnWallLeft = false;
+        isOnWallRight = false;
+    }
     #endregion
 
     #region Movement Call Flags
@@ -84,6 +95,7 @@ public class PlayerController : MonoBehaviour {
      */
     private bool forcedShortHop = false; 
 
+    private bool wallJump = false;
     #endregion
 
     #region Box Collider Bounds
@@ -193,6 +205,14 @@ public class PlayerController : MonoBehaviour {
             //checking airBufferFrames prevents a player from mashing jump for the frame perfect jumps. jumps should be carefully timed
             airBufferFrames = defaultAirBufferFrames;      
         }
+        else if (isOnWallLeft)
+        {
+            wallJump = true;
+        }
+        else if (isOnWallRight)
+        {
+            wallJump = true;
+        }
     }
 
     public void CallShortHop()
@@ -211,10 +231,13 @@ public class PlayerController : MonoBehaviour {
     }
     #endregion
 
+
+
     void Update()
     {
 
         AnimatorStateInfo currentStateInfo = animator.GetCurrentAnimatorStateInfo(0);
+        bool wallJumpActive = false;
 
         if (airBufferFrames > 0) airBufferFrames--;
         if (groundBufferFrames > 0) groundBufferFrames--;
@@ -229,23 +252,64 @@ public class PlayerController : MonoBehaviour {
             groundBufferFrames = defaultGroundBufferFrames;
         }
         
+        if (isOnWallLeft)
+        {
+            //flip sprite|animation
+            velocity.y = wallSlideSpeed * -1 * Time.deltaTime * 10.0f;
+            isOnWallLeft = StillOnWall(false);
+
+            if (wallJump)
+            {
+                wallJump = false;
+                wallJumpActive = true;
+
+                velocity.x = wallJumpXSpeed * Time.deltaTime * 100f;
+            }
+
+        }
+        else if (isOnWallRight)
+        {
+            //flip sprite|animation
+            velocity.y = wallSlideSpeed * -1 * Time.deltaTime * 10.0f;
+            isOnWallRight = StillOnWall(true);
+
+            if (wallJump)
+            {
+                wallJump = false;
+                wallJumpActive = true;
+
+                velocity.x = wallJumpXSpeed * -1.0f * Time.deltaTime * 100f;
+            }
+
+        }
+
+        if (wallJumpActive)
+        {
+            velocity.y = Mathf.Sqrt(2f * wallJumpYSpeed * -gravity * 10f);
+            wallJumpActive = false;
+        }
+
         /* The following selection decides the directioin of horizontal movement (right, left, none) */
-        if (right)
+        if (right && !isOnWallRight)
         {
             if (!currentStateInfo.IsName("yokai_run")) {
                 spriteRenderer.flipX = false;
                 animator.Play("yokai_run");
             }
             normalizedHorizontalSpeed = 1;
+
+            isOnWallLeft = false;
         }
-        else if (left)
+        else if (left && !isOnWallLeft)
         {
             if (!currentStateInfo.IsName("yokai_run"))
             {
                 spriteRenderer.flipX = true;
                 animator.Play("yokai_run");
             }
-            normalizedHorizontalSpeed = -1;            
+            normalizedHorizontalSpeed = -1;
+
+            isOnWallRight = false;
         }
         else
         {
@@ -305,10 +369,17 @@ public class PlayerController : MonoBehaviour {
         }
 
         //Horizontal velocity
-        velocity.x = Mathf.Lerp(velocity.x, normalizedHorizontalSpeed * horizontalSpeed, Time.deltaTime * 20f);
-
-        // Gravity (Vertical component of Velocity if not jumping)
-        velocity.y += gravity * Time.deltaTime;
+        if (!wallJumpActive)
+        {
+            velocity.x = Mathf.Lerp(velocity.x, normalizedHorizontalSpeed * horizontalSpeed, Time.deltaTime * 20f);
+        }
+        
+        // Gravity (Vertical component of Velocity if not wall sliding)
+        if ((!isOnWallRight || !isOnWallLeft) && !wallJumpActive)
+        {
+            velocity.y += gravity * Time.deltaTime;
+        }
+        
 
 
         /*The velocities (speed and directions that we would like to move in) are multiplied by Time to turn them into a position that
