@@ -20,22 +20,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Checkpoint : MonoBehaviour
+public class YumiHealthSystem : MonoBehaviour
 {
-    private GameObject thisObj;
-    private Vector3 checkpointPos = new Vector3(0, 0, 0);
+    public int health = 5;
+    public GameObject playerObj;
 
-    void Start()
+    void Update()
     {
-        thisObj = gameObject; 
-        checkpointPos = new Vector3(thisObj.transform.position.x, thisObj.transform.position.y, thisObj.transform.position.z); 
+        if ( health <= 0 )
+        {
+            gameObject.SetActive(false); 
+            playerObj.transform.position = new Vector3( GameObject.Find("CheckpointController").GetComponent<CheckpointSystem>().lastCheckpointCoords.x,
+                                                        GameObject.Find("CheckpointController").GetComponent<CheckpointSystem>().lastCheckpointCoords.y,
+                                                        GameObject.Find("CheckpointController").GetComponent<CheckpointSystem>().lastCheckpointCoords.z );
+            gameObject.SetActive(true); 
+            ResetHealth(); 
+        }
     }
 
-    public void OnTriggerEnter(Collider col)
+    public void DamageDealer(int dam)
     {
-        if(col.gameObject.name == "Yumi")
-        {
-            GameObject.Find("CheckpointController").GetComponent<CheckpointSystem>().lastCheckpointSetter(checkpointPos); 
-        }
+        health = health - dam; 
+    }
+
+    public void ResetHealth()
+    {
+        health = 5; 
     }
 }

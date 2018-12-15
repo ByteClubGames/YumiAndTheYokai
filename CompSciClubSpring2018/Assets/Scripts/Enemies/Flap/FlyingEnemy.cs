@@ -9,8 +9,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FlyingEnemy : MonoBehaviour {
-
+public class FlyingEnemy : MonoBehaviour
+{
     [Header("Horizontal Flight Boundary Points")]
     public Vector3 pos1 = new Vector3(-4f, 5f, 0f);
     public Vector3 pos2 = new Vector3(4f, 5f, 0f);
@@ -34,7 +34,7 @@ public class FlyingEnemy : MonoBehaviour {
     {
         //default position
         tempPosition = transform.position;
-        Player = GameObject.Find("Player-Human").transform;
+        Player = GameObject.Find("Yumi").transform;
         detectPlayer = this.GetComponentInChildren<PlayerDetection>();
 	}
 	
