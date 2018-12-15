@@ -74,7 +74,17 @@ public class PlayerController : MonoBehaviour {
     private bool isOnWallRight = false;
     private bool isOnWallLeft = false;
 
-    private void ClearOnWall()
+    public void SetIsOnWallRight(bool flag)
+    {
+        isOnWallRight = flag;
+    }
+
+    public void SetIsOnWallLeft(bool flag)
+    {
+        isOnWallLeft = flag;
+    }
+
+    public void ClearOnWall()
     {
         isOnWallLeft = false;
         isOnWallRight = false;
@@ -256,7 +266,7 @@ public class PlayerController : MonoBehaviour {
         {
             //flip sprite|animation
             velocity.y = wallSlideSpeed * -1 * Time.deltaTime * 10.0f;
-            isOnWallLeft = StillOnWall(false);
+            isOnWallLeft = WallJump.StillOnWall(this, false, boxCollider, isGrounded, platformMask);
 
             if (wallJump)
             {
@@ -271,7 +281,7 @@ public class PlayerController : MonoBehaviour {
         {
             //flip sprite|animation
             velocity.y = wallSlideSpeed * -1 * Time.deltaTime * 10.0f;
-            isOnWallRight = StillOnWall(true);
+            isOnWallRight = WallJump.StillOnWall(this, true, boxCollider, isGrounded, platformMask);
 
             if (wallJump)
             {
@@ -413,7 +423,7 @@ public class PlayerController : MonoBehaviour {
         {
             float transformHeight = transform.localScale.y;
             deltaMovement = CollisionCorrections.HorizontalCollision(this, deltaMovement, boxCollider, BL, BR, transformHeight, verticalRaySeparation,
-                maxClimbableSlope, skinWidth, error, horizontalRays, climbableSlope, isRight, platformMask);
+                maxClimbableSlope, skinWidth, error, horizontalRays, climbableSlope, isRight, isGrounded, isOnWallRight, isOnWallLeft, platformMask);
         }
 
 
