@@ -1,4 +1,4 @@
-﻿/* EarthSpellMechanics.cs
+/* EarthSpellMechanics.cs
  * Date Created: 3/15/18
  * Last Edited: 5/18/18
  * Programmer: Daniel Jaffe & Darrell Wong
@@ -18,7 +18,8 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
 
-public class EarthSpellMechanics : MonoBehaviour {
+public class EarthSpellMechanics : MonoBehaviour
+{
 
     private Vector2 firstPressPos;
     private Vector2 secondPressPos;
@@ -31,9 +32,11 @@ public class EarthSpellMechanics : MonoBehaviour {
     public float extendFactor = 25f;
     public float extendSpeed = .1f;
     public int destroyTime = 5;
-    private bool stopOnHitEarth = true;
     bool firstCollision;
     bool sizeNotSet = true;
+
+    Material main_mat;
+    Vector2 original_scale;
 
 
     //Start
@@ -43,6 +46,8 @@ public class EarthSpellMechanics : MonoBehaviour {
         firstPressPos = Input.mousePosition;
         co = Grow(extendSpeed);
         StartCoroutine(co);
+        //main_mat = GetComponent<MeshRenderer>().materials[0];
+        //original_scale = main_mat.mainTextureScale;
         Destroy(gameObject, destroyTime); //Destroy timer starts on creation
     }
 
@@ -51,11 +56,11 @@ public class EarthSpellMechanics : MonoBehaviour {
 
         if (Input.GetMouseButtonUp(0))
         {
-            secondPressPos = Input.mousePosition;
-            
+            //secondPressPos = Input.mousePosition;
+
             //calculate the difference between firstposition and second position
-            deltaX = secondPressPos.x - firstPressPos.x;
-            deltaY = secondPressPos.y - firstPressPos.y;
+            //deltaX = secondPressPos.x - firstPressPos.x;
+            //deltaY = secondPressPos.y - firstPressPos.y;
 
             //print("First: " + firstPressPos.x + " " + firstPressPos.y + "\n");
             //print("Second: " + secondPressPos.x + " " + secondPressPos.y + "\n");
@@ -74,69 +79,88 @@ public class EarthSpellMechanics : MonoBehaviour {
         //Waits until IsGrowing returns true;
         yield return new WaitUntil(IsGrowing);
 
-        if (Mathf.Abs(deltaX) > Mathf.Abs(deltaY))
+        if (sizeNotSet)
         {
-            if (sizeNotSet)
-            {
-                gameObject.transform.localScale = new Vector3(0, 1, 1);
-                sizeNotSet = false;
-            }
-
-            if (deltaX > 0) {
-                for (int i = 0; i < extendFactor; i++)
-                {
-                    //stretches object in the X direction
-                    gameObject.transform.localScale += new Vector3(extendSpeed, 0, 0);
-                    //moves the object along to accomidate for equal stretching on both sides
-                    gameObject.transform.Translate((extendSpeed) / 2, 0, 0);
-                    yield return new WaitForSeconds(extendSpeed / 10);
-                }
-            }
-            if (deltaX < 0)
-            {
-                for (int i = 0; i < extendFactor; i++)
-                {
-                    //stretches object in the X direction
-                    gameObject.transform.localScale += new Vector3(extendSpeed, 0, 0);
-                    //moves the object along to accomidate for equal stretching on both sides
-                    gameObject.transform.Translate((-extendSpeed) / 2, 0, 0);
-                    yield return new WaitForSeconds(extendSpeed / 10);
-                }
-            }
+            gameObject.transform.localScale = new Vector3(0.3865392F, 0F, 0.3865392F);
+            sizeNotSet = false;
         }
-        else if (Mathf.Abs(deltaX) < Mathf.Abs(deltaY))
+
+        for (int i = 0; i < extendFactor; i++)
         {
-            if (sizeNotSet)
-            {
-                gameObject.transform.localScale = new Vector3(1, 0F, 1);
-                sizeNotSet = false;
-            }
-
-
-            if (deltaY > 0)
-            {
-                for (int i = 0; i < extendFactor; i++)
-                {
-                    //stretches object in the Y direction
-
-                    gameObject.transform.localScale += new Vector3(0, extendSpeed, 0);
-                    //moves the object along to accomidate for equal stretching on both sides
-                    gameObject.transform.Translate(0, (extendSpeed / 2), 0);
-                    yield return new WaitForSeconds(extendSpeed / 10);
-                }
-            }
-            if (deltaY < 0)
-            {
-                for (int i = 0; i < extendFactor; i++)
-                {
-                    //stretches object in the Y direction
-                    gameObject.transform.localScale += new Vector3(0, extendSpeed, 0);
-                    //moves the object along to accomidate for equal stretching on both sides
-                    gameObject.transform.Translate(0, (-extendSpeed / 2), 0);
-                    yield return new WaitForSeconds(extendSpeed / 10);
-                }
-            }
+            //stretches object in the Y direction
+            gameObject.transform.localScale += new Vector3(0, extendSpeed, 0);
+            //moves the object along to accomidate for equal stretching on both sides
+            gameObject.transform.Translate(0, (extendSpeed / 3f), 0);
+            yield return new WaitForSeconds(extendSpeed / 10);
         }
+
+
+
+
+        //if (Mathf.Abs(deltaX) > Mathf.Abs(deltaY))
+        //{
+        //    if (sizeNotSet)
+        //    {
+        //        gameObject.transform.localScale = new Vector3(0, 1, 1);
+        //        sizeNotSet = false;
+        //    }
+
+        //    if (deltaX > 0)
+        //    {
+        //        for (int i = 0; i < extendFactor; i++)
+        //        {
+        //            //stretches object in the X direction
+        //            gameObject.transform.localScale += new Vector3(extendSpeed, 0, 0);
+        //            //moves the object along to accomidate for equal stretching on both sides
+        //            gameObject.transform.Translate((extendSpeed) / 2, 0, 0);            
+        //            yield return new WaitForSeconds(extendSpeed / 10);
+        //        }
+        //    }
+        //    if (deltaX < 0)
+        //    {
+        //        for (int i = 0; i < extendFactor; i++)
+        //        {
+        //            //stretches object in the X direction
+        //            gameObject.transform.localScale += new Vector3(extendSpeed, 0, 0);
+        //            //moves the object along to accomidate for equal stretching on both sides
+        //            gameObject.transform.Translate((-extendSpeed) / 2, 0, 0);
+        //            yield return new WaitForSeconds(extendSpeed / 10);
+        //        }
+        //    }
+        //}
+        //else if (Mathf.Abs(deltaX) < Mathf.Abs(deltaY))
+        //{
+        //    if (sizeNotSet)
+        //    {
+        //        gameObject.transform.localScale = new Vector3(1, 0F, 1);
+        //        sizeNotSet = false;
+        //    }
+
+
+        //    if (deltaY > 0)
+        //    {
+        //        for (int i = 0; i < extendFactor; i++)
+        //        {
+        //            //stretches object in the Y direction
+
+        //            gameObject.transform.localScale += new Vector3(0, extendSpeed, 0);
+        //            //moves the object along to accomidate for equal stretching on both sides
+        //            gameObject.transform.Translate(0, (extendSpeed / 2), 0);
+        //            yield return new WaitForSeconds(extendSpeed / 10);
+        //        }
+        //    }
+        //    if (deltaY < 0)
+        //    {
+        //        for (int i = 0; i < extendFactor; i++)
+        //        {
+        //            //stretches object in the Y direction
+        //            gameObject.transform.localScale += new Vector3(0, extendSpeed, 0);
+        //            //moves the object along to accomidate for equal stretching on both sides
+        //            gameObject.transform.Translate(0, (-extendSpeed / 2), 0);
+        //            yield return new WaitForSeconds(extendSpeed / 10);
+        //        }
+        //    }
+        //}
     }
 
     //returns true or false based on if the object should be growing or not
@@ -152,30 +176,24 @@ public class EarthSpellMechanics : MonoBehaviour {
     private void OnCollisionEnter(Collision col)
     {
         //The earth spell growth can be stopped by adding more tags to this if statement
-        if (col.collider.gameObject.layer == LayerMask.NameToLayer("Floor")     
-            || col.collider.gameObject.layer == LayerMask.NameToLayer("Earth")  
+        if (col.collider.gameObject.layer == LayerMask.NameToLayer("Platforms")
+            || col.collider.gameObject.layer == LayerMask.NameToLayer("Earth")
             || col.collider.gameObject.CompareTag("Earth Spell Object"))
         {
 
             // bool firstCollision is instantiated in the Start() function
             //This is used to negate the initial collision of instantiating the earth spell inside of an earth block
-            if (!firstCollision)            
+            if (!firstCollision)
             {
                 firstCollision = true;
             }
             else
-            { 
+            {
                 //print("Stop Cooroutine");
                 StopCoroutine(co);
             }
-            
+
         }
     }
 
 }
-
-
-
-
-
-

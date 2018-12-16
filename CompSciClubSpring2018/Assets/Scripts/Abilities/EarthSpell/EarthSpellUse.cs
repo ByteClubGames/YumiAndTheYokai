@@ -1,6 +1,6 @@
 ﻿/* EarthSpellUse.cs
  * Date Created: 3/15/18
- * Last Edited: 6/16/18
+ * Last Edited: 12/14/18
  * Programmer: Daniel Jaffe & Darrell Wong
  * Description: Spawn in the earthSpell object (cube) - Attach to the Earth Spell Spawner object:
  *      1. Uses a OverlapSphere to check eSpell overlap
@@ -15,17 +15,13 @@ using UnityEngine;
 
 public class EarthSpellUse : MonoBehaviour
 {
+
+    private Plane zPlane = new Plane(new Vector3(0, 0, -1), new Vector3(0, 0, 0)); //plane to see where ray cast from camera hits
     public float overlapRadius = .59F; // shpere to cover 1,1,1, cube
     public bool spellOverlap = false;
     public GameObject eSpell;
     public Vector3 playerinput = new Vector3(1, 1, 0); //gets player input
-
-    void Start()
-    {
-        ////Jack put this here
-        this.GetComponent<TimeManager>().StartSlowDown(); // Time is slowed when spawner is here
-        ///
-    }
+    public Vector3 normalVector;
 
     // Update is called once per frame
     void Update()
@@ -33,13 +29,37 @@ public class EarthSpellUse : MonoBehaviour
         //execute on mouse click
         if (Input.GetMouseButtonDown(0))
         {
-            //raycast from the camera and if ray hits something, then spawn eSpell
-            RaycastHit hit;
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out hit) && hit.transform.gameObject.layer == LayerMask.NameToLayer("Earth"))
+            //raycast from the camera and the player - if both rays hit the same object with the tag EarthSpellSurface, then spawn eSpell
+
+            #region Yumi and Cam Ray Setup
+            //Ray from camera to world position
+            Vector3 mousePosFar = new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.farClipPlane);
+            Vector3 mousePosNear = new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.nearClipPlane);
+            Vector3 mousePosF = Camera.main.ScreenToWorldPoint(mousePosFar);
+            Vector3 mousePosN = Camera.main.ScreenToWorldPoint(mousePosNear);
+            Ray camRay = new Ray(mousePosN, mousePosF - mousePosN); //this is the ray shot from the camera to to world position clicked at
+            Debug.DrawRay(mousePosN, mousePosF-mousePosN, Color.green); //this is a visual representation of that camera ray
+
+            //Ray from Yumi to the location the camera ray hits when z=0
+            float distanceCamToPlane = 0f;
+            zPlane.Raycast(camRay, out distanceCamToPlane);
+            Vector3 worldCursorPosition = camRay.GetPoint(distanceCamToPlane);
+            Vector3 yumiPosition = GameObject.Find("SpellCaster").transform.position;
+            worldCursorPosition = Vector3.ProjectOnPlane(worldCursorPosition, new Vector3(0, 0, 0));
+            Ray yumiRay = new Ray(yumiPosition, worldCursorPosition - yumiPosition); //this is the ray shot from yumi to the world position
+            Debug.DrawRay(yumiPosition, worldCursorPosition - yumiPosition, Color.blue); //this is a visual representation of that yumi ray
+            #endregion
+
+            RaycastHit camHit;
+            RaycastHit yumiHit;
+
+            if (Physics.Raycast(camRay, out camHit) && Physics.Raycast(yumiRay, out yumiHit) && (yumiHit.collider.gameObject == camHit.collider.gameObject) && yumiHit.collider.CompareTag("EarthSpellSurface")) 
             {
                 //get the location of the player click
-                Vector3 playerinput = new Vector3(hit.point.x, hit.point.y, 0);
+                Vector3 playerinput = new Vector3 (yumiHit.point.x, yumiHit.point.y, 0);
+                normalVector = yumiHit.normal;
+                normalVector.z = 0;
+
 
                 //Checking for overlapping eSpell spawns
                 Collider[] hitColliders = Physics.OverlapSphere(playerinput, overlapRadius);
@@ -56,10 +76,17 @@ public class EarthSpellUse : MonoBehaviour
                 if (!spellOverlap)
                 {
                     //spawns the eSpell object into play
-                    Instantiate(eSpell, new Vector3(hit.point.x, hit.point.y, 0), Quaternion.identity);
-                }
 
-                //Swiper(); Swiper is now used in EarthSpellMechanics
+                    //Quaternion rotation = Quaternion.LookRotation(normalVector);
+                    //transform.rotation = rotation;
+                    //Vector3.Cross(new Vector3(1, 0, 0), new Vector3(0, 0, -1));
+
+                    Vector3 test = Vector3.Cross(new Vector3(1, 0, 0), new Vector3(0, -1, 0));
+
+
+                    //Instantiate(eSpell, playerinput, Quaternion.LookRotation(yumiHit.normal, Vector3.up));
+                    Instantiate(eSpell, playerinput, Quaternion.FromToRotation(Vector3.up, yumiHit.normal));
+                }
             }
         }
     }

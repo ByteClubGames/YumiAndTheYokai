@@ -16,6 +16,7 @@ TagManager:
   - Walls
   - MovingPlatform
   - EnemyDetector
+  - EarthSpellSurface
   layers:
   - Default
   - TransparentFX
