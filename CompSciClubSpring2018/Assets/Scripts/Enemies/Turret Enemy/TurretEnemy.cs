@@ -34,7 +34,7 @@ public class TurretEnemy : MonoBehaviour {
     {
         projectileSpawn = this.transform.parent.GetChild(0).position;
         rotation = this.transform.parent.GetChild(0).rotation;
-        ShootProjectile();
+        //ShootProjectile();
     }
 
     private void OnTriggerStay(Collider collision)
@@ -44,6 +44,7 @@ public class TurretEnemy : MonoBehaviour {
             targeter = GameObject.Find("Yumi").transform;
            projectileo.GetComponent<TurretEnemy>().SetInRange(true); //THIS WORKS
             //SetInRange(true);
+            ShootProjectile();
             Debug.Log("In range of enemy turret");
         }
         else if (collision.tag == "Yokai")
@@ -51,6 +52,7 @@ public class TurretEnemy : MonoBehaviour {
             targeter = GameObject.Find("Yokai(Clone)").transform;
             projectileo.GetComponent<TurretEnemy>().SetInRange(true);
             //SetInRange(true);
+            ShootProjectile();
             Debug.Log("In range of enemy turret");
         }
     } 
@@ -68,14 +70,18 @@ public class TurretEnemy : MonoBehaviour {
 
     private void ShootProjectile()
     {
-        if (inRange && Time.time > nextShot) // Provided the target is close enough and a set time has past since the last shot, shoot at target
-        {
-            nextShot = Time.time + fireRate; // Causes a time delay between each projectile being fired
-            Instantiate(projectile, projectileSpawn, rotation);
-            Debug.Log("Shots Fired!");
-        }
-    }
+        //if (inRange && Time.time > nextShot) // Provided the target is close enough and a set time has past since the last shot, shoot at target
+        // {
+        // nextShot = Time.time + fireRate; // Causes a time delay between each projectile being fired
+        Debug.Log(this.transform.root.GetChild(0).gameObject);
+        this.transform.root.GetChild(0).gameObject.GetComponent<TurretProjectile>().LaunchProjectile();
+        //gameObject.transform.Find("Projectile").gameObject.GetComponent<TurretProjectile>().LaunchProjectile();
+        Debug.Log("ShootProjectile() has been called");
 
+        //Instantiate(projectile, projectileSpawn, rotation);
+
+        //  }
+    }
     private void SetInRange(bool incomingValue) // When the yokai is within the detection range of the enemy, TargetYokai.cs will call this function
     {
         inRange = incomingValue;

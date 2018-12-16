@@ -35,6 +35,7 @@ public class TurretProjectile : MonoBehaviour {
     private Vector3 projectilePos;
     private Vector3 humanPos;
     private Vector3 target;
+    private bool canShoot = false;
     //private GameObject player;
 
     // Use this for initialization
@@ -56,35 +57,83 @@ public class TurretProjectile : MonoBehaviour {
     // Update is called once per frame
     void FixedUpdate()
     {
-        ProjectileMovement();
+        if (canShoot == true)
+        {
+            //ProjectileMovement();
+        }
     }
 
     private void Update() // Making sure the projectile didn't hit anything (if it did it gets destroyed)
     {
-        CheckIsHit();
-        CheckTooFar();
+        //CheckIsHit(); 
+        //CheckTooFar();
+    }
+    private void IsVisible(bool option)
+    {
+        if (option == true)   // this function is to set the turrent projectile to visible and invisible and is utilized in other parts of this program
+        {
+            this.gameObject.SetActive(true);
+        } else {
+            this.gameObject.SetActive(false);
+        }
     }
 
-    private void OnTriggerEnter(Collider collision) // This is supposed to be triggered when the projectile intercepts the astral
+
+
+    //private void OnTriggerEnter(Collider collision) // This is supposed to be triggered when the projectile intercepts the astral
+    //{
+    //    Debug.Log("this works"); // if this trigger function is called at all, this will show up in the console
+    //    if (collision.gameObject.name == "Ferrox" || collision.tag == "Human")
+    //    {
+    //        //ProjectileMovement(); disabled to test
+    //        GameObject.Find("Ferrox").GetComponent<FerroxHealth>().TakeDamage(projectileDamage);
+    //        GameObject.Find("Yumi").GetComponent<HumanHealth>().TakeDamage(projectileDamage);
+    //        isHit = true; // regardless of weather or not it hit the astral, it will be as having hit someting
+    //    }
+    //    else if (collision.gameObject.tag == "EnemyDetection")
+    //    {
+    //        // Do nothing
+    //    }
+    //}
+
+    private void OnTriggerStay(Collider collision)
     {
-        Debug.Log("this works"); // if this trigger function is called at all, this will show up in the console
-        if (collision.gameObject.name == "Ferrox" || collision.tag == "Human")
+        if (collision.tag == "Human" || collision.tag == "Ferrox")
         {
-            //ProjectileMovement();
+            
             GameObject.Find("Ferrox").GetComponent<FerroxHealth>().TakeDamage(projectileDamage);
             GameObject.Find("Yumi").GetComponent<HumanHealth>().TakeDamage(projectileDamage);
-            isHit = true; // regardless of weather or not it hit the astral, it will be as having hit someting
+            isHit = true;
+            if(isHit == true)
+            {
+                transform.position = transform.root.GetChild(2).GetChild(1).position;
+                transform.rotation = transform.root.GetChild(2).GetChild(1).rotation;
+                this.IsVisible(false);
+                canShoot = false;
+            }
         }
-        else if (collision.gameObject.tag == "EnemyDetection")
+        else 
         {
-            // Do nothing
+            Debug.Log("No Collision");
         }
     }
-
+    public void LaunchProjectile()
+    {
+        transform.rotation = transform.root.GetChild(2).GetChild(1).rotation;
+        //transform.position = transform.root.GetChild(2).GetChild(1).position;
+        Debug.Log("Projectile Position:" + transform.position);
+        Debug.Log("Projectile Spawn:" + transform.root.GetChild(2).GetChild(1).position);
+        this.IsVisible(true);
+        canShoot = true;
+        ProjectileMovement();
+        StartCoroutine(WaitToReturn(timeToDestroy)); //time to destroy is time to return, jsut for testing purposes
+    }
     public void ProjectileMovement() // Makes the projectile move in a straight line towards the player
     {
+        //this.transform.position = this.transform.root.Find("ProjectileSpawn").position;
+       // this.transform.rotation = this.transform.root.Find("ProjectileSpawn").gameObject.transform.rotation;
         projectileTransform.Translate(Vector3.up * speed * Time.deltaTime); //makes projectile move towards player
-        StartCoroutine(waitToDestroy(timeToDestroy)); //deletes object after given time
+        //StartCoroutine(waitToDestroy(timeToDestroy)); //deletes object after given time
     }
 
     /// <summary>
@@ -102,27 +151,32 @@ public class TurretProjectile : MonoBehaviour {
         }
     }
 
-    private void CheckIsHit() // Destroys the projectile if it hits somthing
-    {
-        if (isHit)
-        {
-            Destroy(gameObject);
-        }
-    }
+        /// <this section here is outdated>
+        //private void CheckIsHit() // Destroys the projectile if it hits somthing
+        //{
+        //    if (isHit)
+        //    {
+        //        Destroy(gameObject);
+        //    }
+        //}
 
-    private void CheckTooFar() // Will destroy the projectile if it has missed the yokai and is far away
-    {
+        //private void CheckTooFar() // Will destroy the projectile if it has missed the yokai and is far away
+        //{
 
-        distance = Vector3.Distance(projectilePos, humanPos);
+        //    distance = Vector3.Distance(projectilePos, humanPos);
 
-        if (distance > maxDistance)
-        {
-            Destroy(gameObject);
-        }
-    }
-    private IEnumerator waitToDestroy(float waitTime)
+        //    if (distance > maxDistance)
+        //    {
+        //        Destroy(gameObject);
+        //    }
+    //}
+    private IEnumerator WaitToReturn(float waitTime)
     {
+        
         yield return new WaitForSeconds(waitTime);
-        Destroy(this.gameObject);
+        this.transform.position = transform.root.GetChild(1).GetChild(0).position;
+        this.transform.rotation = transform.root.GetChild(1).GetChild(0).rotation;
+        this.IsVisible(false);
+        canShoot = false;
     }
 }
