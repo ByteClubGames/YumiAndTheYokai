@@ -138,6 +138,7 @@ public class PlayerController : MonoBehaviour {
     public int defaultGroundBufferFrames = 5;
 
     private Vector3 velocity;
+    Vector3 horizontalTarget = Vector3.zero;
 
     private Animator animator;
     private SpriteRenderer spriteRenderer;
@@ -260,53 +261,45 @@ public class PlayerController : MonoBehaviour {
     }
     #endregion
 
-    private void WallJumpHorizontal(Vector3 horizontalTarget)
-    {
-        //float i;
-        //for (i )
-        //{
-        //    transform.position = Vector3.MoveTowards(transform.position, horizontalTarget, i);
-
-            
-        //}
-
-        //if(i >= 0.5f)
-        //{
-        //    wallJump = false;
-        //    wallJumpActive = false;
-        //    velocity.y = Mathf.Sqrt(2f * wallJumpYSpeed * -gravity);
-        //}
-    }
-        
-
+    
     void Update()
     {
         if (wallJump || wallJumpActive)
         {
             wallJump = false;
             wallJumpActive = true;
+                        
+            if (isOnWallLeft)
+            {
+                isOnWallLeft = isOnWallRight = false;
+                horizontalTarget = new Vector3(1f, 0f, 0f) + transform.position;
+            }
+            else if (isOnWallRight)
+            {
+                isOnWallRight = isOnWallLeft = false;
+                horizontalTarget = new Vector3(-1f, 0f, 0f) + transform.position;
+            }
+            //else
+            //{
+            //    horizontalTarget = new Vector3(0f, 0f, 0f) + transform.position;
+            //}
+
+            //horizontalTarget = new Vector3(2f, 0f, 0f) + transform.position;
+
+            if (this.transform.position != horizontalTarget)
+            {
+                Debug.Log("this is the target: " + horizontalTarget);
+                this.transform.position = Vector3.MoveTowards(this.transform.position, horizontalTarget, wallJumpXSpeed * Time.deltaTime);
+            }
+            else
+            {
+                wallJump = false;
+                wallJumpActive = false;
+                Debug.Log("I have reached the target:::::: booiii");
+                velocity.y = Mathf.Sqrt(2f * wallJumpYSpeed * -gravity);
+            }
             
 
-            Vector3 horizontalTarget;
-            //Vector3 verticalTarget;
-
-            if (isOnWallLeft && !wallJumpStarted)
-            {
-                //flip sprite|animation
-
-                horizontalTarget = new Vector3(2f, 0f, 0f) + transform.position;
-                //verticalTarget = new Vector3(0f, 1f, 0f) + transform.position;
-                WallJumpHorizontal(horizontalTarget);
-            }
-            else if (isOnWallRight && !wallJumpStarted)
-            {
-                //flip sprite|animation
-
-                horizontalTarget = new Vector3(-2f, 0f, 0f) + transform.position;
-                //verticalTarget = new Vector3(0f, 1f, 0f) + transform.position;
-                WallJumpHorizontal(horizontalTarget);
-            }
-            
         }
         else
         {
