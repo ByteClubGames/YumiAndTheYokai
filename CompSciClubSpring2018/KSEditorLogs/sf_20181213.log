@@ -1,0 +1,12 @@
+2018-12-13 12:24:16.1346 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-13 13:17:25.0549 [ERROR] UnityException: get_main is not allowed to be called from a MonoBehaviour constructor (or instance field initializer), call it in Awake or Start instead. Called from MonoBehaviour 'IceSpellUse'.
+See "Script Serialization" page in the Unity Manual for further details.
+IceSpellUse..ctor () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:22)
+UnityEngine.GUIUtility:ProcessEvent(Int32, IntPtr)
+
+2018-12-13 16:32:31.0861 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-13 16:32:56.5116 [ERROR] UnityException: get_main is not allowed to be called from a MonoBehaviour constructor (or instance field initializer), call it in Awake or Start instead. Called from MonoBehaviour 'IceSpellUse'.
+See "Script Serialization" page in the Unity Manual for further details.
+IceSpellUse..ctor () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:22)
+UnityEngine.GUIUtility:ProcessEvent(Int32, IntPtr)
+

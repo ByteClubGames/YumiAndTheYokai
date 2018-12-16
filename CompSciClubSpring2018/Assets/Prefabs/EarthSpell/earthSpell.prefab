@@ -8,23 +8,24 @@ Prefab:
     m_TransformParent: {fileID: 0}
     m_Modifications: []
     m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 0}
+  m_SourcePrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1907276841444114}
-  m_IsPrefabParent: 1
+  m_IsPrefabAsset: 1
 --- !u!1 &1907276841444114
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
+  serializedVersion: 6
   m_Component:
   - component: {fileID: 4347619509064322}
   - component: {fileID: 33154120556485098}
   - component: {fileID: 65458413392907582}
   - component: {fileID: 23427536694316588}
+  - component: {fileID: 208759371361632398}
   - component: {fileID: 54740048523731614}
   - component: {fileID: 114862322374708378}
-  m_Layer: 12
+  m_Layer: 20
   m_Name: earthSpell
   m_TagString: Earth Spell Object
   m_Icon: {fileID: 0}
@@ -34,7 +35,7 @@ GameObject:
 --- !u!4 &4347619509064322
 Transform:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1907276841444114}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
@@ -47,7 +48,7 @@ Transform:
 --- !u!23 &23427536694316588
 MeshRenderer:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1907276841444114}
   m_Enabled: 1
@@ -57,6 +58,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e480c6e141cec5540b7c1533235937e5, type: 2}
   m_StaticBatchInfo:
@@ -81,14 +83,14 @@ MeshRenderer:
 --- !u!33 &33154120556485098
 MeshFilter:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1907276841444114}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!54 &54740048523731614
 Rigidbody:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1907276841444114}
   serializedVersion: 2
@@ -103,7 +105,7 @@ Rigidbody:
 --- !u!65 &65458413392907582
 BoxCollider:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1907276841444114}
   m_Material: {fileID: 13400000, guid: c6feb147b2c8e634fbfb5b8ec83da4e5, type: 2}
@@ -115,7 +117,7 @@ BoxCollider:
 --- !u!114 &114862322374708378
 MonoBehaviour:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1907276841444114}
   m_Enabled: 1
@@ -126,4 +128,19 @@ MonoBehaviour:
   maxSpells: 3
   extendFactor: 30
   extendSpeed: 0.1
-  destroyTime: 5
+  destroyTime: 10
+--- !u!208 &208759371361632398
+NavMeshObstacle:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1907276841444114}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 0
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
