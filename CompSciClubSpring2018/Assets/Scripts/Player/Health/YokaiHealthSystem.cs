@@ -33,26 +33,8 @@ public class YokaiHealthSystem : MonoBehaviour
         SetTime(); 
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        /*
-         * taking some notes for thought in this block... with assistance. 
-         * 
-         * //GLOBAL VARIABLE
-         * init_time = 0.0;
-         * 
-         * //Fixed Update Below...
-         * 
-         * //time in seconds
-         * delta_time = 1.0;
-         * final_time = init_time + delta_time;
-         * 
-         * if(Time.time > final_time){
-         *  init_time = Time.time;
-         *  final_time = init_time + delta_time;
-         * }
-         */
-
         if (health > 0)
         {
             if (Time.time > initialTime)
@@ -70,7 +52,7 @@ public class YokaiHealthSystem : MonoBehaviour
             switcher.DeleteYokai(GameObject.Find("Yokai(Clone)"));
             invisibleObjects.SetInvisible();
             GameObject.Find("InputListener").GetComponent<InputListener>().SetYumiActive(true);
-        }
+        } 
     }
 
     public void DamageYokai(int dam)

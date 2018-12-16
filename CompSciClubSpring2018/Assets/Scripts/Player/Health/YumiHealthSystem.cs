@@ -19,11 +19,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+using UnityEngine.UI;
+using System.Collections;
+using System.Collections.Generic;
+using System.IO;
 
 public class YumiHealthSystem : MonoBehaviour
 {
     public int health = 5;
     public GameObject playerObj;
+
+    public string healthPath = "Assets/Scripts/Player/Health/CurrentHP.txt";
+
+    public GameObject healthParent; 
+    public Transform[] hpArr = new Transform[0];
+
+    void Start()
+    {
+        StreamReader reader = new StreamReader(healthPath);
+        healthPath = reader.ReadToEnd();
+        Convert.ToInt32(healthPath);
+        health = Int32.Parse(healthPath);
+        reader.Close();
+
+        hpArr = GameObject.Find("HealthParent").GetComponent<ChildArraySorter>().arr; 
+    }
 
     void Update()
     {
@@ -36,6 +57,28 @@ public class YumiHealthSystem : MonoBehaviour
             gameObject.SetActive(true); 
             ResetHealth(); 
         }
+
+        ArrLoop(); 
+    }
+
+    public int test = 0; 
+
+    void ArrLoop() // makes a certain ammount visable 
+    {
+        int b = 0; 
+
+        for (int i = 0; i <= health; i++)
+        {
+            hpArr[i].gameObject.SetActive(true);
+            b = i + 1; 
+        }
+
+        test = b; 
+
+        for (int j = b; j <= hpArr.Length; j++)
+        {
+            hpArr[j].gameObject.SetActive(false);
+        }
     }
 
     public void DamageDealer(int dam)
@@ -47,4 +90,61 @@ public class YumiHealthSystem : MonoBehaviour
     {
         health = 5; 
     }
+
+    public void DisplayHealthV2()
+    {
+        for(int i = 0; i < hpArr.Length; i++)
+        {
+
+        }
+    }
+
+    //public void DisplayHealthV1()
+    //{
+    //    switch (health)
+    //    {
+    //        case 0:
+    //            HP1.gameObject.SetActive(false);
+    //            HP2.gameObject.SetActive(false);
+    //            HP3.gameObject.SetActive(false);
+    //            HP4.gameObject.SetActive(false);
+    //            HP5.gameObject.SetActive(false);
+    //            break;
+    //        case 1:
+    //            HP1.gameObject.SetActive(true);
+    //            HP2.gameObject.SetActive(false);
+    //            HP3.gameObject.SetActive(false);
+    //            HP4.gameObject.SetActive(false);
+    //            HP5.gameObject.SetActive(false);
+    //            break;
+    //        case 2:
+    //            HP1.gameObject.SetActive(true);
+    //            HP2.gameObject.SetActive(true);
+    //            HP3.gameObject.SetActive(false);
+    //            HP4.gameObject.SetActive(false);
+    //            HP5.gameObject.SetActive(false);
+    //            break;
+    //        case 3:
+    //            HP1.gameObject.SetActive(true);
+    //            HP2.gameObject.SetActive(true);
+    //            HP3.gameObject.SetActive(true);
+    //            HP4.gameObject.SetActive(false);
+    //            HP5.gameObject.SetActive(false);
+    //            break;
+    //        case 4:
+    //            HP1.gameObject.SetActive(true);
+    //            HP2.gameObject.SetActive(true);
+    //            HP3.gameObject.SetActive(true);
+    //            HP4.gameObject.SetActive(true);
+    //            HP5.gameObject.SetActive(false);
+    //            break;
+    //        case 5:
+    //            HP1.gameObject.SetActive(true);
+    //            HP2.gameObject.SetActive(true);
+    //            HP3.gameObject.SetActive(true);
+    //            HP4.gameObject.SetActive(true);
+    //            HP5.gameObject.SetActive(true);
+    //            break;
+    //    }
+    //}
 }
