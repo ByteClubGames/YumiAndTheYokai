@@ -1,14 +1,15 @@
 ﻿/*
- * Author: Karim Dabboussi
- * Date Created: 8/16/2018 @ 12:00 pm
- * Date Modified: 8/16/2018 @ 12:00 pm
- * Project: CompSciClubSpring2018
- * File: TurretMovement.cs
- * Description:  This script makes the enemy strafe within a specified movement positions. The enemy will walk horizontal to the surface you want it to 
- * strafe on, provided that it is placed perpendicular to that surface (otherwise it will not work). Its speed can be changed from within unity if 
- * it needs to strafe faster.
- */
-
+***************************************************************************************
+*Creator(s).........................................Keiran Glynn & Karim Dabboussi
+*Created..............................................................3/17/2018
+*Last Modified............................................@ 12:17 AM on 12/16/2018
+*Last Modified by...................................................Karim Dabboussi
+*
+*Description:  controls the movement of the turrent enemy.
+*
+*               
+***************************************************************************************
+*/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

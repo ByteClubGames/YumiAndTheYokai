@@ -152,8 +152,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1767005991215882}
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 1.6, y: 19.2, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_Children:
   - {fileID: 4755186804987268}
@@ -161,7 +161,7 @@ Transform:
   - {fileID: 4928760327837454}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4439687384013716
 Transform:
   m_ObjectHideFlags: 1
@@ -383,11 +383,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 1221624010879872, guid: cc282336f3093c04c86734a7572dd1b7, type: 2}
-  fireRate: 1
-  projPos: {x: 0, y: 0, z: 0}
   targeter: {fileID: 0}
-  projectileo: {fileID: 0}
   head: {fileID: 0}
+  projectilePosition: {x: 0, y: 0, z: 0}
+  playerExit: 0
 --- !u!114 &114253129933996600
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -400,11 +399,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 0}
-  fireRate: 0
-  projPos: {x: 0, y: 0, z: 0}
   targeter: {fileID: 0}
-  projectileo: {fileID: 1676159258410360}
   head: {fileID: 1193696547789546}
+  projectilePosition: {x: 0, y: 0, z: 0}
+  playerExit: 0
 --- !u!114 &114259028138542080
 MonoBehaviour:
   m_ObjectHideFlags: 1
