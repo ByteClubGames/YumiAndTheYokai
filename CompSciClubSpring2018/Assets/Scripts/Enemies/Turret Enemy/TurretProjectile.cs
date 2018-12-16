@@ -39,6 +39,10 @@ public class TurretProjectile : MonoBehaviour {
     //private GameObject player;
 
     // Use this for initialization
+    private void Start()
+    {
+        this.transform.position = transform.root.GetChild(1).GetChild(2).GetChild(1).position;
+    }
     void Awake ()
     {
         PlayerTransform();
@@ -68,7 +72,7 @@ public class TurretProjectile : MonoBehaviour {
         //CheckIsHit(); 
         //CheckTooFar();
     }
-    private void IsVisible(bool option)
+    public void IsVisible(bool option)
     {
         if (option == true)   // this function is to set the turrent projectile to visible and invisible and is utilized in other parts of this program
         {
@@ -106,8 +110,8 @@ public class TurretProjectile : MonoBehaviour {
             isHit = true;
             if(isHit == true)
             {
-                transform.position = transform.root.GetChild(2).GetChild(1).position;
-                transform.rotation = transform.root.GetChild(2).GetChild(1).rotation;
+                transform.position = transform.root.GetChild(1).GetChild(2).GetChild(1).position;
+                transform.rotation = transform.root.GetChild(1).GetChild(2).GetChild(1).rotation;
                 this.IsVisible(false);
                 canShoot = false;
             }
@@ -117,22 +121,25 @@ public class TurretProjectile : MonoBehaviour {
             Debug.Log("No Collision");
         }
     }
-    public void LaunchProjectile()
+    public void LaunchProjectile(Vector3 targetDirection)
     {
-        transform.rotation = transform.root.GetChild(2).GetChild(1).rotation;
-        //transform.position = transform.root.GetChild(2).GetChild(1).position;
+        //transform.position = transform.root.GetChild(2).GetChild(1).GetChild(1).position;
+        transform.rotation = transform.root.GetChild(1).gameObject.GetComponent<TurretEnemy>().GetHeadRotation();
+        //this.transform.root.GetChild(0).gameObject.GetComponent<TurretProjectile>().IsVisible(true);
         Debug.Log("Projectile Position:" + transform.position);
-        Debug.Log("Projectile Spawn:" + transform.root.GetChild(2).GetChild(1).position);
+        Debug.Log("Projectile Spawn:" + transform.root.GetChild(1).GetChild(2).GetChild(1).position);
         this.IsVisible(true);
         canShoot = true;
-        ProjectileMovement();
+       // Vector3 newVec = Vector3.down;
+        ProjectileMovement(targetDirection);
         StartCoroutine(WaitToReturn(timeToDestroy)); //time to destroy is time to return, jsut for testing purposes
     }
-    public void ProjectileMovement() // Makes the projectile move in a straight line towards the player
+    public void ProjectileMovement(Vector3 targetDirection) // Makes the projectile move in a straight line towards the player
     {
         //this.transform.position = this.transform.root.Find("ProjectileSpawn").position;
-       // this.transform.rotation = this.transform.root.Find("ProjectileSpawn").gameObject.transform.rotation;
-        projectileTransform.Translate(Vector3.up * speed * Time.deltaTime); //makes projectile move towards player
+        // this.transform.rotation = this.transform.root.Find("ProjectileSpawn").gameObject.transform.rotation;
+            projectileTransform.Translate(targetDirection * speed * Time.deltaTime); //makes projectile move towards player
+      
         //StartCoroutine(waitToDestroy(timeToDestroy)); //deletes object after given time
     }
 
@@ -174,8 +181,8 @@ public class TurretProjectile : MonoBehaviour {
     {
         
         yield return new WaitForSeconds(waitTime);
-        this.transform.position = transform.root.GetChild(1).GetChild(0).position;
-        this.transform.rotation = transform.root.GetChild(1).GetChild(0).rotation;
+        this.transform.position = transform.root.GetChild(1).GetChild(2).GetChild(1).position;
+        this.transform.rotation = transform.root.GetChild(1).GetChild(2).GetChild(1).rotation;
         this.IsVisible(false);
         canShoot = false;
     }

@@ -28,7 +28,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1918973900894790
 GameObject:
   m_ObjectHideFlags: 0
@@ -65,8 +65,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1221624010879872}
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.35366967, y: 2.6666691, z: 1.3333334}
+  m_LocalPosition: {x: 1.7875001, y: 12.383126, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4015802723336112}
   m_Father: {fileID: 0}
@@ -113,7 +113,7 @@ MonoBehaviour:
   speed: 10
   projectileDamage: 1
   maxDistance: 100
-  timeToDestroy: 10
+  timeToDestroy: 5
 --- !u!212 &212105934167956786
 SpriteRenderer:
   m_ObjectHideFlags: 1
