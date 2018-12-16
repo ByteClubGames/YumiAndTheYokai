@@ -266,38 +266,44 @@ public class PlayerController : MonoBehaviour {
     {
         if (wallJump || wallJumpActive)
         {
-            wallJump = false;
-            wallJumpActive = true;
+            /****** Get rid of all this you don't need it. You are going to make a new system, close to the old one in the "else" clause of the 
+            if-else-statement. Using velocity and such, however you can redefine how it is assigned, limited, evaluated and removed, etc. */
+            
+            
+            
+            
+            ////wallJump = false;
+            ////wallJumpActive = true;
                         
-            if (isOnWallLeft)
-            {
-                isOnWallLeft = isOnWallRight = false;
-                horizontalTarget = new Vector3(1f, 0f, 0f) + transform.position;
-            }
-            else if (isOnWallRight)
-            {
-                isOnWallRight = isOnWallLeft = false;
-                horizontalTarget = new Vector3(-1f, 0f, 0f) + transform.position;
-            }
-            //else
-            //{
-            //    horizontalTarget = new Vector3(0f, 0f, 0f) + transform.position;
-            //}
+            ////if (isOnWallLeft)
+            ////{
+            ////    isOnWallLeft = isOnWallRight = false;
+            ////    horizontalTarget = new Vector3(1f, 0f, 0f) + transform.position;
+            ////}
+            ////else if (isOnWallRight)
+            ////{
+            ////    isOnWallRight = isOnWallLeft = false;
+            ////    horizontalTarget = new Vector3(-1f, 0f, 0f) + transform.position;
+            ////}
+            //////else
+            //////{
+            //////    horizontalTarget = new Vector3(0f, 0f, 0f) + transform.position;
+            //////}
 
-            //horizontalTarget = new Vector3(2f, 0f, 0f) + transform.position;
+            //////horizontalTarget = new Vector3(2f, 0f, 0f) + transform.position;
 
-            if (this.transform.position != horizontalTarget)
-            {
-                Debug.Log("this is the target: " + horizontalTarget);
-                this.transform.position = Vector3.MoveTowards(this.transform.position, horizontalTarget, wallJumpXSpeed * Time.deltaTime);
-            }
-            else
-            {
-                wallJump = false;
-                wallJumpActive = false;
-                Debug.Log("I have reached the target:::::: booiii");
-                velocity.y = Mathf.Sqrt(2f * wallJumpYSpeed * -gravity);
-            }
+            ////if (this.transform.position != horizontalTarget)
+            ////{
+            ////    Debug.Log("this is the target: " + horizontalTarget);
+            ////    this.transform.position = Vector3.MoveTowards(this.transform.position, horizontalTarget, wallJumpXSpeed * Time.deltaTime);
+            ////}
+            ////else
+            ////{
+            ////    wallJump = false;
+            ////    wallJumpActive = false;
+            ////    Debug.Log("I have reached the target:::::: booiii");
+            ////    velocity.y = Mathf.Sqrt(2f * wallJumpYSpeed * -gravity);
+            ////}
             
 
         }
