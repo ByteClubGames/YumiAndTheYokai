@@ -35,19 +35,21 @@ public class EarthSpellMechanics : MonoBehaviour
     bool firstCollision;
     bool sizeNotSet = true;
 
-    Material main_mat;
-    Vector2 original_scale;
+    /**Have Kross look at texture stretching**/
+    //Material main_mat;
+    //Vector2 original_scale;
 
-
-    //Start
     private void Start()
     {
         firstCollision = false;
         firstPressPos = Input.mousePosition;
         co = Grow(extendSpeed);
         StartCoroutine(co);
+
+        /**Have Kross Look at this**/
         //main_mat = GetComponent<MeshRenderer>().materials[0];
         //original_scale = main_mat.mainTextureScale;
+
         Destroy(gameObject, destroyTime); //Destroy timer starts on creation
     }
 
@@ -56,15 +58,15 @@ public class EarthSpellMechanics : MonoBehaviour
 
         if (Input.GetMouseButtonUp(0))
         {
+            grow = true;
+            #region LegacyCode
             //secondPressPos = Input.mousePosition;
-
             //calculate the difference between firstposition and second position
             //deltaX = secondPressPos.x - firstPressPos.x;
             //deltaY = secondPressPos.y - firstPressPos.y;
-
             //print("First: " + firstPressPos.x + " " + firstPressPos.y + "\n");
             //print("Second: " + secondPressPos.x + " " + secondPressPos.y + "\n");
-            grow = true;
+            #endregion
         }
 
         if (GameObject.FindGameObjectsWithTag("Earth Spell Object").Length > maxSpells) //destroy the earliest spell when there are too many
@@ -89,14 +91,14 @@ public class EarthSpellMechanics : MonoBehaviour
         {
             //stretches object in the Y direction
             gameObject.transform.localScale += new Vector3(0, extendSpeed, 0);
+            //main_mat.mainTextureScale = new Vector2(original_scale.x, original_scale.y + extendSpeed);   //  <<----- HAVE KROSS LOOK AT THIS
+            #region LegacyCode
             //moves the object along to accomidate for equal stretching on both sides
-            gameObject.transform.Translate(0, (extendSpeed / 3f), 0);
+            //gameObject.transform.Translate(0, (extendSpeed / 3f), 0);
+            #endregion
             yield return new WaitForSeconds(extendSpeed / 10);
         }
-
-
-
-
+        #region LegacyCode
         //if (Mathf.Abs(deltaX) > Mathf.Abs(deltaY))
         //{
         //    if (sizeNotSet)
@@ -161,6 +163,7 @@ public class EarthSpellMechanics : MonoBehaviour
         //        }
         //    }
         //}
+        #endregion
     }
 
     //returns true or false based on if the object should be growing or not

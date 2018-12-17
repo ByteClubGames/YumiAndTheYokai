@@ -1,8 +1,8 @@
 ﻿/* EarthSpellUse.cs
  * Date Created: 3/15/18
- * Last Edited: 12/14/18
+ * Last Edited: 12/16/18
  * Programmer: Daniel Jaffe & Darrell Wong
- * Description: Spawn in the earthSpell object (cube) - Attach to the Earth Spell Spawner object:
+ * Description: Spawn in the earthSpell object - Attach to the Earth Spell Spawner object:
  *      1. Uses a OverlapSphere to check eSpell overlap
  *      2. Spawns a eSpell object at the point of click
  *      
@@ -39,6 +39,7 @@ public class EarthSpellUse : MonoBehaviour
             Vector3 mousePosN = Camera.main.ScreenToWorldPoint(mousePosNear);
             Ray camRay = new Ray(mousePosN, mousePosF - mousePosN); //this is the ray shot from the camera to to world position clicked at
             Debug.DrawRay(mousePosN, mousePosF-mousePosN, Color.green); //this is a visual representation of that camera ray
+            RaycastHit camHit; //our camRay hit variable
 
             //Ray from Yumi to the location the camera ray hits when z=0
             float distanceCamToPlane = 0f;
@@ -48,10 +49,8 @@ public class EarthSpellUse : MonoBehaviour
             worldCursorPosition = Vector3.ProjectOnPlane(worldCursorPosition, new Vector3(0, 0, 0));
             Ray yumiRay = new Ray(yumiPosition, worldCursorPosition - yumiPosition); //this is the ray shot from yumi to the world position
             Debug.DrawRay(yumiPosition, worldCursorPosition - yumiPosition, Color.blue); //this is a visual representation of that yumi ray
+            RaycastHit yumiHit; //our yumiRay hit variable
             #endregion
-
-            RaycastHit camHit;
-            RaycastHit yumiHit;
 
             if (Physics.Raycast(camRay, out camHit) && Physics.Raycast(yumiRay, out yumiHit) && (yumiHit.collider.gameObject == camHit.collider.gameObject) && yumiHit.collider.CompareTag("EarthSpellSurface")) 
             {
@@ -75,16 +74,7 @@ public class EarthSpellUse : MonoBehaviour
                 }
                 if (!spellOverlap)
                 {
-                    //spawns the eSpell object into play
-
-                    //Quaternion rotation = Quaternion.LookRotation(normalVector);
-                    //transform.rotation = rotation;
-                    //Vector3.Cross(new Vector3(1, 0, 0), new Vector3(0, 0, -1));
-
-                    Vector3 test = Vector3.Cross(new Vector3(1, 0, 0), new Vector3(0, -1, 0));
-
-
-                    //Instantiate(eSpell, playerinput, Quaternion.LookRotation(yumiHit.normal, Vector3.up));
+                    //spawns the eSpell object into play in the direction of the normal vector                                                                     
                     Instantiate(eSpell, playerinput, Quaternion.FromToRotation(Vector3.up, yumiHit.normal));
                 }
             }
