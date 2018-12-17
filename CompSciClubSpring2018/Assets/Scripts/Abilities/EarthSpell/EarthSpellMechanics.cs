@@ -83,14 +83,14 @@ public class EarthSpellMechanics : MonoBehaviour
 
         if (sizeNotSet)
         {
-            gameObject.transform.localScale = new Vector3(0.3865392F, 0F, 0.3865392F);
+            //gameObject.transform.localScale = new Vector3(1, 1, 0F);
             sizeNotSet = false;
         }
 
         for (int i = 0; i < extendFactor; i++)
         {
             //stretches object in the Y direction
-            gameObject.transform.localScale += new Vector3(0, extendSpeed, 0);
+            gameObject.transform.localScale += new Vector3(0, 0, extendSpeed);
             //main_mat.mainTextureScale = new Vector2(original_scale.x, original_scale.y + extendSpeed);   //  <<----- HAVE KROSS LOOK AT THIS
             #region LegacyCode
             //moves the object along to accomidate for equal stretching on both sides

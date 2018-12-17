@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 87185216}
   - component: {fileID: 87185215}
   - component: {fileID: 87185214}
-  m_Layer: 18
+  m_Layer: 12
   m_Name: P11
   m_TagString: EarthSpellSurface
   m_Icon: {fileID: 0}
@@ -209,7 +209,7 @@ GameObject:
   - component: {fileID: 112326339}
   - component: {fileID: 112326338}
   - component: {fileID: 112326337}
-  m_Layer: 18
+  m_Layer: 12
   m_Name: P2
   m_TagString: EarthSpellSurface
   m_Icon: {fileID: 0}
@@ -294,7 +294,7 @@ GameObject:
   - component: {fileID: 121710870}
   - component: {fileID: 121710869}
   - component: {fileID: 121710868}
-  m_Layer: 18
+  m_Layer: 12
   m_Name: Cube (4)
   m_TagString: EarthSpellSurface
   m_Icon: {fileID: 0}
@@ -379,7 +379,7 @@ GameObject:
   - component: {fileID: 242019318}
   - component: {fileID: 242019317}
   - component: {fileID: 242019316}
-  m_Layer: 18
+  m_Layer: 12
   m_Name: P6
   m_TagString: EarthSpellSurface
   m_Icon: {fileID: 0}
@@ -464,7 +464,7 @@ GameObject:
   - component: {fileID: 267995745}
   - component: {fileID: 267995744}
   - component: {fileID: 267995743}
-  m_Layer: 18
+  m_Layer: 12
   m_Name: P16
   m_TagString: EarthSpellSurface
   m_Icon: {fileID: 0}
@@ -549,7 +549,7 @@ GameObject:
   - component: {fileID: 349816194}
   - component: {fileID: 349816193}
   - component: {fileID: 349816192}
-  m_Layer: 18
+  m_Layer: 12
   m_Name: Cube (6)
   m_TagString: EarthSpellSurface
   m_Icon: {fileID: 0}
@@ -634,7 +634,7 @@ GameObject:
   - component: {fileID: 409160053}
   - component: {fileID: 409160052}
   - component: {fileID: 409160051}
-  m_Layer: 18
+  m_Layer: 12
   m_Name: Cube (5)
   m_TagString: EarthSpellSurface
   m_Icon: {fileID: 0}
@@ -791,7 +791,7 @@ GameObject:
   - component: {fileID: 616453539}
   - component: {fileID: 616453538}
   - component: {fileID: 616453537}
-  m_Layer: 18
+  m_Layer: 12
   m_Name: Cube (2)
   m_TagString: EarthSpellSurface
   m_Icon: {fileID: 0}
@@ -876,7 +876,7 @@ GameObject:
   - component: {fileID: 619953538}
   - component: {fileID: 619953537}
   - component: {fileID: 619953536}
-  m_Layer: 18
+  m_Layer: 12
   m_Name: P12
   m_TagString: EarthSpellSurface
   m_Icon: {fileID: 0}
@@ -1064,7 +1064,7 @@ GameObject:
   - component: {fileID: 922179649}
   - component: {fileID: 922179648}
   - component: {fileID: 922179647}
-  m_Layer: 18
+  m_Layer: 12
   m_Name: Cube (9)
   m_TagString: EarthSpellSurface
   m_Icon: {fileID: 0}
@@ -1149,7 +1149,7 @@ GameObject:
   - component: {fileID: 969900940}
   - component: {fileID: 969900939}
   - component: {fileID: 969900938}
-  m_Layer: 18
+  m_Layer: 12
   m_Name: P14
   m_TagString: EarthSpellSurface
   m_Icon: {fileID: 0}
@@ -1234,7 +1234,7 @@ GameObject:
   - component: {fileID: 988894065}
   - component: {fileID: 988894064}
   - component: {fileID: 988894063}
-  m_Layer: 18
+  m_Layer: 12
   m_Name: P3
   m_TagString: EarthSpellSurface
   m_Icon: {fileID: 0}
@@ -1319,7 +1319,7 @@ GameObject:
   - component: {fileID: 989553172}
   - component: {fileID: 989553171}
   - component: {fileID: 989553170}
-  m_Layer: 18
+  m_Layer: 12
   m_Name: Cube (7)
   m_TagString: EarthSpellSurface
   m_Icon: {fileID: 0}
@@ -1404,7 +1404,7 @@ GameObject:
   - component: {fileID: 999045762}
   - component: {fileID: 999045761}
   - component: {fileID: 999045760}
-  m_Layer: 18
+  m_Layer: 12
   m_Name: P10
   m_TagString: EarthSpellSurface
   m_Icon: {fileID: 0}
@@ -1489,7 +1489,7 @@ GameObject:
   - component: {fileID: 1004684265}
   - component: {fileID: 1004684264}
   - component: {fileID: 1004684263}
-  m_Layer: 18
+  m_Layer: 12
   m_Name: P7
   m_TagString: EarthSpellSurface
   m_Icon: {fileID: 0}
@@ -1574,7 +1574,7 @@ GameObject:
   - component: {fileID: 1089873659}
   - component: {fileID: 1089873658}
   - component: {fileID: 1089873657}
-  m_Layer: 18
+  m_Layer: 12
   m_Name: P8
   m_TagString: EarthSpellSurface
   m_Icon: {fileID: 0}
@@ -1659,7 +1659,7 @@ GameObject:
   - component: {fileID: 1114611050}
   - component: {fileID: 1114611049}
   - component: {fileID: 1114611048}
-  m_Layer: 18
+  m_Layer: 12
   m_Name: Cube
   m_TagString: EarthSpellSurface
   m_Icon: {fileID: 0}
@@ -1744,7 +1744,7 @@ GameObject:
   - component: {fileID: 1115851797}
   - component: {fileID: 1115851796}
   - component: {fileID: 1115851795}
-  m_Layer: 18
+  m_Layer: 12
   m_Name: P9
   m_TagString: EarthSpellSurface
   m_Icon: {fileID: 0}
@@ -1829,7 +1829,7 @@ GameObject:
   - component: {fileID: 1395330238}
   - component: {fileID: 1395330237}
   - component: {fileID: 1395330236}
-  m_Layer: 18
+  m_Layer: 12
   m_Name: P1
   m_TagString: EarthSpellSurface
   m_Icon: {fileID: 0}
@@ -1903,23 +1903,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1395330234}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1413104192 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1285461395280216, guid: a4c110281d3f3bd4ebd6e19b8e1a520d,
-    type: 2}
-  m_PrefabInternal: {fileID: 1571357824}
---- !u!65 &1413104193
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1413104192}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.475528, y: 2.4755292, z: 0.00000029510605}
-  m_Center: {x: 0, y: 0.00000034032718, z: 4.0570158e-14}
 --- !u!1 &1456498449
 GameObject:
   m_ObjectHideFlags: 0
@@ -1979,7 +1962,7 @@ MonoBehaviour:
   error: 0.001
   platformMask:
     serializedVersion: 2
-    m_Bits: 262144
+    m_Bits: 4096
   defaultAirBufferFrames: 5
   defaultGroundBufferFrames: 5
 --- !u!65 &1456498452
@@ -2050,7 +2033,7 @@ GameObject:
   - component: {fileID: 1540214353}
   - component: {fileID: 1540214352}
   - component: {fileID: 1540214351}
-  m_Layer: 18
+  m_Layer: 12
   m_Name: Cube (1)
   m_TagString: EarthSpellSurface
   m_Icon: {fileID: 0}
@@ -2135,7 +2118,7 @@ GameObject:
   - component: {fileID: 1566470700}
   - component: {fileID: 1566470699}
   - component: {fileID: 1566470698}
-  m_Layer: 18
+  m_Layer: 12
   m_Name: P13
   m_TagString: EarthSpellSurface
   m_Icon: {fileID: 0}
@@ -2220,7 +2203,7 @@ GameObject:
   - component: {fileID: 1569596570}
   - component: {fileID: 1569596569}
   - component: {fileID: 1569596568}
-  m_Layer: 18
+  m_Layer: 12
   m_Name: P5
   m_TagString: EarthSpellSurface
   m_Icon: {fileID: 0}
@@ -2347,7 +2330,7 @@ GameObject:
   - component: {fileID: 1597893328}
   - component: {fileID: 1597893327}
   - component: {fileID: 1597893326}
-  m_Layer: 18
+  m_Layer: 12
   m_Name: P4
   m_TagString: EarthSpellSurface
   m_Icon: {fileID: 0}
@@ -2530,7 +2513,7 @@ GameObject:
   - component: {fileID: 1884100040}
   - component: {fileID: 1884100039}
   - component: {fileID: 1884100038}
-  m_Layer: 18
+  m_Layer: 12
   m_Name: Cube (3)
   m_TagString: EarthSpellSurface
   m_Icon: {fileID: 0}
@@ -2685,7 +2668,7 @@ GameObject:
   - component: {fileID: 2030880310}
   - component: {fileID: 2030880309}
   - component: {fileID: 2030880308}
-  m_Layer: 18
+  m_Layer: 12
   m_Name: Cube (8)
   m_TagString: EarthSpellSurface
   m_Icon: {fileID: 0}
@@ -2770,7 +2753,7 @@ GameObject:
   - component: {fileID: 2130952102}
   - component: {fileID: 2130952101}
   - component: {fileID: 2130952100}
-  m_Layer: 18
+  m_Layer: 12
   m_Name: P15
   m_TagString: EarthSpellSurface
   m_Icon: {fileID: 0}
