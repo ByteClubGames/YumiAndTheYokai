@@ -36,8 +36,8 @@ public class EarthSpellMechanics : MonoBehaviour
     bool sizeNotSet = true;
 
     /**Have Kross look at texture stretching**/
-    //Material main_mat;
-    //Vector2 original_scale;
+    Material main_mat;
+    Vector2 original_scale;
 
     private void Start()
     {
@@ -47,10 +47,10 @@ public class EarthSpellMechanics : MonoBehaviour
         StartCoroutine(co);
 
         /**Have Kross Look at this**/
-        //main_mat = GetComponent<MeshRenderer>().materials[0];
-        //original_scale = main_mat.mainTextureScale;
+        main_mat = GetComponent<MeshRenderer>().materials[0];
+        original_scale = main_mat.mainTextureScale;
 
-        Destroy(gameObject, destroyTime); //Destroy timer starts on creation
+        Destroy(transform.parent.gameObject, destroyTime); //Destroy timer starts on creation
     }
 
     private void Update()
@@ -81,22 +81,25 @@ public class EarthSpellMechanics : MonoBehaviour
         //Waits until IsGrowing returns true;
         yield return new WaitUntil(IsGrowing);
 
-        if (sizeNotSet)
-        {
-            //gameObject.transform.localScale = new Vector3(1, 1, 0F);
-            sizeNotSet = false;
-        }
+        #region LegacyCode
+        //if (sizeNotSet)
+        //{
+        //    gameObject.transform.localScale = new Vector3(1, 1, 0F);
+        //    sizeNotSet = false;
+        //}
+        #endregion
 
         for (int i = 0; i < extendFactor; i++)
         {
-            //stretches object in the Y direction
+            //stretches object in the Y (Z in terms of blender) direction
             gameObject.transform.localScale += new Vector3(0, 0, extendSpeed);
-            //main_mat.mainTextureScale = new Vector2(original_scale.x, original_scale.y + extendSpeed);   //  <<----- HAVE KROSS LOOK AT THIS
+            main_mat.mainTextureScale = new Vector2(original_scale.x, original_scale.y + extendSpeed);   //  <<----- HAVE KROSS LOOK AT THIS
             #region LegacyCode
             //moves the object along to accomidate for equal stretching on both sides
             //gameObject.transform.Translate(0, (extendSpeed / 3f), 0);
             #endregion
-            yield return new WaitForSeconds(extendSpeed / 10);
+            yield return null;
+        //yield return new WaitForSeconds(extendSpeed / 10);
         }
         #region LegacyCode
         //if (Mathf.Abs(deltaX) > Mathf.Abs(deltaY))

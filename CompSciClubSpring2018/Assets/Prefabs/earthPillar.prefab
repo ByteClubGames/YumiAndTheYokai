@@ -170,6 +170,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpells: 3
-  extendFactor: 25
-  extendSpeed: 0.1
-  destroyTime: 50
+  extendFactor: 6
+  extendSpeed: 0.3
+  destroyTime: 5
