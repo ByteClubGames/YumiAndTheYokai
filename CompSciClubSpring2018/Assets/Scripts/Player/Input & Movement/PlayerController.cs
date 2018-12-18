@@ -34,6 +34,7 @@ public class PlayerController : MonoBehaviour {
     public float wallSlideSpeed = 2f;
     public float wallJumpXSpeed = 6f;
     public float wallJumpYSpeed = 8f;
+    public float wallJumpXDistance = 1f;
     public float maxClimbableSlope = 50f; //in degrees
     public float skinWidth; // Acts as an inset start point on the collider for the Ray orgin points
     public float shortHopCoefficient = 2f;   //decides how snappy the shorthop will be
@@ -299,7 +300,7 @@ public class PlayerController : MonoBehaviour {
                 velocity.y += gravity * Time.deltaTime;
             }
 
-            if ((Mathf.Abs(this.transform.position.x - targetPos.x) > 1f))
+            if ((Mathf.Abs(this.transform.position.x - targetPos.x) > wallJumpXDistance))
             {
                 wallJumpActive = false;
             }
