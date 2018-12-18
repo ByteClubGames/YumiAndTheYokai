@@ -209,11 +209,11 @@ public class PlayerController : MonoBehaviour {
         {
             jump = true;
         }
-        else if (isOnWallLeft)
+        else if (isOnWallLeft && (characterName == CharacterName.Yokai))
         {
             wallJump = true;
         }
-        else if (isOnWallRight)
+        else if (isOnWallRight && (characterName == CharacterName.Yokai))
         {
             wallJump = true;
         }
@@ -268,9 +268,7 @@ public class PlayerController : MonoBehaviour {
     void FixedUpdate()
     {
         if (wallJump || wallJumpActive)
-        {
-            /****** Get rid of all this you don't need it. You are going to make a new system, close to the old one in the "else" clause of the 
-            if-else-statement. Using velocity and such, however you can redefine how it is assigned, limited, evaluated and removed, etc. */
+        {            
             wallJump = false;
             wallJumpActive = true;
 
@@ -496,6 +494,11 @@ public class PlayerController : MonoBehaviour {
             float transformHeight = transform.localScale.y;
             deltaMovement = CollisionCorrections.HorizontalCollision(this, deltaMovement, boxCollider, BL, BR, transformHeight, verticalRaySeparation,
                 maxClimbableSlope, skinWidth, error, horizontalRays, climbableSlope, isRight, isGrounded, isOnWallRight, isOnWallLeft, platformMask);
+
+            if(characterName == CharacterName.Yumi)
+            {
+                ClearOnWall();
+            }
         }
 
 
