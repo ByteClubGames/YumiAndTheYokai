@@ -64,16 +64,16 @@ public class InputListener : MonoBehaviour
         // Character Swap
         if (Input.GetKeyDown("1") || Input.GetKeyDown("y"))
         {            
-            if (GameObject.Find("Player-Ferrox(Clone)") == null)
+            if (GameObject.Find("Yokai(Clone)") == null)
             {
                 switcher.SpawnYokai();
-                yokai = GameObject.Find("Player-Ferrox(Clone)").GetComponent<PlayerController>();
+                yokai = GameObject.Find("Yokai(Clone)").GetComponent<PlayerController>();
                 activePlayer.ClearCalls();
                 SetYumiActive(false);                
             }
             else
             {
-                switcher.DeleteYokai(GameObject.Find("Player-Ferrox(Clone)"));
+                switcher.DeleteYokai(GameObject.Find("Yokai(Clone)"));
                 SetYumiActive(true);
             }
         }
