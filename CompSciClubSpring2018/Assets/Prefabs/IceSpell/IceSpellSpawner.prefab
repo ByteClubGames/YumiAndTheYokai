@@ -51,3 +51,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38e20dac6b8d243318b3be8fbbcf5ebd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IceProjectile: {fileID: 1723117857641678, guid: 9665f542179a84dcd88c0df7dd9981e9,
+    type: 2}

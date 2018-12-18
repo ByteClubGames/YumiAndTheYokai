@@ -1,4 +1,17 @@
-﻿using System;
+﻿/* 
+********************************************************************************
+*Creator(s)......................................................Michael Sanchez
+*Created..............................................................12/15/2018 
+*Last Modified............................................@ 8:40PM on 12/17/2018 
+*Last Modified by................................................Michael Sanchez 
+* 
+*Description:   Handles behavior for the Ice Projectile instantiated by the
+*               IceSpellUse.cs script. Instantiates iceSpellPrefab upon
+*               colliding with GameObject.
+*********************************************************************************
+*/
+
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -6,27 +19,45 @@ using UnityEngine;
 
 public class IceProjectile : MonoBehaviour
 {
+    public int projectileSpeed;
     public GameObject iceSpellPrefab;
     private Plane referencePlane = new Plane(new Vector3(0, 0, -1), new Vector3(0, 0, 0));
-    Rigidbody spellObjectRB;
-    private bool isActive;
+    private Vector3 spellClickTarget;
+    private IEnumerator coroutine;
 
     void Start()
     {
         print("object created");
-        spellObjectRB = GetComponent<Rigidbody>();
-        //transform.position = GameObject.Find("SpellCaster").transform.position;
+
+        // get spellClickTarget and start ProjectileMovement coroutine
+        spellClickTarget = GetSpellClickTarget();
+        transform.rotation = Quaternion.FromToRotation(Vector3.up, spellClickTarget);
+
+        coroutine = ProjectileMovement(spellClickTarget);
+        StartCoroutine(coroutine);
+    }
+
+    private IEnumerator ProjectileMovement(Vector3 target)
+    {
+        print("coroutine");
+        for(int i=0; i < projectileSpeed; i++)
+        {
+            transform.Translate(Vector3.up, Space.Self);
+
+            Instantiate(iceSpellPrefab, transform.position, Quaternion.identity);
+            yield return null;
+        }
+        Destroy(gameObject);
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         print("collision detected!");
-        if (!collision.collider.CompareTag("player"))
+        if (!collision.collider.CompareTag("Human"))
         {
-            // reset spellObject location to spellCaster position
-            transform.position = GameObject.Find("SpellCaster").transform.position;
-            Instantiate(iceSpellPrefab, GetSpellClickTarget(), Quaternion.identity);
-            Destroy(gameObject, 3f); // end spell life-cycle
+            // spawn ice spell particle effect at collision location
+            Instantiate(iceSpellPrefab, collision.contacts[0].point, Quaternion.identity);
+            Destroy(gameObject); // end spell life-cycle
         }
     }
 
@@ -65,18 +96,5 @@ public class IceProjectile : MonoBehaviour
 
         // final spellClickTarget is (world position - yumi's position)
         return direction;
-    }
-
-    void Update()
-    {
-        //if (isActive)
-        //{
-        //    print("should be moving now");
-        //    spellObjectRB.MovePosition(transform.position + GetSpellClickTarget().normalized * 7 * Mathf.Sin(Time.deltaTime));
-        //}
-        //if (Vector3.Distance(transform.position, GetSpellClickTarget()) < 0.1f)
-        //{
-        //    isActive = false;
-        //}
     }
 }

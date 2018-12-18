@@ -109,9 +109,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1723117857641678}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8effd401e0e4a4957a5cc6d9e148f9cf, type: 3}
+  m_Script: {fileID: 11500000, guid: 3bdd6edb7ee364100b0937d8090e6553, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  projectileSpeed: 25
+  iceSpellPrefab: {fileID: 1873389610634258, guid: 6c5cefa26a6d56d418819b0cbcc22005,
+    type: 2}
 --- !u!135 &135049252450012420
 SphereCollider:
   m_ObjectHideFlags: 1
