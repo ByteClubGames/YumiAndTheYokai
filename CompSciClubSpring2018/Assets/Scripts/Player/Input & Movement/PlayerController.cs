@@ -99,6 +99,7 @@ public class PlayerController : MonoBehaviour {
     private bool shortHop = false;
     bool wallJumpActive = false;
     bool wallJumpStarted = false;
+    bool firstPassFlag = false;
 
     /* the purpose of forcedShortHop is to eliminate a bug where you can very quickly tap and release the jump button
      * during the airBuffer frames resulting in a full jump rather than a short hop
@@ -139,6 +140,8 @@ public class PlayerController : MonoBehaviour {
 
     private Vector3 velocity;
     Vector3 horizontalTarget = Vector3.zero;
+    Vector3 jumpPos;
+    Vector3 targetPos;
 
     private Animator animator;
     private SpriteRenderer spriteRenderer;
@@ -262,54 +265,54 @@ public class PlayerController : MonoBehaviour {
     #endregion
 
     
-    void Update()
+    void FixedUpdate()
     {
         if (wallJump || wallJumpActive)
         {
             /****** Get rid of all this you don't need it. You are going to make a new system, close to the old one in the "else" clause of the 
             if-else-statement. Using velocity and such, however you can redefine how it is assigned, limited, evaluated and removed, etc. */
-            
-            
-            
-            
-            ////wallJump = false;
-            ////wallJumpActive = true;
-                        
-            ////if (isOnWallLeft)
-            ////{
-            ////    isOnWallLeft = isOnWallRight = false;
-            ////    horizontalTarget = new Vector3(1f, 0f, 0f) + transform.position;
-            ////}
-            ////else if (isOnWallRight)
-            ////{
-            ////    isOnWallRight = isOnWallLeft = false;
-            ////    horizontalTarget = new Vector3(-1f, 0f, 0f) + transform.position;
-            ////}
-            //////else
-            //////{
-            //////    horizontalTarget = new Vector3(0f, 0f, 0f) + transform.position;
-            //////}
+            wallJump = false;
+            wallJumpActive = true;
 
-            //////horizontalTarget = new Vector3(2f, 0f, 0f) + transform.position;
-
-            ////if (this.transform.position != horizontalTarget)
-            ////{
-            ////    Debug.Log("this is the target: " + horizontalTarget);
-            ////    this.transform.position = Vector3.MoveTowards(this.transform.position, horizontalTarget, wallJumpXSpeed * Time.deltaTime);
-            ////}
-            ////else
-            ////{
-            ////    wallJump = false;
-            ////    wallJumpActive = false;
-            ////    Debug.Log("I have reached the target:::::: booiii");
-            ////    velocity.y = Mathf.Sqrt(2f * wallJumpYSpeed * -gravity);
-            ////}
             
+
+            if (!firstPassFlag)
+            {
+                firstPassFlag = true;
+                jumpPos = this.transform.position;
+                targetPos = this.transform.position;
+
+                if (isOnWallRight)
+                {
+                    normalizedHorizontalSpeed = -1;
+                    targetPos += new Vector3(-1f, 0f, 0f);
+                }
+                else if (isOnWallLeft)
+                {
+                    normalizedHorizontalSpeed = 1;
+                    targetPos += new Vector3(1f, 0f, 0f);
+                }
+
+                velocity.y = Mathf.Sqrt(2f * wallJumpYSpeed * -gravity);
+                velocity.x = Mathf.Lerp(velocity.x, normalizedHorizontalSpeed * wallJumpXSpeed, Time.deltaTime * 20f);
+            }
+            else
+            {
+                velocity.y += gravity * Time.deltaTime;
+            }
+
+            if ((Mathf.Abs(this.transform.position.x - targetPos.x) > 1f))
+            {
+                wallJumpActive = false;
+            }
+
+            Move(velocity * Time.deltaTime);
 
         }
         else
         {
             AnimatorStateInfo currentStateInfo = animator.GetCurrentAnimatorStateInfo(0);
+            firstPassFlag = false;
             
 
             if (airBufferFrames > 0) airBufferFrames--;
@@ -521,3 +524,41 @@ public class PlayerController : MonoBehaviour {
             velocity.y = 0;
     }
 }
+
+
+
+
+
+
+////wallJump = false;
+////wallJumpActive = true;
+
+////if (isOnWallLeft)
+////{
+////    isOnWallLeft = isOnWallRight = false;
+////    horizontalTarget = new Vector3(1f, 0f, 0f) + transform.position;
+////}
+////else if (isOnWallRight)
+////{
+////    isOnWallRight = isOnWallLeft = false;
+////    horizontalTarget = new Vector3(-1f, 0f, 0f) + transform.position;
+////}
+//////else
+//////{
+//////    horizontalTarget = new Vector3(0f, 0f, 0f) + transform.position;
+//////}
+
+//////horizontalTarget = new Vector3(2f, 0f, 0f) + transform.position;
+
+////if (this.transform.position != horizontalTarget)
+////{
+////    Debug.Log("this is the target: " + horizontalTarget);
+////    this.transform.position = Vector3.MoveTowards(this.transform.position, horizontalTarget, wallJumpXSpeed * Time.deltaTime);
+////}
+////else
+////{
+////    wallJump = false;
+////    wallJumpActive = false;
+////    Debug.Log("I have reached the target:::::: booiii");
+////    velocity.y = Mathf.Sqrt(2f * wallJumpYSpeed * -gravity);
+////}
