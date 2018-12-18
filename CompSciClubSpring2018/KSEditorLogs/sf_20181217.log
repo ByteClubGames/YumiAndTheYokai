@@ -1,0 +1,75 @@
+2018-12-17 18:05:22.4322 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-17 18:05:26.6548 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-17 18:05:29.5562 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-17 18:05:29.5952 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-17 18:05:33.3065 [ERROR] NullReferenceException
+UnityEngine.Object.Internal_InstantiateSingle (UnityEngine.Object data, Vector3 pos, Quaternion rot)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:211)
+UnityEngine.Object.Instantiate[IceProjectile] (.IceProjectile original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:112)
+
+2018-12-17 18:05:34.0338 [ERROR] NullReferenceException
+UnityEngine.Object.Internal_InstantiateSingle (UnityEngine.Object data, Vector3 pos, Quaternion rot)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:211)
+UnityEngine.Object.Instantiate[IceProjectile] (.IceProjectile original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:112)
+
+2018-12-17 18:05:38.1358 [DEBUG] Play mode: False
+2018-12-17 18:34:56.1697 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-17 18:34:56.2205 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-17 18:34:58.0550 [ERROR] UnassignedReferenceException: The variable IceProjectile of IceSpellUse has not been assigned.
+You probably need to assign the IceProjectile variable of the IceSpellUse script in the inspector.
+UnityEngine.Object.Internal_InstantiateSingle (UnityEngine.Object data, Vector3 pos, Quaternion rot)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:211)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:112)
+
+2018-12-17 18:34:59.2478 [ERROR] UnassignedReferenceException: The variable IceProjectile of IceSpellUse has not been assigned.
+You probably need to assign the IceProjectile variable of the IceSpellUse script in the inspector.
+UnityEngine.Object.Internal_InstantiateSingle (UnityEngine.Object data, Vector3 pos, Quaternion rot)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:211)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:112)
+
+2018-12-17 18:34:59.8806 [ERROR] UnassignedReferenceException: The variable IceProjectile of IceSpellUse has not been assigned.
+You probably need to assign the IceProjectile variable of the IceSpellUse script in the inspector.
+UnityEngine.Object.Internal_InstantiateSingle (UnityEngine.Object data, Vector3 pos, Quaternion rot)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:211)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:112)
+
+2018-12-17 18:35:01.5366 [ERROR] UnassignedReferenceException: The variable IceProjectile of IceSpellUse has not been assigned.
+You probably need to assign the IceProjectile variable of the IceSpellUse script in the inspector.
+UnityEngine.Object.Internal_InstantiateSingle (UnityEngine.Object data, Vector3 pos, Quaternion rot)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:211)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:112)
+
+2018-12-17 18:35:02.2035 [ERROR] UnassignedReferenceException: The variable IceProjectile of IceSpellUse has not been assigned.
+You probably need to assign the IceProjectile variable of the IceSpellUse script in the inspector.
+UnityEngine.Object.Internal_InstantiateSingle (UnityEngine.Object data, Vector3 pos, Quaternion rot)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:211)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:112)
+
+2018-12-17 18:35:02.5010 [ERROR] UnassignedReferenceException: The variable IceProjectile of IceSpellUse has not been assigned.
+You probably need to assign the IceProjectile variable of the IceSpellUse script in the inspector.
+UnityEngine.Object.Internal_InstantiateSingle (UnityEngine.Object data, Vector3 pos, Quaternion rot)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:211)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:112)
+
+2018-12-17 18:35:03.5117 [ERROR] UnassignedReferenceException: The variable IceProjectile of IceSpellUse has not been assigned.
+You probably need to assign the IceProjectile variable of the IceSpellUse script in the inspector.
+UnityEngine.Object.Internal_InstantiateSingle (UnityEngine.Object data, Vector3 pos, Quaternion rot)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:211)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:112)
+
+2018-12-17 18:35:10.1277 [DEBUG] Play mode: False
+2018-12-17 18:35:22.2263 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-17 18:35:22.2821 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-17 18:35:36.4928 [DEBUG] Play mode: False
+2018-12-17 18:36:49.8344 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-17 18:36:49.8826 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-17 18:38:08.1826 [DEBUG] Play mode: False

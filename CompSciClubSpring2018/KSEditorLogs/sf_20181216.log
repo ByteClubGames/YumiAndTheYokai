@@ -1,0 +1,793 @@
+2018-12-16 00:02:18.6867 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 00:02:18.7285 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-16 00:02:20.3487 [ERROR] UnassignedReferenceException: The variable IceProjectile of IceSpellUse has not been assigned.
+You probably need to assign the IceProjectile variable of the IceSpellUse script in the inspector.
+UnityEngine.Object.Internal_InstantiateSingle (UnityEngine.Object data, Vector3 pos, Quaternion rot)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:211)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:70)
+
+2018-12-16 00:03:42.8104 [DEBUG] Play mode: False
+2018-12-16 00:04:00.8959 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 00:04:00.9581 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-16 00:04:38.0493 [DEBUG] Play mode: False
+2018-12-16 00:06:02.7054 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 00:06:02.7591 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-16 00:06:09.8663 [DEBUG] Play mode: False
+2018-12-16 00:09:36.0981 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 00:11:59.2824 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 00:11:59.3406 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-16 00:12:22.0661 [DEBUG] Play mode: False
+2018-12-16 00:12:31.9758 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 00:12:32.0316 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-16 00:12:59.1402 [DEBUG] Play mode: False
+2018-12-16 00:15:00.9590 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 00:15:01.0257 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-16 00:15:02.8608 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, UnityEngine.Transform parent, Boolean instantiateInWorldSpace) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:262)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent, Boolean worldPositionStays) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:300)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:295)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:71)
+
+2018-12-16 00:15:03.7737 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, UnityEngine.Transform parent, Boolean instantiateInWorldSpace) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:262)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent, Boolean worldPositionStays) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:300)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:295)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:71)
+
+2018-12-16 00:15:04.5532 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, UnityEngine.Transform parent, Boolean instantiateInWorldSpace) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:262)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent, Boolean worldPositionStays) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:300)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:295)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:71)
+
+2018-12-16 00:15:05.1176 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, UnityEngine.Transform parent, Boolean instantiateInWorldSpace) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:262)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent, Boolean worldPositionStays) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:300)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:295)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:71)
+
+2018-12-16 00:15:05.4488 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, UnityEngine.Transform parent, Boolean instantiateInWorldSpace) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:262)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent, Boolean worldPositionStays) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:300)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:295)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:71)
+
+2018-12-16 00:15:05.5153 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, UnityEngine.Transform parent, Boolean instantiateInWorldSpace) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:262)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent, Boolean worldPositionStays) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:300)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:295)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:71)
+
+2018-12-16 00:15:05.6795 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, UnityEngine.Transform parent, Boolean instantiateInWorldSpace) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:262)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent, Boolean worldPositionStays) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:300)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:295)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:71)
+
+2018-12-16 00:15:05.8295 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, UnityEngine.Transform parent, Boolean instantiateInWorldSpace) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:262)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent, Boolean worldPositionStays) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:300)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:295)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:71)
+
+2018-12-16 00:15:06.0453 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, UnityEngine.Transform parent, Boolean instantiateInWorldSpace) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:262)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent, Boolean worldPositionStays) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:300)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:295)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:71)
+
+2018-12-16 00:15:06.6757 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, UnityEngine.Transform parent, Boolean instantiateInWorldSpace) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:262)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent, Boolean worldPositionStays) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:300)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:295)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:71)
+
+2018-12-16 00:15:06.7751 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, UnityEngine.Transform parent, Boolean instantiateInWorldSpace) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:262)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent, Boolean worldPositionStays) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:300)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:295)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:71)
+
+2018-12-16 00:15:07.0568 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, UnityEngine.Transform parent, Boolean instantiateInWorldSpace) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:262)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent, Boolean worldPositionStays) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:300)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:295)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:71)
+
+2018-12-16 00:15:07.3214 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, UnityEngine.Transform parent, Boolean instantiateInWorldSpace) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:262)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent, Boolean worldPositionStays) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:300)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:295)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:71)
+
+2018-12-16 00:15:08.6458 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, UnityEngine.Transform parent, Boolean instantiateInWorldSpace) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:262)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent, Boolean worldPositionStays) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:300)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:295)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:71)
+
+2018-12-16 00:15:09.5917 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, UnityEngine.Transform parent, Boolean instantiateInWorldSpace) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:262)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent, Boolean worldPositionStays) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:300)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:295)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:71)
+
+2018-12-16 00:15:09.8074 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, UnityEngine.Transform parent, Boolean instantiateInWorldSpace) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:262)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent, Boolean worldPositionStays) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:300)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:295)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:71)
+
+2018-12-16 00:15:11.7632 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, UnityEngine.Transform parent, Boolean instantiateInWorldSpace) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:262)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent, Boolean worldPositionStays) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:300)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:295)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:71)
+
+2018-12-16 00:15:11.9444 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, UnityEngine.Transform parent, Boolean instantiateInWorldSpace) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:262)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent, Boolean worldPositionStays) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:300)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:295)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:71)
+
+2018-12-16 00:15:12.1113 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, UnityEngine.Transform parent, Boolean instantiateInWorldSpace) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:262)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent, Boolean worldPositionStays) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:300)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:295)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:71)
+
+2018-12-16 00:15:12.2765 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, UnityEngine.Transform parent, Boolean instantiateInWorldSpace) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:262)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent, Boolean worldPositionStays) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:300)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:295)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:71)
+
+2018-12-16 00:15:12.4767 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, UnityEngine.Transform parent, Boolean instantiateInWorldSpace) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:262)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent, Boolean worldPositionStays) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:300)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:295)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:71)
+
+2018-12-16 00:15:12.6595 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, UnityEngine.Transform parent, Boolean instantiateInWorldSpace) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:262)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent, Boolean worldPositionStays) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:300)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:295)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:71)
+
+2018-12-16 00:15:12.8416 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, UnityEngine.Transform parent, Boolean instantiateInWorldSpace) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:262)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent, Boolean worldPositionStays) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:300)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:295)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:71)
+
+2018-12-16 00:15:13.6364 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, UnityEngine.Transform parent, Boolean instantiateInWorldSpace) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:262)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent, Boolean worldPositionStays) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:300)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:295)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:71)
+
+2018-12-16 00:15:13.8525 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, UnityEngine.Transform parent, Boolean instantiateInWorldSpace) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:262)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent, Boolean worldPositionStays) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:300)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:295)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:71)
+
+2018-12-16 00:15:14.0502 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, UnityEngine.Transform parent, Boolean instantiateInWorldSpace) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:262)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent, Boolean worldPositionStays) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:300)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:295)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:71)
+
+2018-12-16 00:15:15.6276 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, UnityEngine.Transform parent, Boolean instantiateInWorldSpace) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:262)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent, Boolean worldPositionStays) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:300)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:295)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:71)
+
+2018-12-16 00:15:15.8099 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, UnityEngine.Transform parent, Boolean instantiateInWorldSpace) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:262)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent, Boolean worldPositionStays) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:300)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:295)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:71)
+
+2018-12-16 00:15:15.9759 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, UnityEngine.Transform parent, Boolean instantiateInWorldSpace) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:262)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent, Boolean worldPositionStays) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:300)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:295)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:71)
+
+2018-12-16 00:15:17.0590 [DEBUG] Play mode: False
+2018-12-16 00:16:32.7285 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 00:16:32.7728 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-16 00:16:36.4874 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, UnityEngine.Transform parent, Boolean instantiateInWorldSpace) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:262)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent, Boolean worldPositionStays) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:300)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:295)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:71)
+
+2018-12-16 00:17:03.2481 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, UnityEngine.Transform parent, Boolean instantiateInWorldSpace) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:262)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent, Boolean worldPositionStays) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:300)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:295)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:71)
+
+2018-12-16 00:17:08.3512 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 00:18:41.9221 [DEBUG] Play mode: False
+2018-12-16 00:19:25.1229 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 00:19:25.1756 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-16 00:22:00.9121 [DEBUG] Play mode: False
+2018-12-16 00:22:05.5136 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 00:22:09.4298 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 00:22:09.4708 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-16 00:22:20.5967 [DEBUG] Play mode: False
+2018-12-16 00:22:56.3222 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 00:22:56.3702 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-16 00:23:01.3889 [DEBUG] Play mode: False
+2018-12-16 00:23:14.6714 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 00:23:14.7147 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-16 00:23:23.9256 [DEBUG] Play mode: False
+2018-12-16 00:26:09.7516 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 00:26:09.8105 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-16 00:26:16.4389 [DEBUG] Play mode: False
+2018-12-16 00:26:31.5782 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 00:26:31.6340 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-16 00:26:41.0407 [DEBUG] Play mode: False
+2018-12-16 00:28:14.9525 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 00:28:15.0127 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-16 00:32:06.2242 [DEBUG] Play mode: False
+2018-12-16 00:32:09.9684 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 00:32:13.8230 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 00:32:13.8806 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-16 00:32:56.5741 [DEBUG] Play mode: False
+2018-12-16 00:34:14.7711 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 00:34:14.8329 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-16 00:40:24.3613 [DEBUG] Play mode: False
+2018-12-16 00:40:40.4913 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 00:40:40.5460 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-16 00:40:45.6541 [ERROR] NotImplementedException: The requested feature is not implemented.
+IceProjectile.op_Explicit (UnityEngine.GameObject v) (at Assets/Scripts/Abilities/IceSpell/IceSpellObject.cs:75)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:102)
+
+2018-12-16 00:40:46.3813 [ERROR] NotImplementedException: The requested feature is not implemented.
+IceProjectile.op_Explicit (UnityEngine.GameObject v) (at Assets/Scripts/Abilities/IceSpell/IceSpellObject.cs:75)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:102)
+
+2018-12-16 00:40:46.8442 [ERROR] NotImplementedException: The requested feature is not implemented.
+IceProjectile.op_Explicit (UnityEngine.GameObject v) (at Assets/Scripts/Abilities/IceSpell/IceSpellObject.cs:75)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:102)
+
+2018-12-16 00:40:47.0772 [ERROR] NotImplementedException: The requested feature is not implemented.
+IceProjectile.op_Explicit (UnityEngine.GameObject v) (at Assets/Scripts/Abilities/IceSpell/IceSpellObject.cs:75)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:102)
+
+2018-12-16 00:40:47.2423 [ERROR] NotImplementedException: The requested feature is not implemented.
+IceProjectile.op_Explicit (UnityEngine.GameObject v) (at Assets/Scripts/Abilities/IceSpell/IceSpellObject.cs:75)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:102)
+
+2018-12-16 00:41:11.2614 [ERROR] NotImplementedException: The requested feature is not implemented.
+IceProjectile.op_Explicit (UnityEngine.GameObject v) (at Assets/Scripts/Abilities/IceSpell/IceSpellObject.cs:75)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:102)
+
+2018-12-16 00:41:12.2340 [DEBUG] Play mode: False
+2018-12-16 00:45:20.0257 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 00:45:20.0934 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-16 00:48:40.8925 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 00:50:12.8701 [DEBUG] Play mode: False
+2018-12-16 00:50:17.2111 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 00:50:20.5744 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 00:50:20.6121 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-16 00:50:21.8879 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, UnityEngine.Transform parent, Boolean instantiateInWorldSpace) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:262)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent, Boolean worldPositionStays) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:300)
+UnityEngine.Object.Instantiate[GameObject] (UnityEngine.GameObject original, UnityEngine.Transform parent) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:295)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:104)
+
+2018-12-16 00:50:26.5588 [DEBUG] Play mode: False
+2018-12-16 00:52:09.1186 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 00:52:26.2393 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 00:52:26.3008 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-16 00:54:37.8734 [DEBUG] Play mode: False
+2018-12-16 00:58:43.3140 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 00:58:43.3792 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-16 00:59:20.2946 [DEBUG] Play mode: False
+2018-12-16 00:59:31.4815 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 00:59:31.5378 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-16 01:00:07.0516 [DEBUG] Play mode: False
+2018-12-16 01:00:12.4367 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 01:00:12.4880 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-16 01:00:52.2914 [DEBUG] Play mode: False
+2018-12-16 01:00:57.3591 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 01:01:00.9836 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 01:01:01.0209 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-16 01:01:09.0138 [DEBUG] Play mode: False
+2018-12-16 01:01:25.2889 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 01:01:25.3462 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-16 01:01:31.8918 [DEBUG] Play mode: False
+2018-12-16 01:04:57.6745 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 01:04:57.7180 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-16 01:05:02.2446 [DEBUG] Play mode: False
+2018-12-16 01:05:43.1550 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 01:05:43.2139 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-16 01:05:56.8886 [DEBUG] Play mode: False
+2018-12-16 01:11:20.8463 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 01:11:20.9070 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-16 01:11:24.9688 [DEBUG] Play mode: False
+2018-12-16 01:12:47.0999 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 01:12:47.3211 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-16 01:12:52.7911 [DEBUG] Play mode: False
+2018-12-16 01:15:35.4783 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 01:15:35.5472 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-16 01:15:54.2195 [DEBUG] Play mode: False
+2018-12-16 01:17:35.7071 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 01:17:35.7628 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-16 01:17:44.5018 [DEBUG] Play mode: False
+2018-12-16 01:19:23.0530 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 01:19:49.4295 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 01:19:49.4905 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-16 01:19:53.1244 [DEBUG] Play mode: False
+2018-12-16 01:22:49.1932 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 01:22:49.2383 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-16 01:22:56.6030 [DEBUG] Play mode: False
+2018-12-16 01:26:06.3162 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 01:26:06.3632 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-16 01:26:12.2456 [DEBUG] Play mode: False
+2018-12-16 01:26:23.1617 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 01:26:23.2222 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-16 01:26:34.7157 [DEBUG] Play mode: False
+2018-12-16 01:26:47.1479 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 01:26:47.2053 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-16 01:26:55.9081 [DEBUG] Play mode: False
+2018-12-16 01:27:05.5441 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 01:27:05.5818 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-16 01:27:11.1005 [DEBUG] Play mode: False
+2018-12-16 01:29:47.0743 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 01:29:47.1239 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-16 01:29:49.5905 [DEBUG] Play mode: False
+2018-12-16 01:30:00.4780 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 01:30:00.5279 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-16 01:30:02.1251 [DEBUG] Play mode: False
+2018-12-16 01:30:40.6307 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 01:30:40.6909 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-16 01:30:42.5395 [DEBUG] Play mode: False
+2018-12-16 01:31:14.7995 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 01:31:14.8656 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-16 01:31:16.2830 [DEBUG] Play mode: False
+2018-12-16 01:31:38.2168 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 01:31:38.2769 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-16 01:31:47.0635 [DEBUG] Play mode: False
+2018-12-16 01:32:01.6533 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 01:32:01.7040 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-16 01:32:11.7649 [DEBUG] Play mode: False
+2018-12-16 01:32:57.2030 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 01:32:57.2923 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-16 01:33:09.6368 [DEBUG] Play mode: False
+2018-12-16 01:33:33.9056 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 01:33:33.9766 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-16 01:33:44.6626 [DEBUG] Play mode: False
+2018-12-16 01:34:36.4919 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 01:34:36.5597 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-16 01:36:32.8040 [DEBUG] Play mode: False
+2018-12-16 01:36:38.7888 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 01:36:38.8459 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-16 01:39:28.1086 [DEBUG] Play mode: False
+2018-12-16 01:39:32.0213 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 01:39:36.0205 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 01:39:36.0736 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-16 01:39:42.6479 [DEBUG] Play mode: False
+2018-12-16 01:40:06.6131 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 01:40:06.6801 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-16 01:43:06.4538 [DEBUG] Play mode: False
+2018-12-16 01:43:11.6001 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 01:43:15.2285 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 01:43:15.2803 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-16 01:55:22.2787 [DEBUG] Play mode: False
+2018-12-16 01:55:26.8038 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 01:55:30.6039 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 01:55:30.6593 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-16 01:55:32.9282 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:206)
+UnityEngine.Object.Instantiate[IceProjectile] (.IceProjectile original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:112)
+
+2018-12-16 01:55:37.0709 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:206)
+UnityEngine.Object.Instantiate[IceProjectile] (.IceProjectile original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:112)
+
+2018-12-16 01:55:51.3563 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:206)
+UnityEngine.Object.Instantiate[IceProjectile] (.IceProjectile original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:112)
+
+2018-12-16 01:55:51.9849 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:206)
+UnityEngine.Object.Instantiate[IceProjectile] (.IceProjectile original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:112)
+
+2018-12-16 01:55:52.5481 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:206)
+UnityEngine.Object.Instantiate[IceProjectile] (.IceProjectile original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:112)
+
+2018-12-16 01:56:03.2411 [DEBUG] Play mode: False
+2018-12-16 02:02:28.0920 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 02:03:19.3239 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 02:03:19.5370 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-16 02:03:21.5129 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:206)
+UnityEngine.Object.Instantiate[IceProjectile] (.IceProjectile original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:111)
+
+2018-12-16 02:03:22.2017 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:206)
+UnityEngine.Object.Instantiate[IceProjectile] (.IceProjectile original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:111)
+
+2018-12-16 02:03:23.8908 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:206)
+UnityEngine.Object.Instantiate[IceProjectile] (.IceProjectile original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:111)
+
+2018-12-16 02:03:25.2196 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:206)
+UnityEngine.Object.Instantiate[IceProjectile] (.IceProjectile original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:111)
+
+2018-12-16 02:03:25.9485 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:206)
+UnityEngine.Object.Instantiate[IceProjectile] (.IceProjectile original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:111)
+
+2018-12-16 02:03:26.1317 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:206)
+UnityEngine.Object.Instantiate[IceProjectile] (.IceProjectile original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:111)
+
+2018-12-16 02:03:26.3140 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:206)
+UnityEngine.Object.Instantiate[IceProjectile] (.IceProjectile original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:111)
+
+2018-12-16 02:03:26.7950 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:206)
+UnityEngine.Object.Instantiate[IceProjectile] (.IceProjectile original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:111)
+
+2018-12-16 02:03:26.9929 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:206)
+UnityEngine.Object.Instantiate[IceProjectile] (.IceProjectile original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:111)
+
+2018-12-16 02:03:27.2586 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:206)
+UnityEngine.Object.Instantiate[IceProjectile] (.IceProjectile original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:111)
+
+2018-12-16 02:03:27.4234 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:206)
+UnityEngine.Object.Instantiate[IceProjectile] (.IceProjectile original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:111)
+
+2018-12-16 02:03:27.5558 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:206)
+UnityEngine.Object.Instantiate[IceProjectile] (.IceProjectile original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:111)
+
+2018-12-16 02:03:27.7380 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+EarthSpellUse.Start () (at Assets/Scripts/Abilities/EarthSpell/EarthSpellUse.cs:26)
+
+2018-12-16 02:03:28.5688 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:206)
+UnityEngine.Object.Instantiate[IceProjectile] (.IceProjectile original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:111)
+
+2018-12-16 02:03:28.8497 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:206)
+UnityEngine.Object.Instantiate[IceProjectile] (.IceProjectile original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:111)
+
+2018-12-16 02:03:29.7664 [DEBUG] Play mode: False
+2018-12-16 02:04:18.5247 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 02:04:32.1853 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 02:04:32.2452 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-16 02:04:34.2529 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:206)
+UnityEngine.Object.Instantiate[IceProjectile] (.IceProjectile original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:112)
+
+2018-12-16 02:04:35.3616 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:206)
+UnityEngine.Object.Instantiate[IceProjectile] (.IceProjectile original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:112)
+
+2018-12-16 02:04:36.2393 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:206)
+UnityEngine.Object.Instantiate[IceProjectile] (.IceProjectile original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:112)
+
+2018-12-16 02:04:36.4385 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:206)
+UnityEngine.Object.Instantiate[IceProjectile] (.IceProjectile original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:112)
+
+2018-12-16 02:04:36.5866 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:206)
+UnityEngine.Object.Instantiate[IceProjectile] (.IceProjectile original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:112)
+
+2018-12-16 02:04:36.7365 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:206)
+UnityEngine.Object.Instantiate[IceProjectile] (.IceProjectile original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:112)
+
+2018-12-16 02:04:42.0553 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:206)
+UnityEngine.Object.Instantiate[IceProjectile] (.IceProjectile original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:112)
+
+2018-12-16 02:04:43.0508 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:206)
+UnityEngine.Object.Instantiate[IceProjectile] (.IceProjectile original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:112)
+
+2018-12-16 02:04:43.7833 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:206)
+UnityEngine.Object.Instantiate[IceProjectile] (.IceProjectile original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:112)
+
+2018-12-16 02:04:43.9159 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:206)
+UnityEngine.Object.Instantiate[IceProjectile] (.IceProjectile original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:112)
+
+2018-12-16 02:04:44.4632 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:206)
+UnityEngine.Object.Instantiate[IceProjectile] (.IceProjectile original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:112)
+
+2018-12-16 02:04:45.1252 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:206)
+UnityEngine.Object.Instantiate[IceProjectile] (.IceProjectile original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:112)
+
+2018-12-16 02:04:45.6386 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:206)
+UnityEngine.Object.Instantiate[IceProjectile] (.IceProjectile original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:112)
+
+2018-12-16 02:04:45.8486 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:206)
+UnityEngine.Object.Instantiate[IceProjectile] (.IceProjectile original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:112)
+
+2018-12-16 02:04:53.4157 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:206)
+UnityEngine.Object.Instantiate[IceProjectile] (.IceProjectile original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:112)
+
+2018-12-16 02:04:58.2671 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:206)
+UnityEngine.Object.Instantiate[IceProjectile] (.IceProjectile original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:112)
+
+2018-12-16 02:05:00.1219 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:206)
+UnityEngine.Object.Instantiate[IceProjectile] (.IceProjectile original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:112)
+
+2018-12-16 02:05:00.3035 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:206)
+UnityEngine.Object.Instantiate[IceProjectile] (.IceProjectile original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:112)
+
+2018-12-16 02:05:00.4864 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:206)
+UnityEngine.Object.Instantiate[IceProjectile] (.IceProjectile original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:112)
+
+2018-12-16 02:05:00.6604 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:206)
+UnityEngine.Object.Instantiate[IceProjectile] (.IceProjectile original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:112)
+
+2018-12-16 02:05:00.8042 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:206)
+UnityEngine.Object.Instantiate[IceProjectile] (.IceProjectile original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:112)
+
+2018-12-16 02:05:01.0037 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:206)
+UnityEngine.Object.Instantiate[IceProjectile] (.IceProjectile original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:112)
+
+2018-12-16 02:05:01.1853 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:206)
+UnityEngine.Object.Instantiate[IceProjectile] (.IceProjectile original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:112)
+
+2018-12-16 02:05:01.4829 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:206)
+UnityEngine.Object.Instantiate[IceProjectile] (.IceProjectile original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:112)
+
+2018-12-16 02:05:01.6658 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:206)
+UnityEngine.Object.Instantiate[IceProjectile] (.IceProjectile original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:112)
+
+2018-12-16 02:05:01.8151 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:206)
+UnityEngine.Object.Instantiate[IceProjectile] (.IceProjectile original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:112)
+
+2018-12-16 02:05:08.3218 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:206)
+UnityEngine.Object.Instantiate[IceProjectile] (.IceProjectile original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:112)
+
+2018-12-16 02:05:39.2083 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:206)
+UnityEngine.Object.Instantiate[IceProjectile] (.IceProjectile original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:112)
+
+2018-12-16 02:05:40.3635 [DEBUG] Play mode: False
+2018-12-16 02:05:45.2093 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 02:05:49.8967 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 02:05:49.9555 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-16 02:05:51.9430 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:206)
+UnityEngine.Object.Instantiate[IceProjectile] (.IceProjectile original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:112)
+
+2018-12-16 02:06:38.0690 [DEBUG] Play mode: False
+2018-12-16 02:06:57.3668 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 02:06:57.4341 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-16 02:06:58.4119 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:206)
+UnityEngine.Object.Instantiate[IceProjectile] (.IceProjectile original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:112)
+
+2018-12-16 02:08:34.0389 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 02:13:19.9999 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 02:13:53.0659 [DEBUG] Play mode: False
+2018-12-16 02:14:22.6451 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 02:14:31.3490 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 02:14:31.4025 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-16 02:14:33.2963 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:206)
+UnityEngine.Object.Instantiate[IceProjectile] (.IceProjectile original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:111)
+
+2018-12-16 02:14:38.2322 [DEBUG] Play mode: False
+2018-12-16 02:17:22.1651 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 02:17:22.2228 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-16 02:17:23.9924 [ERROR] ArgumentException: The Object you want to instantiate is null.
+UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:381)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:206)
+UnityEngine.Object.Instantiate[IceSpellObject] (.IceSpellObject original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:111)
+
+2018-12-16 02:17:32.1899 [DEBUG] Play mode: False
+2018-12-16 02:18:10.3785 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 02:18:10.4384 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-16 02:18:15.4111 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+EarthSpellUse.Start () (at Assets/Scripts/Abilities/EarthSpell/EarthSpellUse.cs:26)
+
+2018-12-16 02:18:19.2066 [ERROR] NullReferenceException
+UnityEngine.Object.Internal_InstantiateSingle (UnityEngine.Object data, Vector3 pos, Quaternion rot)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:211)
+UnityEngine.Object.Instantiate[IceSpellObject] (.IceSpellObject original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:112)
+
+2018-12-16 02:18:20.9957 [ERROR] NullReferenceException
+UnityEngine.Object.Internal_InstantiateSingle (UnityEngine.Object data, Vector3 pos, Quaternion rot)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:211)
+UnityEngine.Object.Instantiate[IceSpellObject] (.IceSpellObject original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:112)
+
+2018-12-16 02:20:52.1093 [DEBUG] Play mode: False
+2018-12-16 02:20:57.3505 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 02:21:01.4177 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-16 02:21:01.4739 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-16 02:21:02.9752 [ERROR] NullReferenceException
+UnityEngine.Object.Internal_InstantiateSingle (UnityEngine.Object data, Vector3 pos, Quaternion rot)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:211)
+UnityEngine.Object.Instantiate[IceProjectile] (.IceProjectile original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:112)
+
+2018-12-16 02:21:05.7394 [ERROR] NullReferenceException
+UnityEngine.Object.Internal_InstantiateSingle (UnityEngine.Object data, Vector3 pos, Quaternion rot)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:211)
+UnityEngine.Object.Instantiate[IceProjectile] (.IceProjectile original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:112)
+
+2018-12-16 02:21:06.0705 [ERROR] NullReferenceException
+UnityEngine.Object.Internal_InstantiateSingle (UnityEngine.Object data, Vector3 pos, Quaternion rot)
+UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:211)
+UnityEngine.Object.Instantiate[IceProjectile] (.IceProjectile original, Vector3 position, Quaternion rotation) (at /Users/builduser/buildslave/unity/build/Runtime/Export/UnityEngineObject.bindings.cs:285)
+IceSpellUse.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellUse.cs:112)
+
+2018-12-16 02:21:07.1459 [DEBUG] Play mode: False
