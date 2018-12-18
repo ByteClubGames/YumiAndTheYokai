@@ -2,8 +2,8 @@
 ********************************************************************************
 *Creator(s)...........................................Kieran Glynn, Darrell Wong
 *Created..............................................................12/14/2018
-*Last Modified............................................@ 4:42PM on 12/14/2018
-*Last Modified by...................................................Keiran Glynn
+*Last Modified............................................@ 6:01PM on 12/17/2018
+*Last Modified by...................................................Daniel Jaffe
 *
 *Description:   This script houses static methods that are called on by the
 *               PlayerController.cs. These methods check for collisions with
@@ -217,8 +217,7 @@ public class CollisionCorrections : MonoBehaviour {
         }
         return deltaMovement;
     }
-
-
+    #region LegacyCode
     //bool handleHorizontalSlope(ref Vector3 deltaMovement, float angle)
     //{
     //    // disregard 90 degree angles (walls)
@@ -272,4 +271,5 @@ public class CollisionCorrections : MonoBehaviour {
 
     //    return true;
     //}
+    #endregion
 }
