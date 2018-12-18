@@ -24,6 +24,7 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 public class YumiHealthSystem : MonoBehaviour
 {
@@ -43,7 +44,29 @@ public class YumiHealthSystem : MonoBehaviour
         health = Int32.Parse(healthPath);
         reader.Close();
 
-        hpArr = GameObject.Find("HealthParent").GetComponent<ChildArraySorter>().arr; 
+        healthPath = "Assets/Scripts/Player/Health/CurrentHP.txt";
+
+        healthParent = GameObject.Find("HealthAnimParent");
+
+        hpArr = healthParent.GetComponentsInChildren<Transform>();
+
+        ArrFix(); 
+    }
+
+    void ArrFix()
+    {
+        int newL = (hpArr.Length - 1) / 2;
+        Transform[] newArr = new Transform[newL];
+        int temp = 1; 
+
+        for (int i = 0; i < newL; i++)
+        {
+            newArr[i] = hpArr[temp];
+            temp++;
+            temp++; 
+        }
+
+        hpArr = newArr; 
     }
 
     void Update()
@@ -58,24 +81,28 @@ public class YumiHealthSystem : MonoBehaviour
             ResetHealth(); 
         }
 
-        ArrLoop(); 
+        ArrLoop();
     }
 
-    public int test = 0; 
+    public void HealthWriter() // Whatever causes the player to change scenes should call this function. 
+    {
+        StreamWriter writer = new StreamWriter(healthPath);
+        writer.Write(health);
+        writer.Close();
+    }
 
     void ArrLoop() // makes a certain ammount visable 
     {
-        int b = 0; 
+        int b = 1; 
 
-        for (int i = 0; i <= health; i++)
+        for (int i = 1; i <= health; i++)
         {
             hpArr[i].gameObject.SetActive(true);
-            b = i + 1; 
+            b = i; 
         }
 
-        test = b; 
 
-        for (int j = b; j <= hpArr.Length; j++)
+        for (int j = b; j < hpArr.Length; j++)
         {
             hpArr[j].gameObject.SetActive(false);
         }
@@ -90,61 +117,4 @@ public class YumiHealthSystem : MonoBehaviour
     {
         health = 5; 
     }
-
-    public void DisplayHealthV2()
-    {
-        for(int i = 0; i < hpArr.Length; i++)
-        {
-
-        }
-    }
-
-    //public void DisplayHealthV1()
-    //{
-    //    switch (health)
-    //    {
-    //        case 0:
-    //            HP1.gameObject.SetActive(false);
-    //            HP2.gameObject.SetActive(false);
-    //            HP3.gameObject.SetActive(false);
-    //            HP4.gameObject.SetActive(false);
-    //            HP5.gameObject.SetActive(false);
-    //            break;
-    //        case 1:
-    //            HP1.gameObject.SetActive(true);
-    //            HP2.gameObject.SetActive(false);
-    //            HP3.gameObject.SetActive(false);
-    //            HP4.gameObject.SetActive(false);
-    //            HP5.gameObject.SetActive(false);
-    //            break;
-    //        case 2:
-    //            HP1.gameObject.SetActive(true);
-    //            HP2.gameObject.SetActive(true);
-    //            HP3.gameObject.SetActive(false);
-    //            HP4.gameObject.SetActive(false);
-    //            HP5.gameObject.SetActive(false);
-    //            break;
-    //        case 3:
-    //            HP1.gameObject.SetActive(true);
-    //            HP2.gameObject.SetActive(true);
-    //            HP3.gameObject.SetActive(true);
-    //            HP4.gameObject.SetActive(false);
-    //            HP5.gameObject.SetActive(false);
-    //            break;
-    //        case 4:
-    //            HP1.gameObject.SetActive(true);
-    //            HP2.gameObject.SetActive(true);
-    //            HP3.gameObject.SetActive(true);
-    //            HP4.gameObject.SetActive(true);
-    //            HP5.gameObject.SetActive(false);
-    //            break;
-    //        case 5:
-    //            HP1.gameObject.SetActive(true);
-    //            HP2.gameObject.SetActive(true);
-    //            HP3.gameObject.SetActive(true);
-    //            HP4.gameObject.SetActive(true);
-    //            HP5.gameObject.SetActive(true);
-    //            break;
-    //    }
-    //}
 }
