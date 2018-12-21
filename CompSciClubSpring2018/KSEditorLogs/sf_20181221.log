@@ -7322,3 +7322,13 @@ IceSpellAffectedSurface.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpell
 IceSpellAffectedEnemy.Update () (at Assets/Scripts/Abilities/IceSpell/IceSpellAffectedEnemy.cs:28)
 
 2018-12-21 10:40:50.2897 [DEBUG] Play mode: False
+2018-12-21 12:51:12.4513 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-21 12:51:26.5955 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-21 12:51:26.6453 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-21 12:51:30.8007 [DEBUG] Play mode: False
+2018-12-21 12:51:55.8416 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-21 12:51:55.8965 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-21 12:51:58.0909 [DEBUG] Play mode: False
+2018-12-21 12:52:46.7950 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-21 12:52:46.8339 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-21 12:53:27.8837 [DEBUG] Play mode: False
