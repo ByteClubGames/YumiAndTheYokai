@@ -112,7 +112,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bdd6edb7ee364100b0937d8090e6553, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectileSpeed: 25
+  freq: 200
+  speed: 0.5
+  duration: 0.5
   iceSpellPrefab: {fileID: 1873389610634258, guid: 6c5cefa26a6d56d418819b0cbcc22005,
     type: 2}
 --- !u!135 &135049252450012420

@@ -2,13 +2,13 @@
 ********************************************************************************
 *Creator(s)......................................................Michael Sanchez
 *Created..............................................................12/15/2018 
-*Last Modified............................................@ 8:40PM on 12/17/2018 
+*Last Modified...........................................@ 10:20PM on 12/21/2018 
 *Last Modified by................................................Michael Sanchez 
 * 
 *Description:   Handles behavior for the Ice Projectile instantiated by the
 *               IceSpellUse.cs script. Instantiates iceSpellPrefab upon
 *               colliding with GameObject.
-*********************************************************************************
+********************************************************************************
 */
 
 using System;
@@ -19,7 +19,9 @@ using UnityEngine;
 
 public class IceProjectile : MonoBehaviour
 {
-    public int projectileSpeed;
+    public float freq;
+    public float speed;
+    public float duration;
     public GameObject iceSpellPrefab;
     private Plane referencePlane = new Plane(new Vector3(0, 0, -1), new Vector3(0, 0, 0));
     private Vector3 spellClickTarget;
@@ -33,21 +35,40 @@ public class IceProjectile : MonoBehaviour
         spellClickTarget = GetSpellClickTarget();
         transform.rotation = Quaternion.FromToRotation(Vector3.up, spellClickTarget);
 
+        // start movement coroutine, destroys object upon completion
         coroutine = ProjectileMovement(spellClickTarget);
         StartCoroutine(coroutine);
+
+        // extra precaution, destroy projectile after 'duration' seconds
+        Destroy(gameObject, duration);
+    }
+
+    private void Update()
+    {
+        if (transform.position == spellClickTarget) {
+            Destroy(gameObject);
+        }
     }
 
     private IEnumerator ProjectileMovement(Vector3 target)
     {
         print("coroutine");
-        for(int i=0; i < projectileSpeed; i++)
+        print(spellClickTarget.magnitude);
+        //while(Vector3.Distance(transform.position, spellClickTarget) > 10f)
+        for(double i=0; i < spellClickTarget.magnitude; i+=speed)
         {
-            transform.Translate(Vector3.up, Space.Self);
+            // translate along object's y-axis. z: sin oscillation, x: cos oscillation
+            transform.Translate(speed * Vector3.up, Space.Self);
+            transform.Translate(speed * (Vector3.forward * Mathf.Sin(Time.time*freq))/2, Space.Self);
+            transform.Translate(speed * (Vector3.right * Mathf.Cos(Time.time*freq))/2, Space.Self);
 
+            // instantiate ice particles at current projectile location
             Instantiate(iceSpellPrefab, transform.position, Quaternion.identity);
             yield return null;
         }
+        // destroy projectile once spellClickTarget.magnitude is reached
         Destroy(gameObject);
+
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -63,6 +84,7 @@ public class IceProjectile : MonoBehaviour
 
     public Vector3 GetSpellClickTarget()
     {
+        // take mouse input as Vector3 coord. in the far and near plane
         Vector3 mousePosFar = new Vector3(Input.mousePosition.x,
                                           Input.mousePosition.y,
                                           Camera.main.farClipPlane);
