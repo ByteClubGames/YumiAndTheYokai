@@ -1,0 +1,3 @@
+128 resolution snapper sheets are cleaned-up (aliasing fixed, no patches).
+The higher res ones need to be fixed. I think there's a tool in Unity for
+making multiple versions of an image. Look into.
