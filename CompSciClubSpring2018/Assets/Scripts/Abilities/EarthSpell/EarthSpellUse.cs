@@ -8,20 +8,32 @@
  *      
  */
 
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+/*
+* ************************************************************************************************
+* Creator(s)...........................................................Daniel Jaffe & Darrell Wong
+* Created...............................................................................03/15/2018
+* Last Modified............................................................@ 11:33PM on 12/21/2018
+* Last Modified by....................................................................Daniel Jaffe
+* 
+* 
+* Description:   Spawn in the earthSpell object - Attach to the Earth Spell Spawner object:
+*                   1. Uses a OverlapSphere to check eSpell overlap
+*                   2. Spawns a eSpell object at the point of click oriented normal to the surface
+* ************************************************************************************************
+*/
 
+using UnityEngine;
 
 public class EarthSpellUse : MonoBehaviour
 {
-
+    #region Global Variables
     private Plane zPlane = new Plane(new Vector3(0, 0, -1), new Vector3(0, 0, 0)); //plane to see where ray cast from camera hits
     public float overlapRadius = .59F; // shpere to cover 1,1,1, cube
     public bool spellOverlap = false;
     public GameObject eSpell;
     public Vector3 playerinput = new Vector3(1, 1, 0); //gets player input
     public Vector3 normalVector;
+    #endregion
 
     // Update is called once per frame
     void Update()
@@ -30,7 +42,7 @@ public class EarthSpellUse : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             //raycast from the camera and the player - if both rays hit the same object with the tag EarthSpellSurface, then spawn eSpell
-
+            //***Should eventually be moved into Spell Casting script as this is used with the Ice Spell as well and a similar version for wind***
             #region Yumi and Cam Ray Setup
             //Ray from camera to world position
             Vector3 mousePosFar = new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.farClipPlane);
@@ -72,9 +84,10 @@ public class EarthSpellUse : MonoBehaviour
                         break;
                     }
                 }
+
+                //Assuming no overlap, spawns the eSpell object into play in the direction of the normal vector
                 if (!spellOverlap)
-                {
-                    //spawns the eSpell object into play in the direction of the normal vector                                                                     
+                {                                                                      
                     Instantiate(eSpell, playerinput, Quaternion.FromToRotation(Vector3.up, yumiHit.normal));
                 }
             }
