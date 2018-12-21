@@ -2,7 +2,7 @@
 *
 *Creator(s).........................................................Brenden Plong
 *Created..............................................................10/05/2018
-*Last Modified............................................@ 4:30PM on 10/19/2018
+*Last Modified............................................@ 5:30PM on 12/19/2018
 *Last Modified by...................................................Brenden Plong
 *
 *Description:   Modular script that is used to destroy objects based on collisions
@@ -18,7 +18,7 @@ public class OnColDestroy : MonoBehaviour {
     // public LayerMask foe;
     // public LayerMask friend;
     // (other.gameObject.layer == 9)
-    private float originOffset = 0.5f;
+    private float originOffset = 0.5f; // Used for the placement of the ray to be outside of the collider
     public float raycastMaxDistance = 10f;
     
     /*
@@ -74,6 +74,7 @@ public class OnColDestroy : MonoBehaviour {
 
     public void OnTriggerEnter(Collider other)
     {
+        // This if statement will be used to identify player collisions
         if (other.gameObject.layer == LayerMask.NameToLayer("Player")) // Checks if the layer is under the Player layer
         {
             Destroy(this.gameObject); // Destroys the gameObject
@@ -81,7 +82,7 @@ public class OnColDestroy : MonoBehaviour {
             //Debug.Log("Has Collided"); // Tells if there was a collision
             Debug.Log(ReturnDirection(this.gameObject, other.gameObject)); // Gives the side on which the obj collided into
         }
-        
+        //This if statement will be used to identify wall collisions
         if (other.gameObject.layer == LayerMask.NameToLayer("Wall")) // Checks if the layer is under the Wall layer
         {
             Destroy(this.gameObject); // Destroys the gameobject
@@ -106,7 +107,9 @@ public class OnColDestroy : MonoBehaviour {
     
     // This block of code is used to check which sides are collided into
     // Given from a tutorial, as in the wise words of Todd Howard, "it just works."
-    private enum HitDirection { None, Top, Bottom, Forward, Back, Left, Right }
+    private enum HitDirection {
+        None, Top, Bottom, Forward, Back, Left, Right
+    }
     private HitDirection ReturnDirection(GameObject Object, GameObject ObjectHit)
     {
 
@@ -132,6 +135,7 @@ public class OnColDestroy : MonoBehaviour {
         }
         return hitDirection;
     }
+    // -------------------------------------------------------------------------------------------------------------------------
 }
 
 
