@@ -18,6 +18,7 @@ TagManager:
   - EnemyDetector
   - wall
   - Enemy
+  - EarthSpellSurface
   layers:
   - Default
   - TransparentFX
@@ -29,15 +30,18 @@ TagManager:
   - 
   - TouchInput
   - Player
+  - Spell
   - Earth
   - Enemy
   - Wall
   - Earth
-  - 
-  - Spell
-  - 
-  - 
   - Platforms
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 

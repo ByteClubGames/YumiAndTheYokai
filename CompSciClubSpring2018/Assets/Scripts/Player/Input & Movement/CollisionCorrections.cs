@@ -2,8 +2,8 @@
 ********************************************************************************
 *Creator(s)...........................................Kieran Glynn, Darrell Wong
 *Created..............................................................12/14/2018
-*Last Modified............................................@ 4:42PM on 12/14/2018
-*Last Modified by...................................................Keiran Glynn
+*Last Modified............................................@ 7:34PM on 12/17/2018
+*Last Modified by...................................................Darrell Wong
 *
 *Description:   This script houses static methods that are called on by the
 *               PlayerController.cs. These methods check for collisions with
@@ -41,17 +41,33 @@ public class CollisionCorrections : MonoBehaviour {
 
             bool raycastHit = Physics.Raycast(ray, rayDirection, out hit, rayLength, platformMask);
 
-            // can only hit slope with the bottom horizontal raycast && isRight && slope is <70
+            //can only hit slope with the bottom horizontal raycast && isRight && slope is < 70
             if (isRight && (Mathf.Atan2(hit.normal.y, hit.normal.x) * Mathf.Rad2Deg - 90f < maxClimbableSlope))
             {
                 //print("Slope on right: " + (Mathf.Atan2(hit.normal.y, hit.normal.x) * Mathf.Rad2Deg ));
-                climbableSlope = true;
+
+                if (i > 0) //case of a collision with a narrowing ceiling while walking
+                {
+                    climbableSlope = false;
+                }
+                else
+                {
+                    climbableSlope = true;
+                }
             }
 
             if (!isRight && (Mathf.Atan2(hit.normal.x, hit.normal.y) * Mathf.Rad2Deg < maxClimbableSlope))
             {
                 //print("Slope on left: " + Mathf.Atan2(hit.normal.x, hit.normal.y) * Mathf.Rad2Deg);
-                climbableSlope = true;
+
+                if (i > 0) //case of a collision with a narrowing ceiling while walking
+                {
+                    climbableSlope = false;
+                }
+                else
+                {
+                    climbableSlope = true;
+                }
             }
 
             if (raycastHit && !climbableSlope)
@@ -217,8 +233,7 @@ public class CollisionCorrections : MonoBehaviour {
         }
         return deltaMovement;
     }
-
-
+    #region LegacyCode
     //bool handleHorizontalSlope(ref Vector3 deltaMovement, float angle)
     //{
     //    // disregard 90 degree angles (walls)
@@ -272,4 +287,5 @@ public class CollisionCorrections : MonoBehaviour {
 
     //    return true;
     //}
+    #endregion
 }

@@ -1,4 +1,5 @@
-﻿///*
+﻿#region LegacyCode
+///*
 // * Programmer:   Hunter Goodin 
 // * Project:      Astral 
 // * Date Created: 02/16/2018 @  9:40 PM 
@@ -118,3 +119,4 @@
 //    //    touched = false;
 //    //}
 //}
+#endregion

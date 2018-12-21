@@ -135,12 +135,15 @@ MonoBehaviour:
   horizontalSpeed: 12
   maxClimbableSlope: 50
   skinWidth: 0.34
+  shortHopCoefficient: 2
   horizontalRays: 8
   verticalRays: 4
   error: 0.01
   platformMask:
     serializedVersion: 2
-    m_Bits: 262144
+    m_Bits: 4096
+  defaultAirBufferFrames: 5
+  defaultGroundBufferFrames: 5
 --- !u!212 &212057161137437112
 SpriteRenderer:
   m_ObjectHideFlags: 1
