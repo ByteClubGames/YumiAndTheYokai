@@ -2,7 +2,7 @@
 ********************************************************************************
 *Creator(s)...........................................Kieran Glynn, Darrell Wong
 *Created...............................................................7/26/2018
-*Last Modified.............................................@ 3:00PM on 11/2/2018
+*Last Modified...........................................@ 10:00PM on 12/20/2018
 *Last Modified by...................................................Darrell Wong
 *
 *Description:   This script is the definition of the players physics. It handles:
@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour {
     [Header("Physics/ Player Attributes")]
     public float gravity = -25f; // Negative input value
     public float jumpSpeed = 3f;
+    public float headCheck = 1.1f;      // disables jumping when under a low ceiling, look for headCheckRaycast
     public float horizontalSpeed = 8f; // Movement speed along horizontal axis
     public float maxClimbableSlope = 50f; //in degrees
     public float skinWidth; // Acts as an inset start point on the collider for the Ray orgin points
@@ -252,12 +253,23 @@ public class PlayerController : MonoBehaviour {
             normalizedHorizontalSpeed = 0;            
         }
 
+        //  HeadCheckRay fixes the clipping issue when jumping with very low ceiling
+
+        Vector3 headCheckRay = new Vector3(((TR + TL) / 2).x, this.gameObject.transform.position.y, 0f);
+        RaycastHit hit;
+
+        bool headCheckRaycastHit = Physics.Raycast(headCheckRay, Vector3.up, out hit, headCheck, platformMask);
+        print(headCheckRaycastHit);
+        Debug.DrawRay(headCheckRay, Vector3.up * headCheck, Color.blue);
+
+
         /* This selection will make the player jump given:
          *      it is touching the ground platform and spacebar is pressed
          *      it is walking off a ledge and jump is pressed before groundbuffer frames are not zero. (bufferedJump)
          *      it is falling and airBufferFrames(activated by pressing jump) are not zero. (see CallJump() above) 
          */
-        if (isGrounded && jump || bufferedJump || isGrounded && airBufferFrames > 0)
+
+        if ((isGrounded && jump || bufferedJump || isGrounded && airBufferFrames > 0) && !headCheckRaycastHit)
         {
             jump = false;
             bufferedJump = false;
@@ -289,6 +301,15 @@ public class PlayerController : MonoBehaviour {
 
             else
             velocity.y = velocity.y / shortHopCoefficient;
+        }
+
+        // resets jump when jumping under a low ceiling
+        if (jump && headCheckRaycastHit)
+        {
+            jump = false;
+            bufferedJump = false;
+            airBufferFrames = -1;
+            groundBufferFrames = -1;
         }
 
         if (characterName == CharacterName.Yokai) {
