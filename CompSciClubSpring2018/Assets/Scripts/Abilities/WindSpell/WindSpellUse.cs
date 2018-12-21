@@ -49,7 +49,7 @@ public class WindSpellUse : MonoBehaviour
 		drawMode = true;
         _isDone = false;
 		targets = new TargList();
-        player = GameObject.Find("Player");
+        player = GameObject.Find("Yumi");
         targets.addTarg(player.transform.position);
         windSpell = null;
 		this.GetComponent<TimeManager>().StartSlowDown (); // Time is slowed when spawner is here
@@ -70,7 +70,7 @@ public class WindSpellUse : MonoBehaviour
             if (windSpell == null)
             {
                 windspellAgent = Instantiate(windspellAgent, player.transform.position + new Vector3(0f, .2f, 0f), Quaternion.identity); //spawn wind spell AGENT object @ player pos
-                windspellAgent.tag = "WindSpellAgent";
+                //windspellAgent.tag = "WindSpellAgent";
 
                 Vector3 p = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10.0f));
 

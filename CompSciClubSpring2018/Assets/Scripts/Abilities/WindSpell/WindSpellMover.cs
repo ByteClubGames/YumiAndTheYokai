@@ -37,7 +37,7 @@ public class WindSpellMover : MonoBehaviour {
 
     private void OnTriggerEnter(Collider collision)
     {
-        if (!collision.gameObject.CompareTag("WindSpellTrigger") && collision.gameObject.name != "Player") {
+        if (!collision.gameObject.CompareTag("WindSpellTrigger") && collision.gameObject.name != "Yumi") {
             spawnerObj.GetComponent<WindSpellUse>().CleanUp();
         }
     }

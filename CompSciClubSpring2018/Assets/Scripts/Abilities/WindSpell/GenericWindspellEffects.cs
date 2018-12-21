@@ -45,26 +45,26 @@ public class GenericWindspellEffects : MonoBehaviour {
                 CollisionWithObject(gameObject, Vector3.left);
             }
         }
-        velocity = actualWindSpell.velocity;
-        if (actualWindSpell.velocity.x > 0)
-        {
-            pushingRight = true;
-        }
-        else
-        {
-            pushingRight = false;
-        }
-        velocity = windSpell.velocity;
+        //velocity = actualWindSpell.velocity;
+        //if (actualWindSpell.velocity.x > 0)
+        //{
+        //    pushingRight = true;
+        //}
+        //else
+        //{
+        //    pushingRight = false;
+        //}
+        //velocity = windSpell.velocity;
 	}
 
     private void OnTriggerEnter(Collider col)
     {
         if (col.tag == "WindSpellAgent") //need to differentiate between normal windspell(drawn) or agent(AI navmesh) because accessing velocies are different
         {
-            print("windspellAgent hit");
+            //print("windspellAgent hit");
             WindSpellAgent windspellAgent = col.GetComponent<WindSpellAgent>();
             velocity = windspellAgent.velocity;
-            print(windspellAgent.velocity.x);
+            //print(windspellAgent.velocity.x);
             if (windspellAgent.velocity.x >= 0)
             {
                 pushingRight = true;
@@ -77,7 +77,7 @@ public class GenericWindspellEffects : MonoBehaviour {
         }
         if (col.tag == "WindSpell")
         {
-            print("windspell hit");
+            //print("windspell hit");
             WindSpellMover windSpell = col.GetComponent<WindSpellMover>();
             velocity2 = windSpell.velocity;
             if (windSpell.velocity >= 0)
