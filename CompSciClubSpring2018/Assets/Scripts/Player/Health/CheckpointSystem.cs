@@ -2,7 +2,7 @@
 ********************************************************************************
 *Creator(s)........................................................Hunter Goodin
 *Created..............................................................12/14/2018
-*Last Modified...........................................@ 8:00 PM on 12/14/2018
+*Last Modified...........................................@ 2:55 PM on 12/21/2018
 *Last Modified by..................................................Hunter Goodin
 *
 *Description: This script controls all of the checkpoints in the scene. When the
@@ -17,36 +17,37 @@ using UnityEngine;
 
 public class CheckpointSystem : MonoBehaviour
 {
-    public GameObject initialCheckpoint;  
-    public Vector3 lastCheckpointCoords;
+    public GameObject initialCheckpoint;  	// To be populated with the checkpoint we want to be Yumi's initial checkpoint 
+    public Vector3 lastCheckpointCoords;	// The coords of above ^^^ 
 
-    void Start()
+    void Start()	// On initialization... 
     {
-        if (initialCheckpoint == null)
+        if (initialCheckpoint == null)	// if initialCheckpoint isn't populated... (but really it should always be populated but this is a fail safe...)
         {
             lastCheckpointCoords = new Vector3( GameObject.Find("Yumi").GetComponent<Transform>().position.x, 
                                                 GameObject.Find("Yumi").GetComponent<Transform>().position.y, 
-                                                GameObject.Find("Yumi").GetComponent<Transform>().position.z ); 
+                                                GameObject.Find("Yumi").GetComponent<Transform>().position.z ); // Set initialCheckpoint to Yumi's coords 
         }
-        else
+        else							// otherwise... 
         {
-            lastCheckpointCoords = new Vector3(initialCheckpoint.transform.position.x, initialCheckpoint.transform.position.y, initialCheckpoint.transform.position.z);
+            lastCheckpointCoords = new Vector3(initialCheckpoint.transform.position.x, initialCheckpoint.transform.position.y, initialCheckpoint.transform.position.z);	// lastCheckpointCoords = the coords of the initialCheckpoint obj 
         }
-        // when the eplayer dies, set the player to inactive before it moves position, then set it to active again 
+        // when the eplayer dies, the player is set to inactive before the player TP's to the new coords 
     }
 
-    public void lastCheckpointSetter(Vector3 newCoords)
+    public void lastCheckpointSetter(Vector3 newCoords)		// When this is called... 
     {
-        lastCheckpointCoords = new Vector3(newCoords.x, newCoords.y, newCoords.z); 
+        lastCheckpointCoords = new Vector3(newCoords.x, newCoords.y, newCoords.z);	//the lastCheckpointCoords are set to the coords passed to this function 
     }
 }
 
-/* Commented all of this out because I changed everything */ 
+#region OldCode 
+/* Commented all of this out because I changed everything */
 
 //{
 //    private Vector3 savePos; // The position of the active checkpoint
 //    private Vector3 currPos; // The position of this checkpoint
-	
+
 //    private void OnTriggerEnter2D(Collider2D collision)
 //    {
 //        if (collision.gameObject.CompareTag("Human")) // Is the colliding game object even the player (Should the checkpoint consider activating?)
@@ -71,3 +72,5 @@ public class CheckpointSystem : MonoBehaviour
 //        }
 //    }
 //}
+
+#endregion

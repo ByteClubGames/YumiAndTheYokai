@@ -2,17 +2,13 @@
 ********************************************************************************
 *Creator(s)........................................................Hunter Goodin
 *Created..............................................................12/14/2018
-*Last Modified...........................................@ 8:00 PM on 12/14/2018
+*Last Modified...........................................@ 3:00 PM on 12/21/2018
 *Last Modified by..................................................Hunter Goodin
 *
-*Description: This script handle's Yumi's health. When the DamageDealer() is
-*             called from another function (IE: an enemy), it will decrement 
-*             Yumi's health by decremented by the ammount passed. 
-*             
-*             When the health reaches zero, this script will call the
-*             Checkpoint.CS script's Respawn() function and set Yumi's coords
-*             back to the checkpoint's coords. It will then call this script's 
-*             Respawn() function which will reset Yumi's HP back to 5; 
+*Description: This script will essentially be a controller for the whole 
+*             checkpoint system. This should be attached to a checkpoint 
+*             controller object. It can probably be Yumi or the existing scene 
+*             controller. 
 ********************************************************************************
 */
 
@@ -22,20 +18,20 @@ using UnityEngine;
 
 public class Checkpoint : MonoBehaviour
 {
-    private GameObject thisObj;
-    private Vector3 checkpointPos = new Vector3(0, 0, 0);
+    private GameObject thisObj;								// An obj reference that will be populated with the obj this script is attatched to 
+    private Vector3 checkpointPos = new Vector3(0, 0, 0);	// Initializing a Vector3 with base coords to be changed in Start() 
 
-    void Start()
+    void Start()										// On initialization... 
     {
-        thisObj = gameObject; 
-        checkpointPos = new Vector3(thisObj.transform.position.x, thisObj.transform.position.y, thisObj.transform.position.z); 
+        thisObj = gameObject; 								// thisObj = the object this script is attatched to 
+        checkpointPos = new Vector3(thisObj.transform.position.x, thisObj.transform.position.y, thisObj.transform.position.z); // checkpointPos is set to the coords of thisObj 
     }
 
-    public void OnTriggerEnter(Collider col)
+    public void OnTriggerEnter(Collider col)			// When an obj collides with the trigger... 
     {
-        if(col.gameObject.name == "Yumi")
+        if(col.gameObject.name == "Yumi")					// Check if the collision's name is "Yumi" 
         {
-            GameObject.Find("CheckpointController").GetComponent<CheckpointSystem>().lastCheckpointSetter(checkpointPos); 
+            GameObject.Find("CheckpointController").GetComponent<CheckpointSystem>().lastCheckpointSetter(checkpointPos); 	// Search for an obj called "CheckpointController, get the CheckpointSystem script attached to it, call the lastCheckpointSetter function and pass the value checkpointPos"
         }
     }
 }
