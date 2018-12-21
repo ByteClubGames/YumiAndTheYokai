@@ -1,10 +1,10 @@
-﻿/* 
+﻿/*
 ********************************************************************************
 *Creator(s)......................................................Michael Sanchez
-*Created..............................................................12/15/2018 
-*Last Modified...........................................@ 10:20PM on 12/21/2018 
-*Last Modified by................................................Michael Sanchez 
-* 
+*Created..............................................................12/15/2018
+*Last Modified...........................................@ 10:20PM on 12/21/2018
+*Last Modified by................................................Michael Sanchez
+*
 *Description:   Handles behavior for the Ice Projectile instantiated by the
 *               IceSpellUse.cs script. Instantiates iceSpellPrefab upon
 *               colliding with GameObject.
@@ -74,7 +74,7 @@ public class IceProjectile : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         print("collision detected!");
-        if (!collision.collider.CompareTag("Human"))
+        if (collision.collider.gameObject.layer != LayerMask.NameToLayer("Player"))
         {
             // spawn ice spell particle effect at collision location
             Instantiate(iceSpellPrefab, collision.contacts[0].point, Quaternion.identity);
@@ -94,7 +94,7 @@ public class IceProjectile : MonoBehaviour
         Vector3 mousePosF = Camera.main.ScreenToWorldPoint(mousePosFar);
         Vector3 mousePosN = Camera.main.ScreenToWorldPoint(mousePosNear);
 
-        // shoot a ray from nearClipPlane -> farClipPlane 
+        // shoot a ray from nearClipPlane -> farClipPlane
         Ray screenPoint = new Ray(mousePosN, mousePosF - mousePosN);
 
         // get worldCursorPosition/vector3 of spell click target on reference plane
@@ -102,13 +102,13 @@ public class IceProjectile : MonoBehaviour
         referencePlane.Raycast(screenPoint, out distanceCamToPlane);
         Vector3 worldCursorPosition = screenPoint.GetPoint(distanceCamToPlane);
 
-        // final spell path direction = projected vector from (mousePosF - mousePosN) onto reference plane 
+        // final spell path direction = projected vector from (mousePosF - mousePosN) onto reference plane
         worldCursorPosition = Vector3.ProjectOnPlane(worldCursorPosition, new Vector3(0, 0, 0));
 
         // get SpellCaster current position
         Vector3 castPos = GameObject.Find("SpellCaster").transform.position;
 
-        // unity debug rays. blue: yumi -> spell click point, red: yumi -> (mousePosF - mousePosN) 
+        // unity debug rays. blue: yumi -> spell click point, red: yumi -> (mousePosF - mousePosN)
         UnityEngine.Debug.DrawRay(castPos, worldCursorPosition - castPos, Color.blue);
         UnityEngine.Debug.DrawRay(mousePosN, (mousePosF - mousePosN) * 100, Color.red);
 
