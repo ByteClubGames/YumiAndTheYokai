@@ -1,12 +1,15 @@
 ﻿/*
- * Author: Keiran Glynn & Karim Dabboussi
- * Date Created: 3/17/2018 @ 11:30 am
- * Date Modified: 3/17/2018 @ 11:30 am
- * Project: CompSciClubSpring2018
- * File: TurretHeadTurner.cs
- * Description: This script is responsible for making the head of the enemy face towards the player at all times.
- */
-
+***************************************************************************************
+*Creator(s).........................................Keiran Glynn & Karim Dabboussi
+*Created..............................................................3/17/2018
+*Last Modified............................................@ 12:17 AM on 12/16/2018
+*Last Modified by...................................................Karim Dabboussi
+*
+*Description:  controls the player head rotation.
+*
+*               
+***************************************************************************************
+*/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -25,11 +28,11 @@ public class TurretHeadTurner : MonoBehaviour {
 
     void Update ()
     {
-        target = TurretEnemy.targeter;
+        target = this.transform.parent.GetComponent<TurretEnemy>().targeter;
         RotateHead();
 	}
 
-    private void RotateHead()
+    private void RotateHead() //the rotation of the head
     {
         if (target != null)
         {
@@ -38,8 +41,7 @@ public class TurretHeadTurner : MonoBehaviour {
             Quaternion rotation = Quaternion.LookRotation(direction, transform.TransformDirection(Vector3.forward));
             transform.rotation = new Quaternion(0, 0, rotation.z, rotation.w);
         } else { 
-           // Debug.Log("hello");
-            rotation = Quaternion.LookRotation(defaultLook, transform.TransformDirection(0,0,-1));
+            rotation = Quaternion.LookRotation(defaultLook, transform.TransformDirection(new Vector3(0,0,0)));
             transform.rotation = new Quaternion(0, 0, rotation.z, rotation.w);
         }
         
