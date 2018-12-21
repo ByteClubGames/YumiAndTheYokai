@@ -277,8 +277,8 @@ public class PlayerController : MonoBehaviour {
 
             if (!firstPassFlag)
             {
-                firstPassFlag = true;
-                jumpPos = this.transform.position;
+                firstPassFlag = true; // Flag used to make sure this block is only executed once per wall jump
+                jumpPos = this.transform.position; 
                 targetPos = this.transform.position;
 
                 if (isOnWallRight)
@@ -300,12 +300,14 @@ public class PlayerController : MonoBehaviour {
                 velocity.y += gravity * Time.deltaTime;
             }
 
+            /* We want to continue our wall jump code, unless the player has wall jump a specific horizontal distance away from the wall.
+             * If the player goes this distance away from the wall, we go back to using our normal movement code until the next wall jump */
             if ((Mathf.Abs(this.transform.position.x - targetPos.x) > wallJumpXDistance))
             {
                 wallJumpActive = false;
             }
 
-            Move(velocity * Time.deltaTime);
+            Move(velocity * Time.deltaTime); 
 
         }
         else
