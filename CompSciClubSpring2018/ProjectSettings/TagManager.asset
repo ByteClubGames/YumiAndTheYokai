@@ -16,6 +16,8 @@ TagManager:
   - Walls
   - MovingPlatform
   - EnemyDetector
+  - wall
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -28,8 +30,8 @@ TagManager:
   - TouchInput
   - Player
   - Earth
-  - 
-  - 
+  - Enemy
+  - Wall
   - Earth
   - 
   - Spell
