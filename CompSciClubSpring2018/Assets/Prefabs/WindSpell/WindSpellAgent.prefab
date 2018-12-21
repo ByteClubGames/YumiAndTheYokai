@@ -28,7 +28,7 @@ GameObject:
   - component: {fileID: 54563060828740908}
   m_Layer: 0
   m_Name: WindSpellAgent
-  m_TagString: WindSpell
+  m_TagString: WindSpellAgent
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -115,6 +115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  velocity: 0
 --- !u!114 &114859335249904762
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -127,6 +128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 195918133714553368}
+  velocity: {x: 0, y: 0, z: 0}
 --- !u!135 &135309000247334784
 SphereCollider:
   m_ObjectHideFlags: 1

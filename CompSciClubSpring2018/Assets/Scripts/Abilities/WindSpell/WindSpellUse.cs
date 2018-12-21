@@ -28,10 +28,11 @@ public class WindSpellUse : MonoBehaviour
 	public GameObject targetPrefab; //empty gameobject used for Transform
 	private GameObject player;
 	public GameObject windSpellPrefab;
+    public NavMeshAgent windspellAgent;
     public double minDeltaDis;
     public int drawSeconds = 10;
     //public GameObject timeManager;
-    public NavMeshAgent windspellAgent;
+
 
     private GameObject windSpell;
 	private GameObject tempTarget;
@@ -69,7 +70,7 @@ public class WindSpellUse : MonoBehaviour
             if (windSpell == null)
             {
                 windspellAgent = Instantiate(windspellAgent, player.transform.position + new Vector3(0f, .2f, 0f), Quaternion.identity); //spawn wind spell AGENT object @ player pos
-                windspellAgent.tag = "WindSpell";
+                windspellAgent.tag = "WindSpellAgent";
 
                 Vector3 p = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10.0f));
 

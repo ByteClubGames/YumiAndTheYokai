@@ -22,6 +22,9 @@ public class WindSpellMover : MonoBehaviour {
 	private int wsTargetsSize;
 	private string wsSpawnerName = "WindSpellSpawner(Clone)"; //had to make this dynamic for instantiated prefab names
     private GameObject spawnerObj;
+    public float velocity;
+    private Rigidbody rb;
+    private Vector3 lastPos;
 
 	// Use this for initialization
 	void Start () {
@@ -45,7 +48,12 @@ public class WindSpellMover : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update () {
+    void FixedUpdate () {
+        rb = this.GetComponent<Rigidbody>();
+
+        velocity = (rb.position.x - lastPos.x) * 30f;
+        lastPos = rb.position;
+
         if (transform.position == wsTargets[wsTargetsSize - 1])
         { // die at end of path (transform.position == wsTargets[wsTargets.Length - 1])
             try
