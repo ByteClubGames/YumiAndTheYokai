@@ -1,16 +1,26 @@
-﻿/* WindSpellUse.cs
- * Date Created: 5/06/18
- * Last Edited: 6/16/18
- * Programmer: Jack Bruce && Stephen && Evanito
- * Description: Modified from 'IceSpellUse.cs'
- * Attatch to WindSpellSpawner (This script is Active during "Draw Mode")
- *  -Spawns trgtObjs upon clicking
- *  -makes array of trgtObjs position (Vector3)
- */
+﻿/*WindSpellUse.cs
+********************************************************************************
+*Creator(s).....................Jack Bruce && Stephen && Evanito && Darrell Wong
+*Created.................................................................5/06/18
+*Last Modified..........................................................12/15/18
+*Last Modified by...................................................Darrell Wong
+*
+*Attatch to WindSpellSpawner (This script is Active during "Draw Mode")
+* Description: Modified from 'IceSpellUse.cs'
+*  -Spawns trgtObjs upon clicking
+*  -makes array of trgtObjs position (Vector3)
+*  
+*  -differentiates between a click and a drag
+*  -a click will activate the nav mesh ai to direct the windspell to the clicked point
+*  -dragging will have the windspell follow the dragged path
+********************************************************************************
+*/
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
+using UnityEngine.AI;
+
 
 public class WindSpellUse : MonoBehaviour
 {
@@ -18,18 +28,20 @@ public class WindSpellUse : MonoBehaviour
 	public GameObject targetPrefab; //empty gameobject used for Transform
 	private GameObject player;
 	public GameObject windSpellPrefab;
+    public NavMeshAgent windspellAgent;
     public double minDeltaDis;
     public int drawSeconds = 10;
-	//public GameObject timeManager;
-    
-	private GameObject windSpell;
+    //public GameObject timeManager;
+
+
+    private GameObject windSpell;
 	private GameObject tempTarget;
 	private TargList targets;
 	private bool drawMode;
 	private bool _isDragging = false;
     private bool _isDone;
 	private Vector3 currentPos;
-    private Stopwatch drawTimer = new Stopwatch();
+    private Stopwatch drawTimer = new Stopwatch();   
 
 	// Use this for initialization
 	void Start()
@@ -37,7 +49,7 @@ public class WindSpellUse : MonoBehaviour
 		drawMode = true;
         _isDone = false;
 		targets = new TargList();
-        player = GameObject.Find("Player");
+        player = GameObject.Find("Yumi");
         targets.addTarg(player.transform.position);
         windSpell = null;
 		this.GetComponent<TimeManager>().StartSlowDown (); // Time is slowed when spawner is here
@@ -47,9 +59,27 @@ public class WindSpellUse : MonoBehaviour
 	void Update()
 	{
 
-		//Once array is full OR Draw mode is manually turned off
-		//Spawn WindSpell Object and load it with target array
-		if ((_isDone && drawMode )|| drawTimer.ElapsedMilliseconds > drawSeconds * 1000)
+		//if only clicked for less than ~half a second
+		//Spawn WindSpell Object AGENT and set its destination to the click
+        if ((_isDone && drawMode) && drawTimer.ElapsedMilliseconds < drawSeconds * 50) 
+        {
+            drawTimer.Stop();
+            drawTimer.Reset();
+            _isDone = false;
+            drawMode = false;
+            if (windSpell == null)
+            {
+                windspellAgent = Instantiate(windspellAgent, player.transform.position + new Vector3(0f, .2f, 0f), Quaternion.identity); //spawn wind spell AGENT object @ player pos
+                //windspellAgent.tag = "WindSpellAgent";
+
+                Vector3 p = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10.0f));
+
+                windspellAgent.SetDestination(new Vector3(p.x, p.y, 0f));
+
+                this.GetComponent<TimeManager>().StopSlowDown(); // return time to normal
+            }
+        }
+		else if ((_isDone && drawMode )|| drawTimer.ElapsedMilliseconds > drawSeconds * 1000)
 		{
             drawTimer.Stop();
             drawTimer.Reset();

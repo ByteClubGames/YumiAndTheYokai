@@ -57,3 +57,6 @@ MonoBehaviour:
     type: 2}
   minDeltaDis: 0.3
   drawSeconds: 5
+  windspellAgent: {fileID: 195918133714553368, guid: 7953b270f8921524a953307e2de3ddaa,
+    type: 2}
+  cam: {fileID: 0}
