@@ -133,6 +133,10 @@ MonoBehaviour:
   gravity: -40
   jumpSpeed: 4
   horizontalSpeed: 12
+  wallSlideSpeed: 5
+  wallJumpXSpeed: 20
+  wallJumpYSpeed: 3
+  wallJumpXDistance: 1
   maxClimbableSlope: 50
   skinWidth: 0.34
   shortHopCoefficient: 2

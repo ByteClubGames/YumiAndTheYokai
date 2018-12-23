@@ -19,6 +19,7 @@ TagManager:
   - wall
   - Enemy
   - EarthSpellSurface
+  - WallJump
   layers:
   - Default
   - TransparentFX
