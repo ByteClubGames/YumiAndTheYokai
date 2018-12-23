@@ -21,7 +21,7 @@ public class CollisionCorrections : MonoBehaviour {
 
     public static Vector3 HorizontalCollision(PlayerController playerController,Vector3 deltaMovement, BoxCollider boxCollider, Vector3 BL, Vector3 BR, 
         float transformHeight, float verticalRaySeparation, float maxClimbableSlope, float skinWidth, float error, int horizontalRays, 
-        bool climbableSlope, bool isRight, LayerMask platformMask)
+        bool climbableSlope, bool isRight, bool isGrounded, LayerMask platformMask)
     {
         isRight = deltaMovement.x > 0f;
         float rayLength = Mathf.Abs(deltaMovement.x) + skinWidth;
@@ -80,10 +80,22 @@ public class CollisionCorrections : MonoBehaviour {
                 if (isRight && !climbableSlope)
                 {
                     deltaMovement.x -= skinWidth;
+
+                    if ((hit.transform.gameObject.tag == "WallJump") && !isGrounded)
+                    {
+                        playerController.SetIsOnWallRight(true);
+                        Debug.Log("isOnWallRight");
+                    }
                 }
                 else if (!isRight && !climbableSlope)
                 {
                     deltaMovement.x += skinWidth;
+
+                    if ((hit.transform.gameObject.tag == "WallJump") && !isGrounded)
+                    {
+                        playerController.SetIsOnWallLeft(true);
+                        Debug.Log("isOnWallLeft");
+                    }
                 }
 
                 if (rayLength < skinWidth + error)
@@ -138,6 +150,7 @@ public class CollisionCorrections : MonoBehaviour {
                     {
                         deltaMovement.y += skinWidth;
                         isGrounded = true;
+                        playerController.ClearOnWall();
                     }
 
                     if (!isUp && deltaMovement.y > 0.00001f)
@@ -178,6 +191,7 @@ public class CollisionCorrections : MonoBehaviour {
                     {
                         deltaMovement.y += skinWidth;
                         isGrounded = true;
+                        playerController.ClearOnWall();
                     }
 
                     if (!isUp && deltaMovement.y > 0.00001f)
