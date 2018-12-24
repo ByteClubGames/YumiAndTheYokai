@@ -132,6 +132,7 @@ MonoBehaviour:
   characterName: 0
   gravity: -40
   jumpSpeed: 4
+  headCheck: 1.1
   horizontalSpeed: 12
   wallSlideSpeed: 5
   wallJumpXSpeed: 20
@@ -145,7 +146,7 @@ MonoBehaviour:
   error: 0.01
   platformMask:
     serializedVersion: 2
-    m_Bits: 4096
+    m_Bits: 32768
   defaultAirBufferFrames: 5
   defaultGroundBufferFrames: 5
 --- !u!212 &212057161137437112

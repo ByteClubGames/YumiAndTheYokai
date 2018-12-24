@@ -20,6 +20,7 @@ TagManager:
   - Enemy
   - EarthSpellSurface
   - WallJump
+  - WindSpellAgent
   layers:
   - Default
   - TransparentFX
@@ -35,22 +36,16 @@ TagManager:
   - Earth
   - Enemy
   - Wall
-  - Earth
-  - Platforms
-  - 
-  - 
-  - 
-  - 
   - 
   - Platforms
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   - NavMesh
   - EarthSpell
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
   - 
   - 
   - 
