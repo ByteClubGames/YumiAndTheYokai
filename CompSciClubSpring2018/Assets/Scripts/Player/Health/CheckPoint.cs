@@ -1,42 +1,37 @@
 ﻿/*
- * Programmer:   Keiran Glynn
- * Date Created: 05/19/2018 @ 12:17 PM
- * Last Updated: 05/19/2018 @ 12:17 PM
- * File Name:    CheckPoint.cs 
- * Description:  This script is attached to the checkpoint object. When the player enters the collider of the checkpoint, it first checks to see if this
- * current checkpoint is the one that is currently active (the checkpoint that has been most recently visited). If the checkpoint is not currently active,
- * then it is made active by saving its unique position to the RespawnManager.cs. If the player revisits the checkpoint that is currently active, nothing 
- * will happen. A checkpoint can be activated mmore than once if it is visited non-consecutively.
- */
+********************************************************************************
+*Creator(s)........................................................Hunter Goodin
+*Created..............................................................12/14/2018
+*Last Modified...........................................@ 3:00 PM on 12/21/2018
+*Last Modified by..................................................Hunter Goodin
+*
+*Description: This script will essentially be a controller for the whole 
+*             checkpoint system. This should be attached to a checkpoint 
+*             controller object. It can probably be Yumi or the existing scene 
+*             controller. 
+********************************************************************************
+*/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CheckPoint : MonoBehaviour {
-    private Vector3 savePos; // The position of the active checkpoint
-    private Vector3 currPos; // The position of this checkpoint
-	
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Human")) // Is the colliding game object even the player (Should the checkpoint consider activating?)
-        {
-            savePos = GameObject.Find("Human").GetComponent<RespawnManager>().GetPos(); // Position that the player would currently respawn at
-            currPos = this.transform.parent.position; // Position of this checkpoint
+public class Checkpoint : MonoBehaviour
+{
+    private GameObject thisObj;								// An obj reference that will be populated with the obj this script is attatched to 
+    private Vector3 checkpointPos = new Vector3(0, 0, 0);	// Initializing a Vector3 with base coords to be changed in Start() 
 
-            if (savePos != currPos) // If this checkpoint isn't already active, do action...
-            {
-                savePos = currPos; // Makes this checkpoint the active checkpoint
-                GameObject.Find("Human").GetComponent<RespawnManager>().SetPos(savePos); // Tells RespawnManager.cs to use this new position to respawn the player
-                Debug.Log("Checkpoint " + this.transform.parent.name + " is now active.");
-            }
-            else
-            {
-                Debug.Log("Checkpoint " + this.transform.parent.name + " is already active.");
-            }
-        }
-        else
+    void Start()										// On initialization... 
+    {
+        thisObj = gameObject; 								// thisObj = the object this script is attatched to 
+        checkpointPos = new Vector3(thisObj.transform.position.x, thisObj.transform.position.y, thisObj.transform.position.z); // checkpointPos is set to the coords of thisObj 
+    }
+
+    public void OnTriggerEnter(Collider col)			// When an obj collides with the trigger... 
+    {
+        if(col.gameObject.name == "Yumi")					// Check if the collision's name is "Yumi" 
         {
-            //This collision isn't important
+            GameObject.Find("CheckpointController").GetComponent<CheckpointSystem>().lastCheckpointSetter(checkpointPos); 	// Search for an obj called "CheckpointController, get the CheckpointSystem script attached to it, call the lastCheckpointSetter function and pass the value checkpointPos"
         }
     }
 }

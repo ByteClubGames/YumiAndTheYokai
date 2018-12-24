@@ -30,8 +30,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Path: /Users/RoryGlenn/Desktop/YumiAndTheYokai/CompSciClubSpring2018/FMOD/Build/Mobile/Master
-    Bank.bank
+  Path: /Users/RoryGlenn/Desktop/YumiAndTheYokai/CompSciClubSpring2018/FMOD/Build/Mobile/Master Bank.bank
   lastModified: 636650292370000000
   LoadResult: 0
   FileSizes:
