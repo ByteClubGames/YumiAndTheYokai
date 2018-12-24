@@ -203,3 +203,37 @@ UnityEngine.GameObject.GetComponent[WindSpellUse] () (at C:/buildslave/unity/bui
 WindSpellMover.OnTriggerEnter (UnityEngine.Collider collision) (at Assets/Scripts/Abilities/WindSpell/WindSpellMover.cs:41)
 
 2018-12-23 16:43:26.9585 [DEBUG] Play mode: False
+2018-12-23 19:02:49.3436 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-23 19:03:54.6610 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-23 19:03:54.6969 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-23 19:03:56.9119 [DEBUG] Play mode: False
+2018-12-23 19:04:27.9677 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-23 19:04:28.0096 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-23 19:04:29.6889 [DEBUG] Play mode: False
+2018-12-23 19:04:50.3880 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-23 19:04:50.4280 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-23 19:04:51.0661 [DEBUG] Play mode: False
+2018-12-23 19:05:15.7663 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-23 19:05:15.8032 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-23 19:05:17.2492 [DEBUG] Play mode: False
+2018-12-23 19:05:31.5159 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-23 19:05:31.5867 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-23 19:05:32.3257 [DEBUG] Play mode: False
+2018-12-23 19:06:26.3130 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-23 19:06:26.3668 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-23 19:06:29.0974 [DEBUG] Play mode: False
+2018-12-23 19:06:32.6300 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-23 19:06:32.6734 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-23 19:06:34.6854 [DEBUG] Play mode: False
+2018-12-23 19:06:43.0048 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-23 19:06:43.0478 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-23 19:06:45.1903 [DEBUG] Play mode: False
+2018-12-23 19:07:18.4839 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-23 19:07:18.5138 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-23 19:07:19.2257 [DEBUG] Play mode: False
+2018-12-23 19:07:28.7255 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-23 19:07:28.7803 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-23 19:07:29.3152 [DEBUG] Play mode: False
+2018-12-23 19:07:55.4618 [DEBUG] Scene Fusion version 1.8.1-0
+2018-12-23 19:07:55.5007 [DEBUG] Play mode: True, sync in play mode: False
+2018-12-23 19:08:35.3893 [DEBUG] Play mode: False
