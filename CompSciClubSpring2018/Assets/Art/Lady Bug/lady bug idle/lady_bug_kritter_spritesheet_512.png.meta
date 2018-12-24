@@ -1,9 +1,12 @@
 fileFormatVersion: 2
-guid: 84bac8fae2a88114c8134c43840c81f1
+guid: e0b8aae46910ad643a300035f383d01a
 TextureImporter:
   fileIDToRecycleName:
-    21300000: yokai_jump_sprite_png_0
-    21300002: yokai_jump_sprite_png_1
+    21300000: lady_bug_kritter_spritesheet_512_0
+    21300002: lady_bug_kritter_spritesheet_512_1
+    21300004: lady_bug_kritter_spritesheet_512_2
+    21300006: lady_bug_kritter_spritesheet_512_3
+    21300008: lady_bug_kritter_spritesheet_512_4
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -86,13 +89,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: yokai_jump_sprite_png_0
+      name: lady_bug_kritter_spritesheet_512_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 256
-        width: 256
-        height: 256
+        y: 1024
+        width: 512
+        height: 512
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -100,19 +103,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e50e6f43787e9844920ad164581d927
+      spriteID: d668bc5f81aa29a42a25074931b5dce9
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: yokai_jump_sprite_png_1
+      name: lady_bug_kritter_spritesheet_512_1
       rect:
         serializedVersion: 2
-        x: 256
-        y: 256
-        width: 256
-        height: 256
+        x: 512
+        y: 1024
+        width: 512
+        height: 512
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -120,7 +123,67 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d2b25080640272349aae5c0e6a356ad3
+      spriteID: 807ea633122631c4fa04a398312d8b7d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lady_bug_kritter_spritesheet_512_2
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 796d9c90ab0207c4abff9ddde50e796d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lady_bug_kritter_spritesheet_512_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ea50e44244d02a449eac6ee660abc45
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lady_bug_kritter_spritesheet_512_4
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 491aeb1bf2c503d4b96d08dc112ec965
       vertices: []
       indices: 
       edges: []
@@ -128,7 +191,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: c67547184557c1a40b7ee246140dc001
+    spriteID: 6373bfb10f5f331489b085d89f6a2517
     vertices: []
     indices: 
     edges: []

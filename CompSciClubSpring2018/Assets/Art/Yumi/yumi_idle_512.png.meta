@@ -1,9 +1,13 @@
 fileFormatVersion: 2
-guid: 84bac8fae2a88114c8134c43840c81f1
+guid: 4a0418575fa70ed45b9e6e80313800f6
 TextureImporter:
   fileIDToRecycleName:
-    21300000: yokai_jump_sprite_png_0
-    21300002: yokai_jump_sprite_png_1
+    21300000: yumi_idle_512_0
+    21300002: yumi_idle_512_1
+    21300004: yumi_idle_512_2
+    21300006: yumi_idle_512_3
+    21300008: yumi_idle_512_4
+    21300010: yumi_idle_512_5
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -86,13 +90,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: yokai_jump_sprite_png_0
+      name: yumi_idle_512_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 256
-        width: 256
-        height: 256
+        y: 1024
+        width: 512
+        height: 512
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -100,19 +104,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e50e6f43787e9844920ad164581d927
+      spriteID: 2684250877488844fb2c3bdfc3f55ac3
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: yokai_jump_sprite_png_1
+      name: yumi_idle_512_1
       rect:
         serializedVersion: 2
-        x: 256
-        y: 256
-        width: 256
-        height: 256
+        x: 512
+        y: 1024
+        width: 512
+        height: 512
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -120,7 +124,87 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d2b25080640272349aae5c0e6a356ad3
+      spriteID: 7c3e700ec6079224f8f210339ab1f466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yumi_idle_512_2
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebc48970712a1d144b4004ac361fb79b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yumi_idle_512_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b044abdfeed28c45930a5695bb9f7a4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yumi_idle_512_4
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b593450c31c27d41905425f82b8b74f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yumi_idle_512_5
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 512
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c2a2101c8230044a84f240c8b203eab
       vertices: []
       indices: 
       edges: []
@@ -128,7 +212,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: c67547184557c1a40b7ee246140dc001
+    spriteID: 6bdef471f0ab9754aaa0e135a139ca99
     vertices: []
     indices: 
     edges: []

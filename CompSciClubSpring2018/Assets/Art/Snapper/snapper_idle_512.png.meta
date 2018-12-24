@@ -1,9 +1,7 @@
 fileFormatVersion: 2
-guid: 84bac8fae2a88114c8134c43840c81f1
+guid: 88300a6385e51344ebb5ede5086a5290
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: yokai_jump_sprite_png_0
-    21300002: yokai_jump_sprite_png_1
+  fileIDToRecycleName: {}
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -84,51 +82,11 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: yokai_jump_sprite_png_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 256
-        width: 256
-        height: 256
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8e50e6f43787e9844920ad164581d927
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: yokai_jump_sprite_png_1
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 256
-        width: 256
-        height: 256
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d2b25080640272349aae5c0e6a356ad3
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: c67547184557c1a40b7ee246140dc001
+    spriteID: 
     vertices: []
     indices: 
     edges: []

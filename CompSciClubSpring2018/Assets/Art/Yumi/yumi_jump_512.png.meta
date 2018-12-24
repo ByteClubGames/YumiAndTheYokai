@@ -1,9 +1,10 @@
 fileFormatVersion: 2
-guid: 84bac8fae2a88114c8134c43840c81f1
+guid: 9e84e2eb3fe08c441abe0541465694e1
 TextureImporter:
   fileIDToRecycleName:
-    21300000: yokai_jump_sprite_png_0
-    21300002: yokai_jump_sprite_png_1
+    21300000: yumi_jump_512_0
+    21300002: yumi_jump_512_1
+    21300004: yumi_jump_512_2
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -47,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 113
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -86,13 +87,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: yokai_jump_sprite_png_0
+      name: yumi_jump_512_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 256
-        width: 256
-        height: 256
+        y: 512
+        width: 512
+        height: 512
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -100,19 +101,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e50e6f43787e9844920ad164581d927
+      spriteID: 6e531f81f9673a447bc44338e7ee4b9c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: yokai_jump_sprite_png_1
+      name: yumi_jump_512_1
       rect:
         serializedVersion: 2
-        x: 256
-        y: 256
-        width: 256
-        height: 256
+        x: 512
+        y: 512
+        width: 512
+        height: 512
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -120,7 +121,27 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d2b25080640272349aae5c0e6a356ad3
+      spriteID: 6707a1aae7c654d488cd66e574476262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yumi_jump_512_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6bd2b0d1ca68d34aab9d01c28c4a63e
       vertices: []
       indices: 
       edges: []
@@ -128,7 +149,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: c67547184557c1a40b7ee246140dc001
+    spriteID: ed9eb39f78af7d4408906bd9d00ee888
     vertices: []
     indices: 
     edges: []
