@@ -18,7 +18,7 @@ using UnityEngine;
 public class GenericWindspellEffects : MonoBehaviour {
 
     private Rigidbody rb;
-    private Rigidbody actualWindSpell;
+   // private Rigidbody actualWindSpell;
     private Rigidbody windSpell;
 
     public float force = 10f;
@@ -29,7 +29,7 @@ public class GenericWindspellEffects : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         rb = this.gameObject.GetComponent<Rigidbody>();
-        actualWindSpell = GameObject.FindGameObjectWithTag("WindSpellAgent").GetComponent<Rigidbody>();
+        //actualWindSpell = GameObject.FindGameObjectWithTag("WindSpellAgent").GetComponent<Rigidbody>();
     }
 	
 	// Update is called once per frame

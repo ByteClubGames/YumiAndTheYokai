@@ -381,7 +381,7 @@ public class PlayerController : MonoBehaviour {
             RaycastHit hit;
 
             bool headCheckRaycastHit = Physics.Raycast(headCheckRay, Vector3.up, out hit, headCheck, platformMask);
-            print(headCheckRaycastHit);
+            //print(headCheckRaycastHit);
             Debug.DrawRay(headCheckRay, Vector3.up * headCheck, Color.blue);
 
 

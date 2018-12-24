@@ -52,7 +52,7 @@ public class WindSpellUse : MonoBehaviour
         player = GameObject.Find("Yumi");
         targets.addTarg(player.transform.position);
         windSpell = null;
-		this.GetComponent<TimeManager>().StartSlowDown (); // Time is slowed when spawner is here
+		//this.GetComponent<TimeManager>().StartSlowDown (); // Time is slowed when spawner is here
     }
 
 	// Update is called once per frame
@@ -76,7 +76,9 @@ public class WindSpellUse : MonoBehaviour
 
                 windspellAgent.SetDestination(new Vector3(p.x, p.y, 0f));
 
-                this.GetComponent<TimeManager>().StopSlowDown(); // return time to normal
+
+                //TODO fix time slowdown/ stop
+                //this.GetComponent<TimeManager>().StopSlowDown(); // return time to normal   
             }
         }
 		else if ((_isDone && drawMode )|| drawTimer.ElapsedMilliseconds > drawSeconds * 1000)
@@ -90,7 +92,7 @@ public class WindSpellUse : MonoBehaviour
                 windSpell = Instantiate(windSpellPrefab, targets.getTop(), Quaternion.identity); //spawn wind spell object @ player pos
                 windSpell.tag = "WindSpell";
                 windSpell.SendMessage("SetSpawner", gameObject);
-				this.GetComponent<TimeManager> ().StopSlowDown (); // return time to normal
+				//this.GetComponent<TimeManager> ().StopSlowDown (); // return time to normal
                 
 
             }
