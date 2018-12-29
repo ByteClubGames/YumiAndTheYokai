@@ -16,7 +16,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Checkpoint : MonoBehaviour
+public class CheckPoint : MonoBehaviour
 {
     private GameObject thisObj;								// An obj reference that will be populated with the obj this script is attatched to 
     private Vector3 checkpointPos = new Vector3(0, 0, 0);	// Initializing a Vector3 with base coords to be changed in Start() 
