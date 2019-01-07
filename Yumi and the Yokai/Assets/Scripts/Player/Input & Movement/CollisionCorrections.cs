@@ -157,11 +157,19 @@ public class CollisionCorrections : MonoBehaviour {
                     {
                         isOnSlope = true;
                     }
+                    else
+                    {
+                        //isOnSlope = false;
+                    }
 
                     if (rayLength < skinWidth + error)
                     {
                         break;
                     }
+                }
+                else
+                {
+                    //isOnSlope = false;
                 }
             }
         }
@@ -198,11 +206,19 @@ public class CollisionCorrections : MonoBehaviour {
                     {
                         isOnSlope = true;
                     }
+                    else
+                    {
+                        //isOnSlope = false;
+                    }
 
                     if (rayLength < skinWidth + error)
                     {
                         break;
                     }
+                }
+                else
+                {
+                    //isOnSlope = false;
                 }
             }
         }
