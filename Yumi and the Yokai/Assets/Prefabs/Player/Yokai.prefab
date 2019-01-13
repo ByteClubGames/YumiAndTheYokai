@@ -176,12 +176,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: 0
   gravity: -40
-  jumpSpeed: 4
+  jumpSpeed: 3
   headCheck: 1.1
-  horizontalSpeed: 12
+  horizontalSpeed: 8
   wallSlideSpeed: 5
   wallJumpXSpeed: 20
-  wallJumpYSpeed: 3
+  wallJumpYSpeed: 2.5
   wallJumpXDistance: 1
   maxClimbableSlope: 50
   fallBuffer: 0.2
