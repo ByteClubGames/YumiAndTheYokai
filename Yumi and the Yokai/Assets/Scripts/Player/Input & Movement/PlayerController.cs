@@ -256,7 +256,7 @@ public class PlayerController : MonoBehaviour {
         {
             wallJump = false;
             wallJumpActive = true;
-
+            animator.SetBool("Slide", false);
 
 
             if (!firstPassFlag)
@@ -264,16 +264,21 @@ public class PlayerController : MonoBehaviour {
                 firstPassFlag = true; // Flag used to make sure this block is only executed once per wall jump
                 jumpPos = this.transform.position;
                 targetPos = this.transform.position;
+                animator.SetBool("Jump", true);
 
                 if (isOnWallRight)
                 {
+                    ClearOnWall();
                     normalizedHorizontalSpeed = -1;
                     targetPos += new Vector3(-1f, 0f, 0f);
+                    spriteRenderer.flipX = (characterName == CharacterName.Yokai) ? true : false;
                 }
                 else if (isOnWallLeft)
                 {
+                    ClearOnWall();
                     normalizedHorizontalSpeed = 1;
                     targetPos += new Vector3(1f, 0f, 0f);
+                    spriteRenderer.flipX = (characterName == CharacterName.Yokai) ? false : true;
                 }
 
                 velocity.y = Mathf.Sqrt(2f * wallJumpYSpeed * -gravity);
@@ -282,6 +287,7 @@ public class PlayerController : MonoBehaviour {
             else
             {
                 velocity.y += gravity * Time.deltaTime;
+                animator.SetBool("Jump", false);
             }
 
             /* We want to continue our wall jump code, unless the player has wall jump a specific horizontal distance away from the wall.
@@ -333,6 +339,8 @@ public class PlayerController : MonoBehaviour {
                 //flip sprite|animation
                 velocity.y = wallSlideSpeed * -1 * Time.deltaTime * 10.0f;
                 isOnWallLeft = global::WallJump.StillOnWall(this, false, boxCollider, isGrounded, platformMask);
+                animator.SetBool("Jump", false);
+                animator.SetBool("Slide", true);
 
                 //if (wallJump)
                 //{
@@ -348,6 +356,8 @@ public class PlayerController : MonoBehaviour {
                 //flip sprite|animation
                 velocity.y = wallSlideSpeed * -1 * Time.deltaTime * 10.0f;
                 isOnWallRight = global::WallJump.StillOnWall(this, true, boxCollider, isGrounded, platformMask);
+                animator.SetBool("Jump", false);
+                animator.SetBool("Slide", true);
 
                 //if (wallJump)
                 //{
@@ -357,6 +367,10 @@ public class PlayerController : MonoBehaviour {
                 //    velocity.x = wallJumpXSpeed * -1.0f * Time.deltaTime * 100f;
                 //}
 
+            }
+            else
+            {
+                animator.SetBool("Slide", false);
             }
 
             //if (wallJumpActive)
@@ -375,7 +389,8 @@ public class PlayerController : MonoBehaviour {
                 //}
 
                 animator.SetBool("Run", true);
-                spriteRenderer.flipX = true;
+                spriteRenderer.flipX = (characterName == CharacterName.Yumi) ? true : false;
+                //spriteRenderer.flipX = true;
                 normalizedHorizontalSpeed = 1;
 
                 isOnWallLeft = false;
@@ -389,7 +404,7 @@ public class PlayerController : MonoBehaviour {
                 //}
 
                 animator.SetBool("Run", true);
-                spriteRenderer.flipX = false;
+                spriteRenderer.flipX = (characterName == CharacterName.Yumi) ? false : true;
                 normalizedHorizontalSpeed = -1;
 
                 isOnWallRight = false;
