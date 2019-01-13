@@ -70,7 +70,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1381446288312214}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -1.12, z: 0}
   m_LocalScale: {x: 0.44310454, y: 0.44310454, z: 0.44310454}
   m_Children: []
   m_Father: {fileID: 4677459353645124}
@@ -118,7 +118,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.28, y: 0.64}
+  m_Size: {x: 5.12, y: 5.12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -217,7 +217,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1722879200128792}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 19.35, y: 2.88, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -257,11 +257,12 @@ MonoBehaviour:
   jumpSpeed: 4.5
   headCheck: 1.1
   horizontalSpeed: 8
-  wallSlideSpeed: 2
-  wallJumpXSpeed: 6
-  wallJumpYSpeed: 8
+  wallSlideSpeed: 5
+  wallJumpXSpeed: 20
+  wallJumpYSpeed: 4
   wallJumpXDistance: 1
   maxClimbableSlope: 50
+  fallBuffer: 0.2
   skinWidth: 0.3
   shortHopCoefficient: 2
   horizontalRays: 10
@@ -269,7 +270,7 @@ MonoBehaviour:
   error: 0.001
   platformMask:
     serializedVersion: 2
-    m_Bits: 262144
+    m_Bits: 32768
   defaultAirBufferFrames: 5
   defaultGroundBufferFrames: 5
 --- !u!54 &54420025581821784
