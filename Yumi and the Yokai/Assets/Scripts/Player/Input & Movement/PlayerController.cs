@@ -37,6 +37,7 @@ public class PlayerController : MonoBehaviour {
     public float wallJumpYSpeed = 8f;
     public float wallJumpXDistance = 1f;
     public float maxClimbableSlope = 50f; //in degrees
+    public float fallBuffer = .2f; // Time in seconds before fall animation should play when falling
     public float skinWidth; // Acts as an inset start point on the collider for the Ray orgin points
     public float shortHopCoefficient = 2f;   //decides how snappy the shorthop will be
 
@@ -294,7 +295,7 @@ public class PlayerController : MonoBehaviour {
         }
         else
         {
-            AnimatorStateInfo currentStateInfo = animator.GetCurrentAnimatorStateInfo(0);
+            //AnimatorStateInfo currentStateInfo = animator.GetCurrentAnimatorStateInfo(0);
             firstPassFlag = false;
 
             if (airBufferFrames > 0) airBufferFrames--;
@@ -306,9 +307,26 @@ public class PlayerController : MonoBehaviour {
             {
                 velocity.y = 0;
                 shortHop = false;
+                animator.SetBool("Jump", false);
+                animator.SetBool("Land", true);
+                animator.SetBool("Fall", false);
+                Debug.Log("isGrounded == " + isGrounded);
 
                 groundBufferFrames = defaultGroundBufferFrames;
             }
+            else if(!isGrounded && velocity.y <= gravity * fallBuffer)
+            {
+                animator.SetBool("Land", false);
+                animator.SetBool("Fall", true);
+            }
+            else
+            {
+                animator.SetBool("Land", false);
+            }
+            
+            
+
+            
 
             if (isOnWallLeft)
             {
@@ -350,28 +368,35 @@ public class PlayerController : MonoBehaviour {
             /* The following selection decides the directioin of horizontal movement (right, left, none) */
             if (right && !isOnWallRight)
             {
-                if (!currentStateInfo.IsName("yokai_run"))
-                {
-                    spriteRenderer.flipX = false;
-                    animator.Play("yokai_run");
-                }
+                //if (!currentStateInfo.IsName("yokai_run"))
+                //{
+                //    spriteRenderer.flipX = false;
+                //    animator.Play("yokai_run");
+                //}
+
+                animator.SetBool("Run", true);
+                spriteRenderer.flipX = true;
                 normalizedHorizontalSpeed = 1;
 
                 isOnWallLeft = false;
             }
             else if (left && !isOnWallLeft)
             {
-                if (!currentStateInfo.IsName("yokai_run"))
-                {
-                    spriteRenderer.flipX = true;
-                    animator.Play("yokai_run");
-                }
+                //if (!currentStateInfo.IsName("yokai_run"))
+                //{
+                //    spriteRenderer.flipX = true;
+                //    animator.Play("yokai_run");
+                //}
+
+                animator.SetBool("Run", true);
+                spriteRenderer.flipX = false;
                 normalizedHorizontalSpeed = -1;
 
                 isOnWallRight = false;
             }
             else
             {
+                animator.SetBool("Run", false);
                 normalizedHorizontalSpeed = 0;
             }
 
@@ -400,6 +425,7 @@ public class PlayerController : MonoBehaviour {
 
                 isGrounded = false;
                 velocity.y = Mathf.Sqrt(2f * jumpSpeed * -gravity);
+                animator.SetBool("Jump", true);
             }
 
             if (!isGrounded && velocity.y > 0 && (shortHop || forcedShortHop))
@@ -434,21 +460,21 @@ public class PlayerController : MonoBehaviour {
                 groundBufferFrames = -1;
             }
 
-            if (characterName == CharacterName.Yokai)
-            {
-                if (!right && !left && !jump)
-                {
-                    animator.Play("yokai_idle");
-                }
-                if (jump)
-                {
-                    Debug.Log(jump);
-                }
-            }
-            if (characterName == CharacterName.Yumi)
-            {
-                animator.Play("");
-            }
+            //if (characterName == CharacterName.Yokai)
+            //{
+            //    if (!right && !left && !jump)
+            //    {
+            //        animator.Play("yokai_idle");
+            //    }
+            //    if (jump)
+            //    {
+            //        Debug.Log(jump);
+            //    }
+            //}
+            //if (characterName == CharacterName.Yumi)
+            //{
+            //    animator.Play("");
+            //}
 
             //Horizontal velocity
             velocity.x = Mathf.Lerp(velocity.x, normalizedHorizontalSpeed * horizontalSpeed, Time.deltaTime * 20f);
