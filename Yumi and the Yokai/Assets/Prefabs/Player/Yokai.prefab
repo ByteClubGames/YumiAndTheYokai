@@ -178,7 +178,7 @@ MonoBehaviour:
   gravity: -40
   jumpSpeed: 3
   headCheck: 1.1
-  horizontalSpeed: 8
+  horizontalSpeed: 10
   wallSlideSpeed: 5
   wallJumpXSpeed: 20
   wallJumpYSpeed: 2.5
