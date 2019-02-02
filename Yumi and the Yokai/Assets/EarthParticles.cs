@@ -16,7 +16,7 @@ public class EarthParticles : MonoBehaviour
     {
         //firstCollision = false;
         firstPressPos = Input.mousePosition;
-        Destroy(transform.parent.gameObject, destroyTime); //Destroy timer starts on creation 
+        Destroy(this.gameObject, destroyTime); //Destroy timer starts on creation 
     }
 
     // Update is called once per frame
