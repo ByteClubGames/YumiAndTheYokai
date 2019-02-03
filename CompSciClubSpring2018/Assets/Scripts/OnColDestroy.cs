@@ -21,6 +21,7 @@ public class OnColDestroy : MonoBehaviour {
         // This if statement will be used to identify player collisions
         if (other.gameObject.layer == LayerMask.NameToLayer("Player"))// Checks if the layer is under the Player layer
         {
+            // If parent of object is destroyed, then this code allows for the children to stay active
             this.transform.DetachChildren(); // Detaches the child objects from parents so that they wont be destroyed
             Destroy(this.gameObject); // Destroys the gameObject the script is attached to
             Destroy(other.gameObject); // Destorys the player object
@@ -32,7 +33,8 @@ public class OnColDestroy : MonoBehaviour {
         {
             this.transform.DetachChildren(); // Detaches the child objects from parents
             Destroy(this.gameObject); // Destroys the gameobject
-            Debug.Log(ReturnDirection(this.gameObject, other.gameObject)); // Gives the side on which the obj collided into
+            Debug.Log(ReturnDirection(this.gameObject, other.gameObject)); // Gives the side on which the obj collided into 
+            // Note: If object is taller than obect, retuns collision as top
         } 
     }
     //------------------------------------------------------------------------------------------------- 
@@ -47,6 +49,8 @@ public class OnColDestroy : MonoBehaviour {
         HitDirection hitDirection = HitDirection.None; // Sets up the hitDirection as none
         RaycastHit MyRayHit; // Initialize raycast
         Vector3 direction = (Object.transform.position - ObjectHit.transform.position).normalized;
+        Vector3 forward = (transform.TransformDirection(Vector3.forward) * 10); // Creates the direction of where the ray will appear and its length
+        Debug.DrawRay(transform.position, direction, Color.green); // Draws the ray
         Ray MyRay = new Ray(ObjectHit.transform.position, direction); // Will take the ObjectHit's positiion and direction
         if (Physics.Raycast(MyRay, out MyRayHit))
         {      
