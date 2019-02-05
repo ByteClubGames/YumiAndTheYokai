@@ -10,13 +10,15 @@ public class EarthParticles : MonoBehaviour
     //bool firstCollision;
     public int maxSpells = 3;
     public int destroyTime = 5;
+   // public Transform burst;
 
     // Start is called before the first frame update
     void Start()
     {
         //firstCollision = false;
         firstPressPos = Input.mousePosition;
-        Destroy(this.gameObject, destroyTime); //Destroy timer starts on creation 
+        Destroy(this.gameObject, destroyTime); //Destroy timer starts on creation
+        //Instantiate(burst);
     }
 
     // Update is called once per frame
@@ -25,6 +27,7 @@ public class EarthParticles : MonoBehaviour
         if (Input.GetMouseButtonUp(0))
         {
             grow = true;
+           
             #region LegacyCode
             //secondPressPos = Input.mousePosition;
             //calculate the difference between firstposition and second position
