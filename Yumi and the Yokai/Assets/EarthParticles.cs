@@ -1,4 +1,9 @@
-﻿
+﻿/* EarthParticles.cs
+ * Date Created: 1/14/19
+ * Last Edited: 2/4/19
+ * Programmer: Ivonne Lopez
+ * Description: Makes Particle GameObject destroy after 5 seconds    
+ */
 
 
 using UnityEngine;
