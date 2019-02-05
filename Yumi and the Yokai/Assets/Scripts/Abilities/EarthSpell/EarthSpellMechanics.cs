@@ -77,6 +77,8 @@ public class EarthSpellMechanics : MonoBehaviour
     {
         //Waits until IsGrowing returns true;
         yield return new WaitUntil(IsGrowing);
+        GameObject spawner = GameObject.Find("Earth Spell Spawner(Clone)");
+        //Vector3 normal = spawner.GetComponent<EarthSpellUse>().normalVector;
 
         #region LegacyCode
         //if (sizeNotSet)
@@ -91,10 +93,7 @@ public class EarthSpellMechanics : MonoBehaviour
             //stretches object in the Y (Z in terms of blender) direction
             gameObject.transform.localScale += new Vector3(0, 0, extendSpeed);
             //main_mat.mainTextureScale = new Vector2(original_scale.x, original_scale.y + extendSpeed);   //  <<----- HAVE KROSS LOOK AT THIS
-            #region LegacyCode
-            //moves the object along to accomidate for equal stretching on both sides
-            //gameObject.transform.Translate(0, (extendSpeed / 3f), 0);
-            #endregion
+         
             yield return null;
         //yield return new WaitForSeconds(extendSpeed / 10);
         }

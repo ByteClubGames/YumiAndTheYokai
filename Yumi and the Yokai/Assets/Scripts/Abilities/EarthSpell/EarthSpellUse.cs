@@ -31,6 +31,7 @@ public class EarthSpellUse : MonoBehaviour
     public float overlapRadius = .59F; // shpere to cover 1,1,1, cube
     public bool spellOverlap = false;
     public GameObject eSpell;
+    public GameObject particles; //IL
     public Vector3 playerinput = new Vector3(1, 1, 0); //gets player input
     public Vector3 normalVector;
     #endregion
@@ -89,6 +90,8 @@ public class EarthSpellUse : MonoBehaviour
                 if (!spellOverlap)
                 {                                                                      
                     Instantiate(eSpell, playerinput, Quaternion.FromToRotation(Vector3.up, yumiHit.normal));
+                    Instantiate(particles, playerinput, Quaternion.FromToRotation(Vector3.up, yumiHit.normal)); //IL
+
                 }
             }
         }
