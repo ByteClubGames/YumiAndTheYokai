@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovementStates : MonoBehaviour {
+public class YumiMovement : MonoBehaviour {
 
-    private Animator animator;
-    private SpriteRenderer spriteRenderer;
+    public Animator animator;
+    //public SpriteRenderer spriteRenderer;
 
 
 
