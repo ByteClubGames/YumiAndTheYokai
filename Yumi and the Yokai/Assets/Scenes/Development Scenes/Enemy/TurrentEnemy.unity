@@ -717,6 +717,7 @@ MonoBehaviour:
   projectileDamage: 1
   maxDistance: 100
   timeToDestroy: 0
+  animationHead: {fileID: 0}
 --- !u!50 &1127567924
 Rigidbody2D:
   serializedVersion: 4
@@ -805,6 +806,11 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114927345682508704, guid: cc282336f3093c04c86734a7572dd1b7,
+        type: 3}
+      propertyPath: animationHead
+      value: 
+      objectReference: {fileID: 2033965176}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc282336f3093c04c86734a7572dd1b7, type: 3}
 --- !u!1001 &1347278875
