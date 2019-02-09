@@ -1,15 +1,15 @@
 fileFormatVersion: 2
-guid: dc389442b5cd024489fcd2c5aed3d49d
+guid: 66f2f71f087c21740975459959fa08fc
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: Earth Spell Pillar Material
+    2100000: earthspelltexture__rockwall_colored_png
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Earth Spell Pillar
-    7400000: Take 001
+    4300000: Cube
+    7400000: Default Take
     9500000: //RootNode
   externalObjects: {}
   materials:
@@ -63,7 +63,7 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.01
+    previousCalculatedGlobalScale: 1
     hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
