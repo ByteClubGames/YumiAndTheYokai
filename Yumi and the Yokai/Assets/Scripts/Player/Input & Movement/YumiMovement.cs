@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class YumiMovement : MonoBehaviour {
-
+    /// <summary>
+    /// Includes all declarations for animator, sprite renderer, and integers for storing the
+    /// animator state name hashes.
+    /// </summary>
     #region Animation State Declarations
     private Animator anim;
     private SpriteRenderer spriteRenderer;

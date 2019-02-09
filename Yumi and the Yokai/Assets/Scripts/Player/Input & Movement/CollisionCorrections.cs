@@ -19,6 +19,72 @@ using UnityEngine;
 
 public class CollisionCorrections : MonoBehaviour {
 
+    private Transform transform;
+    private BoxCollider boxCollider;
+    private Vector3 TL; // Top Left corner of the box collider
+    private Vector3 TR; // Top Right corner of the box collider
+    private Vector3 BL; // Bottom Left corner of the box collider
+    private Vector3 BR; // Bottom Right corner of the box collider
+
+    private int numberVerticalRays;
+    private int numberHorizontalRays;
+
+    private LayerMask platformMask;
+
+    private float skinWidth;
+    private float headCheck;
+    private float maxClimbableSlope;
+    private float error;
+
+    /// <summary>
+    /// Constructor for the Collision Corrections class. This object holds data about the player's current position and the dimensions
+    /// of the player's box collider. It includes methods for checking for collisions in the direction of movement, and adjusting the
+    /// distance moved such to avoid clipping.
+    /// </summary>
+    /// <param name="player_transform">The transform of the player.</param>
+    /// <param name="box_collider">The box collider attached to the player.</param>
+    /// <param name="platform_mask">Layermask containing the layers that you want to avoid clipping through.</param>
+    /// <param name="number_of_vertical_rays">How many rays will be checking for the floor and roof.</param>
+    /// <param name="number_of_horizontal_rays">How many rays will be checking for the walls.</param>
+    /// <param name="skin_width">How long do the rays need to be when checking for collisions.</param>
+    /// <param name="head_check">Length of a ray used for checking for low hanging roofs.</param>
+    /// <param name="max_climbable_slope">How steep of a slope is too steep to walk on.</param>
+    /// <param name="collision_check_error">How much leeway to use when checking for collisions</param>
+    public CollisionCorrections(Transform player_transform, BoxCollider box_collider, LayerMask platform_mask, 
+        int number_of_vertical_rays, int number_of_horizontal_rays, float skin_width, float head_check,
+        float max_climbable_slope, float collision_check_error)
+    {
+        // Initialize all values named in constructor definition
+        transform = player_transform;
+        boxCollider = box_collider;
+        platformMask = platform_mask;
+        numberVerticalRays = number_of_vertical_rays;
+        numberHorizontalRays = number_of_horizontal_rays;
+        skinWidth = skin_width;
+        headCheck = head_check;
+        error = collision_check_error;
+
+        //Initialize the positions for corners of the box collider
+        RaycastStartPoints();
+    }
+
+    /// <summary>
+    /// Method that calculates the local distance-offset of each of the four corners of the player's
+    /// box collider.
+    /// </summary>
+    private void RaycastStartPoints()
+    {
+        var skinBounds = boxCollider.bounds;
+        skinBounds.Expand(-2f * skinWidth);
+
+        TL = new Vector3(skinBounds.min.x, skinBounds.max.y, 0f);
+        TR = new Vector3(skinBounds.max.x, skinBounds.max.y, 0f);
+        BL = new Vector3(skinBounds.min.x, skinBounds.min.y, 0f);
+        BR = new Vector3(skinBounds.max.x, skinBounds.min.y, 0f);
+    }
+    
+
+
     public static Vector3 HorizontalCollision(PlayerController playerController,Vector3 deltaMovement, BoxCollider boxCollider, Vector3 BL, Vector3 BR, 
         float transformHeight, float verticalRaySeparation, float maxClimbableSlope, float skinWidth, float error, int horizontalRays, 
         bool climbableSlope, bool isRight, bool isGrounded, LayerMask platformMask)
