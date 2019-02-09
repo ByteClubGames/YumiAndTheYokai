@@ -1077,6 +1077,11 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: f21d263c8e5d2e247a0e6ef8de982995, type: 2}
+    - target: {fileID: 114253129933996600, guid: 3ad63e45ffd903749b63a2922ec30694,
+        type: 3}
+      propertyPath: animationHead
+      value: 
+      objectReference: {fileID: 2033965176}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ad63e45ffd903749b63a2922ec30694, type: 3}
 --- !u!1 &1562672026
@@ -1293,6 +1298,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &2033965176 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 95281608406036950, guid: 3ad63e45ffd903749b63a2922ec30694,
+    type: 3}
+  m_PrefabInstance: {fileID: 1534193038}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2054768297
 GameObject:
   m_ObjectHideFlags: 0

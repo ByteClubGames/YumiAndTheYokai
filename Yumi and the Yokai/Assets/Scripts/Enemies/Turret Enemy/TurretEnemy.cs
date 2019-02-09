@@ -25,6 +25,7 @@ public class TurretEnemy : MonoBehaviour {
     public static Vector3 targetDirection;
     public Vector3 projectilePosition;
     public bool playerExit;
+    public Animator animationHead;
 
     public Quaternion GetHeadRotation()
     {
@@ -69,7 +70,8 @@ public class TurretEnemy : MonoBehaviour {
             targeter = null;
             this.transform.root.GetChild(0).gameObject.GetComponent<TurretProjectile>().IsVisible(false);
             playerExit = true;
-            if(playerExit == true)// When the player exits the turrents range its projectile is reset to its inital position.
+            animationHead.SetBool("shoot", false);
+            if (playerExit == true)// When the player exits the turrents range its projectile is reset to its inital position.
             {
                 this.transform.root.GetChild(0).gameObject.GetComponent<TurretProjectile>().OutOfRange(true);
             }
