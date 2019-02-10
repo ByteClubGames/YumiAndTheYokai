@@ -87,8 +87,20 @@ public class EarthSpellUse : MonoBehaviour
 
                 //Assuming no overlap, spawns the eSpell object into play in the direction of the normal vector
                 if (!spellOverlap)
-                {                                                                      
-                    Instantiate(eSpell, playerinput, Quaternion.FromToRotation(Vector3.up, yumiHit.normal));
+                {
+                    Debug.DrawRay(playerinput, 4 * yumiHit.normal, Color.black);
+                    Ray heightRayMiddle = new Ray(playerinput, 4 * yumiHit.normal);
+                    Vector3 playerinputleft = new Vector3(yumiHit.normal.x, yumiHit.normal.y, yumiHit.normal.z);
+                    Vector3 playerinputright = new Vector3(yumiHit.normal.x, yumiHit.normal.y, yumiHit.normal.z);
+
+                    Ray heightRayLeft = new Ray(playerinput, 4 * yumiHit.normal);
+                    Ray heightRayRight = new Ray(playerinput, 4 * yumiHit.normal);
+                    RaycastHit heightHit;
+                    if (Physics.Raycast(heightRay, out heightHit) {
+                        float scaler = heightHit.distance / 4;
+                    }
+
+                    Instantiate(eSpell, playerinput, Quaternion.FromToRotation(Vector3.up, yumiHit.normal), scalar);
                 }
             }
         }

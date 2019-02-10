@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 1285461395280216}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1.82}
   m_Children: []
   m_Father: {fileID: 4061819887904742}
   m_RootOrder: 0
@@ -50,7 +50,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1285461395280216}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -112,8 +112,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpells: 3
-  extendFactor: 2
-  extendSpeed: 0.912
   destroyTime: 5
 --- !u!64 &864799360973550718
 MeshCollider:
@@ -181,6 +179,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4061819887904742}
     m_Modifications:
+    - target: {fileID: 100000, guid: 66f2f71f087c21740975459959fa08fc, type: 3}
+      propertyPath: m_Name
+      value: earthspellpillar_v2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 66f2f71f087c21740975459959fa08fc, type: 3}
+      propertyPath: m_TagString
+      value: _Earth Spell Object
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 66f2f71f087c21740975459959fa08fc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 66f2f71f087c21740975459959fa08fc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
@@ -225,26 +235,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 66f2f71f087c21740975459959fa08fc, type: 3}
-      propertyPath: m_Name
-      value: earthspellpillar_v2
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 66f2f71f087c21740975459959fa08fc, type: 3}
-      propertyPath: m_TagString
-      value: _Earth Spell Object
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 66f2f71f087c21740975459959fa08fc, type: 3}
-      propertyPath: m_IsActive
+    - target: {fileID: 2300000, guid: 66f2f71f087c21740975459959fa08fc, type: 3}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9500000, guid: 66f2f71f087c21740975459959fa08fc, type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 92ae6fadb1c3473489a522919a8f9a54, type: 2}
-    - target: {fileID: 2300000, guid: 66f2f71f087c21740975459959fa08fc, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66f2f71f087c21740975459959fa08fc, type: 3}
 --- !u!1 &3527386876330474016 stripped
