@@ -16,6 +16,7 @@ public class YumiMovement : MonoBehaviour {
     private int jumpHash;
     private int landingHash;    
     private int runHash;
+    private int shortHopHash;
     private int takeDamageHash;
     private int turnHash;
     #endregion
@@ -104,27 +105,12 @@ public class YumiMovement : MonoBehaviour {
     // Use this for initialization
     void Start () {
         PrepareAnimatorAndAnimationStates();
-        
+        PrepareCollisionCorrector();        
     }
 
-    /// <summary>
-    /// Initializes the playerTransform and playerBoxCollider, then passes them into a constructor for the collsion corrector object.
-    /// This object will handle checks for the player colliding with platforms. If collisions exist, it will adjust the
-    /// player's movement so that it does not clip into the platform.
-    /// </summary>
-    void PrepareCollisionCorrector()
-    {
-        playerTransform = GetComponent<Transform>();
-        playerBoxCollider = GetComponent<BoxCollider>();
-        collision_corrector = new CollisionCorrections(playerTransform, playerBoxCollider, platformMask, verticalRays,
-            horizontalRays, skinWidth, headCheck, maxClimbableSlope, error);
-    }
+    
 	
-	// Update is called once per frame
-	void Update () {
-		
 
-	}
 
     private void FixedUpdate()
     {
@@ -139,7 +125,7 @@ public class YumiMovement : MonoBehaviour {
         StateProcesses(anim.GetCurrentAnimatorStateInfo(0));
 
 
-
+        Move(velocity * Time.deltaTime);
     }
 
     /// <summary>
@@ -172,9 +158,42 @@ public class YumiMovement : MonoBehaviour {
         velocity.y += gravity * Time.deltaTime;
     }
 
-    void Move(float current_velocity)
+    void CheckCollisionFlags()
     {
 
+    }
+
+    /// <summary>
+    /// Translates the player transform in the proposed direction of movement after adjusting that movement vector
+    /// to avoid clipping. 
+    /// </summary>
+    /// <param name="deltaMovement">The vector corresponding to the movement the player would like to make
+    /// during this frame.</param>
+    void Move(Vector3 deltaMovement)
+    {
+
+        if(deltaMovement.y < 0f)
+        {
+            deltaMovement = collision_corrector.VerticalSlopeDetection(deltaMovement);
+        }
+
+        if(deltaMovement.x != 0f)
+        {
+            deltaMovement = collision_corrector.HorizontalCollision(deltaMovement);
+        }
+
+        if(deltaMovement.y != 0f)
+        {
+            deltaMovement = collision_corrector.VerticalCollision(deltaMovement);
+        }
+
+        deltaMovement.z = 0f;
+        playerTransform.Translate(deltaMovement, Space.World);
+
+        if (Time.deltaTime > 0f)
+        {
+            velocity = deltaMovement / Time.deltaTime;
+        }            
     }
 
     /// <summary>
@@ -197,13 +216,14 @@ public class YumiMovement : MonoBehaviour {
         int jumpState = jumpHash;
         int landingState = landingHash;
         int runState = runHash;
+        int shortHopState = shortHopHash;
         int takeDamageState = takeDamageHash;
         int turnState = turnHash;
         int currentStateHash = current_state_info.shortNameHash;
 
         if(currentStateHash == deathState)
         {
-            velocity.y = 0;
+            velocity.y = 0f;
         }
         else if(currentStateHash == fallHash)
         {
@@ -211,19 +231,23 @@ public class YumiMovement : MonoBehaviour {
         }
         else if (currentStateHash == idleHash)
         {
-            velocity.y = 0;
+            velocity.y = 0f;
         }
         else if (currentStateHash == jumpHash)
         {
-
+            velocity.y = Mathf.Sqrt(2f * jumpSpeed * -gravity);
         }
         else if (currentStateHash == landingHash)
         {
-            velocity.y = 0;
+            velocity.y = 0f;
         }
         else if (currentStateHash == runHash)
         {
-
+            velocity.y = 0f;
+        }
+        else if(currentStateHash == shortHopHash)
+        {
+            velocity.y = velocity.y / shortHopCoefficient;
         }
         else if (currentStateHash == takeDamageHash)
         {
@@ -252,6 +276,19 @@ public class YumiMovement : MonoBehaviour {
     }
 
     /// <summary>
+    /// Initializes the playerTransform and playerBoxCollider, then passes them into a constructor for the collsion corrector object.
+    /// This object will handle checks for the player colliding with platforms. If collisions exist, it will adjust the
+    /// player's movement so that it does not clip into the platform.
+    /// </summary>
+    void PrepareCollisionCorrector()
+    {
+        playerTransform = GetComponent<Transform>();
+        playerBoxCollider = GetComponent<BoxCollider>();
+        collision_corrector = new CollisionCorrections(playerTransform, playerBoxCollider, platformMask, verticalRays,
+            horizontalRays, skinWidth, headCheck, maxClimbableSlope, error);
+    }
+
+    /// <summary>
     /// Calculates an integer hash for the name strings of each of the animation states. These integers allow for a 
     /// very fast comparison for which animation state you are in. 
     /// </summary>
@@ -263,6 +300,7 @@ public class YumiMovement : MonoBehaviour {
         jumpHash = Animator.StringToHash("yumiJump");
         landingHash = Animator.StringToHash("yumiLanding");
         runHash = Animator.StringToHash("yumiRun");
+        shortHopHash = Animator.StringToHash("yumiShortHop");
         takeDamageHash = Animator.StringToHash("yumiTakeDamage");
         turnHash = Animator.StringToHash("yumiTurn");
     }

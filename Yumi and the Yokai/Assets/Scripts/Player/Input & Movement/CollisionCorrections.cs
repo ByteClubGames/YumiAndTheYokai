@@ -117,7 +117,7 @@ public class CollisionCorrections : MonoBehaviour {
         Debug.DrawRay(headCheckRay, Vector3.up * headCheck, Color.blue);
         return headCheckRaycastHit;
     }
-    
+        
     /// <summary>
     /// Calculates the height and width of the transform
     /// </summary>

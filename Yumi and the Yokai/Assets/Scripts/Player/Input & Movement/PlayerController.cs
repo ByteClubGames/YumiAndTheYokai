@@ -508,6 +508,7 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
+    
     public void Move(Vector3 deltaMovement)
     {
         /* Reset of collsion flags for detecting the ground */
