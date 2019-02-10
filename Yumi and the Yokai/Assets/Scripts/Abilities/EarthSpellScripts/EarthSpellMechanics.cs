@@ -24,18 +24,18 @@ using UnityEngine;
 public class EarthSpellMechanics : MonoBehaviour
 {
     #region Global Variables
-    private Vector2 firstPressPos;
-    private Vector2 secondPressPos;
+    private Vector2 mousePos;
     private bool grow = false;
     private Collision col;
     private IEnumerator co;
     public int maxSpells = 3;
-    public float extendFactor = 25f;
-    public float extendSpeed = .1f;
+    public float extendFactor = 2f;
+    public float extendSpeed = .912f;
     public int destroyTime = 5;
     bool firstCollision;
     #region LegacyCode
     //bool sizeNotSet = true;
+    //private Vector2 secondPressPos;
     //private float deltaX = 0f, deltaY = 0f;
     #endregion
     #endregion
@@ -43,7 +43,7 @@ public class EarthSpellMechanics : MonoBehaviour
     private void Start()
     {
         firstCollision = false;
-        firstPressPos = Input.mousePosition;
+        mousePos = Input.mousePosition;
         co = Grow(extendSpeed);
         StartCoroutine(co);
         Destroy(transform.parent.gameObject, destroyTime); //Destroy timer starts on creation
@@ -90,7 +90,7 @@ public class EarthSpellMechanics : MonoBehaviour
         {
             //stretches object in the Y (Z in terms of blender) direction
             gameObject.transform.localScale += new Vector3(0, 0, extendSpeed);
-            //main_mat.mainTextureScale = new Vector2(original_scale.x, original_scale.y + extendSpeed);   //  <<----- HAVE KROSS LOOK AT THIS
+            //main_mat.mainTextureScale = new Vector2(original_scale.x, original_scale.y + extendSpeed);
             #region LegacyCode
             //moves the object along to accomidate for equal stretching on both sides
             //gameObject.transform.Translate(0, (extendSpeed / 3f), 0);
@@ -180,22 +180,25 @@ public class EarthSpellMechanics : MonoBehaviour
     #region Collision Check to stop growth - ***Currently incomplete***
     private void OnCollisionEnter(Collision col)
     {
+        StopCoroutine(co);
+        print("hit some shit");
         //The earth spell growth can be stopped by adding more tags to this if statement
         if (col.collider.gameObject.layer == LayerMask.NameToLayer("Platforms")
-            || col.collider.gameObject.CompareTag("Earth Spell Object"))
+            || col.collider.gameObject.CompareTag("_Earth Spell Object"))
         {
+            StopCoroutine(co);
 
             // bool firstCollision is instantiated in the Start() function
             //This is used to negate the initial collision of instantiating the earth spell inside of an earth block
-            if (!firstCollision)
-            {
-                firstCollision = true;
-            }
-            else
-            {
-                //print("Stop Cooroutine");
-                StopCoroutine(co);
-            }
+            //if (!firstCollision)
+            //{
+            //    firstCollision = true;
+            //}
+            //else
+            //{
+            //    //print("Stop Cooroutine");
+            //    StopCoroutine(co);
+            //}
 
         }
     }

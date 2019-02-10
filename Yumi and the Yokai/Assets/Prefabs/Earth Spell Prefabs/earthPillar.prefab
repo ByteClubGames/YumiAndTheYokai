@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: 23050677947731898}
   - component: {fileID: 95594772776321014}
   - component: {fileID: 114508903348556540}
-  - component: {fileID: 65285906193789870}
+  - component: {fileID: 864799360973550718}
   m_Layer: 15
   m_Name: earthspellpillar
-  m_TagString: Untagged
+  m_TagString: _Earth Spell Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -50,7 +50,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1285461395280216}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -112,11 +112,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpells: 3
-  extendFactor: 6
-  extendSpeed: 0.3
+  extendFactor: 2
+  extendSpeed: 0.912
   destroyTime: 5
---- !u!65 &65285906193789870
-BoxCollider:
+--- !u!64 &864799360973550718
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -125,9 +125,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.475528, y: 2.4755285, z: 5.7097435}
-  m_Center: {x: 0, y: 4.0570158e-14, z: 2.854872}
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: d69a6fccef329b3458e5bd7e49df3cf0, type: 3}
 --- !u!1 &1740868536000396
 GameObject:
   m_ObjectHideFlags: 0
@@ -137,7 +138,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4061819887904742}
-  - component: {fileID: 65783871355614654}
   m_Layer: 15
   m_Name: earthPillar
   m_TagString: Earth Spell Object
@@ -161,19 +161,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &65783871355614654
+--- !u!65 &9049641620448022753
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1740868536000396}
+  m_GameObject: {fileID: 3527386876330474016}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2.870112, y: 2.8701122, z: 1.9473}
+  m_Center: {x: 0, y: 0, z: -0.028775811}
 --- !u!1001 &3527386876330441856
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -181,10 +181,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4061819887904742}
     m_Modifications:
-    - target: {fileID: 100000, guid: 66f2f71f087c21740975459959fa08fc, type: 3}
-      propertyPath: m_Name
-      value: earthspellpillar_v2
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 66f2f71f087c21740975459959fa08fc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
@@ -229,12 +225,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 66f2f71f087c21740975459959fa08fc, type: 3}
+      propertyPath: m_Name
+      value: earthspellpillar_v2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 66f2f71f087c21740975459959fa08fc, type: 3}
+      propertyPath: m_TagString
+      value: _Earth Spell Object
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 66f2f71f087c21740975459959fa08fc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9500000, guid: 66f2f71f087c21740975459959fa08fc, type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 92ae6fadb1c3473489a522919a8f9a54, type: 2}
+    - target: {fileID: 2300000, guid: 66f2f71f087c21740975459959fa08fc, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66f2f71f087c21740975459959fa08fc, type: 3}
+--- !u!1 &3527386876330474016 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 66f2f71f087c21740975459959fa08fc,
+    type: 3}
+  m_PrefabInstance: {fileID: 3527386876330441856}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3527386876330305024 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 66f2f71f087c21740975459959fa08fc,

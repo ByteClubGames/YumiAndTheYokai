@@ -28,7 +28,7 @@ public class EarthSpellUse : MonoBehaviour
 {
     #region Global Variables
     private Plane zPlane = new Plane(new Vector3(0, 0, -1), new Vector3(0, 0, 0)); //plane to see where ray cast from camera hits
-    public float overlapRadius = .59F; // shpere to cover 1,1,1, cube
+    public float overlapRadius = 0.65F; // shpere to cover 1,1,1, cube
     public bool spellOverlap = false;
     public GameObject eSpell;
     public Vector3 playerinput = new Vector3(1, 1, 0); //gets player input
@@ -77,7 +77,7 @@ public class EarthSpellUse : MonoBehaviour
                 spellOverlap = false;
                 for (int i = 0; i < hitColliders.Length; i++)
                 {
-                    if (hitColliders[i].tag == "Earth Spell Object")
+                    if (hitColliders[i].tag == "_Earth Spell Object")
                     {
                         print("Overlap");
                         spellOverlap = true;
