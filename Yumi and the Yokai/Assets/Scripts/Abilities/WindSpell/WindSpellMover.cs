@@ -1,7 +1,7 @@
 ﻿/* WindSpellMover.cs
  * Date Created: 5/08/18
- * Last Edited: 5/19/18
- * Programmer: Jack Bruce and Evanito
+ * Last Edited: 2/9/2019
+ * Programmer: Jack Bruce and Evanito and Darrell Wong
  * Description: Moves 'WindSpell' obj on desired path
  *  - WindSpellSpawner will populate targetarray
  *  - once activated WindSpellUse will pass the target LinkLis to WindSpellMover
@@ -12,34 +12,46 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WindSpellMover : MonoBehaviour {
+public class WindSpellMover : MonoBehaviour
+{
 
-	public float speed = 10;
+    public float speed = 10;
 
-	private Vector3[] wsTargets;
-	private Vector3 nextPos;
-	private int current;
-	private int wsTargetsSize;
-	private string wsSpawnerName = "WindSpellSpawner(Clone)"; //had to make this dynamic for instantiated prefab names
+    private Vector3[] wsTargets;
+    private Vector3 nextPos;
+    private int current;
+    private int wsTargetsSize;
+    private string wsSpawnerName = "WindSpellSpawner(Clone)"; //had to make this dynamic for instantiated prefab names
     private GameObject spawnerObj;
-    public float velocity;
+    private Vector3 velocity = new Vector3(-1, -1, -1);
     private Rigidbody rb;
     private Vector3 lastPos;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
         SetSpawner(GameObject.Find(wsSpawnerName));
-		wsTargets = spawnerObj.GetComponent<WindSpellUse>().GetTargets();
+        wsTargets = spawnerObj.GetComponent<WindSpellUse>().GetTargets();
         wsTargetsSize = wsTargets.Length;
         NoiseReduction(wsTargets);
         current = 0;
-	}
+
+        rb = this.GetComponent<Rigidbody>();
+    }
 
     private void OnTriggerEnter(Collider collision)
     {
-        if (!collision.gameObject.CompareTag("WindSpellTrigger") && collision.gameObject.name != "Yumi") {
+        velocity.x = (rb.position.x - lastPos.x) * 10f;
+        velocity.y = (rb.position.y - lastPos.y) * 10f;
+        if (!collision.gameObject.CompareTag("WindSpellTrigger") && collision.gameObject.name != "Yumi" && collision.gameObject.name != "PlayerDetection")
+        {
             spawnerObj.GetComponent<WindSpellUse>().CleanUp();
         }
+    }
+
+    public Vector3 getVelocity()
+    {
+        return velocity;
     }
 
     private void SetSpawner(GameObject spawner)
@@ -48,10 +60,12 @@ public class WindSpellMover : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void FixedUpdate () {
-        rb = this.GetComponent<Rigidbody>();
+    void FixedUpdate()
+    {
 
-        velocity = (rb.position.x - lastPos.x) * 30f;
+
+
+        //print("(drawn) windspell velocity: " + getVelocity());
         lastPos = rb.position;
 
         if (transform.position == wsTargets[wsTargetsSize - 1])
@@ -78,8 +92,8 @@ public class WindSpellMover : MonoBehaviour {
         {
             current++; // obj reached, move to the next obj
         }
-		
-	}
+
+    }
 
     private bool isZero(Vector3 inpos)
     {

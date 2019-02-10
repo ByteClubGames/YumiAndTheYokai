@@ -35,10 +35,19 @@ public class WindSpellAgent : MonoBehaviour {
             {
                 if (!agent.hasPath || agent.velocity.sqrMagnitude == 0f)
                 {
-                    spawnerObj.GetComponent<WindSpellUse>().CleanUp();
+                    //spawnerObj.GetComponent<WindSpellUse>().CleanUp();
                     Destroy(gameObject);
                 }
             }
+        }
+    }
+
+    private void OnTriggerEnter(Collider collision)
+    {
+        if (!collision.gameObject.CompareTag("WindSpellTrigger") && collision.gameObject.name != "Yumi" && collision.gameObject.name != "PlayerDetection")
+        {
+            //spawnerObj.GetComponent<WindSpellUse>().CleanUp();
+            Destroy(gameObject);
         }
     }
 

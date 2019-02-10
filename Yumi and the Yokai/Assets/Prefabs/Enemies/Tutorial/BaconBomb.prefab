@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 65719233420304132}
   - component: {fileID: 136143811158189426}
   - component: {fileID: 114078738253068274}
+  - component: {fileID: 1761126355100528554}
   - component: {fileID: 54750904551456248}
   m_Layer: 0
   m_Name: BaconBomb
@@ -90,6 +91,20 @@ MonoBehaviour:
   canChainExplode: 1
   pig_explosion: {fileID: 1417538608000086, guid: f4a124cdb9e2f804785b6ad13c14fb97,
     type: 3}
+--- !u!114 &1761126355100528554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1711349034853890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d9ea221e34e6b540ae35c7fde04926b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pushTime: 100
+  pushSpeed: 5
 --- !u!54 &54750904551456248
 Rigidbody:
   m_ObjectHideFlags: 0
