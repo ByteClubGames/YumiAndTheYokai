@@ -443,6 +443,8 @@ public class PlayerController : MonoBehaviour {
                 animator.SetBool("Jump", true);
             }
 
+            
+
             if (!isGrounded && velocity.y > 0 && (shortHop || forcedShortHop))
             {
                 shortHop = false;

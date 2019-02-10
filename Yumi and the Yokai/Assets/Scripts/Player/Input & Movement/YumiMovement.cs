@@ -20,6 +20,12 @@ public class YumiMovement : MonoBehaviour {
     private int turnHash;
     #endregion
 
+    //Declaration for object that will adjust movement when colliding
+    private CollisionCorrections collision_corrector;
+    private Transform playerTransform;
+    private BoxCollider playerBoxCollider;
+
+
     [Header("Physics/ Player Attributes")]
     public float gravity = -25f; // Negative input value
     public float fallBuffer = .2f; // Time in seconds before fall animation should play when falling 
@@ -82,15 +88,15 @@ public class YumiMovement : MonoBehaviour {
         jump = true;
     }
 
-    public void CallShortHop()
-    {
-        if (airBufferFrames > 0 && velocity.y < 0)  //when jump is released while still falling it will force a short hop. without this, it would result in a full jump
-        {
-            forcedShortHop = true;
-        }
-        shortHop = true;
+    //public void CallShortHop()
+    //{
+    //    if (airBufferFrames > 0 && velocity.y < 0)  //when jump is released while still falling it will force a short hop. without this, it would result in a full jump
+    //    {
+    //        forcedShortHop = true;
+    //    }
+    //    shortHop = true;
 
-    }
+    //}
 
 
 
@@ -98,17 +104,85 @@ public class YumiMovement : MonoBehaviour {
     // Use this for initialization
     void Start () {
         PrepareAnimatorAndAnimationStates();
+        
+    }
 
+    /// <summary>
+    /// Initializes the playerTransform and playerBoxCollider, then passes them into a constructor for the collsion corrector object.
+    /// This object will handle checks for the player colliding with platforms. If collisions exist, it will adjust the
+    /// player's movement so that it does not clip into the platform.
+    /// </summary>
+    void PrepareCollisionCorrector()
+    {
+        playerTransform = GetComponent<Transform>();
+        playerBoxCollider = GetComponent<BoxCollider>();
+        collision_corrector = new CollisionCorrections(playerTransform, playerBoxCollider, platformMask, verticalRays,
+            horizontalRays, skinWidth, headCheck, maxClimbableSlope, error);
     }
 	
 	// Update is called once per frame
 	void Update () {
 		
+
 	}
 
     private void FixedUpdate()
     {
-        
+        if (airBufferFrames > 0) airBufferFrames--;
+        if (groundBufferFrames > 0) groundBufferFrames--;
+
+        SetHorizontalDirection();
+
+        ApplyHorizontalMovement();
+
+
+        StateProcesses(anim.GetCurrentAnimatorStateInfo(0));
+
+
+
+    }
+
+    /// <summary>
+    /// Sets the direction that the player should be moving on the horizontal axis, and flips the sprite to the
+    /// given direction of movement.
+    /// </summary>
+    void SetHorizontalDirection()
+    {
+        if (right)
+        {
+            normalizedHorizontalSpeed = 1f;
+            spriteRenderer.flipX = true;
+        }
+        else if (left)
+        {
+            normalizedHorizontalSpeed = -1f;
+            spriteRenderer.flipX = false;
+        }
+        else
+        {
+            normalizedHorizontalSpeed = 0f;
+        }
+    }
+
+    /// <summary>
+    /// Adjusts your vertical velocity as if the force of gravity was acting downward against the object.
+    /// </summary>
+    void ApplyGravity()
+    {
+        velocity.y += gravity * Time.deltaTime;
+    }
+
+    void Move(float current_velocity)
+    {
+
+    }
+
+    /// <summary>
+    /// Gives the player a velocity in the direction of movement.
+    /// </summary>
+    void ApplyHorizontalMovement()
+    {
+        velocity.x = Mathf.Lerp(velocity.x, normalizedHorizontalSpeed * horizontalSpeed, Time.deltaTime * 20f);
     }
 
     /// <summary>

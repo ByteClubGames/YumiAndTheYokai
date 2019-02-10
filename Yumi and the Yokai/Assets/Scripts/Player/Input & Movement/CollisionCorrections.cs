@@ -103,6 +103,20 @@ public class CollisionCorrections : MonoBehaviour {
         BL = new Vector3(skinBounds.min.x, skinBounds.min.y, 0f);
         BR = new Vector3(skinBounds.max.x, skinBounds.min.y, 0f);
     }
+
+    /// <summary>
+    /// Returns true if the roof is too low for the player to jump.
+    /// </summary>
+    /// <returns></returns>
+    public bool CheckForJumpSpace()
+    {
+        Vector3 headCheckRay = new Vector3(((TR + TL) / 2).x, this.gameObject.transform.position.y, 0f);
+        RaycastHit hit;
+
+        bool headCheckRaycastHit = Physics.Raycast(headCheckRay, Vector3.up, out hit, headCheck, platformMask);        
+        Debug.DrawRay(headCheckRay, Vector3.up * headCheck, Color.blue);
+        return headCheckRaycastHit;
+    }
     
     /// <summary>
     /// Calculates the height and width of the transform
