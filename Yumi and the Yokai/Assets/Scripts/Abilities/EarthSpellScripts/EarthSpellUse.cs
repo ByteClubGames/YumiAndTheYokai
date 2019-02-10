@@ -97,13 +97,13 @@ public class EarthSpellUse : MonoBehaviour
                     //Ray heightRayLeft = new Ray(playerinput, 4 * yumiHit.normal);
                     //Ray heightRayRight = new Ray(playerinput, 4 * yumiHit.normal);
 
-                    if (Physics.Raycast(heightRay, out heightHit))
+                    if (Physics.Raycast(heightRay, out heightHit) && heightHit.distance < 4)
                     {
                         scalar = heightHit.distance / 4;
                     }
                     else scalar = 1;
 
-                    scalar = 1 - scalar;
+                    scalar = 1 - Mathf.Abs(scalar);
                     var earthPillar = Instantiate(eSpell, playerinput, Quaternion.FromToRotation(Vector3.up, yumiHit.normal));
 
                     earthPillar.GetComponentInChildren<EarthSpellMechanics>().Initialize(scalar);
