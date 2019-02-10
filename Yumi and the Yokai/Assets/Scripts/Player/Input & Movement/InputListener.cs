@@ -13,24 +13,24 @@ using UnityEngine;
 
 public class InputListener : MonoBehaviour
 {
-    private YumiMovement yumi;
-    private PlayerController yokai;
+    private YumiMovement yumi_movement_script;
+    //private PlayerController yokai;
     //private  activePlayer; // Specifies which game object the movement is being called on (Yumi or Yokai)
     private YokaiSwitcher switcher; // Script responsible for spawning and deleting the Yokai
     private SpellCasting spellcaster;
     private VisibilityController invisibleObjects;
     private bool yumiActive; // Flag for if the human is currently active
 
-    struct activePlayer
-    {
-        private YumiMovement yumi;
-        private PlayerController yokai;
-    }
+    //struct activePlayer
+    //{
+    //    private YumiMovement yumi;
+    //    private PlayerController yokai;
+    //}
 
 
     void Start()
     {
-        yumi = GameObject.Find("Yumi").GetComponent<YumiMovement>();
+        yumi_movement_script = GameObject.Find("Yumi").GetComponent<YumiMovement>();
         switcher = GameObject.Find("Yumi").GetComponentInChildren<YokaiSwitcher>();
         spellcaster = GameObject.Find("Yumi").GetComponentInChildren<SpellCasting>(); //You will need a gameObject attached to Yumi called SpellAbilities. On that object, attach the script SpellCasting and the spell spawner objects to that script.
         invisibleObjects = GameObject.Find("SceneDirector").GetComponentInChildren<VisibilityController>();
@@ -43,60 +43,60 @@ public class InputListener : MonoBehaviour
     void Update()
     {
         //activePlayer = yumiActive ? yumi : yokai; // Choose which character to call movement methods on
-                                                   //Debug.Log(activePlayer + " is now active");
+        //Debug.Log(activePlayer + " is now active");
 
-        //if ((Input.GetKey("a") || Input.GetKey("left")) && (Input.GetKey("d") || Input.GetKey("right")))
-        //{
-        //    activePlayer.CallLeft(false);
-        //    activePlayer.CallRight(false);
-        //}
-        //else if (Input.GetKey("a") || Input.GetKey("left"))
-        //{
-        //    activePlayer.CallLeft(true);
-        //    activePlayer.CallRight(false);
-        //    switcher.SetSpawnOffset(false); // If Yokai is spawned, do so on the left side of human
-        //}
-        //else if (Input.GetKey("d") || Input.GetKey("right"))
-        //{
-        //    activePlayer.CallLeft(false);
-        //    activePlayer.CallRight(true);
-        //    switcher.SetSpawnOffset(true); // If Yokai is spawned, do so on the right side of human
-        //}
-        //else
-        //{
-        //    activePlayer.CallLeft(false);
-        //    activePlayer.CallRight(false);
-        //}
+        if ((Input.GetKey("a") || Input.GetKey("left")) && (Input.GetKey("d") || Input.GetKey("right")))
+        {
+            yumi_movement_script.CallLeft(false);
+            yumi_movement_script.CallRight(false);
+        }
+        else if (Input.GetKey("a") || Input.GetKey("left"))
+        {
+            yumi_movement_script.CallLeft(true);
+            yumi_movement_script.CallRight(false);
+            switcher.SetSpawnOffset(false); // If Yokai is spawned, do so on the left side of human
+        }
+        else if (Input.GetKey("d") || Input.GetKey("right"))
+        {
+            yumi_movement_script.CallLeft(false);
+            yumi_movement_script.CallRight(true);
+            switcher.SetSpawnOffset(true); // If Yokai is spawned, do so on the right side of human
+        }
+        else
+        {
+            yumi_movement_script.CallLeft(false);
+            yumi_movement_script.CallRight(false);
+        }
 
-        //// Jumping
-        //if (Input.GetKeyDown("w") || Input.GetKeyDown("up") || Input.GetKeyDown("space"))
-        //{
-        //    activePlayer.CallJump();
-        //}
+        // Jumping
+        if (Input.GetKeyDown("w") || Input.GetKeyDown("up") || Input.GetKeyDown("space"))
+        {
+            yumi_movement_script.CallJump();
+        }
 
-        //if (Input.GetKeyUp("w") || Input.GetKeyUp("up") || Input.GetKeyUp("space"))
-        //{
-        //    activePlayer.CallShortHop();
-        //}
+        if (Input.GetKeyUp("w") || Input.GetKeyUp("up") || Input.GetKeyUp("space"))
+        {
+            yumi_movement_script.CallShortHop();
+        }
 
-        //// Character Swap
-        //if (Input.GetKeyDown("f")) //Updated the mapping to "f" to be in line with most other games. 1-3 will be for spells. -Daniel Jaffe
-        //{
-        //    if (GameObject.Find("Yokai(Clone)") == null)
-        //    {
-        //        switcher.SpawnYokai();
-        //        invisibleObjects.SetVisible();
-        //        yokai = GameObject.Find("Yokai(Clone)").GetComponent<PlayerController>();                
-        //        activePlayer.ClearCalls();
-        //        SetYumiActive(false);                
-        //    }
-        //    else
-        //    {
-        //        switcher.DeleteYokai(GameObject.Find("Yokai(Clone)"));
-        //        invisibleObjects.SetInvisible();
-        //        SetYumiActive(true);
-        //    }
-        //}
+        // Character Swap
+        if (Input.GetKeyDown("f")) //Updated the mapping to "f" to be in line with most other games. 1-3 will be for spells. -Daniel Jaffe
+        {
+            if (GameObject.Find("Yokai(Clone)") == null)
+            {
+                switcher.SpawnYokai();
+                invisibleObjects.SetVisible();
+                //yokai = GameObject.Find("Yokai(Clone)").GetComponent<PlayerController>();
+                //activePlayer.ClearCalls();
+                SetYumiActive(false);
+            }
+            else
+            {
+                switcher.DeleteYokai(GameObject.Find("Yokai(Clone)"));
+                invisibleObjects.SetInvisible();
+                SetYumiActive(true);
+            }
+        }
 
         // Spell Casting!!! (Finally-- lol)
         if (Input.GetKeyDown("1") && yumiActive) //Press 1 and start the earth spell

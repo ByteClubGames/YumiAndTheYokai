@@ -17,9 +17,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CollisionCorrections : MonoBehaviour {
+public class CollisionCorrections: MonoBehaviour{
 
-    private Transform transform;
+    private Transform player_transform;
     private BoxCollider boxCollider;
     private Vector3 TL; // Top Left corner of the box collider
     private Vector3 TR; // Top Right corner of the box collider
@@ -68,7 +68,7 @@ public class CollisionCorrections : MonoBehaviour {
         float max_climbable_slope, float collision_check_error)
     {
         // Initialize all values named in constructor definition
-        transform = player_transform;
+        this.player_transform = player_transform;
         boxCollider = box_collider;
         platformMask = platform_mask;
         numberVerticalRays = number_of_vertical_rays;
@@ -110,7 +110,7 @@ public class CollisionCorrections : MonoBehaviour {
     /// <returns></returns>
     public bool CheckForJumpSpace()
     {
-        Vector3 headCheckRay = new Vector3(((TR + TL) / 2).x, this.gameObject.transform.position.y, 0f);
+        Vector3 headCheckRay = new Vector3(((TR + TL) / 2).x, player_transform.position.y, 0f);
         RaycastHit hit;
 
         bool headCheckRaycastHit = Physics.Raycast(headCheckRay, Vector3.up, out hit, headCheck, platformMask);        
@@ -123,8 +123,8 @@ public class CollisionCorrections : MonoBehaviour {
     /// </summary>
     private void TransformDimentions()
     {
-        transformHeight = transform.localScale.y;
-        transformWidth = transform.localScale.x;
+        transformHeight = player_transform.localScale.y;
+        transformWidth = player_transform.localScale.x;
     }
 
     /// <summary>
@@ -274,6 +274,7 @@ public class CollisionCorrections : MonoBehaviour {
                     {
                         deltaMovement.y += skinWidth;
                         isGrounded = true;
+                        Debug.Log("Can I get an F in chat.");
                         //////////playerController.ClearOnWall();
                     }
 
@@ -323,6 +324,7 @@ public class CollisionCorrections : MonoBehaviour {
                     {
                         deltaMovement.y += skinWidth;
                         isGrounded = true;
+                        Debug.Log("Can I get an F in chat?");
                         //////////playerController.ClearOnWall();
                     }
 
@@ -396,7 +398,8 @@ public class CollisionCorrections : MonoBehaviour {
 
     public bool getIsGrounded()
     {
-        return isGrounded;
+        Debug.Log("The value of isGrounded is" + isGrounded);
+        return isGrounded;        
     }
 
     public bool getIsOnSlope()

@@ -17,6 +17,7 @@ public class YumiMovement : MonoBehaviour {
     private int landingHash;    
     private int runHash;
     private int shortHopHash;
+    private int spawnHash;
     private int takeDamageHash;
     private int turnHash;
     #endregion
@@ -89,15 +90,14 @@ public class YumiMovement : MonoBehaviour {
         jump = true;
     }
 
-    //public void CallShortHop()
-    //{
-    //    if (airBufferFrames > 0 && velocity.y < 0)  //when jump is released while still falling it will force a short hop. without this, it would result in a full jump
-    //    {
-    //        forcedShortHop = true;
-    //    }
-    //    shortHop = true;
-
-    //}
+    public void CallShortHop()
+    {
+        //if (airBufferFrames > 0 && velocity.y < 0)  //when jump is released while still falling it will force a short hop. without this, it would result in a full jump
+        //{
+        //    forcedShortHop = true;
+        //}
+        jump = false;
+    }
 
 
 
@@ -120,7 +120,9 @@ public class YumiMovement : MonoBehaviour {
         SetHorizontalDirection();
 
         ApplyHorizontalMovement();
+        ApplyGravity();
 
+        StateParameters(velocity.x, velocity.y, 10);
 
         StateProcesses(anim.GetCurrentAnimatorStateInfo(0));
 
@@ -175,16 +177,19 @@ public class YumiMovement : MonoBehaviour {
         if(deltaMovement.y < 0f)
         {
             deltaMovement = collision_corrector.VerticalSlopeDetection(deltaMovement);
+            Debug.Log("Hi, I made it to vertical slope collision.");
         }
 
         if(deltaMovement.x != 0f)
         {
             deltaMovement = collision_corrector.HorizontalCollision(deltaMovement);
+            Debug.Log("Hi, I made it to horizontal collision.");
         }
 
         if(deltaMovement.y != 0f)
         {
             deltaMovement = collision_corrector.VerticalCollision(deltaMovement);
+            Debug.Log("Hi, I made it to vertical collision.");
         }
 
         deltaMovement.z = 0f;
@@ -204,6 +209,18 @@ public class YumiMovement : MonoBehaviour {
         velocity.x = Mathf.Lerp(velocity.x, normalizedHorizontalSpeed * horizontalSpeed, Time.deltaTime * 20f);
     }
 
+    void StateParameters(float velocity_x, float velocity_y, int curr_health)
+    {
+        anim.SetBool("activateJump", jump);
+        anim.SetBool("isGrounded", collision_corrector.getIsGrounded());
+        anim.SetBool("takeDamage", false); // For Hunter Goodin
+        anim.SetBool("isSpaceToJump", collision_corrector.CheckForJumpSpace());
+        anim.SetBool("activateTurn", false); // For Keiran Glynn
+        anim.SetBool("hasVelocity.x", velocity_x != 0f);
+        anim.SetFloat("velocity.y", velocity_y);
+        anim.SetInteger("currHealth", curr_health); // For Hunter Goodin
+    }
+
     /// <summary>
     /// Section of code for implementing state specific processes. 
     /// </summary>
@@ -217,6 +234,7 @@ public class YumiMovement : MonoBehaviour {
         int landingState = landingHash;
         int runState = runHash;
         int shortHopState = shortHopHash;
+        int spawnState = spawnHash;
         int takeDamageState = takeDamageHash;
         int turnState = turnHash;
         int currentStateHash = current_state_info.shortNameHash;
@@ -225,35 +243,39 @@ public class YumiMovement : MonoBehaviour {
         {
             velocity.y = 0f;
         }
-        else if(currentStateHash == fallHash)
+        else if(currentStateHash == fallState)
         {
 
         }
-        else if (currentStateHash == idleHash)
+        else if (currentStateHash == idleState)
         {
             velocity.y = 0f;
         }
-        else if (currentStateHash == jumpHash)
+        else if (currentStateHash == jumpState)
         {
             velocity.y = Mathf.Sqrt(2f * jumpSpeed * -gravity);
         }
-        else if (currentStateHash == landingHash)
+        else if (currentStateHash == landingState)
         {
             velocity.y = 0f;
         }
-        else if (currentStateHash == runHash)
+        else if (currentStateHash == runState)
         {
             velocity.y = 0f;
         }
-        else if(currentStateHash == shortHopHash)
+        else if(currentStateHash == shortHopState)
         {
             velocity.y = velocity.y / shortHopCoefficient;
         }
-        else if (currentStateHash == takeDamageHash)
+        else if(currentStateHash == spawnState)
+        {
+            velocity.y = 0f;
+        }
+        else if (currentStateHash == takeDamageState)
         {
 
         }
-        else if (currentStateHash == turnHash)
+        else if (currentStateHash == turnState)
         {
 
         }
