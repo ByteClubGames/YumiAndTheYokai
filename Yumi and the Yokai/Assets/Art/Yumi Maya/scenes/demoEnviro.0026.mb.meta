@@ -1,0 +1,2727 @@
+fileFormatVersion: 2
+guid: 1a544cbfacff13441aa0ff132b445014
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: ambientLight1
+    100002: cobblestone
+    100004: cobblestone 1
+    100006: cobblestone 2
+    100008: cobblestone 3
+    100010: cobblestone 4
+    100012: cobblestone 5
+    100014: cobblestone 6
+    100016: cobblestone 7
+    100018: cobblestone1
+    100020: cobblestone1 1
+    100022: cobblestone1 2
+    100024: cobblestone1 3
+    100026: cobblestone1 4
+    100028: cobblestone1 5
+    100030: cobblestone1 6
+    100032: cobblestone1 7
+    100034: cobblestone2
+    100036: cobblestone2 1
+    100038: cobblestone2 2
+    100040: cobblestone2 3
+    100042: cobblestone2 4
+    100044: cobblestone2 5
+    100046: cobblestone2 6
+    100048: cobblestone2 7
+    100050: cobblestone3
+    100052: cobblestone3 1
+    100054: cobblestone3 2
+    100056: cobblestone3 3
+    100058: cobblestone3 4
+    100060: cobblestone3 5
+    100062: cobblestone3 6
+    100064: cobblestone3 7
+    100066: cobblestone4
+    100068: cobblestone4 1
+    100070: cobblestone4 2
+    100072: cobblestone4 3
+    100074: cobblestone4 4
+    100076: cobblestone4 5
+    100078: cobblestone4 6
+    100080: cobblestone4 7
+    100082: cobblestone5
+    100084: cobblestone5 1
+    100086: cobblestone5 2
+    100088: cobblestone5 3
+    100090: cobblestone5 4
+    100092: cobblestone5 5
+    100094: cobblestone5 6
+    100096: cobblestone5 7
+    100098: cobblestone6
+    100100: cobblestone6 1
+    100102: cobblestone6 2
+    100104: cobblestone6 3
+    100106: cobblestone6 4
+    100108: cobblestone6 5
+    100110: cobblestone6 6
+    100112: cobblestone6 7
+    100114: cobblestone7
+    100116: cobblestone7 1
+    100118: cobblestone7 2
+    100120: cobblestone7 3
+    100122: cobblestone7 4
+    100124: cobblestone7 5
+    100126: cobblestone7 6
+    100128: cobblestone7 7
+    100130: cobblestone8
+    100132: cobblestone8 1
+    100134: cobblestone8 2
+    100136: cobblestone8 3
+    100138: cobblestone8 4
+    100140: cobblestone8 5
+    100142: cobblestone8 6
+    100144: cobblestone8 7
+    100146: cobblestone9
+    100148: cobblestone9 1
+    100150: cobblestone9 2
+    100152: cobblestone9 3
+    100154: cobblestone9 4
+    100156: cobblestone9 5
+    100158: cobblestone9 6
+    100160: cobblestone9 7
+    100162: //RootNode
+    100164: directionalLight1
+    100166: door
+    100168: doorway
+    100170: fence_arm
+    100172: fence_arm14
+    100174: fence_arm15
+    100176: fence_arm16
+    100178: fence_arm17
+    100180: fence_arm18
+    100182: fence_arm19
+    100184: fence_arm20
+    100186: fence_arm21
+    100188: fence_arm22
+    100190: fence_arm23
+    100192: fence_arm_group
+    100194: fence_group
+    100196: fence_pole13
+    100198: fence_pole14
+    100200: fence_pole17
+    100202: fence_pole20
+    100204: fence_pole23
+    100206: fence_pole24
+    100208: fence_pole25
+    100210: fence_pole26
+    100212: fence_pole27
+    100214: fence_pole28
+    100216: fence_pole29
+    100218: fence_pole30
+    100220: fence_pole31
+    100222: fence_pole32
+    100224: fence_pole_group
+    100226: glowFruit
+    100228: glowFruit 1
+    100230: glowFruit 2
+    100232: glowFruit 3
+    100234: glowFruit_group
+    100236: glowFruit_string
+    100238: glowFruit_string1
+    100240: glowFruit_string2
+    100242: glowFruit_string3
+    100244: grass
+    100246: grass 1
+    100248: grass 10
+    100250: grass 11
+    100252: grass 12
+    100254: grass 13
+    100256: grass 14
+    100258: grass 15
+    100260: grass 16
+    100262: grass 17
+    100264: grass 18
+    100266: grass 19
+    100268: grass 2
+    100270: grass 20
+    100272: grass 21
+    100274: grass 22
+    100276: grass 23
+    100278: grass 24
+    100280: grass 25
+    100282: grass 3
+    100284: grass 4
+    100286: grass 5
+    100288: grass 6
+    100290: grass 7
+    100292: grass 8
+    100294: grass 9
+    100296: grass1
+    100298: grass1 1
+    100300: grass1 10
+    100302: grass1 11
+    100304: grass1 12
+    100306: grass1 13
+    100308: grass1 14
+    100310: grass1 15
+    100312: grass1 16
+    100314: grass1 17
+    100316: grass1 18
+    100318: grass1 19
+    100320: grass1 2
+    100322: grass1 20
+    100324: grass1 21
+    100326: grass1 22
+    100328: grass1 23
+    100330: grass1 24
+    100332: grass1 25
+    100334: grass1 3
+    100336: grass1 4
+    100338: grass1 5
+    100340: grass1 6
+    100342: grass1 7
+    100344: grass1 8
+    100346: grass1 9
+    100348: grass2
+    100350: grass2 1
+    100352: grass2 10
+    100354: grass2 11
+    100356: grass2 12
+    100358: grass2 13
+    100360: grass2 14
+    100362: grass2 15
+    100364: grass2 16
+    100366: grass2 17
+    100368: grass2 18
+    100370: grass2 19
+    100372: grass2 2
+    100374: grass2 20
+    100376: grass2 21
+    100378: grass2 22
+    100380: grass2 23
+    100382: grass2 24
+    100384: grass2 25
+    100386: grass2 3
+    100388: grass2 4
+    100390: grass2 5
+    100392: grass2 6
+    100394: grass2 7
+    100396: grass2 8
+    100398: grass2 9
+    100400: grass3
+    100402: grass3 1
+    100404: grass3 10
+    100406: grass3 11
+    100408: grass3 12
+    100410: grass3 13
+    100412: grass3 14
+    100414: grass3 15
+    100416: grass3 16
+    100418: grass3 17
+    100420: grass3 18
+    100422: grass3 19
+    100424: grass3 2
+    100426: grass3 20
+    100428: grass3 21
+    100430: grass3 22
+    100432: grass3 23
+    100434: grass3 24
+    100436: grass3 25
+    100438: grass3 3
+    100440: grass3 4
+    100442: grass3 5
+    100444: grass3 6
+    100446: grass3 7
+    100448: grass3 8
+    100450: grass3 9
+    100452: grass4
+    100454: grass4 1
+    100456: grass4 10
+    100458: grass4 11
+    100460: grass4 12
+    100462: grass4 13
+    100464: grass4 14
+    100466: grass4 15
+    100468: grass4 16
+    100470: grass4 17
+    100472: grass4 18
+    100474: grass4 19
+    100476: grass4 2
+    100478: grass4 20
+    100480: grass4 21
+    100482: grass4 22
+    100484: grass4 23
+    100486: grass4 24
+    100488: grass4 25
+    100490: grass4 3
+    100492: grass4 4
+    100494: grass4 5
+    100496: grass4 6
+    100498: grass4 7
+    100500: grass4 8
+    100502: grass4 9
+    100504: grass_group
+    100506: grass_parts
+    100508: grass_parts1
+    100510: grass_parts10
+    100512: grass_parts11
+    100514: grass_parts12
+    100516: grass_parts13
+    100518: grass_parts14
+    100520: grass_parts15
+    100522: grass_parts16
+    100524: grass_parts17
+    100526: grass_parts18
+    100528: grass_parts19
+    100530: grass_parts2
+    100532: grass_parts20
+    100534: grass_parts21
+    100536: grass_parts22
+    100538: grass_parts23
+    100540: grass_parts24
+    100542: grass_parts25
+    100544: grass_parts3
+    100546: grass_parts4
+    100548: grass_parts5
+    100550: grass_parts6
+    100552: grass_parts7
+    100554: grass_parts8
+    100556: grass_parts9
+    100558: grassAll_group
+    100560: grassShort
+    100562: grassShort 1
+    100564: grassShort 10
+    100566: grassShort 2
+    100568: grassShort 3
+    100570: grassShort 4
+    100572: grassShort 5
+    100574: grassShort 6
+    100576: grassShort 7
+    100578: grassShort 8
+    100580: grassShort 9
+    100582: grassShort1
+    100584: grassShort1 1
+    100586: grassShort1 10
+    100588: grassShort1 2
+    100590: grassShort1 3
+    100592: grassShort1 4
+    100594: grassShort1 5
+    100596: grassShort1 6
+    100598: grassShort1 7
+    100600: grassShort1 8
+    100602: grassShort1 9
+    100604: grassShort2
+    100606: grassShort2 1
+    100608: grassShort2 10
+    100610: grassShort2 2
+    100612: grassShort2 3
+    100614: grassShort2 4
+    100616: grassShort2 5
+    100618: grassShort2 6
+    100620: grassShort2 7
+    100622: grassShort2 8
+    100624: grassShort2 9
+    100626: grassShort3
+    100628: grassShort3 1
+    100630: grassShort3 10
+    100632: grassShort3 2
+    100634: grassShort3 3
+    100636: grassShort3 4
+    100638: grassShort3 5
+    100640: grassShort3 6
+    100642: grassShort3 7
+    100644: grassShort3 8
+    100646: grassShort3 9
+    100648: grassShort4
+    100650: grassShort4 1
+    100652: grassShort4 10
+    100654: grassShort4 2
+    100656: grassShort4 3
+    100658: grassShort4 4
+    100660: grassShort4 5
+    100662: grassShort4 6
+    100664: grassShort4 7
+    100666: grassShort4 8
+    100668: grassShort4 9
+    100670: grassShort5
+    100672: grassShort5 1
+    100674: grassShort5 10
+    100676: grassShort5 2
+    100678: grassShort5 3
+    100680: grassShort5 4
+    100682: grassShort5 5
+    100684: grassShort5 6
+    100686: grassShort5 7
+    100688: grassShort5 8
+    100690: grassShort5 9
+    100692: grassShort_group
+    100694: grassShort_parts
+    100696: grassShort_parts1
+    100698: grassShort_parts10
+    100700: grassShort_parts2
+    100702: grassShort_parts3
+    100704: grassShort_parts4
+    100706: grassShort_parts5
+    100708: grassShort_parts6
+    100710: grassShort_parts7
+    100712: grassShort_parts8
+    100714: grassShort_parts9
+    100716: lamp
+    100718: lamp 1
+    100720: lamp_group
+    100722: lamp_parts
+    100724: lamp_parts1
+    100726: lamp_pole
+    100728: lamp_pole 1
+    100730: levelSelect_view
+    100732: plant
+    100734: plant 1
+    100736: plant 2
+    100738: plant 3
+    100740: plant 4
+    100742: plant 5
+    100744: plant 6
+    100746: plant 7
+    100748: plant 8
+    100750: plant 9
+    100752: plant_group
+    100754: plant_parts
+    100756: plant_parts1
+    100758: plant_parts2
+    100760: plant_parts3
+    100762: plant_parts4
+    100764: plant_parts5
+    100766: plant_parts6
+    100768: plant_parts7
+    100770: plant_parts8
+    100772: plant_parts9
+    100774: plantBulb
+    100776: plantBulb 1
+    100778: plantBulb 2
+    100780: plantBulb 3
+    100782: plantBulb 4
+    100784: plantBulb 5
+    100786: plantBulb 6
+    100788: plantBulb 7
+    100790: plantBulb 8
+    100792: plantBulb 9
+    100794: plantBulb1
+    100796: plantBulb1 1
+    100798: plantBulb1 2
+    100800: plantBulb1 3
+    100802: plantBulb1 4
+    100804: plantBulb1 5
+    100806: plantBulb1 6
+    100808: plantBulb1 7
+    100810: plantBulb1 8
+    100812: plantBulb1 9
+    100814: plantBulb2
+    100816: plantBulb2 1
+    100818: plantBulb2 2
+    100820: plantBulb2 3
+    100822: plantBulb2 4
+    100824: plantBulb2 5
+    100826: plantBulb2 6
+    100828: plantBulb2 7
+    100830: plantBulb2 8
+    100832: plantBulb2 9
+    100834: plantBulb3
+    100836: plantBulb3 1
+    100838: plantBulb3 2
+    100840: plantBulb3 3
+    100842: plantBulb3 4
+    100844: plantBulb3 5
+    100846: plantBulb3 6
+    100848: plantBulb3 7
+    100850: plantBulb3 8
+    100852: plantBulb3 9
+    100854: plantBulb4
+    100856: plantBulb4 1
+    100858: plantBulb4 2
+    100860: plantBulb4 3
+    100862: plantBulb4 4
+    100864: plantBulb4 5
+    100866: plantBulb4 6
+    100868: plantBulb4 7
+    100870: plantBulb4 8
+    100872: plantBulb4 9
+    100874: plantBulb5
+    100876: plantBulb5 1
+    100878: plantBulb5 2
+    100880: plantBulb5 3
+    100882: plantBulb5 4
+    100884: plantBulb5 5
+    100886: plantBulb5 6
+    100888: plantBulb5 7
+    100890: plantBulb5 8
+    100892: plantBulb5 9
+    100894: plantBulb6
+    100896: plantBulb6 1
+    100898: plantBulb6 2
+    100900: plantBulb6 3
+    100902: plantBulb6 4
+    100904: plantBulb6 5
+    100906: plantBulb6 6
+    100908: plantBulb6 7
+    100910: plantBulb6 8
+    100912: plantBulb6 9
+    100914: plantBulb7
+    100916: plantBulb7 1
+    100918: plantBulb7 2
+    100920: plantBulb7 3
+    100922: plantBulb7 4
+    100924: plantBulb7 5
+    100926: plantBulb7 6
+    100928: plantBulb7 7
+    100930: plantBulb7 8
+    100932: plantBulb7 9
+    100934: plantBulb8
+    100936: plantBulb8 1
+    100938: plantBulb8 2
+    100940: plantBulb8 3
+    100942: plantBulb8 4
+    100944: plantBulb8 5
+    100946: plantBulb8 6
+    100948: plantBulb8 7
+    100950: plantBulb8 8
+    100952: plantBulb8 9
+    100954: plantBulb_group
+    100956: plantBulb_group 1
+    100958: plantBulb_group 2
+    100960: plantBulb_group 3
+    100962: plantBulb_group 4
+    100964: plantBulb_group 5
+    100966: plantBulb_group 6
+    100968: plantBulb_group 7
+    100970: plantBulb_group 8
+    100972: plantBulb_group 9
+    100974: polySurface1
+    100976: polySurface2
+    100978: rock
+    100980: rock1
+    100982: rock2
+    100984: rock3
+    100986: rock4
+    100988: rock5
+    100990: rock6
+    100992: rock7
+    100994: rock_group
+    100996: roof
+    100998: root
+    101000: root 1
+    101002: root 2
+    101004: root 3
+    101006: root 4
+    101008: scenemockup:Mesh
+    101010: shrineSymbol
+    101012: shroom_house
+    101014: shroom_parts
+    101016: shroomLump
+    101018: shroomLump1
+    101020: shroomLump2
+    101022: shroomLump3
+    101024: shroomLump4
+    101026: shroomLump5
+    101028: shroomLump6
+    101030: shroomLump7
+    101032: shroomLump8
+    101034: shroomLump_group
+    101036: shroomPenetration
+    101038: shroomPenetration1
+    101040: shroomPenetration_group
+    101042: shroomPenetration_side
+    101044: shroomPenetration_side 1
+    101046: shroomPenetration_side 2
+    101048: shroomPenetration_side 3
+    101050: shroomPenetration_side 4
+    101052: shroomRoot_group
+    101054: shroomRoot_parts
+    101056: shroomRoot_parts1
+    101058: shroomRoot_parts2
+    101060: shroomRoot_parts3
+    101062: shroomRoot_parts4
+    101064: shroomSmall
+    101066: shroomSmall1
+    101068: shroomSmall10
+    101070: shroomSmall11
+    101072: shroomSmall2
+    101074: shroomSmall3
+    101076: shroomSmall4
+    101078: shroomSmall5
+    101080: shroomSmall6
+    101082: shroomSmall7
+    101084: shroomSmall8
+    101086: shroomSmall9
+    101088: shroomSmall_group
+    101090: stonePath_base
+    101092: stonePath_base1
+    101094: stonePath_base2
+    101096: stonePath_base3
+    101098: stonePath_base4
+    101100: stonePath_base5
+    101102: stonePath_base6
+    101104: stonePath_base7
+    101106: stonePath_border
+    101108: stonePath_border1
+    101110: stonePath_border10
+    101112: stonePath_border11
+    101114: stonePath_border12
+    101116: stonePath_border13
+    101118: stonePath_border14
+    101120: stonePath_border15
+    101122: stonePath_border2
+    101124: stonePath_border3
+    101126: stonePath_border4
+    101128: stonePath_border5
+    101130: stonePath_border6
+    101132: stonePath_border7
+    101134: stonePath_border8
+    101136: stonePath_border9
+    101138: stonePath_group
+    101140: terrain
+    101142: transform1
+    101144: transform1 1
+    101146: transform2
+    101148: tree
+    101150: tree1
+    101152: tree_and_glowFruit
+    400000: ambientLight1
+    400002: cobblestone
+    400004: cobblestone 1
+    400006: cobblestone 2
+    400008: cobblestone 3
+    400010: cobblestone 4
+    400012: cobblestone 5
+    400014: cobblestone 6
+    400016: cobblestone 7
+    400018: cobblestone1
+    400020: cobblestone1 1
+    400022: cobblestone1 2
+    400024: cobblestone1 3
+    400026: cobblestone1 4
+    400028: cobblestone1 5
+    400030: cobblestone1 6
+    400032: cobblestone1 7
+    400034: cobblestone2
+    400036: cobblestone2 1
+    400038: cobblestone2 2
+    400040: cobblestone2 3
+    400042: cobblestone2 4
+    400044: cobblestone2 5
+    400046: cobblestone2 6
+    400048: cobblestone2 7
+    400050: cobblestone3
+    400052: cobblestone3 1
+    400054: cobblestone3 2
+    400056: cobblestone3 3
+    400058: cobblestone3 4
+    400060: cobblestone3 5
+    400062: cobblestone3 6
+    400064: cobblestone3 7
+    400066: cobblestone4
+    400068: cobblestone4 1
+    400070: cobblestone4 2
+    400072: cobblestone4 3
+    400074: cobblestone4 4
+    400076: cobblestone4 5
+    400078: cobblestone4 6
+    400080: cobblestone4 7
+    400082: cobblestone5
+    400084: cobblestone5 1
+    400086: cobblestone5 2
+    400088: cobblestone5 3
+    400090: cobblestone5 4
+    400092: cobblestone5 5
+    400094: cobblestone5 6
+    400096: cobblestone5 7
+    400098: cobblestone6
+    400100: cobblestone6 1
+    400102: cobblestone6 2
+    400104: cobblestone6 3
+    400106: cobblestone6 4
+    400108: cobblestone6 5
+    400110: cobblestone6 6
+    400112: cobblestone6 7
+    400114: cobblestone7
+    400116: cobblestone7 1
+    400118: cobblestone7 2
+    400120: cobblestone7 3
+    400122: cobblestone7 4
+    400124: cobblestone7 5
+    400126: cobblestone7 6
+    400128: cobblestone7 7
+    400130: cobblestone8
+    400132: cobblestone8 1
+    400134: cobblestone8 2
+    400136: cobblestone8 3
+    400138: cobblestone8 4
+    400140: cobblestone8 5
+    400142: cobblestone8 6
+    400144: cobblestone8 7
+    400146: cobblestone9
+    400148: cobblestone9 1
+    400150: cobblestone9 2
+    400152: cobblestone9 3
+    400154: cobblestone9 4
+    400156: cobblestone9 5
+    400158: cobblestone9 6
+    400160: cobblestone9 7
+    400162: //RootNode
+    400164: directionalLight1
+    400166: door
+    400168: doorway
+    400170: fence_arm
+    400172: fence_arm14
+    400174: fence_arm15
+    400176: fence_arm16
+    400178: fence_arm17
+    400180: fence_arm18
+    400182: fence_arm19
+    400184: fence_arm20
+    400186: fence_arm21
+    400188: fence_arm22
+    400190: fence_arm23
+    400192: fence_arm_group
+    400194: fence_group
+    400196: fence_pole13
+    400198: fence_pole14
+    400200: fence_pole17
+    400202: fence_pole20
+    400204: fence_pole23
+    400206: fence_pole24
+    400208: fence_pole25
+    400210: fence_pole26
+    400212: fence_pole27
+    400214: fence_pole28
+    400216: fence_pole29
+    400218: fence_pole30
+    400220: fence_pole31
+    400222: fence_pole32
+    400224: fence_pole_group
+    400226: glowFruit
+    400228: glowFruit 1
+    400230: glowFruit 2
+    400232: glowFruit 3
+    400234: glowFruit_group
+    400236: glowFruit_string
+    400238: glowFruit_string1
+    400240: glowFruit_string2
+    400242: glowFruit_string3
+    400244: grass
+    400246: grass 1
+    400248: grass 10
+    400250: grass 11
+    400252: grass 12
+    400254: grass 13
+    400256: grass 14
+    400258: grass 15
+    400260: grass 16
+    400262: grass 17
+    400264: grass 18
+    400266: grass 19
+    400268: grass 2
+    400270: grass 20
+    400272: grass 21
+    400274: grass 22
+    400276: grass 23
+    400278: grass 24
+    400280: grass 25
+    400282: grass 3
+    400284: grass 4
+    400286: grass 5
+    400288: grass 6
+    400290: grass 7
+    400292: grass 8
+    400294: grass 9
+    400296: grass1
+    400298: grass1 1
+    400300: grass1 10
+    400302: grass1 11
+    400304: grass1 12
+    400306: grass1 13
+    400308: grass1 14
+    400310: grass1 15
+    400312: grass1 16
+    400314: grass1 17
+    400316: grass1 18
+    400318: grass1 19
+    400320: grass1 2
+    400322: grass1 20
+    400324: grass1 21
+    400326: grass1 22
+    400328: grass1 23
+    400330: grass1 24
+    400332: grass1 25
+    400334: grass1 3
+    400336: grass1 4
+    400338: grass1 5
+    400340: grass1 6
+    400342: grass1 7
+    400344: grass1 8
+    400346: grass1 9
+    400348: grass2
+    400350: grass2 1
+    400352: grass2 10
+    400354: grass2 11
+    400356: grass2 12
+    400358: grass2 13
+    400360: grass2 14
+    400362: grass2 15
+    400364: grass2 16
+    400366: grass2 17
+    400368: grass2 18
+    400370: grass2 19
+    400372: grass2 2
+    400374: grass2 20
+    400376: grass2 21
+    400378: grass2 22
+    400380: grass2 23
+    400382: grass2 24
+    400384: grass2 25
+    400386: grass2 3
+    400388: grass2 4
+    400390: grass2 5
+    400392: grass2 6
+    400394: grass2 7
+    400396: grass2 8
+    400398: grass2 9
+    400400: grass3
+    400402: grass3 1
+    400404: grass3 10
+    400406: grass3 11
+    400408: grass3 12
+    400410: grass3 13
+    400412: grass3 14
+    400414: grass3 15
+    400416: grass3 16
+    400418: grass3 17
+    400420: grass3 18
+    400422: grass3 19
+    400424: grass3 2
+    400426: grass3 20
+    400428: grass3 21
+    400430: grass3 22
+    400432: grass3 23
+    400434: grass3 24
+    400436: grass3 25
+    400438: grass3 3
+    400440: grass3 4
+    400442: grass3 5
+    400444: grass3 6
+    400446: grass3 7
+    400448: grass3 8
+    400450: grass3 9
+    400452: grass4
+    400454: grass4 1
+    400456: grass4 10
+    400458: grass4 11
+    400460: grass4 12
+    400462: grass4 13
+    400464: grass4 14
+    400466: grass4 15
+    400468: grass4 16
+    400470: grass4 17
+    400472: grass4 18
+    400474: grass4 19
+    400476: grass4 2
+    400478: grass4 20
+    400480: grass4 21
+    400482: grass4 22
+    400484: grass4 23
+    400486: grass4 24
+    400488: grass4 25
+    400490: grass4 3
+    400492: grass4 4
+    400494: grass4 5
+    400496: grass4 6
+    400498: grass4 7
+    400500: grass4 8
+    400502: grass4 9
+    400504: grass_group
+    400506: grass_parts
+    400508: grass_parts1
+    400510: grass_parts10
+    400512: grass_parts11
+    400514: grass_parts12
+    400516: grass_parts13
+    400518: grass_parts14
+    400520: grass_parts15
+    400522: grass_parts16
+    400524: grass_parts17
+    400526: grass_parts18
+    400528: grass_parts19
+    400530: grass_parts2
+    400532: grass_parts20
+    400534: grass_parts21
+    400536: grass_parts22
+    400538: grass_parts23
+    400540: grass_parts24
+    400542: grass_parts25
+    400544: grass_parts3
+    400546: grass_parts4
+    400548: grass_parts5
+    400550: grass_parts6
+    400552: grass_parts7
+    400554: grass_parts8
+    400556: grass_parts9
+    400558: grassAll_group
+    400560: grassShort
+    400562: grassShort 1
+    400564: grassShort 10
+    400566: grassShort 2
+    400568: grassShort 3
+    400570: grassShort 4
+    400572: grassShort 5
+    400574: grassShort 6
+    400576: grassShort 7
+    400578: grassShort 8
+    400580: grassShort 9
+    400582: grassShort1
+    400584: grassShort1 1
+    400586: grassShort1 10
+    400588: grassShort1 2
+    400590: grassShort1 3
+    400592: grassShort1 4
+    400594: grassShort1 5
+    400596: grassShort1 6
+    400598: grassShort1 7
+    400600: grassShort1 8
+    400602: grassShort1 9
+    400604: grassShort2
+    400606: grassShort2 1
+    400608: grassShort2 10
+    400610: grassShort2 2
+    400612: grassShort2 3
+    400614: grassShort2 4
+    400616: grassShort2 5
+    400618: grassShort2 6
+    400620: grassShort2 7
+    400622: grassShort2 8
+    400624: grassShort2 9
+    400626: grassShort3
+    400628: grassShort3 1
+    400630: grassShort3 10
+    400632: grassShort3 2
+    400634: grassShort3 3
+    400636: grassShort3 4
+    400638: grassShort3 5
+    400640: grassShort3 6
+    400642: grassShort3 7
+    400644: grassShort3 8
+    400646: grassShort3 9
+    400648: grassShort4
+    400650: grassShort4 1
+    400652: grassShort4 10
+    400654: grassShort4 2
+    400656: grassShort4 3
+    400658: grassShort4 4
+    400660: grassShort4 5
+    400662: grassShort4 6
+    400664: grassShort4 7
+    400666: grassShort4 8
+    400668: grassShort4 9
+    400670: grassShort5
+    400672: grassShort5 1
+    400674: grassShort5 10
+    400676: grassShort5 2
+    400678: grassShort5 3
+    400680: grassShort5 4
+    400682: grassShort5 5
+    400684: grassShort5 6
+    400686: grassShort5 7
+    400688: grassShort5 8
+    400690: grassShort5 9
+    400692: grassShort_group
+    400694: grassShort_parts
+    400696: grassShort_parts1
+    400698: grassShort_parts10
+    400700: grassShort_parts2
+    400702: grassShort_parts3
+    400704: grassShort_parts4
+    400706: grassShort_parts5
+    400708: grassShort_parts6
+    400710: grassShort_parts7
+    400712: grassShort_parts8
+    400714: grassShort_parts9
+    400716: lamp
+    400718: lamp 1
+    400720: lamp_group
+    400722: lamp_parts
+    400724: lamp_parts1
+    400726: lamp_pole
+    400728: lamp_pole 1
+    400730: levelSelect_view
+    400732: plant
+    400734: plant 1
+    400736: plant 2
+    400738: plant 3
+    400740: plant 4
+    400742: plant 5
+    400744: plant 6
+    400746: plant 7
+    400748: plant 8
+    400750: plant 9
+    400752: plant_group
+    400754: plant_parts
+    400756: plant_parts1
+    400758: plant_parts2
+    400760: plant_parts3
+    400762: plant_parts4
+    400764: plant_parts5
+    400766: plant_parts6
+    400768: plant_parts7
+    400770: plant_parts8
+    400772: plant_parts9
+    400774: plantBulb
+    400776: plantBulb 1
+    400778: plantBulb 2
+    400780: plantBulb 3
+    400782: plantBulb 4
+    400784: plantBulb 5
+    400786: plantBulb 6
+    400788: plantBulb 7
+    400790: plantBulb 8
+    400792: plantBulb 9
+    400794: plantBulb1
+    400796: plantBulb1 1
+    400798: plantBulb1 2
+    400800: plantBulb1 3
+    400802: plantBulb1 4
+    400804: plantBulb1 5
+    400806: plantBulb1 6
+    400808: plantBulb1 7
+    400810: plantBulb1 8
+    400812: plantBulb1 9
+    400814: plantBulb2
+    400816: plantBulb2 1
+    400818: plantBulb2 2
+    400820: plantBulb2 3
+    400822: plantBulb2 4
+    400824: plantBulb2 5
+    400826: plantBulb2 6
+    400828: plantBulb2 7
+    400830: plantBulb2 8
+    400832: plantBulb2 9
+    400834: plantBulb3
+    400836: plantBulb3 1
+    400838: plantBulb3 2
+    400840: plantBulb3 3
+    400842: plantBulb3 4
+    400844: plantBulb3 5
+    400846: plantBulb3 6
+    400848: plantBulb3 7
+    400850: plantBulb3 8
+    400852: plantBulb3 9
+    400854: plantBulb4
+    400856: plantBulb4 1
+    400858: plantBulb4 2
+    400860: plantBulb4 3
+    400862: plantBulb4 4
+    400864: plantBulb4 5
+    400866: plantBulb4 6
+    400868: plantBulb4 7
+    400870: plantBulb4 8
+    400872: plantBulb4 9
+    400874: plantBulb5
+    400876: plantBulb5 1
+    400878: plantBulb5 2
+    400880: plantBulb5 3
+    400882: plantBulb5 4
+    400884: plantBulb5 5
+    400886: plantBulb5 6
+    400888: plantBulb5 7
+    400890: plantBulb5 8
+    400892: plantBulb5 9
+    400894: plantBulb6
+    400896: plantBulb6 1
+    400898: plantBulb6 2
+    400900: plantBulb6 3
+    400902: plantBulb6 4
+    400904: plantBulb6 5
+    400906: plantBulb6 6
+    400908: plantBulb6 7
+    400910: plantBulb6 8
+    400912: plantBulb6 9
+    400914: plantBulb7
+    400916: plantBulb7 1
+    400918: plantBulb7 2
+    400920: plantBulb7 3
+    400922: plantBulb7 4
+    400924: plantBulb7 5
+    400926: plantBulb7 6
+    400928: plantBulb7 7
+    400930: plantBulb7 8
+    400932: plantBulb7 9
+    400934: plantBulb8
+    400936: plantBulb8 1
+    400938: plantBulb8 2
+    400940: plantBulb8 3
+    400942: plantBulb8 4
+    400944: plantBulb8 5
+    400946: plantBulb8 6
+    400948: plantBulb8 7
+    400950: plantBulb8 8
+    400952: plantBulb8 9
+    400954: plantBulb_group
+    400956: plantBulb_group 1
+    400958: plantBulb_group 2
+    400960: plantBulb_group 3
+    400962: plantBulb_group 4
+    400964: plantBulb_group 5
+    400966: plantBulb_group 6
+    400968: plantBulb_group 7
+    400970: plantBulb_group 8
+    400972: plantBulb_group 9
+    400974: polySurface1
+    400976: polySurface2
+    400978: rock
+    400980: rock1
+    400982: rock2
+    400984: rock3
+    400986: rock4
+    400988: rock5
+    400990: rock6
+    400992: rock7
+    400994: rock_group
+    400996: roof
+    400998: root
+    401000: root 1
+    401002: root 2
+    401004: root 3
+    401006: root 4
+    401008: scenemockup:Mesh
+    401010: shrineSymbol
+    401012: shroom_house
+    401014: shroom_parts
+    401016: shroomLump
+    401018: shroomLump1
+    401020: shroomLump2
+    401022: shroomLump3
+    401024: shroomLump4
+    401026: shroomLump5
+    401028: shroomLump6
+    401030: shroomLump7
+    401032: shroomLump8
+    401034: shroomLump_group
+    401036: shroomPenetration
+    401038: shroomPenetration1
+    401040: shroomPenetration_group
+    401042: shroomPenetration_side
+    401044: shroomPenetration_side 1
+    401046: shroomPenetration_side 2
+    401048: shroomPenetration_side 3
+    401050: shroomPenetration_side 4
+    401052: shroomRoot_group
+    401054: shroomRoot_parts
+    401056: shroomRoot_parts1
+    401058: shroomRoot_parts2
+    401060: shroomRoot_parts3
+    401062: shroomRoot_parts4
+    401064: shroomSmall
+    401066: shroomSmall1
+    401068: shroomSmall10
+    401070: shroomSmall11
+    401072: shroomSmall2
+    401074: shroomSmall3
+    401076: shroomSmall4
+    401078: shroomSmall5
+    401080: shroomSmall6
+    401082: shroomSmall7
+    401084: shroomSmall8
+    401086: shroomSmall9
+    401088: shroomSmall_group
+    401090: stonePath_base
+    401092: stonePath_base1
+    401094: stonePath_base2
+    401096: stonePath_base3
+    401098: stonePath_base4
+    401100: stonePath_base5
+    401102: stonePath_base6
+    401104: stonePath_base7
+    401106: stonePath_border
+    401108: stonePath_border1
+    401110: stonePath_border10
+    401112: stonePath_border11
+    401114: stonePath_border12
+    401116: stonePath_border13
+    401118: stonePath_border14
+    401120: stonePath_border15
+    401122: stonePath_border2
+    401124: stonePath_border3
+    401126: stonePath_border4
+    401128: stonePath_border5
+    401130: stonePath_border6
+    401132: stonePath_border7
+    401134: stonePath_border8
+    401136: stonePath_border9
+    401138: stonePath_group
+    401140: terrain
+    401142: transform1
+    401144: transform1 1
+    401146: transform2
+    401148: tree
+    401150: tree1
+    401152: tree_and_glowFruit
+    2000000: levelSelect_view
+    2100000: lambert1
+    2100002: stone
+    2100004: grass_shader
+    2100006: shroom_bod
+    2100008: shroom_top
+    2100010: roof_shader
+    2100012: woodPainted
+    2100014: woodNatural
+    2100016: paper
+    2100018: plant_shader
+    2100020: plantBulb_shader
+    2100022: glowFruit_skin_shader
+    2100024: glowFruit_shader
+    2100026: gravel_shader
+    2100028: cobblestone_shader
+    2300000: cobblestone
+    2300002: cobblestone 1
+    2300004: cobblestone 2
+    2300006: cobblestone 3
+    2300008: cobblestone 4
+    2300010: cobblestone 5
+    2300012: cobblestone 6
+    2300014: cobblestone 7
+    2300016: cobblestone1
+    2300018: cobblestone1 1
+    2300020: cobblestone1 2
+    2300022: cobblestone1 3
+    2300024: cobblestone1 4
+    2300026: cobblestone1 5
+    2300028: cobblestone1 6
+    2300030: cobblestone1 7
+    2300032: cobblestone2
+    2300034: cobblestone2 1
+    2300036: cobblestone2 2
+    2300038: cobblestone2 3
+    2300040: cobblestone2 4
+    2300042: cobblestone2 5
+    2300044: cobblestone2 6
+    2300046: cobblestone2 7
+    2300048: cobblestone3
+    2300050: cobblestone3 1
+    2300052: cobblestone3 2
+    2300054: cobblestone3 3
+    2300056: cobblestone3 4
+    2300058: cobblestone3 5
+    2300060: cobblestone3 6
+    2300062: cobblestone3 7
+    2300064: cobblestone4
+    2300066: cobblestone4 1
+    2300068: cobblestone4 2
+    2300070: cobblestone4 3
+    2300072: cobblestone4 4
+    2300074: cobblestone4 5
+    2300076: cobblestone4 6
+    2300078: cobblestone4 7
+    2300080: cobblestone5
+    2300082: cobblestone5 1
+    2300084: cobblestone5 2
+    2300086: cobblestone5 3
+    2300088: cobblestone5 4
+    2300090: cobblestone5 5
+    2300092: cobblestone5 6
+    2300094: cobblestone5 7
+    2300096: cobblestone6
+    2300098: cobblestone6 1
+    2300100: cobblestone6 2
+    2300102: cobblestone6 3
+    2300104: cobblestone6 4
+    2300106: cobblestone6 5
+    2300108: cobblestone6 6
+    2300110: cobblestone6 7
+    2300112: cobblestone7
+    2300114: cobblestone7 1
+    2300116: cobblestone7 2
+    2300118: cobblestone7 3
+    2300120: cobblestone7 4
+    2300122: cobblestone7 5
+    2300124: cobblestone7 6
+    2300126: cobblestone7 7
+    2300128: cobblestone8
+    2300130: cobblestone8 1
+    2300132: cobblestone8 2
+    2300134: cobblestone8 3
+    2300136: cobblestone8 4
+    2300138: cobblestone8 5
+    2300140: cobblestone8 6
+    2300142: cobblestone8 7
+    2300144: cobblestone9
+    2300146: cobblestone9 1
+    2300148: cobblestone9 2
+    2300150: cobblestone9 3
+    2300152: cobblestone9 4
+    2300154: cobblestone9 5
+    2300156: cobblestone9 6
+    2300158: cobblestone9 7
+    2300160: door
+    2300162: fence_arm
+    2300164: fence_arm14
+    2300166: fence_arm15
+    2300168: fence_arm16
+    2300170: fence_arm17
+    2300172: fence_arm18
+    2300174: fence_arm19
+    2300176: fence_arm20
+    2300178: fence_arm21
+    2300180: fence_arm22
+    2300182: fence_arm23
+    2300184: fence_pole13
+    2300186: fence_pole14
+    2300188: fence_pole17
+    2300190: fence_pole20
+    2300192: fence_pole23
+    2300194: fence_pole24
+    2300196: fence_pole25
+    2300198: fence_pole26
+    2300200: fence_pole27
+    2300202: fence_pole28
+    2300204: fence_pole29
+    2300206: fence_pole30
+    2300208: fence_pole31
+    2300210: fence_pole32
+    2300212: glowFruit
+    2300214: glowFruit 1
+    2300216: glowFruit 2
+    2300218: glowFruit 3
+    2300220: glowFruit_string
+    2300222: glowFruit_string1
+    2300224: glowFruit_string2
+    2300226: glowFruit_string3
+    2300228: grass
+    2300230: grass 1
+    2300232: grass 10
+    2300234: grass 11
+    2300236: grass 12
+    2300238: grass 13
+    2300240: grass 14
+    2300242: grass 15
+    2300244: grass 16
+    2300246: grass 17
+    2300248: grass 18
+    2300250: grass 19
+    2300252: grass 2
+    2300254: grass 20
+    2300256: grass 21
+    2300258: grass 22
+    2300260: grass 23
+    2300262: grass 24
+    2300264: grass 25
+    2300266: grass 3
+    2300268: grass 4
+    2300270: grass 5
+    2300272: grass 6
+    2300274: grass 7
+    2300276: grass 8
+    2300278: grass 9
+    2300280: grass1
+    2300282: grass1 1
+    2300284: grass1 10
+    2300286: grass1 11
+    2300288: grass1 12
+    2300290: grass1 13
+    2300292: grass1 14
+    2300294: grass1 15
+    2300296: grass1 16
+    2300298: grass1 17
+    2300300: grass1 18
+    2300302: grass1 19
+    2300304: grass1 2
+    2300306: grass1 20
+    2300308: grass1 21
+    2300310: grass1 22
+    2300312: grass1 23
+    2300314: grass1 24
+    2300316: grass1 25
+    2300318: grass1 3
+    2300320: grass1 4
+    2300322: grass1 5
+    2300324: grass1 6
+    2300326: grass1 7
+    2300328: grass1 8
+    2300330: grass1 9
+    2300332: grass2
+    2300334: grass2 1
+    2300336: grass2 10
+    2300338: grass2 11
+    2300340: grass2 12
+    2300342: grass2 13
+    2300344: grass2 14
+    2300346: grass2 15
+    2300348: grass2 16
+    2300350: grass2 17
+    2300352: grass2 18
+    2300354: grass2 19
+    2300356: grass2 2
+    2300358: grass2 20
+    2300360: grass2 21
+    2300362: grass2 22
+    2300364: grass2 23
+    2300366: grass2 24
+    2300368: grass2 25
+    2300370: grass2 3
+    2300372: grass2 4
+    2300374: grass2 5
+    2300376: grass2 6
+    2300378: grass2 7
+    2300380: grass2 8
+    2300382: grass2 9
+    2300384: grass3
+    2300386: grass3 1
+    2300388: grass3 10
+    2300390: grass3 11
+    2300392: grass3 12
+    2300394: grass3 13
+    2300396: grass3 14
+    2300398: grass3 15
+    2300400: grass3 16
+    2300402: grass3 17
+    2300404: grass3 18
+    2300406: grass3 19
+    2300408: grass3 2
+    2300410: grass3 20
+    2300412: grass3 21
+    2300414: grass3 22
+    2300416: grass3 23
+    2300418: grass3 24
+    2300420: grass3 25
+    2300422: grass3 3
+    2300424: grass3 4
+    2300426: grass3 5
+    2300428: grass3 6
+    2300430: grass3 7
+    2300432: grass3 8
+    2300434: grass3 9
+    2300436: grass4
+    2300438: grass4 1
+    2300440: grass4 10
+    2300442: grass4 11
+    2300444: grass4 12
+    2300446: grass4 13
+    2300448: grass4 14
+    2300450: grass4 15
+    2300452: grass4 16
+    2300454: grass4 17
+    2300456: grass4 18
+    2300458: grass4 19
+    2300460: grass4 2
+    2300462: grass4 20
+    2300464: grass4 21
+    2300466: grass4 22
+    2300468: grass4 23
+    2300470: grass4 24
+    2300472: grass4 25
+    2300474: grass4 3
+    2300476: grass4 4
+    2300478: grass4 5
+    2300480: grass4 6
+    2300482: grass4 7
+    2300484: grass4 8
+    2300486: grass4 9
+    2300488: grassShort
+    2300490: grassShort 1
+    2300492: grassShort 10
+    2300494: grassShort 2
+    2300496: grassShort 3
+    2300498: grassShort 4
+    2300500: grassShort 5
+    2300502: grassShort 6
+    2300504: grassShort 7
+    2300506: grassShort 8
+    2300508: grassShort 9
+    2300510: grassShort1
+    2300512: grassShort1 1
+    2300514: grassShort1 10
+    2300516: grassShort1 2
+    2300518: grassShort1 3
+    2300520: grassShort1 4
+    2300522: grassShort1 5
+    2300524: grassShort1 6
+    2300526: grassShort1 7
+    2300528: grassShort1 8
+    2300530: grassShort1 9
+    2300532: grassShort2
+    2300534: grassShort2 1
+    2300536: grassShort2 10
+    2300538: grassShort2 2
+    2300540: grassShort2 3
+    2300542: grassShort2 4
+    2300544: grassShort2 5
+    2300546: grassShort2 6
+    2300548: grassShort2 7
+    2300550: grassShort2 8
+    2300552: grassShort2 9
+    2300554: grassShort3
+    2300556: grassShort3 1
+    2300558: grassShort3 10
+    2300560: grassShort3 2
+    2300562: grassShort3 3
+    2300564: grassShort3 4
+    2300566: grassShort3 5
+    2300568: grassShort3 6
+    2300570: grassShort3 7
+    2300572: grassShort3 8
+    2300574: grassShort3 9
+    2300576: grassShort4
+    2300578: grassShort4 1
+    2300580: grassShort4 10
+    2300582: grassShort4 2
+    2300584: grassShort4 3
+    2300586: grassShort4 4
+    2300588: grassShort4 5
+    2300590: grassShort4 6
+    2300592: grassShort4 7
+    2300594: grassShort4 8
+    2300596: grassShort4 9
+    2300598: grassShort5
+    2300600: grassShort5 1
+    2300602: grassShort5 10
+    2300604: grassShort5 2
+    2300606: grassShort5 3
+    2300608: grassShort5 4
+    2300610: grassShort5 5
+    2300612: grassShort5 6
+    2300614: grassShort5 7
+    2300616: grassShort5 8
+    2300618: grassShort5 9
+    2300620: lamp
+    2300622: lamp 1
+    2300624: lamp_pole
+    2300626: lamp_pole 1
+    2300628: plant
+    2300630: plant 1
+    2300632: plant 2
+    2300634: plant 3
+    2300636: plant 4
+    2300638: plant 5
+    2300640: plant 6
+    2300642: plant 7
+    2300644: plant 8
+    2300646: plant 9
+    2300648: plantBulb
+    2300650: plantBulb 1
+    2300652: plantBulb 2
+    2300654: plantBulb 3
+    2300656: plantBulb 4
+    2300658: plantBulb 5
+    2300660: plantBulb 6
+    2300662: plantBulb 7
+    2300664: plantBulb 8
+    2300666: plantBulb 9
+    2300668: plantBulb1
+    2300670: plantBulb1 1
+    2300672: plantBulb1 2
+    2300674: plantBulb1 3
+    2300676: plantBulb1 4
+    2300678: plantBulb1 5
+    2300680: plantBulb1 6
+    2300682: plantBulb1 7
+    2300684: plantBulb1 8
+    2300686: plantBulb1 9
+    2300688: plantBulb2
+    2300690: plantBulb2 1
+    2300692: plantBulb2 2
+    2300694: plantBulb2 3
+    2300696: plantBulb2 4
+    2300698: plantBulb2 5
+    2300700: plantBulb2 6
+    2300702: plantBulb2 7
+    2300704: plantBulb2 8
+    2300706: plantBulb2 9
+    2300708: plantBulb3
+    2300710: plantBulb3 1
+    2300712: plantBulb3 2
+    2300714: plantBulb3 3
+    2300716: plantBulb3 4
+    2300718: plantBulb3 5
+    2300720: plantBulb3 6
+    2300722: plantBulb3 7
+    2300724: plantBulb3 8
+    2300726: plantBulb3 9
+    2300728: plantBulb4
+    2300730: plantBulb4 1
+    2300732: plantBulb4 2
+    2300734: plantBulb4 3
+    2300736: plantBulb4 4
+    2300738: plantBulb4 5
+    2300740: plantBulb4 6
+    2300742: plantBulb4 7
+    2300744: plantBulb4 8
+    2300746: plantBulb4 9
+    2300748: plantBulb5
+    2300750: plantBulb5 1
+    2300752: plantBulb5 2
+    2300754: plantBulb5 3
+    2300756: plantBulb5 4
+    2300758: plantBulb5 5
+    2300760: plantBulb5 6
+    2300762: plantBulb5 7
+    2300764: plantBulb5 8
+    2300766: plantBulb5 9
+    2300768: plantBulb6
+    2300770: plantBulb6 1
+    2300772: plantBulb6 2
+    2300774: plantBulb6 3
+    2300776: plantBulb6 4
+    2300778: plantBulb6 5
+    2300780: plantBulb6 6
+    2300782: plantBulb6 7
+    2300784: plantBulb6 8
+    2300786: plantBulb6 9
+    2300788: plantBulb7
+    2300790: plantBulb7 1
+    2300792: plantBulb7 2
+    2300794: plantBulb7 3
+    2300796: plantBulb7 4
+    2300798: plantBulb7 5
+    2300800: plantBulb7 6
+    2300802: plantBulb7 7
+    2300804: plantBulb7 8
+    2300806: plantBulb7 9
+    2300808: plantBulb8
+    2300810: plantBulb8 1
+    2300812: plantBulb8 2
+    2300814: plantBulb8 3
+    2300816: plantBulb8 4
+    2300818: plantBulb8 5
+    2300820: plantBulb8 6
+    2300822: plantBulb8 7
+    2300824: plantBulb8 8
+    2300826: plantBulb8 9
+    2300828: polySurface1
+    2300830: polySurface2
+    2300832: rock
+    2300834: rock1
+    2300836: rock2
+    2300838: rock3
+    2300840: rock4
+    2300842: rock5
+    2300844: rock6
+    2300846: rock7
+    2300848: roof
+    2300850: root
+    2300852: root 1
+    2300854: root 2
+    2300856: root 3
+    2300858: root 4
+    2300860: scenemockup:Mesh
+    2300862: shrineSymbol
+    2300864: shroom_house
+    2300866: shroomLump
+    2300868: shroomLump1
+    2300870: shroomLump2
+    2300872: shroomLump3
+    2300874: shroomLump4
+    2300876: shroomLump5
+    2300878: shroomLump6
+    2300880: shroomLump7
+    2300882: shroomLump8
+    2300884: shroomPenetration
+    2300886: shroomPenetration1
+    2300888: shroomPenetration_side
+    2300890: shroomPenetration_side 1
+    2300892: shroomPenetration_side 2
+    2300894: shroomPenetration_side 3
+    2300896: shroomPenetration_side 4
+    2300898: shroomSmall
+    2300900: shroomSmall1
+    2300902: shroomSmall10
+    2300904: shroomSmall11
+    2300906: shroomSmall2
+    2300908: shroomSmall3
+    2300910: shroomSmall4
+    2300912: shroomSmall5
+    2300914: shroomSmall6
+    2300916: shroomSmall7
+    2300918: shroomSmall8
+    2300920: shroomSmall9
+    2300922: stonePath_base
+    2300924: stonePath_base1
+    2300926: stonePath_base2
+    2300928: stonePath_base3
+    2300930: stonePath_base4
+    2300932: stonePath_base5
+    2300934: stonePath_base6
+    2300936: stonePath_base7
+    2300938: stonePath_border
+    2300940: stonePath_border1
+    2300942: stonePath_border10
+    2300944: stonePath_border11
+    2300946: stonePath_border12
+    2300948: stonePath_border13
+    2300950: stonePath_border14
+    2300952: stonePath_border15
+    2300954: stonePath_border2
+    2300956: stonePath_border3
+    2300958: stonePath_border4
+    2300960: stonePath_border5
+    2300962: stonePath_border6
+    2300964: stonePath_border7
+    2300966: stonePath_border8
+    2300968: stonePath_border9
+    2300970: tree
+    2300972: tree1
+    3300000: cobblestone
+    3300002: cobblestone 1
+    3300004: cobblestone 2
+    3300006: cobblestone 3
+    3300008: cobblestone 4
+    3300010: cobblestone 5
+    3300012: cobblestone 6
+    3300014: cobblestone 7
+    3300016: cobblestone1
+    3300018: cobblestone1 1
+    3300020: cobblestone1 2
+    3300022: cobblestone1 3
+    3300024: cobblestone1 4
+    3300026: cobblestone1 5
+    3300028: cobblestone1 6
+    3300030: cobblestone1 7
+    3300032: cobblestone2
+    3300034: cobblestone2 1
+    3300036: cobblestone2 2
+    3300038: cobblestone2 3
+    3300040: cobblestone2 4
+    3300042: cobblestone2 5
+    3300044: cobblestone2 6
+    3300046: cobblestone2 7
+    3300048: cobblestone3
+    3300050: cobblestone3 1
+    3300052: cobblestone3 2
+    3300054: cobblestone3 3
+    3300056: cobblestone3 4
+    3300058: cobblestone3 5
+    3300060: cobblestone3 6
+    3300062: cobblestone3 7
+    3300064: cobblestone4
+    3300066: cobblestone4 1
+    3300068: cobblestone4 2
+    3300070: cobblestone4 3
+    3300072: cobblestone4 4
+    3300074: cobblestone4 5
+    3300076: cobblestone4 6
+    3300078: cobblestone4 7
+    3300080: cobblestone5
+    3300082: cobblestone5 1
+    3300084: cobblestone5 2
+    3300086: cobblestone5 3
+    3300088: cobblestone5 4
+    3300090: cobblestone5 5
+    3300092: cobblestone5 6
+    3300094: cobblestone5 7
+    3300096: cobblestone6
+    3300098: cobblestone6 1
+    3300100: cobblestone6 2
+    3300102: cobblestone6 3
+    3300104: cobblestone6 4
+    3300106: cobblestone6 5
+    3300108: cobblestone6 6
+    3300110: cobblestone6 7
+    3300112: cobblestone7
+    3300114: cobblestone7 1
+    3300116: cobblestone7 2
+    3300118: cobblestone7 3
+    3300120: cobblestone7 4
+    3300122: cobblestone7 5
+    3300124: cobblestone7 6
+    3300126: cobblestone7 7
+    3300128: cobblestone8
+    3300130: cobblestone8 1
+    3300132: cobblestone8 2
+    3300134: cobblestone8 3
+    3300136: cobblestone8 4
+    3300138: cobblestone8 5
+    3300140: cobblestone8 6
+    3300142: cobblestone8 7
+    3300144: cobblestone9
+    3300146: cobblestone9 1
+    3300148: cobblestone9 2
+    3300150: cobblestone9 3
+    3300152: cobblestone9 4
+    3300154: cobblestone9 5
+    3300156: cobblestone9 6
+    3300158: cobblestone9 7
+    3300160: door
+    3300162: fence_arm
+    3300164: fence_arm14
+    3300166: fence_arm15
+    3300168: fence_arm16
+    3300170: fence_arm17
+    3300172: fence_arm18
+    3300174: fence_arm19
+    3300176: fence_arm20
+    3300178: fence_arm21
+    3300180: fence_arm22
+    3300182: fence_arm23
+    3300184: fence_pole13
+    3300186: fence_pole14
+    3300188: fence_pole17
+    3300190: fence_pole20
+    3300192: fence_pole23
+    3300194: fence_pole24
+    3300196: fence_pole25
+    3300198: fence_pole26
+    3300200: fence_pole27
+    3300202: fence_pole28
+    3300204: fence_pole29
+    3300206: fence_pole30
+    3300208: fence_pole31
+    3300210: fence_pole32
+    3300212: glowFruit
+    3300214: glowFruit 1
+    3300216: glowFruit 2
+    3300218: glowFruit 3
+    3300220: glowFruit_string
+    3300222: glowFruit_string1
+    3300224: glowFruit_string2
+    3300226: glowFruit_string3
+    3300228: grass
+    3300230: grass 1
+    3300232: grass 10
+    3300234: grass 11
+    3300236: grass 12
+    3300238: grass 13
+    3300240: grass 14
+    3300242: grass 15
+    3300244: grass 16
+    3300246: grass 17
+    3300248: grass 18
+    3300250: grass 19
+    3300252: grass 2
+    3300254: grass 20
+    3300256: grass 21
+    3300258: grass 22
+    3300260: grass 23
+    3300262: grass 24
+    3300264: grass 25
+    3300266: grass 3
+    3300268: grass 4
+    3300270: grass 5
+    3300272: grass 6
+    3300274: grass 7
+    3300276: grass 8
+    3300278: grass 9
+    3300280: grass1
+    3300282: grass1 1
+    3300284: grass1 10
+    3300286: grass1 11
+    3300288: grass1 12
+    3300290: grass1 13
+    3300292: grass1 14
+    3300294: grass1 15
+    3300296: grass1 16
+    3300298: grass1 17
+    3300300: grass1 18
+    3300302: grass1 19
+    3300304: grass1 2
+    3300306: grass1 20
+    3300308: grass1 21
+    3300310: grass1 22
+    3300312: grass1 23
+    3300314: grass1 24
+    3300316: grass1 25
+    3300318: grass1 3
+    3300320: grass1 4
+    3300322: grass1 5
+    3300324: grass1 6
+    3300326: grass1 7
+    3300328: grass1 8
+    3300330: grass1 9
+    3300332: grass2
+    3300334: grass2 1
+    3300336: grass2 10
+    3300338: grass2 11
+    3300340: grass2 12
+    3300342: grass2 13
+    3300344: grass2 14
+    3300346: grass2 15
+    3300348: grass2 16
+    3300350: grass2 17
+    3300352: grass2 18
+    3300354: grass2 19
+    3300356: grass2 2
+    3300358: grass2 20
+    3300360: grass2 21
+    3300362: grass2 22
+    3300364: grass2 23
+    3300366: grass2 24
+    3300368: grass2 25
+    3300370: grass2 3
+    3300372: grass2 4
+    3300374: grass2 5
+    3300376: grass2 6
+    3300378: grass2 7
+    3300380: grass2 8
+    3300382: grass2 9
+    3300384: grass3
+    3300386: grass3 1
+    3300388: grass3 10
+    3300390: grass3 11
+    3300392: grass3 12
+    3300394: grass3 13
+    3300396: grass3 14
+    3300398: grass3 15
+    3300400: grass3 16
+    3300402: grass3 17
+    3300404: grass3 18
+    3300406: grass3 19
+    3300408: grass3 2
+    3300410: grass3 20
+    3300412: grass3 21
+    3300414: grass3 22
+    3300416: grass3 23
+    3300418: grass3 24
+    3300420: grass3 25
+    3300422: grass3 3
+    3300424: grass3 4
+    3300426: grass3 5
+    3300428: grass3 6
+    3300430: grass3 7
+    3300432: grass3 8
+    3300434: grass3 9
+    3300436: grass4
+    3300438: grass4 1
+    3300440: grass4 10
+    3300442: grass4 11
+    3300444: grass4 12
+    3300446: grass4 13
+    3300448: grass4 14
+    3300450: grass4 15
+    3300452: grass4 16
+    3300454: grass4 17
+    3300456: grass4 18
+    3300458: grass4 19
+    3300460: grass4 2
+    3300462: grass4 20
+    3300464: grass4 21
+    3300466: grass4 22
+    3300468: grass4 23
+    3300470: grass4 24
+    3300472: grass4 25
+    3300474: grass4 3
+    3300476: grass4 4
+    3300478: grass4 5
+    3300480: grass4 6
+    3300482: grass4 7
+    3300484: grass4 8
+    3300486: grass4 9
+    3300488: grassShort
+    3300490: grassShort 1
+    3300492: grassShort 10
+    3300494: grassShort 2
+    3300496: grassShort 3
+    3300498: grassShort 4
+    3300500: grassShort 5
+    3300502: grassShort 6
+    3300504: grassShort 7
+    3300506: grassShort 8
+    3300508: grassShort 9
+    3300510: grassShort1
+    3300512: grassShort1 1
+    3300514: grassShort1 10
+    3300516: grassShort1 2
+    3300518: grassShort1 3
+    3300520: grassShort1 4
+    3300522: grassShort1 5
+    3300524: grassShort1 6
+    3300526: grassShort1 7
+    3300528: grassShort1 8
+    3300530: grassShort1 9
+    3300532: grassShort2
+    3300534: grassShort2 1
+    3300536: grassShort2 10
+    3300538: grassShort2 2
+    3300540: grassShort2 3
+    3300542: grassShort2 4
+    3300544: grassShort2 5
+    3300546: grassShort2 6
+    3300548: grassShort2 7
+    3300550: grassShort2 8
+    3300552: grassShort2 9
+    3300554: grassShort3
+    3300556: grassShort3 1
+    3300558: grassShort3 10
+    3300560: grassShort3 2
+    3300562: grassShort3 3
+    3300564: grassShort3 4
+    3300566: grassShort3 5
+    3300568: grassShort3 6
+    3300570: grassShort3 7
+    3300572: grassShort3 8
+    3300574: grassShort3 9
+    3300576: grassShort4
+    3300578: grassShort4 1
+    3300580: grassShort4 10
+    3300582: grassShort4 2
+    3300584: grassShort4 3
+    3300586: grassShort4 4
+    3300588: grassShort4 5
+    3300590: grassShort4 6
+    3300592: grassShort4 7
+    3300594: grassShort4 8
+    3300596: grassShort4 9
+    3300598: grassShort5
+    3300600: grassShort5 1
+    3300602: grassShort5 10
+    3300604: grassShort5 2
+    3300606: grassShort5 3
+    3300608: grassShort5 4
+    3300610: grassShort5 5
+    3300612: grassShort5 6
+    3300614: grassShort5 7
+    3300616: grassShort5 8
+    3300618: grassShort5 9
+    3300620: lamp
+    3300622: lamp 1
+    3300624: lamp_pole
+    3300626: lamp_pole 1
+    3300628: plant
+    3300630: plant 1
+    3300632: plant 2
+    3300634: plant 3
+    3300636: plant 4
+    3300638: plant 5
+    3300640: plant 6
+    3300642: plant 7
+    3300644: plant 8
+    3300646: plant 9
+    3300648: plantBulb
+    3300650: plantBulb 1
+    3300652: plantBulb 2
+    3300654: plantBulb 3
+    3300656: plantBulb 4
+    3300658: plantBulb 5
+    3300660: plantBulb 6
+    3300662: plantBulb 7
+    3300664: plantBulb 8
+    3300666: plantBulb 9
+    3300668: plantBulb1
+    3300670: plantBulb1 1
+    3300672: plantBulb1 2
+    3300674: plantBulb1 3
+    3300676: plantBulb1 4
+    3300678: plantBulb1 5
+    3300680: plantBulb1 6
+    3300682: plantBulb1 7
+    3300684: plantBulb1 8
+    3300686: plantBulb1 9
+    3300688: plantBulb2
+    3300690: plantBulb2 1
+    3300692: plantBulb2 2
+    3300694: plantBulb2 3
+    3300696: plantBulb2 4
+    3300698: plantBulb2 5
+    3300700: plantBulb2 6
+    3300702: plantBulb2 7
+    3300704: plantBulb2 8
+    3300706: plantBulb2 9
+    3300708: plantBulb3
+    3300710: plantBulb3 1
+    3300712: plantBulb3 2
+    3300714: plantBulb3 3
+    3300716: plantBulb3 4
+    3300718: plantBulb3 5
+    3300720: plantBulb3 6
+    3300722: plantBulb3 7
+    3300724: plantBulb3 8
+    3300726: plantBulb3 9
+    3300728: plantBulb4
+    3300730: plantBulb4 1
+    3300732: plantBulb4 2
+    3300734: plantBulb4 3
+    3300736: plantBulb4 4
+    3300738: plantBulb4 5
+    3300740: plantBulb4 6
+    3300742: plantBulb4 7
+    3300744: plantBulb4 8
+    3300746: plantBulb4 9
+    3300748: plantBulb5
+    3300750: plantBulb5 1
+    3300752: plantBulb5 2
+    3300754: plantBulb5 3
+    3300756: plantBulb5 4
+    3300758: plantBulb5 5
+    3300760: plantBulb5 6
+    3300762: plantBulb5 7
+    3300764: plantBulb5 8
+    3300766: plantBulb5 9
+    3300768: plantBulb6
+    3300770: plantBulb6 1
+    3300772: plantBulb6 2
+    3300774: plantBulb6 3
+    3300776: plantBulb6 4
+    3300778: plantBulb6 5
+    3300780: plantBulb6 6
+    3300782: plantBulb6 7
+    3300784: plantBulb6 8
+    3300786: plantBulb6 9
+    3300788: plantBulb7
+    3300790: plantBulb7 1
+    3300792: plantBulb7 2
+    3300794: plantBulb7 3
+    3300796: plantBulb7 4
+    3300798: plantBulb7 5
+    3300800: plantBulb7 6
+    3300802: plantBulb7 7
+    3300804: plantBulb7 8
+    3300806: plantBulb7 9
+    3300808: plantBulb8
+    3300810: plantBulb8 1
+    3300812: plantBulb8 2
+    3300814: plantBulb8 3
+    3300816: plantBulb8 4
+    3300818: plantBulb8 5
+    3300820: plantBulb8 6
+    3300822: plantBulb8 7
+    3300824: plantBulb8 8
+    3300826: plantBulb8 9
+    3300828: polySurface1
+    3300830: polySurface2
+    3300832: rock
+    3300834: rock1
+    3300836: rock2
+    3300838: rock3
+    3300840: rock4
+    3300842: rock5
+    3300844: rock6
+    3300846: rock7
+    3300848: roof
+    3300850: root
+    3300852: root 1
+    3300854: root 2
+    3300856: root 3
+    3300858: root 4
+    3300860: scenemockup:Mesh
+    3300862: shrineSymbol
+    3300864: shroom_house
+    3300866: shroomLump
+    3300868: shroomLump1
+    3300870: shroomLump2
+    3300872: shroomLump3
+    3300874: shroomLump4
+    3300876: shroomLump5
+    3300878: shroomLump6
+    3300880: shroomLump7
+    3300882: shroomLump8
+    3300884: shroomPenetration
+    3300886: shroomPenetration1
+    3300888: shroomPenetration_side
+    3300890: shroomPenetration_side 1
+    3300892: shroomPenetration_side 2
+    3300894: shroomPenetration_side 3
+    3300896: shroomPenetration_side 4
+    3300898: shroomSmall
+    3300900: shroomSmall1
+    3300902: shroomSmall10
+    3300904: shroomSmall11
+    3300906: shroomSmall2
+    3300908: shroomSmall3
+    3300910: shroomSmall4
+    3300912: shroomSmall5
+    3300914: shroomSmall6
+    3300916: shroomSmall7
+    3300918: shroomSmall8
+    3300920: shroomSmall9
+    3300922: stonePath_base
+    3300924: stonePath_base1
+    3300926: stonePath_base2
+    3300928: stonePath_base3
+    3300930: stonePath_base4
+    3300932: stonePath_base5
+    3300934: stonePath_base6
+    3300936: stonePath_base7
+    3300938: stonePath_border
+    3300940: stonePath_border1
+    3300942: stonePath_border10
+    3300944: stonePath_border11
+    3300946: stonePath_border12
+    3300948: stonePath_border13
+    3300950: stonePath_border14
+    3300952: stonePath_border15
+    3300954: stonePath_border2
+    3300956: stonePath_border3
+    3300958: stonePath_border4
+    3300960: stonePath_border5
+    3300962: stonePath_border6
+    3300964: stonePath_border7
+    3300966: stonePath_border8
+    3300968: stonePath_border9
+    3300970: tree
+    3300972: tree1
+    4300000: scenemockup:Mesh
+    4300002: rock
+    4300004: rock1
+    4300006: rock2
+    4300008: rock3
+    4300010: rock4
+    4300012: rock5
+    4300014: rock6
+    4300016: rock7
+    4300018: polySurface1
+    4300020: polySurface2
+    4300022: shroom_house
+    4300024: shroomLump
+    4300026: shroomLump1
+    4300028: shroomLump2
+    4300030: shroomLump3
+    4300032: shroomLump4
+    4300034: shroomLump5
+    4300036: shroomLump6
+    4300038: shroomLump7
+    4300040: shroomLump8
+    4300042: shroomPenetration
+    4300044: shroomPenetration1
+    4300046: shrineSymbol
+    4300048: roof
+    4300050: door
+    4300052: fence_arm
+    4300054: fence_arm14
+    4300056: fence_arm15
+    4300058: fence_arm16
+    4300060: fence_arm17
+    4300062: fence_arm18
+    4300064: fence_arm19
+    4300066: fence_arm20
+    4300068: fence_arm21
+    4300070: fence_arm22
+    4300072: fence_arm23
+    4300074: fence_pole13
+    4300076: fence_pole14
+    4300078: fence_pole17
+    4300080: fence_pole20
+    4300082: fence_pole23
+    4300084: fence_pole24
+    4300086: fence_pole25
+    4300088: fence_pole26
+    4300090: fence_pole27
+    4300092: fence_pole28
+    4300094: fence_pole29
+    4300096: fence_pole30
+    4300098: fence_pole31
+    4300100: fence_pole32
+    4300102: shroomSmall
+    4300104: shroomSmall1
+    4300106: shroomSmall2
+    4300108: shroomSmall3
+    4300110: shroomSmall4
+    4300112: shroomSmall5
+    4300114: shroomSmall6
+    4300116: shroomSmall7
+    4300118: shroomSmall8
+    4300120: shroomSmall9
+    4300122: shroomSmall10
+    4300124: shroomSmall11
+    4300126: lamp_pole
+    4300128: lamp
+    4300130: lamp_pole
+    4300132: lamp
+    4300134: plant
+    4300136: plantBulb7
+    4300138: plantBulb6
+    4300140: plantBulb5
+    4300142: plantBulb4
+    4300144: plantBulb3
+    4300146: plantBulb2
+    4300148: plantBulb1
+    4300150: plantBulb
+    4300152: plantBulb8
+    4300154: plant
+    4300156: plantBulb7
+    4300158: plantBulb6
+    4300160: plantBulb5
+    4300162: plantBulb4
+    4300164: plantBulb3
+    4300166: plantBulb2
+    4300168: plantBulb1
+    4300170: plantBulb
+    4300172: plantBulb8
+    4300174: plant
+    4300176: plantBulb7
+    4300178: plantBulb6
+    4300180: plantBulb5
+    4300182: plantBulb4
+    4300184: plantBulb3
+    4300186: plantBulb2
+    4300188: plantBulb1
+    4300190: plantBulb
+    4300192: plantBulb8
+    4300194: plant
+    4300196: plantBulb7
+    4300198: plantBulb6
+    4300200: plantBulb5
+    4300202: plantBulb4
+    4300204: plantBulb3
+    4300206: plantBulb2
+    4300208: plantBulb1
+    4300210: plantBulb
+    4300212: plantBulb8
+    4300214: plant
+    4300216: plantBulb7
+    4300218: plantBulb6
+    4300220: plantBulb5
+    4300222: plantBulb4
+    4300224: plantBulb3
+    4300226: plantBulb2
+    4300228: plantBulb1
+    4300230: plantBulb
+    4300232: plantBulb8
+    4300234: plant
+    4300236: plantBulb7
+    4300238: plantBulb6
+    4300240: plantBulb5
+    4300242: plantBulb4
+    4300244: plantBulb3
+    4300246: plantBulb2
+    4300248: plantBulb1
+    4300250: plantBulb
+    4300252: plantBulb8
+    4300254: plant
+    4300256: plantBulb7
+    4300258: plantBulb6
+    4300260: plantBulb5
+    4300262: plantBulb4
+    4300264: plantBulb3
+    4300266: plantBulb2
+    4300268: plantBulb1
+    4300270: plantBulb
+    4300272: plantBulb8
+    4300274: plant
+    4300276: plantBulb7
+    4300278: plantBulb6
+    4300280: plantBulb5
+    4300282: plantBulb4
+    4300284: plantBulb3
+    4300286: plantBulb2
+    4300288: plantBulb1
+    4300290: plantBulb
+    4300292: plantBulb8
+    4300294: plant
+    4300296: plantBulb7
+    4300298: plantBulb6
+    4300300: plantBulb5
+    4300302: plantBulb4
+    4300304: plantBulb3
+    4300306: plantBulb2
+    4300308: plantBulb1
+    4300310: plantBulb
+    4300312: plantBulb8
+    4300314: shroomPenetration_side
+    4300316: root
+    4300318: root
+    4300320: shroomPenetration_side
+    4300322: shroomPenetration_side
+    4300324: root
+    4300326: shroomPenetration_side
+    4300328: root
+    4300330: shroomPenetration_side
+    4300332: root
+    4300334: glowFruit_string
+    4300336: glowFruit
+    4300338: glowFruit_string1
+    4300340: glowFruit
+    4300342: glowFruit_string2
+    4300344: glowFruit
+    4300346: glowFruit_string3
+    4300348: glowFruit
+    4300350: tree
+    4300352: tree1
+    4300354: plant
+    4300356: plantBulb7
+    4300358: plantBulb6
+    4300360: plantBulb5
+    4300362: plantBulb4
+    4300364: plantBulb3
+    4300366: plantBulb2
+    4300368: plantBulb1
+    4300370: plantBulb
+    4300372: plantBulb8
+    4300374: grassShort5
+    4300376: grassShort4
+    4300378: grassShort3
+    4300380: grassShort2
+    4300382: grassShort1
+    4300384: grassShort
+    4300386: grassShort5
+    4300388: grassShort4
+    4300390: grassShort3
+    4300392: grassShort2
+    4300394: grassShort1
+    4300396: grassShort
+    4300398: grassShort5
+    4300400: grassShort4
+    4300402: grassShort3
+    4300404: grassShort2
+    4300406: grassShort1
+    4300408: grassShort
+    4300410: grassShort5
+    4300412: grassShort4
+    4300414: grassShort3
+    4300416: grassShort2
+    4300418: grassShort1
+    4300420: grassShort
+    4300422: grassShort5
+    4300424: grassShort4
+    4300426: grassShort3
+    4300428: grassShort2
+    4300430: grassShort1
+    4300432: grassShort
+    4300434: grassShort5
+    4300436: grassShort4
+    4300438: grassShort3
+    4300440: grassShort2
+    4300442: grassShort1
+    4300444: grassShort
+    4300446: grassShort5
+    4300448: grassShort4
+    4300450: grassShort3
+    4300452: grassShort2
+    4300454: grassShort1
+    4300456: grassShort
+    4300458: grassShort5
+    4300460: grassShort4
+    4300462: grassShort3
+    4300464: grassShort2
+    4300466: grassShort1
+    4300468: grassShort
+    4300470: grassShort5
+    4300472: grassShort4
+    4300474: grassShort3
+    4300476: grassShort2
+    4300478: grassShort1
+    4300480: grassShort
+    4300482: grassShort5
+    4300484: grassShort4
+    4300486: grassShort3
+    4300488: grassShort2
+    4300490: grassShort1
+    4300492: grassShort
+    4300494: grassShort5
+    4300496: grassShort4
+    4300498: grassShort3
+    4300500: grassShort2
+    4300502: grassShort1
+    4300504: grassShort
+    4300506: grass
+    4300508: grass1
+    4300510: grass2
+    4300512: grass3
+    4300514: grass4
+    4300516: grass
+    4300518: grass1
+    4300520: grass2
+    4300522: grass3
+    4300524: grass4
+    4300526: grass
+    4300528: grass1
+    4300530: grass2
+    4300532: grass3
+    4300534: grass4
+    4300536: grass
+    4300538: grass1
+    4300540: grass2
+    4300542: grass3
+    4300544: grass4
+    4300546: grass
+    4300548: grass1
+    4300550: grass2
+    4300552: grass3
+    4300554: grass4
+    4300556: grass
+    4300558: grass1
+    4300560: grass2
+    4300562: grass3
+    4300564: grass4
+    4300566: grass
+    4300568: grass1
+    4300570: grass2
+    4300572: grass3
+    4300574: grass4
+    4300576: grass
+    4300578: grass1
+    4300580: grass2
+    4300582: grass3
+    4300584: grass4
+    4300586: grass
+    4300588: grass1
+    4300590: grass2
+    4300592: grass3
+    4300594: grass4
+    4300596: grass
+    4300598: grass1
+    4300600: grass2
+    4300602: grass3
+    4300604: grass4
+    4300606: grass
+    4300608: grass1
+    4300610: grass2
+    4300612: grass3
+    4300614: grass4
+    4300616: grass
+    4300618: grass1
+    4300620: grass2
+    4300622: grass3
+    4300624: grass4
+    4300626: grass
+    4300628: grass1
+    4300630: grass2
+    4300632: grass3
+    4300634: grass4
+    4300636: grass
+    4300638: grass1
+    4300640: grass2
+    4300642: grass3
+    4300644: grass4
+    4300646: grass
+    4300648: grass1
+    4300650: grass2
+    4300652: grass3
+    4300654: grass4
+    4300656: grass
+    4300658: grass1
+    4300660: grass2
+    4300662: grass3
+    4300664: grass4
+    4300666: grass
+    4300668: grass1
+    4300670: grass2
+    4300672: grass3
+    4300674: grass4
+    4300676: grass
+    4300678: grass1
+    4300680: grass2
+    4300682: grass3
+    4300684: grass4
+    4300686: grass
+    4300688: grass1
+    4300690: grass2
+    4300692: grass3
+    4300694: grass4
+    4300696: grass
+    4300698: grass1
+    4300700: grass2
+    4300702: grass3
+    4300704: grass4
+    4300706: grass
+    4300708: grass1
+    4300710: grass2
+    4300712: grass3
+    4300714: grass4
+    4300716: grass
+    4300718: grass1
+    4300720: grass2
+    4300722: grass3
+    4300724: grass4
+    4300726: grass
+    4300728: grass1
+    4300730: grass2
+    4300732: grass3
+    4300734: grass4
+    4300736: grass
+    4300738: grass1
+    4300740: grass2
+    4300742: grass3
+    4300744: grass4
+    4300746: grass
+    4300748: grass1
+    4300750: grass2
+    4300752: grass3
+    4300754: grass4
+    4300756: grass
+    4300758: grass1
+    4300760: grass2
+    4300762: grass3
+    4300764: grass4
+    4300766: stonePath_base
+    4300768: cobblestone
+    4300770: cobblestone1
+    4300772: cobblestone2
+    4300774: cobblestone3
+    4300776: cobblestone4
+    4300778: cobblestone5
+    4300780: cobblestone7
+    4300782: cobblestone6
+    4300784: cobblestone8
+    4300786: cobblestone9
+    4300788: stonePath_base1
+    4300790: cobblestone
+    4300792: cobblestone1
+    4300794: cobblestone2
+    4300796: cobblestone3
+    4300798: cobblestone4
+    4300800: cobblestone5
+    4300802: cobblestone7
+    4300804: cobblestone6
+    4300806: cobblestone8
+    4300808: cobblestone9
+    4300810: stonePath_base2
+    4300812: cobblestone
+    4300814: cobblestone1
+    4300816: cobblestone2
+    4300818: cobblestone3
+    4300820: cobblestone4
+    4300822: cobblestone5
+    4300824: cobblestone7
+    4300826: cobblestone6
+    4300828: cobblestone8
+    4300830: cobblestone9
+    4300832: stonePath_base3
+    4300834: cobblestone
+    4300836: cobblestone1
+    4300838: cobblestone2
+    4300840: cobblestone3
+    4300842: cobblestone4
+    4300844: cobblestone5
+    4300846: cobblestone7
+    4300848: cobblestone6
+    4300850: cobblestone8
+    4300852: cobblestone9
+    4300854: stonePath_base4
+    4300856: cobblestone
+    4300858: cobblestone1
+    4300860: cobblestone2
+    4300862: cobblestone3
+    4300864: cobblestone4
+    4300866: cobblestone5
+    4300868: cobblestone7
+    4300870: cobblestone6
+    4300872: cobblestone8
+    4300874: cobblestone9
+    4300876: stonePath_base5
+    4300878: cobblestone
+    4300880: cobblestone1
+    4300882: cobblestone2
+    4300884: cobblestone3
+    4300886: cobblestone4
+    4300888: cobblestone5
+    4300890: cobblestone7
+    4300892: cobblestone6
+    4300894: cobblestone8
+    4300896: cobblestone9
+    4300898: stonePath_base6
+    4300900: cobblestone
+    4300902: cobblestone1
+    4300904: cobblestone2
+    4300906: cobblestone3
+    4300908: cobblestone4
+    4300910: cobblestone5
+    4300912: cobblestone7
+    4300914: cobblestone6
+    4300916: cobblestone8
+    4300918: cobblestone9
+    4300920: stonePath_border
+    4300922: stonePath_border1
+    4300924: stonePath_border2
+    4300926: stonePath_border3
+    4300928: stonePath_border4
+    4300930: stonePath_border5
+    4300932: stonePath_border6
+    4300934: stonePath_border7
+    4300936: stonePath_border8
+    4300938: stonePath_border9
+    4300940: stonePath_border10
+    4300942: stonePath_border11
+    4300944: stonePath_border12
+    4300946: stonePath_border13
+    4300948: stonePath_base7
+    4300950: cobblestone
+    4300952: cobblestone1
+    4300954: cobblestone2
+    4300956: cobblestone3
+    4300958: cobblestone4
+    4300960: cobblestone5
+    4300962: cobblestone7
+    4300964: cobblestone6
+    4300966: cobblestone8
+    4300968: cobblestone9
+    4300970: stonePath_border14
+    4300972: stonePath_border15
+    7400000: Take 001
+    9500000: //RootNode
+    10800000: ambientLight1
+    10800002: directionalLight1
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

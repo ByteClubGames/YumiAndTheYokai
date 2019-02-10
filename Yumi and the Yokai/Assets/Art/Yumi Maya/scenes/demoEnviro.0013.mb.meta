@@ -1,0 +1,955 @@
+fileFormatVersion: 2
+guid: 8953e11e39e4b3e41bf123ec819a36ec
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: ambientLight1
+    100002: //RootNode
+    100004: directionalLight1
+    100006: doorway
+    100008: fence_arm
+    100010: fence_arm14
+    100012: fence_arm15
+    100014: fence_arm16
+    100016: fence_arm17
+    100018: fence_arm18
+    100020: fence_arm19
+    100022: fence_arm20
+    100024: fence_arm21
+    100026: fence_arm22
+    100028: fence_arm23
+    100030: fence_arm_group
+    100032: fence_group
+    100034: fence_pole13
+    100036: fence_pole14
+    100038: fence_pole17
+    100040: fence_pole20
+    100042: fence_pole23
+    100044: fence_pole24
+    100046: fence_pole25
+    100048: fence_pole26
+    100050: fence_pole27
+    100052: fence_pole28
+    100054: fence_pole29
+    100056: fence_pole30
+    100058: fence_pole31
+    100060: fence_pole32
+    100062: fence_pole_group
+    100064: glowFruit
+    100066: glowFruit 1
+    100068: glowFruit 2
+    100070: glowFruit 3
+    100072: glowFruit_string
+    100074: glowFruit_string1
+    100076: glowFruit_string2
+    100078: glowFruit_string3
+    100080: lamp
+    100082: lamp 1
+    100084: lamp_group
+    100086: lamp_parts
+    100088: lamp_parts1
+    100090: lamp_pole
+    100092: lamp_pole 1
+    100094: levelSelect_view
+    100096: plant
+    100098: plant 1
+    100100: plant 2
+    100102: plant 3
+    100104: plant 4
+    100106: plant 5
+    100108: plant 6
+    100110: plant_group
+    100112: plant_parts
+    100114: plant_parts1
+    100116: plant_parts2
+    100118: plant_parts3
+    100120: plant_parts4
+    100122: plant_parts5
+    100124: plant_parts6
+    100126: plantBulb
+    100128: plantBulb 1
+    100130: plantBulb 2
+    100132: plantBulb 3
+    100134: plantBulb 4
+    100136: plantBulb 5
+    100138: plantBulb 6
+    100140: plantBulb1
+    100142: plantBulb1 1
+    100144: plantBulb1 2
+    100146: plantBulb1 3
+    100148: plantBulb1 4
+    100150: plantBulb1 5
+    100152: plantBulb1 6
+    100154: plantBulb2
+    100156: plantBulb2 1
+    100158: plantBulb2 2
+    100160: plantBulb2 3
+    100162: plantBulb2 4
+    100164: plantBulb2 5
+    100166: plantBulb2 6
+    100168: plantBulb3
+    100170: plantBulb3 1
+    100172: plantBulb3 2
+    100174: plantBulb3 3
+    100176: plantBulb3 4
+    100178: plantBulb3 5
+    100180: plantBulb3 6
+    100182: plantBulb4
+    100184: plantBulb4 1
+    100186: plantBulb4 2
+    100188: plantBulb4 3
+    100190: plantBulb4 4
+    100192: plantBulb4 5
+    100194: plantBulb4 6
+    100196: plantBulb5
+    100198: plantBulb5 1
+    100200: plantBulb5 2
+    100202: plantBulb5 3
+    100204: plantBulb5 4
+    100206: plantBulb5 5
+    100208: plantBulb5 6
+    100210: plantBulb6
+    100212: plantBulb6 1
+    100214: plantBulb6 2
+    100216: plantBulb6 3
+    100218: plantBulb6 4
+    100220: plantBulb6 5
+    100222: plantBulb6 6
+    100224: plantBulb7
+    100226: plantBulb7 1
+    100228: plantBulb7 2
+    100230: plantBulb7 3
+    100232: plantBulb7 4
+    100234: plantBulb7 5
+    100236: plantBulb7 6
+    100238: plantBulb8
+    100240: plantBulb8 1
+    100242: plantBulb8 2
+    100244: plantBulb8 3
+    100246: plantBulb8 4
+    100248: plantBulb8 5
+    100250: plantBulb8 6
+    100252: plantBulb_group
+    100254: plantBulb_group 1
+    100256: plantBulb_group 2
+    100258: plantBulb_group 3
+    100260: plantBulb_group 4
+    100262: plantBulb_group 5
+    100264: plantBulb_group 6
+    100266: pPlane1
+    100268: rock
+    100270: rock1
+    100272: rock2
+    100274: rock3
+    100276: rock4
+    100278: rock5
+    100280: rock6
+    100282: rock_group
+    100284: root
+    100286: root 1
+    100288: root 2
+    100290: root 3
+    100292: root 4
+    100294: scenemockup:Mesh
+    100296: shrineSymbol
+    100298: shroom_house
+    100300: shroom_parts
+    100302: shroomLump
+    100304: shroomLump1
+    100306: shroomLump2
+    100308: shroomLump3
+    100310: shroomLump4
+    100312: shroomLump5
+    100314: shroomLump6
+    100316: shroomLump7
+    100318: shroomLump8
+    100320: shroomLump_group
+    100322: shroomPenetration
+    100324: shroomPenetration1
+    100326: shroomPenetration_group
+    100328: shroomPenetration_side
+    100330: shroomPenetration_side 1
+    100332: shroomPenetration_side 2
+    100334: shroomPenetration_side 3
+    100336: shroomPenetration_side 4
+    100338: shroomRoot_group
+    100340: shroomRoot_parts
+    100342: shroomRoot_parts1
+    100344: shroomRoot_parts2
+    100346: shroomRoot_parts3
+    100348: shroomRoot_parts4
+    100350: shroomSmall
+    100352: shroomSmall1
+    100354: shroomSmall10
+    100356: shroomSmall11
+    100358: shroomSmall2
+    100360: shroomSmall3
+    100362: shroomSmall4
+    100364: shroomSmall5
+    100366: shroomSmall6
+    100368: shroomSmall7
+    100370: shroomSmall8
+    100372: shroomSmall9
+    100374: shroomSmall_group
+    100376: terrain
+    100378: transform1
+    100380: transform1 1
+    100382: tree
+    400000: ambientLight1
+    400002: //RootNode
+    400004: directionalLight1
+    400006: doorway
+    400008: fence_arm
+    400010: fence_arm14
+    400012: fence_arm15
+    400014: fence_arm16
+    400016: fence_arm17
+    400018: fence_arm18
+    400020: fence_arm19
+    400022: fence_arm20
+    400024: fence_arm21
+    400026: fence_arm22
+    400028: fence_arm23
+    400030: fence_arm_group
+    400032: fence_group
+    400034: fence_pole13
+    400036: fence_pole14
+    400038: fence_pole17
+    400040: fence_pole20
+    400042: fence_pole23
+    400044: fence_pole24
+    400046: fence_pole25
+    400048: fence_pole26
+    400050: fence_pole27
+    400052: fence_pole28
+    400054: fence_pole29
+    400056: fence_pole30
+    400058: fence_pole31
+    400060: fence_pole32
+    400062: fence_pole_group
+    400064: glowFruit
+    400066: glowFruit 1
+    400068: glowFruit 2
+    400070: glowFruit 3
+    400072: glowFruit_string
+    400074: glowFruit_string1
+    400076: glowFruit_string2
+    400078: glowFruit_string3
+    400080: lamp
+    400082: lamp 1
+    400084: lamp_group
+    400086: lamp_parts
+    400088: lamp_parts1
+    400090: lamp_pole
+    400092: lamp_pole 1
+    400094: levelSelect_view
+    400096: plant
+    400098: plant 1
+    400100: plant 2
+    400102: plant 3
+    400104: plant 4
+    400106: plant 5
+    400108: plant 6
+    400110: plant_group
+    400112: plant_parts
+    400114: plant_parts1
+    400116: plant_parts2
+    400118: plant_parts3
+    400120: plant_parts4
+    400122: plant_parts5
+    400124: plant_parts6
+    400126: plantBulb
+    400128: plantBulb 1
+    400130: plantBulb 2
+    400132: plantBulb 3
+    400134: plantBulb 4
+    400136: plantBulb 5
+    400138: plantBulb 6
+    400140: plantBulb1
+    400142: plantBulb1 1
+    400144: plantBulb1 2
+    400146: plantBulb1 3
+    400148: plantBulb1 4
+    400150: plantBulb1 5
+    400152: plantBulb1 6
+    400154: plantBulb2
+    400156: plantBulb2 1
+    400158: plantBulb2 2
+    400160: plantBulb2 3
+    400162: plantBulb2 4
+    400164: plantBulb2 5
+    400166: plantBulb2 6
+    400168: plantBulb3
+    400170: plantBulb3 1
+    400172: plantBulb3 2
+    400174: plantBulb3 3
+    400176: plantBulb3 4
+    400178: plantBulb3 5
+    400180: plantBulb3 6
+    400182: plantBulb4
+    400184: plantBulb4 1
+    400186: plantBulb4 2
+    400188: plantBulb4 3
+    400190: plantBulb4 4
+    400192: plantBulb4 5
+    400194: plantBulb4 6
+    400196: plantBulb5
+    400198: plantBulb5 1
+    400200: plantBulb5 2
+    400202: plantBulb5 3
+    400204: plantBulb5 4
+    400206: plantBulb5 5
+    400208: plantBulb5 6
+    400210: plantBulb6
+    400212: plantBulb6 1
+    400214: plantBulb6 2
+    400216: plantBulb6 3
+    400218: plantBulb6 4
+    400220: plantBulb6 5
+    400222: plantBulb6 6
+    400224: plantBulb7
+    400226: plantBulb7 1
+    400228: plantBulb7 2
+    400230: plantBulb7 3
+    400232: plantBulb7 4
+    400234: plantBulb7 5
+    400236: plantBulb7 6
+    400238: plantBulb8
+    400240: plantBulb8 1
+    400242: plantBulb8 2
+    400244: plantBulb8 3
+    400246: plantBulb8 4
+    400248: plantBulb8 5
+    400250: plantBulb8 6
+    400252: plantBulb_group
+    400254: plantBulb_group 1
+    400256: plantBulb_group 2
+    400258: plantBulb_group 3
+    400260: plantBulb_group 4
+    400262: plantBulb_group 5
+    400264: plantBulb_group 6
+    400266: pPlane1
+    400268: rock
+    400270: rock1
+    400272: rock2
+    400274: rock3
+    400276: rock4
+    400278: rock5
+    400280: rock6
+    400282: rock_group
+    400284: root
+    400286: root 1
+    400288: root 2
+    400290: root 3
+    400292: root 4
+    400294: scenemockup:Mesh
+    400296: shrineSymbol
+    400298: shroom_house
+    400300: shroom_parts
+    400302: shroomLump
+    400304: shroomLump1
+    400306: shroomLump2
+    400308: shroomLump3
+    400310: shroomLump4
+    400312: shroomLump5
+    400314: shroomLump6
+    400316: shroomLump7
+    400318: shroomLump8
+    400320: shroomLump_group
+    400322: shroomPenetration
+    400324: shroomPenetration1
+    400326: shroomPenetration_group
+    400328: shroomPenetration_side
+    400330: shroomPenetration_side 1
+    400332: shroomPenetration_side 2
+    400334: shroomPenetration_side 3
+    400336: shroomPenetration_side 4
+    400338: shroomRoot_group
+    400340: shroomRoot_parts
+    400342: shroomRoot_parts1
+    400344: shroomRoot_parts2
+    400346: shroomRoot_parts3
+    400348: shroomRoot_parts4
+    400350: shroomSmall
+    400352: shroomSmall1
+    400354: shroomSmall10
+    400356: shroomSmall11
+    400358: shroomSmall2
+    400360: shroomSmall3
+    400362: shroomSmall4
+    400364: shroomSmall5
+    400366: shroomSmall6
+    400368: shroomSmall7
+    400370: shroomSmall8
+    400372: shroomSmall9
+    400374: shroomSmall_group
+    400376: terrain
+    400378: transform1
+    400380: transform1 1
+    400382: tree
+    2000000: levelSelect_view
+    2100000: lambert1
+    2100002: grass
+    2100004: stone
+    2100006: shroom_bod
+    2100008: shroom_top
+    2100010: woodNatural
+    2100012: woodPainted
+    2100014: glowFruit_skin_shader
+    2100016: glowFruit_shader
+    2100018: paper
+    2100020: plant_shader
+    2100022: plantBulb_shader
+    2300000: doorway
+    2300002: fence_arm
+    2300004: fence_arm14
+    2300006: fence_arm15
+    2300008: fence_arm16
+    2300010: fence_arm17
+    2300012: fence_arm18
+    2300014: fence_arm19
+    2300016: fence_arm20
+    2300018: fence_arm21
+    2300020: fence_arm22
+    2300022: fence_arm23
+    2300024: fence_pole13
+    2300026: fence_pole14
+    2300028: fence_pole17
+    2300030: fence_pole20
+    2300032: fence_pole23
+    2300034: fence_pole24
+    2300036: fence_pole25
+    2300038: fence_pole26
+    2300040: fence_pole27
+    2300042: fence_pole28
+    2300044: fence_pole29
+    2300046: fence_pole30
+    2300048: fence_pole31
+    2300050: fence_pole32
+    2300052: glowFruit
+    2300054: glowFruit 1
+    2300056: glowFruit 2
+    2300058: glowFruit 3
+    2300060: glowFruit_string
+    2300062: glowFruit_string1
+    2300064: glowFruit_string2
+    2300066: glowFruit_string3
+    2300068: lamp
+    2300070: lamp 1
+    2300072: lamp_pole
+    2300074: lamp_pole 1
+    2300076: plant
+    2300078: plant 1
+    2300080: plant 2
+    2300082: plant 3
+    2300084: plant 4
+    2300086: plant 5
+    2300088: plant 6
+    2300090: plantBulb
+    2300092: plantBulb 1
+    2300094: plantBulb 2
+    2300096: plantBulb 3
+    2300098: plantBulb 4
+    2300100: plantBulb 5
+    2300102: plantBulb 6
+    2300104: plantBulb1
+    2300106: plantBulb1 1
+    2300108: plantBulb1 2
+    2300110: plantBulb1 3
+    2300112: plantBulb1 4
+    2300114: plantBulb1 5
+    2300116: plantBulb1 6
+    2300118: plantBulb2
+    2300120: plantBulb2 1
+    2300122: plantBulb2 2
+    2300124: plantBulb2 3
+    2300126: plantBulb2 4
+    2300128: plantBulb2 5
+    2300130: plantBulb2 6
+    2300132: plantBulb3
+    2300134: plantBulb3 1
+    2300136: plantBulb3 2
+    2300138: plantBulb3 3
+    2300140: plantBulb3 4
+    2300142: plantBulb3 5
+    2300144: plantBulb3 6
+    2300146: plantBulb4
+    2300148: plantBulb4 1
+    2300150: plantBulb4 2
+    2300152: plantBulb4 3
+    2300154: plantBulb4 4
+    2300156: plantBulb4 5
+    2300158: plantBulb4 6
+    2300160: plantBulb5
+    2300162: plantBulb5 1
+    2300164: plantBulb5 2
+    2300166: plantBulb5 3
+    2300168: plantBulb5 4
+    2300170: plantBulb5 5
+    2300172: plantBulb5 6
+    2300174: plantBulb6
+    2300176: plantBulb6 1
+    2300178: plantBulb6 2
+    2300180: plantBulb6 3
+    2300182: plantBulb6 4
+    2300184: plantBulb6 5
+    2300186: plantBulb6 6
+    2300188: plantBulb7
+    2300190: plantBulb7 1
+    2300192: plantBulb7 2
+    2300194: plantBulb7 3
+    2300196: plantBulb7 4
+    2300198: plantBulb7 5
+    2300200: plantBulb7 6
+    2300202: plantBulb8
+    2300204: plantBulb8 1
+    2300206: plantBulb8 2
+    2300208: plantBulb8 3
+    2300210: plantBulb8 4
+    2300212: plantBulb8 5
+    2300214: plantBulb8 6
+    2300216: pPlane1
+    2300218: rock
+    2300220: rock1
+    2300222: rock2
+    2300224: rock3
+    2300226: rock4
+    2300228: rock5
+    2300230: rock6
+    2300232: root
+    2300234: root 1
+    2300236: root 2
+    2300238: root 3
+    2300240: root 4
+    2300242: scenemockup:Mesh
+    2300244: shrineSymbol
+    2300246: shroom_house
+    2300248: shroomLump
+    2300250: shroomLump1
+    2300252: shroomLump2
+    2300254: shroomLump3
+    2300256: shroomLump4
+    2300258: shroomLump5
+    2300260: shroomLump6
+    2300262: shroomLump7
+    2300264: shroomLump8
+    2300266: shroomPenetration
+    2300268: shroomPenetration1
+    2300270: shroomPenetration_side
+    2300272: shroomPenetration_side 1
+    2300274: shroomPenetration_side 2
+    2300276: shroomPenetration_side 3
+    2300278: shroomPenetration_side 4
+    2300280: shroomSmall
+    2300282: shroomSmall1
+    2300284: shroomSmall10
+    2300286: shroomSmall11
+    2300288: shroomSmall2
+    2300290: shroomSmall3
+    2300292: shroomSmall4
+    2300294: shroomSmall5
+    2300296: shroomSmall6
+    2300298: shroomSmall7
+    2300300: shroomSmall8
+    2300302: shroomSmall9
+    2300304: terrain
+    2300306: tree
+    3300000: doorway
+    3300002: fence_arm
+    3300004: fence_arm14
+    3300006: fence_arm15
+    3300008: fence_arm16
+    3300010: fence_arm17
+    3300012: fence_arm18
+    3300014: fence_arm19
+    3300016: fence_arm20
+    3300018: fence_arm21
+    3300020: fence_arm22
+    3300022: fence_arm23
+    3300024: fence_pole13
+    3300026: fence_pole14
+    3300028: fence_pole17
+    3300030: fence_pole20
+    3300032: fence_pole23
+    3300034: fence_pole24
+    3300036: fence_pole25
+    3300038: fence_pole26
+    3300040: fence_pole27
+    3300042: fence_pole28
+    3300044: fence_pole29
+    3300046: fence_pole30
+    3300048: fence_pole31
+    3300050: fence_pole32
+    3300052: glowFruit
+    3300054: glowFruit 1
+    3300056: glowFruit 2
+    3300058: glowFruit 3
+    3300060: glowFruit_string
+    3300062: glowFruit_string1
+    3300064: glowFruit_string2
+    3300066: glowFruit_string3
+    3300068: lamp
+    3300070: lamp 1
+    3300072: lamp_pole
+    3300074: lamp_pole 1
+    3300076: plant
+    3300078: plant 1
+    3300080: plant 2
+    3300082: plant 3
+    3300084: plant 4
+    3300086: plant 5
+    3300088: plant 6
+    3300090: plantBulb
+    3300092: plantBulb 1
+    3300094: plantBulb 2
+    3300096: plantBulb 3
+    3300098: plantBulb 4
+    3300100: plantBulb 5
+    3300102: plantBulb 6
+    3300104: plantBulb1
+    3300106: plantBulb1 1
+    3300108: plantBulb1 2
+    3300110: plantBulb1 3
+    3300112: plantBulb1 4
+    3300114: plantBulb1 5
+    3300116: plantBulb1 6
+    3300118: plantBulb2
+    3300120: plantBulb2 1
+    3300122: plantBulb2 2
+    3300124: plantBulb2 3
+    3300126: plantBulb2 4
+    3300128: plantBulb2 5
+    3300130: plantBulb2 6
+    3300132: plantBulb3
+    3300134: plantBulb3 1
+    3300136: plantBulb3 2
+    3300138: plantBulb3 3
+    3300140: plantBulb3 4
+    3300142: plantBulb3 5
+    3300144: plantBulb3 6
+    3300146: plantBulb4
+    3300148: plantBulb4 1
+    3300150: plantBulb4 2
+    3300152: plantBulb4 3
+    3300154: plantBulb4 4
+    3300156: plantBulb4 5
+    3300158: plantBulb4 6
+    3300160: plantBulb5
+    3300162: plantBulb5 1
+    3300164: plantBulb5 2
+    3300166: plantBulb5 3
+    3300168: plantBulb5 4
+    3300170: plantBulb5 5
+    3300172: plantBulb5 6
+    3300174: plantBulb6
+    3300176: plantBulb6 1
+    3300178: plantBulb6 2
+    3300180: plantBulb6 3
+    3300182: plantBulb6 4
+    3300184: plantBulb6 5
+    3300186: plantBulb6 6
+    3300188: plantBulb7
+    3300190: plantBulb7 1
+    3300192: plantBulb7 2
+    3300194: plantBulb7 3
+    3300196: plantBulb7 4
+    3300198: plantBulb7 5
+    3300200: plantBulb7 6
+    3300202: plantBulb8
+    3300204: plantBulb8 1
+    3300206: plantBulb8 2
+    3300208: plantBulb8 3
+    3300210: plantBulb8 4
+    3300212: plantBulb8 5
+    3300214: plantBulb8 6
+    3300216: pPlane1
+    3300218: rock
+    3300220: rock1
+    3300222: rock2
+    3300224: rock3
+    3300226: rock4
+    3300228: rock5
+    3300230: rock6
+    3300232: root
+    3300234: root 1
+    3300236: root 2
+    3300238: root 3
+    3300240: root 4
+    3300242: scenemockup:Mesh
+    3300244: shrineSymbol
+    3300246: shroom_house
+    3300248: shroomLump
+    3300250: shroomLump1
+    3300252: shroomLump2
+    3300254: shroomLump3
+    3300256: shroomLump4
+    3300258: shroomLump5
+    3300260: shroomLump6
+    3300262: shroomLump7
+    3300264: shroomLump8
+    3300266: shroomPenetration
+    3300268: shroomPenetration1
+    3300270: shroomPenetration_side
+    3300272: shroomPenetration_side 1
+    3300274: shroomPenetration_side 2
+    3300276: shroomPenetration_side 3
+    3300278: shroomPenetration_side 4
+    3300280: shroomSmall
+    3300282: shroomSmall1
+    3300284: shroomSmall10
+    3300286: shroomSmall11
+    3300288: shroomSmall2
+    3300290: shroomSmall3
+    3300292: shroomSmall4
+    3300294: shroomSmall5
+    3300296: shroomSmall6
+    3300298: shroomSmall7
+    3300300: shroomSmall8
+    3300302: shroomSmall9
+    3300304: terrain
+    3300306: tree
+    4300000: scenemockup:Mesh
+    4300002: terrain
+    4300004: rock
+    4300006: rock1
+    4300008: rock2
+    4300010: rock3
+    4300012: rock4
+    4300014: rock5
+    4300016: rock6
+    4300018: shroom_house
+    4300020: shroomLump
+    4300022: shroomLump1
+    4300024: shroomLump2
+    4300026: shroomLump3
+    4300028: shroomLump4
+    4300030: shroomLump5
+    4300032: shroomLump6
+    4300034: shroomLump7
+    4300036: shroomLump8
+    4300038: shroomPenetration
+    4300040: shroomPenetration1
+    4300042: doorway
+    4300044: shrineSymbol
+    4300046: fence_arm
+    4300048: fence_arm14
+    4300050: fence_arm15
+    4300052: fence_arm16
+    4300054: fence_arm17
+    4300056: fence_arm18
+    4300058: fence_arm19
+    4300060: fence_arm20
+    4300062: fence_arm21
+    4300064: fence_arm22
+    4300066: fence_arm23
+    4300068: fence_pole13
+    4300070: fence_pole14
+    4300072: fence_pole17
+    4300074: fence_pole20
+    4300076: fence_pole23
+    4300078: fence_pole24
+    4300080: fence_pole25
+    4300082: fence_pole26
+    4300084: fence_pole27
+    4300086: fence_pole28
+    4300088: fence_pole29
+    4300090: fence_pole30
+    4300092: fence_pole31
+    4300094: fence_pole32
+    4300096: tree
+    4300098: glowFruit_string
+    4300100: glowFruit
+    4300102: glowFruit_string1
+    4300104: glowFruit
+    4300106: glowFruit_string2
+    4300108: glowFruit
+    4300110: glowFruit_string3
+    4300112: glowFruit
+    4300114: shroomSmall
+    4300116: shroomSmall1
+    4300118: shroomSmall2
+    4300120: shroomSmall3
+    4300122: shroomSmall4
+    4300124: shroomSmall5
+    4300126: shroomSmall6
+    4300128: shroomSmall7
+    4300130: shroomSmall8
+    4300132: shroomSmall9
+    4300134: shroomSmall10
+    4300136: shroomSmall11
+    4300138: lamp_pole
+    4300140: lamp
+    4300142: lamp_pole
+    4300144: lamp
+    4300146: plant
+    4300148: plantBulb7
+    4300150: plantBulb6
+    4300152: plantBulb5
+    4300154: plantBulb4
+    4300156: plantBulb3
+    4300158: plantBulb2
+    4300160: plantBulb1
+    4300162: plantBulb
+    4300164: plantBulb8
+    4300166: plant
+    4300168: plantBulb7
+    4300170: plantBulb6
+    4300172: plantBulb5
+    4300174: plantBulb4
+    4300176: plantBulb3
+    4300178: plantBulb2
+    4300180: plantBulb1
+    4300182: plantBulb
+    4300184: plantBulb8
+    4300186: plant
+    4300188: plantBulb7
+    4300190: plantBulb6
+    4300192: plantBulb5
+    4300194: plantBulb4
+    4300196: plantBulb3
+    4300198: plantBulb2
+    4300200: plantBulb1
+    4300202: plantBulb
+    4300204: plantBulb8
+    4300206: plant
+    4300208: plantBulb7
+    4300210: plantBulb6
+    4300212: plantBulb5
+    4300214: plantBulb4
+    4300216: plantBulb3
+    4300218: plantBulb2
+    4300220: plantBulb1
+    4300222: plantBulb
+    4300224: plantBulb8
+    4300226: plant
+    4300228: plantBulb7
+    4300230: plantBulb6
+    4300232: plantBulb5
+    4300234: plantBulb4
+    4300236: plantBulb3
+    4300238: plantBulb2
+    4300240: plantBulb1
+    4300242: plantBulb
+    4300244: plantBulb8
+    4300246: plant
+    4300248: plantBulb7
+    4300250: plantBulb6
+    4300252: plantBulb5
+    4300254: plantBulb4
+    4300256: plantBulb3
+    4300258: plantBulb2
+    4300260: plantBulb1
+    4300262: plantBulb
+    4300264: plantBulb8
+    4300266: plant
+    4300268: plantBulb7
+    4300270: plantBulb6
+    4300272: plantBulb5
+    4300274: plantBulb4
+    4300276: plantBulb3
+    4300278: plantBulb2
+    4300280: plantBulb1
+    4300282: plantBulb
+    4300284: plantBulb8
+    4300286: shroomPenetration_side
+    4300288: root
+    4300290: root
+    4300292: shroomPenetration_side
+    4300294: shroomPenetration_side
+    4300296: root
+    4300298: shroomPenetration_side
+    4300300: root
+    4300302: shroomPenetration_side
+    4300304: root
+    4300306: pPlane1
+    7400000: Take 001
+    9500000: //RootNode
+    10800000: ambientLight1
+    10800002: directionalLight1
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

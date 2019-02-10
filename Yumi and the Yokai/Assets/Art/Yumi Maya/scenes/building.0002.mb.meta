@@ -1,0 +1,248 @@
+fileFormatVersion: 2
+guid: 76ffce1032ab1c24a97da24e15ec2c9e
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: pCylinder1
+    100004: polySurface1
+    100006: polySurface2
+    100008: polySurface2 1
+    100010: scenemockup:Mesh
+    100012: transform1
+    100014: transform2
+    100016: transform3
+    100018: tree_spiral_base_0001:group
+    100020: tree_spiral_base_0001:group1
+    100022: tree_spiral_base_0001:group1_pasted__pCylinder3
+    100024: tree_spiral_base_0001:group2
+    100026: tree_spiral_base_0001:group2_pasted__pCylinder3
+    100028: tree_spiral_base_0001:pasted__pCylinder1
+    100030: tree_spiral_base_0001:pasted__pCylinder1 1
+    100032: tree_spiral_base_0001:pasted__pCylinder1 2
+    100034: tree_spiral_base_0001:pasted__pCylinder2
+    100036: tree_spiral_base_0001:pasted__pCylinder2 1
+    100038: tree_spiral_base_0001:pasted__pCylinder2 2
+    100040: tree_spiral_base_0001:pasted__pCylinder3
+    100042: tree_spiral_base_0001:pasted__pCylinder3 1
+    100044: tree_spiral_base_0001:pasted__pCylinder3 2
+    100046: tree_spiral_base_0001:pasted__transform1
+    100048: tree_spiral_base_0001:pasted__transform1 1
+    100050: tree_spiral_base_0001:pasted__transform1 2
+    100052: tree_spiral_base_0001:pasted__transform2
+    100054: tree_spiral_base_0001:pasted__transform2 1
+    100056: tree_spiral_base_0001:pasted__transform2 2
+    100058: tree_spiral_base_0001:pCylinder1
+    100060: tree_spiral_base_0001:pCylinder2
+    100062: tree_spiral_base_0001:pCylinder3
+    100064: tree_spiral_base_0001:polySurface1
+    100066: tree_spiral_base_0001:polySurface10
+    100068: tree_spiral_base_0001:polySurface11
+    100070: tree_spiral_base_0001:polySurface12
+    100072: tree_spiral_base_0001:polySurface13
+    100074: tree_spiral_base_0001:polySurface14
+    100076: tree_spiral_base_0001:polySurface14 1
+    100078: tree_spiral_base_0001:polySurface2
+    100080: tree_spiral_base_0001:polySurface2 1
+    100082: tree_spiral_base_0001:polySurface3
+    100084: tree_spiral_base_0001:polySurface4
+    100086: tree_spiral_base_0001:polySurface5
+    100088: tree_spiral_base_0001:polySurface6
+    100090: tree_spiral_base_0001:polySurface6 1
+    100092: tree_spiral_base_0001:polySurface7
+    100094: tree_spiral_base_0001:polySurface8
+    100096: tree_spiral_base_0001:polySurface9
+    100098: tree_spiral_base_0001:transform1
+    100100: tree_spiral_base_0001:transform10
+    100102: tree_spiral_base_0001:transform11
+    100104: tree_spiral_base_0001:transform12
+    100106: tree_spiral_base_0001:transform13
+    100108: tree_spiral_base_0001:transform14
+    100110: tree_spiral_base_0001:transform15
+    100112: tree_spiral_base_0001:transform16
+    100114: tree_spiral_base_0001:transform17
+    100116: tree_spiral_base_0001:transform18
+    100118: tree_spiral_base_0001:transform19
+    100120: tree_spiral_base_0001:transform2
+    100122: tree_spiral_base_0001:transform20
+    100124: tree_spiral_base_0001:transform21
+    100126: tree_spiral_base_0001:transform22
+    100128: tree_spiral_base_0001:transform23
+    100130: tree_spiral_base_0001:transform3
+    100132: tree_spiral_base_0001:transform4
+    100134: tree_spiral_base_0001:transform5
+    100136: tree_spiral_base_0001:transform6
+    100138: tree_spiral_base_0001:transform7
+    100140: tree_spiral_base_0001:transform8
+    100142: tree_spiral_base_0001:transform9
+    400000: //RootNode
+    400002: pCylinder1
+    400004: polySurface1
+    400006: polySurface2
+    400008: polySurface2 1
+    400010: scenemockup:Mesh
+    400012: transform1
+    400014: transform2
+    400016: transform3
+    400018: tree_spiral_base_0001:group
+    400020: tree_spiral_base_0001:group1
+    400022: tree_spiral_base_0001:group1_pasted__pCylinder3
+    400024: tree_spiral_base_0001:group2
+    400026: tree_spiral_base_0001:group2_pasted__pCylinder3
+    400028: tree_spiral_base_0001:pasted__pCylinder1
+    400030: tree_spiral_base_0001:pasted__pCylinder1 1
+    400032: tree_spiral_base_0001:pasted__pCylinder1 2
+    400034: tree_spiral_base_0001:pasted__pCylinder2
+    400036: tree_spiral_base_0001:pasted__pCylinder2 1
+    400038: tree_spiral_base_0001:pasted__pCylinder2 2
+    400040: tree_spiral_base_0001:pasted__pCylinder3
+    400042: tree_spiral_base_0001:pasted__pCylinder3 1
+    400044: tree_spiral_base_0001:pasted__pCylinder3 2
+    400046: tree_spiral_base_0001:pasted__transform1
+    400048: tree_spiral_base_0001:pasted__transform1 1
+    400050: tree_spiral_base_0001:pasted__transform1 2
+    400052: tree_spiral_base_0001:pasted__transform2
+    400054: tree_spiral_base_0001:pasted__transform2 1
+    400056: tree_spiral_base_0001:pasted__transform2 2
+    400058: tree_spiral_base_0001:pCylinder1
+    400060: tree_spiral_base_0001:pCylinder2
+    400062: tree_spiral_base_0001:pCylinder3
+    400064: tree_spiral_base_0001:polySurface1
+    400066: tree_spiral_base_0001:polySurface10
+    400068: tree_spiral_base_0001:polySurface11
+    400070: tree_spiral_base_0001:polySurface12
+    400072: tree_spiral_base_0001:polySurface13
+    400074: tree_spiral_base_0001:polySurface14
+    400076: tree_spiral_base_0001:polySurface14 1
+    400078: tree_spiral_base_0001:polySurface2
+    400080: tree_spiral_base_0001:polySurface2 1
+    400082: tree_spiral_base_0001:polySurface3
+    400084: tree_spiral_base_0001:polySurface4
+    400086: tree_spiral_base_0001:polySurface5
+    400088: tree_spiral_base_0001:polySurface6
+    400090: tree_spiral_base_0001:polySurface6 1
+    400092: tree_spiral_base_0001:polySurface7
+    400094: tree_spiral_base_0001:polySurface8
+    400096: tree_spiral_base_0001:polySurface9
+    400098: tree_spiral_base_0001:transform1
+    400100: tree_spiral_base_0001:transform10
+    400102: tree_spiral_base_0001:transform11
+    400104: tree_spiral_base_0001:transform12
+    400106: tree_spiral_base_0001:transform13
+    400108: tree_spiral_base_0001:transform14
+    400110: tree_spiral_base_0001:transform15
+    400112: tree_spiral_base_0001:transform16
+    400114: tree_spiral_base_0001:transform17
+    400116: tree_spiral_base_0001:transform18
+    400118: tree_spiral_base_0001:transform19
+    400120: tree_spiral_base_0001:transform2
+    400122: tree_spiral_base_0001:transform20
+    400124: tree_spiral_base_0001:transform21
+    400126: tree_spiral_base_0001:transform22
+    400128: tree_spiral_base_0001:transform23
+    400130: tree_spiral_base_0001:transform3
+    400132: tree_spiral_base_0001:transform4
+    400134: tree_spiral_base_0001:transform5
+    400136: tree_spiral_base_0001:transform6
+    400138: tree_spiral_base_0001:transform7
+    400140: tree_spiral_base_0001:transform8
+    400142: tree_spiral_base_0001:transform9
+    2100000: lambert1
+    2300000: pCylinder1
+    2300002: polySurface2
+    2300004: scenemockup:Mesh
+    2300006: tree_spiral_base_0001:polySurface11
+    3300000: pCylinder1
+    3300002: polySurface2
+    3300004: scenemockup:Mesh
+    3300006: tree_spiral_base_0001:polySurface11
+    4300000: scenemockup:Mesh
+    4300002: pCylinder1
+    4300004: tree_spiral_base_0001:polySurface11
+    4300006: polySurface2
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
