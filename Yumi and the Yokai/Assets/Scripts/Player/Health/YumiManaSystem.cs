@@ -2,7 +2,7 @@
 ************************************************************************************************
 *Creator(s)........................................................Hunter Goodin, Spencer Wilson
 *Created...............................................................1/25/2018
-*Last Modified...........................................@11:30 AM on 02/02/2019
+*Last Modified...........................................@9:01 PM on 02/09/2019
 *Last Modified by..................................................Spencer Wilson
 *
 *Description: This script handle's the Yumi's Mana system. 
@@ -18,14 +18,16 @@ public class YumiManaSystem : MonoBehaviour
     #region Variables
 
     private float secondMeter;
-    public float currentTime;
+    private float currentTime;
     public int curMana = 50; 
     public int maxMana = 100;
     public int manaRegen = 10;
     public int manaDepleteYokai = -5;
     public int manaDepleteSpell = -30;
 
-    public YokaiSwitcher script;
+    public bool spellActive;
+
+    public YokaiSwitcher scriptYokaiSwitch;
 
     #region Legacy Code - Hunter
     //public float second = 1.0f;
@@ -34,27 +36,15 @@ public class YumiManaSystem : MonoBehaviour
 
     #endregion
 
-    void Start() // MAY DELETE, LEAVE UP TO KIERAN WHETHER OR NOT HE WOULD WANT THE VARIABLES INITIALIZED OR NOT
-    {
-
-    }
-
     void FixedUpdate()
     {
-        if (/*YOKAI IS NOT ACITVE AND PLAYER IS NOT CASTING SPELLS && curMana < maxMana*/ !script.getIsProjecting() /*Input.GetKey("y")*/) // Regenerates mana while the yokai is not active and the player is not casting any spells.
+        if (!scriptYokaiSwitch.getIsProjecting() /*Input.GetKey("y")*/) // Regenerates mana while the yokai is not active and the player is not casting any spells.
         {
-            ManaModifier(manaRegen); // Calls on a method that regenerates 10 units of mana every second.
+            ManaModifierTimed(manaRegen); // Calls on a method that regenerates 10 units of mana every second.
         }
-        else
+        else if (scriptYokaiSwitch.getIsProjecting()) // When Yumi is using the yokai
         {
-            if (/*While Yokai is in scene*/ script.getIsProjecting() /*Input.GetKey("z")*/) // When Yumi is using the yokai
-            {
-                ManaModifier(manaDepleteYokai);
-            }
-            else if (Input.GetKeyDown("x")) // When Yumi is using spells.
-            {
-                UseManaSpell(manaDepleteSpell);
-            }
+                ManaModifierTimed(manaDepleteYokai);
         }
 
         if (curMana > maxMana) // Checks if the current mana value is above the maximum mana. If so, set the current mana value max mana's value.
@@ -77,12 +67,19 @@ public class YumiManaSystem : MonoBehaviour
         #endregion
     }
 
-    private void UseManaSpell(int x) // Takes in some integer x and subtracts it from the current mana.
+    #region Helper Functions
+
+    public void SpellIsActive() // Called on outside of script if a spell is active. If so, it calls on ManaModifierSpell().
+    {
+        ManaModifierSpell(manaDepleteSpell);
+    }
+
+    private void ManaModifierSpell(int x) // Takes in some integer x and subtracts it from the current mana.
     {
         curMana += x; 
     }
 
-    private void ManaModifier(int x)
+    private void ManaModifierTimed(int x) // Takes in some integer x and modifies curMana's value on a per second basis.
     {
         currentTime = Time.time;
 
@@ -93,6 +90,15 @@ public class YumiManaSystem : MonoBehaviour
             secondMeter = 0f; // Reset secondMeter to zero.
         }
     }
+
+
+    // getCurMana()'s function is to help the spells and the projection scripts determine whether or not the player has enough mana to perform certain actions and for when the yokai is destroyed when the player runs out of mana.
+    public int getCurMana()
+    {
+        return curMana;
+    }
+
+    #endregion
 
     #region Legacy Code - Hunter
     //public void SetTime()               // This function is VERY key for the timing to work... 
