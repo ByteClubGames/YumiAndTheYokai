@@ -2,7 +2,7 @@
 ************************************************************************************************
 *Creator(s)........................................................Hunter Goodin, Spencer Wilson
 *Created...............................................................1/25/2018
-*Last Modified...........................................@9:33 PM on 02/09/2019
+*Last Modified...........................................@9:44 PM on 02/09/2019
 *Last Modified by..................................................Spencer Wilson
 *
 *Description: This script handle's the Yumi's Mana system. 
@@ -37,7 +37,7 @@ public class YumiManaSystem : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!scriptYokaiSwitch.getIsProjecting()) // Regenerates mana while the yokai is not active and the player is not casting any spells.
+        if (!scriptYokaiSwitch.getIsProjecting()) // Regenerates mana while the yokai is not active.
         {
             ManaModifierTimed(manaRegen); // Calls on a method that regenerates 10 units of mana every second.
         }
