@@ -2,7 +2,7 @@
 ************************************************************************************************
 *Creator(s)........................................................Hunter Goodin, Spencer Wilson
 *Created...............................................................1/25/2018
-*Last Modified...........................................@9:01 PM on 02/09/2019
+*Last Modified...........................................@9:33 PM on 02/09/2019
 *Last Modified by..................................................Spencer Wilson
 *
 *Description: This script handle's the Yumi's Mana system. 
@@ -17,17 +17,16 @@ public class YumiManaSystem : MonoBehaviour
 {
     #region Variables
 
+    public YokaiSwitcher scriptYokaiSwitch;
+
+    private bool lastNumSign; // lastNumberSign determines whether or not the last number passed to ManaModifierTimed was positive or negative. True = Positive, False = Negative.
+
     private float secondMeter;
-    private float currentTime;
     public int curMana = 50; 
     public int maxMana = 100;
     public int manaRegen = 10;
     public int manaDepleteYokai = -5;
     public int manaDepleteSpell = -30;
-
-    public bool spellActive;
-
-    public YokaiSwitcher scriptYokaiSwitch;
 
     #region Legacy Code - Hunter
     //public float second = 1.0f;
@@ -38,7 +37,7 @@ public class YumiManaSystem : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!scriptYokaiSwitch.getIsProjecting() /*Input.GetKey("y")*/) // Regenerates mana while the yokai is not active and the player is not casting any spells.
+        if (!scriptYokaiSwitch.getIsProjecting()) // Regenerates mana while the yokai is not active and the player is not casting any spells.
         {
             ManaModifierTimed(manaRegen); // Calls on a method that regenerates 10 units of mana every second.
         }
@@ -55,6 +54,7 @@ public class YumiManaSystem : MonoBehaviour
         {
             curMana = 0;
         }
+
         #region Legacy Code - Hunter
         //else if (curMana < maxMana)
         //{
@@ -81,7 +81,8 @@ public class YumiManaSystem : MonoBehaviour
 
     private void ManaModifierTimed(int x) // Takes in some integer x and modifies curMana's value on a per second basis.
     {
-        currentTime = Time.time;
+        if (lastNumSign != numSign(x))
+            secondMeter = 0f;
 
         secondMeter += Time.unscaledDeltaTime; // Incrementing secondMeter by the number of seconds that passed between the current frame and the last frame.
         if(secondMeter >= 1f)
@@ -89,13 +90,20 @@ public class YumiManaSystem : MonoBehaviour
             curMana += x;
             secondMeter = 0f; // Reset secondMeter to zero.
         }
+        lastNumSign = numSign(x); // Assigns whether or not x is positive or not to lastNumSign.
     }
-
 
     // getCurMana()'s function is to help the spells and the projection scripts determine whether or not the player has enough mana to perform certain actions and for when the yokai is destroyed when the player runs out of mana.
     public int getCurMana()
     {
         return curMana;
+    }
+
+    public bool numSign(int f) // Determines wheter or not f is a positive number.
+    {
+        if (f - Mathf.Abs(f) == 0)
+            return true;
+        return false;
     }
 
     #endregion
