@@ -24,15 +24,14 @@ using UnityEngine;
 public class EarthSpellMechanics : MonoBehaviour
 {
     #region Global Variables
-    private Vector2 mousePos;
     private Collision col;
     public int maxSpells = 3;
     public int destroyTime = 5;
+    float scalarvalue;
     #endregion
 
     private void Start()
     {
-        mousePos = Input.mousePosition;
         Destroy(transform.parent.gameObject, destroyTime); //Destroy timer starts on creation
     }
 
@@ -43,6 +42,11 @@ public class EarthSpellMechanics : MonoBehaviour
         {
             Destroy(GameObject.FindGameObjectsWithTag("Earth Spell Object")[0]);
         }
+    }
+
+    public void Initialize(float scalar)
+    {
+        transform.parent.gameObject.transform.localScale -= new Vector3(0, 0.3865392F * scalar, 0);
     }
 
     #region Collision Check to stop growth - ***Currently incomplete***

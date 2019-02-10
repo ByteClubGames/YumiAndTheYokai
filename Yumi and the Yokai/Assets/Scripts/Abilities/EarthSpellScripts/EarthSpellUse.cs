@@ -33,6 +33,7 @@ public class EarthSpellUse : MonoBehaviour
     public GameObject eSpell;
     public Vector3 playerinput = new Vector3(1, 1, 0); //gets player input
     public Vector3 normalVector;
+    public float scalar; 
     #endregion
 
     // Update is called once per frame
@@ -89,18 +90,23 @@ public class EarthSpellUse : MonoBehaviour
                 if (!spellOverlap)
                 {
                     Debug.DrawRay(playerinput, 4 * yumiHit.normal, Color.black);
-                    Ray heightRayMiddle = new Ray(playerinput, 4 * yumiHit.normal);
-                    Vector3 playerinputleft = new Vector3(yumiHit.normal.x, yumiHit.normal.y, yumiHit.normal.z);
-                    Vector3 playerinputright = new Vector3(yumiHit.normal.x, yumiHit.normal.y, yumiHit.normal.z);
-
-                    Ray heightRayLeft = new Ray(playerinput, 4 * yumiHit.normal);
-                    Ray heightRayRight = new Ray(playerinput, 4 * yumiHit.normal);
+                    Ray heightRay = new Ray(playerinput, 4 * yumiHit.normal);
                     RaycastHit heightHit;
-                    if (Physics.Raycast(heightRay, out heightHit) {
-                        float scaler = heightHit.distance / 4;
-                    }
+                    //Vector3 playerinputleft = new Vector3(yumiHit.normal.x, yumiHit.normal.y, yumiHit.normal.z);
+                    //Vector3 playerinputright = new Vector3(yumiHit.normal.x, yumiHit.normal.y, yumiHit.normal.z);
+                    //Ray heightRayLeft = new Ray(playerinput, 4 * yumiHit.normal);
+                    //Ray heightRayRight = new Ray(playerinput, 4 * yumiHit.normal);
 
-                    Instantiate(eSpell, playerinput, Quaternion.FromToRotation(Vector3.up, yumiHit.normal), scalar);
+                    if (Physics.Raycast(heightRay, out heightHit))
+                    {
+                        scalar = heightHit.distance / 4;
+                    }
+                    else scalar = 1;
+
+                    scalar = 1 - scalar;
+                    var earthPillar = Instantiate(eSpell, playerinput, Quaternion.FromToRotation(Vector3.up, yumiHit.normal));
+
+                    earthPillar.GetComponentInChildren<EarthSpellMechanics>().Initialize(scalar);
                 }
             }
         }
