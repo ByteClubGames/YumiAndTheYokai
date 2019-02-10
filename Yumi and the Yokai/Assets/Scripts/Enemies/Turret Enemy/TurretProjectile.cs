@@ -106,6 +106,5 @@ public class TurretProjectile : MonoBehaviour
         this.transform.rotation = transform.root.GetChild(1).GetChild(2).GetChild(1).rotation;
         //animationHead.SetBool("shoot", false);
         this.IsVisible(false); // object is set to invisible
-
     }
 }
