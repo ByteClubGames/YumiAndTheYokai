@@ -119,6 +119,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1223553529}
     m_Modifications:
+    - target: {fileID: 100002, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
+      propertyPath: m_Name
+      value: ui_yumi_heart_animated (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
+      propertyPath: m_Layer
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
+      propertyPath: m_Layer
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6
@@ -163,18 +175,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 100002, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
-      propertyPath: m_Name
-      value: ui_yumi_heart_animated (8)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100002, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
-      propertyPath: m_Layer
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
-      propertyPath: m_Layer
-      value: 20
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
 --- !u!1001 &217495429
@@ -184,6 +184,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1223553529}
     m_Modifications:
+    - target: {fileID: 100002, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
+      propertyPath: m_Name
+      value: ui_yumi_heart_animated (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
+      propertyPath: m_Layer
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
+      propertyPath: m_Layer
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.5
@@ -228,23 +240,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 100002, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
-      propertyPath: m_Name
-      value: ui_yumi_heart_animated (9)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100002, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
-      propertyPath: m_Layer
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
-      propertyPath: m_Layer
-      value: 20
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
 --- !u!4 &246391427 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 400002, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
+  m_CorrespondingSourceObject: {fileID: 400002, guid: d334032dd177c354aacd12d97aef39b2,
+    type: 3}
   m_PrefabInstance: {fileID: 105250392}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &251705506
@@ -259,7 +260,7 @@ GameObject:
   - component: {fileID: 251705509}
   - component: {fileID: 251705508}
   - component: {fileID: 251705507}
-  m_Layer: 18
+  m_Layer: 15
   m_Name: Platform1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -393,7 +394,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Texture: {fileID: 8400000, guid: d39915ba8cb1f604facbcf018cecb5aa, type: 2}
   m_UVRect:
     serializedVersion: 2
@@ -464,7 +466,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Texture: {fileID: 8400000, guid: 191d9aa9938728c4ea9572632914947c, type: 2}
   m_UVRect:
     serializedVersion: 2
@@ -487,6 +490,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1976417915214528, guid: b75317594c93c414f8a4de7245697318, type: 3}
+      propertyPath: m_Name
+      value: SceneDirector
+      objectReference: {fileID: 0}
     - target: {fileID: 4566254618901416, guid: b75317594c93c414f8a4de7245697318, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.12
@@ -531,11 +538,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1976417915214528, guid: b75317594c93c414f8a4de7245697318, type: 3}
-      propertyPath: m_Name
-      value: SceneDirector
-      objectReference: {fileID: 0}
-    - target: {fileID: 114115752763602322, guid: b75317594c93c414f8a4de7245697318, type: 3}
+    - target: {fileID: 114115752763602322, guid: b75317594c93c414f8a4de7245697318,
+        type: 3}
       propertyPath: actingCharacter
       value: 
       objectReference: {fileID: 1527943516}
@@ -543,31 +547,33 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 7.9000006
       objectReference: {fileID: 0}
-    - target: {fileID: 114367986031390568, guid: b75317594c93c414f8a4de7245697318, type: 3}
+    - target: {fileID: 4669051585924670, guid: b75317594c93c414f8a4de7245697318, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 4669051585924670, guid: b75317594c93c414f8a4de7245697318, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114367986031390568, guid: b75317594c93c414f8a4de7245697318,
+        type: 3}
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 1527943520}
-    - target: {fileID: 4669051585924670, guid: b75317594c93c414f8a4de7245697318, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.218089
-      objectReference: {fileID: 0}
     - target: {fileID: 4921008327642964, guid: b75317594c93c414f8a4de7245697318, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.9000006
       objectReference: {fileID: 0}
     - target: {fileID: 4921008327642964, guid: b75317594c93c414f8a4de7245697318, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.218089
-      objectReference: {fileID: 0}
-    - target: {fileID: 4669051585924670, guid: b75317594c93c414f8a4de7245697318, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -12
+      value: 3.48
       objectReference: {fileID: 0}
     - target: {fileID: 4921008327642964, guid: b75317594c93c414f8a4de7245697318, type: 3}
       propertyPath: m_LocalPosition.z
       value: -12
       objectReference: {fileID: 0}
-    - target: {fileID: 114753655619791136, guid: b75317594c93c414f8a4de7245697318, type: 3}
+    - target: {fileID: 114753655619791136, guid: b75317594c93c414f8a4de7245697318,
+        type: 3}
       propertyPath: InvisibleObject
       value: 
       objectReference: {fileID: 1847943621}
@@ -674,7 +680,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Texture: {fileID: 8400000, guid: c178ca0b92ef413498abe327297fcc44, type: 2}
   m_UVRect:
     serializedVersion: 2
@@ -697,6 +704,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1223553529}
     m_Modifications:
+    - target: {fileID: 100002, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
+      propertyPath: m_Name
+      value: ui_yumi_heart_animated (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
+      propertyPath: m_Layer
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
+      propertyPath: m_Layer
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6
@@ -741,18 +760,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 100002, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
-      propertyPath: m_Name
-      value: ui_yumi_heart_animated (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100002, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
-      propertyPath: m_Layer
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
-      propertyPath: m_Layer
-      value: 20
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
 --- !u!1001 &370813028
@@ -762,6 +769,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1223553529}
     m_Modifications:
+    - target: {fileID: 100002, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
+      propertyPath: m_Name
+      value: ui_yumi_heart_animated (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
+      propertyPath: m_Layer
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
+      propertyPath: m_Layer
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9
@@ -805,18 +824,6 @@ PrefabInstance:
     - target: {fileID: 400002, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 100002, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
-      propertyPath: m_Name
-      value: ui_yumi_heart_animated (10)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100002, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
-      propertyPath: m_Layer
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
-      propertyPath: m_Layer
-      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
@@ -914,7 +921,7 @@ GameObject:
   - component: {fileID: 439174994}
   - component: {fileID: 439174993}
   - component: {fileID: 439174992}
-  m_Layer: 18
+  m_Layer: 15
   m_Name: Platform3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1077,7 +1084,8 @@ Camera:
   m_StereoSeparation: 0.022
 --- !u!4 &465117012 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 400002, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
+  m_CorrespondingSourceObject: {fileID: 400002, guid: d334032dd177c354aacd12d97aef39b2,
+    type: 3}
   m_PrefabInstance: {fileID: 783740034}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &522252371
@@ -1217,7 +1225,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Texture: {fileID: 8400000, guid: fa534f1dfc6242f41ba55d60917dbe6f, type: 2}
   m_UVRect:
     serializedVersion: 2
@@ -1288,7 +1297,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Texture: {fileID: 8400000, guid: 07df22ef9b0ff4d489db58b9702f059a, type: 2}
   m_UVRect:
     serializedVersion: 2
@@ -1306,7 +1316,8 @@ CanvasRenderer:
   m_CullTransparentMesh: 0
 --- !u!4 &629135827 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 400002, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
+  m_CorrespondingSourceObject: {fileID: 400002, guid: d334032dd177c354aacd12d97aef39b2,
+    type: 3}
   m_PrefabInstance: {fileID: 1999646736}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &641550363
@@ -1417,12 +1428,14 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &663946696 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 400002, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
+  m_CorrespondingSourceObject: {fileID: 400002, guid: d334032dd177c354aacd12d97aef39b2,
+    type: 3}
   m_PrefabInstance: {fileID: 370813028}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &776802680 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 400002, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
+  m_CorrespondingSourceObject: {fileID: 400002, guid: d334032dd177c354aacd12d97aef39b2,
+    type: 3}
   m_PrefabInstance: {fileID: 1636194561}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &783740034
@@ -1432,6 +1445,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1223553529}
     m_Modifications:
+    - target: {fileID: 100002, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
+      propertyPath: m_Name
+      value: ui_yumi_heart_animated (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
+      propertyPath: m_Layer
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
+      propertyPath: m_Layer
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.5
@@ -1475,18 +1500,6 @@ PrefabInstance:
     - target: {fileID: 400002, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 100002, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
-      propertyPath: m_Name
-      value: ui_yumi_heart_animated (4)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100002, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
-      propertyPath: m_Layer
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
-      propertyPath: m_Layer
-      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
@@ -1772,7 +1785,7 @@ GameObject:
   - component: {fileID: 1088834852}
   - component: {fileID: 1088834851}
   - component: {fileID: 1088834850}
-  m_Layer: 18
+  m_Layer: 15
   m_Name: Platform5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1999,7 +2012,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Texture: {fileID: 8400000, guid: 8ff29250d8da9364ca72de1e16ddae8a, type: 2}
   m_UVRect:
     serializedVersion: 2
@@ -2178,7 +2192,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Texture: {fileID: 8400000, guid: ca73a804f95b0bf4fb946ab3695821e3, type: 2}
   m_UVRect:
     serializedVersion: 2
@@ -2241,6 +2256,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1223553529}
     m_Modifications:
+    - target: {fileID: 100002, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
+      propertyPath: m_Name
+      value: ui_yumi_heart_animated (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
+      propertyPath: m_Layer
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
+      propertyPath: m_Layer
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3
@@ -2284,18 +2311,6 @@ PrefabInstance:
     - target: {fileID: 400002, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 100002, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
-      propertyPath: m_Name
-      value: ui_yumi_heart_animated (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100002, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
-      propertyPath: m_Layer
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
-      propertyPath: m_Layer
-      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
@@ -2354,7 +2369,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Texture: {fileID: 8400000, guid: 4cacffe3d5110114ba92dad1f097afd2, type: 2}
   m_UVRect:
     serializedVersion: 2
@@ -2425,7 +2441,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Texture: {fileID: 8400000, guid: 455685ab91e18ff4c9d3b3cfe8a2ae6d, type: 2}
   m_UVRect:
     serializedVersion: 2
@@ -2665,7 +2682,7 @@ GameObject:
   - component: {fileID: 1387274795}
   - component: {fileID: 1387274794}
   - component: {fileID: 1387274793}
-  m_Layer: 18
+  m_Layer: 15
   m_Name: Platform4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2751,6 +2768,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1223553529}
     m_Modifications:
+    - target: {fileID: 100002, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
+      propertyPath: m_Name
+      value: ui_yumi_heart_animated (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
+      propertyPath: m_Layer
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
+      propertyPath: m_Layer
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3
@@ -2794,18 +2823,6 @@ PrefabInstance:
     - target: {fileID: 400002, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 100002, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
-      propertyPath: m_Name
-      value: ui_yumi_heart_animated (6)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100002, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
-      propertyPath: m_Layer
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
-      propertyPath: m_Layer
-      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
@@ -2986,12 +3003,14 @@ MeshRenderer:
   m_SortingOrder: 0
 --- !u!1 &1527943516 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 1722879200128792, guid: 0dd2532d035311a47a04cbce2f03df7f, type: 3}
+  m_CorrespondingSourceObject: {fileID: 1722879200128792, guid: 0dd2532d035311a47a04cbce2f03df7f,
+    type: 3}
   m_PrefabInstance: {fileID: 2001614239}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1527943520 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 4677459353645124, guid: 0dd2532d035311a47a04cbce2f03df7f, type: 3}
+  m_CorrespondingSourceObject: {fileID: 4677459353645124, guid: 0dd2532d035311a47a04cbce2f03df7f,
+    type: 3}
   m_PrefabInstance: {fileID: 2001614239}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1527943521
@@ -3011,6 +3030,22 @@ MonoBehaviour:
   healthPath: Assets/Scripts/Player/Health/CurrentHP.txt
   healthParent: {fileID: 0}
   hpArr: []
+--- !u!114 &1527943522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1527943516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc6267bc4bd7c264ca27e2d38b74444b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curMana: 50
+  maxMana: 99
+  second: 1
+  initialTime: 0
 --- !u!1 &1617409002
 GameObject:
   m_ObjectHideFlags: 0
@@ -3177,7 +3212,8 @@ Camera:
   m_StereoSeparation: 0.022
 --- !u!4 &1634141963 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 400002, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
+  m_CorrespondingSourceObject: {fileID: 400002, guid: d334032dd177c354aacd12d97aef39b2,
+    type: 3}
   m_PrefabInstance: {fileID: 217495429}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1636194561
@@ -3187,6 +3223,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1223553529}
     m_Modifications:
+    - target: {fileID: 100002, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
+      propertyPath: m_Name
+      value: ui_yumi_heart_animated (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
+      propertyPath: m_Layer
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
+      propertyPath: m_Layer
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.5
@@ -3230,18 +3278,6 @@ PrefabInstance:
     - target: {fileID: 400002, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 100002, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
-      propertyPath: m_Name
-      value: ui_yumi_heart_animated (7)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100002, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
-      propertyPath: m_Layer
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
-      propertyPath: m_Layer
-      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
@@ -3329,7 +3365,8 @@ Camera:
   m_StereoSeparation: 0.022
 --- !u!4 &1689949488 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 400002, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
+  m_CorrespondingSourceObject: {fileID: 400002, guid: d334032dd177c354aacd12d97aef39b2,
+    type: 3}
   m_PrefabInstance: {fileID: 1276163716}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1720638323
@@ -3482,7 +3519,8 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1758813561 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 400002, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
+  m_CorrespondingSourceObject: {fileID: 400002, guid: d334032dd177c354aacd12d97aef39b2,
+    type: 3}
   m_PrefabInstance: {fileID: 1933778005}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1795906792
@@ -3497,7 +3535,7 @@ GameObject:
   - component: {fileID: 1795906795}
   - component: {fileID: 1795906794}
   - component: {fileID: 1795906793}
-  m_Layer: 18
+  m_Layer: 15
   m_Name: Platform2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3942,7 +3980,8 @@ MeshRenderer:
   m_SortingOrder: 0
 --- !u!4 &1912104805 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 400002, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
+  m_CorrespondingSourceObject: {fileID: 400002, guid: d334032dd177c354aacd12d97aef39b2,
+    type: 3}
   m_PrefabInstance: {fileID: 1424490424}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1933778005
@@ -3952,6 +3991,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1223553529}
     m_Modifications:
+    - target: {fileID: 100002, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
+      propertyPath: m_Name
+      value: ui_yumi_heart_animated (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
+      propertyPath: m_Layer
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
+      propertyPath: m_Layer
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9
@@ -3995,18 +4046,6 @@ PrefabInstance:
     - target: {fileID: 400002, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 100002, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
-      propertyPath: m_Name
-      value: ui_yumi_heart_animated (5)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100002, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
-      propertyPath: m_Layer
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
-      propertyPath: m_Layer
-      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
@@ -4094,7 +4133,8 @@ Camera:
   m_StereoSeparation: 0.022
 --- !u!4 &1961819439 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 400002, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
+  m_CorrespondingSourceObject: {fileID: 400002, guid: d334032dd177c354aacd12d97aef39b2,
+    type: 3}
   m_PrefabInstance: {fileID: 357200412}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1988870490
@@ -4210,6 +4250,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1223553529}
     m_Modifications:
+    - target: {fileID: 100002, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
+      propertyPath: m_Name
+      value: ui_yumi_heart_animated (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
+      propertyPath: m_Layer
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
+      propertyPath: m_Layer
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.5
@@ -4254,18 +4306,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 100002, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
-      propertyPath: m_Name
-      value: ui_yumi_heart_animated (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 100002, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
-      propertyPath: m_Layer
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
-      propertyPath: m_Layer
-      value: 20
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d334032dd177c354aacd12d97aef39b2, type: 3}
 --- !u!1001 &2001614239
@@ -4275,13 +4315,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1722879200128792, guid: 0dd2532d035311a47a04cbce2f03df7f, type: 3}
+      propertyPath: m_Name
+      value: Yumi
+      objectReference: {fileID: 0}
     - target: {fileID: 4677459353645124, guid: 0dd2532d035311a47a04cbce2f03df7f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 13.02
       objectReference: {fileID: 0}
     - target: {fileID: 4677459353645124, guid: 0dd2532d035311a47a04cbce2f03df7f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.358089
+      value: 4.62
       objectReference: {fileID: 0}
     - target: {fileID: 4677459353645124, guid: 0dd2532d035311a47a04cbce2f03df7f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4319,15 +4363,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1722879200128792, guid: 0dd2532d035311a47a04cbce2f03df7f, type: 3}
-      propertyPath: m_Name
-      value: Yumi
-      objectReference: {fileID: 0}
-    - target: {fileID: 65695510702857316, guid: 0dd2532d035311a47a04cbce2f03df7f, type: 3}
+    - target: {fileID: 65695510702857316, guid: 0dd2532d035311a47a04cbce2f03df7f,
+        type: 3}
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 65695510702857316, guid: 0dd2532d035311a47a04cbce2f03df7f, type: 3}
+    - target: {fileID: 65695510702857316, guid: 0dd2532d035311a47a04cbce2f03df7f,
+        type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
@@ -4494,7 +4536,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Texture: {fileID: 8400000, guid: a44c9ac5ae230bb48a90853ea03b6200, type: 2}
   m_UVRect:
     serializedVersion: 2

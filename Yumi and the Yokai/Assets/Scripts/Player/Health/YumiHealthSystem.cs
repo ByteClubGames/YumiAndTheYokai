@@ -34,7 +34,7 @@ public class YumiHealthSystem : MonoBehaviour
     public string healthPath = "Assets/Scripts/Player/Health/CurrentHP.txt";	// This is what the health's .txt is. We saved the health in a .txt so the palyer can keep the current 
 
     public GameObject healthParent; 											// To be populated by the HealthAnimParent obj. This is for displaying health 
-    public Transform[] hpArr;								// An empty array 
+    public Transform[] hpArr;								                    // An empty array 
 
     void Start()	// On initialization... 
     {
@@ -79,9 +79,9 @@ public class YumiHealthSystem : MonoBehaviour
         if ( health <= 0 ) // if health is less than or equal to 0 
         {
             gameObject.SetActive(false); 	// Setting the player to inactive for a sec while we change her location 
-            playerObj.transform.position = new Vector3( GameObject.Find("CheckpointController").GetComponent<CheckpointSystem>().lastCheckpointCoords.x,
+            playerObj.transform.position = new Vector3(GameObject.Find("CheckpointController").GetComponent<CheckpointSystem>().lastCheckpointCoords.x,
                                                         GameObject.Find("CheckpointController").GetComponent<CheckpointSystem>().lastCheckpointCoords.y,
-                                                        GameObject.Find("CheckpointController").GetComponent<CheckpointSystem>().lastCheckpointCoords.z );	// TP her to the last checkpoint 
+                                                        GameObject.Find("CheckpointController").GetComponent<CheckpointSystem>().lastCheckpointCoords.z);	// TP her to the last checkpoint 
             gameObject.SetActive(true); 	// Set the player back to active 
             ResetHealth(); 					// Reset the health back to what we want her max health to be 
         }

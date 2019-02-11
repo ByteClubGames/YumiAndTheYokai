@@ -1,7 +1,7 @@
 ﻿/* 
  * Authors: Spencer Wilson, Keiran Glynn, Hunter Goodin
  * Date Created:  03/05/2018 @  3:11 PM
- * Date Modified: 09/07/2018 @  7:06 PM
+ * Date Modified: 02/09/2019 @  7:06 PM
  * Project: CompSciClubSpring2018
  * File: PlayerController.cs
  * Description: This class is responsible for spawning the yokai into the game. 
@@ -38,11 +38,18 @@ public class YokaiSwitcher : MonoBehaviour
 
         spawnLocation = new Vector3(yumi.transform.position.x + spawnOffset, yumi.transform.position.y, yumi.transform.position.z); // Instantiates the 
         Instantiate(yokai, spawnLocation, Quaternion.identity);
+        isProjecting = true; // Sets isProjecting to true.
     }
 
     public void DeleteYokai(GameObject yokai)
     {
         Destroy(yokai);
+        isProjecting = false; // Sets isProjecting to false.
+    }
+
+    public bool getIsProjecting()
+    {
+        return isProjecting;
     }
 }
 
