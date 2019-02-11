@@ -43,10 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0df83f5937cefc54dadb3d64cdd41a78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overlapRadius: 0.59
+  overlapRadius: 0.65
   spellOverlap: 0
   eSpell: {fileID: 1740868536000396, guid: a4c110281d3f3bd4ebd6e19b8e1a520d, type: 3}
-  particles: {fileID: 2115759608126315200, guid: 02fda3e7b6f18d249953afa050add1df,
-    type: 3}
   playerinput: {x: 1, y: 1, z: 0}
   normalVector: {x: 0, y: 0, z: 0}

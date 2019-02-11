@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 87185214}
   m_Layer: 15
   m_Name: P11
-  m_TagString: Untagged
+  m_TagString: EarthSpellSurface
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -217,7 +217,7 @@ GameObject:
   - component: {fileID: 112326337}
   m_Layer: 15
   m_Name: P2
-  m_TagString: Untagged
+  m_TagString: EarthSpellSurface
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -308,7 +308,7 @@ GameObject:
   - component: {fileID: 121710868}
   m_Layer: 15
   m_Name: Cube (4)
-  m_TagString: Untagged
+  m_TagString: EarthSpellSurface
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -456,7 +456,7 @@ GameObject:
   - component: {fileID: 242019316}
   m_Layer: 15
   m_Name: P6
-  m_TagString: Untagged
+  m_TagString: EarthSpellSurface
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -547,7 +547,7 @@ GameObject:
   - component: {fileID: 267995743}
   m_Layer: 15
   m_Name: P16
-  m_TagString: Untagged
+  m_TagString: EarthSpellSurface
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -638,7 +638,7 @@ GameObject:
   - component: {fileID: 349816192}
   m_Layer: 15
   m_Name: Cube (6)
-  m_TagString: Untagged
+  m_TagString: EarthSpellSurface
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -729,7 +729,7 @@ GameObject:
   - component: {fileID: 409160051}
   m_Layer: 15
   m_Name: Cube (5)
-  m_TagString: Untagged
+  m_TagString: EarthSpellSurface
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -907,7 +907,7 @@ PrefabInstance:
     - target: {fileID: 20555733478021576, guid: b75317594c93c414f8a4de7245697318,
         type: 3}
       propertyPath: orthographic
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 20555733478021576, guid: b75317594c93c414f8a4de7245697318,
         type: 3}
@@ -941,7 +941,7 @@ GameObject:
   - component: {fileID: 616453537}
   m_Layer: 15
   m_Name: Cube (2)
-  m_TagString: Untagged
+  m_TagString: EarthSpellSurface
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1032,7 +1032,7 @@ GameObject:
   - component: {fileID: 619953536}
   m_Layer: 15
   m_Name: P12
-  m_TagString: Untagged
+  m_TagString: EarthSpellSurface
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1123,7 +1123,7 @@ GameObject:
   - component: {fileID: 922179647}
   m_Layer: 15
   m_Name: Cube (9)
-  m_TagString: Untagged
+  m_TagString: EarthSpellSurface
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1214,7 +1214,7 @@ GameObject:
   - component: {fileID: 969900938}
   m_Layer: 15
   m_Name: P14
-  m_TagString: Untagged
+  m_TagString: EarthSpellSurface
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1305,7 +1305,7 @@ GameObject:
   - component: {fileID: 988894063}
   m_Layer: 15
   m_Name: P3
-  m_TagString: Untagged
+  m_TagString: EarthSpellSurface
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1396,7 +1396,7 @@ GameObject:
   - component: {fileID: 989553170}
   m_Layer: 15
   m_Name: Cube (7)
-  m_TagString: Untagged
+  m_TagString: EarthSpellSurface
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1487,7 +1487,7 @@ GameObject:
   - component: {fileID: 999045760}
   m_Layer: 15
   m_Name: P10
-  m_TagString: Untagged
+  m_TagString: EarthSpellSurface
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1578,7 +1578,7 @@ GameObject:
   - component: {fileID: 1004684263}
   m_Layer: 15
   m_Name: P7
-  m_TagString: Untagged
+  m_TagString: EarthSpellSurface
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1718,7 +1718,7 @@ GameObject:
   - component: {fileID: 1089873657}
   m_Layer: 15
   m_Name: P8
-  m_TagString: Untagged
+  m_TagString: EarthSpellSurface
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1809,7 +1809,7 @@ GameObject:
   - component: {fileID: 1114611048}
   m_Layer: 15
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: EarthSpellSurface
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1900,7 +1900,7 @@ GameObject:
   - component: {fileID: 1115851795}
   m_Layer: 15
   m_Name: P9
-  m_TagString: Untagged
+  m_TagString: EarthSpellSurface
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1977,6 +1977,63 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1115851793}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1281139550
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1740868536000396, guid: a4c110281d3f3bd4ebd6e19b8e1a520d, type: 3}
+      propertyPath: m_Name
+      value: earthPillar
+      objectReference: {fileID: 0}
+    - target: {fileID: 4061819887904742, guid: a4c110281d3f3bd4ebd6e19b8e1a520d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4061819887904742, guid: a4c110281d3f3bd4ebd6e19b8e1a520d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.548
+      objectReference: {fileID: 0}
+    - target: {fileID: 4061819887904742, guid: a4c110281d3f3bd4ebd6e19b8e1a520d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4061819887904742, guid: a4c110281d3f3bd4ebd6e19b8e1a520d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4061819887904742, guid: a4c110281d3f3bd4ebd6e19b8e1a520d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4061819887904742, guid: a4c110281d3f3bd4ebd6e19b8e1a520d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4061819887904742, guid: a4c110281d3f3bd4ebd6e19b8e1a520d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4061819887904742, guid: a4c110281d3f3bd4ebd6e19b8e1a520d, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4061819887904742, guid: a4c110281d3f3bd4ebd6e19b8e1a520d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4061819887904742, guid: a4c110281d3f3bd4ebd6e19b8e1a520d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4061819887904742, guid: a4c110281d3f3bd4ebd6e19b8e1a520d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a4c110281d3f3bd4ebd6e19b8e1a520d, type: 3}
 --- !u!1 &1395330234
 GameObject:
   m_ObjectHideFlags: 0
@@ -1991,7 +2048,7 @@ GameObject:
   - component: {fileID: 1395330236}
   m_Layer: 15
   m_Name: P1
-  m_TagString: Untagged
+  m_TagString: EarthSpellSurface
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2082,7 +2139,7 @@ GameObject:
   - component: {fileID: 1540214351}
   m_Layer: 15
   m_Name: Cube (1)
-  m_TagString: Untagged
+  m_TagString: EarthSpellSurface
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2173,7 +2230,7 @@ GameObject:
   - component: {fileID: 1566470698}
   m_Layer: 15
   m_Name: P13
-  m_TagString: Untagged
+  m_TagString: EarthSpellSurface
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2264,7 +2321,7 @@ GameObject:
   - component: {fileID: 1569596568}
   m_Layer: 15
   m_Name: P5
-  m_TagString: Untagged
+  m_TagString: EarthSpellSurface
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2355,7 +2412,7 @@ GameObject:
   - component: {fileID: 1597893326}
   m_Layer: 15
   m_Name: P4
-  m_TagString: Untagged
+  m_TagString: EarthSpellSurface
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2446,7 +2503,7 @@ GameObject:
   - component: {fileID: 1884100038}
   m_Layer: 15
   m_Name: Cube (3)
-  m_TagString: Untagged
+  m_TagString: EarthSpellSurface
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2610,7 +2667,7 @@ GameObject:
   - component: {fileID: 2030880308}
   m_Layer: 15
   m_Name: Cube (8)
-  m_TagString: Untagged
+  m_TagString: EarthSpellSurface
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2701,7 +2758,7 @@ GameObject:
   - component: {fileID: 2130952100}
   m_Layer: 15
   m_Name: P15
-  m_TagString: Untagged
+  m_TagString: EarthSpellSurface
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

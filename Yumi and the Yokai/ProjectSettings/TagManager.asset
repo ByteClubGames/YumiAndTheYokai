@@ -21,7 +21,7 @@ TagManager:
   - EarthSpellSurface
   - WallJump
   - WindSpellAgent
-  - Earth Particle Object
+  - _Earth Spell Object
   layers:
   - Default
   - TransparentFX
