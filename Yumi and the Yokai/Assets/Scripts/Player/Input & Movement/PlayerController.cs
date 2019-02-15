@@ -21,6 +21,7 @@ using Cinemachine;
 public class PlayerController : MonoBehaviour {
 
     public enum CharacterName {
+        Unassigned,
         Yokai,
         Yumi
     }
@@ -172,6 +173,91 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// Method that checks the chosen character name, and then applies the coresponding animation state machine parameter
+    /// based on the provided string. 
+    /// </summary>
+    /// <param name="StateParam">The parameter to trigger a given state in the animator.</param>    
+    private void ToggleAnimationState(string StateParam)
+    {
+        if(characterName == CharacterName.Yumi)
+        {
+            YumiAnimStateParam(StateParam);
+        }
+        else if(characterName == CharacterName.Yokai)
+        {
+            YokaiAnimStateParam(StateParam);
+        }
+        else
+        {
+            Debug.Log("Please Assign a valid Character Name to the Player Controller.");
+        }
+    }
+
+    /// <summary>
+    /// Sets the state machine parameter for the Yumi state machine.
+    /// </summary>
+    /// <param name="State_Parameter"></param>
+    private void YumiAnimStateParam(string State_Parameter)
+    {
+        switch (State_Parameter)
+        {
+            case "Run":
+                animator.SetTrigger("Run");
+                break;
+            case "Jump":
+                animator.SetTrigger("Jump");
+                break;
+            case "Fall":
+                animator.SetTrigger("Fall");
+                break;
+            case "Land":
+                animator.SetTrigger("Land");
+                break;
+            case "Idle":
+                animator.SetTrigger("Idle");
+                break;
+            default:
+                Debug.Log("Please assign a valid animation state parameter @ PlayerController.cs in YumiAnimStateParam.");
+                break;
+        }
+    }
+
+    /// <summary>
+    /// Sets the state machine parameter for the Yokai state machine.
+    /// </summary>
+    /// <param name="State_Parameter"></param>
+    private void YokaiAnimStateParam(string State_Parameter)
+    {
+        switch (State_Parameter)
+        {
+            case "Run":
+                animator.SetTrigger("Run");
+                break;
+            case "Jump":
+                animator.SetTrigger("Jump");
+                break;
+            case "Slide":
+                animator.SetTrigger("Slide");
+                break;
+            case "Turn":
+                animator.SetTrigger("Turn");
+                break;
+            case "Land":
+                animator.SetTrigger("Land");
+                break;
+            case "Fall":
+                animator.SetTrigger("Fall");
+                break;
+            case "Idle":
+                animator.SetTrigger("Idle");
+                break;
+            default:
+                Debug.Log("Please assign a valid animation state parameter @ PlayerController.cs in YokaiAnimStateParam.");
+                break;
+        }
+    }
+
     private void OnDestroy()
     {
         if (characterName == CharacterName.Yokai) {
@@ -256,7 +342,7 @@ public class PlayerController : MonoBehaviour {
         {
             wallJump = false;
             wallJumpActive = true;
-            animator.SetBool("Slide", false);
+            
 
 
             if (!firstPassFlag)
@@ -264,7 +350,7 @@ public class PlayerController : MonoBehaviour {
                 firstPassFlag = true; // Flag used to make sure this block is only executed once per wall jump
                 jumpPos = this.transform.position;
                 targetPos = this.transform.position;
-                animator.SetBool("Jump", true);
+                ToggleAnimationState("Jump");
 
                 if (isOnWallRight)
                 {
@@ -287,7 +373,7 @@ public class PlayerController : MonoBehaviour {
             else
             {
                 velocity.y += gravity * Time.deltaTime;
-                animator.SetBool("Jump", false);
+                
             }
 
             /* We want to continue our wall jump code, unless the player has wall jump a specific horizontal distance away from the wall.
@@ -313,21 +399,20 @@ public class PlayerController : MonoBehaviour {
             {
                 velocity.y = 0;
                 shortHop = false;
-                animator.SetBool("Jump", false);
-                animator.SetBool("Land", true);
-                animator.SetBool("Fall", false);
+                //animator.SetBool("Jump", false);
+                ToggleAnimationState("Land");
+                //animator.SetBool("Fall", false);
                 Debug.Log("isGrounded == " + isGrounded);
 
                 groundBufferFrames = defaultGroundBufferFrames;
             }
             else if(!isGrounded && velocity.y <= gravity * fallBuffer)
             {
-                animator.SetBool("Land", false);
-                animator.SetBool("Fall", true);
+                ToggleAnimationState("Fall");
             }
             else
             {
-                animator.SetBool("Land", false);
+                //animator.SetBool("Land", false);
             }
             
             
@@ -339,8 +424,7 @@ public class PlayerController : MonoBehaviour {
                 //flip sprite|animation
                 velocity.y = wallSlideSpeed * -1 * Time.deltaTime * 10.0f;
                 isOnWallLeft = global::WallJump.StillOnWall(this, false, boxCollider, isGrounded, platformMask);
-                animator.SetBool("Jump", false);
-                animator.SetBool("Slide", true);
+                ToggleAnimationState("Slide");
 
                 //if (wallJump)
                 //{
@@ -356,8 +440,7 @@ public class PlayerController : MonoBehaviour {
                 //flip sprite|animation
                 velocity.y = wallSlideSpeed * -1 * Time.deltaTime * 10.0f;
                 isOnWallRight = global::WallJump.StillOnWall(this, true, boxCollider, isGrounded, platformMask);
-                animator.SetBool("Jump", false);
-                animator.SetBool("Slide", true);
+                ToggleAnimationState("Slide");
 
                 //if (wallJump)
                 //{
@@ -370,7 +453,7 @@ public class PlayerController : MonoBehaviour {
             }
             else
             {
-                animator.SetBool("Slide", false);
+                //animator.SetBool("Slide", false);
             }
 
             //if (wallJumpActive)
@@ -388,7 +471,7 @@ public class PlayerController : MonoBehaviour {
                 //    animator.Play("yokai_run");
                 //}
 
-                animator.SetBool("Run", true);
+                ToggleAnimationState("Run");
                 spriteRenderer.flipX = (characterName == CharacterName.Yumi) ? true : false;
                 //spriteRenderer.flipX = true;
                 normalizedHorizontalSpeed = 1;
@@ -403,7 +486,7 @@ public class PlayerController : MonoBehaviour {
                 //    animator.Play("yokai_run");
                 //}
 
-                animator.SetBool("Run", true);
+                ToggleAnimationState("Run");
                 spriteRenderer.flipX = (characterName == CharacterName.Yumi) ? false : true;
                 normalizedHorizontalSpeed = -1;
 
@@ -411,7 +494,7 @@ public class PlayerController : MonoBehaviour {
             }
             else
             {
-                animator.SetBool("Run", false);
+                ToggleAnimationState("Idle");
                 normalizedHorizontalSpeed = 0;
             }
 
@@ -440,7 +523,7 @@ public class PlayerController : MonoBehaviour {
 
                 isGrounded = false;
                 velocity.y = Mathf.Sqrt(2f * jumpSpeed * -gravity);
-                animator.SetBool("Jump", true);
+                ToggleAnimationState("Jump");
             }
 
             if (!isGrounded && velocity.y > 0 && (shortHop || forcedShortHop))

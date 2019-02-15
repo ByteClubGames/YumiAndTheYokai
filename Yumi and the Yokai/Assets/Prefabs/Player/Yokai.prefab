@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f50b7f8295b71bc47879f72eadc8a443, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterName: 0
+  characterName: 1
   gravity: -40
   jumpSpeed: 3
   headCheck: 1.1
