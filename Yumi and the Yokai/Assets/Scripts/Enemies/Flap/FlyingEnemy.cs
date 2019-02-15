@@ -102,11 +102,11 @@ public class FlyingEnemy : MonoBehaviour
                 rb.MovePosition(transform.position + directionOfNextPosition * normalSpeed * Time.deltaTime);
             }
         }
-        if ((tempPosition.x - transform.position.x) < 0 && !facingRight) //flips the animation to face right
+        if ((tempPosition.x - transform.position.x) > 0 && !facingRight) //flips the animation to face right
         {
             Flip();
         }
-        else if ((tempPosition.x - transform.position.x) > 0 && facingRight) //flips the animation to face left 
+        else if ((tempPosition.x - transform.position.x) < 0 && facingRight) //flips the animation to face left 
         {
             Flip();
         }
