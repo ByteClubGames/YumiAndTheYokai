@@ -645,6 +645,19 @@ ModelImporter:
     101278: tree
     101280: tree1
     101282: tree_and_glowFruit
+    101284: cobblestone 8
+    101286: cobblestone1 8
+    101288: cobblestone2 8
+    101290: cobblestone3 8
+    101292: cobblestone4 8
+    101294: cobblestone5 8
+    101296: cobblestone6 8
+    101298: cobblestone7 8
+    101300: cobblestone8 8
+    101302: cobblestone9 8
+    101304: stonePath_base8
+    101306: stonePath_border16
+    101308: stonePath_border17
     400000: ambientLight1
     400002: bush
     400004: bush1
@@ -1287,6 +1300,19 @@ ModelImporter:
     401278: tree
     401280: tree1
     401282: tree_and_glowFruit
+    401284: cobblestone 8
+    401286: cobblestone1 8
+    401288: cobblestone2 8
+    401290: cobblestone3 8
+    401292: cobblestone4 8
+    401294: cobblestone5 8
+    401296: cobblestone6 8
+    401298: cobblestone7 8
+    401300: cobblestone8 8
+    401302: cobblestone9 8
+    401304: stonePath_base8
+    401306: stonePath_border16
+    401308: stonePath_border17
     2000000: levelSelect_view
     2100000: stone
     2100002: grass_shader
@@ -1834,6 +1860,19 @@ ModelImporter:
     2301058: stonePath_border9
     2301060: tree
     2301062: tree1
+    2301064: cobblestone 8
+    2301066: cobblestone1 8
+    2301068: cobblestone2 8
+    2301070: cobblestone3 8
+    2301072: cobblestone4 8
+    2301074: cobblestone5 8
+    2301076: cobblestone6 8
+    2301078: cobblestone7 8
+    2301080: cobblestone8 8
+    2301082: cobblestone9 8
+    2301084: stonePath_base8
+    2301086: stonePath_border16
+    2301088: stonePath_border17
     3300000: bush
     3300002: bush1
     3300004: bush2
@@ -2366,6 +2405,19 @@ ModelImporter:
     3301058: stonePath_border9
     3301060: tree
     3301062: tree1
+    3301064: cobblestone 8
+    3301066: cobblestone1 8
+    3301068: cobblestone2 8
+    3301070: cobblestone3 8
+    3301072: cobblestone4 8
+    3301074: cobblestone5 8
+    3301076: cobblestone6 8
+    3301078: cobblestone7 8
+    3301080: cobblestone8 8
+    3301082: cobblestone9 8
+    3301084: stonePath_base8
+    3301086: stonePath_border16
+    3301088: stonePath_border17
     4300000: rock
     4300002: rock1
     4300004: rock2
@@ -2898,6 +2950,19 @@ ModelImporter:
     4301058: bush7
     4301060: bush8
     4301062: bush9
+    4301064: stonePath_base8
+    4301066: cobblestone
+    4301068: cobblestone1
+    4301070: cobblestone2
+    4301072: cobblestone3
+    4301074: cobblestone4
+    4301076: cobblestone5
+    4301078: cobblestone7
+    4301080: cobblestone6
+    4301082: cobblestone8
+    4301084: cobblestone9
+    4301086: stonePath_border16
+    4301088: stonePath_border17
     7400000: Take 001
     9500000: //RootNode
     10800000: ambientLight1
