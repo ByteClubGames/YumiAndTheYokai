@@ -39,11 +39,15 @@ public class FlyingEnemy : MonoBehaviour
     private bool challenged = false;        // Determines if the enemy should be attacking the player or not
     private PlayerDetection detectPlayer;
     Rigidbody rb;
+    SpriteRenderer sprite_renderer;
+    private int frames;
+    private Vector3 savedPosition;
 
     // Use this for initialization
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        sprite_renderer = GetComponentInChildren<SpriteRenderer>();
         startPos = transform.position;
         tempPosition = transform.position;
 
@@ -52,11 +56,15 @@ public class FlyingEnemy : MonoBehaviour
 
         Player = GameObject.Find("Yumi").transform;
         detectPlayer = this.GetComponentInChildren<PlayerDetection>();
+
+        frames = 0;
+        savedPosition = Vector3.zero;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+        frames++;
 
         pos1 = new Vector3(startPos.x - leftBoundry, startPos.y, 0f);
         pos2 = new Vector3(startPos.x + rightBoundry, startPos.y, 0f);
@@ -71,14 +79,32 @@ public class FlyingEnemy : MonoBehaviour
 
         Movement(tempPosition);
     
-
+        if(frames == 2) // Every other frame, check if the sprite should be fliped.
+        {            
+            frames = 0;
+            Flip(transform.position, ref savedPosition);
+        }
     }
 
-    void Flip() //flips animation about the y-axis to match the direction of the animation's movement 
+    void Flip(Vector3 current_Postition, ref Vector3 saved_position) //flips animation about the y-axis to match the direction of the animation's movement 
     {
-
-        facingRight = !facingRight; 
-        transform.Rotate(Vector3.up * 180); //rotates 180 degress about y-axis
+        if (saved_position == Vector3.zero)
+        {
+            saved_position = current_Postition;
+            return;
+        }
+        else
+        {
+            if (current_Postition.x < saved_position.x)
+            {
+                sprite_renderer.flipX = true;
+            }
+            else
+            {
+                sprite_renderer.flipX = false;
+            }
+            saved_position = current_Postition;
+        }        
     }
 
     private void Movement(Vector3 nextPosition)     //nextPosition is the current position(before being challenged)
@@ -102,14 +128,14 @@ public class FlyingEnemy : MonoBehaviour
                 rb.MovePosition(transform.position + directionOfNextPosition * normalSpeed * Time.deltaTime);
             }
         }
-        if ((tempPosition.x - transform.position.x) > 0 && !facingRight) //flips the animation to face right
-        {
-            Flip();
-        }
-        else if ((tempPosition.x - transform.position.x) < 0 && facingRight) //flips the animation to face left 
-        {
-            Flip();
-        }
+        //if ((tempPosition.x - transform.position.x) > 0 && !facingRight) //flips the animation to face right
+        //{
+        //    Flip();
+        //}
+        //else if ((tempPosition.x - transform.position.x) < 0 && facingRight) //flips the animation to face left 
+        //{
+        //    Flip();
+        //}
 
     }
 }
