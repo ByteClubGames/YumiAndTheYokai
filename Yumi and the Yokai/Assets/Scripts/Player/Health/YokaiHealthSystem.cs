@@ -51,7 +51,7 @@ public class YokaiHealthSystem : MonoBehaviour
             SetTime();                                                                              // Call the SetTime() function 
             switcher.DeleteYokai(GameObject.Find("Yokai(Clone)"));                                  // Delete the current instance of the Yokai prefab 
             invisibleObjects.SetInvisible();                                                        // Toggle SetInvisible 
-            GameObject.Find("InputListener").GetComponent<InputListener>().SetYumiActive(true);     // Toggle InputListener 
+            //GameObject.Find("InputListener").GetComponent<InputListener>().SetYumiActive(true);     // Toggle InputListener 
         } 
     }
 
