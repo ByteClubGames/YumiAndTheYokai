@@ -1,8 +1,8 @@
 ﻿/********************************************************************************
 *Creator(s)............................................Ivonne Lopez, Darrell Wong
 *Created................................................................9/21/2018
-*Last Modified................................................@ 2PM on 10/12/2018
-*Last Modified by....................................................Darrell Wong
+*Last Modified................................................@ 2PM on 2/15/2019
+*Last Modified by....................................................Ivonne Lopez
 *
 * Description:  Script responsible for general(flap and grounded) movement and 
 *               attack patterns. Calls on PlayerDetection.cs to actually detect 
@@ -18,7 +18,8 @@ public class FlyingEnemy : MonoBehaviour
 
     [Header("Horizontal Flight Boundary Points")]
     public float leftBoundry = 4f;   //how far the enemy will wander to the left when not under aggro
-    public float rightBoundry = 4f;  // how far the enemy will wanted to the right when not under aggro
+    public float rightBoundry = 4f; // how far the enemy will wanter to the right when not under aggro
+    public bool facingRight = true; //animation by default is facing right 
     private Vector3 pos1;  //pos1 and pos2 are the initial positions of the enemy
     private Vector3 pos2;
     private Vector3 startPos;
@@ -27,7 +28,6 @@ public class FlyingEnemy : MonoBehaviour
 
     [Header("Physics/ Enemy Attributes")]
     public float patrolSpeed = 0.1f;        //patrolSpeed needs to be between 0 and .5f. An increase of patrol Speed requires an increase of normalspeed
-    public float verticalSpeed;             //?
     public float amplitude;                 //amplitude of the enemy patrol pattern
     public float attackSpeed = 5f;          //speed of enemy when attacking player
     public float normalSpeed = 2f;          //speed of the enemy when not attacking
@@ -66,10 +66,19 @@ public class FlyingEnemy : MonoBehaviour
 
         Debug.DrawLine(pos1, pos2, Color.blue);
 
-        tempPosition.x = Mathf.Lerp(pos1.x, pos2.x, progress);
-        tempPosition.y = startPos.y + (Mathf.Sin(Time.realtimeSinceStartup * verticalSpeed) * amplitude); ;
+        tempPosition.x = Mathf.Lerp(pos1.x, pos2.x, progress); // interpolates pos1 and pos2 by progress
+        tempPosition.y = startPos.y + (Mathf.Sin(Time.realtimeSinceStartup * normalSpeed) * amplitude); 
 
         Movement(tempPosition);
+    
+
+    }
+
+    void Flip() //flips animation about the y-axis to match the direction of the animation's movement 
+    {
+
+        facingRight = !facingRight; 
+        transform.Rotate(Vector3.up * 180); //rotates 180 degress about y-axis
     }
 
     private void Movement(Vector3 nextPosition)     //nextPosition is the current position(before being challenged)
@@ -93,5 +102,14 @@ public class FlyingEnemy : MonoBehaviour
                 rb.MovePosition(transform.position + directionOfNextPosition * normalSpeed * Time.deltaTime);
             }
         }
+        if ((tempPosition.x - transform.position.x) > 0 && !facingRight) //flips the animation to face right
+        {
+            Flip();
+        }
+        else if ((tempPosition.x - transform.position.x) < 0 && facingRight) //flips the animation to face left 
+        {
+            Flip();
+        }
+
     }
 }
