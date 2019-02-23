@@ -24,7 +24,6 @@ using UnityEngine;
 public class EarthSpellMechanics : MonoBehaviour
 {
     #region Global Variables
-    private Collision col;
     public int maxSpells = 3;
     public int destroyTime = 5;
     float scalarvalue;
@@ -46,14 +45,6 @@ public class EarthSpellMechanics : MonoBehaviour
 
     public void Initialize(float scalar)
     {
-        transform.parent.gameObject.transform.localScale -= new Vector3(0, 0.3865392F * scalar, 0);
+        transform.parent.gameObject.transform.localScale -= new Vector3(0, 0.3865392F * scalar, 0); //subtracts from the max length based on the scalar passed. A scaler of 0 means that it will not subtract any length.
     }
-
-    #region Collision Check to stop growth - ***Currently incomplete***
-    private void OnCollisionEnter(Collision col)
-    {
-        print("Hit shit");
-    }
-    #endregion
-
 }

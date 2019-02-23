@@ -33,7 +33,8 @@ public class EarthSpellUse : MonoBehaviour
     public GameObject eSpell;
     public Vector3 playerinput = new Vector3(1, 1, 0); //gets player input
     public Vector3 normalVector;
-    public float scalar; 
+    public float scalar;
+    private LayerMask layerMask;
     #endregion
 
     // Update is called once per frame
@@ -72,7 +73,6 @@ public class EarthSpellUse : MonoBehaviour
                 normalVector = yumiHit.normal;
                 normalVector.z = 0;
 
-
                 //Checking for overlapping eSpell spawns
                 Collider[] hitColliders = Physics.OverlapSphere(playerinput, overlapRadius);
                 spellOverlap = false;
@@ -89,28 +89,46 @@ public class EarthSpellUse : MonoBehaviour
                 //Assuming no overlap, spawns the eSpell object into play in the direction of the normal vector
                 if (!spellOverlap)
                 {
-                    Debug.DrawRay(playerinput, 4 * yumiHit.normal, Color.black);
-                    Ray heightRay = new Ray(playerinput, 4 * yumiHit.normal);
-                    RaycastHit heightHit;
-                    //Vector3 playerinputleft = new Vector3(yumiHit.normal.x, yumiHit.normal.y, yumiHit.normal.z);
-                    //Vector3 playerinputright = new Vector3(yumiHit.normal.x, yumiHit.normal.y, yumiHit.normal.z);
-                    //Ray heightRayLeft = new Ray(playerinput, 4 * yumiHit.normal);
-                    //Ray heightRayRight = new Ray(playerinput, 4 * yumiHit.normal);
-
-                    if (Physics.Raycast(heightRay, out heightHit) && heightHit.distance < 4)
-                    {
-                        scalar = heightHit.distance / 4;
-                    }
-                    else scalar = 1;
-
-                    scalar = 1 - Mathf.Abs(scalar);
-                    var earthPillar = Instantiate(eSpell, playerinput, Quaternion.FromToRotation(Vector3.up, yumiHit.normal));
-
-                    earthPillar.GetComponentInChildren<EarthSpellMechanics>().Initialize(scalar);
+                    ScaleAndSpawn(yumiHit); //Function to spawn the earth spell and "grow" it to the correct length.
                 }
             }
         }
     }
+
+
+    void ScaleAndSpawn(RaycastHit yumiHit)
+    {
+        int layerMask = 1 << 9; //turns the layermask on for the player layer
+
+        //Set up of rays to check distance pillar should grow to as well as if the pillar hits the player
+        Ray heightRay = new Ray(playerinput, 4 * yumiHit.normal);
+        RaycastHit heightHit;
+
+        //Scales the length the earth spell will spawn / stretch to based on collision with anything except the player layer. Scaler of 0 = max length while scaler of 1 = no growth.
+        if (Physics.Raycast(heightRay, out heightHit, 4f, ~layerMask))
+        {
+            scalar = 1 - Mathf.Abs(heightHit.distance / 4);
+        }
+        else scalar = 0;
+
+        var earthPillar = Instantiate(eSpell, playerinput, Quaternion.FromToRotation(Vector3.up, yumiHit.normal)); //Creates the earth spell
+        earthPillar.GetComponentInChildren<EarthSpellMechanics>().Initialize(scalar); //Shrinks the earth spell max length by the scalar value * max length (This is instant and so it just makes the pillar grow to a shorter max length)
+
+        //Check for collision with player and if so, call function to apply a velcity away
+        if (Physics.Raycast(heightRay, out heightHit, 4f, layerMask))
+        {
+            ApplyVelocity(heightHit.transform.gameObject);
+        }
+
+    }
+
+
+
+    void ApplyVelocity(GameObject player)
+    {
+
+    }
+
 }
 
 
