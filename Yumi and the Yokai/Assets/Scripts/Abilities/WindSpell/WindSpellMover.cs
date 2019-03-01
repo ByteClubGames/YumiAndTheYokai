@@ -1,6 +1,6 @@
 ﻿/* WindSpellMover.cs
  * Date Created: 5/08/18
- * Last Edited: 2/9/2019
+ * Last Edited: 3/1/2019
  * Programmer: Jack Bruce and Evanito and Darrell Wong
  * Description: Moves 'WindSpell' obj on desired path
  *  - WindSpellSpawner will populate targetarray
@@ -23,9 +23,11 @@ public class WindSpellMover : MonoBehaviour
     private int wsTargetsSize;
     private string wsSpawnerName = "WindSpellSpawner(Clone)"; //had to make this dynamic for instantiated prefab names
     private GameObject spawnerObj;
-    private Vector3 velocity = new Vector3(-1, -1, -1);
+    private Vector3 velocity = new Vector3(-1, -1, 0);
     private Rigidbody rb;
     private Vector3 lastPos;
+
+    public GameObject wind_impact;
 
     // Use this for initialization
     void Start()
@@ -41,17 +43,21 @@ public class WindSpellMover : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        velocity.x = (rb.position.x - lastPos.x) * 10f;
-        velocity.y = (rb.position.y - lastPos.y) * 10f;
         if (!collision.gameObject.CompareTag("WindSpellTrigger") && collision.gameObject.name != "Yumi" && collision.gameObject.name != "PlayerDetection")
         {
+            Instantiate(wind_impact, this.transform.position, Quaternion.Euler(0, 0, Vector3.SignedAngle(Vector3.right, velocity.normalized, Vector3.forward)));
             spawnerObj.GetComponent<WindSpellUse>().CleanUp();
         }
     }
 
     public Vector3 getVelocity()
     {
+
+        velocity.x = (rb.position.x - lastPos.x) * 10f;
+        velocity.y = (rb.position.y - lastPos.y) * 10f;
+        //print(velocity);
         return velocity;
+
     }
 
     private void SetSpawner(GameObject spawner)
@@ -62,8 +68,8 @@ public class WindSpellMover : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-
-
+        velocity.x = (rb.position.x - lastPos.x) * 10f;
+        velocity.y = (rb.position.y - lastPos.y) * 10f;
 
         //print("(drawn) windspell velocity: " + getVelocity());
         lastPos = rb.position;
@@ -72,10 +78,15 @@ public class WindSpellMover : MonoBehaviour
         { // die at end of path (transform.position == wsTargets[wsTargets.Length - 1])
             try
             {
+                Instantiate(wind_impact, this.transform.position, Quaternion.Euler(0, 0, Vector3.SignedAngle(Vector3.right, velocity.normalized, Vector3.forward)));
+                //print(velocity);
+               //print(Vector3.Angle(Vector3.right, velocity));
+
                 spawnerObj.GetComponent<WindSpellUse>().CleanUp();
             }
             catch
             {
+                Instantiate(wind_impact, this.transform.position, Quaternion.Euler(0, 0, Vector3.SignedAngle(Vector3.right, velocity.normalized, Vector3.forward)));
                 Destroy(gameObject);
             }
 
@@ -86,6 +97,7 @@ public class WindSpellMover : MonoBehaviour
         if (transform.position != nextPos)
         {
             Vector3 pos = Vector3.MoveTowards(transform.position, nextPos, speed * Time.deltaTime);
+            transform.LookAt(nextPos);  //align spell for the animation to face direction
             GetComponent<Rigidbody>().MovePosition(pos);
         }
         else if (current < wsTargetsSize - 1)

@@ -21,6 +21,8 @@ public class WindSpellAgent : MonoBehaviour {
     private string wsSpawnerName = "WindSpellSpawner(Clone)"; //had to make this dynamic for instantiated prefab names
     public Vector3 velocity;
 
+    public GameObject wind_impact;
+
     void Awake () {
         agent = GetComponent<NavMeshAgent>();
         SetSpawner(GameObject.Find(wsSpawnerName));
@@ -35,7 +37,15 @@ public class WindSpellAgent : MonoBehaviour {
             {
                 if (!agent.hasPath || agent.velocity.sqrMagnitude == 0f)
                 {
-                    //spawnerObj.GetComponent<WindSpellUse>().CleanUp();
+                    //print(transform.eulerAngles.z);
+                    if (transform.eulerAngles.z > 100)        //this is here because a strange rotation bug with the navAgent was messing up the animation rotation
+                                                              // eulerAngles only gives the angles 90 (for positive y) and 270 (negative y)
+                    {
+                        Instantiate(wind_impact, this.transform.position, Quaternion.Euler(0, 0, -this.transform.eulerAngles.x));
+                    }
+                    else
+                        Instantiate(wind_impact, this.transform.position, Quaternion.Euler(0, 0, 180 + this.transform.eulerAngles.x));
+
                     Destroy(gameObject);
                 }
             }
@@ -47,6 +57,7 @@ public class WindSpellAgent : MonoBehaviour {
         if (!collision.gameObject.CompareTag("WindSpellTrigger") && collision.gameObject.name != "Yumi" && collision.gameObject.name != "PlayerDetection")
         {
             //spawnerObj.GetComponent<WindSpellUse>().CleanUp();
+            Instantiate(wind_impact, this.transform.position, Quaternion.Euler(0, 0, -90 + this.transform.eulerAngles.z));
             Destroy(gameObject);
         }
     }
