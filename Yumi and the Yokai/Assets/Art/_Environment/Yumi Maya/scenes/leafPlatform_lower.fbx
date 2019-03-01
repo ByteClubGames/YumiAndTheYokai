@@ -8,11 +8,11 @@ FBXHeaderExtension:  {
 		Version: 1000
 		Year: 2019
 		Month: 2
-		Day: 15
-		Hour: 3
-		Minute: 5
-		Second: 32
-		Millisecond: 654
+		Day: 22
+		Hour: 11
+		Minute: 26
+		Second: 6
+		Millisecond: 249
 	}
 	Creator: "FBX SDK/FBX Plugins version 2018.1.1"
 	SceneInfo: "SceneInfo::GlobalInfo", "UserData" {
@@ -28,20 +28,20 @@ FBXHeaderExtension:  {
 			Comment: ""
 		}
 		Properties70:  {
-			P: "DocumentUrl", "KString", "Url", "", "C:\Users\Activ\Documents\GitHub\YumiAndTheYokai\Yumi and the Yokai\Assets\Art\leafPlatform_lower.fbx"
-			P: "SrcDocumentUrl", "KString", "Url", "", "C:\Users\Activ\Documents\GitHub\YumiAndTheYokai\Yumi and the Yokai\Assets\Art\leafPlatform_lower.fbx"
+			P: "DocumentUrl", "KString", "Url", "", "C:\Users\Activ\Documents\GitHub\YumiAndTheYokai\Yumi and the Yokai\Assets\Art\Yumi Maya\scenes\leafPlatform_lower.fbx"
+			P: "SrcDocumentUrl", "KString", "Url", "", "C:\Users\Activ\Documents\GitHub\YumiAndTheYokai\Yumi and the Yokai\Assets\Art\Yumi Maya\scenes\leafPlatform_lower.fbx"
 			P: "Original", "Compound", "", ""
 			P: "Original|ApplicationVendor", "KString", "", "", "Autodesk"
 			P: "Original|ApplicationName", "KString", "", "", "Maya"
 			P: "Original|ApplicationVersion", "KString", "", "", "201800"
-			P: "Original|DateTime_GMT", "DateTime", "", "", "15/02/2019 11:05:32.646"
-			P: "Original|FileName", "KString", "", "", "C:\Users\Activ\Documents\GitHub\YumiAndTheYokai\Yumi and the Yokai\Assets\Art\leafPlatform_lower.fbx"
+			P: "Original|DateTime_GMT", "DateTime", "", "", "22/02/2019 19:26:06.249"
+			P: "Original|FileName", "KString", "", "", "C:\Users\Activ\Documents\GitHub\YumiAndTheYokai\Yumi and the Yokai\Assets\Art\Yumi Maya\scenes\leafPlatform_lower.fbx"
 			P: "LastSaved", "Compound", "", ""
 			P: "LastSaved|ApplicationVendor", "KString", "", "", "Autodesk"
 			P: "LastSaved|ApplicationName", "KString", "", "", "Maya"
 			P: "LastSaved|ApplicationVersion", "KString", "", "", "201800"
-			P: "LastSaved|DateTime_GMT", "DateTime", "", "", "15/02/2019 11:05:32.646"
-			P: "Original|ApplicationActiveProject", "KString", "", "", "C:\Users\Activ\Documents\GitHub\YumiAndTheYokai\Yumi and the Yokai\Assets\Art"
+			P: "LastSaved|DateTime_GMT", "DateTime", "", "", "22/02/2019 19:26:06.249"
+			P: "Original|ApplicationActiveProject", "KString", "", "", "C:\Users\Activ\Documents\GitHub\YumiAndTheYokai\Yumi and the Yokai\Assets\Art\Yumi Maya\scenes"
 			P: "Original|ApplicationNativeFile", "KString", "", "", "C:\Users\Activ\Documents\GitHub\YumiAndTheYokai\Yumi and the Yokai\Assets\Art\Yumi Maya\scenes\leafPlatform_lower.mb"
 		}
 	}
@@ -77,7 +77,7 @@ GlobalSettings:  {
 
 Documents:  {
 	Count: 1
-	Document: 1341157012240, "", "Scene" {
+	Document: 1430544788272, "", "Scene" {
 		Properties70:  {
 			P: "SourceObject", "object", "", ""
 			P: "ActiveAnimStackName", "KString", "", "", "Take 001"
@@ -255,7 +255,7 @@ Definitions:  {
 ;------------------------------------------------------------------
 
 Objects:  {
-	Geometry: 1341202061072, "Geometry::", "Mesh" {
+	Geometry: 1430454079136, "Geometry::", "Mesh" {
 		Vertices: *144 {
 			a: -1,-1,-1,-1,-1,1,-1,0.999999940395355,-1,-1,0.999999940395355,1,1,-1,-1,1,-1,1,1,0.999999940395355,-1,1,0.999999940395355,1,-0.606350898742676,-1.36582899093628,-2.38352966308594,-0.606350898742676,-1.36582899093628,-1.17082977294922,0.606350898742676,-1.36582899093628,-1.17082977294922,0.606350898742676,-1.36582899093628,-2.38352966308594,-0.240907669067383,-1.6355459690094,-3.32072448730469,-0.240907669067383,-1.6355459690094,-2.66928863525391,0.240907192230225,-1.6355459690094,-2.66928863525391,0.240907192230225,-1.6355459690094,-3.32072448730469,-0.655665397644043,1.48013734817505,0.655662536621094,-0.655665397644043,1.48013734817505,-0.655662536621094,0.655665397644043,1.48013734817505,-0.655662536621094,0.655665397644043,1.48013734817505,0.655662536621094,-0.14264965057373,1.75155091285706,2.89597320556641,-0.14264965057373,1.75155091285706,1.5355224609375,0.14264965057373,1.75155091285706,1.5355224609375,0.14264965057373,1.75155091285706,2.89597320556641,-0.14264965057373,2.50379109382629,9.54461669921875,-0.14264965057373,2.50379109382629,8.18416595458984,0.14264965057373,2.50379109382629,8.22288513183594,0.14264965057373,2.50379109382629,9.54461669921875,-0.05810546875,3.16847205162048,13.1786117553711,-0.05810546875,3.16847205162048,11.8181610107422,0.14264965057373,3.04253315925598,11.4914245605469,0.227194309234619,3.16847205162048,13.1786117553711,0.110984325408936,3.97057604789734,25.5348587036133,0.110984325408936,3.97057604789734,24.1744155883789,0.396283626556396,3.97057604789734,25.5348587036133,0.308255195617676,4.43992471694946,51.796272277832,0.512353897094727,4.50933504104614,50.4358291625977,0.593554496765137,4.43992471694946,51.796272277832,0.0546207427978516,3.73156762123108,83.171745300293,0.258719444274902,3.80097842216492,81.8112869262695,0.339920520782471,3.73156762123108,83.171745300293,-0.0770883560180664,-1.7522144317627,-4.92031097412109,-0.0770883560180664,-1.7522144317627,-4.71185302734375,0.0770883560180664,-1.7522144317627,-4.71185302734375,0.0770883560180664,-1.7522144317627,-4.92031097412109,
 0.0546207427978516,3.60808205604553,108.418006896973,0.339920520782471,3.60808205604553,108.418006896973,0.258719444274902,3.67749285697937,107.057563781738
@@ -322,7 +322,7 @@ Objects:  {
 			}
 		}
 	}
-	Model: 1340972855472, "Model::leafPlatform_lower", "Mesh" {
+	Model: 1430612549648, "Model::leafPlatform_lower", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "RotationActive", "bool", "", "",1
@@ -337,7 +337,7 @@ Objects:  {
 		Shading: T
 		Culling: "CullingOff"
 	}
-	Material: 1341041520944, "Material::Material.012", "" {
+	Material: 1430416643664, "Material::Material.012", "" {
 		Version: 102
 		ShadingModel: "phong"
 		MultiLayer: 0
@@ -359,7 +359,7 @@ Objects:  {
 			P: "Reflectivity", "double", "Number", "",0
 		}
 	}
-	AnimationStack: 1341151222112, "AnimStack::Take 001", "" {
+	AnimationStack: 1430606869088, "AnimStack::Take 001", "" {
 		Properties70:  {
 			P: "LocalStart", "KTime", "Time", "",1924423250
 			P: "LocalStop", "KTime", "Time", "",230930790000
@@ -367,7 +367,7 @@ Objects:  {
 			P: "ReferenceStop", "KTime", "Time", "",230930790000
 		}
 	}
-	AnimationLayer: 1341214729904, "AnimLayer::BaseLayer", "" {
+	AnimationLayer: 1430466388144, "AnimLayer::BaseLayer", "" {
 	}
 }
 
@@ -377,16 +377,16 @@ Objects:  {
 Connections:  {
 	
 	;Model::leafPlatform_lower, Model::RootNode
-	C: "OO",1340972855472,0
+	C: "OO",1430612549648,0
 	
 	;AnimLayer::BaseLayer, AnimStack::Take 001
-	C: "OO",1341214729904,1341151222112
+	C: "OO",1430466388144,1430606869088
 	
 	;Geometry::, Model::leafPlatform_lower
-	C: "OO",1341202061072,1340972855472
+	C: "OO",1430454079136,1430612549648
 	
 	;Material::Material.012, Model::leafPlatform_lower
-	C: "OO",1341041520944,1340972855472
+	C: "OO",1430416643664,1430612549648
 }
 ;Takes section
 ;----------------------------------------------------
