@@ -189,8 +189,7 @@ GameObject:
   m_Component:
   - component: {fileID: 250392947}
   - component: {fileID: 250392949}
-  - component: {fileID: 250392948}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: CheckTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -204,28 +203,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 250392946}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 631095660}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &250392948
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 250392946}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0308ce7789d316d46bd014f6b6bafc0a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  water: {fileID: 2100000, guid: 4e05210e76d3347fab404e5610e49733, type: 2}
-  ice: {fileID: 2100000, guid: 7e1202acd20763549a51fcb553e130c4, type: 2}
-  waterBlockColliderCheck: {fileID: 0}
 --- !u!65 &250392949
 BoxCollider:
   m_ObjectHideFlags: 0

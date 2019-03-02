@@ -8,7 +8,7 @@ public class FreezeCheck : MonoBehaviour
     public Material ice;
     public BoxCollider waterBlockColliderCheck;
     timer iceTimer = new timer();
-    int countDown = 10;
+    int countDown = 5;
     int i = 0;
 
     private void OnTriggerEnter(Collider colReg) // Will be replaced with ice spell usage, but for now this is to test
