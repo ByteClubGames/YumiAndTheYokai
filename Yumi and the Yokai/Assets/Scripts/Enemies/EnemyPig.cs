@@ -60,6 +60,7 @@ public class EnemyPig : MonoBehaviour {
     [Header("Objects")]
     private PlayerDetection detectPlayer;
     Rigidbody enemy;
+    private GameObject tempVar;
     private Transform Player;
 
     void Start() {
