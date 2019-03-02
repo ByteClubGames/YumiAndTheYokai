@@ -87,6 +87,37 @@ public class YumiMovement : MonoBehaviour
     }
 
     /// <summary>
+    /// Add a force to 
+    /// </summary>
+    /// <param name="force_vector"></param>
+    public void AddInstantaneousForce(Vector3 force_vector)
+    {
+
+    }
+
+    public void AddConstantForce(Vector3 force_vector)
+    {
+
+    }
+
+    struct Movement_Force
+    {
+        private Vector3 force_Vector;
+        private float decay_Factor;
+        //private bool is_Constant;
+
+        private Movement_Force(Vector3 forceVector, float decayFactor)
+        {
+            this.force_Vector = forceVector;
+            this.decay_Factor = decayFactor;
+        }
+
+        //private something that subratcs the decay factor from the vector to bring it towards zero.
+        
+
+    }
+
+    /// <summary>
     /// Gets rid of all the proposed movement deltas for the next frame. Only use this if you do not want the character to move next frame.
     /// </summary>
     public void ClearMovementQueue()
