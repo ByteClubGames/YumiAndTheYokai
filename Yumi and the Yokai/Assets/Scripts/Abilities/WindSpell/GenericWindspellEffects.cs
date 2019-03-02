@@ -2,7 +2,7 @@
 ********************************************************************************
 *Creator(s).........................................................Darrell Wong
 *Created................................................................12/14/18
-*Last Modified..........................................................2/9/2019
+*Last Modified..........................................................3/1/2019
 *Last Modified by...................................................Darrell Wong
 *
 *   Description: To be attached to enemies or pushable objects. 
@@ -92,10 +92,12 @@ public class GenericWindspellEffects : MonoBehaviour
         if (col.tag == "WindSpell")
         {
             velocity2 = col.GetComponent<WindSpellMover>().getVelocity();
+            //print(velocity2);
             //print("object windspell veloc: " + velocity2);
             if (velocity2.x > 1 || velocity2.y > 1 || velocity2.x < 1 || velocity2.y < 1)
             {
                 finalPushDirection = new Vector3(velocity2.x, velocity2.y, 0).normalized;
+                //print(finalPushDirection);
                 pushing = true;
             }
             //else if (velocity2.x < 1 || velocity2.y < 1)
