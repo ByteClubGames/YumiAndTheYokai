@@ -18,8 +18,8 @@ public class ToggleFreeze : MonoBehaviour
         waterBlockCollider = this.GetComponent<BoxCollider>();
         timer iceTimer = new timer(0, 0f);
         waterBlockCollider.enabled = false;
+        
     }
-
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -29,10 +29,11 @@ public class ToggleFreeze : MonoBehaviour
             {
                 this.GetComponent<Renderer>().material = water;
                 iceTimer = new timer(0, 0f);
+                waterBlockCollider.enabled = false;
             }
         }
     }
-    void OnCollisionEnter(Collider hitInfo)
+    void OnTriggerEnter(Collider hitInfo)
     {
         IceSpellObject iceSpell = hitInfo.GetComponent<IceSpellObject>();
         if (iceSpell != null)
@@ -40,8 +41,9 @@ public class ToggleFreeze : MonoBehaviour
             this.GetComponent<Renderer>().material = ice;
             //turn the water into ice
         }
-        //hitInfo.gameObject.tag == "Player" ||
-        if ( hitInfo.gameObject.tag == "Human")
+        
+        
+        if (hitInfo.gameObject.tag == "Player")
         {
             Debug.Log("We made it to here.");
             this.GetComponent<Renderer>().material = ice;

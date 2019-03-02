@@ -20,7 +20,7 @@ public class MovementForSphere : MonoBehaviour
     void Update()
     {
         Vector3 v = startPos;
-        v.x += delta * Mathf.Sin(movementTimer.ElapsedMilliseconds * speed / 1000);
+        v.y += delta * Mathf.Sin(movementTimer.ElapsedMilliseconds * speed / 1000);
         transform.position = v;
     }
 

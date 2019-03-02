@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -179,6 +179,66 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0dd2532d035311a47a04cbce2f03df7f, type: 3}
+--- !u!1 &250392946
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 250392947}
+  - component: {fileID: 250392949}
+  - component: {fileID: 250392948}
+  m_Layer: 15
+  m_Name: CheckTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &250392947
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250392946}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 631095660}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &250392948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250392946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0308ce7789d316d46bd014f6b6bafc0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  water: {fileID: 2100000, guid: 4e05210e76d3347fab404e5610e49733, type: 2}
+  ice: {fileID: 2100000, guid: 7e1202acd20763549a51fcb553e130c4, type: 2}
+  waterBlockColliderCheck: {fileID: 0}
+--- !u!65 &250392949
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250392946}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &625966846
 GameObject:
   m_ObjectHideFlags: 0
@@ -192,7 +252,7 @@ GameObject:
   - component: {fileID: 625966849}
   - component: {fileID: 625966848}
   m_Layer: 15
-  m_Name: Cube
+  m_Name: left floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -359,7 +419,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1.05, y: 0, z: 0}
   m_LocalScale: {x: 1.8228127, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 250392947}
   m_Father: {fileID: 987700392}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -378,7 +439,7 @@ MonoBehaviour:
   sphere: {fileID: 716001573}
   ice: {fileID: 2100000, guid: 7e1202acd20763549a51fcb553e130c4, type: 2}
   water: {fileID: 2100000, guid: 4e05210e76d3347fab404e5610e49733, type: 2}
-  waterBlockCollider: {fileID: 0}
+  waterBlockCollider: {fileID: 631095657}
 --- !u!54 &631095662
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -477,6 +538,7 @@ GameObject:
   - component: {fileID: 716001575}
   - component: {fileID: 716001574}
   - component: {fileID: 716001578}
+  - component: {fileID: 716001579}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Player
@@ -567,11 +629,25 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &716001579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 716001573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74883f0c427bbb6458c103fa31e408f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delta: 10
+  speed: 0.5
 --- !u!1 &765677224
 GameObject:
   m_ObjectHideFlags: 0
@@ -654,36 +730,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &907331688
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 907331689}
-  m_Layer: 0
-  m_Name: invisible
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &907331689
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 907331688}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.21200246, y: 2.9214058, z: 14.444351}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &987700391
 GameObject:
   m_ObjectHideFlags: 0
@@ -730,7 +776,7 @@ GameObject:
   - component: {fileID: 1140256161}
   - component: {fileID: 1140256160}
   m_Layer: 15
-  m_Name: Cube (1)
+  m_Name: right floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -875,6 +921,6 @@ PrefabInstance:
         type: 3}
       propertyPath: InvisibleObject
       value: 
-      objectReference: {fileID: 907331688}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b75317594c93c414f8a4de7245697318, type: 3}
