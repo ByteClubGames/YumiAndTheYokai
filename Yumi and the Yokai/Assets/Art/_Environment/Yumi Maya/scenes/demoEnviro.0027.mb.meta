@@ -1175,6 +1175,7 @@ ModelImporter:
     2100024: glowFruit_shader
     2100026: gravel_shader
     2100028: cobblestone_shader
+    2100030: Default_Material
     2300000: cobblestone
     2300002: cobblestone 1
     2300004: cobblestone 2
