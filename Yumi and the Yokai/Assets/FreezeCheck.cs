@@ -1,4 +1,16 @@
-﻿using System.Collections;
+﻿/*
+********************************************************************************
+*Creator(s)......................................................Brenden Plong
+*Created..............................................................1/26/2019
+*Last Modified...........................................@ 11:42AM on 3/3/2019
+*Last Modified by................................................Brenden Plong
+*
+*Description:   Handles the freezing of water so that the player can walk on 
+*               it when frozen
+****************************************************************************
+* 
+*/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
