@@ -45,7 +45,7 @@ public class ToggleFreeze : MonoBehaviour
     void OnTriggerEnter(Collider hitInfo)
     {
         IceProjectile iceBall = hitInfo.GetComponent<IceProjectile>();
-        if (iceBall != null)//turn the water into ice
+        if (iceBall != null)//turns the water into ice
         {
             Debug.Log("*Freezing*");
             this.GetComponent<Renderer>().material = ice; // Changes the renderer of the block
