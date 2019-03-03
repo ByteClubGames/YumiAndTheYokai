@@ -70,7 +70,7 @@ public class GenericWindspellEffects : MonoBehaviour
         if (col.tag == "WindSpellAgent") //need to differentiate between normal windspell(drawn) or agent(AI navmesh) because accessing velocies are different
         {
             //print("windspellAgent hit");
-            WindSpellAgent windspellAgent = col.GetComponent<WindSpellAgent>();
+            WindspellAgent windspellAgent = col.GetComponent<WindspellAgent>();
             velocity = windspellAgent.velocity;
             //print(windspellAgent.velocity.x);
             if (windspellAgent.velocity.x > 1 || windspellAgent.velocity.x < 1)

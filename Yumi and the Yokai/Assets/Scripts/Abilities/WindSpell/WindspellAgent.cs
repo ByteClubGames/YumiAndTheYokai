@@ -14,7 +14,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class WindSpellAgent : MonoBehaviour {
+public class WindspellAgent : MonoBehaviour {
 
     public NavMeshAgent agent;
     private GameObject spawnerObj;
