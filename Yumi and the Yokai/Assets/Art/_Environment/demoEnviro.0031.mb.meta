@@ -1301,6 +1301,7 @@ ModelImporter:
     2100022: glowFruit_shader
     2100024: gravel_shader
     2100026: cobblestone_shader
+    2100028: Default_Material
     2300000: bush
     2300002: bush1
     2300004: bush2

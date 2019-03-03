@@ -981,6 +981,7 @@ ModelImporter:
     2100020: plantBulb_shader
     2100022: glowFruit_skin_shader
     2100024: glowFruit_shader
+    2100026: Default_Material
     2300000: cobblestone
     2300002: cobblestone1
     2300004: cobblestone2

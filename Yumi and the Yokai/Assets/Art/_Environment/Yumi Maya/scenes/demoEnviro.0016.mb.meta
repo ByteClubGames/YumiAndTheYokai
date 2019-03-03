@@ -412,6 +412,7 @@ ModelImporter:
     2100018: plantBulb_shader
     2100020: glowFruit_skin_shader
     2100022: glowFruit_shader
+    2100024: Default_Material
     2300000: doorway
     2300002: fence_arm
     2300004: fence_arm14
