@@ -18,9 +18,11 @@
 //using UnityEngine;
 //using Cinemachine;
 
-//public class PlayerController : MonoBehaviour {
+//public class PlayerController : MonoBehaviour
+//{
 
-//    public enum CharacterName {
+//    public enum CharacterName
+//    {
 //        Yokai,
 //        Yumi
 //    }
@@ -164,23 +166,26 @@
 
 //        animator = this.gameObject.GetComponentInChildren<Animator>();
 //        spriteRenderer = this.gameObject.GetComponentInChildren<SpriteRenderer>();
-//        if (characterName == CharacterName.Yumi) {
-            
+//        if (characterName == CharacterName.Yumi)
+//        {
+
 //        }
-//        if (characterName == CharacterName.Yokai) {
+//        if (characterName == CharacterName.Yokai)
+//        {
 //            main_follow_camera.Follow = this.gameObject.transform;
 //        }
 //    }
 
 //    private void OnDestroy()
 //    {
-//        if (characterName == CharacterName.Yokai) {
+//        if (characterName == CharacterName.Yokai)
+//        {
 //            CinemachineVirtualCamera main_follow_camera = GameObject.Find("Main Follow Camera").GetComponent<CinemachineVirtualCamera>();
 //            Transform yumi = GameObject.Find("Yumi").transform;
 //            main_follow_camera.Follow = yumi;
 //        }
 //    }
-    
+
 //    #region Movement Calls
 //    public void CallRight(bool call)
 //    {
@@ -235,7 +240,7 @@
 //    }
 
 //    public void CallShortHop()
-//    { 
+//    {
 //        if (airBufferFrames > 0 && velocity.y < 0)  //when jump is released while still falling it will force a short hop. without this, it would result in a full jump
 //        {
 //            forcedShortHop = true;
@@ -252,7 +257,7 @@
 
 //    void Update()
 //    {
-//        if(wallJump || wallJumpActive)
+//        if (wallJump || wallJumpActive)
 //        {
 //            wallJump = false;
 //            wallJumpActive = true;
@@ -320,7 +325,7 @@
 
 //                groundBufferFrames = defaultGroundBufferFrames;
 //            }
-//            else if(!isGrounded && velocity.y <= gravity * fallBuffer)
+//            else if (!isGrounded && velocity.y <= gravity * fallBuffer)
 //            {
 //                animator.SetBool("Land", false);
 //                animator.SetBool("Fall", true);
@@ -329,10 +334,10 @@
 //            {
 //                animator.SetBool("Land", false);
 //            }
-            
-            
 
-            
+
+
+
 
 //            if (isOnWallLeft)
 //            {
@@ -516,13 +521,13 @@
 //        RaycastStartPoints();
 
 
-        
+
 //        if (deltaMovement.y < 0f)
 //        {
 //            deltaMovement = CollisionCorrections.VerticalSlopeDetection(this, deltaMovement, boxCollider, BL, BR, skinWidth,
 //                maxClimbableSlope, platformMask);
 //        }
-            
+
 
 //        /* Check for collisions to the left and right, and modify the position we want to move towards if we aren't supposed to 
 //         * go there. */
@@ -547,7 +552,7 @@
 //            deltaMovement = CollisionCorrections.VerticalCollision(this, deltaMovement, boxCollider, TL, BL, transformWidth, horizontalRaySeparation,
 //                skinWidth, error, verticalRays, isOnSlope, isRight, isGrounded, platformMask);
 //        }
-            
+
 
 //        /* Given our 2.5D game, we should always be zero in the z-axis. Once all of the movement positions have been modified based on 
 //         * the players collisions, use transform.Translate to move the player towards those positions */
@@ -558,7 +563,7 @@
 //        if (Time.deltaTime > 0f)
 //            velocity = deltaMovement / Time.deltaTime;
 
-        
+
 //        // to be used more in slope detection when its fixed
 //        if (isOnSlope)
 //            velocity.y = 0;
