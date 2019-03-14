@@ -13,9 +13,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FreezeEnemy : MonoBehaviour
+public class FreezeEnemies : MonoBehaviour
 {
-
     int countDown = 5;
     int i = 0;
     timer iceTimer = new timer();
