@@ -23,7 +23,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyPig : MonoBehaviour {
-
+    
     [Header("Physics/ Enemy Attributes")]
     public float AttackMaxSpeed;
     public float patrolMaxSpeed;
@@ -63,6 +63,7 @@ public class EnemyPig : MonoBehaviour {
     private Transform Player;
 
     void Start() {
+        
         enemy = GetComponent<Rigidbody>();
         enemy.isKinematic = false;
 
@@ -75,8 +76,8 @@ public class EnemyPig : MonoBehaviour {
         sprite_renderer = this.GetComponentInChildren<SpriteRenderer>();
     }
 
-    void FixedUpdate() {
 
+    void FixedUpdate() {
 
         leftPos = new Vector3(originalPosition.x - leftBoundry, 0f, 0f);    //set leftpos
         rightPos = new Vector3(originalPosition.x + rightBoundry, 0f, 0f);  //set rightpos
@@ -223,13 +224,13 @@ public class EnemyPig : MonoBehaviour {
     }
 
     private void OnCollisionEnter(Collision collision)
-    {
+    { 
         if ((collision.gameObject.name == "Yumi" || collision.gameObject.name == "Player-Ferrox(Clone)") && canExplode)
         {
             explode();
         }
     }
-
+    
     private void explode()                          //called when triggered explosion by touching player
     {
         if (!exploded)                              //prevent method from being called again (prevents recursion)
