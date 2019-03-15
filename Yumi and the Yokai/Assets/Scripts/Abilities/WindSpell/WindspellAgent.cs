@@ -54,9 +54,11 @@ public class WindspellAgent : MonoBehaviour {
 
     private void OnTriggerEnter(Collider collision)
     {
-        if (!collision.gameObject.CompareTag("WindSpellTrigger") && collision.gameObject.name != "Yumi" && collision.gameObject.name != "PlayerDetection")
+        if (  (!collision.gameObject.CompareTag("WindSpellTrigger") && collision.gameObject.name != "Yumi" && collision.gameObject.name != "PlayerDetection")
+            || collision.gameObject.CompareTag("WindSpellAgent") || collision.gameObject.CompareTag("WindSpell"))
         {
             //spawnerObj.GetComponent<WindSpellUse>().CleanUp();
+            print("collision with " + collision.gameObject.tag);
             Instantiate(wind_impact, this.transform.position, Quaternion.Euler(0, 0, -90 + this.transform.eulerAngles.z));
             Destroy(gameObject);
         }
