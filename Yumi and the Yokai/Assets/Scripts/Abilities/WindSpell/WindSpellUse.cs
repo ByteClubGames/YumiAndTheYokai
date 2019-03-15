@@ -2,7 +2,7 @@
 ********************************************************************************
 *Creator(s).....................Jack Bruce && Stephen && Evanito && Darrell Wong
 *Created.................................................................5/06/18
-*Last Modified..........................................................12/15/18
+*Last Modified..........................................................3/14/2019
 *Last Modified by...................................................Darrell Wong
 *
 *Attatch to WindSpellSpawner (This script is Active during "Draw Mode")
@@ -28,13 +28,15 @@ public class WindSpellUse : MonoBehaviour
 	public GameObject targetPrefab; //empty gameobject used for Transform
 	private GameObject player;
 	public GameObject windSpellPrefab;
-    public NavMeshAgent windspellAgent;
+    public NavMeshAgent windSpellAgentPrefab;
     public double minDeltaDis;
     public int drawSeconds = 10;
     //public GameObject timeManager;
 
 
     private GameObject windSpell;
+    public bool isDrawnWindSpell;
+    private NavMeshAgent windSpellAgent;
 	private GameObject tempTarget;
 	private TargList targets;
 	private bool drawMode;
@@ -43,67 +45,58 @@ public class WindSpellUse : MonoBehaviour
 	private Vector3 currentPos;
     private Stopwatch drawTimer = new Stopwatch();   
 
-	// Use this for initialization
 	void Start()
 	{
 		drawMode = true;
-        _isDone = false;
-		targets = new TargList();
         player = GameObject.Find("Yumi");
-        targets.addTarg(player.transform.position);
         windSpell = null;
-		//this.GetComponent<TimeManager>().StartSlowDown (); // Time is slowed when spawner is here
+        windSpellAgent = null;
     }
 
 	// Update is called once per frame
 	void Update()
 	{
 
-		//if only clicked for less than ~half a second
-		//Spawn WindSpell Object AGENT and set its destination to the click
+		//if only clicked for less than half a second it will spawn a (navmesh) windspell agent
         if ((_isDone && drawMode) && drawTimer.ElapsedMilliseconds < drawSeconds * 50) 
         {
             drawTimer.Stop();
-            drawTimer.Reset();
-            _isDone = false;
-            drawMode = false;
-            if (windSpell == null)
+            if (windSpellAgent == null && !isDrawnWindSpell)        //prevents multiple windspells
             {
-                windspellAgent = Instantiate(windspellAgent, player.transform.position + new Vector3(0f, .2f, 0f), Quaternion.identity); //spawn wind spell AGENT object @ player pos
+                windSpellAgent = Instantiate(windSpellAgentPrefab, player.transform.position + new Vector3(0f, .2f, 0f), Quaternion.identity); //spawn wind spell AGENT object @ player pos
                 //windspellAgent.tag = "WindSpellAgent";
 
                 Vector3 p = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10.0f));
 
-                windspellAgent.SetDestination(new Vector3(p.x, p.y, 0f));
+                windSpellAgent.SetDestination(new Vector3(p.x, p.y, 0f));
 
-
-                //TODO fix time slowdown/ stop
-                //this.GetComponent<TimeManager>().StopSlowDown(); // return time to normal   
             }
+            resetWindSpells();
         }
+
+        // if held down for more than ~0.5 seconds it will spawn a (drawn) windSpell
 		else if ((_isDone && drawMode )|| drawTimer.ElapsedMilliseconds > drawSeconds * 1000)
 		{
             drawTimer.Stop();
             drawTimer.Reset();
             _isDone = false;
-			drawMode = false;
-            if (windSpell == null)
+
+            if (windSpell == null && !isDrawnWindSpell)
             {
                 windSpell = Instantiate(windSpellPrefab, targets.getTop(), Quaternion.identity); //spawn wind spell object @ player pos
                 windSpell.tag = "WindSpell";
                 windSpell.SendMessage("SetSpawner", gameObject);
-				//this.GetComponent<TimeManager> ().StopSlowDown (); // return time to normal
-                
-
             }
-            //And Destroy all target objects
-		}
+            resetWindSpells();
+        }
 
-		if (Input.GetMouseButtonDown(0))
+		if (Input.GetMouseButtonDown(0) && !_isDragging)
 		{
 			_isDragging = true;
             drawTimer.Start();
-		}
+            targets = new TargList();                     //create a new targList to reset the path for new windspells
+            targets.addTarg(player.transform.position);   //look at this for the starting position of windspell
+        }
 		if (Input.GetMouseButtonUp(0))
 		{
             _isDone = true;
@@ -127,9 +120,26 @@ public class WindSpellUse : MonoBehaviour
                 //tempTarget.make sprite
                 Destroy(tempTarget);
             }
-		}
-	}
+        }
 
+        if (GameObject.Find("WindSpell(Clone)") != null || GameObject.Find("WindSpellAgent(Clone)") != null)
+        {
+            isDrawnWindSpell = true;
+        }
+        else
+        {
+            isDrawnWindSpell = false;
+        }
+    }
+
+    public void resetWindSpells()
+    {
+        drawTimer.Reset();
+        //windSpellAgent = null;    //enable this if you want a lot of windspells
+        _isDone = false;
+        drawMode = true;
+    }
+    
     public Vector3[] GetTargets()
     {
         return targets.getArray();
@@ -146,7 +156,7 @@ public class WindSpellUse : MonoBehaviour
     public void CleanUp()
     {
         Destroy(windSpell);
-        Destroy(gameObject);
+        //Destroy(gameObject);
         //Start();
     }
 }
@@ -158,7 +168,7 @@ public class TargList
     private TargLink top = null;
     private TargLink bottom = null;
     private int length;
-    
+
     public TargList()
     {
         top = null;
@@ -166,9 +176,9 @@ public class TargList
         length = 0;
     }
 
-    public void addTarg (TargLink inlink)
+    public void addTarg(TargLink inlink)
     {
-        if (top == null )
+        if (top == null)
         {
             top = inlink;
         } else
@@ -195,6 +205,11 @@ public class TargList
             cur = cur.getNext();
         }
         return arry;
+    }
+
+    public TargLink getFirst()
+    {
+        return top;
     }
 
     public Vector3 getTop()
