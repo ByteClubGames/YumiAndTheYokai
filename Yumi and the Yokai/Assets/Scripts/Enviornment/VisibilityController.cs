@@ -4,15 +4,28 @@ using UnityEngine;
 
 public class VisibilityController : MonoBehaviour
 {
-
     public GameObject InvisibleObject;
 
     public void SetVisible()
     {
-        InvisibleObject.SetActive(true);
+        
+        try
+        {
+            InvisibleObject.SetActive(true);
+        }
+        catch (System.NullReferenceException)
+        {
+            Debug.LogError(InvisibleObject);
+        }
     }
     public void SetInvisible()
     {
-        InvisibleObject.SetActive(false);
+        try {
+            InvisibleObject.SetActive(false);
+        }
+        catch (System.NullReferenceException)
+        {
+            Debug.LogError(InvisibleObject);
+        }
     }
 }
