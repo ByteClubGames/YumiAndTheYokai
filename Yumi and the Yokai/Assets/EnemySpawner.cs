@@ -17,7 +17,7 @@ public class EnemySpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("SpawnObject", spawnTime, spawnDelay);
+        InvokeRepeating("SpawnObject", spawnTime, Random.Range(1,10));
     }
     private void Update()
     {
@@ -39,8 +39,12 @@ public class EnemySpawner : MonoBehaviour
     {
         if (stopSpawning == false && enemyCount < maxEnemies)
         {
+            Random random = new Random();
+            int randomNumber = Random.Range(0, 10);
             enemyCount++;
-            Instantiate(enemySpawn, transform.position, transform.rotation);
+            Debug.Log(randomNumber);
+            StartCoroutine(RandomTime(randomNumber));
+            
         }
         // Update is called once per frame
     }
@@ -50,4 +54,12 @@ public class EnemySpawner : MonoBehaviour
         enemyCount--;
         Debug.Log("Enemy count is now " + enemyCount);
     }
+
+    IEnumerator RandomTime(float num)
+    {
+
+        yield return new WaitForSeconds(num);
+        Instantiate(enemySpawn, transform.position, transform.rotation);
+    }
+    
 }
