@@ -13,11 +13,13 @@ using UnityEngine;
 
 public class InputListener : MonoBehaviour
 {
+    InputEnabler InputEnabler;
     Dictionary<string, string> ControlList;
 
     void Start()
     {
         Dictionary<string, string> ControlList = new Dictionary<string, string>();
+        AssignControls();
     }
 
     
@@ -32,7 +34,9 @@ public class InputListener : MonoBehaviour
             RightInput();
             YokaiInput();
             SpellInput();
-        }        
+        }
+        
+        // CheckForControlRemapping();
     }
 
     /// <summary>
@@ -79,15 +83,15 @@ public class InputListener : MonoBehaviour
     {
         if (Input.GetKeyDown(ControlList["jump1"]))
         {
-
+            InputEnabler.RequestJump();
         }
         else if (Input.GetKeyDown(ControlList["jump2"]))
         {
-
+            InputEnabler.RequestJump();
         }
         else if (Input.GetKeyDown(ControlList["jump3"]))
         {
-
+            InputEnabler.RequestJump();
         }
     }
 
@@ -95,15 +99,15 @@ public class InputListener : MonoBehaviour
     {
         if (Input.GetKeyUp(ControlList["jump1"]))
         {
-
+            InputEnabler.RequestCancelJump();
         }
         else if (Input.GetKeyUp(ControlList["jump2"]))
         {
-
+            InputEnabler.RequestCancelJump();
         }
         else if (Input.GetKeyUp(ControlList["jump3"]))
         {
-
+            InputEnabler.RequestCancelJump();
         }
     }
 
@@ -111,11 +115,11 @@ public class InputListener : MonoBehaviour
     {
         if (Input.GetKey(ControlList["left1"]))
         {
-
+            InputEnabler.RequestLeft();
         }
         else if (Input.GetKey(ControlList["left2"]))
         {
-
+            InputEnabler.RequestLeft();
         }
     }
 
@@ -123,11 +127,11 @@ public class InputListener : MonoBehaviour
     {
         if (Input.GetKey(ControlList["right1"]))
         {
-
+            InputEnabler.RequestRight();
         }
         else if (Input.GetKey(ControlList["right2"]))
         {
-
+            InputEnabler.RequestRight();
         }
     }
 
@@ -135,7 +139,7 @@ public class InputListener : MonoBehaviour
     {
         if (Input.GetKey(ControlList["yokai"]))
         {
-
+            InputEnabler.RequestYokai();
         }
     }
 
@@ -143,15 +147,15 @@ public class InputListener : MonoBehaviour
     {
         if (Input.GetKeyDown(ControlList["earth"]))
         {
-
+            InputEnabler.RequestEarth();
         }
         else if (Input.GetKeyDown(ControlList["ice"]))
         {
-
+            InputEnabler.RequestIce();
         }
         else if (Input.GetKeyDown(ControlList["wind"]))
         {
-
+            InputEnabler.RequestWind();
         }
 
         if (Input.mouseScrollDelta.y != 0f)
@@ -161,7 +165,7 @@ public class InputListener : MonoBehaviour
 
         if (Input.GetKeyDown(ControlList["cancel spells"]))
         {
-
+            InputEnabler.RequestCancelSpells();
         }
     }
 }
