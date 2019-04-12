@@ -2,17 +2,17 @@
 ********************************************************************************
 *Creator(s).....................Jack Bruce && Stephen && Evanito && Darrell Wong
 *Created.................................................................5/06/18
-*Last Modified..........................................................3/14/2019
+*Last Modified..........................................................4/12/2019
 *Last Modified by...................................................Darrell Wong
 *
 *Attatch to WindSpellSpawner (This script is Active during "Draw Mode")
-* Description: Modified from 'IceSpellUse.cs'
-*  -Spawns trgtObjs upon clicking
-*  -makes array of trgtObjs position (Vector3)
+*        Description: Modified from 'IceSpellUse.cs'
+*               -Spawns trgtObjs upon clicking
+*               -makes array of trgtObjs position (Vector3)
 *  
-*  -differentiates between a click and a drag
-*  -a click will activate the nav mesh ai to direct the windspell to the clicked point
-*  -dragging will have the windspell follow the dragged path
+*               -differentiates between a click and a drag
+*               -a click will activate the nav mesh ai to direct the windspell to the clicked point
+*               -dragging will have the windspell follow the dragged path
 ********************************************************************************
 */
 using System.Collections;
@@ -27,8 +27,8 @@ public class WindSpellUse : MonoBehaviour
 
 	public GameObject targetPrefab; //empty gameobject used for Transform
 	private GameObject player;
-	public GameObject windSpellPrefab;
-    public NavMeshAgent windSpellAgentPrefab;
+	public GameObject windSpellPrefab;              //these windspells are different. One is for the drawn windspell
+    public NavMeshAgent windSpellAgentPrefab;       //this one is for the single click windspell
     public double minDeltaDis;
     public int drawSeconds = 10;
     //public GameObject timeManager;
@@ -43,7 +43,7 @@ public class WindSpellUse : MonoBehaviour
 	private bool _isDragging = false;
     private bool _isDone;
 	private Vector3 currentPos;
-    private Stopwatch drawTimer = new Stopwatch();   
+    private Stopwatch drawTimer = new Stopwatch();
 
 	void Start()
 	{
@@ -113,12 +113,20 @@ public class WindSpellUse : MonoBehaviour
             {
                 tempTarget = Instantiate(targetPrefab, new Vector3(p.x, p.y, 0.0f), //spawns target
                     Quaternion.identity);
+
+                //particleList[particleCount++] = tempTarget;
+
                 targets.addTarg(tempTarget.transform.position); //Adds position to target array
                 //Destroys all target objects immediately after spawning.
                 //You may want to disable this for tracking how many targets spawn.
                 //Hell, it may not even matter how many objects spawn if I delete them so dang fast
                 //tempTarget.make sprite
-                Destroy(tempTarget);
+
+                //Destroy(tempTarget); 
+
+                //I commented this out because I need the temp targets so I can use particle system.
+                //tempTargets get destroyed the moment you let go of the mouse button and the windspell is instantiated
+                //      -the wind spell will call getArray whitch cleans up the targetList
             }
         }
 
@@ -129,6 +137,26 @@ public class WindSpellUse : MonoBehaviour
         else
         {
             isDrawnWindSpell = false;
+        }
+
+        if (isDrawnWindSpell && !_isDragging)               //when done drawing the spell's path
+        {
+            foreach (GameObject target in GameObject.FindObjectsOfType(typeof(GameObject)))         //find all targets with name windspelltarget(clone)
+            {
+                if (target.name == "WindSpellTarget(Clone)")
+                {
+                    GameObject emitter = target.transform.Find("trailEmitter").gameObject;          //get the trailEmitter child object of each target
+
+                    ParticleSystem emit = emitter.GetComponent<ParticleSystem>();                   //get the ParticleSystem object of the trailEmitter
+                    
+                    emit.transform.parent = null;                                                    //detach particles from the target
+                    emit.enableEmission = false;
+
+                    Destroy(emitter, 3);                //destroy emitter after a delay so that the particles will disappear naturally
+                    Destroy(target);                    //clean up the targets
+                }
+
+            }
         }
     }
 
@@ -169,6 +197,7 @@ public class TargList
     private TargLink bottom = null;
     private int length;
 
+
     public TargList()
     {
         top = null;
@@ -181,7 +210,8 @@ public class TargList
         if (top == null)
         {
             top = inlink;
-        } else
+        }
+        else
         {
             bottom.setNext(inlink);
         }
@@ -202,10 +232,12 @@ public class TargList
         for (int i = 0; i < length; i++)
         {
             arry[i] = cur.getData();
+            //cur.deleteEmitter();
             cur = cur.getNext();
         }
         return arry;
     }
+
 
     public TargLink getFirst()
     {
@@ -220,6 +252,11 @@ public class TargList
     public Vector3 getBottom()
     {
         return bottom.getData();
+    }
+
+    public void deleteTargetList()
+    {
+        top = null;
     }
 }
 
