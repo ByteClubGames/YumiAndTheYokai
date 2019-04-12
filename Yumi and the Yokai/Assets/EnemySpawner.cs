@@ -6,28 +6,28 @@ public class EnemySpawner : MonoBehaviour
 {
     public GameObject enemySpawn; // enemy to be selected to be spawned
     public bool stopSpawning = false;
+    public bool randomSpawning; // a bool to be enabled in the editor if randomspawning for a spawn point is needed
+    public bool infiniteEnemies;// only check if infinite enemies are needed
     public float spawnTime;
     public float spawnDelay;
-    public float range;
+    public float range; // how close the enemy has to be to spawn
     private int enemyCount = 0;
-    public int maxEnemies;
+    public int maxEnemies;// Max Enemies desired
     public Transform target;
     public float distance;
 
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("SpawnObject", spawnTime, Random.Range(1,10));
+            InvokeRepeating("SpawnObject", spawnTime, spawnDelay);
     }
     private void Update()
     {
-        Debug.Log(enemyCount);
         target = GameObject.Find("Yumi").transform; // Finds Yumi as the target
         distance = Vector3.Distance(this.transform.position, target.position);
         if (range <= distance)
         {
             stopSpawning = true;
-            Debug.Log("This line was invoked");
         }
         else
         {
@@ -37,16 +37,26 @@ public class EnemySpawner : MonoBehaviour
 
     public void SpawnObject()
     {
-        if (stopSpawning == false && enemyCount < maxEnemies)
-        {
-            Random random = new Random();
-            int randomNumber = Random.Range(0, 10);
-            enemyCount++;
-            Debug.Log(randomNumber);
-            StartCoroutine(RandomTime(randomNumber));
-            
+        if (stopSpawning == false && enemyCount < maxEnemies) { 
+            if (randomSpawning == true)
+            {
+                    Random random = new Random();
+                    int randomNumber = Random.Range(0, 10);
+                    if (infiniteEnemies == false)
+                    {
+                        enemyCount++;
+                    }
+                    StartCoroutine(RandomTime(randomNumber));
+            }
+            else
+            { 
+                Instantiate(enemySpawn, transform.position, transform.rotation);
+                if (infiniteEnemies == false)
+                {
+                    enemyCount++;
+                }
+            }
         }
-        // Update is called once per frame
     }
 
     public void EnemyKilled()
