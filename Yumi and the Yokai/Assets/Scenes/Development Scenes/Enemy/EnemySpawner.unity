@@ -784,10 +784,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 267d4d1af4501574390a9ce2efc2683c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySpawn: {fileID: 1947331771}
+  enemySpawn: {fileID: 1576858297}
   stopSpawning: 0
   randomSpawning: 0
-  infiniteEnemies: 1
+  infiniteEnemies: 0
   continousSpawning: 0
   spawnTime: 1
   spawnDelay: 2
@@ -2409,6 +2409,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ffdd6f9159c3cff4d93b8a38ebbf8ad3, type: 3}
+--- !u!1 &1576858297 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1711349034853890, guid: ffdd6f9159c3cff4d93b8a38ebbf8ad3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1576858296}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1597893324
 GameObject:
   m_ObjectHideFlags: 0
