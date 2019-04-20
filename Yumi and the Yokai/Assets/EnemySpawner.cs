@@ -1,4 +1,12 @@
-﻿using System.Collections;
+﻿/********************************************************************************
+*Creator(s)..........................................................Karim Dabboussi
+*Created................................................................3/20/2019
+*Last Modified................................................@ 5 PM on 04/19/2019
+*Last Modified by....................................................Karim Dabboussi
+*Description: A object/enemy spawner for spawning in different objects in unity.
+*********************************************************************************
+*/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,13 +16,16 @@ public class EnemySpawner : MonoBehaviour
     public bool stopSpawning = false;
     public bool randomSpawning; // a bool to be enabled in the editor if randomspawning for a spawn point is needed
     public bool infiniteEnemies;// only check if infinite enemies are needed
+    public bool continousSpawning;// If you want the enemies to continue to spawn after reaching the limit
     public float spawnTime;
     public float spawnDelay;
     public float range; // how close the enemy has to be to spawn
     private int enemyCount = 0;
+    private int start = 0;
     public int maxEnemies;// Max Enemies desired
     public Transform target;
     public float distance;
+    List<GameObject> objects = new List<GameObject>();
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +36,12 @@ public class EnemySpawner : MonoBehaviour
     {
         target = GameObject.Find("Yumi").transform; // Finds Yumi as the target
         distance = Vector3.Distance(this.transform.position, target.position);
+        if (continousSpawning == true)
+        {
+            enemyCount = objects.Count;
+            Debug.Log("List Count" + objects.Count);
+            objects.Remove(null);
+        }
         if (range <= distance)
         {
             stopSpawning = true;
@@ -44,17 +61,31 @@ public class EnemySpawner : MonoBehaviour
                     int randomNumber = Random.Range(0, 10);
                     if (infiniteEnemies == false)
                     {
+                    if (continousSpawning == false)
+                    {
                         enemyCount++;
                     }
+                }
                     StartCoroutine(RandomTime(randomNumber));
             }
             else
-            { 
-                Instantiate(enemySpawn, transform.position, transform.rotation);
+            {
+
                 if (infiniteEnemies == false)
                 {
-                    enemyCount++;
+                    if (continousSpawning == false)
+                    {
+                        enemyCount++;
+                    }
                 }
+                if (continousSpawning == true)
+                {
+                    objects.Add(Instantiate(enemySpawn, transform.position, transform.rotation));
+                } else
+                {
+                    Instantiate(enemySpawn, transform.position, transform.rotation);
+                }
+                
             }
         }
     }
@@ -69,7 +100,15 @@ public class EnemySpawner : MonoBehaviour
     {
 
         yield return new WaitForSeconds(num);
-        Instantiate(enemySpawn, transform.position, transform.rotation);
+
+        if (continousSpawning == true)
+        {
+            objects.Add(Instantiate(enemySpawn, transform.position, transform.rotation));
+        }
+        else
+        {
+            Instantiate(enemySpawn, transform.position, transform.rotation);
+        }
+    }
     }
     
-}
