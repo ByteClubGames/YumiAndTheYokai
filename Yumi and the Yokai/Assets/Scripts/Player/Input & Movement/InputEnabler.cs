@@ -13,12 +13,81 @@ public class InputEnabler : MonoBehaviour
     private SpellCasting spellcaster;
     private VisibilityController invisibleObjects;
 
-    
+    public struct CharStatus
+    {
+        private bool onGround;
+        private bool onRightSlope;
+        private bool onLeftSlope;
+        private bool onLowRoof;
+        private bool onRightSlide;
+        private bool onLeftSlide;
+        private bool onRightWall;
+        private bool onLeftWall;
+
+        /// <summary>
+        /// Struct initializer.
+        /// </summary>
+        /// <param name="flag">Bool flag; Should be initialized as false.</param>
+        public CharStatus(bool flag)
+        {
+            onGround = flag;
+            onLowRoof = flag;
+            onRightSlope = flag;
+            onLeftSlope = flag;
+            onRightSlide = flag;
+            onLeftSlide = flag;
+            onRightWall = flag;
+            onLeftWall = flag;
+        }
+
+        public void setOnGround(bool flag)
+        {
+            onGround = flag;
+        }
+
+        public void setOnLowRoof(bool flag)
+        {
+            onLowRoof = flag;
+        }
+
+        public void setOnRightSlope(bool flag)
+        {
+            onRightSlope = flag;
+        }
+
+        public void setOnLeftSlope(bool flag)
+        {
+            onLeftSlope = flag;
+        }
+
+        public void setOnRightSlide(bool flag)
+        {
+            onRightSlide = flag;
+        }
+
+        public void setOnLeftSlide(bool flag)
+        {
+            onLeftSlide = flag;
+        }
+
+        public void setOnLeftWall(bool flag)
+        {
+            onLeftWall = flag;
+        }
+
+        public void setOnRightWall(bool flag)
+        {
+            onLeftWall = flag;
+        }
+    }
+    public CharStatus activeCharacterStatus;
 
     // Start is called before the first frame update
     void Start()
     {
         activeCharacter = "Yumi";
+        activeCharacterStatus = new CharStatus(false);
+        
     }
 
     // Update is called once per frame
