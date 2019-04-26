@@ -12,8 +12,9 @@ public class CharacterStatus : MonoBehaviour
     public int horizontalRays = 4;
     [Range(2, 5)]
     public int verticalRays = 3;
-    public float rayLength;
+    public float rayLength = .1f;
     public LayerMask platformMask;
+    public float angleLimit = 45;
 
     private float verticalRaySeparation;
     private float horizontalRaySeparation;
@@ -34,9 +35,7 @@ public class CharacterStatus : MonoBehaviour
     }
     #endregion
 
-
-
-
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -67,6 +66,7 @@ public class CharacterStatus : MonoBehaviour
     private void CastRaysRight()
     {
         var charstatus = inputEnabler.activeCharacterStatus;
+        int halfNumberOfRays = horizontalRays / 2; // used to check for slopes on only some of the raycasts.
 
         for (int i = 0; i < horizontalRays; i++)
         {
@@ -75,8 +75,11 @@ public class CharacterStatus : MonoBehaviour
             Debug.DrawRay(ray, Vector3.right * rayLength, Color.magenta);
             bool raycastHit = Physics.Raycast(ray, Vector3.right, out hit, rayLength, platformMask);
 
-            if (!raycastHit) { continue; }
+            if (!raycastHit) { continue; } // Don't read anymore code if no RayCastHit occured.
 
+            if(i < halfNumberOfRays) { checkSlopes(hit, true); }
+
+            checkWalls(hit, true);
 
         }
     }
@@ -84,6 +87,7 @@ public class CharacterStatus : MonoBehaviour
     private void CastRaysLeft()
     {
         var charstatus = inputEnabler.activeCharacterStatus;
+        int halfNumberOfRays = horizontalRays / 2; // used to check for slopes on only some of the raycasts.
 
         for (int i = 0; i < horizontalRays; i++)
         {
@@ -91,12 +95,20 @@ public class CharacterStatus : MonoBehaviour
             RaycastHit hit;
             Debug.DrawRay(ray, Vector3.left * rayLength, Color.magenta);
             bool raycastHit = Physics.Raycast(ray, Vector3.left, out hit, rayLength, platformMask);
+
+            if (!raycastHit) { continue; } // Don't read anymore code if no RayCastHit occured.
+
+            if (i < halfNumberOfRays) { checkSlopes(hit, false); }
+
+            checkWalls(hit, false);
+
         }
     }
 
     private void CastRaysBottom()
     {
         var charstatus = inputEnabler.activeCharacterStatus;
+        int halfNumberOfRays = verticalRays / 2; // used to check for slopes on only some of the raycasts.
 
         for (int i = 0; i < verticalRays; i++)
         {
@@ -104,6 +116,20 @@ public class CharacterStatus : MonoBehaviour
             RaycastHit hit;
             Debug.DrawRay(ray, Vector3.down * rayLength, Color.magenta);
             bool raycastHit = Physics.Raycast(ray, Vector3.down, out hit, rayLength, platformMask);
+
+            if (!raycastHit) { continue; } // Don't read anymore code if no RayCastHit occured.
+
+            /* Check for slopes beneath the player */
+            if(i < halfNumberOfRays)
+            {
+                checkSlopes(hit, false);
+            }
+            else
+            {
+                checkSlopes(hit, true);
+            }
+
+            charstatus.setOnGround(true);
         }
     }
 
@@ -117,8 +143,70 @@ public class CharacterStatus : MonoBehaviour
             RaycastHit hit;
             Debug.DrawRay(ray, Vector3.up * rayLength, Color.magenta);
             bool raycastHit = Physics.Raycast(ray, Vector3.up, out hit, rayLength, platformMask);
+
+            if (!raycastHit) { continue; } // Don't read anymore code if no RayCastHit occured.
+
+            charstatus.setOnLowRoof(true);
         }
     }
+
+    /// <summary>
+    /// Will flag if a slope is present, and if it is too steep to climb.
+    /// </summary>
+    /// <param name="hit">The associated raycastHit.</param>
+    /// <param name="isRightSlope">Enter true if there you are checking slopes on the right hand side. Otherwise, false.</param>
+    private void checkSlopes(RaycastHit hit, bool isRightSlope)
+    {
+        float slopeAngle = Mathf.Atan2(hit.normal.x, hit.normal.y) * Mathf.Rad2Deg;
+
+        if ((slopeAngle != 0) | (slopeAngle != 90)) // Does a non-perpendicular angle exist?
+        {
+            if (slopeAngle > angleLimit) // Is the angle too steep to stand on?
+            {                
+                if (isRightSlope)
+                {
+                    inputEnabler.activeCharacterStatus.setOnRightSlope_Steep(true);
+                    inputEnabler.activeCharacterStatus.setOnRightWall(true);
+                }
+                else
+                {
+                    inputEnabler.activeCharacterStatus.setOnLeftSlope_Steep(true);
+                    inputEnabler.activeCharacterStatus.setOnLeftWall(true);
+                }
+            }
+            else // The angle isn't too steep, its just a regular slope.
+            {
+                if (isRightSlope)
+                {
+                    inputEnabler.activeCharacterStatus.setOnRightSlope(true);
+                }
+                else
+                {
+                    inputEnabler.activeCharacterStatus.setOnLeftSlope(true);
+                }
+            }
+        }
+
+        
+    }
+
+    private void checkWalls(RaycastHit hit, bool isRightSlope)
+    {
+        float slopeAngle = Mathf.Atan2(hit.normal.x, hit.normal.y) * Mathf.Rad2Deg;
+
+        if ((slopeAngle == 0) | (slopeAngle == 90))
+        {
+            if (isRightSlope)
+            {
+                inputEnabler.activeCharacterStatus.setOnRightWall(true);
+            }
+            else
+            {
+                inputEnabler.activeCharacterStatus.setOnLeftWall(true);
+            }
+        }
+    }
+
 
     //public GetCharacterStatus()
     //{

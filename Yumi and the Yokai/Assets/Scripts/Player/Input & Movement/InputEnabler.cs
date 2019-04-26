@@ -18,6 +18,8 @@ public class InputEnabler : MonoBehaviour
         private bool onGround;
         private bool onRightSlope;
         private bool onLeftSlope;
+        private bool onRightSlope_Steep;
+        private bool onLeftSlope_Steep;
         private bool onLowRoof;
         private bool onRightSlide;
         private bool onLeftSlide;
@@ -34,6 +36,8 @@ public class InputEnabler : MonoBehaviour
             onLowRoof = flag;
             onRightSlope = flag;
             onLeftSlope = flag;
+            onRightSlope_Steep = flag;
+            onLeftSlope_Steep = flag;
             onRightSlide = flag;
             onLeftSlide = flag;
             onRightWall = flag;
@@ -56,6 +60,16 @@ public class InputEnabler : MonoBehaviour
         }
 
         public void setOnLeftSlope(bool flag)
+        {
+            onLeftSlope = flag;
+        }
+
+        public void setOnRightSlope_Steep(bool flag)
+        {
+            onRightSlope = flag;
+        }
+
+        public void setOnLeftSlope_Steep(bool flag)
         {
             onLeftSlope = flag;
         }
