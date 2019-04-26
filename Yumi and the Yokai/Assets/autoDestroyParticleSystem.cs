@@ -9,7 +9,8 @@
 *                   This script is necessary because when a particle emitter is deleted,
 *                   all of the particles abruptly get deleted too.
 *                   
-*                   This should be attached to the particle emitter object. When 
+*                   This should be attached to the particle emitter object which is the child of
+*                   the object that needs to emit particles. When 
 *                   the object is detached from the parent projectle, it will delete
 *                   the particle system after a delay.
 ********************************************************************************

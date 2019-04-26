@@ -25,9 +25,11 @@ using UnityEngine.AI;
 public class WindSpellUse : MonoBehaviour
 {
 
-	public GameObject targetPrefab; //empty gameobject used for Transform
-	private GameObject player;
-	public GameObject windSpellPrefab;              //these windspells are different. One is for the drawn windspell
+    public GameObject targetPrefab; //empty gameobject used for Transform
+    private GameObject player;
+    public GameObject windSpellPrefab;              //these windspells are different. One is for the drawn windspell
+    public GameObject windPortalPrefab;
+    private GameObject portal;                      //instantiated portal
     public NavMeshAgent windSpellAgentPrefab;       //this one is for the single click windspell
     public double minDeltaDis;
     public int drawSeconds = 10;
@@ -35,111 +37,113 @@ public class WindSpellUse : MonoBehaviour
 
 
     private GameObject windSpell;
-    public bool isDrawnWindSpell;
+    private bool isCurrentWindSpell;
+    private bool isActivePortal;
     private NavMeshAgent windSpellAgent;
-	private GameObject tempTarget;
-	private TargList targets;
-	private bool drawMode;
-	private bool _isDragging = false;
+    private GameObject tempTarget;
+    private TargList targets;
+    private bool drawMode;
+    private bool _isDragging = false;
     private bool _isDone;
-	private Vector3 currentPos;
+    private Vector3 currentPos;
     private Stopwatch drawTimer = new Stopwatch();
 
-	void Start()
-	{
-		drawMode = true;
+    void Start()
+    {
+        drawMode = true;
         player = GameObject.Find("Yumi");
         windSpell = null;
         windSpellAgent = null;
     }
 
-	// Update is called once per frame
-	void Update()
-	{
+    // Update is called once per frame
+    void Update()
+    {
+        if (!isCurrentWindSpell)
+        { 
 
-		//if only clicked for less than half a second it will spawn a (navmesh) windspell agent
-        if ((_isDone && drawMode) && drawTimer.ElapsedMilliseconds < drawSeconds * 50) 
-        {
-            drawTimer.Stop();
-            if (windSpellAgent == null && !isDrawnWindSpell)        //prevents multiple windspells
+            if (Input.GetMouseButtonDown(0) && !_isDragging)
             {
-                windSpellAgent = Instantiate(windSpellAgentPrefab, player.transform.position + new Vector3(0f, .2f, 0f), Quaternion.identity); //spawn wind spell AGENT object @ player pos
-                //windspellAgent.tag = "WindSpellAgent";
+                _isDragging = true;
+                drawTimer.Start();
+                targets = new TargList();                     //create a new targList to reset the path for new windspells
+                targets.addTarg(player.transform.position);   //look at this for the starting position of windspell
 
-                Vector3 p = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10.0f));
-
-                windSpellAgent.SetDestination(new Vector3(p.x, p.y, 0f));
-
+                if (!isCurrentWindSpell)
+                {
+                    portal = Instantiate(windPortalPrefab, player.transform.position, Quaternion.identity);          //spawn windspell portal
+                    isActivePortal = true;
+                }
             }
-            resetWindSpells();
-        }
-
-        // if held down for more than ~0.5 seconds it will spawn a (drawn) windSpell
-		else if ((_isDone && drawMode )|| drawTimer.ElapsedMilliseconds > drawSeconds * 1000)
-		{
-            drawTimer.Stop();
-            drawTimer.Reset();
-            _isDone = false;
-
-            if (windSpell == null && !isDrawnWindSpell)
+            if (Input.GetMouseButtonUp(0) && drawTimer.IsRunning)
             {
-                windSpell = Instantiate(windSpellPrefab, targets.getTop(), Quaternion.identity); //spawn wind spell object @ player pos
-                windSpell.tag = "WindSpell";
-                windSpell.SendMessage("SetSpawner", gameObject);
+                _isDone = true;
+                _isDragging = false;
+                return;
             }
-            resetWindSpells();
-        }
-
-		if (Input.GetMouseButtonDown(0) && !_isDragging)
-		{
-			_isDragging = true;
-            drawTimer.Start();
-            targets = new TargList();                     //create a new targList to reset the path for new windspells
-            targets.addTarg(player.transform.position);   //look at this for the starting position of windspell
-        }
-		if (Input.GetMouseButtonUp(0))
-		{
-            _isDone = true;
-			_isDragging = false;
-			return;
-		}
-		if (_isDragging && drawMode) 
-		{
-			//Runs wind prefab is mouse button is pushed down
-			Vector3 p = Camera.main.ScreenToWorldPoint(new
-			Vector3(Input.mousePosition.x, Input.mousePosition.y, 10.0f)); 
-            double dist = GetDistance(p.x, p.y, targets.getBottom().x, targets.getBottom().y);
-            if (dist >= minDeltaDis) // check if distance changed enough || that enough time has passed ??
+            if (_isDragging && drawMode)
             {
-                tempTarget = Instantiate(targetPrefab, new Vector3(p.x, p.y, 0.0f), //spawns target
-                    Quaternion.identity);
+                //Runs wind prefab is mouse button is pushed down
+                Vector3 p = Camera.main.ScreenToWorldPoint(new
+                Vector3(Input.mousePosition.x, Input.mousePosition.y, 10.0f));
+                double dist = GetDistance(p.x, p.y, targets.getBottom().x, targets.getBottom().y);
+                if (dist >= minDeltaDis) // check if distance changed enough || that enough time has passed ??
+                {
+                    tempTarget = Instantiate(targetPrefab, new Vector3(p.x, p.y, 0.0f), //spawns target
+                        Quaternion.identity);
 
-                //particleList[particleCount++] = tempTarget;
+                    //particleList[particleCount++] = tempTarget;
 
-                targets.addTarg(tempTarget.transform.position); //Adds position to target array
-                //Destroys all target objects immediately after spawning.
-                //You may want to disable this for tracking how many targets spawn.
-                //Hell, it may not even matter how many objects spawn if I delete them so dang fast
-                //tempTarget.make sprite
+                    targets.addTarg(tempTarget.transform.position); //Adds position to target array
+                                                                    //Destroys all target objects immediately after spawning.
+                                                                    //You may want to disable this for tracking how many targets spawn.
+                                                                    //Hell, it may not even matter how many objects spawn if I delete them so dang fast
+                                                                    //tempTarget.make sprite
 
-                //Destroy(tempTarget); 
+                    //Destroy(tempTarget); 
 
-                //I commented this out because I need the temp targets so I can use particle system.
-                //tempTargets get destroyed the moment you let go of the mouse button and the windspell is instantiated
-                //      -the wind spell will call getArray whitch cleans up the targetList
+                    //I commented this out because I need the temp targets so I can use particle system.
+                    //tempTargets get destroyed the moment you let go of the mouse button and the windspell is instantiated
+                    //      -the wind spell will call getArray whitch cleans up the targetList
+                }
+            }
+
+            //if only clicked for less than half a second it will spawn a (navmesh) windspell agent
+            if ((_isDone && drawMode) && drawTimer.ElapsedMilliseconds < drawSeconds * 50)
+            {
+                drawTimer.Stop();
+                if (windSpellAgent == null && !isCurrentWindSpell)        //prevents multiple windspells
+                {
+                    windSpellAgent = Instantiate(windSpellAgentPrefab, player.transform.position + new Vector3(0f, .2f, 0f), Quaternion.identity); //spawn wind spell AGENT object @ player pos
+                                                                                                                                                   //windspellAgent.tag = "WindSpellAgent";
+
+                    Vector3 p = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10.0f));
+
+                    windSpellAgent.SetDestination(new Vector3(p.x, p.y, 0f));
+
+                }
+                resetWindSpells();
+            }
+
+            // if held down for more than ~0.5 seconds it will spawn a (drawn) windSpell
+            else if ((_isDone && drawMode) || drawTimer.ElapsedMilliseconds > drawSeconds * 1000)
+            {
+                drawTimer.Stop();
+                drawTimer.Reset();
+                _isDone = false;
+
+                if (windSpell == null && !isCurrentWindSpell)
+                {
+                    windSpell = Instantiate(windSpellPrefab, targets.getTop(), Quaternion.identity); //spawn wind spell object @ player pos
+                    windSpell.tag = "WindSpell";
+                    windSpell.SendMessage("SetSpawner", gameObject);
+                }
+                resetWindSpells();
             }
         }
 
-        if (GameObject.Find("WindSpell(Clone)") != null || GameObject.Find("WindSpellAgent(Clone)") != null)
-        {
-            isDrawnWindSpell = true;
-        }
-        else
-        {
-            isDrawnWindSpell = false;
-        }
 
-        if (isDrawnWindSpell && !_isDragging)               //when done drawing the spell's path
+        if (isCurrentWindSpell && !_isDragging)               //when done drawing the spell's path destroy all targets
         {
             foreach (GameObject target in GameObject.FindObjectsOfType(typeof(GameObject)))         //find all targets with name windspelltarget(clone)
             {
@@ -148,7 +152,7 @@ public class WindSpellUse : MonoBehaviour
                     GameObject emitter = target.transform.Find("trailEmitter").gameObject;          //get the trailEmitter child object of each target
 
                     ParticleSystem emit = emitter.GetComponent<ParticleSystem>();                   //get the ParticleSystem object of the trailEmitter
-                    
+
                     emit.transform.parent = null;                                                    //detach particles from the target
                     emit.enableEmission = false;
 
@@ -158,6 +162,15 @@ public class WindSpellUse : MonoBehaviour
 
             }
         }
+
+        if (GameObject.Find("WindSpell(Clone)") != null || GameObject.Find("WindSpellAgent(Clone)") != null)
+        {
+            isCurrentWindSpell = true;
+        }
+        else
+        {
+            isCurrentWindSpell = false;
+        }
     }
 
     public void resetWindSpells()
@@ -166,8 +179,39 @@ public class WindSpellUse : MonoBehaviour
         //windSpellAgent = null;    //enable this if you want a lot of windspells
         _isDone = false;
         drawMode = true;
+
+        //StartCoroutine("DeletePortal");
+        DetachParticles(portal);
     }
-    
+
+    //EITHER USE THIS SHITTTTTTTTTTTTTTTTTTTTTTT OR CLEAN IT UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUP
+    //IEnumerator DeletePortal()
+    //{
+    //    GameObject deletePortal = portal;
+    //    portal = null;
+    //    yield return new WaitForSeconds(.5f);
+
+    //    DetachParticles(deletePortal);
+
+    //    //Destroy(deletePortal, 3);
+    //}
+
+    public void DetachParticles(GameObject portal)
+    {
+        GameObject emitter = portal.transform.GetChild(0).gameObject;
+
+        ParticleSystem emit = emitter.GetComponent<ParticleSystem>();
+
+        // This splits the particle off so it doesn't get deleted with the parent
+        emit.transform.parent = null;
+
+        // this stops the particle from creating more bits
+        emit.enableEmission = false;
+
+        isActivePortal = false;
+        Destroy(this.portal);
+    }
+
     public Vector3[] GetTargets()
     {
         return targets.getArray();
@@ -270,7 +314,7 @@ public class TargLink
         current = intemp;
     }
 
-   public  void setNext(TargLink nexto)
+    public void setNext(TargLink nexto)
     {
         next = nexto;
     }

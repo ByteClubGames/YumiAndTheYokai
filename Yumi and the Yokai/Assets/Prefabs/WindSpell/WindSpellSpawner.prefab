@@ -47,7 +47,10 @@ MonoBehaviour:
     type: 3}
   windSpellPrefab: {fileID: 1617739696271592, guid: 4e04ae8723eaf45b08d0dc83e08974a3,
     type: 3}
+  windPortalPrefab: {fileID: 94720804763611133, guid: 3694e509337e0c548948fe09667d6bf4,
+    type: 3}
   windSpellAgentPrefab: {fileID: 195918133714553368, guid: 7953b270f8921524a953307e2de3ddaa,
     type: 3}
   minDeltaDis: 0.3
   drawSeconds: 5
+  isDrawnWindSpell: 0
