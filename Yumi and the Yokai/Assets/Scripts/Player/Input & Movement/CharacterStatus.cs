@@ -14,6 +14,7 @@ public class CharacterStatus : MonoBehaviour
     public int verticalRays = 3;
     public float rayLength = .1f;
     public LayerMask platformMask;
+    public LayerMask wallSlideMask;
     public float angleLimit = 45;
 
     private float verticalRaySeparation;
@@ -72,14 +73,21 @@ public class CharacterStatus : MonoBehaviour
         {
             Vector3 ray = new Vector3(BR.x, BR.y + i * verticalRaySeparation, 0f);
             RaycastHit hit;
+            RaycastHit slideHit;
             Debug.DrawRay(ray, Vector3.right * rayLength, Color.magenta);
             bool raycastHit = Physics.Raycast(ray, Vector3.right, out hit, rayLength, platformMask);
+            bool raycastHit_Slide = Physics.Raycast(ray, Vector3.left, out slideHit, rayLength, wallSlideMask);
 
             if (!raycastHit) { continue; } // Don't read anymore code if no RayCastHit occured.
 
             if(i < halfNumberOfRays) { checkSlopes(hit, true); }
 
             checkWalls(hit, true);
+
+            if (raycastHit_Slide)
+            {
+                charstatus.setOnRightSlide(true);
+            }
 
         }
     }
@@ -92,15 +100,22 @@ public class CharacterStatus : MonoBehaviour
         for (int i = 0; i < horizontalRays; i++)
         {
             Vector3 ray = new Vector3(BL.x, BL.y + i * verticalRaySeparation, 0f);
-            RaycastHit hit;
+            RaycastHit platformHit;
+            RaycastHit slideHit;
             Debug.DrawRay(ray, Vector3.left * rayLength, Color.magenta);
-            bool raycastHit = Physics.Raycast(ray, Vector3.left, out hit, rayLength, platformMask);
+            bool raycastHit_Platform = Physics.Raycast(ray, Vector3.left, out platformHit, rayLength, platformMask);
+            bool raycastHit_Slide = Physics.Raycast(ray, Vector3.left, out slideHit, rayLength, wallSlideMask);
 
-            if (!raycastHit) { continue; } // Don't read anymore code if no RayCastHit occured.
+            if (!raycastHit_Platform) { continue; } // Don't read anymore code if no RayCastHit occured.
 
-            if (i < halfNumberOfRays) { checkSlopes(hit, false); }
+            if (i < halfNumberOfRays) { checkSlopes(platformHit, false); }
 
-            checkWalls(hit, false);
+            checkWalls(platformHit, false);
+
+            if (raycastHit_Slide)
+            {
+                charstatus.setOnLeftSlide(true);
+            }
 
         }
     }
