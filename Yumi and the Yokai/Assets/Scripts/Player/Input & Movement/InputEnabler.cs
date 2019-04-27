@@ -107,41 +107,41 @@ public class InputEnabler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GetCharacterStatus();
+        //GetCharacterStatus();
     }
 
-    private void GetCharacterStatus()
+
+    public string GetActiveCharacter()
     {
-        if(activeCharacter == "Yumi")
-        {
-
-        }
-        else if(activeCharacter == "Yokai")
-        {
-
-        }
-        else
-        {
-            Debug.Log("The activeCharacter " + activeCharacter + "of the InputEnabler.cs is undefined.");
-        }
+        return activeCharacter;
     }
 
+
+    #region Control Requests
     public void RequestJump()
     {
 
     }
+
+
     public void RequestCancelJump()
     {
 
     }
+
+
     public void RequestLeft()
     {
 
     }
+
+
     public void RequestRight()
     {
 
     }
+
+
     public void RequestYokai()
     {
         if(activeCharacter == "Yumi")
@@ -158,6 +158,8 @@ public class InputEnabler : MonoBehaviour
             invisibleObjects.SetInvisible();
         }
     }
+
+
     public void RequestEarth()
     {
         if (activeCharacter == "Yumi")
@@ -169,6 +171,8 @@ public class InputEnabler : MonoBehaviour
             spellcaster.CallEarthSpell();
         }
     }
+
+
     public void RequestIce()
     {
         if (activeCharacter == "Yumi")
@@ -180,6 +184,8 @@ public class InputEnabler : MonoBehaviour
             spellcaster.CallIceSpell();
         }
     }
+
+
     public void RequestWind()
     {
         if (activeCharacter == "Yumi")
@@ -191,6 +197,8 @@ public class InputEnabler : MonoBehaviour
             spellcaster.CallWindSpell();
         }
     }
+
+
     public void RequestCancelSpells()
     {
         if (activeCharacter == "Yumi")
@@ -204,4 +212,5 @@ public class InputEnabler : MonoBehaviour
             invisibleObjects.SetInvisible();
         }
     }
+    #endregion
 }

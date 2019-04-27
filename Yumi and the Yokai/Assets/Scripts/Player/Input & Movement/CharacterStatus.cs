@@ -5,7 +5,6 @@ using UnityEngine;
 public class CharacterStatus : MonoBehaviour
 {
     public InputEnabler inputEnabler;
-        
 
     [Header("Collision Detection")]
     [Range(2, 5)]
@@ -16,6 +15,7 @@ public class CharacterStatus : MonoBehaviour
     public LayerMask platformMask;
     public LayerMask wallSlideMask;
     public float angleLimit = 45;
+    public string characterName = "Yumi";
 
     private float verticalRaySeparation;
     private float horizontalRaySeparation;
@@ -42,28 +42,36 @@ public class CharacterStatus : MonoBehaviour
     {
         boxCollider = GetComponent<BoxCollider>();
     }
-
-
+    
 
     private void Awake()
     {
         //set the ie
     }
 
+
     // Update is called once per frame
     private void FixedUpdate()
     {
-        verticalRaySeparation = boxCollider.size.y / (horizontalRays - 1);
-        horizontalRaySeparation = boxCollider.size.x / (verticalRays - 1);
+        /* This selection statement checks if the character currently being controled is the
+         * one that this CharacterStatus.cs script is attached to. If it isn't, there is no 
+         * need to check anything about this character's surroundings. */
+        if (inputEnabler.GetActiveCharacter() == characterName)
+        {
+            verticalRaySeparation = boxCollider.size.y / (horizontalRays - 1);
+            horizontalRaySeparation = boxCollider.size.x / (verticalRays - 1);
 
-        CastRaysBottom();
-        CastRaysTop();
-        CastRaysLeft();
-        CastRaysRight();
-        
-        
+            CastRaysBottom();
+            CastRaysTop();
+            CastRaysLeft();
+            CastRaysRight();
+        }        
     }
 
+
+    /// <summary>
+    /// Checks area to the right of the player for platforms (both flat and sloped).
+    /// </summary>
     private void CastRaysRight()
     {
         var charstatus = inputEnabler.activeCharacterStatus;
@@ -80,18 +88,21 @@ public class CharacterStatus : MonoBehaviour
 
             if (!raycastHit) { continue; } // Don't read anymore code if no RayCastHit occured.
 
-            if(i < halfNumberOfRays) { checkSlopes(hit, true); }
+            if(i < halfNumberOfRays) { CheckSlopes(hit, true); }
 
-            checkWalls(hit, true);
+            CheckWalls(hit, true);
 
             if (raycastHit_Slide)
             {
                 charstatus.setOnRightSlide(true);
             }
-
         }
     }
 
+
+    /// <summary>
+    /// Checks area to the left of the player for platforms, both flat and sloped.
+    /// </summary>
     private void CastRaysLeft()
     {
         var charstatus = inputEnabler.activeCharacterStatus;
@@ -108,18 +119,21 @@ public class CharacterStatus : MonoBehaviour
 
             if (!raycastHit_Platform) { continue; } // Don't read anymore code if no RayCastHit occured.
 
-            if (i < halfNumberOfRays) { checkSlopes(platformHit, false); }
+            if (i < halfNumberOfRays) { CheckSlopes(platformHit, false); }
 
-            checkWalls(platformHit, false);
+            CheckWalls(platformHit, false);
 
             if (raycastHit_Slide)
             {
                 charstatus.setOnLeftSlide(true);
             }
-
         }
     }
 
+
+    /// <summary>
+    /// Checks area below player for platform (both flat and sloped).
+    /// </summary>
     private void CastRaysBottom()
     {
         var charstatus = inputEnabler.activeCharacterStatus;
@@ -137,17 +151,21 @@ public class CharacterStatus : MonoBehaviour
             /* Check for slopes beneath the player */
             if(i < halfNumberOfRays)
             {
-                checkSlopes(hit, false);
+                CheckSlopes(hit, false);
             }
             else
             {
-                checkSlopes(hit, true);
+                CheckSlopes(hit, true);
             }
 
             charstatus.setOnGround(true);
         }
     }
 
+
+    /// <summary>
+    /// Checks area above player for platforms.
+    /// </summary>
     private void CastRaysTop()
     {
         var charstatus = inputEnabler.activeCharacterStatus;
@@ -165,12 +183,13 @@ public class CharacterStatus : MonoBehaviour
         }
     }
 
+
     /// <summary>
     /// Will flag if a slope is present, and if it is too steep to climb.
     /// </summary>
     /// <param name="hit">The associated raycastHit.</param>
     /// <param name="isRightSlope">Enter true if there you are checking slopes on the right hand side. Otherwise, false.</param>
-    private void checkSlopes(RaycastHit hit, bool isRightSlope)
+    private void CheckSlopes(RaycastHit hit, bool isRightSlope)
     {
         float slopeAngle = Mathf.Atan2(hit.normal.x, hit.normal.y) * Mathf.Rad2Deg;
 
@@ -200,12 +219,16 @@ public class CharacterStatus : MonoBehaviour
                     inputEnabler.activeCharacterStatus.setOnLeftSlope(true);
                 }
             }
-        }
-
-        
+        }        
     }
 
-    private void checkWalls(RaycastHit hit, bool isRightSlope)
+
+    /// <summary>
+    /// Checks to see if there is a perpendicular surface to the right or left of the player. 
+    /// </summary>
+    /// <param name="hit">The associated raycast hit.</param>
+    /// <param name="isRightSlope">Enter true if checking for walls on the right. Otherwise, false.</param>
+    private void CheckWalls(RaycastHit hit, bool isRightSlope)
     {
         float slopeAngle = Mathf.Atan2(hit.normal.x, hit.normal.y) * Mathf.Rad2Deg;
 
@@ -221,10 +244,4 @@ public class CharacterStatus : MonoBehaviour
             }
         }
     }
-
-
-    //public GetCharacterStatus()
-    //{
-
-    //}
 }
