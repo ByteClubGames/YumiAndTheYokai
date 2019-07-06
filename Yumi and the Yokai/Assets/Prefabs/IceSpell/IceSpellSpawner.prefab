@@ -1,25 +1,16 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &100100000
-Prefab:
-  m_ObjectHideFlags: 1
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications: []
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1356892672785484}
-  m_IsPrefabAsset: 1
 --- !u!1 &1356892672785484
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4063645216842726}
   - component: {fileID: 114906754464931538}
+  - component: {fileID: 2783916915525779409}
   m_Layer: 0
   m_Name: IceSpellSpawner
   m_TagString: Untagged
@@ -29,9 +20,10 @@ GameObject:
   m_IsActive: 1
 --- !u!4 &4063645216842726
 Transform:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1356892672785484}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 264, y: 425, z: 0}
@@ -42,14 +34,38 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &114906754464931538
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1356892672785484}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 38e20dac6b8d243318b3be8fbbcf5ebd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   IceProjectile: {fileID: 1723117857641678, guid: 9665f542179a84dcd88c0df7dd9981e9,
-    type: 2}
+    type: 3}
+--- !u!114 &2783916915525779409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356892672785484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcc43bd37f576924da594094caa35dc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minLaserLength: 10
+  maxLaserLength: 20
+  minChargeTime: 200
+  maxChargeTime: 2000
+  laserSpeed: 100
+  laserMask:
+    serializedVersion: 2
+    m_Bits: 32768
+  laserProjectilePrefab: {fileID: 3349988100906115737, guid: 64903a8185a1a0e44992277036acb283,
+    type: 3}
+  pointRadius: 0.1
