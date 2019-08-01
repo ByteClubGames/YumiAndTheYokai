@@ -22,6 +22,7 @@ TagManager:
   - WallJump
   - WindSpellAgent
   - _Earth Spell Object
+  - WindSpellTarget
   layers:
   - Default
   - TransparentFX

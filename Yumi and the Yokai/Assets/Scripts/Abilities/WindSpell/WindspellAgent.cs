@@ -2,7 +2,7 @@
 ********************************************************************************
 *Creator(s).........................................................Darrell Wong
 *Created................................................................12/14/18
-*Last Modified..........................................................12/21/18
+*Last Modified...........................................................4/12/19
 *Last Modified by...................................................Darrell Wong
 *
 *   Description: defines the windspell when it is using a nav mesh.
@@ -22,6 +22,7 @@ public class WindspellAgent : MonoBehaviour {
     public Vector3 velocity;
 
     public GameObject wind_impact;
+    public ParticleSystem emit;
 
     void Awake () {
         agent = GetComponent<NavMeshAgent>();
@@ -44,8 +45,11 @@ public class WindspellAgent : MonoBehaviour {
                         Instantiate(wind_impact, this.transform.position, Quaternion.Euler(0, 0, -this.transform.eulerAngles.x));
                     }
                     else
+                    {
                         Instantiate(wind_impact, this.transform.position, Quaternion.Euler(0, 0, 180 + this.transform.eulerAngles.x));
+                    }
 
+                    DetachParticles();
                     Destroy(gameObject);
                 }
             }
@@ -60,6 +64,7 @@ public class WindspellAgent : MonoBehaviour {
             //spawnerObj.GetComponent<WindSpellUse>().CleanUp();
             print("collision with " + collision.gameObject.tag);
             Instantiate(wind_impact, this.transform.position, Quaternion.Euler(0, 0, -90 + this.transform.eulerAngles.z));
+            DetachParticles();
             Destroy(gameObject);
         }
     }
@@ -67,5 +72,14 @@ public class WindspellAgent : MonoBehaviour {
     private void SetSpawner(GameObject spawner)
     {
         spawnerObj = spawner;
+    }
+
+    public void DetachParticles()
+    {
+        // This splits the particle off so it doesn't get deleted with the parent
+        emit.transform.parent = null;
+
+        // this stops the particle from creating more bits
+        emit.enableEmission = false;
     }
 }

@@ -1,12 +1,16 @@
-﻿/* WindSpellMover.cs
- * Date Created: 5/08/18
- * Last Edited: 3/1/2019
- * Programmer: Jack Bruce and Evanito and Darrell Wong
+﻿/*WindSpellMover.cs
+********************************************************************************
+*Creator(s)................................Jack Bruce && Evanito && Darrell Wong
+*Created..................................................................5/08/18
+*Last Modified..........................................................4/12/2019
+*Last Modified by...................................................Darrell Wong
+*
  * Description: Moves 'WindSpell' obj on desired path
  *  - WindSpellSpawner will populate targetarray
  *  - once activated WindSpellUse will pass the target LinkLis to WindSpellMover
  *  - then WindSpell obj will follow path declared by array
- */
+********************************************************************************
+*/
 
 using System.Collections;
 using System.Collections.Generic;
@@ -16,6 +20,7 @@ public class WindSpellMover : MonoBehaviour
 {
 
     public float speed = 10;
+    public ParticleSystem emit;
 
     private Vector3[] wsTargets;
     private Vector3 nextPos;
@@ -65,6 +70,20 @@ public class WindSpellMover : MonoBehaviour
         spawnerObj = spawner;
     }
 
+    public void DetachParticles()
+    {
+        // This splits the particle off so it doesn't get deleted with the parent
+        emit.transform.parent = null;
+
+        // this stops the particle from creating more bits
+        emit.enableEmission = false;
+
+        // This finds the particleAnimator associated with the emitter and then
+        // sets it to automatically delete itself when it runs out of particles
+
+        //Destroy(emit, 2); for some reason this didnt work so i made a script "autoDestroyParticleSystem" to delete the particle emitter.
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -74,19 +93,22 @@ public class WindSpellMover : MonoBehaviour
         //print("(drawn) windspell velocity: " + getVelocity());
         lastPos = rb.position;
 
+
+        
         if (transform.position == wsTargets[wsTargetsSize - 1])
         { // die at end of path (transform.position == wsTargets[wsTargets.Length - 1])
             try
             {
                 Instantiate(wind_impact, this.transform.position, Quaternion.Euler(0, 0, Vector3.SignedAngle(Vector3.right, velocity.normalized, Vector3.forward)));
                 //print(velocity);
-               //print(Vector3.Angle(Vector3.right, velocity));
-
+                //print(Vector3.Angle(Vector3.right, velocity));
+                DetachParticles();
                 spawnerObj.GetComponent<WindSpellUse>().CleanUp();
             }
             catch
             {
                 Instantiate(wind_impact, this.transform.position, Quaternion.Euler(0, 0, Vector3.SignedAngle(Vector3.right, velocity.normalized, Vector3.forward)));
+                DetachParticles();
                 Destroy(gameObject);
             }
 
@@ -104,7 +126,6 @@ public class WindSpellMover : MonoBehaviour
         {
             current++; // obj reached, move to the next obj
         }
-
     }
 
     private bool isZero(Vector3 inpos)
