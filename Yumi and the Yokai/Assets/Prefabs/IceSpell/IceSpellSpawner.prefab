@@ -68,4 +68,5 @@ MonoBehaviour:
     m_Bits: 32768
   laserProjectilePrefab: {fileID: 3349988100906115737, guid: 64903a8185a1a0e44992277036acb283,
     type: 3}
+  isLaser: 0
   pointRadius: 0.1

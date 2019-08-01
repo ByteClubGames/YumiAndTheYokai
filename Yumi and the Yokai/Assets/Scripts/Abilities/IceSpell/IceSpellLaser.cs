@@ -50,76 +50,77 @@ public class IceSpellLaser : MonoBehaviour
     private bool isLaser;
     public float pointRadius; //make this private maybe 
 
+
+    GameObject Yumi;
+
     void Start()
     {
-
+        Yumi = GameObject.Find("Yumi");
     }
 
 
     void Update()
     {
-        if (!isLaser)
+        if (!isLaser)                                                        //isLaser prevents shooting lasers while there is already a laser bouncing around
         {
-            if (Input.GetMouseButtonDown(0))
+
+            if (Input.GetMouseButtonDown(0))                                 //when the shoot button is pressed
             {
 
-                //if (chargeTimer.IsRunning)
-                //{
-                //    chargeTimer.Reset();
-                //}
-
-                chargeTimer.Start();
-
-                //drain mana here
+                chargeTimer.Start();                                         //start the charging timer
             }
 
-            if (Input.GetMouseButtonUp(0))  //OR if run out of mana
+            if (Input.GetMouseButtonUp(0))                                   //when the shoot button is released
             {
-                if ((chargeTimer.ElapsedMilliseconds) < minChargeTime)
+                if ((chargeTimer.ElapsedMilliseconds) < minChargeTime)       //if the time charged is very short (quick tap)
                 {
-                    ShootLaser(0);
+                    ShootLaser(0);                                         //shoot the minimum laser length (0)
                 }
 
-                else if ((chargeTimer.ElapsedMilliseconds) > maxChargeTime)
+                else if ((chargeTimer.ElapsedMilliseconds) > maxChargeTime)   //if charged for the maximum time
                 {
-                    ShootLaser(maxChargeTime);
+                    ShootLaser(maxChargeTime);                      //shoot max laser length
                 }
 
-                else
+                else                                                           //if charge time is somewhere inbetween minimum and maximum
                 {
-                    ShootLaser(chargeTimer.ElapsedMilliseconds);
+                    ShootLaser(chargeTimer.ElapsedMilliseconds);            //shoot with the laser length based on the charge time. (shoot laser takes in milliseconds
                 }
 
 
-                chargeTimer.Reset();
+                chargeTimer.Reset();                            //reset timers
                 chargeTimer.Stop();
             }
         }
        
     }
 
-    void ShootLaser(float chargeTimer)
+    void ShootLaser(float chargeTimer)                                //shooting of the laser based on the milliseconds held down
     {
-        float scaleLaser = chargeTimer / maxChargeTime;
+        isLaser = true;                                              //isLaser is true meaning that there is currently a laser out right now and can not shoot another one until this is false
+        float scaleLaser = chargeTimer / maxChargeTime;             //the length of the laser is changed based on how much it is charged with scaleLaser
 
         float curLaserDistance = minLaserLength + (maxLaserLength * scaleLaser);
 
-        Vector3 laserOrigin = GameObject.Find("SpellCaster").transform.position;
+        //Yumi.GetComponent<YumiManaSystem>().SpellIsActive();                          //Hunter's mana system is used to deplete mana
+
+        Vector3 laserOrigin = GameObject.Find("SpellCaster").transform.position;        
         Vector3 laserDirection = GetSpellClickTarget();
 
-        Vector3[] points = new Vector3[20];
+        Vector3[] points = new Vector3[20];                             //a vector 3 of "points" are used to set waypoints for the laser to move between. points are either bounce points or the end point of the laser
         int bounces = 0;
 
 
         RaycastHit hit;
 
-        while (curLaserDistance > 0)
+        while (curLaserDistance > 0)            //while there is still laser length left, the laser will continue to bounce
         {
             UnityEngine.Debug.DrawRay(laserOrigin, laserDirection.normalized * curLaserDistance, Color.cyan);
+
             //fire laser with laser origin and curLaserDistance and laserDirection
-            if (Physics.Raycast(laserOrigin, laserDirection.normalized * curLaserDistance, out hit, curLaserDistance, laserMask))      //add a layer mask if you really like layermasks
+            if (Physics.Raycast(laserOrigin, laserDirection.normalized * curLaserDistance, out hit, curLaserDistance, laserMask))      
             {
-                //if laser hits see what laser hits
+                //if laser hits, see what laser hits
                 if (hit.transform.gameObject.layer == LayerMask.NameToLayer("Platforms"))
                 {
                     //print("hit platform");
@@ -133,7 +134,7 @@ public class IceSpellLaser : MonoBehaviour
                     //bounces++;
                 }
 
-                else if (hit.transform.gameObject.layer != LayerMask.NameToLayer("Platforms"))          //////WAS WORKING ON MAKING PLAYER DETECTION LAYER MASK
+                else if (hit.transform.gameObject.layer != LayerMask.NameToLayer("Platforms"))          //if the laser hits a non-reflective surface or enemy, stop the laser from continuing
                 {
                     //print("hit non reflective surface/nothing");
                     points[bounces] = hit.point;
@@ -198,7 +199,7 @@ public class IceSpellLaser : MonoBehaviour
         return direction;
     }
 
-    void debugPrintPoints(Vector3[] points, int bounces)
+    void debugPrintPoints(Vector3[] points, int bounces)        //for testing purposes, okay to delete
     {
         //print("bounces: " + bounces);
 
@@ -216,11 +217,11 @@ public class IceSpellLaser : MonoBehaviour
         }
     }
 
-    IEnumerator MoveLaser(Vector3[] points, int bounces)
-    {
-        isLaser = true;
 
-        laserProjectile = Instantiate(laserProjectilePrefab, GameObject.Find("SpellCaster").transform.position, Quaternion.identity);   ////////THE PROJECTILE IS NOT MOVING FIXXXXXXXXXXXX
+    IEnumerator MoveLaser(Vector3[] points, int bounces)        //coroutine to move the laser object between the array of Vector3's "points" created in ShootLaser()
+    {
+
+        laserProjectile = Instantiate(laserProjectilePrefab, GameObject.Find("SpellCaster").transform.position, Quaternion.identity);  
 
 
         int bounceIterator = 0;
@@ -239,8 +240,11 @@ public class IceSpellLaser : MonoBehaviour
             }  
         }
 
+
+        laserProjectile.transform.FindChild("TrailSpawner").parent = null;
+
         Destroy(laserProjectile);
 
-        isLaser = false;
+        isLaser = false;            //allow a new laser to be shot when this one is deleted
     }
 }
